@@ -177,17 +177,6 @@ class Camera:
         y = cy - fy * (dir_z / dir_y)
         return float(x), float(y)
 
-    def get_vvp_old(self):
-        # FIXME: UNTESTED
-        cx, cy = self.w * 0.5, self.h * 0.5
-        fx = cx / np.tan(np.radians(self.hfov) * 0.5)
-        fy = cy / np.tan(np.radians(self.vfov) * 0.5)
-        rot = R.from_quat(self.q)
-        dir_x, dir_y, dir_z = rot.inv().apply([0, 1, 0])
-        x = fx * (dir_x / dir_z) + cx
-        y = cy - fy * (dir_y / dir_z)
-        return float(x), float(y)
-
     def get_landmark_direction(self, lm_name):
         if not lm_name in self.landmark_directions:
             self.landmark_directions[lm_name] = get_pixel_direction(
