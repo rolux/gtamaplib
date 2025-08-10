@@ -1966,7 +1966,7 @@ def intersect_ray_and_plane(ray, plane, eps=1e-8):
     p_normal = np.asarray(p_normal)
     denom = np.dot(p_normal, r_dir)
     if abs(denom) < eps:
-        return None, None  # parallel
+        return None  # parallel
     distance = np.dot(p_normal, p_org - r_org) / denom
     point = r_org + distance * r_dir
     return point
