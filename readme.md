@@ -8,4 +8,8 @@ This is a first, pre-release version. More information, and further updates, wil
 
 <br><br><br>
 
-![prison](readme/prison.png)
+![leonida keys](<readme/leonida keys.png>)
+
+![watson bay](<readme/watson bay.png>)
+
+![hamlet prison](<readme/hamlet prison.png>)
