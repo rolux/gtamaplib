@@ -947,9 +947,9 @@ class Map:
         for map_y in tqdm(range(map_y0, map_y1)):
             for map_x in range(map_x0, map_x1):
                 map_xy = map_x, map_y
+                world_xy = self.get_world_xy(map_xy)
+                world_x, world_y = world_xy
                 for i, cam in enumerate(cams):
-                    world_xy = self.get_world_xy(map_xy)
-                    world_x, world_y = world_xy
                     bearing = get_bearing(cam.xy, world_xy)
                     delta = (bearing - cam.yaw + 180) % 360 - 180
                     if abs(delta) > cam.hfov / 2:
