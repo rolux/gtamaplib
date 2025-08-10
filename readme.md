@@ -16,10 +16,12 @@ Please note that v0.1.0 is a the first, pre-release version of the library. More
 
 [^1]: see the [Mapping Los Santos](https://gtaforums.com/topic/491242-mapping-los-santos-buildinglandmark-analysis/) and [Mapping Vice City](https://gtaforums.com/topic/985670-mapping-vice-city-map-discussion-thread-no-leak-footage-allowed/) threads on GTAForums
 
-<br>
+<br><br><br>
 
 ![leonida keys](<readme/leonida keys.png>)
 
 ![watson bay](<readme/watson bay.png>)
 
 ![hamlet prison](<readme/hamlet prison.png>)
+
+<br><br><br>
