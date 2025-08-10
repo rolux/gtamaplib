@@ -1432,7 +1432,7 @@ def find_four_seasons(
     print(fs._landmarks())
 
     # render map
-    m = get_map("rickrick").open(scale=map_scale)
+    m = get_map(map_name).open(scale=map_scale)
     for (x, y), loss in local_loss:
         if loss == float("inf"):
             rgb = (128, 128, 128)
