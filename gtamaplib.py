@@ -331,6 +331,7 @@ class Camera:
         return self
 
     def render_cameras(self, width=1):
+        if not hasattr(self, "image"): self.open()
         cameras = [
             get_camera(cam_name) for cam_name in md.cameras
             if normalize_name(cam_name) != normalize_name(self.name)
@@ -426,6 +427,7 @@ class Camera:
         return self
 
     def render_rays(self, width=0.25):
+        if not hasattr(self, "image"): self.open()
         for cam_name in md.cameras:
             if cam_name == self.name: continue
             cam = get_camera(cam_name)
@@ -576,6 +578,7 @@ class Map:
         return self        
 
     def draw_camera(self, cam_name, r=10, d=100, _no_marker=False):
+        if not hasattr(self, "image"): self.open()
         cam = get_camera(cam_name)
         for x in (0, cam.w):
             target_xy = get_point(cam.xyz, cam.get_pixel_direction((x, 0)), d)[:2]
@@ -607,6 +610,7 @@ class Map:
         return self
 
     def draw_landmark(self, lm_name, r=12):
+        if not hasattr(self, "image"): self.open()
         xy = md.landmarks[lm_name][:2]
         color = get_color(lm_name)
         letter = get_letter(lm_name)
@@ -656,6 +660,7 @@ class Map:
         return self
 
     def draw_object(self, obj):
+        if not hasattr(self, "image"): self.open()
         obj.draw_on_map(self)
         return self
 
