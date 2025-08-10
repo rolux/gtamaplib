@@ -258,7 +258,7 @@ class Camera:
 
     def get_pixel_direction(self, pixel):
         """
-        Returns direction vector of a given pixel
+        Returns the direction vector of a given pixel
         """
         return get_pixel_direction(pixel, self.q, self.fov, self.size)
 
