@@ -1120,11 +1120,11 @@ class FourSeasons(Landmark):
             cam.render_line((self.hb58sw, self._get_hbs_at_floor("w", 56)), self.color, bold)
             cam.render_line((self.hb58sw, self.hb58se), self.color, bold)
             cam.render_line((self.hb58se, self._get_hbs_at_floor("e", 56)), self.color, bold)
-            if hidden not in (1, 2): # west
+            if hidden not in (1, 2):  # from west
                 cam.render_line((self.hb58nw, self._get_point_at_floor(self.hb58nw, 8)), self.color, bold)
                 cam.render_line((self.hb58sw, self.hb28sw), self.color, bold)
                 cam.render_line((self.hb28sw, self.hb8sw), self.color, bold)
-            if hidden not in (3, 0): # east
+            if hidden not in (3, 0):  # from east
                 cam.render_line((self.hb58ne, self._get_point_at_floor(self.hb58ne, 8)), self.color, bold)
                 cam.render_line((self.hb58se, self.hb28se), self.color, bold)
                 cam.render_line((self.hb28se, self.hb8se), self.color, bold)
