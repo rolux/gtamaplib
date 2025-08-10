@@ -1,0 +1,13 @@
+.build/
+.DS_Store
+.pytest_cache/
+.venv/
+__pycache__/
+_untracked/
+*.egg-info/
+dist/
+fonts/
+frames/
+maps/
+make_zips.py
+render_all.json
