@@ -1382,7 +1382,7 @@ def find_camera(
     """
     Finds the optimal camera position and settings within a given map region,
     constrained by ranges for pitch and horizontal fov, using a list of known
-    landmarks positions and a list of rays from known cameras towards visible
+    landmark positions and a list of rays from known cameras towards visible
     landmarks. The minimized loss is the mean squared angular delta between
     rays and their targets, in arcminutes. Also renders the results.
     """
