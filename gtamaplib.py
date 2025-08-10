@@ -1,3 +1,11 @@
+"""
+gtamaplib v0.1.0
+This library follows the same geometric conventions that Grand Theft Auto uses internally.
+World coordinates are right-handed ENU: +X is East, +Y is North, +Z is up. Yaw about world +Z
+(0 deg is North, increasing CCW), pitch about local +X, roll about local +Y. Right-hand rule.
+Image origin is in the top left. Pixel (x, y) denotes the center at (x + 0.5, y + 0.5).
+"""
+
 import colorsys
 from functools import lru_cache
 import hashlib
