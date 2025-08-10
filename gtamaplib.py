@@ -1891,7 +1891,7 @@ def get_vfov(hfov, size):
 def get_pixel(world_xyz, cam_xyz, q, fov, size):
     hfov, vfov = np.radians(fov[0]), np.radians(fov[1])
     w, h = size
-    rot = R.from_quat(q)
+    rot = get_rotation(tuple(q))
     delta = np.array(world_xyz) - np.array(cam_xyz)
     cam_dir = rot.inv().apply(delta)
     if cam_dir[1] <= 0:
