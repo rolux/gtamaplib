@@ -1177,8 +1177,6 @@ def init_landmark_objects():
     SunshineSkywayBridge()
 
 
-
-
 ### FIND ##########################################################################################
 
 def find_camera(
