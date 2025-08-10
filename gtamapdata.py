@@ -839,9 +839,8 @@ lines = {
 
 landmarks = {
     "Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
-    "Blue Billboard (Key Lento)": (-3436.718, -6780.155, 23.305),  # d=0.238 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Blue Billboard (Key Lento)": (-3436.740, -6784.065, 22.850), # d=0.299 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
+    "Blue Billboard (Key Lento)": (-3436.718, -6780.155, 23.305),  # d=0.238 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "FAA Miami ATCT (MIA)": (-2400.096, -883.770, 102.680),  # d=14.711 via Vice Beach & Leonida Keys 01 (Airplane) (X)
     "The Floridian": (1229.236, 424.298, 94.420),  # d=2.809 via Vice Beach & Sidewalk (Jason) (E)
     "Four Seasons Hotel Miami (BE)": (-814.289, -1306.504, 263.568),  # Handlebar (SE)
