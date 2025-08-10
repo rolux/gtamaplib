@@ -388,10 +388,12 @@ class Camera:
         return self
 
     def render_object(self, obj):
+        if not hasattr(self, "image"): self.open()
         obj.render_on_camera(self)
         return self
 
     def render_pixels(self, width=1):
+        if not hasattr(self, "image"): self.open()
         for lm_name, (x, y) in self.landmark_pixels.items():
             color = get_color(lm_name)
             self.draw_circle((x, y), 5, None, color, width)
