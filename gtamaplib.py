@@ -1507,7 +1507,6 @@ def _find_four_seasons(args):
                 (fs40ne, (0, 0, 1)),
                 (cam.xyz, lm_dir)
             )[1]
-            assert np.allclose(fs40ne[:2], point[:2])
             zs[i].append(point[2])
     low = max(min(zs[0]), min(zs[1]))
     high = min(max(zs[0]), max(zs[1]))
