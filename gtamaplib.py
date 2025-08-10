@@ -821,7 +821,7 @@ class Map:
 
     def draw_rays(self):
         """
-        Draws all rays from cameras towards landmarks
+        Draws all rays from cameras towards landmarks, and symbols at their intersections
         """
         if not hasattr(self, "image"): self.open()
         cameras = sorted(
