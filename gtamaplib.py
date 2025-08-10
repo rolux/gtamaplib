@@ -104,7 +104,7 @@ class Camera:
         return self
 
     def draw_circle(self, xy, r, fill=(255, 255, 255), outline=(0, 0, 0), width=1):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         x, y = xy
         self.draw.circle(
             (int(round(x * self.scale + self.offset)), int(round(y * self.scale))),
@@ -114,7 +114,7 @@ class Camera:
         return self
 
     def draw_label(self, xy, length, text, color, text_color):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         x, y = xy
         self.draw_line(((x, y), (x, y - length)), color, 1)
         box = draw_box(text, 10 * self.scale, color, text_color).rotate(90, expand=True)
@@ -126,7 +126,7 @@ class Camera:
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         (x0, y0), (x1, y1) = line
         x0 = int(round(x0 * self.scale + self.offset))
         y0 = int(round(y0 * self.scale))
@@ -232,7 +232,7 @@ class Camera:
         return self
 
     def project_camera(self, cam_name, opacity=0.5):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         image_np = np.array(self.image)
         horizon = self.get_horizon()
         cam = get_camera(cam_name).open()
@@ -271,7 +271,7 @@ class Camera:
         return self
 
     def project_map(self, map_name, map_scale=None, opacity=0.5):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         image_np = np.array(self.image)
         horizon = self.get_horizon()
         min_x, max_x = 0, self.image_w
@@ -306,7 +306,7 @@ class Camera:
         return self
 
     def render_all(self):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         self.render_player()
         self.render_vertical_lines()
         self.render_vanishing_points()
@@ -319,7 +319,7 @@ class Camera:
         return self
 
     def render_camera_info(self):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         text = (
             f"XYZ ({self.x:.3f}, {self.y:.3f}, {self.z:.3f}) "
             f"YPR ({self.yaw:.3f}, {self.pitch:.3f}, {self.roll:.3f}) "
@@ -354,7 +354,7 @@ class Camera:
         return self
 
     def render_distance_circles(self, width=0.5):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         start = int(self.yaw - 60)
         stop = int(self.yaw + 60)
         step = 0.1
@@ -371,7 +371,7 @@ class Camera:
         return self
 
     def render_landmarks(self, width=2):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         for lm_name, xyz in md.landmarks.items():
             nomalized = normalize_name(lm_name)
             if nomalized in LANDMARK_OBJECTS:
@@ -381,7 +381,7 @@ class Camera:
         return self
 
     def render_line(self, line, fill=(0, 0, 0), width=1):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         line = [self.get_pixel(point) for point in line]
         if line[0] is not None and line[1] is not None:
             self.draw_line(line, fill, width)
@@ -400,7 +400,7 @@ class Camera:
         return self
 
     def render_player(self, width=1):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         if not self.player: return self
         px, py, pz = self.player
         for i, line in enumerate((
@@ -448,7 +448,7 @@ class Camera:
         return self
 
     def render_vanishing_points(self, width=0.5):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         for a, b in self.lines[0]:
             self.draw_circle(a, 3, None, (255, 255, 0), width)
             self.draw_circle(b, 3, None, (255, 255, 0), width)
@@ -460,7 +460,7 @@ class Camera:
         return self
 
     def render_vertical_lines(self, width=0.25):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         start = int(self.yaw - 60)
         stop = int(self.yaw + 60)
         step = 0.5
@@ -475,7 +475,7 @@ class Camera:
         return self
 
     def save(self, filename, crop=None):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         print(f"Writing {filename}", end=" ... ", flush=True)
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         self.image.resize((
@@ -567,7 +567,7 @@ class Map:
         return self.image.crop((x0, y1, x1, y0))
 
     def draw_all(self):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         self.draw_rays()
         self.draw_cameras()
         self.draw_landmarks()
@@ -583,7 +583,7 @@ class Map:
         return self
 
     def draw_cameras(self, r=10, d=100):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         cams = sorted(
             [get_camera(cam_name) for cam_name in md.cameras],
             key=lambda cam: (cam.z, cam.y, cam.x)
@@ -593,7 +593,7 @@ class Map:
         return self
 
     def draw_circle(self, xy, r, fill=(255, 255, 255), outline=(0, 0, 0), width=1, text=None):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         xy = self.get_map_xy(xy)
         r *= self.scale
         self.draw.circle(xy, r, fill=fill, outline=outline, width=width)
@@ -612,7 +612,7 @@ class Map:
         return self
 
     def draw_landmarks(self, r=12):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         landmarks = sorted(
             md.landmarks.items(),
             key=lambda kv: (kv[1][2], kv[1][1], kv[1][0])
@@ -627,14 +627,14 @@ class Map:
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         x0, y0 = self.get_map_xy(line[0])
         x1, y1 = self.get_map_xy(line[1])
         self.draw.line((x0, y0, x1, y1), fill=fill, width=width)
         return self
 
     def draw_map_info(self, image, height=32):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         if self.cropped:
             sw = self.cropped[0], self.cropped[1]
             ne = self.cropped[2], self.cropped[2]
@@ -658,7 +658,7 @@ class Map:
         return self
 
     def draw_rays(self):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         cameras = sorted(
             [get_camera(cam_name) for cam_name in md.cameras],
             key=lambda cam: (cam.z, cam.y, cam.x)
@@ -685,7 +685,7 @@ class Map:
         return self
 
     def draw_rectangle(self, xy0, xy1, fill=(255, 255, 255), outline=(0, 0, 0), width=1):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         x0, y1 = self.get_map_xy(xy0)
         x1, y0 = self.get_map_xy(xy1)
         self.draw.rectangle((x0, y0, x1, y1), fill=fill, outline=outline, width=width)
@@ -742,7 +742,7 @@ class Map:
         return self 
 
     def project_camera(self, cam_names, area=None, r=(0, 10000)):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         if type(cam_names) is str: cam_names = [cam_names]
         cams = [get_camera(cam_name).open() for cam_name in cam_names]
         cam_images_np = [np.array(cam.og_image) for cam in cams]
@@ -787,7 +787,7 @@ class Map:
 
     def project_camera_parallel(self, cam_names, area=None, r=(0, 10000)):
 
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         if type(cam_names) is str: cam_names = [cam_names]
         cams = [get_camera(cam_name).open() for cam_name in cam_names]
         cam_images_np = [np.array(cam.og_image) for cam in cams]
@@ -829,7 +829,7 @@ class Map:
         return self
 
     def save(self, filename, crop=None, section_name=None, map_info_height=None):
-        if not getattr(self, "image", None): self.open()
+        if not hasattr(self, "image"): self.open()
         image = self.crop(crop, section_name) if crop else self.image
         if map_info_height is not None:
             self.draw_map_info(image, height=map_info_height)
