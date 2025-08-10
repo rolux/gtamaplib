@@ -1384,7 +1384,8 @@ def find_camera(
     constrained by ranges for pitch and horizontal fov, using a list of known
     landmark positions and a list of rays from known cameras towards visible
     landmarks. The minimized loss is the mean squared angular delta between
-    rays and their targets, in arcminutes. Also renders the results.
+    rays and their targets, in arcminutes. Renders the log loss landscape of
+    the results, and the camera view after optimal calibration.
     """
 
     cam = get_camera(cam_name)
