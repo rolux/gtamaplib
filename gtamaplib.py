@@ -1701,7 +1701,6 @@ def get_point(point, direction, distance):
     return np.asarray(point) + distance * np.asarray(direction)
 
 def get_q(ypr):
-    yaw, pitch, roll = ypr
     return R.from_euler("ZXY", ypr, degrees=True).as_quat()
 
 @lru_cache(maxsize=256)
