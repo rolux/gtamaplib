@@ -1379,6 +1379,13 @@ def find_camera(
     projection_area,
     basename
 ):
+    """
+    Finds the optimal camera position and settings within a given map region,
+    constrained by ranges for pitch and horizontal fov, using a list of known
+    landmarks positions and a list of rays from known cameras towards visible
+    landmarks. The minimized loss is the mean squared angular delta between
+    rays and their targets, in arcminutes. Also renders the results.
+    """
 
     cam = get_camera(cam_name)
     # these targets are (lm_name, point)
@@ -1467,6 +1474,9 @@ def find_camera(
 
 
 def _find_camera(args):
+    """
+    Camera search worker function
+    """
 
     cam, xy, pitch_values, hfov_values, targets, n_points = args
     cam.set_xyz((xy[0], xy[1], cam.z))
@@ -1517,6 +1527,9 @@ def find_four_seasons(
     map_area=(-1250, -1750, -250, -750),
     basename=None
 ):
+    """
+    Finds the Four Seasons landmark, given two known cameras.
+    """
 
     ts_name = "Tennis Stadium (4K)"
     ts_cam = get_camera(ts_name)
@@ -1671,6 +1684,9 @@ def find_four_seasons(
 
 
 def _find_four_seasons(args):
+    """
+    Four Seasons search worker function
+    """
 
     (
         x, y, ts_cam, ms_cam,
@@ -1781,6 +1797,9 @@ def _find_four_seasons(args):
 
 
 def find_landmark(cam_name_a, cam_name_b, lm_name):
+    """
+    Finds a landmark, given two known cameras
+    """
     cam_a = get_camera(cam_name_a)
     cam_b = get_camera(cam_name_b)
     return intersect_rays(
