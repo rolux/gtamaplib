@@ -859,7 +859,7 @@ class Map:
 
     def draw_rectangle(self, xy0, xy1, fill=(255, 255, 255), outline=(0, 0, 0), width=1):
         """
-        Draws a rectangle with xy0 and xy1 as SW and NE world coordinates
+        Draws a rectangle with SW and NE world coordinates xy0 and xy1
         """
         if not hasattr(self, "image"): self.open()
         x0, y1 = self.get_map_xy(xy0)
