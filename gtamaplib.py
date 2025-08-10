@@ -54,6 +54,9 @@ class Camera:
         )
 
     def calibrate_yaw(self, lm_name, lm_point=None):
+        """
+        Sets yaw so that a given landmark's pixel matches a given point
+        """
         if lm_point is None: lm_point = md.landmarks[lm_name]
         d_current = self.get_landmark_direction(lm_name)
         b_current, _ = get_angles_from_direction(d_current)
@@ -64,6 +67,9 @@ class Camera:
         return self
 
     def calibrate_pitch(self, lm_name, lm_point=None):
+        """
+        Sets pitch so that a given landmark's pixel matches a given point
+        """
         if lm_point is None: lm_point = md.landmarks[lm_name]
         d_current = self.get_landmark_direction(lm_name)
         _, e_current = get_angles_from_direction(d_current)
@@ -74,6 +80,9 @@ class Camera:
         return self
 
     def calibrate_z(self, lm_name, lm_point=None):
+        """
+        Sets z so that a given landmark's pixel matches a given point
+        """
         if lm_point is None: lm_point = md.landmarks[lm_name]
         z_current = intersect_rays(
             (lm_point, (0, 0, 1)),
@@ -85,6 +94,10 @@ class Camera:
         return self
 
     def calibrate_yaw_and_pitch(self, lm_name, lm_point=None, iters=3):
+        """
+        Sets yaw and pitch so that a given landmark's pixel matches a given point.
+        After three iterations, this should be sufficiently precise.
+        """
         if lm_point is None: lm_point = md.landmarks[lm_name]
         for _ in range(iters):
             self.calibrate_yaw(lm_name, lm_point)
@@ -92,18 +105,27 @@ class Camera:
         return self
 
     def calibrate_yaw_and_z(self, lm_name, lm_point=None):
+        """
+        Sets yaw and z so that a given landmark's pixel matches a given point.
+        """
         if lm_point is None: lm_point = md.landmarks[lm_name]
         self.calibrate_yaw(lm_name, lm_point)
         self.calibrate_z(lm_name, lm_point)
         return self
 
     def clear_landmark_directions(self, include_local=False):
+        """
+        Clears cached landmark directions
+        """
         self.landmark_directions = {}
         if include_local:
             self.landmark_directions_local = {}
         return self
 
     def draw_circle(self, xy, r, fill=(255, 255, 255), outline=(0, 0, 0), width=1):
+        """
+        Draws a circle at screen coordinates xy
+        """
         if not hasattr(self, "image"): self.open()
         x, y = xy
         self.draw.circle(
@@ -114,6 +136,9 @@ class Camera:
         return self
 
     def draw_label(self, xy, length, text, color, text_color):
+        """
+        Draws a label at screen coordinates xy
+        """
         if not hasattr(self, "image"): self.open()
         x, y = xy
         self.draw_line(((x, y), (x, y - length)), color, 1)
@@ -126,6 +151,9 @@ class Camera:
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
+        """
+        Draws a line between screen coordinates line[0] and line[1]
+        """
         if not hasattr(self, "image"): self.open()
         (x0, y0), (x1, y1) = line
         x0 = int(round(x0 * self.scale + self.offset))
@@ -139,6 +167,10 @@ class Camera:
         return self
 
     def get_hash(self):
+        """
+        Returns a unique hash for the current settings and landmarks coordinates.
+        Storing this hash allows users to skip re-rendering the camera image.
+        """
         data = [
             self.id, self.name, self.player,
             self.xyz, self.ypr, self.fov, self.size,
@@ -152,11 +184,17 @@ class Camera:
         return hashlib.sha1(json.dumps(data, sort_keys=True).encode("utf-8")).hexdigest()
 
     def get_horizon(self):
+        """
+        Returns the y coordinate of the horizon
+        """
         tan_v = np.tan(np.radians(self.vfov / 2))
         ndc_y = -np.tan(np.radians(self.pitch)) / tan_v
         return (1 - ndc_y) * 0.5 * self.h - 0.5
 
     def get_hvp(self):
+        """
+        Returns the horizontal vanishing point
+        """
         h_lines = self.lines[0]
         if not h_lines: return
         n = len(h_lines)
@@ -168,6 +206,9 @@ class Camera:
         return points.mean(axis=0)
 
     def get_vvp(self):
+        """
+        Returns the vertical vanishing point
+        """
         cx, cy = self.w * 0.5, self.h * 0.5
         fx = cx / np.tan(np.radians(self.hfov) * 0.5)
         fy = cy / np.tan(np.radians(self.vfov) * 0.5)
@@ -178,6 +219,9 @@ class Camera:
         return float(x), float(y)
 
     def get_landmark_direction(self, lm_name):
+        """
+        Returns the direction vector of a given landmark
+        """
         if not lm_name in self.landmark_directions:
             self.landmark_directions[lm_name] = get_pixel_direction(
                 self.landmark_pixels[lm_name], self.q, self.fov, self.size
@@ -185,6 +229,9 @@ class Camera:
         return self.landmark_directions[lm_name]
 
     def get_landmark_direction_local(self, lm_name):
+        """
+        Returns the camera-local direction vector of a given landmark
+        """
         if not lm_name in self.landmark_directions_local:
             px, py = self.landmark_pixels[lm_name]
             ndc_x = 2 * ((px + 0.5) / self.w) - 1
@@ -196,12 +243,21 @@ class Camera:
         return self.landmark_directions_local[lm_name]
 
     def get_pixel(self, world_xyz):
+        """
+        Returns the on-screen pixel of a given world point
+        """
         return get_pixel(world_xyz, self.xyz, self.q, self.fov, self.size)
 
     def get_pixel_direction(self, pixel):
+        """
+        Returns direction vector of a given pixel
+        """
         return get_pixel_direction(pixel, self.q, self.fov, self.size)
 
     def get_point_at_zero_elevation(self, pixel):
+        """
+        Returns the point at which a ray through a given pixel intersects the ground plane
+        """
         if pixel[1] <= self.get_horizon():
             raise ValueError("Pixel must be below the horizon")
         direction = self.get_pixel_direction(pixel)
@@ -209,6 +265,9 @@ class Camera:
         return (self.x + t * direction[0], self.y + t * direction[1], 0)
 
     def open(self, scale=4, ratio=24/9):
+        """
+        Opens the camera image for rendering
+        """
         self.scale = scale
         self.ratio = ratio
         self.image_h = int(round(self.h * self.scale))
@@ -232,6 +291,9 @@ class Camera:
         return self
 
     def project_camera(self, cam_name, opacity=0.5):
+        """
+        Projects another camera's image into this camera's image
+        """
         if not hasattr(self, "image"): self.open()
         image_np = np.array(self.image)
         horizon = self.get_horizon()
@@ -271,6 +333,9 @@ class Camera:
         return self
 
     def project_map(self, map_name, map_scale=None, opacity=0.5):
+        """
+        Projects a map image into this camera's image
+        """
         if not hasattr(self, "image"): self.open()
         image_np = np.array(self.image)
         horizon = self.get_horizon()
@@ -292,6 +357,9 @@ class Camera:
         return self
 
     def register(self):
+        """
+        Adds this camera and its landmarks to gtamapdata's camera and landmark dicts
+        """
         if self.name in md.cameras:
             get_camera.cache_clear()
         md.cameras[self.name] = {
@@ -306,6 +374,9 @@ class Camera:
         return self
 
     def render_all(self):
+        """
+        Runs all render functions
+        """
         if not hasattr(self, "image"): self.open()
         self.render_player()
         self.render_vertical_lines()
@@ -319,6 +390,9 @@ class Camera:
         return self
 
     def render_camera_info(self):
+        """
+        Renders camera metadata
+        """
         if not hasattr(self, "image"): self.open()
         text = (
             f"XYZ ({self.x:.3f}, {self.y:.3f}, {self.z:.3f}) "
@@ -331,6 +405,9 @@ class Camera:
         return self
 
     def render_cameras(self, width=1):
+        """
+        Renders other cameras at their world positions
+        """
         if not hasattr(self, "image"): self.open()
         cameras = [
             get_camera(cam_name) for cam_name in md.cameras
@@ -355,6 +432,9 @@ class Camera:
         return self
 
     def render_distance_circles(self, width=0.5):
+        """
+        Renders distance circles on the ground plane
+        """
         if not hasattr(self, "image"): self.open()
         start = int(self.yaw - 60)
         stop = int(self.yaw + 60)
@@ -372,6 +452,9 @@ class Camera:
         return self
 
     def render_landmarks(self, width=2):
+        """
+        Renders known landmarks at their world positions
+        """
         if not hasattr(self, "image"): self.open()
         for lm_name, xyz in md.landmarks.items():
             nomalized = normalize_name(lm_name)
@@ -382,6 +465,9 @@ class Camera:
         return self
 
     def render_line(self, line, fill=(0, 0, 0), width=1):
+        """
+        Renders a line between world coordinates line[0] and line[1]
+        """
         if not hasattr(self, "image"): self.open()
         line = [self.get_pixel(point) for point in line]
         if line[0] is not None and line[1] is not None:
@@ -389,11 +475,17 @@ class Camera:
         return self
 
     def render_object(self, obj):
+        """
+        Renders a special landmark object
+        """
         if not hasattr(self, "image"): self.open()
         obj.render_on_camera(self)
         return self
 
     def render_pixels(self, width=1):
+        """
+        Renders landmark annotations and labels
+        """
         if not hasattr(self, "image"): self.open()
         for lm_name, (x, y) in self.landmark_pixels.items():
             color = get_color(lm_name)
@@ -403,6 +495,9 @@ class Camera:
         return self
 
     def render_player(self, width=1):
+        """
+        Renders the player, if present
+        """
         if not hasattr(self, "image"): self.open()
         if not self.player: return self
         px, py, pz = self.player
@@ -427,6 +522,9 @@ class Camera:
         return self
 
     def render_rays(self, width=0.25):
+        """
+        Renders rays from other cameras towards annotated landmarks
+        """
         if not hasattr(self, "image"): self.open()
         for cam_name in md.cameras:
             if cam_name == self.name: continue
@@ -452,6 +550,9 @@ class Camera:
         return self
 
     def render_vanishing_points(self, width=0.5):
+        """
+        Renders lines towards horizontal and vertical vanishing points
+        """
         if not hasattr(self, "image"): self.open()
         for a, b in self.lines[0]:
             self.draw_circle(a, 3, None, (255, 255, 0), width)
@@ -464,6 +565,9 @@ class Camera:
         return self
 
     def render_vertical_lines(self, width=0.25):
+        """
+        Renders vertical lines that align with world verticals
+        """
         if not hasattr(self, "image"): self.open()
         start = int(self.yaw - 60)
         stop = int(self.yaw + 60)
@@ -479,6 +583,9 @@ class Camera:
         return self
 
     def save(self, filename, crop=None):
+        """
+        Saves the current camera image
+        """
         if not hasattr(self, "image"): self.open()
         print(f"Writing {filename}", end=" ... ", flush=True)
         os.makedirs(os.path.dirname(filename), exist_ok=True)
@@ -490,6 +597,9 @@ class Camera:
         return self
 
     def set_fov(self, fov):
+        """
+        Sets horizontal and vertical fov
+        """
         if fov[0] is not None:
             self.hfov = fov[0]
             self.vfov = get_vfov(self.hfov, self.size)
@@ -503,12 +613,18 @@ class Camera:
         return self
 
     def set_q(self, q):
+        """
+        Sets quaternion
+        """
         self.q = q
         self.yaw, self.pitch, self.roll = get_ypr(self.q)
         self.clear_landmark_directions()
         return self
 
     def set_ypr(self, ypr):
+        """
+        Sets yaw, pitch and roll
+        """
         self.ypr = ypr
         self.yaw, self.pitch, self.roll = ypr
         self.q = get_q(self.ypr)
@@ -516,12 +632,18 @@ class Camera:
         return self
 
     def set_size(self, size):
+        """
+        Sets image size
+        """
         self.size = size
         self.w, self.h = self.size
         self.clear_landmark_directions(include_local=True)
         return self
 
     def set_xyz(self, xyz):
+        """
+        Sets camera position
+        """
         self.xyz = xyz
         self.xy = self.xyz[:2]
         self.x, self.y, self.z = self.xyz
@@ -530,6 +652,9 @@ class Camera:
 
 @lru_cache(maxsize=None)
 def get_camera(name):
+    """
+    Returns a camera by name
+    """
     cam = md.cameras[name]
     return Camera(
         id=cam["id"],
@@ -563,6 +688,9 @@ class Map:
         return f"<Map {self.name} v{self.version} {self.og_scale} {self.og_zero}>"
 
     def crop(self, crop, section_name=None):
+        """
+        Crops the map image
+        """
         self.cropped = crop
         self.section_name = section_name
         x0, y0, x1, y1 = self.cropped 
@@ -571,6 +699,9 @@ class Map:
         return self.image.crop((x0, y1, x1, y0))
 
     def draw_all(self):
+        """
+        Runs all draw functions
+        """
         if not hasattr(self, "image"): self.open()
         self.draw_rays()
         self.draw_cameras()
@@ -578,6 +709,9 @@ class Map:
         return self        
 
     def draw_camera(self, cam_name, r=10, d=100, _no_marker=False):
+        """
+        Draws a camera symbol
+        """
         if not hasattr(self, "image"): self.open()
         cam = get_camera(cam_name)
         for x in (0, cam.w):
@@ -588,6 +722,9 @@ class Map:
         return self
 
     def draw_cameras(self, r=10, d=100):
+        """
+        Draws all known cameras
+        """
         if not hasattr(self, "image"): self.open()
         cams = sorted(
             [get_camera(cam_name) for cam_name in md.cameras],
@@ -598,6 +735,9 @@ class Map:
         return self
 
     def draw_circle(self, xy, r, fill=(255, 255, 255), outline=(0, 0, 0), width=1, text=None):
+        """
+        Draws a circle at the given image coordinates
+        """
         if not hasattr(self, "image"): self.open()
         xy = self.get_map_xy(xy)
         r *= self.scale
@@ -610,6 +750,9 @@ class Map:
         return self
 
     def draw_landmark(self, lm_name, r=12):
+        """
+        Draws a landmark symbol
+        """
         if not hasattr(self, "image"): self.open()
         xy = md.landmarks[lm_name][:2]
         color = get_color(lm_name)
@@ -618,6 +761,9 @@ class Map:
         return self
 
     def draw_landmarks(self, r=12):
+        """
+        Draws all known landmarks
+        """
         if not hasattr(self, "image"): self.open()
         landmarks = sorted(
             md.landmarks.items(),
@@ -633,6 +779,9 @@ class Map:
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
+        """
+        Draws a line between world coordinates line[0] and line[1]
+        """
         if not hasattr(self, "image"): self.open()
         x0, y0 = self.get_map_xy(line[0])
         x1, y1 = self.get_map_xy(line[1])
@@ -640,6 +789,9 @@ class Map:
         return self
 
     def draw_map_info(self, image, height=32):
+        """
+        Draws map metadata
+        """
         if not hasattr(self, "image"): self.open()
         if self.cropped:
             sw = self.cropped[0], self.cropped[1]
@@ -660,11 +812,17 @@ class Map:
         return self
 
     def draw_object(self, obj):
+        """
+        Draws a special landmark object
+        """
         if not hasattr(self, "image"): self.open()
         obj.draw_on_map(self)
         return self
 
     def draw_rays(self):
+        """
+        Draws all rays from cameras towards landmarks
+        """
         if not hasattr(self, "image"): self.open()
         cameras = sorted(
             [get_camera(cam_name) for cam_name in md.cameras],
@@ -692,6 +850,9 @@ class Map:
         return self
 
     def draw_rectangle(self, xy0, xy1, fill=(255, 255, 255), outline=(0, 0, 0), width=1):
+        """
+        Draws a rectangle with xy0 and xy1 as SW and NE world coordinates
+        """
         if not hasattr(self, "image"): self.open()
         x0, y1 = self.get_map_xy(xy0)
         x1, y0 = self.get_map_xy(xy1)
@@ -699,18 +860,27 @@ class Map:
         return self
 
     def get_map_xy(self, xy):
+        """
+        Returns the map xy of a given world xy
+        """
         return (
             self.zero[0] + xy[0] * self.scale,
             self.zero[1] - xy[1] * self.scale
         )
 
     def get_world_xy(self, xy):
+        """
+        Returns the world xy of a given map xy
+        """
         return (
             (xy[0] - self.zero[0]) / self.scale,
             (self.zero[1] - xy[1]) / self.scale
         )
 
     def open(self, scale=None, add_padding=False):
+        """
+        Opens the map image for drawing
+        """
         self.image = Image.open(self.filename).convert("L").convert("RGB")
         if add_padding:
             km = int(self.scale * 1000)
@@ -749,6 +919,9 @@ class Map:
         return self 
 
     def project_camera(self, cam_names, area=None, r=(0, 10000)):
+        """
+        Projects a camera image onto the map
+        """
         if not hasattr(self, "image"): self.open()
         if type(cam_names) is str: cam_names = [cam_names]
         cams = [get_camera(cam_name).open() for cam_name in cam_names]
@@ -793,6 +966,9 @@ class Map:
         return self
 
     def project_camera_parallel(self, cam_names, area=None, r=(0, 10000)):
+        """
+        Projects a camera image onto the map (multi-threaded)
+        """
 
         if not hasattr(self, "image"): self.open()
         if type(cam_names) is str: cam_names = [cam_names]
@@ -836,6 +1012,9 @@ class Map:
         return self
 
     def save(self, filename, crop=None, section_name=None, map_info_height=None):
+        """
+        Saves the current map image
+        """
         if not hasattr(self, "image"): self.open()
         image = self.crop(crop, section_name) if crop else self.image
         if map_info_height is not None:
@@ -849,6 +1028,9 @@ class Map:
 
 
 def get_map(name):
+    """
+    Returns a map by name
+    """
     m = md.maps[name]
     return Map(
         name=name,
@@ -859,6 +1041,9 @@ def get_map(name):
     )
 
 def _project_camera_parallel(args):
+    """
+    Camera projection worker function
+    """
     map_scale, map_zero, map_y, map_x0, map_x1, r, cam_values, cam_images_np = args
     get_world_xy = lambda xy: (
         (xy[0] - map_zero[0]) / map_scale,
