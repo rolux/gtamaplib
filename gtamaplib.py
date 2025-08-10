@@ -206,11 +206,7 @@ class Camera:
             raise ValueError("Pixel must be below the horizon")
         direction = self.get_pixel_direction(pixel)
         t  = -self.z / direction[2]
-        return (
-            self.x + t * direction[0],
-            self.y + t * direction[1],
-            0
-        )
+        return (self.x + t * direction[0], self.y + t * direction[1], 0)
 
     def open(self, scale=4, ratio=24/9):
         self.scale = scale
