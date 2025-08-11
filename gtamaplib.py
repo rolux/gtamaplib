@@ -1533,7 +1533,7 @@ def find_four_seasons(
     map_name="rickrick",
     map_scale=5.0,
     map_area=(-1250, -1750, -250, -750),
-    basename=None
+    basename="four seasons"
 ):
     """
     Finds the Four Seasons landmark, given two known cameras.
