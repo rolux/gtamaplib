@@ -10,7 +10,7 @@ The core of **gtamaplib** are its `Camera` and `Map` classes. A `Camera` turns a
 
 "Mapping GTA" often involves triangulation. Two or more known cameras can be used to find the coordinates of a shared landmark, and with a sufficiently large number of known landmarks, it is possible to determine the position and orientation of unknown cameras. **gtamaplib** provides the trigonometric primitives for accurate 3D triangulation, and a `find_camera` method that performs a parallelized, multi-dimensional parameter sweep within a given search area, which returns – based on visible landmarks that are either known or can be seen from other known cameras – an optimally positioned and calibrated camera object. Rays and landmarks can be rendered directly into the camera image, and the log loss landscape of the search can be displayed on a map.
 
-**gtamaplib** comes with two companions: `gtamapdata` is a database of well-established cameras, frame-by-frame annotations, and triangulated landmark coordinates, and `gtamaputils` contains a collection of utilities and user scripts.
+**gtamaplib** comes with two companions: `gtamapdata` is a database of well-established cameras, frame-by-frame annotations and triangulated landmark coordinates from GTA VI, and `gtamaputils` contains a collection of utilities and user scripts.
 
 Please note that v0.1.0 is the first pre-release version of the library. More information, further updates (and maybe even proper documentation!) will follow shortly.
 
