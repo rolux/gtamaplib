@@ -1372,9 +1372,8 @@ class SunshineSkywayBridge(Landmark):
         return self
 
 
-def init_landmark_objects():
-    FourSeasons()
-    SunshineSkywayBridge()
+FS = FourSeasons()
+SSB = SunshineSkywayBridge()
 
 
 ### FIND ##########################################################################################
