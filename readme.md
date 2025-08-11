@@ -4,7 +4,7 @@
 
 **gtamaplib** is a mapping and 3D triangulation library for GTA-like worlds – specifically for [Grand Theft Auto VI](https://www.rockstargames.com/VI/), scheduled for release in 2026.
 
-"Mapping GTA"[^1] is a popular activity that begins years before the release of the game. One goal is to create a maximally accurate map of the game world, based on the geography shown in promotional screenshots and trailers. **gtamaplib** was developed to facilitate this process, and functions as a companion project to the [GTA Landmarks Map](https://github.com/rolux/gtadb.org).
+"Mapping GTA" is a popular activity that begins years before the release of the game.[^1] One goal is to create a maximally accurate map of the game world, based on the geography shown in promotional screenshots and trailers. **gtamaplib** was developed to facilitate this process, and functions as a companion project to the [GTA Landmarks Map](https://github.com/rolux/gtadb.org).
 
 The core of **gtamaplib** are its `Camera` and `Map` classes. A `Camera` turns a screenshot into a configurable camera object that can be programatically calibrated to match its true position and orientation in 3D space. A `Map` aggregates cameras, the rays originating from them, and the landmarks at their intersections, into a shared 2D representation. Cameras can be projected onto maps, maps can be projected into cameras, and it's even possible to project one camera into another one.
 
