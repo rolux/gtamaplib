@@ -1372,10 +1372,6 @@ class SunshineSkywayBridge(Landmark):
         return self
 
 
-FS = FourSeasons()
-SSB = SunshineSkywayBridge()
-
-
 ### FIND ##########################################################################################
 
 def find_camera(
@@ -2072,3 +2068,7 @@ def subsample(image_np, xy):
         int(round(sum(rgb[c] * inv_distances[i] for i, rgb in enumerate(rgbs))))
         for c in range(3)
     ])
+
+
+FS = FourSeasons()
+SSB = SunshineSkywayBridge()
