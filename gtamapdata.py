@@ -22,7 +22,7 @@ cameras = {
     "[L1/4] Diner (E)": ((-6164.100, 4468.100, 14.800), (-6169.600, 4472.500, 16.800), (232.000, -5.810, 0.000), (None, 54.000), (1920, 1080)),
     "[L1/4] Car Wash": ((-6220.800, 4316.200, 20.500), (-6216.700, 4321.600, 21.800), (145.389, -0.167, 0.000), (None, 51.300), (1920, 1080)),
     "[L1/6] Sidewalk (Jason) (E)": ((-461.500, 1233.400, 3.200), (-464.000, 1233.800, 4.600), (244.800, -19.865, 0.000), (None, 50.800), (1920, 1080)),
-    "[L1/7] Port": ((1185.700, -429.100, 5.200), (1190.000, -426.900, 7.200), (302.500, 14.100, 0.000), (None, 49.600), (1920, 1080)),
+    "[L1/7] Port": ((1185.700, -429.100, 5.200), (1190.000, -426.900, 7.200), (302.500, 14.100, 0.000), (None, 49.600), (1376, 776)),
     "[L1/8] Gas Station (Lucia)": ((-6319.500, 2749.100, 12.500), (-6319.100, 2748.300, 13.100), (358.250, -0.250, 0.000), (None, 34.200), (1920, 1080)),
     "[L1/9] Motel": ((-5358.200, 3486.200, 66.700), (-5359.900, 3484.000, 66.500), (313.000, 13.000, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/10] Pawn Shop (W)": ((-6423.000, 3060.100, 5.800), (-6421.600, 3061.600, 6.700), (125.104, -8.885, 0.000), (None, 49.600), (1376, 776)),
@@ -51,6 +51,7 @@ cameras = {
     "[L1/32] Police Chase (A)": ((-2588.800, -3567.800, 9.700), (-2588.900, -3566.700, 10.300), (201.396, -2.565, -1.500), (None, 54.100), (1920, 1080)),
     "[L1/32] Police Chase (D)": ((-2582.400, -3437.700, 10.000), (-2582.300, -3436.600, 10.400), (201.105, -7.000, 0.000), (None, 37.600), (1920, 1080)),
     "[L1/32] Police Chase (J)": ((-2568.900, -3273.700, 10.200), (-2568.700, -3272.600, 11.300), (190.275, -8.500, 0.000), (None, 37.600), (1920, 1080)),
+    "[L1/36] Alley (W)": ((1954.000, 861.300, 4.000), (1955.100, 851.600, 5.000), (66.400, -11.700, 0.000), (None, 49.600), (1920, 1080)),
     #"[L1/37] Airport (X)": ((-2582.000, -122.700, 5.200), (-2589.500, -123.500, 7.300), (278.294, -17.180, 0.000), (None, 51.300), (1920, 1080)),
     "[L1/37] Airport (X)": ((-2582.000, -122.700, 5.200), (-2589.500, -123.500, 7.300), (276.700, -17.180, 0.000), (None, 51.300), (1920, 1080)),
     "[L1/42] Tennis Court (SE)": ((-315.400, 1174.200, 3.500), (-317.232, 1174.859, 5.021), (258.590, -9.921, 0.009), (None, 37.600), (1824, 1080)),
@@ -115,8 +116,9 @@ pixels = {
         ((1133, 59), "Portofino Tower (NW)"),
     ],
     "[L1/7] Port": [
-        ((1140, 555), "Portofino Tower (NW)"),
-        ((1202, 557), "Portofino Tower (S)"),
+        ((295, 344), "Murano Grande"),
+        ((817, 399), "Portofino Tower (NW)"),
+        ((862, 401), "Portofino Tower (S)"),
     ],
     "[L1/8] Gas Station (Lucia)": [
         ((18, 415), "Pylon (A)"),
@@ -249,6 +251,9 @@ pixels = {
         ((183, 1010), "Minimap (N)"),
         ((334, 1010), "Minimap (BR)"),
     ],
+    "[L1/36] Alley (W)": [
+        ((617, 64), "Flamingo South Beach (E)"),
+    ],
     "[L1/37] Airport (X)": [
         ((63, 839), "Minimap (TL)"),
         ((64, 903.5), "Minimap (N)"),
@@ -323,6 +328,7 @@ pixels = {
         ((3797, 912), "Turkey Point Nuclear Power Station (3)"),
     ],
     "[T1/6] Vice Beach": [
+        ((38, 570), "Murano Grande"),
         ((61, 1172), "Congress Hotel"),
         ((141, 1152), "Cavalier Hotel"),
         ((225, 1144), "Leslie Hotel"),
@@ -342,6 +348,7 @@ pixels = {
         ((1972, 741), "FAA Miami ATCT (MIA)"),
         ((2079, 708.5), "Miami-Dade County Courthouse"),
         ((2625, 805), "Royal Palm South Beach (S)"),
+        ((2724, 606), "Flamingo South Beach (E)"),
         ((2742, 602), "Flamingo South Beach"),
         ((2899, 797), "Royal Palm South Beach (N)"),
         ((2982, 594), "Opera Tower"),
@@ -517,7 +524,7 @@ pixels = {
     ],
     "[S2/57] Ambrosia 02 (Panorama)": [
         ((339, 807), "Tall Water Tower"),
-        ((442, 783), "Wheelabrator South Broward"),
+        ((442, 783), "Wheelabrator South Broward (T)"),
         ((474, 791), "FAA Miami ATCT (MIA)"),
         ((535, 854), "Wheelabrator South Broward (W)"),
         ((575, 839), "WDNA FM SW 248th St"),
@@ -528,8 +535,8 @@ pixels = {
         ((1664, 771), "USSM Smokestack (4)"),
         ((1726, 813), "USSM Smokestack (5)"),
         ((1742, 805), "USSM Smokestack (6)"),
-        ((1749, 763), "US Sugar Mill Clewiston"),
-        #((1751, 831), "US Sugar Mill Clewiston"),
+        ((1749, 763), "US Sugar Mill (Factory)"),
+        #((1751, 831), "US Sugar Mill (Factory)"),
         ((1798, 775), "USSM Smokestack (7)"),
         ((1884, 910), "1500 Sonora Ave (Tank)"),
         ((1895, 860), "USSM Smokestack (8)"),
@@ -540,7 +547,8 @@ pixels = {
         ((2577, 788), "Very Tall Water Tower"),
         ((2714, 944), "Billboard with Irregular Shape"),
         ((2770, 937), "Billboard with Hat-Shaped Motif"),
-        ((2922, 818), "Sebring Water Tower"),
+        ((2921, 847), "Sebring Water Tower (B)"),
+        ((2922, 818), "Sebring Water Tower (T)"),
         ((2995.5, 899), "Billboard with Oval Motif"),
         ((3109.5, 792), "Water Tower near Prison"),
         ((3329, 870), "Billboard with Unknown Motif"),
@@ -549,9 +557,10 @@ pixels = {
     "[S2/59] Ambrosia 04 (Fires)": [
         ((108, 947), "Wheelabrator South Broward (W)"),
         ((1848, 463), "Radio Tower (Ambrosia)"),
-        ((2148, 899), "Sebring Water Tower"),
-        # ((2750, 888), "US Sugar Mill Clewiston"),
-        ((2751, 821), "US Sugar Mill Clewiston"),
+        ((2148, 899), "Sebring Water Tower (T)"),
+        ((2148, 922.5), "Sebring Water Tower (B)"),
+        # ((2750, 888), "US Sugar Mill (Factory)"),
+        ((2751, 821), "US Sugar Mill (Factory)"),
         ((3279.5, 817), "USSM Smokestack (7)"),
         ((3283, 863), "USSM Smokestack (5)"),
         ((3287, 850), "USSM Smokestack (6)"),
@@ -718,18 +727,21 @@ pixels = {
         ((579, 931), "1500 Sonora Ave (Silo)"),
         ((805, 1059), "USSM Smokestack (3)"),
         ((1013, 915), "Radio Tower (Ambrosia)"),
-        ((1463.5, 791), "US Sugar Mill Clewiston"),
+        ((1463.5, 791), "US Sugar Mill (Factory)"),
         #((1463, 902), "US Sugar Mill"),
         ((1513, 707), "USSM Smokestack (4)"),
         ((1647, 848), "USSM Smokestack (5)"),
         ((1693, 821), "USSM Smokestack (6)"),
         ((1844, 737), "USSM Smokestack (7)"),
         #((2090, 987), "Water Tower near Prison"),
+        ((2233, 1442), "US Sugar Mill (Warehouse)"),
         ((2414, 1063), "USSM Smokestack (8)"),
+        ((2568, 1512), "US Sugar Mill (Office)"),
         ((2459, 995), "USSM Smokestack (9)"),
         ((2459, 1147), "1500 Sonora Ave (Tank)"),
         ((2835, 967), "USSM Smokestack (10)"),
-        ((2905, 945), "Sebring Water Tower"),
+        ((2904, 986), "Sebring Water Tower (B)"),
+        ((2905, 945), "Sebring Water Tower (T)"),
         ((2907, 1073), "USSM Smokestack (11)"),
     ]
 }
@@ -968,7 +980,7 @@ landmarks = {
     "500 Pompano Dr": (-1914.537, -5324.281, 21.231),  # d=0.008 via Leonida Keys Postcard (X) & Key Lento
     "200 Pompano Dr": (-1875.738, -5390.187, 13.952),  # d=0.258 via Leonida Keys Postcard (X) & Key Lento
     "180 Pompano Dr": (-1896.308, -5424.708, 15.680),  # d=0.813 via Leonida Keys Postcard (X) & Key Lento
-    "Portofino Tower (NW)": (1721.544, -195.708, 143.059), # d=0.315 via Port & Sidewalk (Jason) (E)
+    "Portofino Tower (NW)": (1720.414, -196.295, 142.142),  # d=0.503 via Port & Sidewalk (Jason) (E)
     #"Prison Tower (1)": (-2884.895, -2690.586, 30.682),  # d=3.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     #"Prison Tower (2)": (-2722.635, -2714.152, 32.085),  # d=6.438 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
     #"Prison Tower (3)": (-2583.596, -2793.730, 32.316),  # d=6.093 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
