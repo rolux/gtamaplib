@@ -114,7 +114,7 @@ class Camera:
 
     def calibrate_yaw_and_z(self, lm_name, lm_point=None):
         """
-        Sets yaw and z so that a given landmark's pixel matches a given point.
+        Sets yaw and z so that a given landmark's pixel matches a given point
         """
         if lm_point is None: lm_point = md.landmarks[lm_name]
         self.calibrate_yaw(lm_name, lm_point)
@@ -1803,7 +1803,8 @@ def _find_four_seasons(args):
 
 def find_landmark(cam_name_a, cam_name_b, lm_name):
     """
-    Finds a landmark, given two known cameras
+    Finds a landmark, given two known cameras.
+    Returns midpoint, closest point on ray a, closest point on ray b, distance, angular delta.
     """
     cam_a = get_camera(cam_name_a)
     cam_b = get_camera(cam_name_b)
