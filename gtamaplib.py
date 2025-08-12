@@ -61,6 +61,49 @@ class Camera:
             f"({self.hfov:.3f}, {self.vfov:.3f}), ({self.w}, {self.h})>"
         )
 
+    def _get_pitch_from_hlines(self):
+        if not self.lines[0]: return None
+        vpx, vpy = self._get_vp_from_lines(self.lines[0])
+        ndc_y = 1 - 2 * ((vpy + 0.5) / self.h)
+        tan_v = np.tan(np.radians(self.vfov / 2))
+        return np.degrees(-np.arctan(ndc_y * tan_v))
+
+    def _get_pitch_from_vlines(self):
+        if not self.lines[1]: return None
+        def rotate(point):
+            x, y = point
+            dx, dy = x - cx, y - cy
+            return (
+                c * dx - s * dy + cx,
+                s * dx + c * dy + cy
+            )
+        cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
+        r = -np.radians(self.roll)
+        c, s = np.cos(r), np.sin(r)
+        if len(self.lines[1]) == 1:
+            a, b = self.lines[1][0]
+            line_unrolled = (rotate(a), rotate(b))
+            vp_unrolled = intersect_lines_2d(line_unrolled, ((cx, 0), (cx, self.h)))
+            if vp_unrolled is None:
+                return 0.0
+        else:
+            lines_unrolled = [(rotate(a), rotate(b)) for (a, b) in self.lines[1]]
+            vp_unrolled = self._get_vp_from_lines(lines_unrolled)
+        vpy_unrolled = vp_unrolled[1]
+        ndc_y = 1 - 2 * ((vpy_unrolled + 0.5) / self.h)
+        tan_v = np.tan(np.radians(self.vfov / 2))
+        return np.degrees(np.arctan(1 / (ndc_y * tan_v)))
+
+    def _get_vp_from_lines(self, lines):
+        n = len(lines)
+        points = [
+            intersect_lines_2d(lines[i], lines[j])
+            for i in range(n)
+            for j in range(i + 1, n)
+        ]
+        points = np.array([p for p in points if p is not None], dtype=float)
+        return tuple(points.mean(axis=0)) if len(points) else None
+
     def calibrate_yaw(self, lm_name, lm_point=None):
         """
         Sets yaw so that a given landmark's pixel matches a given point
@@ -655,6 +698,27 @@ class Camera:
         self.xyz = xyz
         self.xy = self.xyz[:2]
         self.x, self.y, self.z = self.xyz
+        return self
+
+    def test_lines(self):
+        pitch_h = self._get_pitch_from_hlines()
+        pitch_v = self._get_pitch_from_vlines()
+        if pitch_h is None and pitch_v is None:
+            print(f"{self.name}: Pitch is {self.pitch:.3f}, no lines defined")
+        if pitch_h is not None:
+            print(f"{self.name}: Pitch is {self.pitch:.3f}, ", end="")
+            if f"{self.pitch:.3f}" == f"{pitch_h:.3f}":
+                print("horizontal lines agree")
+            else:
+                print(f"but horizontal lines suggest {pitch_h:.3f}")
+        if pitch_v is not None:
+            print(f"{self.name}: Pitch is {self.pitch:.3f}, ", end="")
+            if f"{self.pitch:.3f}" == f"{pitch_v:.3f}":
+                text = ("line agrees", "lines agree")[len(self.lines[1]) > 1]
+                print("vertical {text}")
+            else:
+                text = ("line suggests", "lines suggest")[len(self.lines[1]) > 1]
+                print(f"but vertical {text} {pitch_v:.3f}")
         return self
 
 
