@@ -724,6 +724,26 @@ class Camera:
                 print(f"but vertical {text} {pitch_v:.3f}")
         return self
 
+    def test_player(self):
+        """
+        Test if player pixel agrees with yaw
+        """
+        print(f"{self.name}: Yaw is {self.yaw:.3f}, ", end="")
+        if not self.player:
+            print("no player defined")
+        elif not "Player" in self.landmark_pixels:
+            print("no player pixel defined")
+        else:
+            yaw = self.yaw
+            self.calibrate_yaw("Player", self.player)
+            player_yaw = self.yaw
+            self.set_ypr((yaw, self.pitch, self.roll))
+            if f"{self.yaw:.3f}" == f"{player_yaw:.3f}":
+                print("player pixel agrees")
+            else:
+                print(f"but player pixel suggests {player_yaw:.3f}")
+        return self
+
 
 @lru_cache(maxsize=None)
 def get_camera(name):
