@@ -260,6 +260,7 @@ class Camera:
         """
         Returns the vertical vanishing point
         """
+        if self.pitch == 0: return None
         cx, cy = self.w * 0.5, self.h * 0.5
         fx = cx / np.tan(np.radians(self.hfov) * 0.5)
         fy = cy / np.tan(np.radians(self.vfov) * 0.5)
@@ -612,7 +613,8 @@ class Camera:
         for a, b in self.lines[1]:
             self.draw_circle(a, 3, None, (255, 255, 0), width)
             self.draw_circle(b, 3, None, (255, 255, 0), width)
-            self.draw_line((a, self.get_vvp()), (255, 255, 0), width)
+            vvp = self.get_vvp() or (a[0], self.h)
+            self.draw_line((a, vvp), (255, 255, 0), width)
         return self
 
     def render_vertical_lines(self, width=0.25):
