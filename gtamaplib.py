@@ -1030,6 +1030,7 @@ class Map:
         else:
             self.draw_map_info(image)
         print(f"Writing {filename}", end=" ... ", flush=True)
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
         image.save(filename)
         print("Done")
         return self
