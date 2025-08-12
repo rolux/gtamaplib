@@ -701,6 +701,9 @@ class Camera:
         return self
 
     def test_lines(self):
+        """
+        Test if horizontal and vertical lines agree with pitch
+        """
         pitch_h = self._get_pitch_from_hlines()
         pitch_v = self._get_pitch_from_vlines()
         if pitch_h is None and pitch_v is None:
