@@ -1489,6 +1489,58 @@ class AIWE:
 
 ### FIND ##########################################################################################
 
+def find_aiwe():
+
+    cam = get_camera("AI World Editor Map (4K)")
+    aiwe_w, aiwe_h = Image.open(md.maps["aiwe"]["filename"]).size
+    aiwe_left, aiwe_top = cam.landmark_pixels["AIWE"]
+    aiwe_right, aiwe_bottom = aiwe_left + 2 * aiwe_w, aiwe_top + 2 * aiwe_h
+    # create a new aiwe instance that works for the camera image
+    aiwe = AIWE()
+    aiwe = AIWE(
+        scale=aiwe.scale * 2,
+        pixel=(
+            aiwe_left + aiwe.pixel[0] * 2,
+            aiwe_top + aiwe.pixel[1] * 2
+        )
+    )
+    # initialize the camera
+    xyz = -6636.086, 3000.623, 1_000_000.000
+    hfov = 1
+    cam.set_xyz(xyz).set_fov((hfov, None))
+    # calibrate xy
+    center_pixel = (cam.w / 2 - 0.5, cam.h / 2 - 0.5)
+    center_world = aiwe.get_world_xy(center_pixel)
+    center_cam = cam.get_point_at_zero_elevation(center_pixel)
+    delta_x = center_cam[0] - center_world[0]
+    delta_y = center_cam[1] - center_world[1]
+    x = cam.x - delta_x
+    y = cam.y - delta_y
+    cam.set_xyz((x, y, cam.z))
+    # calibrate hfov
+    aiwe_sw_pixel = aiwe_left, aiwe_bottom
+    aiwe_ne_pixel = aiwe_right, aiwe_top
+    aiwe_sw_world = aiwe.get_world_xy(aiwe_sw_pixel)
+    aiwe_ne_world = aiwe.get_world_xy(aiwe_ne_pixel)
+    ns_world = aiwe_ne_world[0] - aiwe_sw_world[0]
+    for step in (-0.001, 0.0001, -0.00001, 0.000001):
+        best_loss = float("inf")
+        while True:
+            aiwe_sw_cam = cam.get_point_at_zero_elevation(aiwe_sw_pixel)[:2]
+            aiwe_ne_cam = cam.get_point_at_zero_elevation(aiwe_ne_pixel)[:2]
+            ns_cam = aiwe_ne_cam[0] - aiwe_sw_cam[0]
+            loss = abs(ns_cam - ns_world)
+            if loss < best_loss:
+                best_loss = loss
+            else:
+                break
+            hfov += step
+            cam.set_fov((hfov, None))
+    hfov -= step
+    cam.set_fov((hfov, None))
+    return cam
+
+
 def find_camera(
     cam_name, lm_names, rays,
     line, radius, step,
