@@ -54,11 +54,12 @@ class Camera:
         player = (f"(" + ", ".join([
             f"{v:.3f}" for v in self.player
         ]) + ")") if self.player else "None"
+        d = 6 if self.hfov < 1 else 3
         return (
             f"<Camera {self.id} {self.name}: {player}, "
             f"({self.x:.3f}, {self.y:.3f}, {self.z:.3f}), "
             f"({self.yaw:.3f}, {self.pitch:.3f}, {self.roll:.3f}), "
-            f"({self.hfov:.3f}, {self.vfov:.3f}), ({self.w}, {self.h})>"
+            f"({self.hfov:.{d}f}, {self.vfov:.{d}f}), ({self.w}, {self.h})>"
         )
 
     def _get_pitch_from_hlines(self):
@@ -446,10 +447,11 @@ class Camera:
         Renders camera metadata
         """
         if not hasattr(self, "image"): self.open()
+        d = 6 if self.hfov < 1 else 3
         text = (
             f"XYZ ({self.x:.3f}, {self.y:.3f}, {self.z:.3f}) "
             f"YPR ({self.yaw:.3f}, {self.pitch:.3f}, {self.roll:.3f}) "
-            f"FOV ({self.hfov:.3f}, {self.vfov:.3f}) {self.id} {self.name}"
+            f"FOV ({self.hfov:.{d}f}, {self.vfov:.{d}f}) {self.id} {self.name}"
         )
         height = int(32 * self.scale)
         box = draw_box(text, height, (255, 255, 255), self.color)
@@ -573,7 +575,7 @@ class Camera:
                         self.render_line(line, fill, width)
         return self
 
-    def render_rays(self, width=0.25):
+    def render_rays(self, width=0.5):
         """
         Renders rays from other cameras towards annotated landmarks
         """
@@ -812,7 +814,7 @@ class Map:
         if not hasattr(self, "image"): self.open()
         cam = get_camera(cam_name)
         for x in (0, cam.w):
-            target_xy = get_point(cam.xyz, cam.get_pixel_direction((x, 0)), d)[:2]
+            target_xy = get_point(cam.xyz, cam.get_pixel_direction((x, cam.h / 2)), d)[:2]
             self.draw_line((cam.xy, target_xy), (255, 255, 255), 1)
         if not _no_marker:
             self.draw_circle(cam.xy, r, (255, 255, 255), cam.color, 1, cam.name[0])
@@ -928,7 +930,7 @@ class Map:
         rays = {}
         for cam in cameras:
             for lm_name in cam.landmark_pixels:
-                if lm_name in ("Player", "Minimap"): continue
+                if lm_name in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
                 target_xy = get_point(cam.xyz, direction, 10000)[:2]
                 ray = (cam.xy, target_xy)
@@ -1460,6 +1462,29 @@ class SunshineSkywayBridge(Landmark):
                     pillar_point = get_point(base_point, [0, 0, 1], (i + 1) * gap)
                     cam.render_line((road_point, pillar_point), fill=self.color, width=0.5)
         return self
+
+
+### AIWE ##########################################################################################
+
+class AIWE:
+
+    def __init__(self, scale=0.68, point=(-6420.1, 3062.3), pixel=(290, 306)):
+        self.scale = scale
+        self.point = point
+        self.pixel = pixel
+        self.west, self.north = self.get_world_xy((0, 0))
+
+    def get_aiwe_xy(self, world_xy):
+        return (
+            (world_xy[0] - self.west) * self.scale,
+            (self.north - world_xy[1]) * self.scale
+        )
+
+    def get_world_xy(self, aiwe_xy):
+        return (
+            self.point[0] + (aiwe_xy[0] - self.pixel[0]) / self.scale,
+            self.point[1] - (aiwe_xy[1] - self.pixel[1]) / self.scale
+        )
 
 
 ### FIND ##########################################################################################
