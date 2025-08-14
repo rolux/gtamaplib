@@ -18,13 +18,13 @@ for name in ("fonts", "frames", "maps"):
 cameras = {
     # "[id] name": ((px, py, pz), (cx, cy, cz), (yaw, pitch, roll), (hfov, vfov), (w, h))
     "[L1/2] AI World Editor Map (4K)": (None, (-6526.350, 2989.138, 1_000_000.000), (0.000, -90.000, 0.000), (0.161776, 0.085944), (3840, 2040)),
-    "[L1/4] Diner (N)": ((-6187.800, 4504.800, 14.600), (-6188.800, 4501.900, 16.200), (327.650, -17.708, 0.000), (None, 50.800), (1920, 1080)),
-    "[L1/4] Diner (W)": ((-6185.800, 4502.700, 14.300), (-6179.600, 4500.100, 16.600), (63.000, -7.926, 0.000), (None, 51.300), (1920, 1080)),
+    "[L1/4] Diner (N)": ((-6187.800, 4504.800, 14.600), (-6188.800, 4501.900, 16.200), (327.845, -16.355, 0.000), (None, 50.800), (1920, 1080)),
+    "[L1/4] Diner (W)": ((-6185.800, 4502.700, 14.300), (-6179.600, 4500.100, 16.600), (63.337, -7.836, 0.000), (None, 51.300), (1920, 1080)),
     "[L1/4] Diner (E)": ((-6164.100, 4468.100, 14.800), (-6169.600, 4472.500, 16.800), (232.000, -5.810, 0.000), (None, 54.000), (1920, 1080)),
-    "[L1/4] Car Wash": ((-6220.800, 4316.200, 20.500), (-6216.700, 4321.600, 21.800), (145.389, -0.167, 0.000), (None, 51.300), (1920, 1080)),
+    "[L1/4] Car Wash": ((-6220.800, 4316.200, 20.500), (-6216.700, 4321.600, 21.800), (146.326, 0.350, 0.000), (None, 51.300), (1920, 1080)),
     "[L1/6] Sidewalk (Jason) (E)": ((-461.500, 1233.400, 3.200), (-464.000, 1233.800, 4.600), (244.800, -19.865, 0.000), (None, 50.800), (1920, 1080)),
     "[L1/7] Port": ((1185.700, -429.100, 5.200), (1190.000, -426.900, 7.200), (302.500, 14.100, 0.000), (None, 49.600), (1376, 776)),
-    "[L1/8] Gas Station (Lucia)": ((-6319.500, 2749.100, 12.500), (-6319.100, 2748.300, 13.100), (359.831, -0.250, 0.000), (None, 34.200), (1920, 1080)),
+    "[L1/8] Gas Station (Lucia)": ((-6319.500, 2749.100, 12.500), (-6319.100, 2748.300, 13.100), (359.830, -0.250, 0.000), (57.350, 34.200), (1920, 1080), (1920, 1080)),
     "[L1/9] Motel": ((-5358.200, 3486.200, 66.700), (-5359.900, 3484.000, 66.500), (313.000, 13.000, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/10] Pawn Shop (W)": ((-6423.000, 3060.100, 5.800), (-6421.600, 3061.600, 6.700), (125.104, -8.885, 0.000), (None, 49.600), (1376, 776)),
     "[L1/10] Pawn Shop (S)": ((-6420.100, 3062.300, 5.900), (-6420.300, 3064.700, 6.500), (173.193, -4.990, 0.000), (None, 49.600), (1376, 776)),
@@ -37,7 +37,7 @@ cameras = {
     "[L1/16] Boat (Jason)": ((-3852.600, -344.300, 6.000), (-3853.900, -344.000, 7.300), (240.000, -27.000, 0.000), (None, 51.400), (1920, 1020)),
     "[L1/17] Hotel (E)": ((1955.600, 1566.800, 4.600), (1951.500, 1565.300, 5.700), (284.767, 0.000, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/19] Farm": ((-3466.800, -4462.600, 2.400), (-3466.300, -4469.700, 3.700), (11.400, -17.200, 0.000), (None, 49.600), (1920, 1020)),
-    "[L1/20] Gas Station (Jason)": ((-6319.400, 2749.900, 12.600), (-6318.700, 2746.900, 13.300), (358.625, -5.275, 0.000), (None, 50.800), (1920, 1080)),
+    "[L1/20] Gas Station (Jason)": ((-6319.400, 2749.900, 12.600), (-6318.700, 2746.900, 13.387), (0.084, -5.275, 0.000), (80.339, 50.800), (1920, 1080)),
     "[L1/21] Ocean near Keys (N)": ((-3442.800, -7188.300, -0.100), (-3442.900, -7191.000, 0.500), (358.679, -2.164, -1.300), (81.856, 52.000), (1920, 1080)),
     "[L1/21] Ocean near Keys (E)": ((-3427.400, -7191.100, -0.200), (-3430.100, -7190.500, 0.600), (257.800, -6.831, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/21] Metro (NE) (B)": ((-1553.500, -301.000, 19.800), (-1554.500, -302.100, 20.900), (305.704, -15.194, 0.000), (None, 49.600), (1920, 1020)),
@@ -63,11 +63,11 @@ cameras = {
     "[T1/6] Vice Beach": (None, (2255.000, 1069.000, 69.334), (112.655, -5.800, 0.000), (62.600, 37.762), (3840, 2160)),
     "[T1/19] Keys": (None, (-6107.000, -7097.000, 195.642), (276.904, -19.500, 0.000), (55.000, 32.642), (3840, 2160)),
     "[T1/20] Rooftop Party": (None, (1900.000, 2000.000, 190.000), (163.300, -9.000, 0.000), (60.000, None), (3840, 2160)),
-    "[T1/44] U-Turn (SW)": (None, (-6300.000, 3350.000, 11.500), (52.500, 0.000, 0.000), (45.000, None), (3840, 2160)),
-    "[T1/44] U-Turn (NE)": (None, (-6300.000, 3350.000, 11.500), (340.500, -3.000, 0.000), (45.000, None), (3840, 2160)),
+    "[T1/44] U-Turn (SW)": (None, (-6288.000, 3358.000, 5.500), (52.500, 0.000, 0.000), (45.000, None), (3840, 2160)),
+    "[T1/44] U-Turn (NE)": (None, (-6288.000, 3358.000, 5.500), (340.500, -3.000, 0.000), (45.000, None), (3840, 2160)),
     "[T2/1] Key Lento": (None, (-1808.000, -5256.000, 33.685), (134.337, -8.100, 0.000), (62.500, 30.546), (3840, 1728)),
     "[T2/67] Television": (None, (-2352.500, -5527.900, 8.000), (26.554, -4.908, 0.000), (60.000, None), (3840, 1728)),
-    "[T2/77] Chase (2)": (None, (-6480.000, 3300.000, 12.500), (350.941, 3.600, 0.000), (57.682, None), (3840, 1728)),
+    "[T2/77] Chase (2)": (None, (-6480.000, 3300.000, 6.000), (350.941, 3.600, 0.000), (57.682, None), (3840, 1728)),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160)),
     "[S2/56] Ambrosia 01 (Bikers)": (None, (-3900.000, 3900.000, 10.000), (45.000, 0.000, 0.000), (60.000, None), (3840, 2160)),
     "[S2/57] Ambrosia 02 (Panorama)": (None, (-3915.000, 4997.000, 50.000), (178.354, -2.750, 0.000), (40.300, None), (3840, 2160)),
@@ -109,11 +109,12 @@ pixels = {
         ((2138, 404), "Lucky Plucker (SW)"),
         ((1849, 407), "? (L944) (SE)"),
         ((1782, 426), "Pier (L946) (NE)"),
-        ((2170, 428), "Port Gellhorn Smokestack"),
+        ((2159, 434), "Port Gellhorn Smokestack"),
         ((2176, 476), "6232 E Hwy 98 (NE)"),
         ((1781, 479), "Leslie Porter Wayside Park"),
         ((1889, 510), "? (L664) (SE)"),
         ((2176, 511), "6232 E Hwy 98 (SE)"),
+        ((2191, 521), "Large White Billboard"),
         ((2142, 539), "? (L954) (SE)"),
         ((2005, 552), "Wildfire Scooters (NW)"),
         ((1921, 555), "? (L663) (SE)"),
@@ -150,6 +151,7 @@ pixels = {
         ((1937, 1124), "? (L669) (SE)"),
         ((1941, 1161), "? (L668) (SW)"),
         ((1946, 1189), "? (L667) (SW)"),
+        ((2243, 1200), "Welcome to Port Gellhorn Sign"),
         ((1978, 1219), "? (L666) (SE)"),
         ((2035, 1239), "? (L665) (SE)"),
         ((2097, 1243), "Mr. Bingo (SW)"),
@@ -177,11 +179,16 @@ pixels = {
     ],
     "[L1/4] Diner (W)": [
         ((549, 155), "Sunshine Skyway Bridge (N)"),
+        ((713, 171), "Water Tower (North Port Gellhorn)"),
+        ((885, 721), "Player"),
     ],
     "[L1/4] Car Wash": [
         # ((670, 450), "Pylon (77)"),
         ((685, 466), "Pylon (C)"),
-        ((1011, 641), "Player")
+        ((734, 507), "Springfield Community Church"),
+        ((743, 405), "Tall Double Billboard"),
+        #((1011, 641), "Player")
+        ((1029, 685), "Player")
     ],
     "[L1/6] Sidewalk (Jason) (E)": [
         ((174, 129), "Hotel (E)"),
@@ -208,9 +215,15 @@ pixels = {
         ((807, 453), "Pylon (C)"),
         #((840, 458), "Pylon (77)"),
         ((853, 311), "4937 E Hwy 98 (Gas Station) (NE)"),
-        #((877, 548), "Coyote's (SW)"),
+        ((868, 422), "Port Gellhorn Smokestack"),
+        ((924, 490.5), "Large White Billboard"),
         ((930, 479), "Oval Yellow Sign"),
+        ((946, 511), "Springfield Community Church"),
+        ((965, 499), "Tall Yellow Sign"),
+        ((978.5, 491), "Tall Double Billboard"),
         ((1023, 548), "Coyote's (SE)"),
+        ((1113, 536), "1703 E 5th St (Warehouse) (NW)"),
+        ((1134.5, 536), "1703 E 5th St (Warehouse) (SW)"),
         ((1181, 492), "Billboard (Hank's Waffles)"),
         ((1214, 489), "Waffles Ridge"),
         ((1305, 558), "Parker Community Center (SW)"),
@@ -218,6 +231,7 @@ pixels = {
         ((1376, 559), "Parker City Hall (SW)"),
         ((1451, 458.5), "Welcome to Port Gellhorn Sign"),
         ((1541, 559.5), "Parker Police Station (SW)"),
+        ((1529, 438), "Mount Waffles (W)"),
         ((1597, 417), "Mount Waffles (TW)"),
     ],
     "[L1/10] Pawn Shop (W)": [
@@ -259,6 +273,7 @@ pixels = {
         ((1223.5, 318), "Billboard (Delights)"),
         ((1233, 454), "Parker City Hall (SW)"),
         ((1277.5, 390), "Welcome to Port Gellhorn Sign"),
+        ((1339, 372), "Mount Waffles (W)"),
     ],
     "[L1/21] Ocean near Keys (N)": [
         ((87, 444), "Seven Mile Bridge (6T)"),
@@ -474,9 +489,12 @@ pixels = {
     "[T1/44] U-Turn (SW)": [
         ((447, 642), "6232 E Hwy 98 (SE)"),
         ((2312, 709), "6232 E Hwy 98 (NE)"),
+        ((2384, 224), "Radio Tower (Port Gellhorn)"),
         ((3693, 841), "Lucky Plucker (SW)"),
     ],
     "[T1/44] U-Turn (NE)": [
+        ((237, 494), "Tall Yellow Sign"),
+        ((277, 661), "Tall Double Billboard"),
         ((744, 735), "1703 E 5th St (Shack) (SW)"),
         ((1231, 747), "1703 E 5th St (Shack) (SE)"),
         ((1513, 723), "1703 E 5th St (Warehouse) (NW)"),
@@ -517,9 +535,10 @@ pixels = {
     ],
     "[T2/77] Chase (2)": [
         ((0, 932), "New Foundation Church"),
+        ((73, 923), "Juice Fruit Sign"),
         ((302, 676), "Sunshine Skyway Bridge (N)"),
         ((373, 597), "Sunshine Skyway Bridge (S)"),
-        ((790, 30), "Radio Tower (Port Gellhorn)"),
+        ((788, 39), "Radio Tower (Port Gellhorn)"),
         # ((1894, 498), "Pylon (77)"),
         ((1834, 586), "Pylon (C)"),
         ((2447, 775), "Wildfire Scooters (NW)"),
@@ -893,16 +912,19 @@ pixels = {
 
 lines = {
     "[L1/4] Diner (N)": ([
-        ((536, 84), (672, 135.5)),
+        #((536, 84), (672, 135.5)),
+        ((585, 0), (639, 46)),
         ((504, 0), (562, 37))
     ], []),
     "[L1/4] Diner (W)": ([
+        ((1882, 0), (1446, 180)),
         ((1920, 184), (1432, 285)),
-        ((1890, 333.5), (1488, 355)),
+        #((1890, 333.5), (1488, 355)),
     ], []),
     "[L1/4] Car Wash": ([
         ((956, 460), (913, 478)),
-        ((961, 549), (915, 546)),
+        ((961, 528), (915, 532)),
+        #((961, 549), (915, 546)),
     ], []),
     # "[L1/6] Sidewalk (Jason) (E)": (
     #     ((1783, 24), (1613, 35)),
@@ -1067,7 +1089,7 @@ landmarks = {
     "Marina Club at Blackwater Sound (N)": (-2575.262, -5864.326, 16.394),  # d=0.938 via Leonida Keys Postcard (X) & Key Lento
     "Marina Club at Blackwater Sound (S)": (-2573.282, -5923.209, 16.669),  # d=0.677 via Leonida Keys Postcard (X) & Key Lento
     "Miami Tower": (-775.668, -424.119, 159.972),  # d=5.605 via Grassrivers 02 (Watson Bay) & Prison
-    "Mount Waffles (TW)": (-5297.884, 5657.120, 195.857), # via Diner (N) + Gas Station (Lucia)
+    "Mount Waffles (TW)": (-5225.002, 5750.498, 228.719),  # d=39.915 via Gas Station (Lucia) & Diner (N)
     "Murano Grande": (1438.245, -21.340, 138.361),  # d=0.050 via Vice Beach & Port
     #"Nine at Mary Brickell (A)": (-1035.341, -973.492, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     #"Nine at Mary Brickell (B)": (-1042.495, -984.399, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
@@ -1134,15 +1156,18 @@ landmarks = {
     "Prison Tower (4)": (-2631.080, -2864.993, 32.628),  # d=0.189 via Grassrivers 02 (Watson Bay) & Prison
     "Prison Tower (5)": (-2880.118, -2886.336, 32.672),  # d=0.201 via Grassrivers 02 (Watson Bay) & Prison
     "Prison Tower (6)": (-2983.035, -2781.496, 32.350),  # d=0.483 via Grassrivers 02 (Watson Bay) & Prison
+    "Pylon (C)": (-6407.044, 3797.365, 60.367),  # d=0.350 via Gas Station (Lucia) & Car Wash
     "Red Billboard (Hamlet)": (-2542.919, -3495.137, 27.400),  # d=8.899 via Police Chase (D) & Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (3T)": (-3572.582, -6892.863, 3.488),  # d=0.101 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (6T)": (-3637.196, -6932.511, 8.104),  # d=0.278 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (20B)": (-3940.429, -7117.949, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (5B)": (-3629.187, -6932.164, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach & Prison
+    "Springfield Community Church": (-6325.114, 4058.129, 30.115),  # d=2.949 via Gas Station (Lucia) & Car Wash
     "Sunshine Skyway Bridge (N)": (-6843.266, 4580.690, 141.185),
     "Sunshine Skyway Bridge (S)": (-6759.214, 4351.692, 141.185),
     "Sunshine Skyway Bridge (C)": (-6801.240, 4466.191, 31.185), # Road Level
+    "Tall Double Billboard": (-6299.540, 4125.617, 46.603),  # d=3.130 via Gas Station (Lucia) & Car Wash
     "Tree on Island J": (-2479.572, -6563.116, 7.921),  # d=0.674 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Turkey Point Nuclear Power Station (N)": (-1548.858, -3459.523, 56.586),  # d=0.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (S)": (-1546.175, -3523.098, 56.642),  # d=0.090 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
@@ -1157,14 +1182,14 @@ landmarks = {
     #### AIWE MAP ####
     "1703 E 5th St (Shack) (SE)": (-6264.218, 3479.946, 10.000),  # via AI World Editor Map (4K)
     "1703 E 5th St (Shack) (SW)": (-6275.983, 3479.211, 10.000),  # via AI World Editor Map (4K)
-    "1703 E 5th St (Warehouse) (NW)": (-6250.247, 3501.270, 10.000),  # via AI World Editor Map (4K)
-    "1703 E 5th St (Warehouse) (SW)": (-6245.100, 3455.682, 10.000),  # via AI World Editor Map (4K)
+    "1703 E 5th St (Warehouse) (NW)": (-6251.006, 3501.332, 11.315),  # d=0.758 via AI World Editor Map (4K) & Gas Station (Lucia)
+    "1703 E 5th St (Warehouse) (SW)": (-6246.447, 3455.814, 11.423),  # d=1.350 via AI World Editor Map (4K) & Gas Station (Lucia)
     "2533 E Hwy 98 (N)": (-6448.041, 3293.182, 10.000),  # via AI World Editor Map (4K)
     "2533 E Hwy 98 (W)": (-6453.188, 3286.564, 10.000),  # via AI World Editor Map (4K)
     "3210 E Hwy 98 (NE)": (-6440.688, 3108.256, 10.000),  # via AI World Editor Map (4K)
     "3401 E Hwy 98 (SW)": (-6424.512, 3324.064, 10.000),  # via AI World Editor Map (4K)
     "4937 E Hwy 98 (Gas Station) (NE)": (-6321.092, 2782.835, 17.442),  # d=0.990 via AI World Editor Map (4K) & Gas Station (Lucia)
-    "4937 E Hwy 98 (Gas Station) (SE)": (-6331.130, 2764.506, 10.000),  # via AI World Editor Map (4K)
+    "4937 E Hwy 98 (Gas Station) (SE)": (-6330.736, 2764.765, 17.649),  # d=0.943 via AI World Editor Map (4K) & Gas Station (Jason)
     "4937 E Hwy 98 (Store) (NE)": (-6331.865, 2752.741, 10.000),  # via AI World Editor Map (4K)
     "4937 E Hwy 98 (Store) (SE)": (-6331.865, 2735.094, 10.000),  # via AI World Editor Map (4K)
     "6218 E Hwy 98 (E)": (-6554.659, 3053.476, 10.000),  # via AI World Editor Map (4K)
@@ -1187,7 +1212,7 @@ landmarks = {
     "? (L958) (SW)": (-6502.453, 3063.035, 10.000),  # via AI World Editor Map (4K)
     "AIWE": (-6846.570, 3512.299, 10.000),  # via AI World Editor Map (4K)
     "Centerplate": (-6665.320, 2661.197, 10.000),  # via AI World Editor Map (4K)
-    "Coyote's (SE)": (-6306.870, 3060.828, 10.223),  # d=0.002 via AI World Editor Map (4K) & Gas Station (Lucia)
+    "Coyote's (SE)": (-6306.869, 3060.828, 10.223),  # d=0.002 via AI World Editor Map (4K) & Gas Station (Lucia)
     "Coyote's (SW)": (-6350.983, 3053.476, 10.000),  # via AI World Editor Map (4K)
     "Dan's Pawn (NE)": (-6426.718, 3078.476, 10.000),  # via AI World Editor Map (4K)
     "Dan's Pawn (SE)": (-6414.953, 3053.476, 10.000),  # via AI World Editor Map (4K)
@@ -1196,19 +1221,20 @@ landmarks = {
     "King Slayer Charters (NE)": (-6577.453, 3138.770, 10.000),  # via AI World Editor Map (4K)
     "King Slayer Charters (SE)": (-6578.923, 3118.182, 10.000),  # via AI World Editor Map (4K)
     "Leslie Porter Wayside Park": (-6628.188, 3386.564, 10.000),  # via AI World Editor Map (4K)
+    "Large White Billboard": (-6329.580, 3355.622, 27.401),  # d=2.857 via AI World Editor Map (4K) & Gas Station (Lucia)
     "Lucky Plucker (NE)": (-6355.394, 3457.152, 10.000),  # via AI World Editor Map (4K)
     "Lucky Plucker (SE)": (-6353.188, 3444.652, 10.000),  # via AI World Editor Map (4K)
     "Lucky Plucker (SW)": (-6365.688, 3441.711, 10.000),  # via AI World Editor Map (4K)
     "Mr. Bingo (SE)": (-6344.365, 2824.800, 10.000),  # via AI World Editor Map (4K)
     "Mr. Bingo (SW)": (-6395.835, 2824.800, 10.000),  # via AI World Editor Map (4K)
-    "Parker City Hall (SW)": (-6247.699, 3045.290, 8.501),  # d=1.158 via AI World Editor Map (4K) & Gas Station (Lucia)
-    "Parker Community Center (SW)": (-6245.748, 3115.222, 7.628),  # d=0.092 via AI World Editor Map (4K) & Gas Station (Lucia)
-    "Parker Police Station (SW)": (-6221.733, 3039.312, 8.510),  # d=0.608 via AI World Editor Map (4K) & Gas Station (Lucia)
+    "Parker City Hall (SW)": (-6247.698, 3045.290, 8.501),  # d=1.157 via AI World Editor Map (4K) & Gas Station (Lucia)
+    "Parker Community Center (SW)": (-6245.747, 3115.222, 7.628),  # d=0.092 via AI World Editor Map (4K) & Gas Station (Lucia)
+    "Parker Police Station (SW)": (-6221.732, 3039.312, 8.510),  # d=0.608 via AI World Editor Map (4K) & Gas Station (Lucia)
     "Parker Public Library (SW)": (-6208.336, 3092.447, 10.000),  # via AI World Editor Map (4K)
     "Pier (L945) (SW)": (-6614.953, 3456.417, 10.000),  # via AI World Editor Map (4K)
     "Pier (L946) (NE)": (-6627.453, 3425.535, 10.000),  # via AI World Editor Map (4K)
     "Pier 98 (NE)": (-6541.424, 3109.359, 10.000),  # via AI World Editor Map (4K)
-    "Port Gellhorn Smokestack": (-6342.159, 3424.064, 10.000),  # via AI World Editor Map (4K)
+    "Port Gellhorn Smokestack": (-6351.527, 3419.566, 49.861),  # d=2.545 via AI World Editor Map (4K) & Gas Station (Jason)
     "Red Bird Café (NW)": (-6470.100, 3166.712, 10.000),  # via AI World Editor Map (4K)
     "Rodeo's (SE)": (-6549.512, 3143.917, 10.000),  # via AI World Editor Map (4K)
     "Sebring International Raceway (T17)": (-6623.776, 2554.212, 10.000),  # via AI World Editor Map (4K)
@@ -1218,6 +1244,7 @@ landmarks = {
     "Twice The Ice (N)": (-6452.453, 3260.094, 10.000),  # via AI World Editor Map (4K)
     "Twice The Ice (W)": (-6454.659, 3255.682, 10.000),  # via AI World Editor Map (4K)
     "Waldo Station (SE)": (-6575.247, 3506.417, 10.000),  # via AI World Editor Map (4K)
+    "Welcome to Port Gellhorn Sign": (-6288.487, 2856.420, 17.620),  # d=0.000 via AI World Editor Map (4K) & Gas Station (Lucia)
     "Wildfire Scooters (NW)": (-6463.482, 3332.888, 10.000),  # via AI World Editor Map (4K)
     "Wildfire Scooters (SE)": (-6441.424, 3328.844, 10.000),  # via AI World Editor Map (4K)
     "Wildfire Scooters (SW)": (-6460.541, 3323.697, 10.000),  # via AI World Editor Map (4K)
