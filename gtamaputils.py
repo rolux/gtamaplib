@@ -65,7 +65,7 @@ def find_mary_brickell():
 
     ms_cam = ml.get_camera("Metro (SE) (A) (4K)")
     ts_cam = ml.get_camera("Tennis Stadium (4K)")
-    lm_name = "Nine at Mary Brickell"
+    lm_name = "Nine at Mary Brickell Village"
     ray_a = (ms_cam.xyz, ms_cam.get_landmark_direction(f"{lm_name} (A)"))
     ray_b = (ms_cam.xyz, ms_cam.get_landmark_direction(f"{lm_name} (B)"))
     ray_e = (ts_cam.xyz, ts_cam.get_landmark_direction(f"{lm_name} (E)"))
