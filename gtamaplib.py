@@ -469,6 +469,7 @@ class Camera:
         ]
         depth = 25
         for cam in sorted(cameras, key=lambda cam: -get_distance(self.xyz, cam.xyz)):
+            if cam.hfov < 1: continue
             self.render_line((cam.xyz, (cam.x, cam.y, 0)), cam.color, width // 2)
             corners = (
                 get_point(cam.xyz, cam.get_pixel_direction((0, 0)), depth),
@@ -1550,6 +1551,9 @@ def find_camera(
                 print(f"{loss=:.6f}\ndeltas={delta_string}\n{cam}\n", flush=True)
 
     cam.set_xyz(best_cam.xyz).set_ypr(best_cam.ypr).set_fov(best_cam.fov).register()
+    for other_cam_name, lm_name in sorted(rays, key=lambda kv: kv[1]):
+        (x, y, z), a, b, d, _ = find_landmark(cam_name, other_cam_name, lm_name)
+        print(f'    "{lm_name}": ({x:.3f}, {y:.3f}, {z:.3f}),  # {d=:.3f} via {cam_name} & {other_cam_name}')
 
     m = get_map(map_name).open(scale=map_scale, add_padding=True)
     for (x, y), loss in local_loss:
