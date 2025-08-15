@@ -62,7 +62,7 @@ cameras = {
     "[L1/48] Hangar (A)": ((-2630.900, -116.800, 4.300), (-2631.700, -113.900, 4.600), (313.300, 15.400, 0.000), (None, 50.900), (1920, 1080)),
     "[T1/1] Prison":  (None, (-3355.000, -2758.000, 32.639), (281.653, -2.500, 0.000), (80.600, 51.006), (3840, 2160)),
     "[T1/6] Vice Beach": (None, (2255.000, 1069.000, 69.334), (112.655, -5.800, 0.000), (62.600, 37.762), (3840, 2160)),
-    "[T1/10] Beach": (None, (2100.000, -25.000, 2.000), (15.500, -1.000, 0.000), (53.000, None), (3840, 2160)),
+    "[T1/10] Beach": (None, (2158.000, -5.000, 3.687), (16.106, -0.900, 0.000), (45.000, 26.231), (3840, 2160)),
     "[T1/16] Venetian Islands": (None, (-16.000, 1095.000, 71.746), (286.720, -13.400, 0.000), (64.200, 38.871), (3840, 2160)),
     "[T1/19] Keys": (None, (-6107.000, -7097.000, 195.642), (276.904, -19.500, 0.000), (55.000, 32.642), (3840, 2160)),
     "[T1/20] Rooftop Party": (None, (1929.000, 1953.000, 104.661), (162.326, -7.500, 0.000), (58.700, 35.105), (3840, 2160)),
@@ -492,6 +492,7 @@ pixels = {
         ((2326, 699), "1st St Lifeguard Tower"),
         ((2436, 672), "Green Diamond"),
         ((2444.5, 680), "Loews Miami Beach"),
+        ((2510, 688), "Trésor Tower"),
         ((2578, 732), "Royal Palm South Beach (S)"),
         ((2655, 907), "3rd St Lifeguard Tower"),
         ((2687, 734), "Royal Palm South Beach (N) (S)"),
@@ -1209,6 +1210,12 @@ landmarks = {
     "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     "Akoya Condominium": (1442.563, 2608.672, 144.117),  # d=2.633 via Venetian Islands & Highway (NE)
     "Asia Brickell Key": (-119.683, -881.354, 185.477),  # d=1.275 via Vice Beach & Leonida Keys 01 (Airplane) (X)
+    "Beach (A)": (2160.823, 19.986, 0.000),  # via Beach
+    "Beach (B)": (2148.416, 81.443, 0.000),  # via Beach
+    "Beach (C)": (2164.590, 198.311, 0.000),  # via Beach
+    "Beach (D)": (2152.913, 309.416, 0.000),  # via Beach
+    "Beach (E)": (2150.714, 724.551, 0.000),  # via Beach
+    "Beach (F)": (2265.994, 1362.246, 0.000),  # via Beach
     "Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
     "Biscayne Island (S)": (297.158, 1085.080, 0.000),  # via Venetian Islands
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
