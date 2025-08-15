@@ -1493,11 +1493,10 @@ class AIWE:
 def find_camera(
     cam_name, lm_names, rays,
     line, radius, step,
-    pitch_range, hfov_range,
+    z_limits, pitch_range, hfov_range,
     map_name, map_scale, map_area,
     projection_area,
-    basename,
-    z_limits=None  # FIXME: insert before pitch_range
+    basename
 ):
     """
     Finds the optimal camera position and settings within a given map region,
