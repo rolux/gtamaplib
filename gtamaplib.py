@@ -1496,7 +1496,8 @@ def find_camera(
     pitch_range, hfov_range,
     map_name, map_scale, map_area,
     projection_area,
-    basename
+    basename,
+    z_limits=None  # FIXME: insert before pitch_range
 ):
     """
     Finds the optimal camera position and settings within a given map region,
@@ -1535,7 +1536,7 @@ def find_camera(
     best_cam = None
 
     pool_args = [
-        (cam, xy, pitch_values, hfov_values, targets, n_points)
+        (cam, xy, z_limits, pitch_values, hfov_values, targets, n_points)
         for xy in xys
     ]
     with multiprocessing.Pool() as pool:
@@ -1601,7 +1602,7 @@ def _find_camera(args):
     Camera search worker function
     """
 
-    cam, xy, pitch_values, hfov_values, targets, n_points = args
+    cam, xy, z_limits, pitch_values, hfov_values, targets, n_points = args
     cam.set_xyz((xy[0], xy[1], cam.z))
     n_targets = len(targets)
     best_loss = float("inf")
@@ -1613,6 +1614,8 @@ def _find_camera(args):
             cam.set_fov((hfov, None))
             for p in range(n_points):
                 cam.calibrate_yaw_and_z(*targets[p])  # lm_name, point
+                if z_limits and not z_limits[0] <= cam.z <= z_limits[1]:
+                    continue
                 deltas = []
                 loss = 0
                 threshold = best_loss * n_targets
