@@ -723,7 +723,7 @@ class Camera:
             print(f"{self.name}: Pitch is {self.pitch:.3f}, ", end="")
             if f"{self.pitch:.3f}" == f"{pitch_v:.3f}":
                 text = ("line agrees", "lines agree")[len(self.lines[1]) > 1]
-                print("vertical {text}")
+                print(f"vertical {text}")
             else:
                 text = ("line suggests", "lines suggest")[len(self.lines[1]) > 1]
                 print(f"but vertical {text} {pitch_v:.3f}")
