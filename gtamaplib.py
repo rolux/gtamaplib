@@ -586,7 +586,7 @@ class Camera:
             cam = get_camera(cam_name)
             for lm_name in cam.landmark_pixels:
                 if lm_name not in self.landmark_pixels: continue
-                if lm_name.split(" ")[0] in ("Player", "Minimap", "AIWE"): continue
+                if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
                 m, a, b, _, _ = find_landmark(self.name, cam_name, lm_name)
                 # FIXME
@@ -931,7 +931,7 @@ class Map:
         rays = {}
         for cam in cameras:
             for lm_name in cam.landmark_pixels:
-                if lm_name.split(" ")[0] in ("Player", "Minimap", "AIWE"): continue
+                if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
                 target_xy = get_point(cam.xyz, direction, 10000)[:2]
                 ray = (cam.xy, target_xy)
