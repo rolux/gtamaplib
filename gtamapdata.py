@@ -61,9 +61,10 @@ cameras = {
     "[L1/43] Pool": ((-5325.300, 3473.200, 66.900), (-5327.700, 3476.600, 67.900), (208.500, -8.000, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/44] Tennis Stadium (4K)": ((-152.600, -1748.900, 36.300), (-155.600, -1748.600, 36.300), (84.936, -0.100, 0.000), (None, 45.000), (3840, 2160)),
     "[L1/48] Hangar (A)": ((-2630.900, -116.800, 4.300), (-2631.700, -113.900, 4.600), (313.300, 15.400, 0.000), (None, 50.900), (1920, 1080)),
-    "[T1/1] Prison":  (None, (-3355.000, -2758.000, 32.639), (281.653, -2.500, 0.000), (80.600, 51.006), (3840, 2160)),
-    "[T1/6] Vice Beach": (None, (2255.000, 1069.000, 69.334), (112.655, -5.800, 0.000), (62.600, 37.762), (3840, 2160)),
-    "[T1/10] Beach": (None, (2158.000, -5.000, 3.687), (16.106, -0.900, 0.000), (45.000, 26.231), (3840, 2160)),
+    "[T1/1] Prison": (None, (-3355.000, -2758.000, 32.639), (281.653, -2.500, 0.000), (80.600, 51.006), (3840, 2160)),
+    #"[T1/6] Vice Beach": (None, (2255.000, 1069.000, 69.334), (112.655, -5.800, 0.000), (62.600, 37.762), (3840, 2160)),
+    "[T1/6] Vice Beach": (None, (2274.000, 1087.000, 71.208), (112.899, -5.700, 0.000), (61.700, 37.143), (3840, 2160)),
+    "[T1/10] Beach": (None, (2152.000, -100.000, 3.998), (15.510, -1.100, 0.000), (45.000, 26.231), (3840, 2160)),
     "[T1/16] Venetian Islands": (None, (-16.000, 1095.000, 71.746), (286.720, -13.400, 0.000), (64.200, 38.871), (3840, 2160)),
     "[T1/19] Keys": (None, (-6107.000, -7097.000, 195.642), (276.904, -19.500, 0.000), (55.000, 32.642), (3840, 2160)),
     "[T1/20] Rooftop Party": (None, (1929.000, 1953.000, 104.661), (162.326, -7.500, 0.000), (58.700, 35.105), (3840, 2160)),
@@ -254,8 +255,12 @@ pixels = {
         ((3054, 616), "House D (SW)"),
     ],
     "[L1/15] Park": [
+        ((189, 327), "Jenny Hostel (NE)"),
         ((325, 307), "Hotel Breakwater"),
+        ((687.5, 415), "Hotel Victor (SW)"),
         ((781.5, 695), "Player"),
+        #((986, 406), "1500 Ocean Dr (S) (SW)"),
+        ((997, 406.5), "1500 Ocean Dr (S) (SE)"),
         ((1033, 536), "Art Deco Welcome Center (S)"),
         ((1142, 409.5), "1500 Ocean Dr")
     ],
@@ -391,8 +396,9 @@ pixels = {
     ],
     "[L1/42] Tennis Court (SE)": [
         ((759.25, 91.75), "1000 Venetian Way (SW)"),
-        ((1039, 226), "Old City Hall"),
-        ((1158.5, 159), "Icon at South Beach"),
+        ((1038, 226), "Old City Hall"),
+        ((1140, 160), "The Waverly South Beach (NW)"),
+        ((1398, 195), "West Venetian Causeway Bridge"),
         ((1555, 165), "Portofino Tower (NE)"),
         ((1581, 164), "Portofino Tower (NW)"),
     ],
@@ -451,18 +457,22 @@ pixels = {
     "[T1/6] Vice Beach": [
         ((38, 570), "Murano Grande"),
         ((61, 1172), "Congress Hotel"),
+        ((92, 999.5), "Jenny Hostel (NE)"),
         ((141, 1152), "Cavalier Hotel"),
         ((225, 1144), "Leslie Hotel"),
         ((247, 556), "Icon at South Beach"),
         ((452, 754), "Container Crane (1)"),
         ((552, 791), "Construction Crane (1) (Vice Beach)"),
+        ((565, 1008), "Hotel Victor (NW)"),
         ((675, 1244), "The Villa Casa Casuarina"),
         ((705, 975), "Miami Beach Parking Garage (SE)"),
         ((829, 1166), "Winter Haven"),
         ((945, 1221), "McAlpin Ocean Plaza"),
         ((961, 633), "Asia Brickell Key"),
         ((991, 840), "Old City Hall"),
+        ((1055, 601), "Four Seasons Hotel Miami (SE)"),
         ((1059.5, 592.5), "Four Seasons Hotel Miami (BE)"),
+        ((1093.5, 594), "Four Seasons Hotel Miami (BW)"),
         ((1110, 597.5), "Four Seasons Hotel Miami (NW)"),
         ((1159, 830), "Cruise Terminal G (B)"),
         ((1301, 688), "The Floridian"),
@@ -471,6 +481,8 @@ pixels = {
         ((1582, 879), "1500 Ocean Dr"),
         ((1681.5, 643.5), "Wells Fargo Center (N)"),
         ((1710, 631), "The Waverly South Beach (SE)"),
+        ((1808, 865), "1500 Ocean Dr (S) (SE)"),
+        ((1883, 651), "The Waverly South Beach (NW)"),
         ((1972, 741), "FAA Miami ATCT (MIA)"),
         ((2079, 708.5), "Miami-Dade County Courthouse"),
         ((2275, 752), "Unknown Building near VCIA (S)"),
@@ -479,7 +491,7 @@ pixels = {
         ((2724, 606), "Flamingo South Beach (TE)"),
         ((2742, 602), "Flamingo South Beach (TC)"),
         ((2764, 606), "Flamingo South Beach (TNE)"),
-        ((2882, 797), "Royal Palm South Beach (N) (S)"),
+        ((2822, 797), "Royal Palm South Beach (N) (S)"),
         ((2978, 797), "Royal Palm South Beach (N) (N)"),
         ((2982, 594), "Opera Tower"),
         ((3082, 615), "The Grand"),
@@ -490,16 +502,18 @@ pixels = {
         ((3350, 760), "1000 Venetian Way (SE)"),
         ((3384, 613), "Quantum on the Bay Condominium (N) (NE)"),
         ((3475, 807), "Capri South Beach (SE)"),
-        ((3715, 1028), "Loews Miami Beach (S)"),
+        ((3668.5, 1025.5), "St. Moritz Hotel (SW)"),
     ],
     "[T1/10] Beach": [
         ((601, 427), "101 Ocean Dr (SE)"),
         ((1231.5, 549.5), "Royal Atlantic Condominium (SE)"),
         ((1517, 786), "Jenny Hostel"),
+        ((1654, 832), "Jenny Hostel (NE)"),
         ((1672, 800), "Bank of America Financial Center (SW)"),
         ((1773, 738), "Bank of America Financial Center"),
         ((1834, 863), "Hotel Breakwater"),
         ((1994, 734), "Akoya Condominium"),
+        ((2043, 843), "Hotel Victor (SW)"),
         ((2163, 601), "Jade Ocean Condos (NW)"),
         ((2198.5, 596), "Jade Ocean Condos (SW)"),
         ((2244.5, 596), "Jade Ocean Condos (SE)"),
@@ -508,6 +522,8 @@ pixels = {
         ((2444.5, 680), "Loews Miami Beach"),
         ((2510, 688), "Trésor Tower"),
         ((2578, 732), "Royal Palm South Beach (S)"),
+        #((2610, 741), "1500 Ocean Dr (S) (SW)"),
+        ((2632, 742), "1500 Ocean Dr (S) (SE)"),
         ((2655, 907), "3rd St Lifeguard Tower"),
         ((2687, 734), "Royal Palm South Beach (N) (S)"),
         ((2718, 1206), "Beach (B)"),
@@ -542,6 +558,7 @@ pixels = {
         ((1838, 298), "Construction Crane (3) (Vice Beach)"),
         ((1906, 321), "Construction Crane (2) (Vice Beach)"),
         ((1984, 495), "East Venetian Causeway Bridge"),
+        ((2036, 343), "W South Beach (NW)"),
         ((2099, 348), "W South Beach (SE)"),
         ((2326, 361.5), "Bank of America Financial Center (NW)"),
         ((2332.5, 328.5), "Bank of America Financial Center"),
@@ -549,7 +566,10 @@ pixels = {
         ((2359, 361.5), "Bank of America Financial Center (SW)"),
         ((2716, 384), "1000 Venetian Way (SW)"),
         ((2781, 328), "Loews Miami Beach"),
+        ((2856.5, 393), "St. Moritz Hotel (SW)"),
         ((2902, 402), "Flamingo South Beach (NWNW)"),
+        ((2940, 360.4), "Royal Palm South Beach (N) (N)"),
+        ((2956.5, 360.4), "Royal Palm South Beach (N) (S)"),
         ((2917, 1089), "Biscayne Island (S)"),
         ((3056, 368), "1500 Ocean Dr"),
         ((3248, 638), "Flagler Memorial Island (N)"),
@@ -691,8 +711,8 @@ pixels = {
         ((935.5, 544), "New World Center"),
         ((984, 1833), "W South Beach (BNW)"),
         ((1092, 452), "Loft Downtown II"),
-        ((1150, 382.5), "Vizcayne South Condiminium (S)"),
-        ((1210, 382.5), "Vizcayne South Condiminium (N)"),
+        ((1150, 382.5), "Vizcayne North Condiminium (SE)"),
+        ((1210, 382.5), "Vizcayne North Condiminium (NE)"),
         ((1230, 466.5), "1111 Lincoln Rd (NW)"),
         ((1345, 426.5), "Stephen P. Clark Government Center (NW)"),
         ((1463.5, 371), "Marina Blue (NE)"),
@@ -933,11 +953,16 @@ pixels = {
         ((677, 858), "Skyviews Miami Observation Wheel"),
         ((789, 786), "One Miami Condominium East (NE)"),
         ((844, 785.5), "One Miami Condominium West (NE)"),
+        ((979, 739.5), "Southeast Financial Center"),
         ((1018, 774.5), "Four Seasons Hotel Miami (BW)"),
         ((1019, 775.5), "Four Seasons Hotel Miami (NW)"),
         ((1122, 786), "Wells Fargo Center (N)"),
+        ((1187, 817), "Loft Downtown II"),
         ((1192, 807.5), "Miami Tower"),
+        ((1210.5, 767.5), "Vizcayne North Condominium (SE)"),
+        ((1299, 765), "Vizcayne North Condominium (NE)"),
         ((1277.5, 932), "West Venetian Causeway Bridge"),
+        ((1308, 728), "Marriott Miami Biscayne Bay (E)"),
         ((1328, 726), "Marriott Miami Biscayne Bay (NE)"),
         ((1473, 670), "The Grand"),
         ((1483, 1080), "Picnic Island B (S)"),
@@ -1263,8 +1288,8 @@ landmarks = {
     "FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach & Leonida Keys 01 (Airplane) (X)
     "Flagler Memorial Island (N)": (838.192, 995.963, 0.000),  # via Venetian Islands
     "Flamingo South Beach (NENE)": (1354.704, 1080.222, 50.837),  # d=0.509 via Vice City 03 (Basketball) & Vice Beach
-    "Flamingo South Beach (TE)": (1365.815, 936.164, 110.803),  # d=0.138 via Vice Beach & Alley (W)
-    "The Floridian": (1262.637, 408.346, 96.422),  # d=2.404 via Vice Beach & Sidewalk (Jason) (E)
+    "Flamingo South Beach (TE)": (1342.733, 939.682, 114.456),  # d=0.915 via Vice Beach & Alley (W)
+    "The Floridian": (1259.391, 409.963, 97.337),  # d=0.221 via Vice Beach & Sidewalk (Jason) (E)
     "Four Seasons Hotel Miami (BE)": (-814.289, -1306.504, 263.568),  # Handlebar (SE)
     "Four Seasons Hotel Miami (BW)": (-859.904, -1289.449, 263.568),  # Handlebar (SW)
     "Four Seasons Hotel Miami (E)": (-817.997, -1316.422, 258.306),  # Penthouse (SE)
@@ -1292,6 +1317,7 @@ landmarks = {
     "Island Y (S)": (-3086.466, -6002.597, 0.000), # via Leonida Keys Postcard (X)
     "Island Z (S)": (-2867.519, -5735.394, 0.000), # via Leonida Keys Postcard (X)
     "Jade Ocean Condos": (1565.948, 2488.531, 200.377),  # d=1.547 via Venetian Islands & Highway (NE)
+    "Jenny Hostel (NE)": (1907.616, 608.147, 32.038),  # d=0.037 via Vice Beach & Park
     "Key Lento (A)": (-2620.476, -5762.622, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Key Lento (E)": (-2194.499, -5133.273, 0.000), # via Leonida Keys Postcard (X)
     "Key Lento (J)": (-3016.386, -6703.864, 0.000),  # via Leonida Keys 01 (Airplane) (X)
@@ -1306,15 +1332,16 @@ landmarks = {
     "Marina Club at Blackwater Sound (S)": (-2573.282, -5923.209, 16.669),  # d=0.677 via Leonida Keys Postcard (X) & Key Lento
     "Miami Tower": (-775.668, -424.119, 159.972),  # d=5.605 via Grassrivers 02 (Watson Bay) & Prison
     "Mount Waffles (TW)": (-5225.002, 5750.498, 228.719),  # d=39.915 via Gas Station (Lucia) & Diner (N)
-    "Murano Grande": (1438.245, -21.340, 138.361),  # d=0.050 via Vice Beach & Port
+    "Murano Grande": (1441.832, -15.915, 140.226),  # d=0.425 via Vice Beach & Port
     #"Nine at Mary Brickell Village (A)": (-1035.341, -973.492, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     #"Nine at Mary Brickell Village (B)": (-1042.495, -984.399, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     #"Nine at Mary Brickell Village (E)": (-1072.159, -1029.655, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     "Nine at Mary Brickell Village (A)": (-1039.793, -967.786, 117.476),  # d=3.259 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
     "Nine at Mary Brickell Village (B)": (-1045.069, -980.992, 117.573),  # d=3.764 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
     "Nine at Mary Brickell Village (E)": (-1061.939, -1037.599, 117.902),  # d=2.271 via Tennis Stadium (4K) & Grassrivers 02 (Watson Bay)
-    "1500 Ocean Dr": (2092.684, 979.958, 62.376),  # d=0.016 via Vice Beach & Park
-    "Old City Hall": (1681.604, 604.660, 50.889),  # d=0.729 via Vice Beach & Tennis Court (SE)
+    "1500 Ocean Dr": (2093.893, 987.657, 63.420),  # d=0.356 via Vice Beach & Park
+    "1500 Ocean Dr (S) (SE)": (2026.979, 972.391, 62.569),  # d=0.613 via Vice Beach & Park
+    "Old City Hall": (1680.002, 606.433, 51.624),  # d=2.283 via Vice Beach & Tennis Court (SE)
     "Opera Tower": (-405.995, 871.722, 200.572),  # d=2.407 via Vice Beach & Prison
     "99353 Overseas Hwy": (-3369.349, -6779.484, 74.152),  # d=0.467 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     # "102180 Overseas Hwy": (-2653.070, -6040.028, 39.913),  # d=2.823 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
@@ -1399,7 +1426,7 @@ landmarks = {
     "Turkey Point Nuclear Power Station (2)": (-1469.572, -3717.393, 80.051),  # d=1.319 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (3)": (-1470.928, -3758.932, 79.971),  # d=1.175 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Unnamed Building #1 (Blimp Key)": (-4238.667, -6868.495, 8.856),  # d=0.647 via Keys & Leonida Keys 01 (Airplane) (X)
-    "1000 Venetian Way (SW)": (301.587, 1108.759, 68.530),  # d=0.300 via Vice Beach & Tennis Court (SE)
+    "1000 Venetian Way (SW)": (324.411, 1106.042, 70.619),  # d=0.441 via Vice Beach & Tennis Court (SE)
     "W South Beach (BNW)": (1941.706, 1656.135, 34.456),  # d=0.005 via Vice City 03 (Basketball) & Rooftop Party
     "The Waverly South Beach (SE)": (1274.731, 582.071, 112.450),  # d=0.872 via Rooftop Party & Vice Beach
     "WDNA FM": (-2517.727, -2295.470, 407.215),  # d=123.048 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
