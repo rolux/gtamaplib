@@ -50,7 +50,7 @@ cameras = {
     "[L1/27] Highway (NE)": ((-503.300, 1716.900, 13.300), (-506.700, 1712.000, 15.400), (326.000, -16.300, 0.000), (None, 51.400), (1920, 1080)),
     "[L1/29] Welcome Center (E)": ((2016.000, 588.900, 3.200), (2013.800, 588.100, 4.500), (282.000, -22.034, 0.000), (None, 50.800), (1920, 1080)),
     "[L1/29] Welcome Center (W)": ((2023.900, 587.400, 3.200), (2026.300, 586.900, 4.700), (71.823, -26.284, 0.000), (None, 50.800), (1920, 1080)),
-    "[L1/30] Store": ((-6332.400, 2750.500, 12.400), (-6331.100, 2750.200, 14.200), (86.623, -42.601, 0.000), (None, 49.600), (1904, 1080)),
+    "[L1/30] Store (Lucia)": ((-6332.400, 2750.500, 12.400), (-6331.100, 2750.200, 14.200), (86.623, -42.601, 0.000), (None, 49.600), (1904, 1080)),
     "[L1/32] Police Chase (A)": ((-2588.800, -3567.800, 9.700), (-2588.900, -3566.700, 10.300), (201.396, -2.565, -1.500), (None, 54.100), (1920, 1080)),
     "[L1/32] Police Chase (D)": ((-2582.400, -3437.700, 10.000), (-2582.300, -3436.600, 10.400), (201.105, -7.000, 0.000), (None, 37.600), (1920, 1080)),
     "[L1/32] Police Chase (J)": ((-2568.900, -3273.700, 10.200), (-2568.700, -3272.600, 11.300), (190.275, -8.500, 0.000), (None, 37.600), (1920, 1080)),
@@ -349,7 +349,7 @@ pixels = {
         ((852, 681), "Player"),
         ((1518, 72), "Art Deco Welcome Center (S)"),
     ],
-    "[L1/30] Store": [
+    "[L1/30] Store (Lucia)": [
         ((1112, 416), "Player")
     ],
     "[L1/32] Police Chase (A)": [
@@ -512,6 +512,7 @@ pixels = {
         ((1672, 800), "Bank of America Financial Center (SW)"),
         ((1773, 738), "Bank of America Financial Center"),
         ((1834, 863), "Hotel Breakwater"),
+        ((1901, 825.5), "The Ritz-Carlton Bal Harbour"),
         ((1994, 734), "Akoya Condominium"),
         ((2043, 843), "Hotel Victor (SW)"),
         ((2163, 601), "Jade Ocean Condos (NW)"),
@@ -554,12 +555,17 @@ pixels = {
         ((1310.5, 235), "Blue Diamond"),
         ((1654, 321), "Sunset Harbour South Condo"),
         ((1476, 276), "Trésor Tower"),
+        ((1596.5, 334.5), "Sunset Harbour South Condo (RN)"),
         ((1598, 522), "Pelican Harbor Marina (A)"),
+        ((1654, 321), "Sunset Harbour South Condo"),
+        ((1714.5, 334.5), "Sunset Harbour South Condo (RS)"),
         ((1838, 298), "Construction Crane (3) (Vice Beach)"),
         ((1906, 321), "Construction Crane (2) (Vice Beach)"),
         ((1984, 495), "East Venetian Causeway Bridge"),
         ((2036, 343), "W South Beach (NW)"),
         ((2099, 348), "W South Beach (SE)"),
+        ((2214, 409), "New World Center"),
+        ((2277, 390), "1111 Lincoln Rd (NW)"),
         ((2326, 361.5), "Bank of America Financial Center (NW)"),
         ((2332.5, 328.5), "Bank of America Financial Center"),
         ((2351, 585), "Rivo Alto Island (S)"),
@@ -744,9 +750,11 @@ pixels = {
         ((2879, 628), "Marina (Stockyard) (NE)"),
         ((2884, 443), "New Wave Condominiums"),
         ((3009, 556.5), "2800 Biscayne Blvd (SE)"),
+        ((3143, 251.5), "Sunset Harbour South Condo (RS)"),
         ((3264, 1592), "Canal (Hotel Valetta)"),
-        ((3604.5, 505), "2421 Lake Pancoast Dr (SE)"),
         ((3406, 183), "Sunset Harbour South Condo"),
+        ((3604.5, 505), "2421 Lake Pancoast Dr (SE)"),
+        ((3663, 238), "Sunset Harbour South Condo (RN)"),
     ],
     "[S2/46] Leonida Keys 01 (Airplane) (X)": [
         ((31, 911), "Unnamed Building #1 (Blimp Key)"),
@@ -1225,7 +1233,7 @@ lines = {
     ], [
         ((1347, 0), (1314, 248))
     ]),
-    "[L1/30] Store": ([
+    "[L1/30] Store (Lucia)": ([
         ((52, 827), (83, 778)),
         ((582.5, 818), (594, 771)),
     ], []),
