@@ -124,7 +124,7 @@ def render_all(
     
     if "m" in mode:
         os.makedirs(maps_dirname, exist_ok=True)
-        for map_name in md.maps:
+        for map_name in reversed(list(md.maps.keys())):
             m = ml.get_map(map_name).open(scale=1.0, add_padding=True).draw_all()
             for section_name, crop in md.map_sections.items():
                 filename = f"{maps_dirname}/{map_name} {section_name}.png"
