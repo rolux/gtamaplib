@@ -808,7 +808,7 @@ class Map:
         self.draw_landmarks()
         return self        
 
-    def draw_camera(self, cam_name, r=10, d=100, _no_marker=False):
+    def draw_camera(self, cam_name, r=8, d=100, _no_marker=False):
         """
         Draws a camera symbol
         """
@@ -849,7 +849,7 @@ class Map:
             self.draw.text((x - w * 0.4, y - h * 0.7), text, fill=outline, font=font)
         return self
 
-    def draw_landmark(self, lm_name, r=12):
+    def draw_landmark(self, lm_name, r=10):
         """
         Draws a landmark symbol
         """
@@ -860,7 +860,7 @@ class Map:
         self.draw_circle(xy, r, color, (255, 255, 255), 1, letter)
         return self
 
-    def draw_landmarks(self, r=12):
+    def draw_landmarks(self, r=10):
         """
         Draws all known landmarks
         """
@@ -919,7 +919,7 @@ class Map:
         obj.draw_on_map(self)
         return self
 
-    def draw_rays(self):
+    def draw_rays(self, r=6):
         """
         Draws all rays from cameras towards landmarks, and symbols at their intersections
         """
@@ -946,7 +946,7 @@ class Map:
                     if i >= j: continue
                     inter = intersect_lines_2d(ray_a, ray_b)
                     if not inter: continue
-                    self.draw_circle(inter, 8, color, (255, 255, 255), 1, letter)
+                    self.draw_circle(inter, r, color, (255, 255, 255), 1, letter)
         return self
 
     def draw_rectangle(self, xy0, xy1, fill=(255, 255, 255), outline=(0, 0, 0), width=1):
