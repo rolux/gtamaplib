@@ -901,8 +901,8 @@ class Map:
             ne = self.get_world_xy((image.size[0], 0))
         section_name = f" {self.section_name.upper()}" if self.section_name else "" 
         text = (
-            f"SW {sw[0]:.3f}, {sw[1]:.3f} "
-            f"NE {ne[0]:.3f}, {ne[1]:.3f} "
+            f"SW ({sw[0]:.3f}, {sw[1]:.3f}) "
+            f"NE ({ne[0]:.3f}, {ne[1]:.3f}) "
             f"SCALE {self.scale:.3f} PX/M "
             f"{self.name.upper()} V{self.version}{section_name}"
         )
