@@ -134,7 +134,6 @@ def find_vice_beach(
     dirname=None
 ):
     cams = [ml.get_camera(cam_name) for cam_name in cam_names]
-    # lm_names_rays = [lm_name for cam_name, lm_name in rays]
     rays = [
         [
             (cam_name, lm_name) for cam_name, lm_name in rays
@@ -145,11 +144,6 @@ def find_vice_beach(
             if lm_name in cams[1].landmark_pixels
         ]
     ]
-    # rays[1] += [
-    #     (cam_names[0], lm_name) for lm_name in cams[0].landmark_pixels
-    #     if lm_name in cams[1].landmark_pixels
-    #     and lm_name not in lm_names_rays
-    # ]
     all_losses = {}
     best_loss = float("inf")
     best_values = None
@@ -163,7 +157,6 @@ def find_vice_beach(
             None,
             f"{dirname}/{hfov:.3f} {cam_names[0]}"
         )
-        # cam_0.register()
         cam_1, best_loss_1 = ml.find_camera(
             cam_names[1], lm_names, rays[1],
             (points[1], points[1]), radius, step,
