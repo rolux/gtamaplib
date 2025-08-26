@@ -1,6 +1,7 @@
 import json
 import os
 
+import numpy as np
 from PIL import Image
 
 from . import gtamaplib as ml
@@ -94,6 +95,105 @@ def find_mary_brickell():
             ("E", point_e)
         )
     ]))
+
+
+def find_vice_beach(
+    cam_names=[
+        "Vice Beach (A)",
+        "Vice Beach (B)",
+    ],
+    lm_names=[
+        "Four Seasons Hotel Miami (BE)",
+        "Four Seasons Hotel Miami (BW)",
+        "Four Seasons Hotel Miami (NW)",
+        "Four Seasons Hotel Miami (SE)",
+    ],
+    rays=[
+        ("Alley (W)", "Flamingo South Beach (TE)"),
+        ("Alley (W)", "Flamingo South Beach (TNE)"),
+        ("Alley (W)", "Flamingo South Beach (TSE)"),
+        ("Sidewalk (Jason) (E)", "The Floridian"),
+        ("Park", "Hotel Breakwater"),
+        ("Park", "Jenny Hostel (NE)"),
+        ("Port", "Murano Grande"),
+        ("Park", "1500 Ocean Dr"),
+        ("Park", "1500 Ocean Dr (S) (SE)"),
+        ("Tennis Court (SE)", "Old City Hall"),
+        ("Tennis Court (SE)", "1000 Venetian Way (SW)"),
+    ],
+    points=[(2360, 1110), (2265, 1075)],
+    radius=25,
+    step=1.0,
+    z_limits=[(40, 60), (60, 80)],
+    pitch_ranges=[(-14.00, -10.99, 0.01), (-7.00, -3.99, 0.01)],
+    hfov_range=(62.00, 62.41, 0.01),
+    map_name="yanis",
+    map_scale=1,
+    map_area=(1000, 0, 3000, 2000),
+    projection_areas=((500, -500, 2500, 1500), None),
+    dirname=None
+):
+    cams = [ml.get_camera(cam_name) for cam_name in cam_names]
+    # lm_names_rays = [lm_name for cam_name, lm_name in rays]
+    rays = [
+        [
+            (cam_name, lm_name) for cam_name, lm_name in rays
+            if lm_name in cams[0].landmark_pixels]
+        ,
+        [
+            (cam_name, lm_name) for cam_name, lm_name in rays
+            if lm_name in cams[1].landmark_pixels
+        ]
+    ]
+    # rays[1] += [
+    #     (cam_names[0], lm_name) for lm_name in cams[0].landmark_pixels
+    #     if lm_name in cams[1].landmark_pixels
+    #     and lm_name not in lm_names_rays
+    # ]
+    all_losses = {}
+    best_loss = float("inf")
+    best_values = None
+    for hfov in np.arange(*hfov_range):
+        hfov_range = (hfov, hfov + 0.01, 0.01)
+        cam_0, best_loss_0 = ml.find_camera(
+            cam_names[0], lm_names, rays[0],
+            (points[0], points[0]), radius, step,
+            z_limits[0], pitch_ranges[0], hfov_range,
+            map_name, map_scale, map_area,
+            None,
+            f"{dirname}/{hfov:.3f} {cam_names[0]}"
+        )
+        # cam_0.register()
+        cam_1, best_loss_1 = ml.find_camera(
+            cam_names[1], lm_names, rays[1],
+            (points[1], points[1]), radius, step,
+            z_limits[1], pitch_ranges[1], hfov_range,
+            map_name, map_scale, map_area,
+            None,
+            f"{dirname}/{hfov:.3f} {cam_names[1]}"
+        )
+        loss = (best_loss_0 + best_loss_1) / 2
+        all_losses[hfov] = (best_loss_0, best_loss_1, loss)
+        if loss < best_loss:
+            best_loss = loss
+            best_values = [
+                (cam_0.xyz, cam_0.ypr, cam_0.fov),
+                (cam_1.xyz, cam_1.ypr, cam_1.fov),
+            ]
+            losses_string = f"losses=[{best_loss_0:.6f}, {best_loss_1:.6f}]"
+            print(f"{80*'#'}\n{losses_string}\n{loss=:.6f}\n{cam_0}\n{cam_1}\n{80*'#'}")
+    for i, cam in enumerate(cams):
+        xyz, ypr, fov = best_values[i]
+        cam.set_xyz(xyz).set_ypr(ypr).set_fov(fov)
+        if projection_areas[i]:
+            m = ml.get_map(map_name)
+            m.project_camera_parallel(cam.name, area=projection_areas[i])
+            m.save(f"{dirname}/{cam.hfov:.3f} {cam.name} projection.png", projection_areas[i])
+    for hfov, (loss_0, loss_1, loss) in all_losses.items():
+        losses_string = f"losses=[{loss_0:.6f}, {loss_1:.6f}]"
+        print(f"{hfov=:.3f} {losses_string} {loss=:.6f}")
+    print(f"{cams[0]}\n{cams[1]}")
+    return cams
 
 
 def render_all(
