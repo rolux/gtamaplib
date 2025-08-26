@@ -133,6 +133,7 @@ def find_vice_beach(
     projection_areas=((500, -500, 2500, 1500), None),
     dirname=None
 ):
+
     cams = [ml.get_camera(cam_name) for cam_name in cam_names]
     rays = [
         [
@@ -147,6 +148,7 @@ def find_vice_beach(
     all_losses = {}
     best_loss = float("inf")
     best_values = None
+
     for hfov in np.arange(*hfov_range):
         hfov_range = (hfov, hfov + 0.01, 0.01)
         cam_0, best_loss_0 = ml.find_camera(
@@ -175,6 +177,7 @@ def find_vice_beach(
             ]
             losses_string = f"losses=[{best_loss_0:.6f}, {best_loss_1:.6f}]"
             print(f"{80*'#'}\n{losses_string}\n{loss=:.6f}\n{cam_0}\n{cam_1}\n{80*'#'}")
+
     for i, cam in enumerate(cams):
         xyz, ypr, fov = best_values[i]
         cam.set_xyz(xyz).set_ypr(ypr).set_fov(fov)
@@ -182,10 +185,12 @@ def find_vice_beach(
             m = ml.get_map(map_name)
             m.project_camera_parallel(cam.name, area=projection_areas[i])
             m.save(f"{dirname}/{cam.hfov:.3f} {cam.name} projection.png", projection_areas[i])
+
     for hfov, (loss_0, loss_1, loss) in all_losses.items():
         losses_string = f"losses=[{loss_0:.6f}, {loss_1:.6f}]"
         print(f"{hfov=:.3f} {losses_string} {loss=:.6f}")
     print(f"{cams[0]}\n{cams[1]}")
+
     return cams
 
 
