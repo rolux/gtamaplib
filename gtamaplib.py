@@ -1593,7 +1593,7 @@ def find_camera(
         m.project_camera_parallel(cam_name, area=projection_area)
         m.save(f"{basename} projection.png", projection_area)
 
-    return cam
+    return cam, best_loss
 
 
 def _find_camera(args):
@@ -1633,6 +1633,8 @@ def _find_camera(args):
                     best_deltas = deltas
                     best_values = cam.xyz, cam.ypr, cam.fov
 
+    if best_values is None:
+        raise RuntimeError("No camera found.")
     xyz, ypr, fov = best_values
     cam.set_xyz(xyz).set_ypr(ypr).set_fov(fov)
     return best_loss, best_deltas, cam
