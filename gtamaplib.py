@@ -1621,11 +1621,11 @@ def find_ambrosia_relative(
                 for hfov_2 in np.arange(*hfov_ranges[2]):
                     pool_args.append((
                         cams, cams[0].xyz, cams[0].ypr, cams[0].fov,
+                        lm_names_3x, lm_names_2x,
                         lollipop_top_name, lollipop_bottom_name, lollipop_top, lollipop_radius,
                         [list(np.arange(*bearing_range)) for bearing_range in bearing_ranges],
                         [list(np.arange(*elevation_range)) for elevation_range in elevation_ranges],
-                        hfov_1, hfov_2,
-                        lm_names_3x, lm_names_2x,
+                        hfov_1, hfov_2
                     ))
 
     best_loss = float("inf")
@@ -1672,11 +1672,11 @@ def _find_ambrosia_relative(args):
 
     (
         cams, cam_0_xyz, cam_0_ypr, cam_0_fov,
+        lm_names_3x, lm_names_2x,
         lollipop_top_name, lollipop_bottom_name,
         lollipop_top, lollipop_radius,
         bearing_values, elevation_values,
-        cam_1_hfov, cam_2_hfov,
-        lm_names_3x, lm_names_2x
+        cam_1_hfov, cam_2_hfov
     ) = args
 
     def get_distance_from_lollipop(cam):
