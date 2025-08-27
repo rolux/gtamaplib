@@ -1511,6 +1511,9 @@ def find_ambrosia_relative(
         "USSM Smokestack (11)",
         "Wheelabrator South Broward (W)"
     ],
+    lollipop_top_name="Sebring Water Tower (T)",
+    lollipop_bottom_name="Sebring Water Tower (B)",
+    lollipop_top=(0, 0, 50),
     bearing_ranges=[
         (340, 341, 1),
         (272, 281, 1),
@@ -1590,9 +1593,6 @@ def find_ambrosia_relative(
         image.save(filename)
         print("Done")
 
-    lollipop_top_name = "Sebring Water Tower (T)"
-    lollipop_bottom_name = "Sebring Water Tower (B)"
-    lollipop_top = (0, 0, 50)
     distance_0, bearing_0 = 1000, bearing_ranges[0][0]
     cams = [get_camera(cam_name) for cam_name in cam_names]
     lm_names_3x = [
