@@ -1543,7 +1543,6 @@ def find_ambrosia_relative(
         def get_map_xy(xy):
             x, y = xy
             return int(round(2000 + x * 2)), int(round(2000 - y * 2))
-        # cam_colors = [(64, 64, 64), (192, 192, 0), (192, 0, 0)]
         lm_colors = [get_rgb(i * 30, v=0.75) for i in range(12)]
         lollipop_color = (128, 128, 128)
         lollipop_map_xy = get_map_xy((0, 0))
@@ -1562,18 +1561,6 @@ def find_ambrosia_relative(
             # 1 = green, 10 = yellow, 100 = red, ...
             rgb = get_rgb((120 - log_loss * 60) % 360)
             draw.rectangle(box, fill=rgb)
-        """
-        lm_points = {}
-        for lm_name in lm_names:
-            rays = [
-                (cam.xyz, cam.get_landmark_direction(lm_name))
-                for cam in [
-                    cam for cam in cams
-                    if lm_name in cam.landmark_pixels
-                ]
-            ]
-            lm_points[lm_name] = intersect_rays(rays)[0]
-        """
         rays = {}
         for cam in cams:
             cam_map_xy = get_map_xy(cam.xy)
