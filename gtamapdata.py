@@ -1245,7 +1245,7 @@ pixels = {
         ((2414, 1063), "USSM Smokestack (8)"),
         ((2568, 1512), "US Sugar Mill (Office)"),
         ((2459, 995), "USSM Smokestack (9)"),
-        ((2459, 1147), "1500 Sonora Ave (Tank)"),
+        ((2450, 1143), "1500 Sonora Ave (Tank)"),
         ((2835, 967), "USSM Smokestack (10)"),
         ((2904, 986), "Sebring Water Tower (B)"),
         ((2905, 945), "Sebring Water Tower (T)"),
