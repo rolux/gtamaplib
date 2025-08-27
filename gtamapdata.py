@@ -880,7 +880,7 @@ pixels = {
         ((3143, 251.5), "Sunset Harbour South Condo (RS)"),
         ((3264, 1592), "Canal (Hotel Valetta)"),
         ((3406, 183), "Sunset Harbour South Condo"),
-        ((3604.5, 505), "2421 Lake Pancoast Dr (SE)"),
+        ((3604.5, 545), "2421 Lake Pancoast Dr (SE)"),
         ((3663, 238), "Sunset Harbour South Condo (RN)"),
     ],
     "[S2/46] Leonida Keys 01 (Airplane) (X)": [
