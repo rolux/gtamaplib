@@ -1633,12 +1633,11 @@ def find_ambrosia_relative(
     best_values = None
 
     with multiprocessing.Pool() as pool:
-        for result in tqdm(
+        for loss, local_loss, values in tqdm(
             pool.imap_unordered(_find_ambrosia_relative, pool_args),
             total=len(pool_args)
         ):
-            if result is None: continue
-            loss, local_loss, values = result
+            if loss == float("inf"): continue
             for xy, v in local_loss.items():
                 if v < best_local_loss.get(xy, float("inf")):
                     best_local_loss[xy] = v
@@ -1691,6 +1690,8 @@ def _find_ambrosia_relative(args):
     n_3x = len(lm_names_3x)
     best_loss = float("inf")
     local_loss = {}
+    best_values = None
+    valid = True
 
     for bearing_1 in bearing_values[1]:
         for elevation_1 in elevation_values[1]:
@@ -1698,8 +1699,8 @@ def _find_ambrosia_relative(args):
             distance = get_distance_from_lollipop(cams[1])
             point = get_point(lollipop_top, direction, distance)
             pixel = cams[0].get_pixel(point)
-            if pixel[0] < 0:
-                return  # cam 1 not visible in cam 0
+            if pixel[0] < 0:  # cam 1 not visible in cam 0
+                continue
             cams[1].set_xyz(point)
             cams[1].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
 
@@ -1711,16 +1712,19 @@ def _find_ambrosia_relative(args):
                     cams[2].set_xyz(point)
                     cams[2].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
 
-                    for lm_name in lm_names_2x[:-1]:
-                        if lm_name.startswith("1500"): continue
+                    valid = True
+                    for lm_name in lm_names_2x[:-1]:  # skip wheelabrator
                         point, _ = intersect_rays([
                             (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
                             (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
                         ])
                         pixel = cams[1].get_pixel(point)
-                        if pixel is not None and pixel[0] < cams[1].w / 2:  # FIXME: should be `<= cams[1].w`
-                            print(f"{lm_name=} {pixel[0]=}")
-                            return  # silo or smokestack 10 or 11 visible in cam 1
+                        if pixel is None: continue
+                        if pixel[0] <= cams[1].w:  # silo or smokestack 10/11 visible in cam 1
+                            valid = False
+                            break
+                    if not valid:
+                        continue
 
                     loss = 0
                     for lm_name in lm_names_3x:
