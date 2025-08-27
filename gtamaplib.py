@@ -136,7 +136,7 @@ class Camera:
         Sets z so that a given landmark's pixel matches a given point
         """
         if lm_point is None: lm_point = md.landmarks[lm_name]
-        z_current = intersect_rays(
+        z_current = intersect_ray_and_ray(
             (lm_point, (0, 0, 1)),
             (self.xyz, self.get_landmark_direction(lm_name))
         )[1][2]
@@ -942,9 +942,9 @@ class Map:
         for lm_name, lm_rays in rays.items():
             color = get_color(lm_name)
             letter = get_letter(lm_name)
-            for i, ray_a in enumerate(lm_rays):
-                for j, ray_b in enumerate(lm_rays):
-                    if i >= j: continue
+            for a, ray_a in enumerate(lm_rays):
+                for b, ray_b in enumerate(lm_rays):
+                    if a >= b: continue
                     inter = intersect_lines_2d(ray_a, ray_b)
                     if not inter: continue
                     self.draw_circle(inter, r, color, (255, 255, 255), 1, letter)
@@ -1513,56 +1513,109 @@ def find_ambrosia_relative(
     ],
     bearing_ranges=[
         (340, 341, 1),
-        (271, 282, 1),
-        (307, 318, 1)
+        (272, 281, 1),
+        (308, 317, 1)
     ],
     elevation_ranges=[
-        (-2, 3, 1),
-        (-4, 1, 1),
-        (-4, 1, 1),
+        (-2.0, 2.5, 0.5),
+        (-4.0, 0.5, 0.5),
+        (-4.0, 0.5, 0.5)
     ],
     hfov_ranges=[
-        (35, 46, 1),
-        (76, 87, 1),
-        (51, 62, 1)
+        (36, 45, 1),
+        (77, 86, 1),
+        (52, 61, 1)
     ],
-    map_name="yanis", map_scale=1, map_area=None,
-    projection_area=None,
-    basename=None
+    filename=None
 ):
     """
     Finds the optimal relative positions and settings for the three Ambrosia cameras,
     regardless of true scale, position or orientation, constrained by ranges for
-    bearing and elevation from the lollipop water tower, and for horizontal fov.
-    The top of the lollipop water tower is set to (0, 0, 50), and the first shot at
-    a distance of 1000 m and a bearing of 340 deg from that point. The minimized loss
-    is the mean squared angular delta for each shared landmark, which itself is the
-    mean of six (if seen three times) or two (if seen twice) angular deltas between
-    the rays from the cameras. Renders the log loss landscape for each individual
-    camera, and the camera views after optimal calibration.
+    bearing and elevation from the lollipop water tower, and for horizontal fov. The
+    top of the lollipop water tower is placed at (0, 0, 50), and the first shot at a
+    distance of 1000 m and a bearing of 340 deg from that point. The minimized loss
+    is the mean, over all landmarks, of the squared mean distance between the point
+    closest to the three rays from the cameras towards the landmark, and each of
+    these rays. Renders the log loss landscape and the camera and landmark positions.
     """
+
+    def draw_map():
+        def get_map_xy(xy):
+            x, y = xy
+            return int(round(2000 + x * 2)), int(round(2000 - y * 2))
+        # cam_colors = [(64, 64, 64), (192, 192, 0), (192, 0, 0)]
+        lm_colors = [get_rgb(i * 30, v=0.75) for i in range(12)]
+        lollipop_color = (128, 128, 128)
+        lollipop_map_xy = get_map_xy((0, 0))
+        w, h = 4000, 4000
+        image = Image.new("RGB", (w, h), (255, 255, 255))
+        draw = ImageDraw.Draw(image)
+        for y in range(200, h, 200):
+            color = (64, 64, 64) if y == 2000 else (192, 192, 192)
+            draw.line((0, y, w, y), fill=color, width=1)
+        for x in range(200, w, 200):
+            color = (64, 64, 64) if x == 2000 else (192, 192, 192)
+            draw.line((x, 0, x, h), fill=color, width=1)
+        for (x, y), loss in best_local_loss.items():
+            box = (get_map_xy((x, y)), get_map_xy((x + 0.5, y - 0.5)))
+            log_loss = math.log10(loss)
+            # 1 = green, 10 = yellow, 100 = red, ...
+            rgb = get_rgb((120 - log_loss * 60) % 360)
+            draw.rectangle(box, fill=rgb)
+        """
+        lm_points = {}
+        for lm_name in lm_names:
+            rays = [
+                (cam.xyz, cam.get_landmark_direction(lm_name))
+                for cam in [
+                    cam for cam in cams
+                    if lm_name in cam.landmark_pixels
+                ]
+            ]
+            lm_points[lm_name] = intersect_rays(rays)[0]
+        """
+        rays = {}
+        for cam in cams:
+            cam_map_xy = get_map_xy(cam.xy)
+            for x in (-0.5, cam.w - 0.5):
+                direction = cam.get_pixel_direction((x, cam.h - 0.5))
+                target_xyz = get_point(cam.xyz, direction, 3000)
+                target_map_xy = get_map_xy(target_xyz[:2])
+                draw.line((cam_map_xy, target_map_xy), fill=(0, 0, 0), width=1)
+            for l, lm_name in enumerate(lm_names + [lollipop_top_name]):
+                if lm_name not in cam.landmark_pixels: continue
+                direction = cam.get_landmark_direction(lm_name)
+                target_xyz = get_point(cam.xyz, direction, 3000)
+                target_map_xy = get_map_xy(target_xyz[:2])
+                color = lollipop_color if lm_name == lollipop_top_name else lm_colors[l]
+                draw.line((cam_map_xy, target_map_xy), fill=color, width=1)
+                rays[lm_name] = rays.get(lm_name, []) + [(cam.xyz, direction)]
+        for l, lm_name in enumerate(lm_names):
+            for a, ray_a in enumerate(rays[lm_name]):
+                for b, ray_b in enumerate(rays[lm_name]):
+                    if a >= b: continue
+                    inter_xyz, _ = intersect_rays((ray_a, ray_b))
+                    inter_map_xy = get_map_xy(inter_xyz[:2])
+                    color = lollipop_color if lm_name == lollipop_top_name else lm_colors[l]
+                    draw.circle(inter_map_xy, 5, fill=color)
+        print(f"Writing {filename}", end=" ... ", flush=True)
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        image.save(filename)
+        print("Done")
 
     lollipop_top_name = "Sebring Water Tower (T)"
     lollipop_bottom_name = "Sebring Water Tower (B)"
     lollipop_top = (0, 0, 50)
     distance_0, bearing_0 = 1000, bearing_ranges[0][0]
     cams = [get_camera(cam_name) for cam_name in cam_names]
-    n_lm_names_per_cam = [
-        len([
-            lm_name for lm_name in lm_names
-            if lm_name in cam.landmark_pixels
-        ])
-        for cam in cams
+    lm_names_3x = [
+        lm_name for lm_name in lm_names
+        if all(lm_name in cam.landmark_pixels for cam in cams)
     ]
-    lm_names_per_cam_pair = {}
-    for index_0, cam_0 in enumerate(cams):
-        for index_1, cam_1 in enumerate(cams):
-            if index_0 >= index_1: continue
-            lm_names_per_cam_pair[(index_0, index_1)] = [
-                lm_name for lm_name in lm_names
-                if lm_name in cam_0.landmark_pixels
-                and lm_name in cam_1.landmark_pixels
-            ]
+    lm_names_2x = [
+        lm_name for lm_name in lm_names
+        if lm_name not in lm_names_3x
+    ]
 
     pool_args = []
     for elevation_0 in np.arange(*elevation_ranges[0]):
@@ -1572,7 +1625,7 @@ def find_ambrosia_relative(
         for hfov_0 in np.arange(*hfov_ranges[0]):
             cams[0].set_fov((hfov_0, None))
             cams[0].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
-            lollipop_bottom = intersect_rays(
+            lollipop_bottom = intersect_ray_and_ray(
                 (lollipop_top, (0, 0, -1)),
                 (cams[0].xyz, cams[0].get_landmark_direction(lollipop_bottom_name))
             )[1]
@@ -1585,7 +1638,7 @@ def find_ambrosia_relative(
                         [list(np.arange(*bearing_range)) for bearing_range in bearing_ranges],
                         [list(np.arange(*elevation_range)) for elevation_range in elevation_ranges],
                         hfov_1, hfov_2,
-                        n_lm_names_per_cam, lm_names_per_cam_pair
+                        lm_names_3x, lm_names_2x,
                     ))
 
     best_loss = float("inf")
@@ -1593,11 +1646,13 @@ def find_ambrosia_relative(
     best_values = None
 
     with multiprocessing.Pool() as pool:
-        for loss, local_loss, values in tqdm(
+        for result in tqdm(
             pool.imap_unordered(_find_ambrosia_relative, pool_args),
             total=len(pool_args)
         ):
-            for xy, v in local_loss:
+            if result is None: continue
+            loss, local_loss, values = result
+            for xy, v in local_loss.items():
                 if v < best_local_loss.get(xy, float("inf")):
                     best_local_loss[xy] = v
             if loss < best_loss:
@@ -1616,6 +1671,11 @@ def find_ambrosia_relative(
                     f"({values[2][2][0]:.3f}, {values[2][2][1]:.3f})",
                     flush=True
                 )
+                for i, cam in enumerate(cams):
+                    cam.set_xyz(values[i][0]).set_ypr(values[i][1]).set_fov(values[i][2])
+                draw_map()
+
+    draw_map()
 
 
 def _find_ambrosia_relative(args):
@@ -1629,7 +1689,7 @@ def _find_ambrosia_relative(args):
         lollipop_top, lollipop_radius,
         bearing_values, elevation_values,
         cam_1_hfov, cam_2_hfov,
-        n_lm_names_per_cam, lm_names_per_cam_pair
+        lm_names_3x, lm_names_2x
     ) = args
 
     def get_distance_from_lollipop(cam):
@@ -1641,6 +1701,7 @@ def _find_ambrosia_relative(args):
     cams[0].set_xyz(cam_0_xyz).set_ypr(cam_0_ypr).set_fov(cam_0_fov)
     cams[1].set_fov((cam_1_hfov, None))
     cams[2].set_fov((cam_2_hfov, None))
+    n_3x = len(lm_names_3x)
     best_loss = float("inf")
     local_loss = {}
 
@@ -1649,6 +1710,9 @@ def _find_ambrosia_relative(args):
             direction = get_direction_from_angles(bearing_1, elevation_1)
             distance = get_distance_from_lollipop(cams[1])
             point = get_point(lollipop_top, direction, distance)
+            pixel = cams[0].get_pixel(point)
+            if pixel[0] < 0:
+                return  # cam 1 not visible in cam 0
             cams[1].set_xyz(point)
             cams[1].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
 
@@ -1660,27 +1724,26 @@ def _find_ambrosia_relative(args):
                     cams[2].set_xyz(point)
                     cams[2].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
 
-                    loss_per_cam = [0, 0, 0]
-                    for (index_0, index_1), lm_names in lm_names_per_cam_pair.items():
-                        for lm_name in lm_names:
-                            delta_0, delta_1 = intersect_rays(
-                                (
-                                    cams[index_0].xyz,
-                                    cams[index_0].get_landmark_direction(lm_name)
-                                ),
-                                (
-                                    cams[index_1].xyz,
-                                    cams[index_1].get_landmark_direction(lm_name)
-                                ),
-                                return_both_angles=True
-                            )[-2:]
-                            loss_per_cam[index_0] += delta_0 ** 2
-                            loss_per_cam[index_1] += delta_1 ** 2
-                    loss_per_cam = [
-                        v / n_lm_names_per_cam[i]
-                        for i, v in enumerate(loss_per_cam)
-                    ]
-                    loss = sum(loss_per_cam) / 3
+                    for lm_name in lm_names_2x[:-1]:
+                        if lm_name.startswith("1500"): continue
+                        point, _ = intersect_rays([
+                            (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
+                            (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
+                        ])
+                        pixel = cams[1].get_pixel(point)
+                        if pixel is not None and pixel[0] < cams[1].w / 2:  # FIXME: should be `<= cams[1].w`
+                            print(f"{lm_name=} {pixel[0]=}")
+                            return  # silo or smokestack 10 or 11 visible in cam 1
+
+                    loss = 0
+                    for lm_name in lm_names_3x:
+                        _, distances = intersect_rays([
+                            (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
+                            (cams[1].xyz, cams[1].get_landmark_direction(lm_name)),
+                            (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
+                        ])
+                        loss += np.mean(distances) ** 2
+                    loss /= n_3x
 
                     if loss < best_loss:
                         best_loss = loss
@@ -1692,8 +1755,8 @@ def _find_ambrosia_relative(args):
 
                     for index in range(3):
                         xy = int(round(cams[index].x)), int(round(cams[index].y))
-                        if loss_per_cam[index] < local_loss.get(xy, float("inf")):
-                            local_loss[xy] = loss_per_cam[index]
+                        if loss < local_loss.get(xy, float("inf")):
+                            local_loss[xy] = loss
 
     return best_loss, local_loss, best_values
 
@@ -1827,7 +1890,7 @@ def _find_camera(args):
                 loss = 0
                 threshold = best_loss * n_targets
                 for i, (lm_name, target) in enumerate(targets):
-                    fn = intersect_ray_and_point if i < n_points else intersect_rays
+                    fn = intersect_ray_and_point if i < n_points else intersect_ray_and_ray
                     cam_ray = (cam.xyz, cam.get_landmark_direction(lm_name))
                     angle = fn(cam_ray, target)[-1]
                     delta = angle * 60 # arcminutes
@@ -2046,7 +2109,7 @@ def _find_four_seasons(args):
         for pitch in pitch_limits:
             cam.set_ypr((cam.yaw, pitch, cam.roll))
             lm_dir = cam.get_landmark_direction(lm_name)
-            point = intersect_rays(
+            point = intersect_ray_and_ray(
                 (fs40ne, (0, 0, 1)),
                 (cam.xyz, lm_dir)
             )[1]
@@ -2079,18 +2142,18 @@ def _find_four_seasons(args):
                     fs40e = get_point(fs40ne, dir_s, size_ns)
                     fs40nw = get_point(fs40ne, dir_w, size_ew)
                     fs40w = get_point(fs40nw, dir_s, size_ns)
-                    fs32ne = intersect_rays(
+                    fs32ne = intersect_ray_and_ray(
                         (fs40ne, (0, 0, -1)),
                         (ts_cam.xyz, ts_cam.get_landmark_direction("Four Seasons Hotel Miami (32NE)"))
                     )[1]
                     floor_height = (fs40ne[2] - fs32ne[2]) / 8
                     fs56ne_box = (fs40ne[0], fs40ne[1], fs40ne[2] + 16 * floor_height)
                     fs56nw_box = (fs40nw[0], fs40nw[1], fs40nw[2] + 16 * floor_height)
-                    fs56ne = intersect_rays(
+                    fs56ne = intersect_ray_and_ray(
                         (fs56ne_box, dir_sw),
                         (ts_cam.xyz, ts_cam.get_landmark_direction("Four Seasons Hotel Miami (56NE)")),
                     )[1]
-                    fs56se = intersect_rays(
+                    fs56se = intersect_ray_and_ray(
                         (fs56ne, dir_s),
                         (ts_cam.xyz, ts_cam.get_landmark_direction("Four Seasons Hotel Miami (SE)")),
                     )[1]
@@ -2138,7 +2201,7 @@ def find_landmark(cam_name_a, cam_name_b, lm_name):
     """
     cam_a = get_camera(cam_name_a)
     cam_b = get_camera(cam_name_b)
-    return intersect_rays(
+    return intersect_ray_and_ray(
         (cam_a.xyz, cam_a.get_landmark_direction(lm_name)),
         (cam_b.xyz, cam_b.get_landmark_direction(lm_name))
     )
@@ -2270,20 +2333,6 @@ def intersect_lines_2d(line_a, line_b):
     inter = a0 + t * dir_a
     return float(inter[0]), float(inter[1])
 
-def intersect_ray_and_point(ray, point):
-    r_org, r_dir = ray
-    r_org = np.asarray(r_org)
-    r_dir = np.asarray(r_dir) / np.linalg.norm(r_dir)
-    point = np.asarray(point)
-    diff = point - r_org
-    proj_length = np.dot(diff, r_dir)
-    closest_point = r_org + proj_length * r_dir
-    distance = np.linalg.norm(point - closest_point)
-    p_dir = get_direction(r_org, point)
-    cos_theta = np.clip(np.dot(r_dir, p_dir), -1.0, 1.0)
-    angle = np.degrees(np.arccos(cos_theta))
-    return closest_point, distance, angle
-
 def intersect_ray_and_plane(ray, plane, eps=1e-8):
     r_org, r_dir = ray
     p_org, p_normal = plane
@@ -2298,7 +2347,21 @@ def intersect_ray_and_plane(ray, plane, eps=1e-8):
     point = r_org + distance * r_dir
     return point
 
-def intersect_rays(ray_a, ray_b, eps=1e-8, return_both_angles=False):
+def intersect_ray_and_point(ray, point):
+    r_org, r_dir = ray
+    r_org = np.asarray(r_org)
+    r_dir = np.asarray(r_dir) / np.linalg.norm(r_dir)
+    point = np.asarray(point)
+    diff = point - r_org
+    proj_length = np.dot(diff, r_dir)
+    closest_point = r_org + proj_length * r_dir
+    distance = np.linalg.norm(point - closest_point)
+    p_dir = get_direction(r_org, point)
+    cos_theta = np.clip(np.dot(r_dir, p_dir), -1.0, 1.0)
+    angle = np.degrees(np.arccos(cos_theta))
+    return closest_point, distance, angle
+
+def intersect_ray_and_ray(ray_a, ray_b, eps=1e-8):
     (org_a, dir_a), (org_b, dir_b) = ray_a, ray_b
     org_a, dir_a = np.asarray(org_a, dtype=float), np.asarray(dir_a, dtype=float)
     org_b, dir_b = np.asarray(org_b, dtype=float), np.asarray(dir_b, dtype=float)
@@ -2329,10 +2392,23 @@ def intersect_rays(ray_a, ray_b, eps=1e-8, return_both_angles=False):
     miss_b /= np.linalg.norm(miss_b)
     delta_a = np.degrees(np.arccos(np.clip(np.dot(miss_a, dir_a), -1.0, 1.0)))
     delta_b = np.degrees(np.arccos(np.clip(np.dot(miss_b, dir_b), -1.0, 1.0)))
-    if return_both_angles:
-        return midpoint, point_a, point_b, distance, delta_a, delta_b
     angle = 0.5 * (delta_a + delta_b)
     return midpoint, point_a, point_b, distance, angle
+
+def intersect_rays(rays, eps=1e-12):
+    orgs, dirs = zip(*rays)
+    orgs = np.asarray(orgs, dtype=float)                                # (n,3)
+    dirs = np.asarray(dirs, dtype=float)                                # (n,3)
+    I = np.eye(3, dtype=float)                                          # (3,3)
+    # projections onto perpendicular planes
+    proj = I[None,:,:] - dirs[:,:,None] * dirs[:,None,:]                # (n,3,3)
+    proj_sum = proj.sum(axis=0)                                         # (3,3)
+    orgs_sum = (proj @ orgs[:,:,None]).sum(axis=0).ravel()              # (3,)
+    closest_point = np.linalg.solve(proj_sum + eps * I, orgs_sum)       # (3,)
+    diffs = closest_point[None,:] - orgs                                # (n,3)
+    diffs_perp = diffs - (np.sum(diffs * dirs, axis=1)[:,None]) * dirs  # (n,3)
+    distances = np.linalg.norm(diffs_perp, axis=1)                      # (n,)
+    return closest_point, distances
 
 def _q_mul(a, b):
     aw, ax, ay, az = a
