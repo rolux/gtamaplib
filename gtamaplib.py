@@ -1495,12 +1495,13 @@ def find_ambrosia_relative(
     cam_names=[
         "Ambrosia 02 (Panorama)",
         "Ambrosia 04 (Fires)",
-        "Ambrosia Postcard"
+        "Ambrosia Postcard (X)"
     ],
     lm_names=[
         "1500 Sonora Ave (Silo)",
         "1500 Sonora Ave (Tank)",
         "US Sugar Mill (Factory)",
+        "USSM Smokestack (3)",
         "USSM Smokestack (4)",
         "USSM Smokestack (5)",
         "USSM Smokestack (6)",
@@ -1514,10 +1515,13 @@ def find_ambrosia_relative(
     lollipop_top_name="Sebring Water Tower (T)",
     lollipop_bottom_name="Sebring Water Tower (B)",
     lollipop_top=(0, 0, 50),
+    tank_name="1500 Sonora Ave (Tank)",
+    tank_left_name="1500 Sonora Ave (Tank) (L)",
+    tank_right_name="1500 Sonora Ave (Tank) (L)",
     bearing_ranges=[
-        (340, 341, 1),
-        (272, 281, 1),
-        (308, 317, 1)
+        (340.0, 341.0, 1.0),
+        (272.0, 280.5, 1.0),
+        (308.0, 316.5, 1.0)
     ],
     elevation_ranges=[
         (-2.0, 2.5, 0.5),
@@ -1525,9 +1529,9 @@ def find_ambrosia_relative(
         (-4.0, 0.5, 0.5)
     ],
     hfov_ranges=[
-        (36, 45, 1),
-        (77, 86, 1),
-        (52, 61, 1)
+        (36.0, 44.5, 1.0),
+        (77.0, 85.5, 1.0),
+        (52.0, 60.5, 1.0)
     ],
     filename=None
 ):
@@ -1546,7 +1550,8 @@ def find_ambrosia_relative(
         def get_map_xy(xy):
             x, y = xy
             return int(round(2000 + x * 2)), int(round(2000 - y * 2))
-        lm_colors = [get_rgb(i * 30, v=0.75) for i in range(12)]
+        n_lm_names = len(lm_names)
+        lm_colors = [get_rgb(i * 360/n_lm_names, v=0.75) for i in range(n_lm_names)]
         lollipop_color = (128, 128, 128)
         lollipop_map_xy = get_map_xy((0, 0))
         w, h = 4000, 4000
@@ -1580,7 +1585,7 @@ def find_ambrosia_relative(
                 color = lollipop_color if lm_name == lollipop_top_name else lm_colors[l]
                 draw.line((cam_map_xy, target_map_xy), fill=color, width=1)
                 rays[lm_name] = rays.get(lm_name, []) + [(cam.xyz, direction)]
-        for l, lm_name in enumerate(lm_names):
+        for l, lm_name in enumerate(lm_names + [lollipop_top_name]):
             for a, ray_a in enumerate(rays[lm_name]):
                 for b, ray_b in enumerate(rays[lm_name]):
                     if a >= b: continue
@@ -1623,6 +1628,7 @@ def find_ambrosia_relative(
                         cams, cams[0].xyz, cams[0].ypr, cams[0].fov,
                         lm_names_3x, lm_names_2x,
                         lollipop_top_name, lollipop_bottom_name, lollipop_top, lollipop_radius,
+                        tank_name, tank_left_name, tank_right_name,
                         [list(np.arange(*bearing_range)) for bearing_range in bearing_ranges],
                         [list(np.arange(*elevation_range)) for elevation_range in elevation_ranges],
                         hfov_1, hfov_2
@@ -1674,6 +1680,7 @@ def _find_ambrosia_relative(args):
         lm_names_3x, lm_names_2x,
         lollipop_top_name, lollipop_bottom_name,
         lollipop_top, lollipop_radius,
+        tank_name, tank_left_name, tank_right_name,
         bearing_values, elevation_values,
         cam_1_hfov, cam_2_hfov
     ) = args
@@ -1683,6 +1690,19 @@ def _find_ambrosia_relative(args):
         dir_bottom = np.asarray(cam.get_landmark_direction_local(lollipop_bottom_name), float)
         angle = np.arccos(np.clip(np.dot(dir_top, dir_bottom), -1.0, 1.0))
         return lollipop_radius / np.tan(angle * 0.5)
+
+    def get_tank_width(cam, tank_xyz, eps=1e-12):
+        cam_xyz = np.asarray(cam.xyz, float)
+        tank_xyz = np.asarray(tank_xyz, float)
+        dir_left = np.asarray(cam.get_landmark_direction_local(tank_left_name), float)
+        dir_right = np.asarray(cam.get_landmark_direction_local(tank_right_name), float)
+        diff = tank_xyz - cam_xyz
+        depth = np.linalg.norm(diff)
+        direction = diff / (depth + eps)
+        cos_left = np.dot(dir_left, direction)
+        cos_right = np.dot(dir_right, direction)
+        width = depth * np.linalg.norm(dir_left / cos_left - dir_right / cos_right)
+        return float(width)
 
     cams[0].set_xyz(cam_0_xyz).set_ypr(cam_0_ypr).set_fov(cam_0_fov)
     cams[1].set_fov((cam_1_hfov, None))
@@ -1704,6 +1724,15 @@ def _find_ambrosia_relative(args):
             cams[1].set_xyz(point)
             cams[1].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
 
+            tank_xyz, _ = intersect_rays([
+                (cams[0].xyz, cams[0].get_landmark_direction(tank_name)),
+                (cams[1].xyz, cams[1].get_landmark_direction(tank_name))
+            ])
+            tank_width_0 = get_tank_width(cams[0], tank_xyz)
+            tank_width_1 = get_tank_width(cams[1], tank_xyz)
+            if not tank_width_0 * 0.9 <= tank_width_1 <= tank_width_0 * 1.1:
+                continue
+
             for bearing_2 in bearing_values[2]:
                 for elevation_2 in elevation_values[2]:
                     direction = get_direction_from_angles(bearing_2, elevation_2)
@@ -1712,15 +1741,20 @@ def _find_ambrosia_relative(args):
                     cams[2].set_xyz(point)
                     cams[2].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
 
+                    tank_width_2 = get_tank_width(cams[2], tank_xyz)
+                    if not tank_width_0 * 0.9 <= tank_width_2 <= tank_width_0 * 1.1:
+                        continue
+
                     valid = True
-                    for lm_name in lm_names_2x[:-1]:  # skip wheelabrator
+                    for lm_name in lm_names_2x:
+                        if lm_name in cams[1].landmark_pixels: continue
                         point, _ = intersect_rays([
                             (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
                             (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
                         ])
                         pixel = cams[1].get_pixel(point)
                         if pixel is None: continue
-                        if pixel[0] <= cams[1].w:  # silo or smokestack 10/11 visible in cam 1
+                        if pixel[0] <= cams[1].w - 0.5:  # silo or smokestack 10/11 visible in cam 1
                             valid = False
                             break
                     if not valid:
