@@ -79,7 +79,7 @@ def find_mary_brickell():
             point_b = ml.intersect_ray_and_plane(ray_b, plane)
             point_e = ml.intersect_ray_and_plane(ray_e, plane)
             ray_ab = (point_a, ml.get_direction(point_a, point_b))
-            angular_delta = ml.intersect_rays(ray_ab, ray_e)[-1]
+            angular_delta = ml.intersect_ray_and_ray(ray_ab, ray_e)[-1]
             if angular_delta < loss:
                 loss = angular_delta
             else:
