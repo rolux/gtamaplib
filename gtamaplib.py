@@ -1577,13 +1577,13 @@ def find_ambrosia_relative(
             cam_map_xy = get_map_xy(cam.xy)
             for x in (-0.5, cam.w - 0.5):
                 direction = cam.get_pixel_direction((x, cam.h - 0.5))
-                target_xyz = get_point(cam.xyz, direction, 3000)
+                target_xyz = get_point(cam.xyz, direction, w)
                 target_map_xy = get_map_xy(target_xyz[:2])
                 draw.line((cam_map_xy, target_map_xy), fill=(0, 0, 0), width=1)
             for l, lm_name in enumerate(lm_names + [lollipop_top_name]):
                 if lm_name not in cam.landmark_pixels: continue
                 direction = cam.get_landmark_direction(lm_name)
-                target_xyz = get_point(cam.xyz, direction, 3000)
+                target_xyz = get_point(cam.xyz, direction, w)
                 target_map_xy = get_map_xy(target_xyz[:2])
                 color = lollipop_color if lm_name == lollipop_top_name else lm_colors[l]
                 draw.line((cam_map_xy, target_map_xy), fill=color, width=1)
