@@ -1552,7 +1552,6 @@ def find_ambrosia_relative(
             x, y = xy
             return int(round(2000 + x * 2)), int(round(2000 - y * 2))
         n_lm_names = len(lm_names)
-        indices = list(range(0, n_lm_names, 2)) + list(range(1, n_lm_names, 2))
         indices = [i * 4 % n_lm_names for i in range(n_lm_names)]
         lm_colors = [get_rgb(index * 360/n_lm_names, v=0.75) for index in indices]
         lollipop_color = (128, 128, 128)
