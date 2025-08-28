@@ -1640,7 +1640,7 @@ def find_ambrosia_relative(
     best_values = None
 
     with multiprocessing.Pool() as pool:
-        for loss, local_loss, values in tqdm(
+        for loss, deltas, values, local_loss in tqdm(
             pool.imap_unordered(_find_ambrosia_relative, pool_args),
             total=len(pool_args)
         ):
@@ -1651,8 +1651,10 @@ def find_ambrosia_relative(
             if loss < best_loss:
                 best_loss = loss
                 best_values = values
+                delta_string = "[" + ", ".join([f"{v:.6f}" for v in deltas]) + "]"
                 print(
                     f"{loss=:.6f}\n"
+                    f"deltas={delta_string}\n"
                     f"({values[0][0][0]:.3f}, {values[0][0][1]:.3f}, {values[0][0][2]:.3f}) "
                     f"({values[0][1][0]:.3f}, {values[0][1][1]:.3f}, {values[0][1][2]:.3f}) "
                     f"({values[0][2][0]:.3f}, {values[0][2][1]:.3f}) "
@@ -1712,9 +1714,9 @@ def _find_ambrosia_relative(args):
     cams[2].set_fov((cam_2_hfov, None))
     n_3x = len(lm_names_3x)
     best_loss = float("inf")
-    local_loss = {}
+    best_deltas = None
     best_values = None
-    valid = True
+    local_loss = {}
 
     for bearing_1 in bearing_values[1]:
         for elevation_1 in elevation_values[1]:
@@ -1755,7 +1757,9 @@ def _find_ambrosia_relative(args):
                             (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
                             (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
                         ])
-                        if lm_name == silo_name and point[1] >= cams[2].y:  # silo behind cam 2
+                        if lm_name == silo_name and (  # silo behind or below cam 2
+                            point[1] >= cams[2].y - 10 or point[2] <= cams[2].z
+                        ):
                             valid = False
                             break
                         pixel = cams[1].get_pixel(point)
@@ -1766,18 +1770,25 @@ def _find_ambrosia_relative(args):
                     if not valid:
                         continue
 
+                    deltas = []
                     loss = 0
+                    threshold = best_loss * n_3x
                     for lm_name in lm_names_3x:
                         _, distances = intersect_rays([
                             (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
                             (cams[1].xyz, cams[1].get_landmark_direction(lm_name)),
                             (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
                         ])
-                        loss += np.mean(distances) ** 2
+                        delta = np.mean(distances)
+                        deltas.append(delta)
+                        loss += delta ** 2
+                        if loss >= threshold:
+                            break
                     loss /= n_3x
 
                     if loss < best_loss:
                         best_loss = loss
+                        best_deltas = deltas
                         best_values = (
                             (cams[0].xyz, cams[0].ypr, cams[0].fov, (bearing_0, elevation_0)),
                             (cams[1].xyz, cams[1].ypr, cams[1].fov, (bearing_1, elevation_1)),
@@ -1789,7 +1800,7 @@ def _find_ambrosia_relative(args):
                         if loss < local_loss.get(xy, float("inf")):
                             local_loss[xy] = loss
 
-    return best_loss, local_loss, best_values
+    return best_loss, best_deltas, best_values, local_loss
 
 
 def find_camera(
