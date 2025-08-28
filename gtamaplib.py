@@ -1550,20 +1550,21 @@ def find_ambrosia_relative(
     def draw_map():
         def get_map_xy(xy):
             x, y = xy
-            return int(round(2000 + x * 2)), int(round(2000 - y * 2))
+            return int(round(w / 2 + x * 2)), int(round(h / 2 - y * 2))
+        w, h = 4000, 4000
+        image = Image.new("RGB", (w, h), (255, 255, 255))
+        draw = ImageDraw.Draw(image)
         n_lm_names = len(lm_names)
         indices = [i * 4 % n_lm_names for i in range(n_lm_names)]
         lm_colors = [get_rgb(index * 360 / n_lm_names, v=0.75) for index in indices]
         lollipop_color = (128, 128, 128)
         lollipop_map_xy = get_map_xy((0, 0))
-        w, h = 4000, 4000
-        image = Image.new("RGB", (w, h), (255, 255, 255))
-        draw = ImageDraw.Draw(image)
-        for y in range(200, h, 200):
-            color = (64, 64, 64) if y == 2000 else (192, 192, 192)
+        step = int(w / 20)
+        for y in range(step, h, step):
+            color = (64, 64, 64) if y == h / 2 else (192, 192, 192)
             draw.line((0, y, w, y), fill=color, width=1)
-        for x in range(200, w, 200):
-            color = (64, 64, 64) if x == 2000 else (192, 192, 192)
+        for x in range(step, w, step):
+            color = (64, 64, 64) if x == w / 2 else (192, 192, 192)
             draw.line((x, 0, x, h), fill=color, width=1)
         for (x, y), loss in best_local_loss.items():
             box = (get_map_xy((x, y)), get_map_xy((x + 0.5, y - 0.5)))
