@@ -23,7 +23,7 @@ from tqdm import tqdm
 from . import gtamapdata as md
 
 multiprocessing.set_start_method("fork", force=True)
-Image.MAX_IMAGE_PIXELS = None
+Image.MAX_IMAGE_PIXELS = 100_000 ** 2
 
 DIRNAME = os.path.dirname(__file__)
 
@@ -1518,6 +1518,7 @@ def find_ambrosia_relative(
     tank_name="1500 Sonora Ave (Tank)",
     tank_left_name="1500 Sonora Ave (Tank) (L)",
     tank_right_name="1500 Sonora Ave (Tank) (L)",
+    silo_name="1500 Sonora Ave (Silo)",
     bearing_ranges=[
         (340.0, 341.0, 1.0),
         (272.0, 280.5, 1.0),
@@ -1625,10 +1626,10 @@ def find_ambrosia_relative(
             for hfov_1 in np.arange(*hfov_ranges[1]):
                 for hfov_2 in np.arange(*hfov_ranges[2]):
                     pool_args.append((
-                        cams, cams[0].xyz, cams[0].ypr, cams[0].fov,
+                        cams, cams[0].xyz, cams[0].ypr, cams[0].fov, bearing_0, elevation_0,
                         lm_names_3x, lm_names_2x,
                         lollipop_top_name, lollipop_bottom_name, lollipop_top, lollipop_radius,
-                        tank_name, tank_left_name, tank_right_name,
+                        tank_name, tank_left_name, tank_right_name, silo_name,
                         [list(np.arange(*bearing_range)) for bearing_range in bearing_ranges],
                         [list(np.arange(*elevation_range)) for elevation_range in elevation_ranges],
                         hfov_1, hfov_2
@@ -1654,13 +1655,16 @@ def find_ambrosia_relative(
                     f"{loss=:.6f}\n"
                     f"({values[0][0][0]:.3f}, {values[0][0][1]:.3f}, {values[0][0][2]:.3f}) "
                     f"({values[0][1][0]:.3f}, {values[0][1][1]:.3f}, {values[0][1][2]:.3f}) "
-                    f"({values[0][2][0]:.3f}, {values[0][2][1]:.3f})\n"
+                    f"({values[0][2][0]:.3f}, {values[0][2][1]:.3f}) "
+                    f"({values[0][3][0]:.3f}, {values[0][3][1]:.3f})\n"
                     f"({values[1][0][0]:.3f}, {values[1][0][1]:.3f}, {values[1][0][2]:.3f}) "
                     f"({values[1][1][0]:.3f}, {values[1][1][1]:.3f}, {values[1][1][2]:.3f}) "
-                    f"({values[1][2][0]:.3f}, {values[1][2][1]:.3f})\n"
+                    f"({values[1][2][0]:.3f}, {values[1][2][1]:.3f}) "
+                    f"({values[1][3][0]:.3f}, {values[1][3][1]:.3f})\n"
                     f"({values[2][0][0]:.3f}, {values[2][0][1]:.3f}, {values[2][0][2]:.3f}) "
                     f"({values[2][1][0]:.3f}, {values[2][1][1]:.3f}, {values[2][1][2]:.3f}) "
-                    f"({values[2][2][0]:.3f}, {values[2][2][1]:.3f})",
+                    f"({values[2][2][0]:.3f}, {values[2][2][1]:.3f}) "
+                    f"({values[2][3][0]:.3f}, {values[2][3][1]:.3f})",
                     flush=True
                 )
                 for i, cam in enumerate(cams):
@@ -1676,11 +1680,10 @@ def _find_ambrosia_relative(args):
     """
 
     (
-        cams, cam_0_xyz, cam_0_ypr, cam_0_fov,
+        cams, cam_0_xyz, cam_0_ypr, cam_0_fov, bearing_0, elevation_0,
         lm_names_3x, lm_names_2x,
-        lollipop_top_name, lollipop_bottom_name,
-        lollipop_top, lollipop_radius,
-        tank_name, tank_left_name, tank_right_name,
+        lollipop_top_name, lollipop_bottom_name, lollipop_top, lollipop_radius,
+        tank_name, tank_left_name, tank_right_name, silo_name,
         bearing_values, elevation_values,
         cam_1_hfov, cam_2_hfov
     ) = args
@@ -1752,6 +1755,9 @@ def _find_ambrosia_relative(args):
                             (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
                             (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
                         ])
+                        if lm_name == silo_name and point[1] >= cams[2].y:  # silo behind cam 2
+                            valid = False
+                            break
                         pixel = cams[1].get_pixel(point)
                         if pixel is None: continue
                         if pixel[0] <= cams[1].w - 0.5:  # silo or smokestack 10/11 visible in cam 1
@@ -1773,9 +1779,9 @@ def _find_ambrosia_relative(args):
                     if loss < best_loss:
                         best_loss = loss
                         best_values = (
-                            (cams[0].xyz, cams[0].ypr, cams[0].fov),
-                            (cams[1].xyz, cams[1].ypr, cams[1].fov),
-                            (cams[2].xyz, cams[2].ypr, cams[2].fov),
+                            (cams[0].xyz, cams[0].ypr, cams[0].fov, (bearing_0, elevation_0)),
+                            (cams[1].xyz, cams[1].ypr, cams[1].fov, (bearing_1, elevation_1)),
+                            (cams[2].xyz, cams[2].ypr, cams[2].fov, (bearing_2, elevation_2)),
                         )
 
                     for index in range(3):
