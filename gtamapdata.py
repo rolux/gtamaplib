@@ -86,7 +86,8 @@ cameras = {
     "[S2/39] Vice City 03 (Basketball)": (None, (1950.000, 1650.000, 30.000), (111.000, -8.000, 0.000), (55.000, None), (3840, 2160)),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160)),
     "[S2/56] Ambrosia 01 (Bikers)": (None, (-3900.000, 3900.000, 10.000), (45.000, 0.000, 0.000), (60.000, None), (3840, 2160)),
-    "[S2/57] Ambrosia 02 (Panorama)": (None, (-3915.000, 4997.000, 50.000), (178.354, -2.750, 0.000), (40.300, None), (3840, 2160)),
+    # "[S2/57] Ambrosia 02 (Panorama)": (None, (-3915.000, 4997.000, 50.000), (178.354, -2.750, 0.000), (40.300, None), (3840, 2160)),
+    "[S2/57] Ambrosia 02 (Panorama)": (None, (-2462.000, 5670.000, 72.368), (162.333, -3.600, 0.000), (48.000, 28.120), (3840, 2160)),
     "[S2/59] Ambrosia 04 (Fires)": (None, (-3443.000, 3394.000, 20.000), (109.586, -2.250, 0.000), (81.000, None), (3840, 2160)),
     "[S2/62] Grassrivers 02 (Watson Bay)": (None, (-5218.000, -3355.000, 27.233), (282.302, -6.000, 0.000), (49.600, 29.139), (3840, 2160)),
     "[S2/71] Vice City Postcard": (None, (220.000, 1730.000, 17.208), (154.114, 3.600, 0.000), (65.000, 45.148), (2458, 1604)),
@@ -430,6 +431,8 @@ pixels = {
         ((1581, 164), "Portofino Tower (NW)"),
     ],
     "[L1/44] Tennis Stadium (4K)": [
+        ((34, 1073.5), "Unknown Structure (1)"),
+        ((85.5, 1073.5), "Unknown Structure (2)"),
         ((434, 1040), "Homestead Water Tower"),
         ((434, 1096), "Homestead Water Tower (B)"),
         ((453, 1076), "Prison Tower (4)"),
@@ -702,6 +705,8 @@ pixels = {
         ((2830, 146), "Blimp Bay"),
         ((3033, 627), "Old Bahia Honda Bridge (EB)"),
         ((3038.5, 559), "Old Bahia Honda Bridge (E)"),
+        ((3557, 98.5), "Vake Island (E)"),
+        ((3639.5, 106), "Vake Island (W)"),
     ],
     "[T1/20] Rooftop Party": [
         ((161, 795), "1500 Ocean Dr"),
@@ -757,6 +762,8 @@ pixels = {
         ((900, 488), "Island J (E)"),
         ((966, 484), "Island J (W)"),
         ((909, 468.5), "Tree on Island J"),
+        ((1297, 449), "Island K (E)"),
+        ((1332, 447), "Island K (W)"),
         ((1440, 327), "Radio Tower (Key Lento)"),
         ((1508, 681), "Unknown Residential Building"),
         ((1788, 448), "Billboard #1 (Key Lento)"),
@@ -884,9 +891,11 @@ pixels = {
         ((3663, 238), "Sunset Harbour South Condo (RN)"),
     ],
     "[S2/46] Leonida Keys 01 (Airplane) (X)": [
+        ((26.5, 566), "Wheelabrator South Broward (W)"),
         ((31, 911), "Unnamed Building #1 (Blimp Key)"),
-        ((56.5, 546), "Titan America (?)"),
+        ((56.5, 548), "Wheelabrator South Broward"),
         ((173, 694), "Island S (E)"),
+        ((389.5, 565.5), "MIA North Terminal Tower"),
         ((428, 548), "FAA Miami ATCT (MIA)"),
         ((498, 564.5), "Homestead Water Tower"),
         ((415, 592), "Prison Tower (6)"),
@@ -987,47 +996,86 @@ pixels = {
         ((1574, 28), "Billboard with Diversity Motif"),
     ],
     "[S2/57] Ambrosia 02 (Panorama)": [
+        ((0, 1041), "Lake Leonida (X)"),
+        ((18, 1042), "Lake Leonida (W)"),
+        ((25, 1039), "Lake Leonida (V)"),
         ((77, 926), "Orlando Station"),
+        ((94, 1042), "Lake Leonida (U)"),
+        ((252, 1048.5), "Lake Leonida (T)"),
         ((338.5, 807.5), "Round Water Tower"),
-        ((442.5, 783), "Wheelabrator South Broward (T)"),
+        ((400, 1056), "Lake Leonida (S)"),
+        ((442.5, 783), "Wheelabrator South Broward"),
         ((474, 791), "FAA Miami ATCT (MIA)"),
+        ((479, 817), "MIA North Terminal Tower"),
         ((535, 854), "Wheelabrator South Broward (W)"),
-        ((575, 838), "WDNA FM"),
+        ((535, 863), "Wheelabrator South Broward (3)"),
+        ((535, 863), "Wheelabrator South Broward (3T)"),
+        ((535, 866), "Wheelabrator South Broward (3B)"),
+        ((535, 872), "Wheelabrator South Broward (2)"),
+        ((535, 881), "Wheelabrator South Broward (1)"),
+        ((577, 838), "WDNA FM (B)"),
+        ((774, 1077), "Lake Leonida (R)"),
+        ((794, 1060.5), "Lake Leonida (Q)"),
         ((812, 824.5), "Flat Water Tower"),
-        ((1344, 863), "1500 Sonora Ave (Silo)"),
+        ((980, 1099), "Lake Leonida (O)"),
+        ((1033, 1085), "Lake Leonida (P)"),
+        ((1241, 1118), "Lake Leonida (N)"),
+        ((1299, 1116), "Lake Leonida (M)"),
+        ((1324.5, 864), "1500 Sonora Ave (Silo) (L)"),
+        ((1343, 864), "1500 Sonora Ave (Silo)"),
+        ((1345, 1125), "Lake Leonida (L)"),
+        ((1361.5, 864), "1500 Sonora Ave (Silo) (R)"),
         #((1388, 819), "Homestead Water Tower"),
-        ((1422.5, 791.5), "Titan America (?)"),
+        ((1422.5, 791.5), "Unknown Building near VCIA (N)"),
+        ((1528, 1306), "Lake Leonida (G)"),
+        ((1564, 1394), "Lake Leonida (E)"),
+        ((1549, 1142.5), "Lake Leonida (K)"),
+        ((1574, 1225), "Lake Leonida (H)"),
+        ((1611, 1159), "Lake Leonida (J)"),
+        ((1635, 1180), "Lake Leonida (I)"),
         ((1664, 771), "USSM Smokestack (4)"),
         ((1726, 813), "USSM Smokestack (5)"),
+        ((1734, 1316), "Lake Leonida (F)"),
         ((1742, 804.5), "USSM Smokestack (6)"),
         ((1749, 763), "US Sugar Mill (Factory)"),
+        ((1751, 832), "US Sugar Mill (Factory) (R)"),
         #((1751, 831), "US Sugar Mill (Factory)"),
         ((1798, 775.5), "USSM Smokestack (7)"),
         ((1837, 908), "1500 Sonora Ave (Tank) (L)"),
         ((1885, 908.5), "1500 Sonora Ave (Tank)"),
-        ((1933.5, 909), "1500 Sonora Ave (Tank) (R)"),
         ((1895, 862), "USSM Smokestack (10)"),
         ((1907, 890), "USSM Smokestack (11)"),
+        ((1933.5, 909), "1500 Sonora Ave (Tank) (R)"),
         ((1961, 885), "USSM Smokestack (8)"),
         ((1976.5, 864), "USSM Smokestack (9)"),
         ((2235.5, 978), "Billboard with Diversity Motif"),
+        ((2318.5, 1715.5), "Lake Leonida (C)"),
+        ((2392, 1699), "Lake Leonida (D)"),
         ((2577, 788.5), "Very Tall Water Tower"),
         ((2714, 944.5), "Billboard with Irregular Shape"),
         ((2770, 937.5), "Billboard with Hat-Shaped Motif"),
+        ((2895, 2011), "Lake Leonida (B)"),
         ((2920, 847), "Sebring Water Tower (B)"),
         ((2921, 819), "Sebring Water Tower (T)"),
         ((2995, 900), "Billboard with Oval Motif"),
+        ((3098, 2160), "Lake Leonida (A)"),
         ((3109.5, 792), "Water Tower near Prison"),
         ((3329, 870), "Billboard with Unknown Motif"),
         ((3453, 1084.5), "Hendry County Motorsports Park"),
     ],
     "[S2/59] Ambrosia 04 (Fires)": [
+        ((11, 1007), "Wheelabrator South Broward (3)"),
+        ((12, 1028.5), "Wheelabrator South Broward (2)"),
+        ((13, 1050), "Wheelabrator South Broward (1)"),
+        ((106, 966), "Wheelabrator South Broward (3T)"),
+        ((106, 973), "Wheelabrator South Broward (3B)"),
         ((108, 947), "Wheelabrator South Broward (W)"),
         ((1848, 465), "Radio Tower (Ambrosia)"),
         ((2038.5, 969), "USSM Smokestack (3)"),
         ((2148, 900), "Sebring Water Tower (T)"),
         ((2148, 923.5), "Sebring Water Tower (B)"),
         # ((2750, 888), "US Sugar Mill (Factory)"),
+        ((2750, 889), "US Sugar Mill (Factory) (R)"),
         ((2751, 820), "US Sugar Mill (Factory)"),
         ((3279.5, 817), "USSM Smokestack (7)"),
         ((3283, 863), "USSM Smokestack (5)"),
@@ -1244,7 +1292,9 @@ pixels = {
         ((69, 1020.5), "Dark Billboard (Ambrosia)"),
         ((307, 988), "USSM Smokestack (1)"),
         ((379, 1109), "USSM Smokestack (2)"),
-        ((585, 929), "1500 Sonora Ave (Silo)"),
+        ((412, 929), "1500 Sonora Ave (Silo) (L)"),
+        ((584, 929), "1500 Sonora Ave (Silo)"),
+        ((756, 929), "1500 Sonora Ave (Silo) (R)"),
         ((818, 1059), "USSM Smokestack (3)"),
         ((1031.5, 913), "Radio Mast (Ambrosia)"),
         ((1493, 786), "US Sugar Mill (Factory)"),
@@ -1435,7 +1485,8 @@ landmarks = {
     "Capri South Beach (SE)": (1304.217, 1126.932, 56.105),  # d=0.547 via Vice City 03 (Basketball) & Vice Beach (B)
     "Di Lido Island (N)": (498.495, 1546.860, 0.000),  # via Venetian Islands
     "Di Lido Island (S)": (595.126, 1000.494, 0.000),  # via Venetian Islands
-    "FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
+    # "FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
+    "FAA Miami ATCT (MIA)": (-2369.054, -777.804, 96.640),  # d=2.091 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "Flagler Memorial Island (N)": (827.367, 993.534, 0.000),  # via Venetian Islands
     "Flamingo South Beach (NENE)": (1354.704, 1080.222, 50.837),  # d=0.509 via Vice City 03 (Basketball) & Vice Beach (B)
     "Flamingo South Beach (SDS)": (1279.325, 814.051, 64.855),  # d=0.705 via Venetian Islands & Vice Beach (A)
@@ -1463,6 +1514,8 @@ landmarks = {
     "Island G (W)": (-2197.904, -6292.396, 0.000), # via Leonida Keys Postcard (X)
     "Island J (E)": (-2507.148, -6567.983, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island J (W)": (-2577.286, -6635.502, 0.000), # via Leonida Keys Postcard (X)
+    "Island K (E)": (-3562.974, -7797.697, 0.000),  # via Key Lento
+    "Island K (W)": (-3691.596, -7923.045, 0.000),  # via Key Lento
     "Island N (E)": (-4004.740, -6977.705, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island N (W)": (-4118.974, -6905.147, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island S (E)": (-3912.734, -5535.023, 0.000),  # via Leonida Keys 01 (Airplane) (X)
@@ -1486,6 +1539,7 @@ landmarks = {
     "Loews Miami Beach": (1944.940, 1152.696, 87.905),  # d=1.425 via Venetian Islands & Vice Beach (A)
     "Marina Club at Blackwater Sound (N)": (-2575.262, -5864.326, 16.394),  # d=0.938 via Leonida Keys Postcard (X) & Key Lento
     "Marina Club at Blackwater Sound (S)": (-2573.282, -5923.209, 16.669),  # d=0.677 via Leonida Keys Postcard (X) & Key Lento
+    "MIA North Terminal Tower": (-2378.279, -545.155, 60.726),  # d=0.531 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
     "Miami Tower": (-775.668, -424.119, 159.972),  # d=5.605 via Grassrivers 02 (Watson Bay) & Prison
     "Mount Waffles (TW)": (-5225.002, 5750.498, 228.719),  # d=39.915 via Gas Station (Lucia) & Diner (N)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
@@ -1589,8 +1643,10 @@ landmarks = {
     "1000 Venetian Way (SW)": (313.712, 1107.384, 69.709),  # d=0.100 via Vice Beach (B) & Tennis Court (SE)
     "W South Beach (BNW)": (1941.706, 1656.135, 34.456),  # d=0.005 via Vice City 03 (Basketball) & Rooftop Party
     "The Waverly South Beach (SE)": (1274.731, 582.071, 112.450),  # d=0.872 via Rooftop Party & Vice Beach (B)
+    "Water Tower near Prison": (-5154.754, 1557.230, 95.382),  # d=0.087 via Ambrosia 02 (Panorama) & Loading Zone near Prison (SW)
     "WDNA FM": (-2517.727, -2295.470, 407.215),  # d=123.048 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Wells Fargo Center (N)": (-642.090, -403.002, 187.267),  # d=2.755 via Vice Beach (B) & Prison
+    "Wheelabrator South Broward": (-2396.145, 2414.527, 101.921),  # d=0.130 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
     "White Billboard (Hamlet)": (-2593.855, -3818.706, 31.675),  # d=10.156 via Police Chase (A) & Leonida Keys 01 (Airplane) (X)
     #### AIWE MAP ####
     "1703 E 5th St (Shack) (SE)": (-6264.218, 3479.946, 10.000),  # via AI World Editor Map (4K)
@@ -1656,6 +1712,8 @@ landmarks = {
     "Transformer Station (SW)": (-6506.865, 3466.711, 10.000),  # via AI World Editor Map (4K)
     "Twice The Ice (N)": (-6452.453, 3260.094, 10.000),  # via AI World Editor Map (4K)
     "Twice The Ice (W)": (-6454.659, 3255.682, 10.000),  # via AI World Editor Map (4K)
+    "Vake Island (E)": (-3566.229, -7844.035, 0.000),  # via Keys
+    "Vake Island (W)": (-3622.772, -7877.686, 0.000),  # via Keys
     "Waldo Station (SE)": (-6575.247, 3506.417, 10.000),  # via AI World Editor Map (4K)
     "Welcome to Port Gellhorn Sign": (-6288.487, 2856.420, 17.620),  # d=0.000 via AI World Editor Map (4K) & Gas Station (Lucia)
     "Wildfire Scooters (NW)": (-6463.482, 3332.888, 10.000),  # via AI World Editor Map (4K)
@@ -1691,5 +1749,5 @@ map_sections = {
     "Port Gellhorn": (-9000, 1000, -5000, 6000),
     "Leonida Keys": (-8000, -8000, -1000, -4000),
     "Grassrivers": (-6000, -5000, 0, -2000),
-    "Ambrosia": (-5000, 1000, -2000, 5000),
+    "Ambrosia": (-5000, 1000, -1000, 7000),
 }
