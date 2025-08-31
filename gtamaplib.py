@@ -934,7 +934,7 @@ class Map:
             for lm_name in cam.landmark_pixels:
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
-                target_xy = get_point(cam.xyz, direction, 10000)[:2]
+                target_xy = get_point(cam.xyz, direction, 20000)[:2]
                 ray = (cam.xy, target_xy)
                 color = get_color(lm_name)
                 self.draw_line(ray, color, 1)
@@ -1515,10 +1515,6 @@ def find_ambrosia_relative(
     lollipop_top_name="Sebring Water Tower (T)",
     lollipop_bottom_name="Sebring Water Tower (B)",
     lollipop_top=(0, 0, 50),
-    tank_name="1500 Sonora Ave (Tank)",
-    tank_left_name="1500 Sonora Ave (Tank) (L)",
-    tank_right_name="1500 Sonora Ave (Tank) (L)",
-    silo_name="1500 Sonora Ave (Silo)",
     bearing_ranges=[
         (340.0, 341.0, 1.0),
         (272.0, 280.5, 1.0),
@@ -1631,7 +1627,6 @@ def find_ambrosia_relative(
                         cams, cams[0].xyz, cams[0].ypr, cams[0].fov, bearing_0, elevation_0,
                         lm_names_3x, lm_names_2x,
                         lollipop_top_name, lollipop_bottom_name, lollipop_top, lollipop_radius,
-                        tank_name, tank_left_name, tank_right_name, silo_name,
                         [list(np.arange(*bearing_range)) for bearing_range in bearing_ranges],
                         [list(np.arange(*elevation_range)) for elevation_range in elevation_ranges],
                         hfov_1, hfov_2
@@ -1687,7 +1682,6 @@ def _find_ambrosia_relative(args):
         cams, cam_0_xyz, cam_0_ypr, cam_0_fov, bearing_0, elevation_0,
         lm_names_3x, lm_names_2x,
         lollipop_top_name, lollipop_bottom_name, lollipop_top, lollipop_radius,
-        tank_name, tank_left_name, tank_right_name, silo_name,
         bearing_values, elevation_values,
         cam_1_hfov, cam_2_hfov
     ) = args
@@ -1698,18 +1692,20 @@ def _find_ambrosia_relative(args):
         angle = np.arccos(np.clip(np.dot(dir_top, dir_bottom), -1.0, 1.0))
         return lollipop_radius / np.tan(angle * 0.5)
 
-    def get_tank_width(cam, tank_xyz, eps=1e-12):
+    def get_landmark_size(cam, center_xyz, dir_a, dir_b):
         cam_xyz = np.asarray(cam.xyz, float)
-        tank_xyz = np.asarray(tank_xyz, float)
-        dir_left = np.asarray(cam.get_landmark_direction_local(tank_left_name), float)
-        dir_right = np.asarray(cam.get_landmark_direction_local(tank_right_name), float)
-        diff = tank_xyz - cam_xyz
+        center_xyz = np.asarray(center_xyz, float)
+        dir_a = np.asarray(dir_a, float)
+        dir_b = np.asarray(dir_b, float)
+        diff = center_xyz - cam_xyz
         depth = np.linalg.norm(diff)
-        direction = diff / (depth + eps)
-        cos_left = np.dot(dir_left, direction)
-        cos_right = np.dot(dir_right, direction)
-        width = depth * np.linalg.norm(dir_left / cos_left - dir_right / cos_right)
-        return float(width)
+        normal = diff / depth
+        cos_a = np.dot(dir_a, normal)
+        cos_b = np.dot(dir_b, normal)
+        # intersection points on the frontal plane at the same depth
+        point_a = cam_xyz + (depth / cos_a) * dir_a
+        point_b = cam_xyz + (depth / cos_b) * dir_b
+        return float(np.linalg.norm(point_a - point_b))
 
     cams[0].set_xyz(cam_0_xyz).set_ypr(cam_0_ypr).set_fov(cam_0_fov)
     cams[1].set_fov((cam_1_hfov, None))
@@ -1725,20 +1721,8 @@ def _find_ambrosia_relative(args):
             direction = get_direction_from_angles(bearing_1, elevation_1)
             distance = get_distance_from_lollipop(cams[1])
             point = get_point(lollipop_top, direction, distance)
-            pixel = cams[0].get_pixel(point)
-            if pixel[0] < 0:  # cam 1 not visible in cam 0
-                continue
             cams[1].set_xyz(point)
             cams[1].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
-
-            tank_xyz, _ = intersect_rays([
-                (cams[0].xyz, cams[0].get_landmark_direction(tank_name)),
-                (cams[1].xyz, cams[1].get_landmark_direction(tank_name))
-            ])
-            tank_width_0 = get_tank_width(cams[0], tank_xyz)
-            tank_width_1 = get_tank_width(cams[1], tank_xyz)
-            if not tank_width_0 * 0.9 <= tank_width_1 <= tank_width_0 * 1.1:
-                continue
 
             for bearing_2 in bearing_values[2]:
                 for elevation_2 in elevation_values[2]:
@@ -1748,26 +1732,57 @@ def _find_ambrosia_relative(args):
                     cams[2].set_xyz(point)
                     cams[2].calibrate_yaw_and_pitch(lollipop_top_name, lollipop_top)
 
-                    tank_width_2 = get_tank_width(cams[2], tank_xyz)
-                    if not tank_width_0 * 0.9 <= tank_width_2 <= tank_width_0 * 1.1:
-                        continue
-
                     valid = True
+                    #"""
+                    for (pairs, lm_name, suffix_a, suffix_b) in (
+                        #([(0, 2)], "1500 Sonora Ave (Silo)", "L", "R"),
+                        ([(0, 1), (0, 2), (1, 2)], "1500 Sonora Ave (Tank)", "L", "R"),
+                        #([(0, 1)], "Wheelabrator South Broward (2)", "1", "3"),
+                    ):
+                        for (index_a, index_b) in pairs:
+                            lm_xyz, _ = intersect_rays([
+                                (cams[index_a].xyz, cams[index_a].get_landmark_direction(lm_name)),
+                                (cams[index_b].xyz, cams[index_b].get_landmark_direction(lm_name))
+                            ])
+                            basename = lm_name.replace(" (2)", "")
+                            dir_a = cams[index_a].get_landmark_direction(f"{basename} ({suffix_a})")
+                            dir_b = cams[index_a].get_landmark_direction(f"{basename} ({suffix_b})")
+                            lm_size_a = get_landmark_size(cams[index_a], lm_xyz, dir_a, dir_b)
+                            dir_a = cams[index_b].get_landmark_direction(f"{basename} ({suffix_a})")
+                            dir_b = cams[index_b].get_landmark_direction(f"{basename} ({suffix_b})")
+                            lm_size_b = get_landmark_size(cams[index_b], lm_xyz, dir_a, dir_b)
+                            if not lm_size_a * 0.5 <= lm_size_b <= lm_size_a * 2:
+                                """
+                                print(
+                                    f"Cams {index_a} and {index_b} disagree about {basename}:\n"
+                                    f"{lm_size_a:.3f} vs {lm_size_b:.3f}\n"
+                                    f"Distances: {math.dist(cams[index_a].xyz, lm_xyz):.3f} vs "
+                                    f"{math.dist(cams[index_b].xyz, lm_xyz):.3f}"
+                                )
+                                """
+                                valid = False
+                                break
+                        if not valid:
+                            break
+                    if not valid:
+                        continue
+                    #"""
+
                     for lm_name in lm_names_2x:
                         if lm_name in cams[1].landmark_pixels: continue
                         point, _ = intersect_rays([
                             (cams[0].xyz, cams[0].get_landmark_direction(lm_name)),
                             (cams[2].xyz, cams[2].get_landmark_direction(lm_name))
                         ])
-                        if lm_name == silo_name and (  # silo behind or below cam 2
+                        if lm_name == "1500 Sonora Ave (Silo)" and (  
                             point[1] >= cams[2].y - 10 or point[2] <= cams[2].z
                         ):
-                            valid = False
+                            valid = False  # silo behind or below cam 2
                             break
                         pixel = cams[1].get_pixel(point)
                         if pixel is None: continue
-                        if pixel[0] <= cams[1].w - 0.5:  # silo or smokestack 10/11 visible in cam 1
-                            valid = False
+                        if pixel[0] <= cams[1].w - 0.5:  
+                            valid = False  # silo or smokestack 10/11 visible in cam 1
                             break
                     if not valid:
                         continue
@@ -1854,16 +1869,20 @@ def find_camera(
         for xy in xys
     ]
     with multiprocessing.Pool() as pool:
-        for loss, deltas, cam in tqdm(
+        for loss, deltas, cam_ in tqdm(
             pool.imap_unordered(_find_camera, pool_args),
             total=len(pool_args)
         ):
-            local_loss.append((cam.xy, loss))
+            if loss == float("inf"): continue
+            local_loss.append((cam_.xy, loss))
             if loss < best_loss:
                 best_loss = loss
-                best_cam = cam
+                best_cam = cam_
                 delta_string = "[" + ", ".join([f"{v:.6f}" for v in deltas]) + "]"
-                print(f"{loss=:.6f}\ndeltas={delta_string}\n{cam}\n", flush=True)
+                print(f"{loss=:.6f}\ndeltas={delta_string}\n{cam_}\n", flush=True)
+
+    if best_loss == float("inf"):
+        raise RuntimeError("No camera found.")
 
     cam.set_xyz(best_cam.xyz).set_ypr(best_cam.ypr).set_fov(best_cam.fov).register()
     for other_cam_name, lm_name in sorted(rays, key=lambda kv: kv[1]):
@@ -1884,9 +1903,9 @@ def find_camera(
     m.draw_camera(cam_name, d=10000, _no_marker=True)
     other_cam_names = list(set(other_cam_name for other_cam_name, lm_name in rays))
     for other_cam_name in other_cam_names:
-        m.draw_camera(other_cam_name, d=10000)
+        m.draw_camera(other_cam_name, d=20000)
     for lm_name in lm_names:
-        point_xy = get_point(cam.xyz, cam.get_landmark_direction(lm_name), 10000)[:2]
+        point_xy = get_point(cam.xyz, cam.get_landmark_direction(lm_name), 20000)[:2]
         color = get_color(lm_name)
         m.draw_line((cam.xy, point_xy), color, 1)
         if lm_name in md.landmarks:
@@ -1896,7 +1915,7 @@ def find_camera(
     for other_cam_name, lm_name in rays:
         color = get_color(lm_name)
         for c in (cam, get_camera(other_cam_name)):
-            point_xy = get_point(c.xyz, c.get_landmark_direction(lm_name), 10000)[:2]
+            point_xy = get_point(c.xyz, c.get_landmark_direction(lm_name), 20000)[:2]
             m.draw_line((c.xy, point_xy), color, 1)
     os.makedirs(os.path.dirname(basename), exist_ok=True)
     m.save(f"{basename} map.png", map_area)
@@ -1948,8 +1967,8 @@ def _find_camera(args):
                     best_deltas = deltas
                     best_values = cam.xyz, cam.ypr, cam.fov
 
-    if best_values is None:
-        raise RuntimeError("No camera found.")
+    if best_loss == float("inf"):
+        return best_loss, None, None
     xyz, ypr, fov = best_values
     cam.set_xyz(xyz).set_ypr(ypr).set_fov(fov)
     return best_loss, best_deltas, cam
@@ -2321,6 +2340,11 @@ def get_hfov(vfov, size):
 def get_vfov(hfov, size):
     ratio = size[0] / size[1]
     return np.degrees(2 * np.arctan(np.tan(np.radians(hfov) / 2) / ratio))
+
+def get_midpoint(point_a, point_b):
+    a = np.asarray(point_a, dtype=float)
+    b = np.asarray(point_b, dtype=float)
+    return (a + b) / 2.0
 
 def get_pixel(world_xyz, cam_xyz, q, fov, size):
     hfov, vfov = np.radians(fov[0]), np.radians(fov[1])
