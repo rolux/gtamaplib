@@ -1826,7 +1826,10 @@ def find_camera(
     z_limits, pitch_range, hfov_range,
     map_name, map_scale, map_area,
     projection_area,
-    basename
+    basename,
+    bearing_limits=None,
+    ray_pairs=None,
+    max_size_delta=1.05
 ):
     """
     Finds the optimal camera position and settings within a given map region,
@@ -1851,6 +1854,30 @@ def find_camera(
             other_cam.get_landmark_direction(lm_name)
         )))
     n_points = len(lm_names)
+    ray_stacks = []
+    if ray_pairs:
+        """
+        ray_stacks = ray_pairs
+        """
+        #"""
+        # FIXME: delete pixels later
+        for other_cam_name, lm_name_a, lm_name_b in ray_pairs:
+            other_cam = get_camera(other_cam_name)
+            center_name = f"{lm_name_a} + {lm_name_b}"
+            cam.landmark_pixels[center_name] = get_midpoint(
+                cam.landmark_pixels[lm_name_a],
+                cam.landmark_pixels[lm_name_b]
+            )
+            other_cam.landmark_pixels[center_name] = get_midpoint(
+                other_cam.landmark_pixels[lm_name_a],
+                other_cam.landmark_pixels[lm_name_b],
+            )
+            ray_stacks.append((
+                (center_name, (other_cam.xyz, other_cam.get_landmark_direction(center_name))),
+                (lm_name_a, (other_cam.xyz, other_cam.get_landmark_direction(lm_name_a))),
+                (lm_name_b, (other_cam.xyz, other_cam.get_landmark_direction(lm_name_b)))
+            ))
+        #"""
     (x_min, y_min), (x_max, y_max) = get_bounding_box(line)
     xys = [
         (x, y)
@@ -1864,10 +1891,10 @@ def find_camera(
     local_loss = []
     best_cam = None
 
-    pool_args = [
-        (cam, xy, z_limits, pitch_values, hfov_values, targets, n_points)
-        for xy in xys
-    ]
+    pool_args = [(
+        cam, xy, z_limits, bearing_limits, pitch_values, hfov_values,
+        targets, n_points, ray_stacks, max_size_delta
+    ) for xy in xys]
     with multiprocessing.Pool() as pool:
         for loss, deltas, cam_ in tqdm(
             pool.imap_unordered(_find_camera, pool_args),
@@ -1935,7 +1962,10 @@ def _find_camera(args):
     Camera search worker function
     """
 
-    cam, xy, z_limits, pitch_values, hfov_values, targets, n_points = args
+    (
+        cam, xy, z_limits, bearing_limits, pitch_values, hfov_values,
+        targets, n_points, ray_stacks, max_size_delta
+    ) = args
     cam.set_xyz((xy[0], xy[1], cam.z))
     n_targets = len(targets)
     best_loss = float("inf")
@@ -1949,6 +1979,33 @@ def _find_camera(args):
                 cam.calibrate_yaw_and_z(*targets[p])  # lm_name, point
                 if z_limits and not z_limits[0] <= cam.z <= z_limits[1]:
                     continue
+                if bearing_limits:
+                    pixel = (bearing_limits[2], cam.get_horizon())
+                    direction = cam.get_pixel_direction(pixel)
+                    bearing = get_angles_from_direction(direction)[0]
+                    if not bearing_limits[0] <= bearing <= bearing_limits[1]:
+                        continue
+                valid = True
+                for ray_stack in ray_stacks:
+                    center_name, other_center_ray = ray_stack[0]
+                    (lm_name_a, other_ray_a), (lm_name_b, other_ray_b), (DEBUG, other_cam_name) = ray_stack[1:]
+                    center_ray = (cam.xyz, cam.get_landmark_direction(center_name))
+                    center = intersect_ray_and_ray(center_ray, other_center_ray)[0]
+                    plane = (center, center_ray[1])
+                    other_plane = (center, other_center_ray[1])
+                    size = get_distance(
+                        intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_a)), plane),
+                        intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_b)), plane),
+                    )
+                    other_size = get_distance(
+                        intersect_ray_and_plane(other_ray_a, other_plane),
+                        intersect_ray_and_plane(other_ray_b, other_plane),
+                    )
+                    if not other_size / max_size_delta <= size <= other_size * max_size_delta:
+                        valid = False
+                        break
+                if not valid:
+                    continue
                 deltas = []
                 loss = 0
                 threshold = best_loss * n_targets
@@ -1956,7 +2013,7 @@ def _find_camera(args):
                     fn = intersect_ray_and_point if i < n_points else intersect_ray_and_ray
                     cam_ray = (cam.xyz, cam.get_landmark_direction(lm_name))
                     angle = fn(cam_ray, target)[-1]
-                    delta = angle * 60 # arcminutes
+                    delta = angle * 60  # arcminutes
                     deltas.append(delta)
                     loss += delta ** 2
                     if loss >= threshold:
@@ -2340,6 +2397,37 @@ def get_hfov(vfov, size):
 def get_vfov(hfov, size):
     ratio = size[0] / size[1]
     return np.degrees(2 * np.arctan(np.tan(np.radians(hfov) / 2) / ratio))
+
+def get_landmark_size(cam, midpoint, lm_name_a, lm_name_b):
+    plane = (midpoint, get_direction(cam.xyz, midpoint))
+    points = [
+        intersect_ray_and_plane(
+            (cam.xyz, cam.get_landmark_direction(lm_name)),
+            plane
+        )
+        for lm_name in (lm_name_a, lm_name_b)
+    ]
+    return get_distance(*points)
+
+def get_landmark_sizes(cam_a, cam_b, lm_name_a, lm_name_b):
+    lm_name_midpoint = f"{lm_name_a} + {lm_name_b}"
+    cam_a.landmark_pixels[lm_name_midpoint] = get_midpoint(
+        cam_a.landmark_pixels[lm_name_a],
+        cam_a.landmark_pixels[lm_name_b]
+    )
+    cam_b.landmark_pixels[lm_name_midpoint] = get_midpoint(
+        cam_b.landmark_pixels[lm_name_a],
+        cam_b.landmark_pixels[lm_name_b]
+    )
+    midpoint = intersect_ray_and_ray(
+        (cam_a.xyz, cam_a.get_landmark_direction(lm_name_midpoint)),
+        (cam_b.xyz, cam_b.get_landmark_direction(lm_name_midpoint))
+    )[0]
+    size_a = get_landmark_size(cam_a, midpoint, lm_name_a, lm_name_b)
+    size_b = get_landmark_size(cam_b, midpoint, lm_name_a, lm_name_b)
+    # del cam_a.landmark_pixels[lm_name_midpoint]
+    # del cam_b.landmark_pixels[lm_name_midpoint]
+    return size_a, size_b
 
 def get_midpoint(point_a, point_b):
     a = np.asarray(point_a, dtype=float)
