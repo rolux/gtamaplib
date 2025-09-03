@@ -38,7 +38,10 @@ cameras = {
     "[L1/15] Park": ((2009.900, 454.900, 3.300), (2010.300, 452.400, 3.700), (0.000, 0.000, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/15] Bar": ((2092.800, 1153.200, 6.000), (2095.400, 1153.500, 6.400), (87.802, 0.000, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/15] Yard": ((2092.800, 1153.200, 6.000), (2080.100, 1158.900, 8.100), (267.300, -20.600, 0.000), (None, 45.000), (1920, 1080)),
-    "[L1/15] Glitch (A)": ((1410.700, 1371.600, 2.900), (1411.600, 1379.700, -58.500), (29.000, -14.397, 0.000), (None, 49.600), (1920, 1080)),
+    "[L1/15] Hedge (B)": ((1409.600, 1405.000, 0.8), (1411.300, 1403.400, 1.200), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080)),
+    "[L1/15] Hedge (C)": ((1409.600, 1405.000, 0.5), (1411.300, 1403.400, 0.800), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080)),
+    "[L1/15] Hedge (D)": ((1409.600, 1405.000, -0.700), (1411.200, 1403.500, -0.300), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080)),
+    "[L1/15] Glitch (A)": ((1410.700, 1371.600, 2.900), (1411.600, 1379.700, -58.500), (28.300, -14.397, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/16] Boat (Jason)": ((-3852.600, -344.300, 6.000), (-3853.900, -344.000, 7.300), (240.000, -27.000, 0.000), (None, 51.400), (1920, 1020)),
     "[L1/17] Hotel (E)": ((1955.600, 1566.800, 4.600), (1951.500, 1565.300, 5.700), (284.767, 0.000, 0.000), (None, 49.600), (1920, 1080)),
     "[L1/17] Hotel (W)": ((1954.400, 1559.600, 4.600), (1957.500, 1559.700, 5.500), (84.000, -8.250, 0.000), (None, 49.600), (1920, 1080)),
@@ -51,7 +54,7 @@ cameras = {
     "[L1/22] Metro (SE) (B)": ((-1555.100, -308.500, 19.800), (-1555.200, -308.100, 20.700), (185.000, -10.000, 0.000), (None, 49.600), (1920, 1020)),
     "[L1/25] Parking Lot": ((-1573.800, -1642.400, 3.800), (-1574.700, -1644.500, 5.6), (316.500, -33.500, 0.000), (None, 49.6), (1792, 868)),
     "[L1/26] Loading Zone near Prison (SW)": ((-4727.000, 1852.200, 11.500), (-4725.300, 1853.800, 12.200), (122.973, -5.000, 0.000), (None, 49.600), (1920, 1020)),
-    "[L1/27] Highway (N)": ((-584.000, 1601.300, 12.200), (-587.400, 1596.000, 13.400), (324.500, -9.000, 0.000), (None, 51.300), (1920, 1080)),
+    "[L1/27] Highway (N)": ((-584.000, 1601.300, 12.200), (-587.400, 1596.000, 13.400), (324.500, -7.000, 0.000), (None, 51.300), (1920, 1080)),
     "[L1/27] Highway (NE)": ((-503.300, 1716.900, 13.300), (-506.700, 1712.000, 15.400), (326.000, -16.300, 0.000), (None, 51.400), (1920, 1080)),
     "[L1/29] Welcome Center (E)": ((2016.000, 588.900, 3.200), (2013.800, 588.100, 4.500), (282.000, -22.034, 0.000), (None, 50.800), (1920, 1080)),
     "[L1/29] Welcome Center (W)": ((2023.900, 587.400, 3.200), (2026.300, 586.900, 4.700), (71.823, -26.284, 0.000), (None, 50.800), (1920, 1080)),
@@ -85,15 +88,16 @@ cameras = {
     "[T2/80] Skyline": (None, (750.000, 1350.000, 10.000), (135.000, -4.000, 0.000), (60.000, None), (3840, 1728)),
     "[S2/39] Vice City 03 (Basketball)": (None, (1950.000, 1650.000, 30.000), (111.000, -8.000, 0.000), (55.000, None), (3840, 2160)),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160)),
-    "[S2/56] Ambrosia 01 (Bikers)": (None, (-3900.000, 3900.000, 10.000), (45.000, 0.000, 0.000), (60.000, None), (3840, 2160)),
+    "[S2/56] Ambrosia 01 (Bikers)": (None, (-2900.000, 3800.000, 5.000), (45.000, 0.000, 0.000), (60.000, None), (3840, 2160)),
     # "[S2/57] Ambrosia 02 (Panorama)": (None, (-3915.000, 4997.000, 50.000), (178.354, -2.750, 0.000), (40.300, None), (3840, 2160)),
-    "[S2/57] Ambrosia 02 (Panorama)": (None, (-2462.000, 5670.000, 72.368), (162.333, -3.600, 0.000), (48.000, 28.120), (3840, 2160)),
-    "[S2/59] Ambrosia 04 (Fires)": (None, (-3443.000, 3394.000, 20.000), (109.586, -2.250, 0.000), (81.000, None), (3840, 2160)),
+    "[S2/57] Ambrosia 02 (Panorama)": (None, (-2468.000, 4953.000, 79.677), (159.606, -4.300, 0.000), (55.100, 32.708), (3840, 2160)),
+    #"[S2/59] Ambrosia 04 (Fires)": (None, (-3443.000, 3394.000, 20.000), (109.586, -2.250, 0.000), (81.000, None), (3840, 2160)),
+    "[S2/59] Ambrosia 04 (Fires)": (None, (-1618.000, 3304.000, 59.525), (105.107, -3.000, 0.000), (61.200, 36.801), (3840, 2160)),
     "[S2/62] Grassrivers 02 (Watson Bay)": (None, (-5218.000, -3355.000, 27.233), (282.302, -6.000, 0.000), (49.600, 29.139), (3840, 2160)),
     "[S2/71] Vice City Postcard": (None, (220.000, 1730.000, 17.208), (154.114, 3.600, 0.000), (65.000, 45.148), (2458, 1604)),
     "[S2/72] Leonida Keys Postcard (X)": (None, (-3813.000, -6798.000, 149.816), (300.041, -12.000, 0.000), (47.000, 32.337), (2563, 1709)),
     "[S2/73] Port Gellhorn Postcard (X)": (None, (-6550.000, 3550.000, 25.000), (56.000, -0.300, 0.000), (56.000, None), (3240, 2160)),
-    "[S2/74] Ambrosia Postcard (X)": (None, (-3810.000, 3785.000, 25.000), (162.678, -1.000, 0.000), (56.000, None), (3308, 2160)),
+    "[S2/74] Ambrosia Postcard (X)": (None, (-2680.456, 3901.845, 58.690), (150.157, -2.000, 0.000), (52.000, 35.330), (3308, 2160)),
 }
 
 cameras = {
@@ -278,6 +282,9 @@ pixels = {
     ],
     "[L1/15] Bar": [
         ((779.5, 702), "Player"),
+    ],
+    "[L1/15] Hedge (C)": [
+        ((215.5, 509), "Hollywood Water Tower"),
     ],
     "[L1/15] Glitch (A)": [
         ((243, 121.5), "112 NE 41st St"),
@@ -1008,11 +1015,12 @@ pixels = {
         ((474, 791), "FAA Miami ATCT (MIA)"),
         ((479, 817), "MIA North Terminal Tower"),
         ((535, 854), "Wheelabrator South Broward (W)"),
-        ((535, 863), "Wheelabrator South Broward (3)"),
-        ((535, 863), "Wheelabrator South Broward (3T)"),
+        #((535, 863), "Wheelabrator South Broward (3)"),
+        #((535, 862.5), "Wheelabrator South Broward (3T)"),
         ((535, 866), "Wheelabrator South Broward (3B)"),
-        ((535, 872), "Wheelabrator South Broward (2)"),
-        ((535, 881), "Wheelabrator South Broward (1)"),
+        #((535, 870.5), "Wheelabrator South Broward (2T)"),
+        #((535, 872), "Wheelabrator South Broward (2)"),
+        #((535, 881), "Wheelabrator South Broward (1)"),
         ((577, 838), "WDNA FM (B)"),
         ((774, 1077), "Lake Leonida (R)"),
         ((794, 1060.5), "Lake Leonida (Q)"),
@@ -1021,8 +1029,11 @@ pixels = {
         ((1033, 1085), "Lake Leonida (P)"),
         ((1241, 1118), "Lake Leonida (N)"),
         ((1299, 1116), "Lake Leonida (M)"),
+        ((1306.5, 865), "USSM Smokestack (1)"),
+        ((1321, 891), "USSM Smokestack (2)"),
         ((1324.5, 864), "1500 Sonora Ave (Silo) (L)"),
         ((1343, 864), "1500 Sonora Ave (Silo)"),
+        ((1343, 887.5), "1500 Sonora Ave (Silo) (N)"),
         ((1345, 1125), "Lake Leonida (L)"),
         ((1361.5, 864), "1500 Sonora Ave (Silo) (R)"),
         #((1388, 819), "Homestead Water Tower"),
@@ -1064,12 +1075,13 @@ pixels = {
         ((3453, 1084.5), "Hendry County Motorsports Park"),
     ],
     "[S2/59] Ambrosia 04 (Fires)": [
-        ((11, 1007), "Wheelabrator South Broward (3)"),
-        ((12, 1028.5), "Wheelabrator South Broward (2)"),
-        ((13, 1050), "Wheelabrator South Broward (1)"),
-        ((106, 966), "Wheelabrator South Broward (3T)"),
-        ((106, 973), "Wheelabrator South Broward (3B)"),
+        #((11, 1007), "Wheelabrator South Broward (3)"),
+        #((12, 1028.5), "Wheelabrator South Broward (2)"),
+        #((13, 1050), "Wheelabrator South Broward (1)"),
+        #((106, 966), "Wheelabrator South Broward (3T)"),
+        #((106, 980.5), "Wheelabrator South Broward (2T)"),
         ((108, 947), "Wheelabrator South Broward (W)"),
+        ((108, 973), "Wheelabrator South Broward (3B)"),
         ((1848, 465), "Radio Tower (Ambrosia)"),
         ((2038.5, 969), "USSM Smokestack (3)"),
         ((2148, 900), "Sebring Water Tower (T)"),
@@ -1088,6 +1100,30 @@ pixels = {
         ((3688, 967), "1500 Sonora Ave (Tank)"),
         ((3751, 968), "1500 Sonora Ave (Tank) (R)"),
         ((3729, 874), "Sunshine Skyway Bridge (N)"),
+        ((119, 1192.5), "Road C (2)"),
+        ((365, 1075), "Car C (2)"),
+        ((371, 1075), "Car C (1)"),
+        ((856, 1480), "Canal A (1)"),
+        ((1122, 1210), "Road C (1)"),
+        ((1380, 1334), "Canal A (2)"),
+        ((1800, 1691), "Road A (2)"),
+        ((1896, 1229), "Road B (2)"),
+        ((2195, 1695), "Path C (1)"),
+        ((2272, 1217), "Canal B (2)"),
+        ((2500, 1305), "Path C (2)"),
+        ((2600, 1137), "Canal C (1)"),
+        ((2650, 1085), "Canal C (2)"),
+        ((2684, 1712), "Path B (1)"),
+        ((2760, 1260), "Path B (2)"),
+        ((2801, 1794), "Car A (1)"),
+        ((2901, 1822), "Car A (2)"),
+        ((2975, 1262), "Path A (2)"),
+        ((2985, 1237), "Canal B (1)"),
+        ((2988, 1248), "Car B (2)"),
+        ((3027, 1248), "Car B (1)"),
+        ((3220, 1764), "Path A (1)"),
+        ((3701, 1242), "Road B (1)"),
+        ((3729, 1828), "Road A (1)"),
     ],
     "[S2/62] Grassrivers 02 (Watson Bay)": [
         ((57.5, 594.5), "Unknown Billboard #1"),
@@ -1294,10 +1330,12 @@ pixels = {
         ((379, 1109), "USSM Smokestack (2)"),
         ((412, 929), "1500 Sonora Ave (Silo) (L)"),
         ((584, 929), "1500 Sonora Ave (Silo)"),
+        ((606, 1136), "1500 Sonora Ave (Silo) (N)"),
         ((756, 929), "1500 Sonora Ave (Silo) (R)"),
         ((818, 1059), "USSM Smokestack (3)"),
         ((1031.5, 913), "Radio Mast (Ambrosia)"),
         ((1493, 786), "US Sugar Mill (Factory)"),
+        ((1493, 923), "US Sugar Mill (Factory) (R)"),
         ((1544, 699), "USSM Smokestack (4)"),
         ((1682, 844), "USSM Smokestack (5)"),
         ((1728, 814.5), "USSM Smokestack (6)"),
@@ -1646,8 +1684,32 @@ landmarks = {
     "Water Tower near Prison": (-5154.754, 1557.230, 95.382),  # d=0.087 via Ambrosia 02 (Panorama) & Loading Zone near Prison (SW)
     "WDNA FM": (-2517.727, -2295.470, 407.215),  # d=123.048 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Wells Fargo Center (N)": (-642.090, -403.002, 187.267),  # d=2.755 via Vice Beach (B) & Prison
-    "Wheelabrator South Broward": (-2396.145, 2414.527, 101.921),  # d=0.130 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
+    #"Wheelabrator South Broward": (-2396.145, 2414.527, 101.921),  # d=0.130 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
+    "Wheelabrator South Broward": (-2397.264, 2407.898, 96.606),  # guess
+    "Wheelabrator South Broward (W)": (-2456.790, 2499.905, 47.924),  # guess
     "White Billboard (Hamlet)": (-2593.855, -3818.706, 31.675),  # d=10.156 via Police Chase (A) & Leonida Keys 01 (Airplane) (X)
+
+    "MIA North Terminal Tower": (-2378.525, -545.996, 60.463),  # d=0.494 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+    "Sebring Water Tower (T)": (-3978.645, 2841.407, 68.684),  # d=2.264 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "1500 Sonora Ave (Silo)": (-2707.083, 3778.412, 60.060),  # d=0.461 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "1500 Sonora Ave (Tank)": (-2948.524, 3622.455, 39.180),  # d=0.950 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    #"Sunshine Skyway Bridge (N)": (-6677.716, 4563.691, 109.021),  # d=0.067 via Diner (W) & Ambrosia 04 (Fires)
+    "US Sugar Mill (Factory)": (-3001.907, 3285.176, 98.457),  # d=2.177 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "USSM Smokestack (1)": (-2707.831, 3713.641, 58.713),  # d=1.451 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (2)": (-2707.688, 3738.786, 50.503),  # d=1.610 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (3)": (-2939.384, 2998.734, 34.671),  # d=2.314 via Ambrosia 04 (Fires) & Ambrosia Postcard (X)
+    "USSM Smokestack (4)": (-2895.242, 3504.748, 92.597),  # d=3.629 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "USSM Smokestack (5)": (-2929.469, 3479.736, 75.414),  # d=1.475 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "USSM Smokestack (6)": (-2935.805, 3481.890, 78.955),  # d=2.900 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "USSM Smokestack (7)": (-2960.374, 3482.250, 91.091),  # d=3.829 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "USSM Smokestack (8)": (-3007.357, 3550.789, 46.244),  # d=1.888 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "USSM Smokestack (9)": (-3013.234, 3553.082, 54.794),  # d=0.538 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "USSM Smokestack (10)": (-2925.832, 3696.007, 58.243),  # d=0.233 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (11)": (-2928.326, 3701.833, 48.201),  # d=0.605 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "Water Tower near Prison": (-5135.482, 1570.520, 91.690),  # d=0.101 via Loading Zone near Prison (SW) & Ambrosia 02 (Panorama)
+    "Wheelabrator South Broward": (-2404.810, 2370.631, 101.882),  # d=9.406 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+    "Wheelabrator South Broward (W)": (-2459.469, 2483.825, 53.092),  # d=5.463 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+
     #### AIWE MAP ####
     "1703 E 5th St (Shack) (SE)": (-6264.218, 3479.946, 10.000),  # via AI World Editor Map (4K)
     "1703 E 5th St (Shack) (SW)": (-6275.983, 3479.211, 10.000),  # via AI World Editor Map (4K)
@@ -1749,5 +1811,5 @@ map_sections = {
     "Port Gellhorn": (-9000, 1000, -5000, 6000),
     "Leonida Keys": (-8000, -8000, -1000, -4000),
     "Grassrivers": (-6000, -5000, 0, -2000),
-    "Ambrosia": (-5000, 1000, -1000, 7000),
+    "Ambrosia": (-5000, 1000, 0, 7000),
 }
