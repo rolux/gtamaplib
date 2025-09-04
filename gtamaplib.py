@@ -1988,7 +1988,7 @@ def _find_camera(args):
                 valid = True
                 for ray_stack in ray_stacks:
                     center_name, other_center_ray = ray_stack[0]
-                    (lm_name_a, other_ray_a), (lm_name_b, other_ray_b), (DEBUG, other_cam_name) = ray_stack[1:]
+                    (lm_name_a, other_ray_a), (lm_name_b, other_ray_b) = ray_stack[1:]
                     center_ray = (cam.xyz, cam.get_landmark_direction(center_name))
                     center = intersect_ray_and_ray(center_ray, other_center_ray)[0]
                     plane = (center, center_ray[1])
