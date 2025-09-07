@@ -856,7 +856,7 @@ class Map:
             x, y = xy
             font = ImageFont.truetype(f"{DIRNAME}/fonts/Menlo-Regular.ttf", r * 1.6)
             w, h = get_textsize(text, font)
-            self.draw.text((x - w * 0.4, y - h * 0.7), text, fill=outline, font=font)
+            self.draw.text((x - w * 0.45, y - h * 0.7), text, fill=outline, font=font)
         return self
 
     def draw_landmark(self, lm_name, r=10):
@@ -2592,11 +2592,12 @@ def draw_box(text, height, color, text_color):
     height = int(round(height))
     font = ImageFont.truetype(f"{DIRNAME}/fonts/Menlo-Regular.ttf", height * 0.75)
     w, h = get_textsize(text, font)
-    margin = (height - h) / 2
-    width = int(w + 2 * margin)
+    margin_h = (height - h) / 2
+    margin_w = margin_h * 1.5
+    width = int(w + 2 * margin_w)
     image = Image.new("RGB", (width, height), color)
     draw = ImageDraw.Draw(image)
-    draw.text((margin, margin // 2), text, fill=text_color, font=font)
+    draw.text((margin_w, margin_h // 2), text, fill=text_color, font=font)
     return image
 
 def get_color(name):
@@ -2617,8 +2618,9 @@ def get_rgb(hue, s=1.0, v=1.0):
 def get_textsize(text, font):
     image = Image.new("RGB", (1, 1))
     draw = ImageDraw.Draw(image)
-    l, t, r, b = draw.textbbox((0, 0), text, font=font)
-    return r - l, b - t
+    w = draw.textlength(text, font)
+    l, t, r, b = draw.textbbox((0, 0), text, font)
+    return w, b - t
 
 def normalize_name(name):
     for _ in range(3):
