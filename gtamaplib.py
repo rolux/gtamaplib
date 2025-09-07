@@ -56,7 +56,7 @@ class Camera:
         ]) + ")") if self.player else "None"
         d = 6 if self.hfov < 1 else 3
         return (
-            f"<Camera {self.id} {self.name}: {player}, "
+            f"<Camera [{self.id}] {self.name}: {player}, "
             f"({self.x:.3f}, {self.y:.3f}, {self.z:.3f}), "
             f"({self.yaw:.3f}, {self.pitch:.3f}, {self.roll:.3f}), "
             f"({self.hfov:.{d}f}, {self.vfov:.{d}f}), ({self.w}, {self.h})>"
@@ -199,7 +199,11 @@ class Camera:
             int(round(x * self.scale + self.offset - box.size[0] / 2)),
             int(round((y - length) * self.scale - box.size[1]))
         )
-        self.image.paste(box, xy)
+        try:
+            self.image.paste(box, xy)
+        except OverflowError:
+            print("#### OverflowError ####")
+            pass
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
@@ -452,14 +456,33 @@ class Camera:
         text = (
             f"XYZ ({self.x:.3f}, {self.y:.3f}, {self.z:.3f}) "
             f"YPR ({self.yaw:.3f}, {self.pitch:.3f}, {self.roll:.3f}) "
-            f"FOV ({self.hfov:.{d}f}, {self.vfov:.{d}f}) {self.id} {self.name}"
+            f"FOV ({self.hfov:.{d}f}, {self.vfov:.{d}f}) [{self.id}] {self.name}"
         )
         height = int(32 * self.scale)
         box = draw_box(text, height, (255, 255, 255), self.color)
         self.image.paste(box, (self.offset, self.image_h - height))
         return self
 
-    def render_cameras(self, width=1):
+    def render_camera(self, cam, d=25, width=1):
+        if not hasattr(self, "image"): self.open()
+        if type(cam) is str: cam = get_camera(cam)
+        self.render_line((cam.xyz, (cam.x, cam.y, 0)), cam.color, width // 2)
+        corners = (
+            get_point(cam.xyz, cam.get_pixel_direction((0, 0)), d),
+            get_point(cam.xyz, cam.get_pixel_direction((cam.w, 0)), d),
+            get_point(cam.xyz, cam.get_pixel_direction((cam.w, cam.h)), d),
+            get_point(cam.xyz, cam.get_pixel_direction((0, cam.h)), d)
+        )
+        for i, corner in enumerate(corners):
+            self.render_line((cam.xyz, corner), cam.color, width)
+            self.render_line((corner, corners[(i + 1) % 4]), cam.color, width)
+        xy = self.get_pixel(cam.xyz)
+        if xy is not None:
+            dist = get_distance(self.xyz, cam.xyz)
+            self.draw_label(xy, 10, f"{cam.name} {dist:.0f} m", (255, 255, 255), cam.color)
+        return self
+
+    def render_cameras(self, d=25, width=1):
         """
         Renders other cameras at their world positions
         """
@@ -468,23 +491,9 @@ class Camera:
             get_camera(cam_name) for cam_name in md.cameras
             if normalize_name(cam_name) != normalize_name(self.name)
         ]
-        depth = 25
         for cam in sorted(cameras, key=lambda cam: -get_distance(self.xyz, cam.xyz)):
             if cam.hfov < 1: continue
-            self.render_line((cam.xyz, (cam.x, cam.y, 0)), cam.color, width // 2)
-            corners = (
-                get_point(cam.xyz, cam.get_pixel_direction((0, 0)), depth),
-                get_point(cam.xyz, cam.get_pixel_direction((cam.w, 0)), depth),
-                get_point(cam.xyz, cam.get_pixel_direction((cam.w, cam.h)), depth),
-                get_point(cam.xyz, cam.get_pixel_direction((0, cam.h)), depth)
-            )
-            for i, corner in enumerate(corners):
-                self.render_line((cam.xyz, corner), cam.color, width)
-                self.render_line((corner, corners[(i + 1) % 4]), cam.color, width)
-            xy = self.get_pixel(cam.xyz)
-            if xy is not None:
-                dist = get_distance(self.xyz, cam.xyz)
-                self.draw_label(xy, 10, f"{cam.name} {dist:.0f} m", (255, 255, 255), cam.color)
+            self.render_camera(cam, d=d, width=width)
         return self
 
     def render_distance_circles(self, width=0.5):
@@ -809,16 +818,16 @@ class Map:
         self.draw_landmarks()
         return self        
 
-    def draw_camera(self, cam_name, r=8, d=100, _no_marker=False):
+    def draw_camera(self, cam, r=8, d=100, no_marker=False):
         """
         Draws a camera symbol
         """
         if not hasattr(self, "image"): self.open()
-        cam = get_camera(cam_name)
+        if type(cam) is str: cam = get_camera(cam)
         for x in (0, cam.w):
             target_xy = get_point(cam.xyz, cam.get_pixel_direction((x, cam.h / 2)), d)[:2]
             self.draw_line((cam.xy, target_xy), (255, 255, 255), 1)
-        if not _no_marker:
+        if not no_marker:
             self.draw_circle(cam.xy, r, (255, 255, 255), cam.color, 1, cam.name[0])
         return self
 
