@@ -1937,7 +1937,7 @@ def find_camera(
             (x + step / 2, y + step + 2),
             rgb, None, 0
         )
-    m.draw_camera(cam_name, d=10000, _no_marker=True)
+    m.draw_camera(cam_name, d=10000, no_marker=True)
     other_cam_names = list(set(other_cam_name for other_cam_name, lm_name in rays))
     for other_cam_name in other_cam_names:
         m.draw_camera(other_cam_name, d=20000)
