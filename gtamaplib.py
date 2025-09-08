@@ -641,9 +641,10 @@ class Camera:
         for deg in np.arange(start, stop, step):
             rad = np.radians(deg + 90)
             xy = (self.x + np.cos(rad) * 10, self.y + np.sin(rad) * 10)
+            # FIXME: this doesn't work for extreme pitch
             line = (
-                (xy[0], xy[1], self.z + 10),
-                (xy[0], xy[1], self.z - 10)
+                (xy[0], xy[1], self.z - 10),
+                (xy[0], xy[1], self.z + 10)
             )
             self.render_line(line, (255, 255, 0), width)
         return self
