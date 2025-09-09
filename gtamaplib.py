@@ -34,7 +34,7 @@ class Camera:
 
     def __init__(
         self, id, name, player,
-        xyz, ypr, fov, size,
+        xyz, ypr, fov, size, source,
         pixels=None, lines=None
     ):
         self.id = id
@@ -775,6 +775,7 @@ def get_camera(name):
         ypr=cam["ypr"],
         fov=cam["fov"],
         size=cam["size"],
+        source=cam["source"],
         pixels=md.pixels.get(name),
         lines=md.lines.get(name)
     )
