@@ -45,6 +45,7 @@ class Camera:
         self.set_ypr(ypr)
         self.set_size(size)
         self.set_fov(fov)
+        self.source = source
         self.landmark_pixels = pixels or {}
         self.lines = lines or [[], []]
         if self.name not in md.cameras:
