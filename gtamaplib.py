@@ -60,7 +60,8 @@ class Camera:
             f"<Camera [{self.id}] {self.name}: {player}, "
             f"({self.x:.3f}, {self.y:.3f}, {self.z:.3f}), "
             f"({self.yaw:.3f}, {self.pitch:.3f}, {self.roll:.3f}), "
-            f"({self.hfov:.{d}f}, {self.vfov:.{d}f}), ({self.w}, {self.h})>"
+            f"({self.hfov:.{d}f}, {self.vfov:.{d}f}), ({self.w}, {self.h}), "
+            f'"{self.source}">'
         )
 
     def _get_pitch_from_hlines(self):
@@ -230,7 +231,8 @@ class Camera:
         """
         data = [
             self.id, self.name, self.player,
-            self.xyz, self.ypr, self.fov, self.size,
+            self.xyz, self.ypr, self.fov,
+            self.size, self.source,
             self.landmark_pixels, self.lines,
             [
                 (lm_name, md.landmarks[lm_name])
@@ -427,7 +429,8 @@ class Camera:
             "xyz": self.xyz,
             "ypr": self.ypr,
             "fov": self.fov,
-            "size": self.size
+            "size": self.size,
+            "source": self.source
         }
         md.pixels[self.name] = self.landmark_pixels
         return self
