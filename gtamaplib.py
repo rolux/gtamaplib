@@ -319,8 +319,6 @@ class Camera:
         """
         Returns the point at which a ray through a given pixel intersects the ground plane
         """
-        if pixel[1] <= self.get_horizon():
-            raise ValueError("Pixel must be below the horizon")
         direction = self.get_pixel_direction(pixel)
         t  = -self.z / direction[2]
         return (self.x + t * direction[0], self.y + t * direction[1], 0)
@@ -852,7 +850,7 @@ class Map:
 
     def draw_circle(self, xy, r, fill=(255, 255, 255), outline=(0, 0, 0), width=1, text=None):
         """
-        Draws a circle at the given image coordinates
+        Draws a circle at the given world coordinates
         """
         if not hasattr(self, "image"): self.open()
         xy = self.get_map_xy(xy)
@@ -863,6 +861,22 @@ class Map:
             font = ImageFont.truetype(f"{DIRNAME}/fonts/Menlo-Regular.ttf", r * 1.6)
             w, h = get_textsize(text, font)
             self.draw.text((x - w * 0.45, y - h * 0.7), text, fill=outline, font=font)
+        return self
+
+    def draw_label(self, xy, fill=(255, 255, 255), outline=(0, 0, 0), width=1, height=16, text=None):
+        """
+        Draws a label at the given world coordinates
+        """
+        # text, height, color, text_color
+        if not hasattr(self, "image"): self.open()
+        box = draw_box(text, height, fill, outline)
+        if width > 0:
+            image = Image.new("RGB", (box.size[0] + 2 * width, box.size[1] + 2 * width), outline)
+            image.paste(box, (width, width))
+            box = image
+        x, y = self.get_map_xy(xy)
+        x, y = int(x - box.size[0] / 2), int(y - box.size[1] / 2)
+        self.image.paste(box, (x, y))
         return self
 
     def draw_landmark(self, lm_name, r=10):
@@ -911,7 +925,7 @@ class Map:
         if not hasattr(self, "image"): self.open()
         if self.cropped:
             sw = self.cropped[0], self.cropped[1]
-            ne = self.cropped[2], self.cropped[2]
+            ne = self.cropped[2], self.cropped[3]
         else:
             sw = self.get_world_xy((0, image.size[1]))
             ne = self.get_world_xy((image.size[0], 0))
