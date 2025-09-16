@@ -64,12 +64,41 @@ class Camera:
             f'"{self.source}">'
         )
 
+    def _get_fov_from_lines(self):
+        """
+        Requires orthogonal horizontal and vertical lines (for example, along the same cube)
+        """
+        # need at least two line families
+        if not self.lines[0] or not self.lines[1]: return None
+        hvp = self._get_vp_from_lines(self.lines[0])
+        vvp = self._get_vp_from_lines(self.lines[1])
+        if hvp is None or vvp is None:
+            return None
+        x1, y1 = hvp
+        x2, y2 = vvp
+        cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
+        f2 = -((x1 - cx) * (x2 - cx) + (y1 - cy) * (y2 - cy))
+        if not np.isfinite(f2) or f2 <= 0:
+            return None
+        f = np.sqrt(f2)
+        hfov = 2.0 * np.degrees(np.arctan(self.w / (2.0 * f)))
+        vfov = 2.0 * np.degrees(np.arctan(self.h / (2.0 * f)))
+        return hfov, vfov
+
     def _get_pitch_from_hlines(self):
         if not self.lines[0]: return None
-        vpx, vpy = self._get_vp_from_lines(self.lines[0])
-        ndc_y = 1 - 2 * ((vpy + 0.5) / self.h)
-        tan_v = np.tan(np.radians(self.vfov / 2))
-        return np.degrees(-np.arctan(ndc_y * tan_v))
+        hvp = self._get_vp_from_lines(self.lines[0])
+        if hvp is None: return None
+        cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
+        r = np.radians(self.roll)
+        c, s = np.cos(r), np.sin(r)
+        dx, dy = hvp[0] - cx, hvp[1] - cy
+        y_unrolled =  s * dx + c * dy + cy
+        ndc_y = 1.0 - 2.0 * ((y_unrolled + 0.5) / self.h)
+        tan_v = np.tan(np.radians(self.vfov / 2.0))
+        pitch = -np.degrees(np.arctan(ndc_y * tan_v))
+        return float(pitch)
+        #"""
 
     def _get_pitch_from_vlines(self):
         if not self.lines[1]: return None
@@ -81,7 +110,7 @@ class Camera:
                 s * dx + c * dy + cy
             )
         cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
-        r = -np.radians(self.roll)
+        r = np.radians(self.roll)
         c, s = np.cos(r), np.sin(r)
         if len(self.lines[1]) == 1:
             a, b = self.lines[1][0]
@@ -718,7 +747,7 @@ class Camera:
         self.x, self.y, self.z = self.xyz
         return self
 
-    def test_lines(self):
+    def test_lines(self, test_fov=False):
         """
         Test if horizontal and vertical lines agree with pitch
         """
@@ -740,6 +769,13 @@ class Camera:
             else:
                 text = ("line suggests", "lines suggest")[len(self.lines[1]) > 1]
                 print(f"but vertical {text} {pitch_v:.3f}")
+        if test_fov:
+            hfov, vfov = self._get_fov_from_lines()
+            print(f"{self.name}: FOV is ({self.hfov:.3f}, {self.vfov:.3f}), ", end="")
+            if f"{self.hfov:.3f}" == f"{hfov:.3f}":
+                print("lines agree")
+            else:
+                print(f"lines suggest ({hfov:.3f}, {vfov:.3f})")
         return self
 
     def test_player(self):
@@ -1425,7 +1461,7 @@ class FourSeasons(Landmark):
                 if floor == top: continue
                 if hidden != 0:  # from northeast
                     cam.render_line((ne, self._get_point_at_floor(ne, floor + 1)), self.color, thin)
-                if hidden != 1:  # ftom northwest
+                if hidden != 1:  # from northwest
                     cam.render_line((nw, self._get_point_at_floor(nw, floor + 1)), self.color, thin)
                 if hidden not in (1, 2):  # from west
                     cam.render_line((wo, self._get_point_at_floor(wo, floor + 1)), self.color, thin)
