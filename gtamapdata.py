@@ -101,8 +101,9 @@ cameras = {
     "[L1/41] Grassrivers Sign": ((-1132.800, 383.500, 12.600), (-1133.1, 390.2, 4.700), (67.900, -28.750, 0.000), (60.000, None), (1920, 1080), "2022-08-29 12-44-36 [?]"),
     "[L1/42] Tennis Court (SW)": None,
     "[L1/42] Tennis Court (N)": None,
-    "[L1/42] Tennis Court (NE)": None,
-    "[L1/42] Tennis Court (SE)": ((-315.400, 1174.200, 3.500), (-317.232, 1174.859, 5.021), (258.590, -9.921, 0.009), (None, 37.600), (1824, 1080), "2022-09-01 14-37-21 [?]"),
+    "[L1/42] Tennis Court (NE)": ((-315.400, 1174.200, 3.500), (-315.691, 1172.236, 4.958), (0.366, -8.063, -0.011), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [447]"),
+    "[L1/42] Tennis Court (E)": None,
+    "[L1/42] Tennis Court (SE)": ((-315.400, 1174.200, 3.500), (-317.232, 1174.859, 5.021), (258.590, -9.921, 0.009), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [?]"),
     "[L1/43] Pool": ((-5325.300, 3473.200, 66.900), (-5327.700, 3476.600, 67.900), (208.500, -8.000, 0.000), (None, 49.600), (1920, 1080), "2022-09-06 17-13-34 [?]"),
     "[L1/44] Tennis Stadium (4K)": ((-152.600, -1748.900, 36.300), (-155.600, -1748.600, 36.300), (84.936, -0.100, 0.000), (None, 45.000), (3840, 2160), "2022-09-07 13-04-13 [?]"),
     "[L1/48] Hangar (A)": ((-2630.900, -116.800, 4.300), (-2631.700, -113.900, 4.600), (313.300, 15.400, 0.000), (None, 50.900), (1920, 1080), "2022-09-13 17-16-42 [?]"),
@@ -139,8 +140,8 @@ cameras = {
     "[T1/25] Donuts": (None, (-710.000, 1250.000, 40.000), (315.000, -40.000, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [1396]"),
     "[T1/26] Dancing": (None, (-695.000, 1260.000, 5.000), (230.000, 20.000, 0.000), (30.000, None), (3840, 2160), "Trailer 1 [1426]"),
     "[T1/27] Gas Station (Alligator)": (None, (-5300, 3580, 69.000), (270.000, -17.500, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1427]"),
-    "[T1/29] Gas Station (Chase) (SE)": (None, (-1000.000, 2500.000, 5.000), (222.000, 3.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1498]"),
-    "[T1/29] Gas Station (Chase) (S)": (None, (-1000.000, 2500.000, 5.000), (210.000, 3.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1529]"),
+    "[T1/29] Gas Station (Chase) (SE)": (None, (-1000.000, 3000.000, 5.000), (218.000, 4.948, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1498]"),
+    "[T1/29] Gas Station (Chase) (S)": (None, (-1000.000, 3000.000, 5.000), (207.500, 5.313, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1529]"),
     "[T1/30] Interchange": (None, (-920.000, 1000.000, 15.000), (171.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1535]"),
     "[T1/31] Green Pickup Truck (A)": None,
     "[T1/31] Green Pickup Truck (B)": None,
@@ -148,8 +149,10 @@ cameras = {
     "[T1/33] Mud Club": None,
     "[T1/34] Neighborhood Watch": None,
     "[T1/35] Hillclimb": None,
-    "[T1/36] Waning Sands (A)": (None, (-500.000, 3000.000, 10.000), (285.000, -4.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1815]"),
-    "[T1/36] Waning Sands (B)": None,
+    #"[T1/36] Waning Sands (A)": (None, (-1000.000, 3500.000, 20.000), (270.000, -4.500, -1.800), (58.000, None), (3840, 2160), "Trailer 1 [1815]"),
+    "[T1/36] Waning Sands (A) (X)": (None, (-1500.000, 3500.000, 32.000), (270.000, -4.300, -1.800), (58.000, None), (3840, 2160), "Trailer 1 [1815]"),
+    "[T1/36] Waning Sands (B)": (None, (-975.000, 3502.500, 32.000), (330.000, 0.000, 0.000), (58.000, None), (3840, 2160), "Trailer 1 [1847]"),
+    "[T1/36] Waning Sands (C)": (None, (-950.000, 3505.000, 32.000), (345.000, 6.000, 1.000), (58.000, None), (3840, 2160), "Trailer 1 [1876]"),
     "[T1/37] Car (Lucia)": None,
     "[T1/38] Car Crash": None,
     "[T1/40] Street (Bikers) (A)": None,
@@ -214,7 +217,7 @@ cameras = {
     "[S2/26] Real Dimez 02 (Dancing)": None,
     "[S2/27] Real Dimez 03 (Car)": None,
     "[S2/30] Raul Bautista 02 (Car)": None,
-    "[S2/31] Raul Bautista 03 (Motorboat)": None,
+    "[S2/31] Raul Bautista 03 (Motorboat)": (None, (-757.000, -1902.000, 2.476), (354.820, -0.000, 0.000), (45.000, 26.231), (3840, 2160), "Raul Batista 03 [1]"),
     "[S2/36] Brian Heder 04 (Gun)": None,
     "[S2/37] Vice City 01 (Vice City Sign)": None,
     "[S2/38] Vice City 02 (Hotel)": None,
@@ -347,7 +350,8 @@ metadata = {
     "[L1/41] Grassrivers Sign": ("537.0", (762, "ss_15"), "11:00", ("Sun", "HiPr"), (0.75, None), 17.8),
     "[L1/42] Tennis Court (SW)": ("539.0.7", (570, "nm_06c"), "19:08", ("HiPr", "Sun"), (0.79, None), 13.6),
     "[L1/42] Tennis Court (N)": ("539.0.7", (570, "nm_06c"), "19:11", ("HiPr", "Sun"), (0.80, None), 13.4),
-    "[L1/42] Tennis Court (NE)": ("539.0.7", (570, "nm_06c"), "19:12", ("HiPr", "Sun"), (0.80, None), 13.4),
+    "[L1/42] Tennis Court (NE)": ("539.0.7", (570, "nm_06c"), "19:11", ("HiPr", "Sun"), (0.80, None), 13.4),
+    "[L1/42] Tennis Court (E)": ("539.0.7", (570, "nm_06c"), "19:12", ("HiPr", "Sun"), (0.80, None), 13.4),
     "[L1/42] Tennis Court (SE)": ("539.0.7", (570, "nm_06c"), "19:12", ("HiPr", "Sun"), (0.80, None), 13.4),
     "[L1/43] Pool": ("541.0.4", (282, "lo_int1"), "13:16", ("Sun", "Sun"), (1.00, None), 9.5),
     "[L1/44] Tennis Stadium (4K)": ("541.0.6", (1102, "vk_04"), "12:11", ("Sun", "HiPr"), (1.00, None), 25.6),
@@ -565,6 +569,9 @@ pixels = {
         ((779.5, 702), "Player"),
     ],
     "[L1/15] Hedge (B)": [
+        ((295, 505), "Waffles Ridge"),
+        ((325, 505), "Mount Waffles"),
+        ((417, 502), "Maple Syrup Mountain"),
         ((472, 495), "Mount Mountain"),
     ],
     "[L1/15] Hedge (C)": [
@@ -587,20 +594,21 @@ pixels = {
         ((984, 152), "25 Indian Creek Island Rd (W)"),
         ((990, 180), "Golf Course (E)"),
         ((1017, 153), "25 Indian Creek Island Rd (E)"),
-        ((1068, 218), "East Coast (A)"),
+        ((1076.5, 218.5), "East Coast (A)"),
         ((1188, 144), "Building A (SW)"),
-        ((1302, 218), "East Coast (B)"),
-        ((1326, 219), "East Coast (C)"),
+        ((1302, 217.5), "East Coast (B)"),
+        ((1325, 218.5), "East Coast (C)"),
         ((1371, 132), "Building B (SE)"),
-        ((1443, 219), "East Coast (D)"),
+        ((1401, 220), "East Coast (D)"),
+        ((1443, 220), "East Coast (E)"),
         ((1456, 108.5), "Building C (SW)"),
-        ((1478, 222), "East Coast (E)"),
+        ((1478, 222.5), "East Coast (F)"),
         ((1495, 108.5), "Building C (SE)"),
         ((1531, 104), "Building D (SW)"),
         ((1570.5, 95.5), "Building E (SW)"),
-        ((1640, 223), "East Coast (F)"),
-        ((1679, 225), "East Coast (G)"),
-        ((1714, 226), "East Coast (H)"),
+        ((1640, 223.5), "East Coast (G)"),
+        ((1679, 225), "East Coast (H)"),
+        ((1714, 226), "East Coast (I)"),
     ],
     "[L1/17] Hotel (E)": [
         ((851, 496), "Player"),
@@ -753,6 +761,12 @@ pixels = {
     ],
     "[L1/41] Grassrivers Sign": [
         ((1018.5, 786.5), "Ball near Grassrivers Sign"),
+    ],
+    "[L1/42] Tennis Court (NE)": [
+        ((1336, 262), "Unknown Building (Leonard County) (TW)"),
+        ((1403.5, 271), "Unknown Building (Leonard County) (E)"),
+        ((1412, 248), "112 NE 41st St (NW)"),
+        ((1493, 245), "112 NE 41st St (SE)"),
     ],
     "[L1/42] Tennis Court (SE)": [
         ((759.25, 91.75), "1000 Venetian Way (SW)"),
@@ -1100,6 +1114,44 @@ pixels = {
         ((1309, 326), "Council Towers North (NW)"),
         ((1966, 82), "Council Towers North (SW)"),
     ],
+    "[T1/29] Gas Station (Chase) (SE)": [
+        ((1025, 1197.5), "112 NE 41st St"),
+        # ((2892, 935), "Gas Station (Leonard County) (NW)"),
+    ],
+    "[T1/29] Gas Station (Chase) (S)": [
+        ((2047, 993), "Gas Station (Leonard County) (NW)"),
+        ((2394, 1142), "The Grand"),
+        ((2494, 1052), "Quantum on the Bay Condominium (S) (NE)"),
+        ((2652, 1109), "Opera Tower"),
+    ],
+    "[T1/36] Waning Sands (A) (X)": [
+        ((1152.5, 869), "House #1 (Waning Sands)"),
+        ((2140, 861), "Sailboat Cay (F4)"),
+        ((2143, 749), "Sailboat Cay (F15)"),
+        ((2203, 738), "Sailboat Cay"),
+        ((2350.5, 602.5), "Construction Crane (Waning Sands)"),
+        ((2397, 757), "Palm Bay Yacht Club Condominium (SW)"),
+        ((2404, 841), "Towers of Quayside (A)"),
+        ((2476, 844), "Towers of Quayside (B)"),
+        ((2548, 846), "Towers of Quayside (C)"),
+        ((2583, 847), "Towers of Quayside (D)"),
+        ((2628, 848), "Towers of Quayside (E)"),
+        ((2806, 832), "Water Tower (Waning Sands)"),
+        ((2744.5, 814), "Billboard #1 (Waning Sands)"),
+        ((2921, 862), "Billboard #2 (Waning Sands)"),
+        ((2962, 864), "Unknown Building (Waning Sands) (SW)"),
+        ((3312, 678), "Evergreen Plaza"),
+    ],
+    "[T1/36] Waning Sands (B)": [
+        ((3054, 1280), "House #2 (Waning Sands)"),
+        ((3774, 1212), "House #1 (Waning Sands)"),
+    ],
+    "[T1/36] Waning Sands (C)": [
+        ((2445, 1396), "Port Crane (Waning Sands)"),
+        ((2767, 1463), "Port (Waning Sands) (N)"),
+        ((2891, 1468), "Port (Waning Sands) (S)"),
+        ((3727, 1585), "House #2 (Waning Sands)")
+    ],
     "[T1/44] U-Turn (NW)": [
         ((447, 642), "6232 E Hwy 98 (SE)"),
         ((2312, 709), "6232 E Hwy 98 (NE)"),
@@ -1198,10 +1250,22 @@ pixels = {
         ((3340, 570), "1000 Venetian Way (1)"),
         ((3460, 118), "The Grand"),
     ],
+    "[S2/31] Raul Bautista 03 (Motorboat)": [
+        ((1090, 130), "Four Seasons Hotel Miami (24E)"),
+        ((1090, 395), "Four Seasons Hotel Miami (16E)"),
+        ((1393, 46), "Brickell Arch (SE)"),
+        ((1177, 162), "Four Seasons Hotel Miami (24NE)"),
+        ((1177, 421), "Four Seasons Hotel Miami (16NE)"),
+        ((3017, 402), "One Miami Condominium West (SE)"),
+        ((3273, 440), "One Miami Condominium East (SE)"),
+        ((3664, 563), "Carbonell Brickell"),
+    ],
     "[S2/39] Vice City 03 (Basketball)": [
         ((109, 276), "Bank of America Financial Center (NW)"),
+        ((170, 372), "One Miami Condominium East (SE)"),
         ((198.5, 371), "One Miami Condominium East (NE)"),
         ((201, 489), "Flamingo South Beach (NERNE)"),
+        ((222, 371), "One Miami Condominium West (SE)"),
         ((248.5, 371), "One Miami Condominium West (NE)"),
         ((272.5, 507.5), "Flamingo South Beach (NENE)"),
         ((287, 440), "InterContinental Miami (N)"),
@@ -1298,6 +1362,7 @@ pixels = {
         ((428, 548), "FAA Miami ATCT (MIA)"),
         ((498, 564.5), "Homestead Water Tower"),
         ((415, 592), "Prison Tower (6)"),
+        ((457, 553.5), "Unknown Building (Vice City)"),
         ((465, 591), "Prison Tower (1)"),
         ((514.5, 591.5), "Prison Tower (5)"),
         ((585, 590.5), "Prison Tower (2)"),
@@ -1580,6 +1645,7 @@ pixels = {
         ((305, 813), "1000 Venetian Way (SE)"),
         ((449, 817), "1000 Venetian Way (SW)"),
         ((677, 858), "Skyviews Miami Observation Wheel"),
+        ((740, 835.5), "Carbonell Brickell"),
         ((789, 786), "One Miami Condominium East (NE)"),
         ((815, 822), "InterContinental Miami (N)"),
         ((844, 785.5), "One Miami Condominium West (NE)"),
@@ -1889,11 +1955,25 @@ lines = {
     ], [
        ((3764.5, 0), (3696, 983)),
     ]),
+    "[T1/29] Gas Station (Chase) (SE)": ([
+        ((2892, 942), (1690, 1044)),
+        ((2893, 1015.5), (1689, 1100))
+    ], []),
     "[T1/29] Gas Station (Chase) (S)": ([
         ((2047, 999), (2290, 1083.5)),
         ((2047, 1070.5), (2290, 1139.5)),
-
     ], []),
+    "[T1/36] Waning Sands (A) (X)": ([
+        #((360, 271.5), (1092, 432)),
+        #((354, 742.5), (1086, 785.5)),
+        ((3425, 229), (3024, 285)),
+        ((3379, 871), (2985, 861))
+    ], [
+        ((3030, 192), (2982, 927)),
+        ((3469, 214), (3418, 947)),
+        # ((3110, 282), (3070, 910)),
+        # ((3343, 250), (3297.5, 944))
+    ]),
     "[T2/67] Television": ([
         ((3650.5, 1200), (3628.5, 1005)),
         ((2857.5, 1110), (3037, 978)),
@@ -2017,6 +2097,7 @@ landmarks = {
     "Marriott Miami Biscayne Bay (NE)": (-214.688, 871.933, 145.985),  # d=0.492 via Vice City Postcard & Vice City 03 (Basketball)
     "MIA North Terminal Tower": (-2378.279, -545.155, 60.726),  # d=0.531 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
     "Miami Tower": (-775.668, -424.119, 159.972),  # d=5.605 via Grassrivers 02 (Watson Bay) & Prison
+    "Mount Mountain": (-4070.912, 5848.360, 270.405),  # d=42.669 via Hedge (B) & Diner (N)
     "Mount Waffles (TW)": (-5225.002, 5750.498, 228.719),  # d=39.915 via Gas Station (Lucia) & Diner (N)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
     "419 NE 4th Ave (W)": (-414.062, 1226.010, 29.577),  # d=4.564 via Vice City Postcard & Vice City 03 (Basketball)
@@ -2176,18 +2257,25 @@ landmarks = {
     "Wheelabrator South Broward": (-2402.035, 2384.693, 101.915),  # d=9.502 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
     "Wheelabrator South Broward (W)": (-2458.561, 2488.612, 53.080),  # d=7.053 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
 
-    "East Coast (A)": (-332.524, 5452.120, 0.000),  # via Glitch (A)
-    "East Coast (B)": (417.593, 5856.017, 0.000),  # via Glitch (A)
-    "East Coast (C)": (436.227, 6186.072, 0.000),  # via Glitch (A)
-    "East Coast (D)": (835.318, 6400.961, 0.000),  # via Glitch (A)
-    "East Coast (E)": (847.692, 7672.332, 0.000),  # via Glitch (A)
-    "East Coast (F)": (1542.768, 8613.458, 0.000),  # via Glitch (A)
-    "East Coast (G)": (1787.709, 10233.155, 0.000),  # via Glitch (A)
-    "East Coast (H)": (2048.749, 11376.942, 0.000),  # via Glitch (A)
+    "East Coast (A)": (-358.351, 5593.257, 0.000),  # via Glitch (A)
+    "East Coast (B)": (446.436, 5725.567, 0.000),  # via Glitch (A)
+    "East Coast (C)": (462.977, 6035.497, 0.000),  # via Glitch (A)
+    "East Coast (D)": (643.286, 6661.405, 0.000),  # via Glitch (A)
+    "East Coast (E)": (796.358, 6743.826, 0.000),  # via Glitch (A)
+    "East Coast (F)": (824.700, 7931.679, 0.000),  # via Glitch (A)
+    "East Coast (G)": (1548.999, 8938.528, 0.000),  # via Glitch (A)
+    "East Coast (H)": (1787.709, 10233.155, 0.000),  # via Glitch (A)
+    "East Coast (I)": (2048.749, 11376.942, 0.000),  # via Glitch (A)
+    "Golf Course (E)": (800.134, 2586.545, 0.000),  # via Glitch (A)
+    "Golf Course (W)": (446.266, 2396.007, 0.000),  # via Glitch (A)
     "Golf Course (E)": (800.134, 2586.545, 0.000),  # via Glitch (A)
     "Golf Course (W)": (446.266, 2396.007, 0.000),  # via Glitch (A)
     "Lake (E)": (702.162, 2533.793, 0.000),  # via Glitch (A)
     "Lake (W)": (662.681, 2512.535, 0.000),  # via Glitch (A)
+    "112 NE 41st St": (32.776, 2228.133, 65.796),  # d=0.604 via Glitch (A) & Highway (NE)
+    "112 NE 41st St (NW)": (16.475, 2264.925, 49.876),  # d=0.342 via Highway (NE) & Tennis Court (NE)
+    "112 NE 41st St (SE)": (44.154, 2188.729, 48.986),  # d=0.451 via Highway (NE) & Tennis Court (NE)
+    "112 NE 41st St (SW)": (16.674, 2195.583, 49.590),  # d=0.583 via Glitch (A) & Highway (NE)
     "Park (E)": (497.202, 2273.076, 0.000),  # via Glitch (A)
     "Park (W)": (481.392, 2264.564, 0.000),  # via Glitch (A)
 
@@ -2290,9 +2378,9 @@ maps = {
 
 map_sections = {
     "Vice City": (-5000, -3000, 3000, 4000),
-    "Port Gellhorn": (-10000, 1000, -4000, 6000),
+    "Port Gellhorn": (-10000, 1000, -4000, 7000),
     "Leonida Keys": (-8000, -8000, -1000, -4000),
-    "Leonard County": (-1000, 2000, 3000, 12000),
+    "Leonard County": (-2000, 2000, 3000, 12000),
     "Grassrivers": (-6000, -5000, 0, -1000),
     "Ambrosia": (-5000, 1000, 0, 7000),
 }
