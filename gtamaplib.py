@@ -518,12 +518,9 @@ class Camera:
         Renders other cameras at their world positions
         """
         if not hasattr(self, "image"): self.open()
-        cameras = [
-            get_camera(cam_name) for cam_name in md.cameras
-            if normalize_name(cam_name) != normalize_name(self.name)
-        ]
+        cameras = [get_camera(cam_name) for cam_name in md.cameras]
         for cam in sorted(cameras, key=lambda cam: -get_distance(self.xyz, cam.xyz)):
-            if cam.hfov < 1: continue
+            if get_distance(self.xyz, cam.xyz) < 1 or cam.hfov < 1: continue
             self.render_camera(cam, d=d, width=width)
         return self
 
