@@ -123,7 +123,7 @@ cameras = {
     "[T1/8] Airboat": None,
     "[T1/9] Flamingos": None,
     "[T1/10] Beach": (None, (2152.000, -100.000, 3.998), (15.510, -1.100, 0.000), (45.000, 26.231), (3840, 2160), "Trailer 1 [653]"),
-    "[T1/11] Motorboats": (None, (1600.000, -800.000, 1.000), (86.500, -1.500, 0.000), (69.000, None), (3840, 2160), "Trailer 1 [745]"),
+    "[T1/11] Motorboats": (None, (1709.000, -841.000, 4.989), (86.793, -0.700, 0.000), (62.100, 37.418), (3840, 2160), "Trailer 1 [745]"),
     "[T1/12] Convertible": (None, (-25.000, 575.000, 15.000), (105.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [746]"),
     "[T1/13] Wynwood": (None, (-425.000, 1700.000, 5.000), (325.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [824]"),
     "[T1/14] Strip Club (Mondays)": None,
@@ -150,9 +150,9 @@ cameras = {
     "[T1/34] Neighborhood Watch": None,
     "[T1/35] Hillclimb": None,
     #"[T1/36] Waning Sands (A)": (None, (-1000.000, 3500.000, 20.000), (270.000, -4.500, -1.800), (58.000, None), (3840, 2160), "Trailer 1 [1815]"),
-    "[T1/36] Waning Sands (A) (X)": (None, (-1500.000, 3500.000, 32.000), (270.000, -4.300, -1.800), (58.000, None), (3840, 2160), "Trailer 1 [1815]"),
-    "[T1/36] Waning Sands (B)": (None, (-975.000, 3502.500, 32.000), (330.000, 0.000, 0.000), (58.000, None), (3840, 2160), "Trailer 1 [1847]"),
-    "[T1/36] Waning Sands (C)": (None, (-950.000, 3505.000, 32.000), (345.000, 6.000, 1.000), (58.000, None), (3840, 2160), "Trailer 1 [1876]"),
+    "[T1/36] Waning Sands (A) (X)": (None, (-1000.000, 4000.000, 32.000), (270.000, -4.300, -1.800), (58.000, None), (3840, 2160), "Trailer 1 [1815]"),
+    "[T1/36] Waning Sands (B)": (None, (-985.000, 4003.000, 32.000), (330.000, 0.000, 0.000), (58.000, None), (3840, 2160), "Trailer 1 [1847]"),
+    "[T1/36] Waning Sands (C)": (None, (-970.000, 4006.000, 32.000), (345.000, 6.000, 1.000), (58.000, None), (3840, 2160), "Trailer 1 [1876]"),
     "[T1/37] Car (Lucia)": None,
     "[T1/38] Car Crash": None,
     "[T1/40] Street (Bikers) (A)": None,
@@ -208,7 +208,7 @@ cameras = {
     "[S2/2] Jason Duval 02 (Car)": (None, (900.000, 500.000, 5.000), (298.000, 9.500, 0.000), (60.000, None), (3840, 2160), "Jason Duval 02 [1]"),
     "[S2/3] Jason Duval 03 (Boat)": None,
     "[S2/4] Jason Duval 04 (Ocean Drive)": None,
-    "[S2/5] Jason Duval 05 (Machine Gun)": None,
+    "[S2/5] Jason Duval 05 (Machine Gun)": (None, (-1445.000, 915.000, 40.000), (245.000, -6.000, 0.000), (60.000, None), (3840, 2160), "Jason Duval 05 [1]"),
     "[S2/8] Lucia Caminos 02 (Pool)": None,
     "[S2/9] Lucia Caminos 03 (Hoodwinks)": None,
     "[S2/13] Cal Hampton 01 (Minigolf)": None,
@@ -226,7 +226,7 @@ cameras = {
     "[S2/41] Vice City 05 (Vice Beach)": None,
     "[S2/42] Vice City 06 (Ocean Drive)": None,
     "[S2/44] Vice City 08 (Ferris Wheel)": (None, (-560.000, 810.000, 70.000), (212.000, -12.000, 0.000), (50.000, None), (3840, 2160), "Vice City 08 [1]"),
-    "[S2/45] Vice City 09 (La Perle)": None,
+    "[S2/45] Vice City 09 (La Perle)": (None, (-1250.000, 1150.000, 7.000), (300.000, 2.000, 0.000), (50.000, None), (3840, 2160), "Vice City 09 [1]"),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160), "Leonida Keys 01 [1]"),
     "[S2/47] Leonida Keys 02 (Sidewalk)": None,
     "[S2/47] Leonida Keys 03 (The Rusty Anchor)": None,
@@ -705,9 +705,9 @@ pixels = {
         ((1112, 416), "Player")
     ],
     "[L1/31] Intersection (W)": [
-        ((1313, 91), "Reworld Miami Dade (SE)"),
+        ((1313, 91), "Reworld Miami-Dade (SE)"),
         ((1412, 1015), "Player"),
-        ((1429.5, 108.5), "Reworld Miami Dade (NW)"),
+        ((1429.5, 108.5), "Reworld Miami-Dade (NW)"),
     ],
     "[L1/32] Police Chase (A)": [
         ((63, 839), "Minimap (TL)"),
@@ -799,6 +799,7 @@ pixels = {
         ((3509.5, 492), "Four Seasons Hotel Miami (40NE)"),
         ((3509.048, 615), "Four Seasons Hotel Miami (32NE)"),
         ((3616, 851.5), "Nine at Mary Brickell Village (E)"),
+        ((3778, 936), "Bayshore Place Condominium (TE)"),
     ],
     "[L1/48] Hangar (A)": [
         ((1312, 726), "Pole near Signature Hangar 2"),
@@ -977,6 +978,18 @@ pixels = {
         ((3514.5, 986.5), "12th St Lifeguard Tower"),
         ((3664, 1020), "Beach (F)"),
         ((3840, 1741), "Beach (A)"),
+    ],
+    "[T1/11] Motorboats": [
+        ((2, 973), "Beacon (Virginia Key)"),
+        ((1058, 844), "1450 Brickell Ave"),
+        ((1131.5, 722.5), "Four Seasons Hotel Miami (SE)"),
+        ((1143, 709), "Four Seasons Hotel Miami (BE)"),
+        ((1617, 670), "Container Crane (9)"),
+        ((1764, 516), "Container Crane (8)"),
+        ((2141, 170), "Container Crane (7)"),
+        ((3171, 802), "Vizcayne South Condominium (NE)"),
+        ((3283, 797), "Vizcayne North Condominium (NE)"),
+        ((3756, 788), "Marina Blue (NE)"),
     ],
     "[T1/12] Convertible": [
         ((463, 715), "Kaseya Center (SE)"),
@@ -1250,12 +1263,22 @@ pixels = {
         ((3340, 570), "1000 Venetian Way (1)"),
         ((3460, 118), "The Grand"),
     ],
+    "[S2/5] Jason Duval 05 (Machine Gun)": [
+        ((2825, 218), "Vizcayne North Condominium (NE)"),
+        ((3320, 198), "Vizcayne South Condominium (SW)"),
+    ],
     "[S2/31] Raul Bautista 03 (Motorboat)": [
+        ((656, 313), "The Palace Condominium (E16SE)"),
+        ((750, 330), "The Palace Condominium (E16NE)"),
         ((1090, 130), "Four Seasons Hotel Miami (24E)"),
         ((1090, 395), "Four Seasons Hotel Miami (16E)"),
         ((1393, 46), "Brickell Arch (SE)"),
         ((1177, 162), "Four Seasons Hotel Miami (24NE)"),
         ((1177, 421), "Four Seasons Hotel Miami (16NE)"),
+        ((1436, 221), "600 Brickell (SW)"),
+        ((1542, 221), "600 Brickell (SE)"),
+        ((1989, 370), "701 Brickell (SW)"),
+        ((2658, 599), "Bayshore Place Condominium (TE)"),
         ((3017, 402), "One Miami Condominium West (SE)"),
         ((3273, 440), "One Miami Condominium East (SE)"),
         ((3664, 563), "Carbonell Brickell"),
@@ -1683,7 +1706,7 @@ pixels = {
         ((2162, 816), "22 Biscayne Bay (SE)"),
         ((2293, 705), "New Wave Condominiums"),
         ((1158, 874), "Venetian Isle Condominium"),
-        ((2426.5, 836.5), "Reworld Miami Dade (SE)"),
+        ((2426.5, 836.5), "Reworld Miami-Dade (SE)"),
         ((2432, 876), "Unknown Building near VCIA (S)"),
         ((2453, 876), "Unknown Building near VCIA (N)"),
         ((2454, 866), "Flat Water Tower"),
@@ -2188,7 +2211,7 @@ landmarks = {
     "Radio Tower (Ambrosia) (B)": (-2074.852, 3169.762, 5.000),  # via Ambrosia 04 (Fires)
     "Radio Tower (Ambrosia)": (-2074.852, 3169.762, 124.043),  # via Ambrosia 04 (Fires)
     "Red Billboard (Hamlet)": (-2542.919, -3495.137, 27.400),  # d=8.899 via Police Chase (D) & Leonida Keys 01 (Airplane) (X)
-    "Reworld Miami Dade (SE)": (-1788.689, 719.480, 102.783),  # d=0.158 via Vice City Postcard & Intersection (W)
+    "Reworld Miami-Dade (SE)": (-1788.689, 719.480, 102.783),  # d=0.158 via Vice City Postcard & Intersection (W)
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (952.949, 1250.647, 0.000),  # via Venetian Islands
     "Royal Palm South Beach (N) (N)": (2030.591, 1059.693, 68.047),  # d=0.291 via Venetian Islands & Vice Beach (B)
