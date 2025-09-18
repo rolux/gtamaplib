@@ -70,8 +70,8 @@ class Camera:
         """
         # need at least two line families
         if not self.lines[0] or not self.lines[1]: return None
-        hvp = self._get_vp_from_lines(self.lines[0])
-        vvp = self._get_vp_from_lines(self.lines[1])
+        hvp, hvps = self._get_vp_from_hlines(self.lines[0])
+        vvp = self._get_vp_from_vlines(self.lines[1])
         if hvp is None or vvp is None:
             return None
         x1, y1 = hvp
@@ -85,10 +85,41 @@ class Camera:
         vfov = 2.0 * np.degrees(np.arctan(self.h / (2.0 * f)))
         return hfov, vfov
 
+    def _get_hvps_from_hlines(self):
+        if not self.lines[0]: return None, None
+        hlines = self.lines[0]
+        n = len(hlines)
+        hvps = [
+            intersect_lines_2d(hlines[i], hlines[i + 1])
+            for i in range(0, n, 2)
+        ]
+        hvps = [p for p in hvps if p is not None]
+        if not hvps: return None, None
+        hvp = get_midpoint(hvps)
+        return hvp, hvps
+
+    def _get_vvps_from_vlines(self, lines=None):
+        if not self.lines[1] and not lines: return None, None
+        vlines = lines or self.lines[1]
+        n = len(vlines)
+        vvps = [
+            intersect_lines_2d(vlines[i], vlines[j])
+            for i in range(n)
+            for j in range(i + 1, n)
+        ]
+        vvps = [p for p in vvps if p is not None]
+        if not vvps: return None, None
+        vvp = get_midpoint(vvps)
+        vvps = []
+        for vline in vlines:
+            y = -0.5 if vline[0][1] > vline[1][1] else self.h - 0.5
+            line = ((-0.5, y), (self.w - 0.5, y))
+            vvps.append(intersect_lines_2d(vline, line))
+        return vvp, vvps
+
     def _get_pitch_from_hlines(self):
         if not self.lines[0]: return None
-        hvp = self._get_vp_from_lines(self.lines[0])
-        if hvp is None: return None
+        hvp, _ = self._get_hvps_from_hlines()
         cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
         r = np.radians(self.roll)
         c, s = np.cos(r), np.sin(r)
@@ -98,10 +129,10 @@ class Camera:
         tan_v = np.tan(np.radians(self.vfov / 2.0))
         pitch = -np.degrees(np.arctan(ndc_y * tan_v))
         return float(pitch)
-        #"""
 
     def _get_pitch_from_vlines(self):
         if not self.lines[1]: return None
+        v_lines = self.lines[1]
         def rotate(point):
             x, y = point
             dx, dy = x - cx, y - cy
@@ -112,29 +143,19 @@ class Camera:
         cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
         r = np.radians(self.roll)
         c, s = np.cos(r), np.sin(r)
-        if len(self.lines[1]) == 1:
-            a, b = self.lines[1][0]
+        if len(v_lines) == 1:
+            a, b = v_lines[0]
             line_unrolled = (rotate(a), rotate(b))
             vp_unrolled = intersect_lines_2d(line_unrolled, ((cx, 0), (cx, self.h)))
             if vp_unrolled is None:
                 return 0.0
         else:
-            lines_unrolled = [(rotate(a), rotate(b)) for (a, b) in self.lines[1]]
-            vp_unrolled = self._get_vp_from_lines(lines_unrolled)
+            lines_unrolled = [(rotate(a), rotate(b)) for (a, b) in v_lines]
+            vp_unrolled = self._get_vvps_from_vlines(lines_unrolled)[0]
         vpy_unrolled = vp_unrolled[1]
         ndc_y = 1 - 2 * ((vpy_unrolled + 0.5) / self.h)
         tan_v = np.tan(np.radians(self.vfov / 2))
         return np.degrees(np.arctan(1 / (ndc_y * tan_v)))
-
-    def _get_vp_from_lines(self, lines):
-        n = len(lines)
-        points = [
-            intersect_lines_2d(lines[i], lines[j])
-            for i in range(n)
-            for j in range(i + 1, n)
-        ]
-        points = np.array([p for p in points if p is not None], dtype=float)
-        return tuple(points.mean(axis=0)) if len(points) else None
 
     def calibrate_yaw(self, lm_name, lm_point=None):
         """
@@ -647,15 +668,16 @@ class Camera:
         Renders lines towards horizontal and vertical vanishing points
         """
         if not hasattr(self, "image"): self.open()
-        for a, b in self.lines[0]:
+        _, hvps = self._get_hvps_from_hlines()
+        _, vvps = self._get_vvps_from_vlines()
+        for i, (a, b) in enumerate(self.lines[0]):
             self.draw_circle(a, 3, None, (255, 255, 0), width)
             self.draw_circle(b, 3, None, (255, 255, 0), width)
-            self.draw_line((a, self.get_hvp()), (255, 255, 0), width)
-        for a, b in self.lines[1]:
+            self.draw_line((a, hvps[int(i / 2)]), (255, 255, 0), width)
+        for i, (a, b) in enumerate(self.lines[1]):
             self.draw_circle(a, 3, None, (255, 255, 0), width)
             self.draw_circle(b, 3, None, (255, 255, 0), width)
-            vvp = self.get_vvp() or (a[0], self.h)
-            self.draw_line((a, vvp), (255, 255, 0), width)
+            self.draw_line((a, vvps[i]), (255, 255, 0), width)
         return self
 
     def render_vertical_lines(self, width=0.25):
@@ -1926,14 +1948,14 @@ def find_camera(
         for other_cam_name, lm_name_a, lm_name_b in ray_pairs:
             other_cam = get_camera(other_cam_name)
             center_name = f"{lm_name_a} + {lm_name_b}"
-            cam.landmark_pixels[center_name] = get_midpoint(
+            cam.landmark_pixels[center_name] = get_midpoint((
                 cam.landmark_pixels[lm_name_a],
                 cam.landmark_pixels[lm_name_b]
-            )
-            other_cam.landmark_pixels[center_name] = get_midpoint(
+            ))
+            other_cam.landmark_pixels[center_name] = get_midpoint((
                 other_cam.landmark_pixels[lm_name_a],
                 other_cam.landmark_pixels[lm_name_b],
-            )
+            ))
             ray_stacks.append((
                 (center_name, (other_cam.xyz, other_cam.get_landmark_direction(center_name))),
                 (lm_name_a, (other_cam.xyz, other_cam.get_landmark_direction(lm_name_a))),
@@ -2473,14 +2495,14 @@ def get_landmark_size(cam, midpoint, lm_name_a, lm_name_b):
 
 def get_landmark_sizes(cam_a, cam_b, lm_name_a, lm_name_b):
     lm_name_midpoint = f"{lm_name_a} + {lm_name_b}"
-    cam_a.landmark_pixels[lm_name_midpoint] = get_midpoint(
+    cam_a.landmark_pixels[lm_name_midpoint] = get_midpoint((
         cam_a.landmark_pixels[lm_name_a],
         cam_a.landmark_pixels[lm_name_b]
-    )
-    cam_b.landmark_pixels[lm_name_midpoint] = get_midpoint(
+    ))
+    cam_b.landmark_pixels[lm_name_midpoint] = get_midpoint((
         cam_b.landmark_pixels[lm_name_a],
         cam_b.landmark_pixels[lm_name_b]
-    )
+    ))
     midpoint = intersect_ray_and_ray(
         (cam_a.xyz, cam_a.get_landmark_direction(lm_name_midpoint)),
         (cam_b.xyz, cam_b.get_landmark_direction(lm_name_midpoint))
@@ -2491,10 +2513,9 @@ def get_landmark_sizes(cam_a, cam_b, lm_name_a, lm_name_b):
     # del cam_b.landmark_pixels[lm_name_midpoint]
     return size_a, size_b
 
-def get_midpoint(point_a, point_b):
-    a = np.asarray(point_a, dtype=float)
-    b = np.asarray(point_b, dtype=float)
-    return (a + b) / 2.0
+def get_midpoint(points):
+    points = np.asarray(points, dtype=float)
+    return points.mean(axis=0)
 
 def get_pixel(world_xyz, cam_xyz, q, fov, size):
     hfov, vfov = np.radians(fov[0]), np.radians(fov[1])
