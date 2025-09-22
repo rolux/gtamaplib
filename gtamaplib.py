@@ -1513,9 +1513,9 @@ class SunshineSkywayBridge(Landmark):
 
     def __init__(
         self,
-        nt=(-6738.084, 4571.460, 119.456),
-        st=(-6680.191, 4367.609, 119.456),
-        rz=35.273
+        nt=(-6744.858, 4572.322, 120.806),
+        st=(-6685.319, 4362.297, 120.806),
+        rz=35.499
     ):
         super().__init__("Sunshine Skyway Bridge")
         self.nt = nt
