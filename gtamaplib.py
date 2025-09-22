@@ -499,6 +499,36 @@ class Camera:
         self.render_camera_info()
         return self
 
+    def render_box(self, center, wdh, bearing, fill=(0, 0, 0), width=1):
+        """
+        Renders a box. wdh is width, depth, height; bearing is the direction of the depth axis.
+        """
+        cx, cy, cz = center
+        hx, hy, hz = wdh[0] * 0.5, wdh[1] * 0.5, wdh[2] * 0.5
+        corners_local = np.array([
+            [sx * hx, sy * hy, sz * hz]
+            for sx in (-1.0, 1.0)
+            for sy in (-1.0, 1.0)
+            for sz in (-1.0, 1.0)
+        ], dtype=float)
+        bearing_rad = np.deg2rad(bearing)
+        c, s = np.cos(bearing_rad), np.sin(bearing_rad)
+        R = np.array([
+            [ c, -s,  0],  # local x -> world
+            [ s,  c,  0],  # local y -> world
+            [ 0,  0,  1],  # local z -> world
+        ], dtype=float)
+        corners = corners_local @ R.T
+        corners += np.array([cx, cy, cz], dtype=float)
+        edges = [
+            (0, 1), (2, 3), (4, 5), (6, 7),  # z edges
+            (0, 2), (1, 3), (4, 6), (5, 7),  # y edges
+            (0, 4), (1, 5), (2, 6), (3, 7)   # x edges
+        ]
+        for a, b in edges:
+            self.render_line((corners[a], corners[b]), fill=fill, width=width)
+
+
     def render_camera_info(self):
         """
         Renders camera metadata
@@ -677,6 +707,7 @@ class Camera:
         for i, (a, b) in enumerate(self.lines[1]):
             self.draw_circle(a, 3, None, (255, 255, 0), width)
             self.draw_circle(b, 3, None, (255, 255, 0), width)
+            if not vvps[i]: continue  # FIXME
             self.draw_line((a, vvps[i]), (255, 255, 0), width)
         return self
 
