@@ -128,7 +128,8 @@ cameras = {
     "[T1/8] Airboat": None,
     "[T1/9] Flamingos": None,
     "[T1/10] Beach": (None, (2152.000, -100.000, 3.998), (15.510, -1.100, 0.000), (45.000, 26.231), (3840, 2160), "Trailer 1 [653]"),
-    "[T1/11] Motorboats": (None, (1709.000, -841.000, 4.989), (86.793, -0.700, 0.000), (62.100, 37.418), (3840, 2160), "Trailer 1 [745]"),
+    "[T1/11] Motorboats (A)": (None, (1650.000, -850.000, 2.000), (91.400, 1.919, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [699]"),
+    "[T1/11] Motorboats (B)": (None, (1709.000, -841.000, 4.989), (86.793, -0.700, 0.000), (62.100, 37.418), (3840, 2160), "Trailer 1 [745]"),
     "[T1/12] Convertible": (None, (-25.000, 575.000, 15.000), (105.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [746]"),
     "[T1/13] Wynwood": (None, (-425.000, 1700.000, 5.000), (319.000, 3.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [824]"),
     "[T1/14] Strip Club (Mondays)": None,
@@ -464,14 +465,14 @@ pixels = {
     "[L1/3] Amphitheater": [
         ((556, 54), "Portofino Tower (NW)"),
         ((577, 54), "Portofino Tower (S)"),
-        ((591.5, 87.5), "Container Crane (1)"),
+        ((591.5, 87.5), "Container Crane (9)"),
         ((631.5, 67), "Continuum on South Beach (S)"),
-        ((671, 95), "Container Crane (2)"),
-        ((717.5, 97), "Container Crane (3)"),
-        ((779.5, 102), "Container Crane (4)"),
+        ((671, 95), "Container Crane (8)"),
+        ((717.5, 97), "Container Crane (7)"),
+        ((779.5, 102), "Container Crane (6)"),
         ((825.5, 106), "Container Crane (5)"),
-        ((977, 112), "Container Crane (6)"),
-        ((1139, 89), "Container Crane (7)"),
+        ((977, 112), "Container Crane (4)"),
+        ((1139, 89), "Container Crane (3)"),
     ],
     "[L1/4] Diner (NE)": [
         ((24, 141), "536 Richard Jackson Blvd (RSE)"),
@@ -900,7 +901,7 @@ pixels = {
         ((397, 462), "Jenny Hostel (NE)"),
         ((500, 559), "Cavalier Hotel"),
         ((575, 552), "Leslie Hotel"),
-        ((516, 324.5), "Container Crane (1)"),
+        ((516, 324.5), "Container Crane (9)"),
         ((631, 338), "Construction Crane (Vice Beach)"),
         ((839, 443), "Hotel Victor (NW)"),
         ((903, 450), "Miami Beach Parking Garage (SE)"),
@@ -948,7 +949,7 @@ pixels = {
         ((141, 1152), "Cavalier Hotel"),
         ((225, 1144), "Leslie Hotel"),
         ((249.5, 546), "Icon at South Beach"),
-        ((452, 754), "Container Crane (1)"),
+        ((452, 754), "Container Crane (9)"),
         ((522, 791), "Construction Crane (Vice Beach)"),
         ((565, 1008), "Hotel Victor (NW)"),
         ((675, 1244), "The Villa Casa Casuarina"),
@@ -1039,14 +1040,54 @@ pixels = {
         ((3664, 1020), "Beach (F)"),
         ((3840, 1741), "Beach (A)"),
     ],
-    "[T1/11] Motorboats": [
+    "[T1/11] Motorboats (A)": [
+        ((1378, 855), "Four Seasons Hotel Miami (SE)"),
+        ((1389, 840), "Four Seasons Hotel Miami (BE)"),
+        ((1620, 953), "CC (1) (V)"),
+        ((1676, 954), "CC (1) (W)"),
+        ((1689, 849), "CC (2) (V)"),
+        ((1739, 954), "CC (1) (X)"),
+        ((1766, 850), "CC (2) (W)"),
+        ((1852, 853), "CC (2) (X)"),
+        ((1865, 653), "CC (3) (BB1)"),
+        ((1869, 784), "CC (1)"),
+        ((1895, 626), "CC (3) (V)"),
+        ((2030, 630), "CC (3) (W)"),
+        ((2185, 633), "CC (3) (X)"),
+        ((2268, 405), "CC (3) (C)"),
+        ((2285, 395), "CC (3) (B)"),
+        ((2308, 470.5), "CC (3) (F)"),
+        ((2322, 452), "CC (3) (E)"),
+        ((2341, 115), "CC (4) (V)"),
+        ((2423, 267), "CC (3) (A)"),
+        ((2442, 270), "CC (3) (D)"),
+        ((2466, 234), "CC (3)"),
+        ((2468, 677), "CC (3) (BB2)"),
+        ((2480, 605.5), "C (TSW)"),
+        ((2480, 674), "C (BSW)"),
+        ((2540, 675), "C (BNW)"),
+        ((2580, 127), "CC (4) (W)"),
+        ((2584, 197.5), "CC (4) (BB)"),
+        ((2587, 546), "C (TSE)"),
+        ((2587, 622), "C (BSE)"),
+        ((2654, 548), "C (TNE)"),
+        ((2654, 624), "C (BNE)"),
+        ((2792, 489), "CC (3) (I)"),
+        ((2793.5, 466.5), "CC (3) (G)"),
+        ((2827, 654), "CC (3) (Z)"),
+        ((2837, 494), "CC (3) (H)"),
+        ((2856, 680), "CC (3) (BB3)"),
+        ((2868, 145), "CC (4) (X)"),
+        ((3376, 172), "CC (4) (Y)"),
+    ],
+    "[T1/11] Motorboats (B)": [
         ((2, 973), "Beacon (Virginia Key)"),
         ((1058, 844), "1450 Brickell Ave"),
         ((1131.5, 722.5), "Four Seasons Hotel Miami (SE)"),
         ((1143, 709), "Four Seasons Hotel Miami (BE)"),
-        ((1617, 670), "Container Crane (9)"),
-        ((1764, 516), "Container Crane (8)"),
-        ((2141, 170), "Container Crane (7)"),
+        ((1617, 670), "Container Crane (1)"),
+        ((1764, 516), "Container Crane (2)"),
+        ((2141, 170), "Container Crane (3)"),
         ((3171, 802), "Vizcayne South Condominium (NE)"),
         ((3283, 797), "Vizcayne North Condominium (NE)"),
         ((3756, 788), "Marina Blue (NE)"),
@@ -1432,12 +1473,12 @@ pixels = {
         ((3663, 238), "Sunset Harbour South Condo (RN)"),
     ],
     "[S2/44] Vice City 08 (Ferris Wheel)": [
-        ((415, 182), "Container Crane (6)"),
+        ((415, 182), "Container Crane (4)"),
         ((454, 685), "Highway Sign (S)"),
-        ((620, 183), "Container Crane (7)"),
+        ((620, 183), "Container Crane (3)"),
         ((832, 229), "Palazzo del Sol"),
-        ((955, 184), "Container Crane (8)"),
-        ((1259, 188), "Container Crane (9)"),
+        ((955, 184), "Container Crane (2)"),
+        ((1259, 188), "Container Crane (1)"),
         ((1515.5, 231), "Billboard #2 (Port VC)"),
         ((1581, 264), "Cruise Ship (TR)"),
         ((1649, 262), "Skyviews Miami Observation Wheel"),
@@ -2148,6 +2189,13 @@ lines = {
     "[T1/1] Prison": ([], [
         ((1204, 43), (1216.5, 880)),
     ]),
+    "[T1/11] Motorboats (A)": ([
+        ((2168, 822), (1875, 965)),
+        ((2312, 985), (1875, 1085))
+    ], [
+        ((3502, 28), (3512, 710)),
+        ((3808, 295), (3818, 734))
+    ]),
     "[T1/20] Rooftop Party": ([
         ((0, 1515), (352, 1492)),
         ((0, 2000), (381, 1960))
@@ -2520,6 +2568,15 @@ landmarks = {
     "112 NE 41st St (SW)": (16.674, 2195.583, 49.590),  # d=0.583 via Glitch (A) & Highway (NE)
     "Park (E)": (497.202, 2273.076, 0.000),  # via Glitch (A)
     "Park (W)": (481.392, 2264.564, 0.000),  # via Glitch (A)
+
+    "C (TNE)": (1537.312, -827.847, 23.791),  # via Motorboats (A)
+    "C (BNE)": (1537.310, -827.856, 21.201),  # via Motorboats (A)
+    "C (TSE)": (1537.377, -830.119, 23.857),  # via Motorboats (A)
+    "C (BSE)": (1537.376, -830.127, 21.267),  # via Motorboats (A)
+    "C (TSW)": (1525.014, -831.958, 24.023),  # via Motorboats (A)
+    "C (BSW)": (1525.013, -831.965, 21.433),  # via Motorboats (A)
+    "Container Crane (3)": (1431.343, -819.207, 65.222),  # via Motorboats (A)
+    "Container Crane (1)": (1135.211, -870.434, 65.222),  # via Motorboats (A)
 
     #### AIWE MAP ####
     "1703 E 5th St (Shack) (SE)": (-6264.218, 3479.946, 10.000),  # via AI World Editor Map (4K)
