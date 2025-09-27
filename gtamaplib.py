@@ -441,7 +441,7 @@ class Camera:
         self.draw = ImageDraw.Draw(self.image)
         return self
 
-    def project_map(self, map_name, map_scale=None, opacity=0.5):
+    def project_map(self, map_name, map_scale=None, opacity=0.5, keep_rgb=False):
         """
         Projects a map image into this camera's image
         """
@@ -450,7 +450,7 @@ class Camera:
         horizon = self.get_horizon()
         min_x, max_x = 0, self.image_w
         min_y, max_y = np.ceil(horizon * self.scale), self.image_h
-        m = get_map(map_name).open(scale=map_scale)
+        m = get_map(map_name).open(scale=map_scale, keep_rgb=keep_rgb)
         map_image_np = np.array(m.image)
         print(f"Projecting {map_name} onto {self.name}")
         for y in tqdm(range(int(min_y), int(max_y))):
@@ -635,6 +635,7 @@ class Camera:
             color = get_color(lm_name)
             self.draw_circle((x, y), 5, None, color, width)
             name = lm_name.replace("Four Seasons Hotel Miami", "FS")
+            name = lm_name.replace("Sunshine Skyway Bridge", "SSB")
             self.draw_label((x, y - 5), 5, name, color, (255, 255, 255))
         return self
 
@@ -707,7 +708,7 @@ class Camera:
         for i, (a, b) in enumerate(self.lines[1]):
             self.draw_circle(a, 3, None, (255, 255, 0), width)
             self.draw_circle(b, 3, None, (255, 255, 0), width)
-            if not vvps[i]: continue  # FIXME
+            if not vvps or not vvps[i]: continue  # FIXME
             self.draw_line((a, vvps[i]), (255, 255, 0), width)
         return self
 
@@ -987,11 +988,11 @@ class Map:
         )
         for lm_name, _ in landmarks:
             self.draw_landmark(lm_name, r=r)
-            # nomalized = normalize_name(lm_name)
-            # if nomalized in LANDMARK_OBJECTS:
-            #     LANDMARK_OBJECTS[nomalized].draw_on_map(self)
-            # else:
-            #     self.draw_landmark(lm_name, r=r)
+            nomalized = normalize_name(lm_name)
+            if nomalized in LANDMARK_OBJECTS:
+                LANDMARK_OBJECTS[nomalized].draw_on_map(self)
+            else:
+                self.draw_landmark(lm_name, r=r)
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
@@ -1093,11 +1094,13 @@ class Map:
             (self.zero[1] - xy[1]) / self.scale
         )
 
-    def open(self, scale=None, add_padding=False):
+    def open(self, scale=None, add_padding=False, keep_rgb=False):
         """
         Opens the map image for drawing
         """
-        self.image = Image.open(self.filename).convert("L").convert("RGB")
+        self.image = Image.open(self.filename)
+        if not keep_rgb:
+            self.image = self.image.convert("L").convert("RGB")
         if add_padding:
             km = int(self.scale * 1000)
             self.og_zero = tuple(np.asarray(self.og_zero) + km)
@@ -1544,38 +1547,65 @@ class SunshineSkywayBridge(Landmark):
 
     def __init__(
         self,
-        nt=(-6744.858, 4572.322, 120.806),
-        st=(-6685.319, 4362.297, 120.806),
-        rz=35.499
+        nt=(-6755.040, 4571.452, 119.659),
+        st=(-6691.696, 4352.913, 119.659),
+        nr=(-6755.040, 4571.452, 33.635),
+        sr=(-6691.696, 4352.913, 33.635),
+        nnr=(-6792.177, 4699.576, 31.034),
+        ssr=(-6654.559, 4224.789, 31.034),
     ):
         super().__init__("Sunshine Skyway Bridge")
         self.nt = nt
         self.st = st
-        self.rz = rz
+        self.nr = nr
+        self.sr = sr
+        self.nnr = nnr
+        self.ssr = ssr
         self._construct()
 
-    def _construct(self):
-        self.direction = get_direction(self.st, self.nt)
-        length = 110
-        self.rs = get_point((self.st[0], self.st[1], self.rz), -self.direction, length)
-        self.rn = get_point((self.nt[0], self.nt[1], self.rz), self.direction, length)
+    def _construct(self, n_samples=201):
+        self.direction = get_direction(self.ssr, self.nnr)
+        dir_xy = self.direction[:2]
+        points = np.stack([self.nnr, self.nr, self.sr, self.ssr])
+        ref_xy = self.ssr[:2]
+        # fit z(d) = a d^2 + b d + c (parabola)
+        d = (points[:, :2] - ref_xy) @ dir_xy  # shape (4,)
+        z = points[:, 2]
+        design_matrix = np.column_stack([d ** 2, d, np.ones_like(d)])
+        a, b, c = np.linalg.lstsq(design_matrix, z, rcond=None)[0]
+        d_samples = np.linspace(d.min(), d.max(), n_samples)
+        xy = ref_xy + np.outer(d_samples, dir_xy)
+        z_samples = a * d_samples ** 2 + b * d_samples + c
+        self.road = np.column_stack([xy, z_samples])  # (N, 3)
+        self._a, self._b, self._c = a, b, c
+
+    def _get_road_point(self, base_point, direction, distance):
+        dir_xy = self.direction[:2]
+        ref_xy = self.ssr[:2]
+        sign = 1 if np.dot(direction[:2], dir_xy) >= 0 else -1
+        d0 = (np.array(base_point[:2]) - ref_xy) @ dir_xy
+        d  = d0 + sign * distance
+        xy = ref_xy + d * dir_xy
+        z  = self._a * d ** 2 + self._b * d + self._c
+        return xy[0], xy[1], z
 
     def draw_on_map(self, m, width=1):
-        m.draw_line((self.rs, self.rn), self.color, width * 2)
+        m.draw_line((self.nnr, self.ssr), self.color, width * 4)
         m.draw_circle(self.nt, width * 5, self.color, (255, 255, 255), width)
         m.draw_circle(self.st, width * 5, self.color, (255, 255, 255), width)
 
     def render_on_camera(self, cam):
         cam.render_line((self.nt, (self.nt[0], self.nt[1], 0)), fill=self.color, width=4)
         cam.render_line((self.st, (self.st[0], self.st[1], 0)), fill=self.color, width=4)
-        cam.render_line((self.rs, self.rn), fill=self.color, width=2)
+        for i in range(len(self.road) - 1):
+            cam.render_line((self.road[i], self.road[i + 1]), fill=self.color, width=2)
         n_cables = 10
-        gap = (self.nt[2] - self.rz) / n_cables
+        gap = (self.nt[2] - self.nr[2]) / n_cables
         for pillar in (self.nt, self.st):
             for direction in (self.direction, -self.direction):
                 for i in range(n_cables):
-                    base_point = (pillar[0], pillar[1], self.rz)
-                    road_point = get_point(base_point, direction, (i + 1) * gap)
+                    base_point = (pillar[0], pillar[1], self.nr[2])
+                    road_point = self._get_road_point(base_point, direction, (i + 1) * gap)
                     pillar_point = get_point(base_point, [0, 0, 1], (i + 1) * gap)
                     cam.render_line((road_point, pillar_point), fill=self.color, width=0.5)
         return self
@@ -1971,10 +2001,6 @@ def find_camera(
     n_points = len(lm_names)
     ray_stacks = []
     if ray_pairs:
-        """
-        ray_stacks = ray_pairs
-        """
-        #"""
         # FIXME: delete pixels later
         for other_cam_name, lm_name_a, lm_name_b in ray_pairs:
             other_cam = get_camera(other_cam_name)
@@ -1992,7 +2018,6 @@ def find_camera(
                 (lm_name_a, (other_cam.xyz, other_cam.get_landmark_direction(lm_name_a))),
                 (lm_name_b, (other_cam.xyz, other_cam.get_landmark_direction(lm_name_b)))
             ))
-        #"""
     (x_min, y_min), (x_max, y_max) = get_bounding_box(line)
     xys = [
         (x, y)
