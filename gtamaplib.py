@@ -52,7 +52,7 @@ class Camera:
             self.register()
 
     def __repr__(self):
-        player = (f"(" + ", ".join([
+        player = ("(" + ", ".join([
             f"{v:.3f}" for v in self.player
         ]) + ")") if self.player else "None"
         d = 6 if self.hfov < 1 else 3
@@ -332,7 +332,7 @@ class Camera:
         """
         Returns the direction vector of a given landmark
         """
-        if not lm_name in self.landmark_directions:
+        if lm_name not in self.landmark_directions:
             self.landmark_directions[lm_name] = get_pixel_direction(
                 self.landmark_pixels[lm_name], self.q, self.fov, self.size
             )
@@ -342,7 +342,7 @@ class Camera:
         """
         Returns the camera-local direction vector of a given landmark
         """
-        if not lm_name in self.landmark_directions_local:
+        if lm_name not in self.landmark_directions_local:
             px, py = self.landmark_pixels[lm_name]
             ndc_x = 2 * ((px + 0.5) / self.w) - 1
             ndc_y = 2 * ((py + 0.5) / self.h) - 1
@@ -428,7 +428,7 @@ class Camera:
             max_x = min(max_x, self.image_w)
             min_y = max(min_y, math.ceil(horizon * self.scale))
             max_y = min(max_y, self.image_h)
-        print(f"Projecting {cam_name} onto {self.name}")
+        print(f"Projecting {cam_name} into {self.name}")
         for y in tqdm(range(int(min_y), int(max_y))):
             for x in range(int(min_x), int(max_x)):
                 point = self.get_point_at_zero_elevation(((x - self.offset) / self.scale, y / self.scale))
@@ -452,7 +452,7 @@ class Camera:
         min_y, max_y = np.ceil(horizon * self.scale), self.image_h
         m = get_map(map_name).open(scale=map_scale, keep_rgb=keep_rgb)
         map_image_np = np.array(m.image)
-        print(f"Projecting {map_name} onto {self.name}")
+        print(f"Projecting {map_name} into {self.name}")
         for y in tqdm(range(int(min_y), int(max_y))):
             for x in range(int(min_x), int(max_x)):
                 point = self.get_point_at_zero_elevation(((x - self.offset) / self.scale, y / self.scale))
@@ -836,7 +836,7 @@ class Camera:
         print(f"{self.name}: Yaw is {self.yaw:.3f}, ", end="")
         if not self.player:
             print("no player defined")
-        elif not "Player" in self.landmark_pixels:
+        elif "Player" not in self.landmark_pixels:
             print("no player pixel defined")
         else:
             yaw = self.yaw
@@ -1543,16 +1543,51 @@ class FourSeasons(Landmark):
         return self
 
 
+class HanksWaffles(Landmark):
+
+    def __init__(
+        self,
+        rne=(-6179.597, 4526.316, 16.948),
+        rse=(-6185.783, 4513.381, 16.996),
+        rsw=(-6203.031, 4521.820, 16.955),
+    ):
+        super().__init__("536 Richard Jackson Blvd")
+        self.rne = rne
+        self.rse = rse
+        self.rsw = rsw
+
+    def draw_on_map(self, m, width=1):
+        corners = (self.rne, self.rse, self.rsw)
+        for i in range(len(corners) - 1):
+            m.draw_line((corners[i], corners[i + 1]), self.color, width * 2)
+        for corner in corners:
+            m.draw_circle(corner, 5, self.color, (255, 255, 255), width)
+
+    def render_on_camera(self, cam, width=1):
+        bz = 14.000
+        rz = 17.000
+        corners = (self.rne, self.rse, self.rsw)
+        for corner in corners:
+            cam.render_line((corner, (corner[0], corner[1], bz)), self.color, width * 2)
+        for i in range(len(corners) - 1):
+            for j, z in enumerate(np.arange(bz, rz + 0.01, 0.1)):
+                f = 2 if j % 5 == 0 else 1
+                cam.render_line((
+                    (corners[i][0], corners[i][1], z),
+                    (corners[i + 1][0], corners[i + 1][1], z)
+                ), self.color, width * f)
+
+
 class SunshineSkywayBridge(Landmark):
 
     def __init__(
         self,
-        nt=(-6755.040, 4571.452, 119.659),
-        st=(-6691.696, 4352.913, 119.659),
-        nr=(-6755.040, 4571.452, 33.635),
-        sr=(-6691.696, 4352.913, 33.635),
-        nnr=(-6792.177, 4699.576, 31.034),
-        ssr=(-6654.559, 4224.789, 31.034),
+        nt=(-6753.926, 4566.237, 119.352),
+        st=(-6690.837, 4348.569, 119.352),
+        nr=(-6753.926, 4566.237, 33.585),
+        sr=(-6690.837, 4348.569, 33.585),
+        nnr=(-6790.733, 4693.227, 30.960),
+        ssr=(-6654.030, 4221.579, 30.960),
     ):
         super().__init__("Sunshine Skyway Bridge")
         self.nt = nt
@@ -1568,7 +1603,7 @@ class SunshineSkywayBridge(Landmark):
         dir_xy = self.direction[:2]
         points = np.stack([self.nnr, self.nr, self.sr, self.ssr])
         ref_xy = self.ssr[:2]
-        # fit z(d) = a d^2 + b d + c (parabola)
+        # fit z(d) = a * d**2 + b * d + c (parabola)
         d = (points[:, :2] - ref_xy) @ dir_xy  # shape (4,)
         z = points[:, 2]
         design_matrix = np.column_stack([d ** 2, d, np.ones_like(d)])
@@ -1576,7 +1611,7 @@ class SunshineSkywayBridge(Landmark):
         d_samples = np.linspace(d.min(), d.max(), n_samples)
         xy = ref_xy + np.outer(d_samples, dir_xy)
         z_samples = a * d_samples ** 2 + b * d_samples + c
-        self.road = np.column_stack([xy, z_samples])  # (N, 3)
+        self.road = np.column_stack([xy, z_samples])  # shape (N, 3)
         self._a, self._b, self._c = a, b, c
 
     def _get_road_point(self, base_point, direction, distance):
@@ -2778,4 +2813,5 @@ def subsample(image_np, xy):
 
 
 FS = FourSeasons()
+HW = HanksWaffles()
 SSB = SunshineSkywayBridge()
