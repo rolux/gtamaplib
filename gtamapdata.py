@@ -20,24 +20,27 @@ cameras = {
     "[L1/1] Diner": ((-6191.800, 4526.900, 14.900), (-6192.000, 4526.000, 15.700), (330.000, -6.000, 0.000), (None, 34.200), (1920, 1080), "2021-03-23 09-58-52 [1]"),
     "[L1/2] AI World Editor Map (4K)": (None, (-6526.350, 2989.138, 1_000_000.000), (0.000, -90.000, 0.000), (0.161776, 0.085944), (3840, 2040), "2021-04-15 18-59-33 [1]"),
     "[L1/3] Amphitheater": (None, (-350, -100, 8.0), (253.000, -13.500, 0.000), (65.000, None), (1920, 1028), "2021-07-09 15-18-02 [1]"),
-    "[L1/4] Diner (NE)": ((-6190.200, 4504.900, 14.600), (-6193.100, 4503.400, 16.000), (285.000, -12.500, 0.000), (None, 50.800), (1920, 1080), "2021-07-12 12-19-51 [4945]"),
+    #"[L1/4] Diner (NE)": ((-6190.200, 4504.900, 14.600), (-6193.100, 4503.400, 16.000), (285.000, -12.500, 0.000), (None, 50.800), (1920, 1080), "2021-07-12 12-19-51 [4945]"),
+    "[L1/4] Diner (NE)": ((-6190.200, 4504.900, 14.600), (-6193.100, 4503.400, 16.000), (285.789, -13.484, 0.000), (80.339, 50.800), (1920, 1080), "2021-07-12 12-19-51 [4945]"),
     #"[L1/4] Diner (N)": ((-6187.800, 4504.800, 14.600), (-6188.800, 4501.900, 16.200), (327.845, -16.355, 0.000), (None, 50.800), (1920, 1080), "2021-07-12 12-19-51 [4960]"),
     #"[L1/4] Diner (N)": ((-6187.800, 4504.800, 14.600), (-6188.800, 4501.900, 16.200), (326.693, -17.503, 0.000), (80.339, 50.800), (1920, 1080), "2021-07-12 12-19-51 [4960]"),
-    "[L1/4] Diner (N)": ((-6187.800, 4504.800, 14.600), (-6188.800, 4501.900, 16.200), (325.685, -17.757, 0.000), (80.339, 50.800), (1920, 1080), "2021-07-12 12-19-51 [4960]"),
-    "[L1/4] Diner (NW)": ((-6186.400, 4508.400, 14.600), (-6185.000, 4502.700, 15.500), (17.253, 1.767, 0.000), (80.593, 51.000), (1920, 1080), "2021-07-12 12-19-51 [5103]"),
-    "[L1/4] Diner (W) (A)": ((-6186.300, 4503.300, 14.300), (-6180.700, 4499.600, 16.700), (52.500, -9.200, 0.000), (None, 51.300), (1920, 1080), "2021-07-12 12-19-51 [5233]"),
+    "[L1/4] Diner (N)": ((-6187.800, 4504.800, 14.600), (-6188.800, 4501.900, 16.200), (326.117, -17.747, 0.000), (80.339, 50.800), (1920, 1080), "2021-07-12 12-19-51 [4960]"),
+    "[L1/4] Diner (NW)": ((-6186.400, 4508.400, 14.600), (-6185.000, 4502.700, 15.500), (17.858, 1.767, 0.000), (80.593, 51.000), (1920, 1080), "2021-07-12 12-19-51 [5103]"),
+    "[L1/4] Diner (W) (A)": ((-6186.300, 4503.300, 14.300), (-6180.700, 4499.600, 16.700), (53.000, -9.200, 0.000), (None, 51.300), (1920, 1080), "2021-07-12 12-19-51 [5233]"),
     #"[L1/4] Diner (W) (B)": ((-6185.800, 4502.700, 14.300), (-6179.600, 4500.100, 16.600), (63.335, -7.898, 0.000), (None, 51.300), (1920, 1080), "2021-07-12 12-19-51 [5235]"),
-    "[L1/4] Diner (W) (B)": ((-6185.800, 4502.700, 14.300), (-6179.600, 4500.100, 16.600), (63.566, -8.207, 0.000), (80.973, 51.300), (1920, 1080), "2021-07-12 12-19-51 [5235]"),
-    "[L1/4] Diner (SW)": ((-6183.600, 4501.100, 14.400), (-6177.500, 4504.400, 16.200), (115.534, -4.811, 0.000), (81.226, 51.500), (1920, 1080), "2021-07-12 12-19-51 [5244]"),
+    "[L1/4] Diner (W) (B)": ((-6185.800, 4502.700, 14.300), (-6179.600, 4500.100, 16.600), (64.066, -8.239, 0.000), (80.973, 51.300), (1920, 1080), "2021-07-12 12-19-51 [5235]"),
+    "[L1/4] Diner (SW)": ((-6183.600, 4501.100, 14.400), (-6177.500, 4504.400, 16.200), (116.023, -4.849, 0.000), (81.226, 51.500), (1920, 1080), "2021-07-12 12-19-51 [5244]"),
     "[L1/4] Diner (S)": ((-6181.600, 4500.600, 14.400), (-6179.200, 4507.100, 16.000), (161.000, -3.000, 0.000), (None, 51.800), (1920, 1080), "2021-07-12 12-19-51 [5250]"),
-    "[L1/4] Diner (E)": ((-6175.600, 4501.900, 14.400), (-6182.600, 4502.700, 15.800), (263.000, 0.000, 0.000), (None, 51.400), (1920, 1080), "2021-07-12 12-19-51 [5273]"),
-    "[L1/4] Diner (SE)": ((-6164.100, 4468.100, 14.800), (-6169.600, 4472.500, 16.800), (232.000, -5.810, 0.000), (None, 54.000), (1920, 1080), "2021-07-12 12-19-51 [5388]"),
+    "[L1/4] Diner (E)": ((-6175.600, 4501.900, 14.400), (-6182.600, 4502.700, 15.800), (264.166, -0.178, 0.000), (81.100, 51.400), (1920, 1080), "2021-07-12 12-19-51 [5273]"),
+    "[L1/4] Diner (SE) (A)": ((-6163.200, 4475.700, 14.500), (-6168.800, 4479.700, 16.400), (224.730, -6.418, 0.000), (None, 53.600), (1920, 1080), "2021-07-12 12-19-51 [5373]"),
+    "[L1/4] Diner (SE) (B)": ((-6164.100, 4468.100, 14.800), (-6169.600, 4472.500, 16.800), (218.111, -5.435, 0.000), (None, 54.000), (1920, 1080), "2021-07-12 12-19-51 [5388]"),
+    "[L1/4] Easy Inn": ((-6176.200, 4427.100, 15.600), (-6175.500, 4434.200, 17.500), (172.000, -3.000, 0.000), (None, 58.700), (1920, 1080), "2021-07-12 12-19-51 [5467]"),
     "[L1/4] Car Wash": ((-6220.800, 4316.200, 20.500), (-6216.700, 4321.600, 21.800), (146.326, 0.350, 0.000), (None, 51.300), (1920, 1080), "2021-07-12 12-19-51 [5655]"),
     "[L1/5] Trees": ((1484.100, 1317.600, 3.300), (1495.2, 1315.4, 0.800), (284.8, 27.300, 0.000), (None, 49.6), (1920, 1080), "2021-09-01 14-44-53 [?]"),
     # "[L1/6] Sidewalk (Jason) (E)": ((-461.500, 1233.400, 3.200), (-464.000, 1233.800, 4.600), (244.475, -19.200, -1.000), (None, 50.800), (1920, 1080), "2021-09-10 16-37-50 [?]),
     "[L1/6] Sidewalk (Jason) (E)": ((-461.500, 1233.400, 3.200), (-464.000, 1233.800, 4.600), (244.800, -19.865, 0.000), (None, 50.800), (1920, 1080), "2021-09-10 16-37-50 [?]"),
     "[L1/7] Port": ((1185.700, -429.100, 5.200), (1190.000, -426.900, 7.200), (302.500, 14.100, 0.000), (None, 49.600), (1376, 776), "2021-10-29 20-21-10 [241]"),
-    "[L1/8] Gas Station (Lucia)": ((-6319.500, 2749.100, 12.500), (-6319.100, 2748.300, 13.100), (359.830, -0.250, 0.000), (57.350, 34.200), (1920, 1080), "2021-11-05 11-09-23 [?]"),
+    "[L1/8] Gas Station (Lucia)": ((-6319.500, 2749.100, 12.500), (-6319.100, 2748.300, 13.100), (359.830, -0.234, 0.000), (57.350, 34.200), (1920, 1080), "2021-11-05 11-09-23 [?]"),
     "[L1/9] Motel": ((-5358.200, 3486.200, 66.700), (-5359.900, 3484.000, 66.500), (313.000, 14.000, 0.000), (None, 49.600), (1920, 1080), "2021-12-14 19-52-44 [?]"),
     "[L1/10] Pawn Shop (W)": ((-6423.000, 3060.100, 5.800), (-6421.600, 3061.600, 6.700), (125.104, -8.885, 0.000), (None, 49.600), (1376, 776), "2021-12-17 10-31-22 [?]"),
     "[L1/10] Pawn Shop (S)": ((-6420.100, 3062.300, 5.900), (-6420.300, 3064.700, 6.500), (173.193, -4.990, 0.000), (None, 49.600), (1376, 776), "2021-12-17 10-31-22 [?]"),
@@ -77,6 +80,7 @@ cameras = {
     "[L1/23] Tarmac": ((-2630.200, -116.900, 4.300), (-2630.200, -111.000, 6.700), (90.000, -50.000, 0.000), (60.000, None), (1920, 1080), "2022-05-20 10-56-34 [?]"),
     "[L1/24] Sidewalk (Jason) (S)": ((-465.900, 1228.900, 3.500), (-465.000, 1232.100, 3.500), (180.000, 0.000, 0.000), (None, 38.000), (1440, 900), "2022-05-20 11-20-13 [?]"),
     "[L1/25] Parking Lot": ((-1573.800, -1642.400, 3.800), (-1574.700, -1644.500, 5.6), (316.500, -33.500, 0.000), (None, 49.600), (1792, 868), "2022-05-24 17-19-42 [?]"),
+    "[L1/26] Loading Zone near Prison (N)": ((-4726.500, 1853.800, 11.500), (-4727.600, 1856.500, 11.900), (21.000, -8.400, 0.000), (None, 45.000), (1920, 1020), "2022-05-25 13-29-33 [360]"),
     "[L1/26] Loading Zone near Prison (SW)": ((-4727.000, 1852.200, 11.500), (-4725.300, 1853.800, 12.200), (122.973, -5.000, 0.000), (None, 49.600), (1920, 1020), "2022-05-25 13-29-33 [602]"),
     "[L1/27] Highway (N)": ((-584.000, 1601.300, 12.200), (-587.400, 1596.000, 13.400), (324.500, -6.000, 0.000), (None, 51.300), (1920, 1080), "2022-06-27 14-52-04 [?]"),
     "[L1/27] Highway (NE)": ((-503.300, 1716.900, 13.300), (-506.700, 1712.000, 15.400), (326.000, -16.300, 0.000), (None, 51.400), (1920, 1080), "2022-06-27 14-52-04 [?]"),
@@ -169,9 +173,9 @@ cameras = {
     "[T1/40] Street (Bikers) (B)": None,
     "[T1/41] Intersection (Bikers)": None,
     "[T1/42] High Rollerz": None,
-    "[T1/44] U-Turn (NW)": (None, (-6288.000, 3358.000, 5.500), (62.000, -1.000, 0.000), (50.000, None), (3840, 2160), "Trailer 1 [2117]"),
-    "[T1/44] U-Turn (NE)": (None, (-6288.000, 3358.000, 5.500), (340.500, -1.500, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [2168]"),
-    "[T1/46] Uncle Jack's": (None, (-6370.000, 3890.000, 15.000), (260.000, 1.500, 0.500), (60.000, None), (3840, 2160), "Trailer 1 [2308]"),
+    "[T1/44] U-Turn (NW)": (None, (-6288.000, 3358.000, 10.000), (64.000, -2.000, 0.000), (52.000, None), (3840, 2160), "Trailer 1 [2117]"),
+    "[T1/44] U-Turn (NE)": (None, (-6288.000, 3358.000, 10.000), (340.500, -1.500, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [2168]"),
+    "[T1/46] Uncle Jack's": (None, (-6370.000, 3875.000, 15.000), (260.000, 1.500, 0.500), (60.000, None), (3840, 2160), "Trailer 1 [2308]"),
     "[L3/1] Industrial Area": None,
     "[T2/1] Key Lento": (None, (-1808.000, -5256.000, 33.685), (134.337, -8.100, 0.000), (62.500, 30.546), (3840, 1728), "Trailer 2 [244]"),
     "[T2/2] House (Keys)": None,
@@ -212,9 +216,9 @@ cameras = {
     "[T2/71] Jet Ski": (None, (1000.000, 850.000, 0.500), (341.500, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [4202]"),
     "[T2/73] Truck (1)": None,
     "[T2/74] Truck (2)": (None, (-250.000, -420.000, 10.000), (90.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [4333]"),
-    "[T2/76] Chase (1)": (None, (-6290.000, 3950.000, 10.000), (111.000, 3.000, 2.500), (70.000, None), (3840, 1728), "Trailer 2 [4448]"),
-    "[T2/77] Chase (2) (A)": (None, (-6479.600, 3281.100, 2.690), (350.892, 2.500, 1.000), (49.300, 23.335), (3840, 1728), "Trailer 2 [4479]"),
-    "[T2/77] Chase (2) (B)": (None, (-6472.900, 3247.300, 6.318), (354.591, 1.700, -1.500), (48.000, 22.659), (3840, 1728), "Trailer 2 [4513]"),
+    "[T2/76] Chase (1)": (None, (-6290.000, 3950.000, 15.000), (110.600, 3.000, 2.500), (70.000, None), (3840, 1728), "Trailer 2 [4448]"),
+    "[T2/77] Chase (2) (A)": (None, (-6479.600, 3281.100, 2.857), (350.892, 2.500, 1.000), (49.300, 23.335), (3840, 1728), "Trailer 2 [4479]"),
+    "[T2/77] Chase (2) (B)": (None, (-6472.900, 3247.300, 6.457), (354.591, 1.700, -1.500), (48.000, 22.659), (3840, 1728), "Trailer 2 [4513]"),
     "[T2/80] Skyline": (None, (793.000, 1357.000, 10.152), (135.249, -2.100, 0.000), (58.100, 28.067), (3840, 1728), "Trailer 2 [4665]"),
     "[S2/2] Jason Duval 02 (Car)": (None, (900.000, 500.000, 5.000), (298.000, 9.500, 0.000), (60.000, None), (3840, 2160), "Jason Duval 02 [1]"),
     "[S2/3] Jason Duval 03 (Boat)": None,
@@ -244,8 +248,8 @@ cameras = {
     "[S2/47] Leonida Keys 05 (Boats)": None,
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": None,
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
-    "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6343.000, 3691.000, 7.835), (71.577, -22.300, 0.000), (83.300, 53.157), (3840, 2160), "Port Gellhorn 04 [1]"),
-    "[S2/55] Port Gellhorn 05 (Fire)": None,
+    "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
+    "[S2/55] Port Gellhorn 05 (Fire)": (None, (-6800.000, 3950.000, 5.000), (315.000, -0.500, 0.000), (50.000, None), (3840, 2160), "Port Gellhorn 05 [1]"),
     "[S2/56] Ambrosia 01 (Bikers)": (None, (-2750.000, 3850.000, 5.000), (30.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Ambrosia 01 [1]"),
     "[S2/57] Ambrosia 02 (Panorama)": (None, (-2467.000, 5149.000, 78.770), (160.425, -4.100, 0.000), (53.000, 31.333), (3840, 2160), "Ambrosia 02 [1]"),
     "[S2/58] Ambrosia 03 (Enforcer)": None,
@@ -262,7 +266,7 @@ cameras = {
     "[S2/72] Leonida Keys Postcard (X)": (None, (-3813.000, -6798.000, 149.816), (300.041, -12.000, 0.000), (47.000, 32.337), (2563, 1709), "Leonida Keys Postcard [?]"),
     #"[S2/73] Port Gellhorn Postcard": (None, (-6525.000, 3550.000, 30.000), (50.000, -0.300, 0.000), (60.000, None), (3240, 2160), "Port Gellhorn Postcard [60]"),
     #"[S2/73] Port Gellhorn Postcard": (None, (-6563.000, 3613.000, 20.155), (51.895, 0.000, 0.000), (58.300, 40.793), (3240, 2160), "Port Gellhorn Postcard [60]"),
-    "[S2/73] Port Gellhorn Postcard (X)": (None, (-6550.000, 3606.000, 31.063), (51.511, -3.200, 0.000), (71.000, 50.865), (3240, 2160), "Port Gellhorn Postcard [1]"),
+    "[S2/73] Port Gellhorn Postcard (X)": (None, (-6550.000, 3608.000, 31.297), (51.974, -3.200, 0.000), (71.000, 50.865), (3240, 2160), "Port Gellhorn Postcard [1]"),
     "[S2/74] Ambrosia Postcard (X)": (None, (-2694.881, 3981.266, 55.983), (150.756, -1.800, 0.000), (51.500, 34.964), (3308, 2160), "Ambrosia Postcard [?]"),
     "[S2/75] Grassrivers Postcard (X)": None,
     "[S2/76] Mount Kalaga National Park Postcard (X)": None,
@@ -289,7 +293,7 @@ metadata = {
     "[L1/4] Diner (N)": ("428.0", (1041, "tw10_08e"), "09:29", ("Sun", "Sun"), (1.00, 27.21), 10.2),
     "[L1/4] Diner (W) (B)": ("428.0", (1041, "tw10_08e"), "09:33", ("Sun", "Sun"), (1.00, 18.07), 10.2),
     "[L1/4] Diner (S)": ("428.0", (1041, "tw10_08e"), "09:33", ("Sun", "Sun"), (1.00, 17.61), 10.3),
-    "[L1/4] Diner (SE)": ("428.0", (1041, "tw10_08e"), "09:35", ("Sun", "Sun"), (1.00, 13.09), 10.3),
+    "[L1/4] Diner (SE) (B)": ("428.0", (1041, "tw10_08e"), "09:35", ("Sun", "Sun"), (1.00, 13.09), 10.3),
     "[L1/4] Car Wash": ("428.0", (1034, "tw10_11"), "09:38", ("Sun", "Sun"), (1.00, 4.33), 10.1),
     "[L1/5] Trees": ("440.0", (612, "sb_13"), "08:00", ("Sun", "Sun"), (1.00, 28.01), 15.9),
     "[L1/6] Sidewalk (Jason) (E)": ("444.0.8", (532, "nm_16"), "11:40", ("Sun", "Sun"), (1.00, 126.44), 17.7),
@@ -480,9 +484,11 @@ pixels = {
         ((1139, 89), "Container Crane (3)"),
     ],
     "[L1/4] Diner (NE)": [
+        ((12.5, 111.5), "Mount Waffles (W2)"),
         ((24, 141), "536 Richard Jackson Blvd (RSE)"),
         ((117, 87), "Mount Waffles (TW)"),
-        ((236, 86), "Mount Waffles (TE)"),
+        ((192, 84), "Mount Waffles"),
+        ((260, 90), "Mount Waffles (TE)"),
         ((256.5, 167.5), "Beige Billboard (BE)"),
         ((335, 184), "Train Tunnel (N)"),
         ((341, 173), "Train Tunnel (T)"),
@@ -491,7 +497,11 @@ pixels = {
         ((530, 154), "Mount Waffles (R)"),
         ((865, 225), "Waffles Billboard (BW)"),
         ((935, 37), "Waffles Billboard"),
-        ((1513, 17), "Billboard (Hank's Waffles)"),
+        ((1486, 284), "Billboard (Hank's Waffles) (B)"),
+        #((1513, 17), "Billboard (Hank's Waffles)"),
+        ((1590, 351), "Waffles Arrow"),
+        ((1707, 100), "White Pole"),
+        ((1773.5, 250), "Domed Hills Sign (TW)"),
     ],
     "[L1/4] Diner (N)": [
         ((117, 186), "Waffles Sign (TR)"),
@@ -501,7 +511,8 @@ pixels = {
         ((535, 84.5), "536 Richard Jackson Blvd (RSE)"),
         ((676, 139), "536 Richard Jackson Blvd (RNE)"),
         ((1075, 15), "Mount Waffles (TW)"),
-        ((1142, 8.5), "Mount Waffles (T)"),
+        ((1221, 93.5), "Train Tunnel (N)"),
+        ((1136, 8.5), "Mount Waffles"),
         ((1194, 16), "Mount Waffles (TE)"),
         ((1128, 82), "Beige Billboard (BE)"),
         ((1430, 60), "Mount Waffles (R)"),
@@ -559,28 +570,60 @@ pixels = {
         ((1888.5, 334.5), "536 Richard Jackson Blvd (RSE)"),
     ],
     "[L1/4] Diner (SW)": [
+        ((61, 340), "18635 SW 105th Ave (CE)"),
+        ((331, 353.5), "18635 SW 105th Ave (CW)"),
         ((1522, 460), "Bay (AAA)"),
         ((1594, 460), "Bay (BBB)"),
         ((1678.5, 204), "Sunshine Skyway Bridge (N)"),
         ((1867.5, 191), "Water Tower (North Port Gellhorn)"),
     ],
+    "[L1/4] Diner (S)": [
+        ((146.5, 389), "Easy Inn Sign"),
+        ((750, 393), "252 N Tyndall Pkwy (NE)"),
+        ((810, 393), "252 N Tyndall Pkwy (NW)"),
+        ((980, 402), "18635 SW 105th Ave (CE)"),
+        ((1159, 402), "18635 SW 105th Ave (CW)"),
+    ],
     "[L1/4] Diner (E)": [
         ((86.5, 413.5), "Mount Mountain"),
+        ((169, 459), "Waffles Billboard (BW)"),
         ((306, 215), "Waffles Billboard"),
+        ((1008, 554), "Billboard (Hank's Waffles) (B)"),
         ((1076, 178), "Billboard (Hank's Waffles) (BE)"),
+        ((1185, 408), "White Pole"),
+        ((1229, 639), "Waffles Arrow"),
+        ((1256, 506), "Domed Hills Sign (TW)"),
+        ((1665, 537.5), "Traffic Sign"),
     ],
-    "[L1/4] Diner (SE)": [
+    "[L1/4] Diner (SE) (A)": [
+        ((18, 266), "White Pole"),
+        ((47, 394.5), "Domed Hills Sign (TW)"),
+        ((720, 445), "Traffic Sign"),
+        ((1230, 321.5), "Easy Hill"),
+        ((1866, 309), "Easy Inn Sign"),
+    ],
+    "[L1/4] Diner (SE) (B)": [
+        ((505, 462), "Traffic Sign"),
         ((1177, 332), "Easy Hill"),
+        ((1757, 320), "Easy Inn Sign"),
+    ],
+    "[L1/4] Easy Inn": [
+        ((103, 301), "Easy Inn Sign"),
+        ((1204, 420), "Springfield Community Church"),
+        ((1227.5, 432), "Car Wash Sign (BE)"),
+        ((1636, 227), "252 N Tyndall Pkwy (NE)"),
+        ((1860.5, 216.5), "252 N Tyndall Pkwy (NW)"),
     ],
     "[L1/4] Car Wash": [
         # ((670, 450), "Pylon (77)"),
         ((511, 503), "Springfield Community Church (CE)"),
-        ((685, 466), "Pylon (C)"),
+        ((685, 466), "Pylon (3)"),
         ((734, 507), "Springfield Community Church (CW)"),
         ((743, 405), "Tall Double Billboard"),
         ((752, 443), "Springfield Community Church"),
         #((1011, 641), "Player")
-        ((1029, 685), "Player")
+        ((1029, 685), "Player"),
+        ((1732, 121), "Car Wash Sign (BE)"),
     ],
     "[L1/6] Sidewalk (Jason) (E)": [
         ((167, 86), "W South Beach (SE)"),
@@ -594,6 +637,7 @@ pixels = {
         ((967, 65), "The Floridian"),
         ((970, 101), "West Venetian Causeway Bridge"),
         ((1073, 53), "Continuum on South Beach (S)"),
+        ((1097, 108.5), "Star Island Water Tower"),
         ((1119, 59), "Portofino Tower (NE)"),
         ((1133, 59), "Portofino Tower (NW)"),
         ((1253, 107), "Margaret Pace Park"),
@@ -605,12 +649,15 @@ pixels = {
         ((862, 401), "Portofino Tower (S)"),
     ],
     "[L1/8] Gas Station (Lucia)": [
-        ((18, 415), "Pylon (A)"),
+        ((18, 415), "Pylon (1)"),
         # ((106, 871), "Player"),
-        ((546, 392), "Pylon (B)"),
-        ((643, 530), "Unknown Bridge (Port Gellhorn)"),
-        ((691, 525), "Unknown Building (Port Gellhorn) (W)"),
-        ((807, 453), "Pylon (C)"),
+        ((546, 392), "Pylon (2)"),
+        ((631, 530), "Unknown Bridge (Port Gellhorn) (W)"),
+        ((659, 530), "Unknown Bridge (Port Gellhorn) (E)"),
+        ((688, 531), "Unknown Building (Port Gellhorn) (W)"),
+        ((705, 524), "Unknown Building (Port Gellhorn) (T)"),
+        ((720, 531), "Unknown Building (Port Gellhorn) (E)"),
+        ((807, 453), "Pylon (3)"),
         #((840, 458), "Pylon (77)"),
         ((853, 311), "4937 E Hwy 98 (Gas Station) (NE)"),
         ((868, 422), "Port Gellhorn Smokestack"),
@@ -634,9 +681,11 @@ pixels = {
         ((1376, 559), "Parker City Hall (SW)"),
         ((1451, 458.5), "Welcome to Port Gellhorn Sign"),
         ((1541, 559.5), "Parker Police Station (SW)"),
-        ((1529, 438), "Mount Waffles (W)"),
-        ((1597, 417), "Mount Waffles (TW)"),
-        ((1638, 418), "Mount Waffles (TE)"),
+        ((1529, 438), "Mount Waffles (W1)"),
+        ((1537, 433), "Mount Waffles (W2)"),
+        ((1594, 418), "Mount Waffles (TW)"),
+        ((1615, 418), "Mount Waffles"),
+        ((1636, 418), "Mount Waffles (TE)"),
     ],
     "[L1/10] Pawn Shop (W)": [
         ((514, 400), "Player"),
@@ -716,11 +765,11 @@ pixels = {
     ],
     "[L1/20] Gas Station (Jason)": [
         ((212, 159), "4937 E Hwy 98 (Gas Station) (SE)"),
-        ((351, 360), "Pylon (A)"),
+        ((351, 360), "Pylon (1)"),
         ((466, 398), "Ferris Wheel (Port Gellhorn)"),
         ((555, 413), "Mr. Bingo (SE)"),
         ((671, 710), "Player"),
-        ((694, 362), "Pylon (B)"),
+        ((694, 362), "Pylon (2)"),
         ((883, 305), "4937 E Hwy 98 (Gas Station) (NE)"),
         ((903, 372), "Port Gellhorn Smokestack"),
         ((1109, 410), "Billboard (Hank's Waffles)"),
@@ -1025,6 +1074,7 @@ pixels = {
         ((1883, 651), "The Waverly South Beach (NW)"),
         ((1927, 697), "Flagler on the River"),
         ((1972, 741), "FAA Miami ATCT (MIA)"),
+        ((1985, 833), "Star Island Water Tower"),
         ((2069, 699), "Loft Downtown II"),
         ((2079, 708.5), "Miami-Dade County Courthouse"),
         ((2102, 815.5), "Flamingo South Beach (SESW)"),
@@ -1275,6 +1325,7 @@ pixels = {
         ((161, 795), "1500 Ocean Dr"),
         ((384, 786), "Royal Palm South Beach (N) (N)"),
         ((490, 784), "Royal Palm South Beach (S)"),
+        ((544, 751), "Fisher Island (A)"),
         ((663, 700), "Villa del Mare"),
         ((667, 717), "Loews Miami Beach"),
         ((698, 1476), "W South Beach (BNW)"),
@@ -1395,10 +1446,11 @@ pixels = {
         ((3117, 434), "New Bahia Honda Bridge (W)"),
         ((3138, 430), "US Coast Guard Station Islamorada"),
         ((3311, 470.5), "Island V (S)"),
-        ((3432, 417), "Naval Air Station Key West (1)"),
-        ((3506, 419), "Naval Air Station Key West (2)"),
-        ((3631, 422), "Naval Air Station Key West (3)"),
-        ((3764.5, 421), "Naval Air Station Key West (4)"),
+        ((3432, 417), "Naval Air Station Key West (Control Tower)"),
+        ((3506, 419), "Naval Air Station Key West (Radar Tower)"),
+        ((3549, 430.5), "Naval Air Station Key West (Hangar)"),
+        ((3631, 422), "KBYX Doppler Weather Radar"),
+        ((3764.5, 421), "Water Tower (Leonida Keys)"),
         ((3799.5, 423), "SFUWO School"),
     ],
     "[T2/58] Explosion": [
@@ -1429,9 +1481,10 @@ pixels = {
         ((3768, 687), "1111 Lincoln Rd (SE)"),
     ],
     "[T2/76] Chase (1)": [
-        ((214, 331), "Pylon (C)"),
+        ((214, 331), "Pylon (3)"),
         ((790, 857), "Main Street Consignment"),
         ((2300, 535), "Crossroad Park Minimall Sign"),
+        ((2972, 927), "Unknown Structure (Port Gellhorn)"),
         ((3615, 186), "Black Billboard (BE)"),
     ],
     "[T2/77] Chase (2) (A)": [
@@ -1444,7 +1497,7 @@ pixels = {
         ((373, 597), "Sunshine Skyway Bridge (S)"),
         ((788, 39), "Radio Tower #1 (Port Gellhorn)"),
         # ((1894, 498), "Pylon (77)"),
-        ((1834, 586), "Pylon (C)"),
+        ((1834, 586), "Pylon (3)"),
         ((2447, 775), "Wildfire Scooters (NW)"),
         ((3210, 720), "Wildfire Scooters (S)"),
         ((3787.5, 458.5), "Oval Yellow Sign"),
@@ -1746,6 +1799,10 @@ pixels = {
         ((1076, 93), "Train Signal (S) (W)"),
         ((1086, 93), "Train Signal (S) (E)"),
     ],
+    "[S2/55] Port Gellhorn 05 (Fire)": [
+        ((0, 677.5), "Sunshine Skyway Bridge (B)"),
+        ((155, 682), "Sunshine Skyway Bridge (A)"),
+    ],
     "[S2/56] Ambrosia 01 (Bikers)": [
         ((491, 795), "Wide Billboard (Ambrosia)"),
         ((580, 645), "Billboard with Oval Motif #2"),
@@ -2028,6 +2085,7 @@ pixels = {
         ((617, 306), "Stiltsville (6)"),
         ((589, 499), "Island A (W)"),
         #((682, 438), "House D (W)"),
+        ((646, 279), "Fisher Island (Z)"),
         ((686.5, 440.5), "House D (SW)"),
         ((694, 436), "House D (E)"),
         ((697, 450), "House C (W)"),
@@ -2115,11 +2173,11 @@ pixels = {
         ((1458, 1092), "Bay (N)"),
         ((1481, 1001), "Port of Tampa Container Crane (1)"),
         ((1500.5, 995), "Port of Tampa Container Crane (2)"),
-        ((1500.5, 1039.5), "Port of Tampa Container Crane (2) (BB)"),
+        ((1500.5, 1039.5), "PTCC (2) (BB2)"),
         #((1500.5, 1094), "Port of Tampa Container Crane (2) (Z)"),
         ((1660, 1100), "Bay (O)"),
         ((1706.5, 983.5), "Port of Tampa Container Crane (3)"),
-        ((1706.5, 1035), "Port of Tampa Container Crane (3) (BB)"),
+        ((1706.5, 1035), "PTCC (3) (BB2)"),
         #((1706.5, 1099), "Port of Tampa Container Crane (3) (Z)"),
         ((1768, 1050), "Wind Farm (1)"),
         ((1800, 1050), "Wind Farm (2)"),
@@ -2181,15 +2239,17 @@ pixels = {
         ((3222, 1108), "Bay (Z)"),
     ],
     "[S2/73] Port Gellhorn Postcard (X)": [
+        ((22, 1056), "PGH Island B (W)"),
         ((27, 999), "PGH Barrier Island (E)"),
         ((67.5, 1031.5), "Soccer Field (SW)"),
+        ((138, 1056), "PGH Island B (E)"),
         ((190, 1037.5), "Soccer Field (SE)"),
         ((296, 999), "Pin P01N"),
-        ((314, 1045), "PGH Island (E)"),
+        ((314, 1045), "PGH Island A (E)"),
         ((360.5, 1029.5), "Pin P01S"),
-        ((404, 1052), "PGH Island (S)"),
+        ((404, 1052), "PGH Island A (S)"),
         ((584, 1021), "Soccer Field (NW)"),
-        ((644, 1053), "PGH Island (W)"),
+        ((644, 1053), "PGH Island A (W)"),
         ((712, 1007), "Bay (A)"),
         ((724, 1025), "Soccer Field (NE)"),
         ((828, 1008), "Bay (B)"),
@@ -2207,11 +2267,12 @@ pixels = {
         ((1491, 1110), "PGH Canal (B)"),
         ((1500, 998), "Bay (I)"),
         ((1501, 900), "Port of Tampa Container Crane (2)"),
-        ((1501, 944.5), "Port of Tampa Container Crane (2) (BB)"),
+        ((1501, 944.5), "PTCC (2) (BB2)"),
         ((1515, 1001), "Bay (J)"),
         ((1569, 1002), "Bay (K)"),
+        ((1659, 985), "1701 US-98 (NW)"),
         ((1706, 889), "Port of Tampa Container Crane (3)"),
-        ((1706, 939), "Port of Tampa Container Crane (3) (BB)"),
+        ((1706, 939), "PTCC (3) (BB2)"),
         ((1732, 1005), "Bay (L)"),
         ((1784, 954), "Wind Farm (1)"),
         ((1799, 954), "Wind Farm (2)"),
@@ -2229,18 +2290,21 @@ pixels = {
         ((2062, 898), "FEC Srauss Trunnion Bascule Bridge (TW)"),
         ((2091, 898), "FEC Srauss Trunnion Bascule Bridge (TE)"),
         ((2144, 958), "Unknown Building (North Port Gellhorn) (E)"),
+        ((2199, 985), "1701 US-98 (SE)"),
         ((2249, 965), "Unknown Building (North Port Gellhorn) (T)"),
         ((2269, 1009), "Bay (N)"),
         ((2285, 949), "Vertex Energy Mobile Refinery (1)"),
         ((2291, 1034), "Water Tank (West Port Gellhorn)"),
-        ((2301, 974),  "FEC Srauss Trunnion Bascule Bridge (NE)"),
+        ((2301, 974),  "FEC Srauss Trunnion Bascule Bridge (SE)"),
         ((2314, 1009), "Bay (O)"),
         ((2324, 921), "Vertex Energy Mobile Refinery (2)"),
         ((2333.5, 932), "Vertex Energy Mobile Refinery (3)"),
         ((2358, 925), "Vertex Energy Mobile Refinery (4)"),
+        ((2368, 1017.5), "Ship (A)"),
         ((2379, 932), "Vertex Energy Mobile Refinery (5)"),
         ((2400, 920), "Vertex Energy Mobile Refinery (6)"),
         ((2408, 912), "Vertex Energy Mobile Refinery (7)"),
+        ((2454, 1017.5), "Ship (B)"),
         ((2454.5, 948), "Vertex Energy Mobile Refinery (8)"),
         ((2483, 922), "Vertex Energy Mobile Refinery (9)"),
         ((2488, 999), "Train Signal (N) (W)"),
@@ -2249,6 +2313,7 @@ pixels = {
         ((2519, 923), "Vertex Energy Mobile Refinery (11)"),
         ((2526, 1614), "Juice Fruit Sign (W)"),
         ((2566, 923.5), "Vertex Energy Mobile Refinery (12)"),
+        ((2572, 1017.5), "Ship (C)"),
         ((2615, 1622.5), "Juice Fruit Sign (B)"),
         ((2626, 1503), "Juice Fruit Sign"),
         ((2639, 1009), "Bay (P)"),
@@ -2323,8 +2388,8 @@ lines = {
     "[L1/4] Diner (NW)": ([
         ((1170, 99), (598, 295)),
         ((1172, 296), (530, 425)),
-        ((1109, 181), (750, 286.5)),
-        ((1108, 272), (750, 354)),
+        ##((1109, 181), (750, 286.5)),
+        ##((1108, 272), (750, 354)),
         ((1170, 99), (1487, 276)),
         ((1172, 296), (1487, 399)),
         ((1225, 183), (1434, 284.5)),
@@ -2370,7 +2435,8 @@ lines = {
         ((1858, 587), (1561, 575.5)),
     ], []),
     "[L1/8] Gas Station (Lucia)": ([
-        ((0, 102), (853, 311)),
+        #((0, 102), (853, 311)),
+        ((0, 113), (853, 316.5)),
         ((0, 215), (853, 369)),
     ], []),
     # "[L1/10] Pawn Shop": (
@@ -2521,39 +2587,41 @@ landmarks = {
     "Asia Brickell Key (CC2)": (-160.810, -855.041, 225.576),  # d=1.115 via Motorboats (A) & Vice Beach (B)
     "Ball near Grassrivers Sign": (-1135.500, 391.300, 2.700),  # Gizmo
     "Bank of America Financial Center": (1703.550, 1381.121, 85.112),  # d=0.575 via Beach & Venetian Islands
-    "Bay (A)": (-7888.012, 4007.763, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (B)": (-7823.382, 4051.420, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (C)": (-7796.776, 4066.573, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (D)": (-7797.732, 4121.304, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (E)": (-7808.808, 4186.925, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (F)": (-7811.171, 4269.806, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (G)": (-8314.309, 4501.624, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (H)": (-7994.401, 4595.903, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (I)": (-7817.564, 4509.440, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (J)": (-7733.046, 4460.999, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (K)": (-7687.975, 4470.274, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (L)": (-7562.698, 4496.444, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (M)": (-7487.438, 4511.543, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (N)": (-7306.769, 4664.845, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (O)": (-7291.341, 4684.248, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (P)": (-7179.916, 4824.382, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (Q)": (-7178.730, 4862.166, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (R)": (-7103.691, 4756.495, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (S)": (-7101.172, 4759.664, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (T)": (-7040.069, 4836.510, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (U)": (-7018.652, 4863.445, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (V)": (-7021.941, 4889.892, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (W)": (-6982.746, 4908.602, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (X)": (-7072.743, 5198.489, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (Y)": (-7056.543, 5175.101, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (Z)": (-6987.820, 5102.255, 0.000),  # via Port Gellhorn Postcard (X)
-    "Bay (AA)": (-7810.499, 4610.591, 0.000),  # via Diner (W) (A)
-    "Bay (BB)": (-7785.001, 4643.820, 0.000),  # via Diner (W) (A)
-    "Bay (CC)": (-7880.631, 4689.660, 0.000),  # via Diner (W) (A)
-    "Bay (DD)": (-7079.653, 4786.796, 0.000),  # via Diner (W) (A)
-    "Bay (EE)": (-7077.273, 4789.897, 0.000),  # via Diner (W) (A)
-    "Bay (FF)": (-6592.860, 4636.853, 0.000),  # via Diner (W) (A)
-    "Bay (GG)": (-6599.043, 4628.794, 0.000),  # via Diner (W) (A)
+    "Bay (A)": (-7901.308, 4001.868, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (B)": (-7836.550, 4046.379, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (C)": (-7809.868, 4061.863, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (D)": (-7811.277, 4116.995, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (E)": (-7822.971, 4183.017, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (F)": (-7826.028, 4266.501, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (G)": (-8334.823, 4495.955, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (H)": (-8013.287, 4593.547, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (I)": (-7834.421, 4507.877, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (J)": (-7748.875, 4459.762, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (K)": (-7703.542, 4469.474, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (L)": (-7577.540, 4496.860, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (M)": (-7501.840, 4512.687, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (N)": (-7321.066, 4668.609, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (O)": (-7305.681, 4688.283, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (P)": (-7194.563, 4830.375, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (Q)": (-7193.676, 4868.451, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (R)": (-7117.215, 4762.600, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (S)": (-7114.702, 4765.814, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (T)": (-7053.768, 4843.733, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (U)": (-7032.410, 4871.045, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (V)": (-7035.939, 4897.663, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (W)": (-6996.603, 4916.832, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (X)": (-7089.636, 5208.158, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (Y)": (-7073.125, 5184.727, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (Z)": (-7003.285, 5111.912, 0.000),  # via Port Gellhorn Postcard (X)
+    "Bay (AA)": (-7811.405, 4596.364, 0.000),  # via Diner (W) (A)
+    "Bay (BB)": (-7786.199, 4629.814, 0.000),  # via Diner (W) (A)
+    "Bay (CC)": (-7882.225, 4674.819, 0.000),  # via Diner (W) (A)
+    "Bay (DD)": (-7082.125, 4778.940, 0.000),  # via Diner (W) (A)
+    "Bay (EE)": (-7079.772, 4782.062, 0.000),  # via Diner (W) (A)
+    "Bay (FF)": (-6594.042, 4633.251, 0.000),  # via Diner (W) (A)
+    "Bay (GG)": (-6600.155, 4625.139, 0.000),  # via Diner (W) (A)
+    "Bay (AAA)": (-7496.340, 4518.169, 0.000),  # via Diner (SW)
+    "Bay (BBB)": (-7529.528, 4586.147, 0.000),  # via Diner (SW)
     "Beach (A)": (2219.782, -392.537, 0.000),  # via Beach
     "Beach (B)": (2212.671, -356.162, 0.000),  # via Beach
     "Beach (C)": (2217.730, -289.177, 0.000),  # via Beach
@@ -2562,7 +2630,7 @@ landmarks = {
     "Beach (F)": (2239.529, 359.545, 0.000),  # via Beach
     "Beach (G)": (2262.859, 973.636, 0.000),  # via Vice Beach (A)
     "Beach (H)": (2249.513, 1133.739, 0.000),  # via Vice Beach (A)
-    "Beige Billboard (BE)": (-6124.881, 4572.692, 23.648),  # d=1.218 via Diner (N) & Diner (NE)
+    "Beige Billboard (BE)": (-6108.791, 4591.625, 24.695),  # d=0.365 via Diner (N) & Diner (NE)
     "Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
     "22 Biscayne Bay (SE)": (-338.986, 1346.432, 72.845),  # d=0.132 via Vice City Postcard & Vice City 03 (Basketball)
     "50 Biscayne Blvd (SE)": (-407.635, -239.477, 146.292),  # d=1.095 via Vice City 03 (Basketball) & Skyline
@@ -2583,9 +2651,11 @@ landmarks = {
     "Cruise Ship (RT)": (363.679, -304.847, 59.541),  # d=1.921 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Di Lido Island (N)": (496.162, 1537.713, 0.000),  # via Venetian Islands
     "Di Lido Island (S)": (588.273, 1001.623, 0.000),  # via Venetian Islands
-    "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) & Ambrosia 04 (Fires)
+    "Domed Hills Sign (TW)": (-6107.844, 4474.328, 17.450),  # d=0.934 via Diner (NE) & Diner (E)
+    "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "FAA Miami ATCT (MIA)": (-2369.054, -777.804, 96.640),  # d=2.091 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
+    "Fisher Island (A)": (2169.545, -1256.967, 0.000),  # via Rooftop Party
     "Flagler Memorial Island (N)": (820.612, 994.645, 0.000),  # via Venetian Islands
     "Flagler on the River": (-1024.660, -293.230, 139.279),  # d=1.543 via Skyline & Vice Beach (B)
     "Flamingo South Beach (NENE)": (1364.313, 1084.487, 51.977),  # d=0.861 via Rooftop Party & Vice Beach (B)
@@ -2631,10 +2701,10 @@ landmarks = {
     "Jade Ocean Condos": (1577.927, 2493.047, 201.994),  # d=0.464 via Venetian Islands & Highway (NE)
     "Jade Ocean Condos (SW)": (1603.480, 2483.393, 204.304),  # d=1.834 via Beach & Venetian Islands
     "Jenny Hostel (NE)": (1907.067, 608.982, 32.085),  # d=0.170 via Vice Beach (B) & Park
-    "Juice Fruit Sign": (-6580.642, 3665.212, 16.173),  # d=0.026 via Port Gellhorn Postcard (X) & Chase (2) (A)
-    "Juice Fruit Sign (B)": (-6580.466, 3664.487, 13.041),  # d=0.025 via Port Gellhorn Postcard (X) & Chase (2) (A)
-    "Juice Fruit Sign (E)": (-6578.359, 3665.329, 12.928),  # d=0.033 via Port Gellhorn Postcard (X) & Chase (2) (A)
-    "Juice Fruit Sign (W)": (-6582.519, 3663.593, 12.963),  # d=0.025 via Port Gellhorn Postcard (X) & Chase (2) (A)
+    "Juice Fruit Sign": (-6581.104, 3666.947, 16.406),  # d=0.010 via Port Gellhorn Postcard (X) & Chase (2) (A)
+    "Juice Fruit Sign (B)": (-6580.941, 3666.261, 13.262),  # d=0.045 via Port Gellhorn Postcard (X) & Chase (2) (A)
+    "Juice Fruit Sign (E)": (-6578.831, 3667.111, 13.151),  # d=0.003 via Port Gellhorn Postcard (X) & Chase (2) (A)
+    "Juice Fruit Sign (W)": (-6583.000, 3665.366, 13.181),  # d=0.036 via Port Gellhorn Postcard (X) & Chase (2) (A)
     "Kaseya Center (SE)": (-217.872, 392.546, 47.504),  # d=1.541 via Vice City Postcard & Skyline
     "Key Lento (A)": (-2620.476, -5762.622, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Key Lento (E)": (-2194.499, -5133.273, 0.000), # via Leonida Keys Postcard (X)
@@ -2662,8 +2732,10 @@ landmarks = {
     "Miami Tower": (-798.576, -468.712, 166.523),  # d=1.795 via Vice City Postcard & Skyline
     ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B)
     ##"Mount Waffles (TW)": (-5243.222, 5685.196, 206.805),  # d=2.889 via Diner (N) & Gas Station (Lucia)
-    "Mount Mountain": (-3989.198, 5785.981, 242.333),  # d=6.603 via Diner (N) & Hedge (B)
-    "Mount Waffles (TW)": (-5268.394, 5613.391, 196.715),  # d=8.128 via Diner (N) & Gas Station (Lucia)
+    "Mount Mountain": (-4006.097, 5799.760, 242.605),  # d=7.595 via Diner (N) & Hedge (B)
+    "Mount Waffles": (-5274.731, 5519.326, 191.509),  # d=4.556 via Diner (N) & Gas Station (Lucia)
+    "Mount Waffles (TE)": (-5275.038, 5430.868, 180.425),  # d=15.340 via Diner (N) & Gas Station (Lucia)
+    "Mount Waffles (TW)": (-5265.570, 5635.035, 198.270),  # d=6.145 via Diner (N) & Gas Station (Lucia)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
     "419 NE 4th Ave (W)": (-415.516, 1205.149, 32.586),  # d=3.549 via Vice City Postcard & Vice City 03 (Basketball)
     "New Foundation Church": (-6641.757, 3857.512, 24.802),  # d=5.501 via Chase (2) (A) & Port Gellhorn Postcard (X)
@@ -2688,7 +2760,7 @@ landmarks = {
     ##"Opera Tower": (-405.995, 871.722, 200.572),  # d=2.407 via Vice Beach (B) & Prison
     #"Opera Tower": (-422.228, 866.348, 201.155),  # d=0.964 via Vice Beach (B) & Vice City 03 (Basketball)
     "Opera Tower": (-399.711, 868.112, 199.746),  # d=0.329 via Vice City Postcard & Vice Beach (B)
-    "Oval Yellow Sign": (-6329.611, 3509.035, 35.910),  # d=0.176 via Chase (2) (A) & Gas Station (Lucia)
+    "Oval Yellow Sign": (-6329.607, 3509.044, 36.101),  # d=0.220 via Chase (2) (A) & Gas Station (Lucia)
     "99353 Overseas Hwy": (-3369.349, -6779.484, 74.152),  # d=0.467 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     #"102180 Overseas Hwy": (-2653.070, -6040.028, 39.913),  # d=2.823 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "102180 Overseas Hwy": (-2678.565, -6063.121, 41.579),  # d=0.594 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
@@ -2700,14 +2772,16 @@ landmarks = {
     "Pelican Harbor Marina (C)": (1017.648, 1668.969, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (D)": (860.740, 1742.467, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (E)": (834.939, 1794.139, 0.000),  # via Venetian Islands
-    "PGH Barrier Island (E)": (-8403.916, 3718.180, 0.000),  # via Port Gellhorn Postcard (X)
-    "PGH Island (E)": (-7420.975, 3737.417, 0.000),  # via Port Gellhorn Postcard (X)
-    "PGH Island (S)": (-7342.073, 3750.125, 0.000),  # via Port Gellhorn Postcard (X)
-    "PGH Island (W)": (-7287.927, 3806.847, 0.000),  # via Port Gellhorn Postcard (X)
-    "PGH Canal (A)": (-6986.489, 3906.161, 0.000),  # via Port Gellhorn Postcard (X)
-    "PGH Canal (B)": (-6916.194, 3864.735, 0.000),  # via Port Gellhorn Postcard (X)
-    "PGH Canal (C)": (-6779.007, 3835.663, 0.000),  # via Port Gellhorn Postcard (X)
-    "PGH Canal (D)": (-6775.121, 3839.362, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Barrier Island (E)": (-8418.734, 3705.928, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Island A (E)": (-7428.578, 3733.312, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Island A (S)": (-7349.187, 3746.757, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Island A (W)": (-7295.097, 3804.345, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Island B (E)": (-7367.878, 3677.878, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Island B (W)": (-7389.525, 3650.198, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Canal (A)": (-6992.206, 3906.859, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Canal (B)": (-6921.047, 3865.695, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Canal (C)": (-6782.595, 3837.521, 0.000),  # via Port Gellhorn Postcard (X)
+    "PGH Canal (D)": (-6778.709, 3841.280, 0.000),  # via Port Gellhorn Postcard (X)
     "Pier (Flamingo)": (1179.755, 837.147, 0.000),  # via Venetian Islands
     "Picnic Island A (N)": (26.901, 1473.072, 0.000),  # via Vice City Postcard
     "Picnic Island B (S)": (178.992, 1566.081, 0.000),  # via Vice City Postcard
@@ -2759,9 +2833,14 @@ landmarks = {
     "Port (J)": (55.929, -506.148, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (K)": (22.156, -496.718, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (L)": (13.063, -529.819, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port of Tampa Container Crane (1)": (-8261.302, 4803.561, 74.500),  # via Port Gellhorn Postcard (X)
-    "Port of Tampa Container Crane (2)": (-7992.966, 4680.066, 74.500),  # via Diner (W) (A)
-    "Port of Tampa Container Crane (3)": (-7734.410, 4623.452, 74.500),  # via Diner (W) (A)
+    "Port of Tampa Container Crane (1)": (-8261.673, 4785.312, 74.500),  # via Port Gellhorn Postcard (X)
+    ##"Port of Tampa Container Crane (2)": (-7994.472, 4664.244, 74.500),  # via Diner (W) (A)
+    "Port of Tampa Container Crane (2)": (-8088.251, 4687.005, 74.500),  # via Port Gellhorn Postcard (X)
+    "Port of Tampa Container Crane (3)": (-7735.431, 4609.888, 74.500),  # via Diner (W) (A)
+    "PTCC (1) (BB2)": (-8261.673, 4785.312, 40.500),  # via Port Gellhorn Postcard (X)
+    ##"PTCC (2) (BB2)": (-7994.472, 4664.244, 40.500),  # via Diner (W) (A)
+    "PTCC (2) (BB2)": (-8088.251, 4687.005, 40.500),  # via Port Gellhorn Postcard (X)
+    "PTCC (3) (BB2)": (-7735.431, 4609.888, 40.500),  # via Diner (W) (A)
     "Portofino Tower (NW)": (1720.414, -196.295, 142.142),  # d=0.503 via Port & Sidewalk (Jason) (E)
     #"Prison Tower (1)": (-2884.895, -2690.586, 30.682),  # d=3.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     #"Prison Tower (2)": (-2722.635, -2714.152, 32.085),  # d=6.438 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
@@ -2775,16 +2854,16 @@ landmarks = {
     "Prison Tower (4)": (-2631.080, -2864.993, 32.628),  # d=0.189 via Grassrivers 02 (Watson Bay) & Prison
     "Prison Tower (5)": (-2880.118, -2886.336, 32.672),  # d=0.201 via Grassrivers 02 (Watson Bay) & Prison
     "Prison Tower (6)": (-2983.035, -2781.496, 32.350),  # d=0.483 via Grassrivers 02 (Watson Bay) & Prison
-    "Pylon (C)": (-6407.044, 3797.365, 60.367),  # d=0.350 via Car Wash & Gas Station (Lucia)
+    "Pylon (3)": (-6407.067, 3797.198, 60.516),  # d=0.067 via Car Wash & Gas Station (Lucia)
     "Quantum on the Bay Condominium (N) (NE)": (-400.508, 1157.326, 180.111),  # d=0.729 via Vice City Postcard & Vice Beach (B)
     "Quantum on the Bay Condominium (S) (NE)": (-357.319, 1125.022, 206.843),  # d=0.591 via Vice City Postcard & Vice Beach (B)
     "Radio Tower (Ambrosia) (B)": (-2074.852, 3169.762, 5.000),  # via Ambrosia 04 (Fires)
     "Radio Tower (Ambrosia)": (-2074.852, 3169.762, 124.043),  # via Ambrosia 04 (Fires)
     "Red Billboard (Hamlet)": (-2542.919, -3495.137, 27.400),  # d=8.899 via Police Chase (D) & Leonida Keys 01 (Airplane) (X)
     "Reworld Miami-Dade (SE)": (-1788.689, 719.480, 102.783),  # d=0.158 via Vice City Postcard & Intersection (W)
-    "536 Richard Jackson Blvd (RNE)": (-6179.260, 4526.600, 16.961),  # d=0.046 via Diner (NW) & Diner (N)
-    "536 Richard Jackson Blvd (RSE)": (-6185.668, 4513.438, 16.999),  # d=0.008 via Diner (W) (A) & Diner (NW)
-    "536 Richard Jackson Blvd (RSW)": (-6202.754, 4521.935, 16.951),  # d=0.002 via Diner (W) (A) & Diner (NW)
+    "536 Richard Jackson Blvd (RNE)": (-6179.597, 4526.316, 16.948),  # d=0.030 via Diner (NW) & Diner (N)
+    "536 Richard Jackson Blvd (RSE)": (-6185.783, 4513.381, 16.996),  # d=0.015 via Diner (W) (A) & Diner (NW)
+    "536 Richard Jackson Blvd (RSW)": (-6203.031, 4521.820, 16.955),  # d=0.006 via Diner (W) (A) & Diner (NW)
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
@@ -2794,27 +2873,32 @@ landmarks = {
     "Seven Mile Bridge (6T)": (-3637.196, -6932.511, 8.104),  # d=0.278 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (20B)": (-3940.429, -7117.949, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (5B)": (-3629.187, -6932.164, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
+    "Ship (B)": (-7165.042, 4600.027, 0.000),  # via Port Gellhorn Postcard (X)
+    "Ship (C)": (-7129.975, 4644.868, 0.000),  # via Port Gellhorn Postcard (X)
     "Skyviews Miami Observation Wheel": (34.535, 82.384, 73.990),  # d=0.857 via Vice City Postcard & Skyline
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
     "Southeast Financial Center": (-476.917, -463.168, 250.123),  # d=0.745 via Vice City Postcard & Vice Beach (B)
-    "Springfield Community Church (CW)": (-6320.681, 4068.845, 29.980),  # d=2.421 via Car Wash & Gas Station (Lucia)
+    "Springfield Community Church (CW)": (-6320.702, 4068.742, 30.166),  # d=2.055 via Car Wash & Gas Station (Lucia)
     "St. Moritz Hotel (SW)": (1983.508, 1107.575, 49.354),  # d=1.202 via Venetian Islands & Vice Beach (B)
     "Stack (T)": (1323.696, -790.877, 23.842),  # via Motorboats (A)
     "Sunset Harbour South Condo": (1445.928, 1671.871, 85.810),  # d=0.219 via Vice City 03 (Basketball) & Venetian Islands
-    "Sunshine Skyway Bridge (N)": (-6755.040, 4571.452, 119.659),  # d=0.622 via Chase (2) (A) & Diner (W) (A)
-    "Sunshine Skyway Bridge (NNR)": (-6792.177, 4699.576, 31.034),  # via Diner (W) (A)
-    "Sunshine Skyway Bridge (NR)": (-6755.058, 4571.308, 33.635),  # via Diner (W) (A)
-    "Sunshine Skyway Bridge (S)": (-6691.696, 4352.913, 119.659),  # via Chase (2) (A)
-    "Sunshine Skyway Bridge (SSR)": (-6654.559, 4224.789, 31.034),  # via Diner (W) (A)
+    "Sunshine Skyway Bridge (N)": (-6753.926, 4566.237, 119.352),  # d=0.622 via Chase (2) (A) & Diner (W) (A)
+    "Sunshine Skyway Bridge (NR)": (-6753.926, 4566.237, 33.585),  # via Diner (W) (A)
+    "Sunshine Skyway Bridge (NNR)": (-6790.733, 4693.227, 30.960),  # via Diner (W) (A)
+    "Sunshine Skyway Bridge (S)": (-6690.837, 4348.569, 119.352),  # via Chase (2) (A)
+    "Sunshine Skyway Bridge (SR)": (-6690.837, 4348.569, 33.585),  # via Diner (W) (A)
+    "Sunshine Skyway Bridge (SSR)": (-6654.030, 4221.579, 30.960),  # via Diner (W) (A)
     "Tall Double Billboard": (-6299.540, 4125.617, 46.603),  # d=3.130 via Gas Station (Lucia) & Car Wash
     "Ten Museum Park (SE)": (-405.844, 481.345, 136.174),  # d=3.175 via Skyline & Vice Beach (B)
     "Three Tequesta Point": (-14.635, -955.375, 205.786),  # d=0.119 via Vice City Postcard & Vice Beach (B)
     "The Tides South Beach": (1993.276, 893.367, 54.673),  # d=1.061 via Beach & Vice Beach (B)
-    "Train Signal (S) (E)": (-6621.242, 3686.430, 18.198),  # d=0.012 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
-    "Train Signal (S) (W)": (-6623.043, 3685.348, 18.240),  # d=0.013 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
-    #"Train Tunnel (T)": (-5520.979, 5118.657, 91.891),  # via Diner (NE)
-    "Train Tunnel (B)": (-5520.979, 5118.657, 83.391),  # via Diner (NE)
+    "Traffic Sign": (-6084.656, 4425.942, 14.853),  # d=1.665 via Diner (E) & Diner (SE) (A)
+    "Train Signal (S) (E)": (-6621.336, 3687.237, 18.532),  # d=0.011 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
+    "Train Signal (S) (W)": (-6623.084, 3686.116, 18.578),  # d=0.013 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
+    # "Train Tunnel (T)": (-5527.131, 5129.345, 78.110),  # via Diner (NE)
+    "Train Tunnel (B)": (-5527.131, 5129.345, 69.610),  # via Diner (NE)
     "Tree on Island J": (-2479.572, -6563.116, 7.921),  # d=0.674 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Trésor Tower": (1842.996, 1950.337, 123.854),  # d=7.538 via Beach & Venetian Islands
     "Turkey Point Nuclear Power Station (N)": (-1548.858, -3459.523, 56.586),  # d=0.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
@@ -2838,9 +2922,13 @@ landmarks = {
     "Vizcayne North Condominium (NE)": (-521.236, 155.073, 177.413),  # d=0.124 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne North Condominium (SE)": (-529.451, 97.516, 178.670),  # d=0.196 via Vice City Postcard & Vice City 03 (Basketball)
     "W South Beach (BNW)": (1940.825, 1628.012, 23.937),  # d=0.048 via Vice City 03 (Basketball) & Rooftop Party
-    "Waffles Sign (TR)": (-6189.406, 4518.078, 16.125),  # d=0.038 via Diner (W) & Diner (NW)
-    "Water Tower (North Port Gellhorn)": (-6340.430, 4541.675, 45.234),  # d=0.107 via Diner (W) (A) & Diner (SW)
-    "Water Tower (West Port Gellhorn) (C)": (-6657.060, 3652.764, 26.171),  # d=0.001 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
+    "Waffles Arrow": (-6168.370, 4497.709, 14.435),  # d=0.039 via Diner (NE) & Diner (E)
+    "Waffles Billboard": (-6156.050, 4514.702, 23.038),  # d=0.084 via Diner (NE) & Diner (E)
+    "Waffles Billboard (BW)": (-6158.466, 4516.257, 17.353),  # d=0.167 via Diner (N) & Diner (NE)
+    "Waffles Sign (TR)": (-6189.196, 4517.185, 16.067),  # d=0.010 via Diner (W) (A) & Diner (NW)
+    "Water Tower (North Port Gellhorn)": (-6340.712, 4540.261, 45.181),  # d=0.184 via Diner (W) (A) & Diner (SW)
+    "Water Tower (West Port Gellhorn)": (-6655.143, 3652.918, 37.559),  # d=0.005 via Port Gellhorn Postcard (X) & Port Gellhorn 04 (Delights) (X)
+    "Water Tower (West Port Gellhorn) (C)": (-6655.143, 3652.918, 26.508),  # d=0.003 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
     "Water Tower near Prison": (-5154.754, 1557.230, 95.382),  # d=0.087 via Ambrosia 02 (Panorama) & Loading Zone near Prison (SW)
     "The Waverly South Beach (SE)": (1264.980, 579.673, 113.901),  # d=1.289 via Rooftop Party & Vice Beach (B)
     "WDNA FM": (-2517.727, -2295.470, 407.215),  # d=123.048 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
@@ -2849,6 +2937,9 @@ landmarks = {
     "Wells Fargo Center (N)": (-661.847, -412.981, 188.347),  # d=2.412 via Vice City Postcard & Vice Beach (B)
     "West Venetian Causeway Bridge": (-75.236, 1046.721, 15.273),  # d=2.958 via Vice City Postcard & Sidewalk (Jason) (E)
     "White Billboard (Hamlet)": (-2593.855, -3818.706, 31.675),  # d=10.156 via Police Chase (A) & Leonida Keys 01 (Airplane) (X)
+    "White Pole": (-6092.565, 4474.750, 27.138),  # d=1.591 via Diner (NE) & Diner (E)
+    "Wildfire Scooters (NW)": (-6464.217, 3333.620, 6.259),  # d=0.003 via Chase (2) (A) & AI World Editor Map (4K)
+    "Wildfire Scooters (S)": (-6458.709, 3323.329, 6.128),  # d=0.012 via Chase (2) (A) & AI World Editor Map (4K)
 
     "MIA North Terminal Tower": (-2378.455, -545.751, 60.463),  # d=0.359 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
     "Sebring Water Tower": (-3996.293, 2892.033, 68.174),  # d=3.595 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
@@ -2880,8 +2971,6 @@ landmarks = {
     "East Coast (G)": (1548.999, 8938.528, 0.000),  # via Glitch (A)
     "East Coast (H)": (1787.709, 10233.155, 0.000),  # via Glitch (A)
     "East Coast (I)": (2048.749, 11376.942, 0.000),  # via Glitch (A)
-    "Golf Course (E)": (800.134, 2586.545, 0.000),  # via Glitch (A)
-    "Golf Course (W)": (446.266, 2396.007, 0.000),  # via Glitch (A)
     "Golf Course (E)": (800.134, 2586.545, 0.000),  # via Glitch (A)
     "Golf Course (W)": (446.266, 2396.007, 0.000),  # via Glitch (A)
     "Lake (E)": (702.162, 2533.793, 0.000),  # via Glitch (A)
@@ -2993,7 +3082,8 @@ maps = {
     "aiwe": (0, 0.680, (4655.668, 2388.364)),
     "dupzor": (51, 0.558, (9037, 6693)),
     "martipk": (5, 0.558, (9037-5500, 6693-5500)),
-    "rickrick": (2, 2.500, (5000, 7500)),
+    #"rickrick": (2, 2.500, (5000, 7500)),
+    "rickrick": (3, 1.000, (3000, -500)),
     # "yanis": (7, 1.000, (16341, 12139)),
     "yanis": (8, 1.000, (16500, 12000)),
 }
