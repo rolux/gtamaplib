@@ -44,7 +44,7 @@ cameras = {
     "[L1/9] Motel": ((-5358.200, 3486.200, 66.700), (-5359.900, 3484.000, 66.500), (313.000, 14.000, 0.000), (None, 49.600), (1920, 1080), "2021-12-14 19-52-44 [?]"),
     "[L1/10] Pawn Shop (W)": ((-6423.000, 3060.100, 5.800), (-6421.600, 3061.600, 6.700), (125.104, -8.885, 0.000), (None, 49.600), (1376, 776), "2021-12-17 10-31-22 [?]"),
     "[L1/10] Pawn Shop (S)": ((-6420.100, 3062.300, 5.900), (-6420.300, 3064.700, 6.500), (173.193, -4.990, 0.000), (None, 49.600), (1376, 776), "2021-12-17 10-31-22 [?]"),
-    "[L1/11] Sidewalk (Lucia)": ((1931.500, 274.000, 3.200), (1931.700, 270.400, 5.800), (10.000, -20.000, 0.000), (None, 49.600), (1920, 1080), "2022-01-20 11-18-26 [?]"),
+    "[L1/11] Sidewalk (Lucia)": ((1931.500, 274.000, 3.200), (1931.700, 270.400, 5.800), (359.000, -32.000, 0.000), (None, 49.600), (1920, 1080), "2022-01-20 11-18-26 [?]"),
     "[L1/12] Auto Shop (SE)": None,
     "[L1/12] Auto Shop (SW)": None,
     "[L1/12] Auto Shop (NW)": ((-1261.400, 1219.000, 4.900), (-1274.800, 1210.400, 7.000), (55.000, -4.800, 0.000), (None, 35.200), (1920, 1080), "2022-02-10 20-25-15 [?]"),
@@ -246,7 +246,7 @@ cameras = {
     "[S2/47] Leonida Keys 02 (Sidewalk)": None,
     "[S2/47] Leonida Keys 03 (The Rusty Anchor)": None,
     "[S2/47] Leonida Keys 05 (Boats)": None,
-    "[S2/51] Port Gellhorn 01 (Starlet Motel)": None,
+    "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
     "[S2/55] Port Gellhorn 05 (Fire)": (None, (-6800.000, 3950.000, 5.000), (315.000, -0.500, 0.000), (50.000, None), (3840, 2160), "Port Gellhorn 05 [1]"),
@@ -268,7 +268,7 @@ cameras = {
     #"[S2/73] Port Gellhorn Postcard": (None, (-6563.000, 3613.000, 20.155), (51.895, 0.000, 0.000), (58.300, 40.793), (3240, 2160), "Port Gellhorn Postcard [60]"),
     "[S2/73] Port Gellhorn Postcard (X)": (None, (-6550.000, 3608.000, 31.297), (51.974, -3.200, 0.000), (71.000, 50.865), (3240, 2160), "Port Gellhorn Postcard [1]"),
     "[S2/74] Ambrosia Postcard (X)": (None, (-2694.881, 3981.266, 55.983), (150.756, -1.800, 0.000), (51.500, 34.964), (3308, 2160), "Ambrosia Postcard [?]"),
-    "[S2/75] Grassrivers Postcard (X)": None,
+    "[S2/75] Grassrivers Postcard (X)": (None, (-3500, -4000, 50), (135.000, -14.550, 0.000), (45.000, None), (3240, 2160), "Grassrivers Postcard [60]"),
     "[S2/76] Mount Kalaga National Park Postcard (X)": None,
 }
 
@@ -599,6 +599,7 @@ pixels = {
         ((18, 266), "White Pole"),
         ((47, 394.5), "Domed Hills Sign (TW)"),
         ((720, 445), "Traffic Sign"),
+        ((1036, 358), "Quarry"),
         ((1230, 321.5), "Easy Hill"),
         ((1866, 309), "Easy Inn Sign"),
     ],
@@ -686,6 +687,10 @@ pixels = {
         ((1594, 418), "Mount Waffles (TW)"),
         ((1615, 418), "Mount Waffles"),
         ((1636, 418), "Mount Waffles (TE)"),
+    ],
+    "[L1/9] Motel": [
+        ((1144, 773), "Economy Inn (RE)"),
+        ((1444, 878), "Starlet Motel Sign (BS)"),
     ],
     "[L1/10] Pawn Shop (W)": [
         ((514, 400), "Player"),
@@ -920,6 +925,11 @@ pixels = {
         ((1398, 195), "West Venetian Causeway Bridge"),
         ((1555, 165), "Portofino Tower (NE)"),
         ((1581, 164), "Portofino Tower (NW)"),
+    ],
+    "[L1/43] Pool": [
+        ((727, 313), "Red-Yellow Umbrella (2)"),
+        ((1273, 231), "Red-Yellow Umbrella (1)"),
+        ((1442, 210), "Billboard near Intersection (BC)"),
     ],
     "[L1/44] Tennis Stadium (4K)": [
         ((34, 1073.5), "Unknown Structure (1)"),
@@ -1304,19 +1314,55 @@ pixels = {
         ((856, 94), "Island W (N)"),
         ((960, 1371.5), "US Coast Guard Station Islamorada"),
         ((1611, 1159), "New Bahia Honda Bridge (W)"),
+        ((1743, 1091), "New Bahia Honda Bridge (39B)"),
+        ((1761, 1062), "New Bahia Honda Bridge (38B)"),
+        ((1780, 1027), "New Bahia Honda Bridge (37B)"),
+        ((1800, 985), "New Bahia Honda Bridge (36B)"),
+        ((1826, 953), "New Bahia Honda Bridge (35B)"),
+        ((1855, 922), "New Bahia Honda Bridge (34B)"),
+        ((1888, 897), "New Bahia Honda Bridge (33B)"),
         ((1915, 172), "Unnamed Building #1 (Blimp Key)"),
+        ((1924, 868), "New Bahia Honda Bridge (32B)"),
+        ((1962, 844), "New Bahia Honda Bridge (31B)"),
         ((1965, 176), "Unnamed Building #2 (Blimp Key)"),
+        ((2002, 821), "New Bahia Honda Bridge (30B)"),
         ((2026, 74), "Seven Mile Bridge (E)"),
+        ((2040, 798), "New Bahia Honda Bridge (29B)"),
         ((2075, 184), "Unnamed Building #3 (Blimp Key)"),
+        ((2076, 776), "New Bahia Honda Bridge (28B)"),
+        ((2112, 755), "New Bahia Honda Bridge (27B)"),
         ((2125.5, 92), "Seven Mile Bridge (5B)"),
-        ((2171, 1141), "Old Bahia Honda Bridge (WB)"),
+        #((2171, 1141), "Old Bahia Honda Bridge (WB)"),
         ((2176, 1080), "Old Bahia Honda Bridge (W)"),
+        ((2232, 680), "New Bahia Honda Bridge (23B)"),
+        ((2262, 663), "New Bahia Honda Bridge (22B)"),
+        ((2290, 646), "New Bahia Honda Bridge (21B)"),
+        ((2317, 632), "New Bahia Honda Bridge (20B)"),
+        ((2345, 614.5), "New Bahia Honda Bridge (19B)"),
+        ((2370, 600), "New Bahia Honda Bridge (18B)"),
+        ((2395, 585), "New Bahia Honda Bridge (17B)"),
         ((2412, 134.5), "Seven Mile Bridge (20B)"),
+        ((2418, 572), "New Bahia Honda Bridge (16B)"),
+        ((2441, 557.5), "New Bahia Honda Bridge (15B)"),
+        ((2464, 545), "New Bahia Honda Bridge (14B)"),
+        ((2486, 533), "New Bahia Honda Bridge (13B)"),
+        ((2507, 521), "New Bahia Honda Bridge (12B)"),
         ((2534, 33.5), "Sombrero Key Light (B)"),
+        ((2534, 508.5), "New Bahia Honda Bridge (11B)"),
+        ((2554, 497), "New Bahia Honda Bridge (10B)"),
         ((2558, 147), "Seven Mile Bridge (W)"),
+        ((2573, 485.5), "New Bahia Honda Bridge (9B)"),
+        ((2592, 474.5), "New Bahia Honda Bridge (8B)"),
+        ((2610, 463.5), "New Bahia Honda Bridge (7B)"),
+        ((2628, 453), "New Bahia Honda Bridge (6B)"),
+        ((2645, 444), "New Bahia Honda Bridge (5B)"),
+        ((2662, 435), "New Bahia Honda Bridge (4B)"),
+        ((2678, 425), "New Bahia Honda Bridge (3B)"),
+        ((2694, 416), "New Bahia Honda Bridge (2B)"),
+        ((2709, 406), "New Bahia Honda Bridge (1B)"),
         ((2763, 339), "New Bahia Honda Bridge (E)"),
         ((2830, 146), "Blimp Bay"),
-        ((3033, 627), "Old Bahia Honda Bridge (EB)"),
+        #((3033, 627), "Old Bahia Honda Bridge (EB)"),
         ((3038.5, 559), "Old Bahia Honda Bridge (E)"),
         ((3557, 98.5), "Vake Island (E)"),
         ((3639.5, 106), "Vake Island (W)"),
@@ -1738,18 +1784,37 @@ pixels = {
         ((1814, 534), "Portofino Tower (NW)"),
         ((1878.5, 590), "Keys Bridge (C)"),
         ((1899, 540), "Continuum on South Beach (S)"),
+        ((1960, 965), "Seven Mile Bridge (21B)"),
         ((1990, 651.5), "Island A (W)"),
         ((1994.5, 951), "Seven Mile Bridge (20B)"),
+        ((2026, 938), "Seven Mile Bridge (19B)"),
         ((2059, 657), "Key Lento (A)"),
+        ((2060, 923), "Seven Mile Bridge (18B)"),
         #((2080, 627.5), "House D (W)"),
         ((2084, 629), "House D (SW)"),
+        ((2088, 912), "Seven Mile Bridge (17B)"),
         ((2109, 641), "House with Boat (X)"),
+        ((2114.5, 901.5), "Seven Mile Bridge (16B)"),
+        ((2139, 891), "Seven Mile Bridge (15B)"),
+        ((2163, 882), "Seven Mile Bridge (14B)"),
+        ((2185, 873), "Seven Mile Bridge (13B)"),
+        ((2206, 864), "Seven Mile Bridge (12B)"),
+        ((2228, 855), "Seven Mile Bridge (11B)"),
+        ((2247, 847), "Seven Mile Bridge (10B)"),
+        ((2265, 840), "Seven Mile Bridge (9B)"),
+        ((2282, 833), "Seven Mile Bridge (8B)"),
         ((2295, 609), "102180 Overseas Hwy"),
+        ((2298, 826), "Seven Mile Bridge (7B)"),
         ((2311, 789), "Seven Mile Bridge (6T)"),
+        ((2313, 820), "Seven Mile Bridge (6B)"),
         # ((2324, 789), "Seven Mile Bridge (5T)"),
         ((2327, 813.5), "Seven Mile Bridge (5B)"),
+        ((2341, 808), "Seven Mile Bridge (4B)"),
         ((2351.5, 786.5), "Seven Mile Bridge (3T)"),
+        ((2355, 802), "Seven Mile Bridge (3B)"),
         ((2363, 702.5), "Blue Billboard (Key Lento)"),
+        ((2365, 797), "Seven Mile Bridge (2B)"),
+        ((2379, 791), "Seven Mile Bridge (1B)"),
         ((2383.5, 770), "Seven Mile Bridge (E)"),
         ((2477, 568), "99353 Overseas Hwy"),
         ((2809, 719), "Key Lento (J)"),
@@ -1792,6 +1857,13 @@ pixels = {
         ((2929, 670), "Pin D01R"),
         ((2750, 652), "Pin D02L"),
         ((2787, 652), "Pin D02R"),
+    ],
+    "[S2/51] Port Gellhorn 01 (Starlet Motel)": [
+        ((354, 773), "Billboard near Intersection (BC)"),
+        ((527, 1435), "Red-Yellow Umbrella (2)"),
+        ((958, 1796), "Starlet Motel Sign (BS)"),
+        ((1394, 1440), "Red-Yellow Umbrella (1)"),
+        ((2025, 1499), "Economy Inn (RE)"),
     ],
     "[S2/54] Port Gellhorn 04 (Delights) (X)": [
         ((783.5, 28), "Water Tower (West Port Gellhorn) (C)"),
@@ -1988,7 +2060,10 @@ pixels = {
         #((3454, 646), "Seminole Theatre"),
     ],
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": [
-        ((770, 301), "Water Tower near Prison")
+        ((770, 301), "Water Tower near Prison"),
+        ((1050, 336), "Billboard near Intersection (BC)"),
+        ((2418, 417), "Quarry"),
+        ((2596.5, 362.5), "Billboard (Delights)"),
     ],
     "[S2/71] Vice City Postcard": [
         ((67, 898), "Unknown Building (1) (Virgina Key)"),
@@ -2054,26 +2129,47 @@ pixels = {
         ((2454, 866), "Flat Water Tower"),
     ],
     "[S2/72] Leonida Keys Postcard (X)": [
+        ((5, 423.5), "Lake Surprise Viaduct (15B)"),
         ((6, 285), "Turkey Point Nuclear Power Station (1)"),
         ((28, 285), "Turkey Point Nuclear Power Station (2)"),
         ((52, 285), "Turkey Point Nuclear Power Station (3)"),
         ((24, 225), "Icon at South Beach"),
+        ((43, 424), "Lake Surprise Viaduct (14B)"),
         ((52, 231), "Murano Grande"),
+        ((74, 424), "Lake Surprise Viaduct (13B)"),
+        ((105, 424), "Lake Surprise Viaduct (12B)"),
+        ((135, 424.5), "Lake Surprise Viaduct (11B)"),
+        ((166, 424.5), "Lake Surprise Viaduct (10B)"),
         # ((174, 277), "Central District Wastewater Treatment Plant (1)"),
         ((174, 277), "WTP (E)"),
         # ((174, 277), "Central District Wastewater Treatment Plant (2)"),
         ((181, 277), "WTP (W)"),
         ((180, 224), "Portofino Tower (NW)"),
         ((189.5, 440), "Bridge Island (W)"),
+        ((197, 424.5), "Lake Surprise Viaduct (9B)"),
+        ((228, 425), "Lake Surprise Viaduct (8B)"),
         ((244, 315), "Keys Bridge (N)"),
+        ((257, 320), "Keys Bridge (1B)"),
         ((257, 703), "Island X (S)"),
+        ((260, 425), "Lake Surprise Viaduct (7B)"),
         ((265, 282), "Miami Marine Stadium (SW)"),
+        ((266, 320.5), "Keys Bridge (2B)"),
+        ((274, 321), "Keys Bridge (3B)"),
+        ((282.5, 321.5), "Keys Bridge (4B)"),
+        ((292, 322), "Keys Bridge (5B)"),
+        ((301, 322.5), "Keys Bridge (6B)"),
+        ((309, 323), "Keys Bridge (7B)"),
         ((283, 221), "Continuum on South Beach (S)"),
+        ((290, 425.5), "Lake Surprise Viaduct (6B)"),
         ((292, 311), "Keys Bridge (C)"),
         ((293.5, 557), "Island Z (S)"),
         ((294, 282), "Miami Marine Stadium (SE)"),
-        ((344, 323), "Keys Bridge (S)"),
+        ((321, 426), "Lake Surprise Viaduct (5B)"),
         ((338.5, 656.5), "Island Y (S)"),
+        ((344, 323), "Keys Bridge (S)"),
+        ((353, 426), "Lake Surprise Viaduct (4B)"),
+        ((385, 426), "Lake Surprise Viaduct (3B)"),
+        ((416, 426), "Lake Surprise Viaduct (2B)"),
         ((431, 309), "Stiltsville (1)"),
         ((434, 429), "Key Lento (E)"),
         ((442, 312), "Stiltsville (2)"),
@@ -2367,7 +2463,14 @@ pixels = {
         ((2970, 985), "Sebring Water Tower (B)"),
         ((2970.5, 943), "Sebring Water Tower"),
         ((2972, 1074), "USSM Smokestack (11)"),
-    ]
+    ],
+    "[S2/75] Grassrivers Postcard (X)": [
+        ((27, 382), "Unknown Structure (Grassrivers)"),
+        ((1296.5, 88.5), "Naval Air Station Key West (Control Tower)"),
+        ((1254, 93), "Naval Air Station Key West (Radar Tower)"),
+        ((1329, 335), "Shack (NB)"),
+        ((2505, 126), "Tower (Grassrivers)"),
+    ],
 }
 
 pixels = {
@@ -2712,7 +2815,28 @@ landmarks = {
     "Key Lento (U)": (-3379.887, -6681.060, 0.000), # via Leonida Keys Postcard (X)
     "Key Lento (V)": (-3371.828, -6631.645, 0.000), # via Leonida Keys Postcard (X)
     "Key Lento (W)": (-3128.605, -6441.724, 0.000), # via Leonida Keys Postcard (X)
+    "Keys Bridge (1B)": (-368.856, -2846.655, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (2B)": (-380.106, -2880.831, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (3B)": (-392.056, -2913.223, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (4B)": (-403.471, -2945.976, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (5B)": (-413.954, -2979.786, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (6B)": (-424.729, -3012.541, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (7B)": (-436.195, -3043.565, 10.000),  # via Leonida Keys Postcard (X)
     "Keys Bridge (C)": (-408.951, -2964.775, 20.880),  # d=10.108 via Leonida Keys 01 (Airplane) (X) & Prison
+    "Lake Surprise Viaduct (2B)": (-2161.738, -5071.893, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (3B)": (-2173.715, -5051.182, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (4B)": (-2186.078, -5029.803, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (5B)": (-2198.442, -5008.424, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (6B)": (-2206.302, -4983.100, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (7B)": (-2213.813, -4958.320, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (8B)": (-2226.239, -4936.832, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (9B)": (-2234.210, -4911.198, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (10B)": (-2246.278, -4890.330, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (11B)": (-2258.347, -4869.461, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (12B)": (-2266.029, -4844.265, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (13B)": (-2278.128, -4823.343, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (14B)": (-2290.227, -4802.422, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (15B)": (-2301.140, -4771.577, 10.000),  # via Leonida Keys Postcard (X)
     "Latitude on the River (S) (NW)": (-964.195, -812.128, 91.375),  # d=1.513 via Airport (X) & Grassrivers 02 (Watson Bay)
     "Latitude on the River (S) (SW)": (-978.260, -850.237, 91.571),  # d=0.273 via Airport (X) & Grassrivers 02 (Watson Bay)
     "Loews Miami Beach": (1961.304, 1150.746, 86.815),  # d=0.198 via Rooftop Party & Vice Beach (A)
@@ -2737,7 +2861,45 @@ landmarks = {
     "Mount Waffles (TE)": (-5275.038, 5430.868, 180.425),  # d=15.340 via Diner (N) & Gas Station (Lucia)
     "Mount Waffles (TW)": (-5265.570, 5635.035, 198.270),  # d=6.145 via Diner (N) & Gas Station (Lucia)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
+    "Naval Air Station Key West (Control Tower)": (-5716.593, -6602.387, 29.784),  # d=1.025 via Key Lento & Grassrivers Postcard (X)
+    "Naval Air Station Key West (Radar Tower)": (-5559.494, -6469.937, 27.670),  # d=0.692 via Key Lento & Grassrivers Postcard (X)
     "419 NE 4th Ave (W)": (-415.516, 1205.149, 32.586),  # d=3.549 via Vice City Postcard & Vice City 03 (Basketball)
+    "New Bahia Honda Bridge (1B)": (-4870.228, -7208.165, 10.000),  # via Keys
+    "New Bahia Honda Bridge (2B)": (-4891.127, -7201.755, 10.000),  # via Keys
+    "New Bahia Honda Bridge (3B)": (-4909.484, -7195.364, 10.000),  # via Keys
+    "New Bahia Honda Bridge (4B)": (-4929.228, -7189.020, 10.000),  # via Keys
+    "New Bahia Honda Bridge (5B)": (-4946.590, -7182.674, 10.000),  # via Keys
+    "New Bahia Honda Bridge (6B)": (-4963.493, -7176.495, 10.000),  # via Keys
+    "New Bahia Honda Bridge (7B)": (-4982.589, -7170.038, 10.000),  # via Keys
+    "New Bahia Honda Bridge (8B)": (-5001.950, -7163.733, 10.000),  # via Keys
+    "New Bahia Honda Bridge (9B)": (-5020.749, -7157.333, 10.000),  # via Keys
+    "New Bahia Honda Bridge (10B)": (-5039.760, -7151.096, 10.000),  # via Keys
+    "New Bahia Honda Bridge (11B)": (-5058.211, -7144.774, 10.000),  # via Keys
+    "New Bahia Honda Bridge (12B)": (-5077.799, -7136.673, 10.000),  # via Keys
+    "New Bahia Honda Bridge (13B)": (-5095.834, -7130.482, 10.000),  # via Keys
+    "New Bahia Honda Bridge (14B)": (-5113.341, -7124.216, 10.000),  # via Keys
+    "New Bahia Honda Bridge (15B)": (-5131.010, -7117.871, 10.000),  # via Keys
+    "New Bahia Honda Bridge (16B)": (-5150.699, -7111.709, 10.000),  # via Keys
+    "New Bahia Honda Bridge (17B)": (-5167.825, -7105.768, 10.000),  # via Keys
+    "New Bahia Honda Bridge (18B)": (-5186.871, -7099.528, 10.000),  # via Keys
+    "New Bahia Honda Bridge (19B)": (-5204.661, -7093.504, 10.000),  # via Keys
+    "New Bahia Honda Bridge (20B)": (-5225.268, -7087.026, 10.000),  # via Keys
+    "New Bahia Honda Bridge (21B)": (-5241.290, -7080.944, 10.000),  # via Keys
+    "New Bahia Honda Bridge (22B)": (-5259.934, -7074.925, 10.000),  # via Keys
+    "New Bahia Honda Bridge (23B)": (-5277.933, -7068.677, 10.000),  # via Keys
+    "New Bahia Honda Bridge (27B)": (-5349.584, -7046.288, 10.000),  # via Keys
+    "New Bahia Honda Bridge (28B)": (-5367.785, -7040.127, 10.000),  # via Keys
+    "New Bahia Honda Bridge (29B)": (-5386.011, -7034.287, 10.000),  # via Keys
+    "New Bahia Honda Bridge (30B)": (-5404.255, -7028.373, 10.000),  # via Keys
+    "New Bahia Honda Bridge (31B)": (-5421.762, -7022.328, 10.000),  # via Keys
+    "New Bahia Honda Bridge (32B)": (-5439.161, -7016.995, 10.000),  # via Keys
+    "New Bahia Honda Bridge (33B)": (-5458.973, -7012.673, 10.000),  # via Keys
+    "New Bahia Honda Bridge (34B)": (-5475.291, -7008.770, 10.000),  # via Keys
+    "New Bahia Honda Bridge (35B)": (-5494.314, -7006.242, 10.000),  # via Keys
+    "New Bahia Honda Bridge (36B)": (-5512.847, -7004.438, 10.000),  # via Keys
+    "New Bahia Honda Bridge (37B)": (-5535.456, -7004.531, 10.000),  # via Keys
+    "New Bahia Honda Bridge (38B)": (-5553.216, -7004.230, 10.000),  # via Keys
+    "New Bahia Honda Bridge (39B)": (-5567.259, -7003.641, 10.000),  # via Keys
     "New Foundation Church": (-6641.757, 3857.512, 24.802),  # d=5.501 via Chase (2) (A) & Port Gellhorn Postcard (X)
     "New Wave Condominiums": (-324.871, 1413.982, 113.718),  # d=1.380 via Vice City Postcard & Vice City 03 (Basketball)
     #"Nine at Mary Brickell Village (A)": (-1035.341, -973.492, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
@@ -2871,8 +3033,27 @@ landmarks = {
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
     "Seven Mile Bridge (3T)": (-3572.582, -6892.863, 3.488),  # d=0.101 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (6T)": (-3637.196, -6932.511, 8.104),  # d=0.278 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (20B)": (-3940.429, -7117.949, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (5B)": (-3629.187, -6932.164, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (1B)": (-3544.086, -6880.461, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (2B)": (-3568.371, -6895.166, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (3B)": (-3587.296, -6907.227, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (4B)": (-3609.486, -6920.650, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (5B)": (-3629.187, -6932.164, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (6B)": (-3650.832, -6945.659, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (7B)": (-3670.344, -6957.133, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (8B)": (-3691.714, -6970.174, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (9B)": (-3712.238, -6982.386, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (10B)": (-3731.978, -6993.827, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (11B)": (-3753.089, -7006.523, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (12B)": (-3775.646, -7019.908, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (13B)": (-3796.730, -7032.697, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (14B)": (-3816.832, -7044.617, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (15B)": (-3836.207, -7055.582, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (16B)": (-3856.928, -7068.183, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (17B)": (-3876.760, -7079.744, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (18B)": (-3896.356, -7091.110, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (19B)": (-3920.601, -7106.128, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (20B)": (-3940.429, -7117.949, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (21B)": (-3957.535, -7132.332, 10.000),  # via Leonida Keys 01 (Airplane) (X)
     "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
     "Ship (B)": (-7165.042, 4600.027, 0.000),  # via Port Gellhorn Postcard (X)
     "Ship (C)": (-7129.975, 4644.868, 0.000),  # via Port Gellhorn Postcard (X)
@@ -2940,6 +3121,7 @@ landmarks = {
     "White Pole": (-6092.565, 4474.750, 27.138),  # d=1.591 via Diner (NE) & Diner (E)
     "Wildfire Scooters (NW)": (-6464.217, 3333.620, 6.259),  # d=0.003 via Chase (2) (A) & AI World Editor Map (4K)
     "Wildfire Scooters (S)": (-6458.709, 3323.329, 6.128),  # d=0.012 via Chase (2) (A) & AI World Editor Map (4K)
+    "Wyman (Pool)": (-5322.430, 3472.470, 66.790),  # Pool
 
     "MIA North Terminal Tower": (-2378.455, -545.751, 60.463),  # d=0.359 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
     "Sebring Water Tower": (-3996.293, 2892.033, 68.174),  # d=3.595 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
