@@ -152,7 +152,7 @@ cameras = {
     "[T1/23] Pool (Alligator)": None,
     "[T1/24] Red Limousine": (None, (1700.000, 400.000, 5.000), (315.000, 8.000, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [1318]"),
     "[T1/25] Donuts": (None, (-710.000, 1250.000, 40.000), (315.000, -40.000, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [1396]"),
-    "[T1/26] Dancing": (None, (-695.000, 1260.000, 5.000), (230.000, 20.000, 0.000), (30.000, None), (3840, 2160), "Trailer 1 [1426]"),
+    "[T1/26] Dancing": (None, (-695.000, 1260.000, 5.000), (230.000, 20.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1426]"),
     "[T1/27] Gas Station (Alligator)": (None, (-5300, 3580, 69.000), (270.000, -17.500, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1427]"),
     "[T1/29] Gas Station (Chase) (SE)": (None, (-1000.000, 3000.000, 5.000), (218.000, 4.948, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1498]"),
     "[T1/29] Gas Station (Chase) (S)": (None, (-1000.000, 3000.000, 5.000), (207.500, 5.313, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1529]"),
@@ -204,7 +204,7 @@ cameras = {
     "[T2/46] Wall (Down)": None,
     "[T2/52] Empty Lot near Metro Station": None,
     "[T2/54] Starlet Motel": None,
-    "[T2/58] Explosion": (None, (-1030.000, 100.000, 15.000), (0.000, -7.500, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3539]"),
+    "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (0.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
     "[T2/59] Park (Mobile Phone)": (None, (-170.000, 370.000, 5.000), (225.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3566]"),
     "[T2/61] Pickup Truck (Night)": None,
     "[T2/64] Dominion Hotel": None,
@@ -250,16 +250,17 @@ cameras = {
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
     "[S2/55] Port Gellhorn 05 (Fire)": (None, (-6800.000, 3950.000, 5.000), (315.000, -0.500, 0.000), (50.000, None), (3840, 2160), "Port Gellhorn 05 [1]"),
-    "[S2/56] Ambrosia 01 (Bikers)": (None, (-2750.000, 3850.000, 5.000), (30.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Ambrosia 01 [1]"),
+    "[S2/56] Ambrosia 01 (Bikers)": (None, (-2742.894, 3731.020, 5.095), (10.341, -0.400, 0.000), (41.400, 23.999), (3840, 2160), "Ambrosia 01 [1]"),
     "[S2/57] Ambrosia 02 (Panorama)": (None, (-2467.000, 5149.000, 78.770), (160.425, -4.100, 0.000), (53.000, 31.333), (3840, 2160), "Ambrosia 02 [1]"),
     "[S2/58] Ambrosia 03 (Enforcer)": None,
-    "[S2/59] Ambrosia 04 (Fires)": (None, (-1477.000, 3352.000, 59.048), (104.062, -2.800, 0.000), (57.300, 34.167), (3840, 2160), "Ambrosia 04 [1]"),
+    # "[S2/59] Ambrosia 04 (Fires)": (None, (-1477.000, 3352.000, 59.048), (104.062, -2.800, 0.000), (57.300, 34.167), (3840, 2160), "Ambrosia 04 [1]"),
+    "[S2/59] Ambrosia 04 (Fires)": (None, (-1184.000, 3273.000, 48.173), (99.240, -1.900, 0.000), (47.100, 27.551), (3840, 2160), "Ambrosia 04 [1]"),
     "[S2/60] Ambrosia 05 (Car Wash)": None,
     "[S2/61] Grassrivers 01 (Hunters)": None,
     "[S2/62] Grassrivers 02 (Watson Bay)": (None, (-5218.000, -3355.000, 27.233), (282.302, -6.000, 0.000), (49.600, 29.139), (3840, 2160), "Grassrivers 02 [1]"),
     "[S2/64] Grassrivers 04 (Police Chase)": None,
     "[S2/65] Mount Kalaga National Park 01 (Dirt Bikes)": None,
-    "[S2/66] Mount Kalaga National Park 02 (Helicopter)": None,
+    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-1750.000, 6250.000, 200.000), (118.750, 6.800, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-5000.000, 5500.000, 120.000), (159.450, -13.617, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
     "[S2/70] Mount Kalaga National Park 06 (River)": None,
     "[S2/71] Vice City Postcard": (None, (400.000, 1860.000, 37.310), (151.654, 3.000, 0.000), (67.500, 47.117), (2458, 1604), "Vice City Postcard [?]"),
@@ -675,6 +676,7 @@ pixels = {
         ((1181, 492.5), "Billboard (Hank's Waffles)"),
         ((1191, 500), "Billboard (Hank's Waffles) (BE)"),
         ((1214, 489), "Waffles Ridge (W)"),
+        ((1238, 500), "Uncle Jack's Valley"),
         ((1255, 486), "Waffles Ridge (C)"),
         ((1305, 558), "Parker Community Center (SW)"),
         ((1320, 485), "Waffles Ridge (E)"),
@@ -684,9 +686,10 @@ pixels = {
         ((1541, 559.5), "Parker Police Station (SW)"),
         ((1529, 438), "Mount Waffles (W1)"),
         ((1537, 433), "Mount Waffles (W2)"),
-        ((1594, 418), "Mount Waffles (TW)"),
-        ((1615, 418), "Mount Waffles"),
-        ((1636, 418), "Mount Waffles (TE)"),
+        # ((1594, 418), "Mount Waffles (TW)"),
+        # ((1615, 418), "Mount Waffles"),
+        # ((1636, 418), "Mount Waffles (TE)"),
+        ((1636, 418), "Mount Waffles"),
     ],
     "[L1/9] Motel": [
         ((1144, 773), "Economy Inn (RE)"),
@@ -723,6 +726,9 @@ pixels = {
         ((472, 495), "Mount Mountain"),
     ],
     "[L1/15] Hedge (C)": [
+        ((620, 486), "Mount Leonida (E)"),
+        ((626, 486), "Mount Leonida"),
+        ((633, 486), "Mount Leonida (W)"),
         ((215.5, 509), "Hollywood Water Tower"),
     ],
     "[L1/15] Glitch (A)": [
@@ -1334,6 +1340,7 @@ pixels = {
         ((2125.5, 92), "Seven Mile Bridge (5B)"),
         #((2171, 1141), "Old Bahia Honda Bridge (WB)"),
         ((2176, 1080), "Old Bahia Honda Bridge (W)"),
+        ((2198, 1143), "Old Bahia Honda Bridge (21B)"),
         ((2232, 680), "New Bahia Honda Bridge (23B)"),
         ((2262, 663), "New Bahia Honda Bridge (22B)"),
         ((2290, 646), "New Bahia Honda Bridge (21B)"),
@@ -1364,6 +1371,7 @@ pixels = {
         ((2830, 146), "Blimp Bay"),
         #((3033, 627), "Old Bahia Honda Bridge (EB)"),
         ((3038.5, 559), "Old Bahia Honda Bridge (E)"),
+        ((3097, 600), "Old Bahia Honda Bridge (1B)"),
         ((3557, 98.5), "Vake Island (E)"),
         ((3639.5, 106), "Vake Island (W)"),
     ],
@@ -1465,6 +1473,9 @@ pixels = {
         ((1231, 747), "1703 E 5th St (Shack) (SE)"),
         ((1513, 723), "1703 E 5th St (Warehouse) (NW)"),
     ],
+    "[T1/46] Uncle Jack's": [
+        ((578, 870), "Uncle Jack's Valley"),
+    ],
     "[T2/1] Key Lento": [
         ((328, 521), "Island G (E)"),
         ((519, 515), "Island G (W)"),
@@ -1500,7 +1511,7 @@ pixels = {
         ((3799.5, 423), "SFUWO School"),
     ],
     "[T2/58] Explosion": [
-        ((137, 252), "Mount Mountain"),
+        ((137, 252), "Mount Leonida"),
         ((310, 290), "Ambrosia Hill"),
     ],
     "[T2/59] Park (Mobile Phone)": [
@@ -1876,15 +1887,21 @@ pixels = {
         ((155, 682), "Sunshine Skyway Bridge (A)"),
     ],
     "[S2/56] Ambrosia 01 (Bikers)": [
+        ((325, 560), "Ambrosia Hill (BW)"),
         ((491, 795), "Wide Billboard (Ambrosia)"),
-        ((580, 645), "Billboard with Oval Motif #2"),
+        ((580, 645), "Billboard with Oval Motif #1"),
         ((862, 742), "Wide Billboard with Text"),
         ((888, 713), "Tall Billboard with Text"),
         ((1030, 770), "Large Billboard (Ambrosia)"),
         ((1031, 758), "Used Cars Billboard"),
+        ((1219, 201), "Ambrosia Hill (TW)"),
+        ((1227, 24), "Billboard with Diversity Motif (W)"),
         ((1355, 637), "McDevitt Billboard"),
         ((1357, 730), "Billboard with Irregular Shape"),
         ((1574, 28), "Billboard with Diversity Motif"),
+        ((1911, 38), "Billboard with Diversity Motif (E)"),
+        ((1913, 267), "Ambrosia Hill (TE)"),
+        ((2865, 580), "Ambrosia Hill (BE)"),
     ],
     "[S2/57] Ambrosia 02 (Panorama)": [
         ((0, 1041), "Lake Leonida (X)"),
@@ -1922,7 +1939,9 @@ pixels = {
         ((1361.5, 864), "1500 Sonora Ave (Silo) (R)"),
         #((1388, 819), "Homestead Water Tower"),
         ((1422.5, 791.5), "Unknown Building near VCIA (N)"),
+        ((1491.5, 951), "Billboard with Diversity Motif (E)"),
         ((1528, 1306), "Lake Leonida (G)"),
+        ((1535, 950), "Billboard with Diversity Motif (W)"),
         ((1564, 1394), "Lake Leonida (E)"),
         ((1549, 1142.5), "Lake Leonida (K)"),
         ((1574, 1225), "Lake Leonida (H)"),
@@ -1944,19 +1963,27 @@ pixels = {
         ((1907, 890), "USSM Smokestack (11)"),
         ((1933.5, 909), "1500 Sonora Ave (Tank) (R)"),
         ((1961, 885), "USSM Smokestack (8)"),
+        ((1963, 821), "Light Pollution (A)"),
         ((1976.5, 864), "USSM Smokestack (9)"),
+        ((2034, 828), "Construction Crane (Ambrosia)"),
+        ((2076, 825), "Light Pollution (B)"),
         ((2235.5, 978), "Large Billboard (Ambrosia)"),
         ((2318.5, 1715.5), "Lake Leonida (C)"),
+        ((2293, 821), "Light Pollution (C)"),
         ((2348, 1066), "Main St (B)"),
         ((2392, 1699), "Lake Leonida (D)"),
         ((2448, 1074), "Main St (A)"),
         ((2577, 788.5), "Very Tall Water Tower"),
+        ((2711, 1124), "Billboard with Irregular Shape (B)"),
         ((2714, 944.5), "Billboard with Irregular Shape"),
         ((2770, 937.5), "Billboard with Hat-Shaped Motif"),
         ((2895, 2011), "Lake Leonida (B)"),
         ((2920, 847), "Sebring Water Tower (B)"),
         ((2921, 819), "Sebring Water Tower"),
+        ((2926, 1912), "Red Boxville (FL)"),
+        ((2988, 1104), "Billboard with Oval Motif #1 (B)"),
         ((2995, 900), "Billboard with Oval Motif #1"),
+        ((3013, 1907), "Red Boxville (RL)"),
         ((3098, 2160), "Lake Leonida (A)"),
         ((3109.5, 792), "Water Tower near Prison"),
         ((3325, 1017), "Billboard with Oval Motif #2 (B)"),
@@ -1971,14 +1998,19 @@ pixels = {
         #((106, 980.5), "Wheelabrator South Broward (2T)"),
         ((108, 947), "Wheelabrator South Broward (W)"),
         ((108, 973), "Wheelabrator South Broward (3B)"),
+        ((207, 979), "Route 10 (E)"),
+        ((507, 974), "Route 10 (W)"),
         ((1848, 465), "Radio Tower (Ambrosia)"),
         ((1848, 1280), "Radio Tower (Ambrosia) (B)"),
+        ((2038, 969.5), "Billboard (South Ambrosia)"),
         ((2038.5, 969), "USSM Smokestack (3)"),
         ((2148, 900), "Sebring Water Tower"),
         ((2148, 923.5), "Sebring Water Tower (B)"),
+        ((2579, 1060), "Viaduct (S)"),
         # ((2750, 888), "US Sugar Mill (Factory)"),
         ((2750, 889), "US Sugar Mill (Factory) (R)"),
         ((2751, 820), "US Sugar Mill (Factory)"),
+        ((3137, 876), "Tree near Port Gellhorn"),
         ((3279.5, 817), "USSM Smokestack (7)"),
         ((3283, 863), "USSM Smokestack (5)"),
         ((3287, 850), "USSM Smokestack (6)"),
@@ -2015,6 +2047,7 @@ pixels = {
         ((3220, 1764), "Path A (1)"),
         ((3701, 1242), "Road B (1)"),
         ((3729, 1828), "Road A (1)"),
+        ((3840, 1060), "Viaduct (N)"),
     ],
     "[S2/62] Grassrivers 02 (Watson Bay)": [
         ((57.5, 594.5), "Unknown Billboard #1"),
@@ -2059,18 +2092,63 @@ pixels = {
         ((3396, 636.5), "Turkey Point Nuclear Power Station (CSW)"),
         #((3454, 646), "Seminole Theatre"),
     ],
+    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": [
+        ((0, 1826), "Canal (A)"),
+        ((0, 1931), "Route 50 (A)"),
+        ((0, 2007), "Kissimmee River (A)"),
+        ((0, 2104), "I-404 (A)"),
+        ((49, 1938), "Route 50 (B)"),
+        ((94, 1785), "Canal Road (A)"),
+        ((135, 2042), "Kissimmee River (B)"),
+        ((171, 1598), "Sebring Water Tower"),
+        ((291, 2109), "Offramp (S) (A)"),
+        ((300, 2160), "Offramp (N) (A)"),
+        ((310, 1954), "Route 50 (C)"),
+        ((403, 2108), "Offramp (S) (B)"),
+        ((405, 1762), "Canal Road (B)"),
+        ((425, 1799), "Canal (B)"),
+        ((598, 2111), "Offramp (N) (B)"),
+        ((646, 1875), "Ambrosia Road (A)"),
+        ((812, 1695), "Road (B)"),
+        ((812, 2072), "Ramp"),
+        ((819, 2087), "Offramp (N) (C)"),
+        ((848, 1956), "Route 50 (D)"),
+        ((996, 1734), "Road (A)"),
+        ((1109, 1764), "Ambrosia Road (B)"),
+        ((1132, 1758), "Canal (C)"),
+        ((1292, 2160), "Mount Leonida (C)"),
+        ((1331, 1530), "Tree near Port Gellhorn"),
+        ((1372, 1728), "Ambrosia Road (C)"),
+        ((1395, 1575), "Starlet Highway (A)"),
+        ((1410, 1610), "Starlet Highway (B)"),
+        ((1487, 1882), "I-404 (B)"),
+        ((1508, 1658), "Starlet Highway (C)"),
+        ((1510, 1861), "Route 50 (E)"),
+        ((1612, 1524), "Blob"),
+        ((1640, 1876), "I-404 (C)"),
+        ((1851, 1684), "Canal (D)"),
+        ((1901, 1643), "Mount Leonida (B)"),
+        ((2042, 1598), "Ambrosia Hill (B)"),
+        ((2147, 1536), "Ambrosia Hill (A)"),
+        ((3840, 855), "Mount Leonida (A)"),
+    ],
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": [
         ((770, 301), "Water Tower near Prison"),
+        ((956.5, 322), "Blob"),
         ((1050, 336), "Billboard near Intersection (BC)"),
+        ((1495, 275), "Tree near Port Gellhorn"),
         ((2418, 417), "Quarry"),
         ((2596.5, 362.5), "Billboard (Delights)"),
     ],
     "[S2/71] Vice City Postcard": [
         ((67, 898), "Unknown Building (1) (Virgina Key)"),
+        # ((139, 907), "WTP (E)"),
+        # ((147, 907), "WTP (W)"),
         ((155, 898), "Unknown Building (2) (Virgina Key)"),
         ((176.5, 898), "Unknown Structure (1) (Virginia Key)"),
         ((181, 898), "Unknown Structure (2) (Virginia Key)"),
-        ((189.5, 896), "Unknown Building (3) (Virginia Key)"),
+        # ((189.5, 896), "Unknown Building (3) (Virginia Key)"),
+        ((189.5, 896), "Central District Wastewater Treatment Plant (Tank)"),
         ((275, 877.5), "Cruise Ship (RT)"),
         ((305, 813), "1000 Venetian Way (SE)"),
         ((449, 817), "1000 Venetian Way (SW)"),
@@ -2141,9 +2219,9 @@ pixels = {
         ((135, 424.5), "Lake Surprise Viaduct (11B)"),
         ((166, 424.5), "Lake Surprise Viaduct (10B)"),
         # ((174, 277), "Central District Wastewater Treatment Plant (1)"),
-        ((174, 277), "WTP (E)"),
+        ((174, 277), "WTP (W)"),
         # ((174, 277), "Central District Wastewater Treatment Plant (2)"),
-        ((181, 277), "WTP (W)"),
+        ((181, 277), "WTP (E)"),
         ((180, 224), "Portofino Tower (NW)"),
         ((189.5, 440), "Bridge Island (W)"),
         ((197, 424.5), "Lake Surprise Viaduct (9B)"),
@@ -2438,20 +2516,30 @@ pixels = {
     "[S2/74] Ambrosia Postcard (X)": [
         ((69, 1020.5), "Dark Billboard (Ambrosia)"),
         ((307, 988), "USSM Smokestack (1)"),
+        ((370, 1024), "Billboard (South Ambrosia)"),
         ((379, 1109), "USSM Smokestack (2)"),
         ((412, 929), "1500 Sonora Ave (Silo) (L)"),
         ((584, 929), "1500 Sonora Ave (Silo)"),
         ((606, 1136), "1500 Sonora Ave (Silo) (N)"),
         ((756, 929), "1500 Sonora Ave (Silo) (R)"),
         ((818, 1059), "USSM Smokestack (3)"),
+        ((887.5, 1073), "Train Signal (4E)"),
+        ((915, 1072), "Train Signal (4W)"),
+        ((927, 1075), "Train Signal (3E)"),
+        ((956.5, 1075), "Train Signal (3W)"),
         ((1031.5, 913), "Radio Mast (Ambrosia)"),
+        ((1472, 1245), "Train Signal (2E)"),
+        ((1488.5, 1246), "Train Signal (2W)"),
         ((1493, 786), "US Sugar Mill (Factory)"),
         ((1493, 923), "US Sugar Mill (Factory) (R)"),
+        ((1537, 1257), "Train Signal (1E)"),
         ((1544, 699), "USSM Smokestack (4)"),
+        ((1554.5, 1257), "Train Signal (1W)"),
         ((1682, 844), "USSM Smokestack (5)"),
         ((1728, 814.5), "USSM Smokestack (6)"),
         ((1883, 729), "USSM Smokestack (7)"),
         #((2090, 987), "Water Tower near Prison"),
+        ((2196, 1114), "Lollipop Highway (S)"),
         ((2283, 1453), "US Sugar Mill (Warehouse)"),
         ((2325, 1142), "1500 Sonora Ave (Tank) (L)"),
         ((2467, 1064), "USSM Smokestack (8)"),
@@ -2463,6 +2551,7 @@ pixels = {
         ((2970, 985), "Sebring Water Tower (B)"),
         ((2970.5, 943), "Sebring Water Tower"),
         ((2972, 1074), "USSM Smokestack (11)"),
+        ((3185, 1123), "Lollipop Highway (N)"),
     ],
     "[S2/75] Grassrivers Postcard (X)": [
         ((27, 382), "Unknown Structure (Grassrivers)"),
@@ -2683,6 +2772,10 @@ landmarks = {
     "1800 Club": (-336.786, 1029.407, 161.576),  # d=0.892 via Vice City Postcard & Vice City 03 (Basketball)
     "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     "Akoya Condominium": (1455.271, 2614.567, 145.644),  # d=4.024 via Venetian Islands & Highway (NE)
+    "Ambrosia Main St (A)": (-2954.984, 4207.923, 5.000),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (B)": (-2943.365, 4169.656, 5.000),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (C)": (-2836.319, 3948.150, 5.000),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (D)": (-2764.894, 3821.085, 5.000),  # via Ambrosia 02 (Panorama)
     ##"Asia Brickell Key": (-119.683, -881.354, 185.477),  # d=1.275 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     #"Asia Brickell Key": (-102.538, -863.761, 184.052),  # d=0.885 via Skyline & Vice Beach (B)
     "Asia Brickell Key": (-126.282, -883.212, 185.124),  # d=1.022 via Vice City Postcard & Vice Beach (B)
@@ -2735,8 +2828,11 @@ landmarks = {
     "Beach (H)": (2249.513, 1133.739, 0.000),  # via Vice Beach (A)
     "Beige Billboard (BE)": (-6108.791, 4591.625, 24.695),  # d=0.365 via Diner (N) & Diner (NE)
     "Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
+    "Billboard with Irregular Shape": (-2935.798, 4375.849, 46.420),  # via Ambrosia 02 (Panorama)
+    "Billboard with Oval Motif #1": (-3031.588, 4347.083, 55.169),  # via Ambrosia 02 (Panorama)
     "22 Biscayne Bay (SE)": (-338.986, 1346.432, 72.845),  # d=0.132 via Vice City Postcard & Vice City 03 (Basketball)
     "50 Biscayne Blvd (SE)": (-407.635, -239.477, 146.292),  # d=1.095 via Vice City 03 (Basketball) & Skyline
+    "Big Cat Cage Roof": (-716.491, 1324.161, 13.204),  # via Sidewalk (Jason) (S)
     "Biscayne Island (S)": (253.227, 1080.161, 0.000),  # via Venetian Islands
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Blue Billboard (Key Lento)": (-3436.718, -6780.155, 23.305),  # d=0.238 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
@@ -2756,6 +2852,7 @@ landmarks = {
     "Di Lido Island (S)": (588.273, 1001.623, 0.000),  # via Venetian Islands
     "Domed Hills Sign (TW)": (-6107.844, 4474.328, 17.450),  # d=0.934 via Diner (NE) & Diner (E)
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
+    "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "FAA Miami ATCT (MIA)": (-2369.054, -777.804, 96.640),  # d=2.091 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "Fisher Island (A)": (2169.545, -1256.967, 0.000),  # via Rooftop Party
@@ -2837,8 +2934,13 @@ landmarks = {
     "Lake Surprise Viaduct (13B)": (-2278.128, -4823.343, 10.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (14B)": (-2290.227, -4802.422, 10.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (15B)": (-2301.140, -4771.577, 10.000),  # via Leonida Keys Postcard (X)
+    "Large Billboard (Ambrosia)": (-2906.527, 4174.174, 30.369),  # d=0.378 via Ambrosia 01 (Bikers) & Ambrosia 02 (Panorama)
     "Latitude on the River (S) (NW)": (-964.195, -812.128, 91.375),  # d=1.513 via Airport (X) & Grassrivers 02 (Watson Bay)
     "Latitude on the River (S) (SW)": (-978.260, -850.237, 91.571),  # d=0.273 via Airport (X) & Grassrivers 02 (Watson Bay)
+    "Light Pollution (A)": (-8474.409, -11160.441, 0.000),  # via Ambrosia 02 (Panorama)
+    "Light Pollution (B)": (-7748.745, -7991.628, 0.000),  # via Ambrosia 02 (Panorama)
+    "Light Pollution (C)": (-9874.513, -10662.575, 0.000),  # via Ambrosia 02 (Panorama)
+    "Liquor Store": (-662.870, 1219.216, 3.009),  # via Sidewalk (Jason) (S)
     "Loews Miami Beach": (1961.304, 1150.746, 86.815),  # d=0.198 via Rooftop Party & Vice Beach (A)
     "Loft Downtown II": (-493.469, 68.694, 124.295),  # d=0.793 via Skyline & Vice Beach (B)
     "Margaret Pace Park": (-273.791, 1081.082, 8.073),  # d=0.977 via Vice City Postcard & Sidewalk (Jason) (E)
@@ -2856,10 +2958,8 @@ landmarks = {
     "Miami Tower": (-798.576, -468.712, 166.523),  # d=1.795 via Vice City Postcard & Skyline
     ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B)
     ##"Mount Waffles (TW)": (-5243.222, 5685.196, 206.805),  # d=2.889 via Diner (N) & Gas Station (Lucia)
-    "Mount Mountain": (-4006.097, 5799.760, 242.605),  # d=7.595 via Diner (N) & Hedge (B)
-    "Mount Waffles": (-5274.731, 5519.326, 191.509),  # d=4.556 via Diner (N) & Gas Station (Lucia)
-    "Mount Waffles (TE)": (-5275.038, 5430.868, 180.425),  # d=15.340 via Diner (N) & Gas Station (Lucia)
-    "Mount Waffles (TW)": (-5265.570, 5635.035, 198.270),  # d=6.145 via Diner (N) & Gas Station (Lucia)
+    "Mount Mountain": (-4006.080, 5799.745, 242.606),  # d=7.591 via Diner (N) & Hedge (B)
+    "Mount Waffles": (-5217.942, 5581.709, 198.855),  # d=2.128 via Diner (N) & Gas Station (Lucia)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
     "Naval Air Station Key West (Control Tower)": (-5716.593, -6602.387, 29.784),  # d=1.025 via Key Lento & Grassrivers Postcard (X)
     "Naval Air Station Key West (Radar Tower)": (-5559.494, -6469.937, 27.670),  # d=0.692 via Key Lento & Grassrivers Postcard (X)
@@ -2912,6 +3012,8 @@ landmarks = {
     "1500 Ocean Dr (S) (NW)": (2029.742, 1003.354, 62.016),  # d=0.422 via Venetian Islands & Vice Beach (B)
     "1500 Ocean Dr (S) (SE)": (2026.843, 968.113, 62.132),  # d=0.514 via Vice Beach (B) & Park
     "1500 Ocean Dr (S) (SW)": (2022.117, 973.553, 62.553),  # d=1.350 via Venetian Islands & Park
+    "Old Bahia Honda Bridge (1B)": (-5164.929, -7280.745, 0.000),  # via Keys
+    "Old Bahia Honda Bridge (21B)": (-5582.075, -7075.952, 0.000),  # via Keys
     "Old City Hall": (1681.423, 606.033, 51.401),  # d=1.771 via Vice Beach (B) & Tennis Court (SE)
     #"One Miami Condominium East (NE)": (-213.403, -522.155, 183.512),  # d=0.155 via Vice City 03 (Basketball) & Skyline
     #"One Miami Condominium East (SE)": (-212.862, -548.940, 183.267),  # d=0.259 via Vice City 03 (Basketball) & Skyline
@@ -3057,6 +3159,7 @@ landmarks = {
     "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
     "Ship (B)": (-7165.042, 4600.027, 0.000),  # via Port Gellhorn Postcard (X)
     "Ship (C)": (-7129.975, 4644.868, 0.000),  # via Port Gellhorn Postcard (X)
+    "Sidewalk Creep": (-667.412, 1087.195, 2.470),  # via Sidewalk (Jason) (S)
     "Skyviews Miami Observation Wheel": (34.535, 82.384, 73.990),  # d=0.857 via Vice City Postcard & Skyline
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
@@ -3089,8 +3192,8 @@ landmarks = {
     "Turkey Point Nuclear Power Station (3)": (-1470.928, -3758.932, 79.971),  # d=1.175 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Two Tequesta Point": (42.973, -1061.323, 161.003),  # d=0.082 via Vice City Postcard & Vice Beach (B)
     "Unnamed Building #1 (Blimp Key)": (-4238.667, -6868.495, 8.856),  # d=0.647 via Keys & Leonida Keys 01 (Airplane) (X)
-    "Unknown Building near VCIA (N)": (-5629.348, -1200.092, 90.408),  # d=6.729 via Vice City Postcard & Vice Beach (B)
-    "Unknown Building near VCIA (S)": (-5579.256, -1235.455, 90.413),  # d=6.869 via Vice City Postcard & Vice Beach (B)
+    #"Unknown Building near VCIA (N)": (-5629.348, -1200.092, 90.408),  # d=6.729 via Vice City Postcard & Vice Beach (B)
+    #"Unknown Building near VCIA (S)": (-5579.256, -1235.455, 90.413),  # d=6.869 via Vice City Postcard & Vice Beach (B)
     "Unknown Object": (-2575.500, -49.800, 5.900),  # Gizmo
     "Unknown Sphere": (-170.272, 363.950, 30.138),  # d=2.622 via Vice City Postcard & Skyline
     "Uptown Lofts (NE)": (-323.304, 1312.918, 46.090),  # d=1.996 via Vice City Postcard & Vice City 03 (Basketball)
