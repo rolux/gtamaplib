@@ -1438,6 +1438,8 @@ pixels = {
         ((2143, 749), "Sailboat Cay (F15)"),
         ((2203, 738), "Sailboat Cay"),
         ((2350.5, 602.5), "Construction Crane (Waning Sands)"),
+        ((2395, 784), "Palm Bay Yacht Club Condominium (F10)"),
+        ((2394, 838), "Palm Bay Yacht Club Condominium (F6)"),
         ((2397, 757), "Palm Bay Yacht Club Condominium (SW)"),
         ((2404, 841), "Towers of Quayside (A)"),
         ((2476, 844), "Towers of Quayside (B)"),
@@ -1977,6 +1979,7 @@ pixels = {
         ((2711, 1124), "Billboard with Irregular Shape (B)"),
         ((2714, 944.5), "Billboard with Irregular Shape"),
         ((2770, 937.5), "Billboard with Hat-Shaped Motif"),
+        ((2851, 1054), "Main St (Z)"),
         ((2895, 2011), "Lake Leonida (B)"),
         ((2920, 847), "Sebring Water Tower (B)"),
         ((2921, 819), "Sebring Water Tower"),
@@ -1984,10 +1987,13 @@ pixels = {
         ((2988, 1104), "Billboard with Oval Motif #1 (B)"),
         ((2995, 900), "Billboard with Oval Motif #1"),
         ((3013, 1907), "Red Boxville (RL)"),
+        ((3071, 1032), "Main St (Y)"),
         ((3098, 2160), "Lake Leonida (A)"),
         ((3109.5, 792), "Water Tower near Prison"),
+        ((3323, 1003), "Main St (X)"),
         ((3325, 1017), "Billboard with Oval Motif #2 (B)"),
         ((3329, 870), "Billboard with Oval Motif #2"),
+        ((3391, 994), "Main St (W)"),
         ((3453, 1084.5), "Hendry County Motorsports Park"),
     ],
     "[S2/59] Ambrosia 04 (Fires)": [
@@ -3370,7 +3376,8 @@ maps = {
     #"rickrick": (2, 2.500, (5000, 7500)),
     "rickrick": (3, 1.000, (3000, -500)),
     # "yanis": (7, 1.000, (16341, 12139)),
-    "yanis": (9, 1.000, (16500, 12000)),
+    "yanis": (10, 1.000, (16500, 12000)),
+    #"neutralstate": (0, 1.000, (1000, 4500)),
 }
 maps = {
     name: {
