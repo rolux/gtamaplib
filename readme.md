@@ -24,4 +24,7 @@ Please note that v0.1.0 is the first pre-release version of the library. More in
 
 ![hamlet prison](<readme/hamlet prison.png>)
 
+![leonida keys map](<readme/leonida keys map.png>)
+
+
 <br><br><br>
