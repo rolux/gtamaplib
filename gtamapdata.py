@@ -56,8 +56,8 @@ cameras = {
     "[L1/15] Bar": ((2092.800, 1153.200, 6.000), (2095.400, 1153.500, 6.400), (87.802, 0.000, 0.000), (None, 49.600), (1920, 1080), "2022-04-12 10-28-55 [?]"),
     "[L1/15] Yard": ((2092.800, 1153.200, 6.000), (2080.100, 1158.900, 8.100), (267.300, -20.600, 0.000), (None, 45.000), (1920, 1080), "2022-04-12 10-28-55 [?]"),
     "[L1/15] Hedge (A)": None,
-    "[L1/15] Hedge (B)": ((1409.600, 1405.000, 0.8), (1411.300, 1403.400, 1.200), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080), "2022-04-12 10-28-55 [?]"),
-    "[L1/15] Hedge (C)": ((1409.600, 1405.000, 0.5), (1411.300, 1403.400, 0.800), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080), "2022-04-12 10-28-55 [?]"),
+    "[L1/15] Hedge (B) (X)": ((1409.600, 1405.000, 0.8), (1411.300, 1403.400, 1.200), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080), "2022-04-12 10-28-55 [?]"),
+    "[L1/15] Hedge (C) (X)": ((1409.600, 1405.000, 0.5), (1411.300, 1403.400, 0.800), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080), "2022-04-12 10-28-55 [?]"),
     "[L1/15] Hedge (D)": ((1409.600, 1405.000, -0.700), (1411.200, 1403.500, -0.300), (28.300, 0.000, 0.000), (None, 49.600), (1920, 1080), "2022-04-12 10-28-55 [?]"),
     "[L1/15] Door": None,
     "[L1/15] Glitch (A)": ((1410.700, 1371.600, 2.900), (1411.600, 1379.700, -58.500), (28.300, -14.622, 0.000), (None, 49.600), (1920, 1080), "2022-04-12 10-28-55 [?]"),
@@ -156,7 +156,7 @@ cameras = {
     "[T1/27] Gas Station (Alligator)": (None, (-5300, 3580, 69.000), (270.000, -17.500, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1427]"),
     "[T1/29] Gas Station (Chase) (SE)": (None, (-1000.000, 3000.000, 5.000), (218.000, 4.948, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1498]"),
     "[T1/29] Gas Station (Chase) (S)": (None, (-1000.000, 3000.000, 5.000), (207.500, 5.313, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1529]"),
-    "[T1/30] Interchange": (None, (-920.000, 1000.000, 15.000), (171.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1535]"),
+    "[T1/30] Interchange": (None, (-970.000, 800.000, 15.000), (171.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1535]"),
     "[T1/31] Green Pickup Truck (A)": None,
     "[T1/31] Green Pickup Truck (B)": None,
     "[T1/32] House with Garden": None,
@@ -182,8 +182,8 @@ cameras = {
     "[T2/7] Balcony (Keys)": None,
     "[T2/9] Car (Jason)": None,
     "[T2/10] Store (Jason)": None,
-    "[T2/12] Highway (Peacock Bay) (A)": None,
-    "[T2/12] Highway (Peacock Bay) (B)": None,
+    "[T2/12] Highway (Peacock Bay) (A)": (None, (-1478.000, -2370.000, 15.045), (340.325, 3.500, 0.000), (45.200, 21.219), (3840, 1728), "Trailer 2 [1039]"),
+    "[T2/12] Highway (Peacock Bay) (B)": (None, (-1464.000, -2256.000, 15.048), (345.216, 15.300, 0.000), (59.500, 28.847), (3840, 1728), "Trailer 2 [1111]"),
     "[T2/13] Beach Gym": (None, (2000.000, 400.000, 4.000), (100.000, 3.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [1152]"),
     "[T2/14] Door (Keys)": None,
     "[T2/15] Little Haiti": None,
@@ -206,14 +206,15 @@ cameras = {
     "[T2/54] Starlet Motel": None,
     "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (0.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
     "[T2/59] Park (Mobile Phone)": (None, (-170.000, 370.000, 5.000), (225.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3566]"),
-    "[T2/61] Pickup Truck (Night)": None,
+    "[T2/61] Pickup Truck (Night) (A)": (None, (-1250.000, -2550.000, 2.500), (15.000, 5.000, 0.000), (45.000, None), (3840, 1728), "Trailer 2 [3623]"),
+    "[T2/61] Pickup Truck (Night) (B)": None,
     "[T2/64] Dominion Hotel": (None, (2050.000, 925.000, 3.000), (135.000, 2.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3802]"),
     "[T2/65] Ocean View Hotel": None,
     "[T2/66] Strip Club (Sundays)": None,
     "[T2/67] Television": (None, (-2352.500, -5527.900, 8.000), (26.554, -4.908, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3882]"),
     "[T2/69] Helicopter (1)": None,
     "[T2/70] Helicopter (2)": None,
-    "[T2/71] Jet Ski": (None, (1000.000, 850.000, 0.500), (341.500, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [4202]"),
+    "[T2/71] Jet Ski": (None, (1000.000, 850.000, 0.500), (341.000, 1.000, 0.000), (65.000, None), (3840, 1728), "Trailer 2 [4202]"),
     "[T2/73] Truck (1)": None,
     "[T2/74] Truck (2)": (None, (-250.000, -420.000, 10.000), (90.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [4333]"),
     "[T2/76] Chase (1)": (None, (-6290.000, 3950.000, 15.000), (110.600, 3.000, 2.500), (70.000, None), (3840, 1728), "Trailer 2 [4448]"),
@@ -244,8 +245,8 @@ cameras = {
     "[S2/45] Vice City 09 (La Perle)": (None, (-1250.000, 1150.000, 7.000), (300.000, 2.000, 0.000), (50.000, None), (3840, 2160), "Vice City 09 [1]"),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160), "Leonida Keys 01 [1]"),
     "[S2/47] Leonida Keys 02 (Sidewalk)": None,
-    "[S2/47] Leonida Keys 03 (The Rusty Anchor)": None,
-    "[S2/47] Leonida Keys 05 (Boats)": None,
+    "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
+    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3125.000, -6325.000, 5.000), (156.000, -11.750, 0.000), (55.000, None), (3840, 2160), "Leonida Keys 05 [1]"),
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
@@ -315,8 +316,8 @@ metadata = {
     "[L1/15] Bar": ("497.0.2", (590, "sb_01"), "12:00", ("Sun", "Sun"), (0.13, 60.95), 25.2),
     "[L1/15] Yard":("497.0.2", (644, "sb_37"), "12:00", ("Sun", "Sun"), (1.00, 7.98), 25.1),
     "[L1/15] Hedge (A)": ("497.0.2", (590, "sb_01"), "12:00", ("Sun", "Sun"), (1.00, 56.38), 24.5),
-    "[L1/15] Hedge (B)": ("497.0.2", (590, "sb_01"), "12:00", ("Sun", "Sun"), (1.00, 52.51), 24.7),
-    "[L1/15] Hedge (C)": ("497.0.2", (590, "sb_01"), "12:00", ("Sun", "Sun"), (1.00, 51.96), 24.8),
+    "[L1/15] Hedge (B) (X)": ("497.0.2", (590, "sb_01"), "12:00", ("Sun", "Sun"), (1.00, 52.51), 24.7),
+    "[L1/15] Hedge (C) (X)": ("497.0.2", (590, "sb_01"), "12:00", ("Sun", "Sun"), (1.00, 51.96), 24.8),
     "[L1/15] Hedge (D)": ("497.0.2", (614, "sb_08"), "12:00", ("Sun", "Sun"), (1.00, 50.12), 24.7),
     "[L1/15] Door": ("497.0.2", (614, "sb_08"), "12:00", ("Sun", "Sun"), (1.00, 49.75), 24.3),
     "[L1/15] Glitch (A)": ("497.0.2", (614, "sb_08"), "12:00", ("Sun", "Sun"), (1.00, 22.71), 24.6),
@@ -719,16 +720,15 @@ pixels = {
     "[L1/15] Bar": [
         ((779.5, 702), "Player"),
     ],
-    "[L1/15] Hedge (B)": [
-        ((295, 505), "Waffles Ridge"),
-        ((325, 505), "Mount Waffles"),
-        ((417, 502), "Maple Syrup Mountain"),
-        ((472, 495), "Mount Mountain"),
+    "[L1/15] Hedge (B) (X)": [
+        ((294, 505), "Mount Waffles"),
+        ((326, 505), "Maple Syrup Mountain"),
+        ((431, 501), "Ambrosia Hill"),
+        ((475, 495), "Mount Mountain"),
     ],
-    "[L1/15] Hedge (C)": [
-        ((620, 486), "Mount Leonida (E)"),
-        ((626, 486), "Mount Leonida"),
-        ((633, 486), "Mount Leonida (W)"),
+    "[L1/15] Hedge (C) (X)": [
+        ((627, 485), "Mount Leonida"),
+        ((656, 497), "Mount Leonida (E)"),
         ((215.5, 509), "Hollywood Water Tower"),
     ],
     "[L1/15] Glitch (A)": [
@@ -820,7 +820,8 @@ pixels = {
         ((474, 313), "Nine at Mary Brickell Village (D)"),
     ],
     "[L1/22] Metro (SE) (B)": [
-        ((175, 160), "Nine at Mary Brickell Village (A)")
+        ((175, 160), "Nine at Mary Brickell Village (A)"),
+        ((666, 157), "Infinity at Brickell"),
     ],
     "[L1/23] Tarmac": [
         ((677, 546), "Ring in Trailer"),
@@ -973,6 +974,8 @@ pixels = {
         ((94, 892.5), "The Grand (W)"),
         ((121, 893), "The Grand (E)"),
         ((179, 956), "Magic City Casino (?)"),
+        ((458, 945), "Double Pole (1N)"),
+        ((490, 943), "Double Pole (1S)"),
         ((583, 882), "Miami Tower"),
         ((645, 867.5), "Wells Fargo Center (N)"),
         ((770, 831), "Southeast Financial Center"),
@@ -982,9 +985,17 @@ pixels = {
         ((1173, 794), "Four Seasons Hotel Miami (BE)"),
         ((1179, 801), "Four Seasons Hotel Miami (SE)"),
         ((1204, 43), "WDNA FM"),
+        ((1314.5, 954), "Double Pole (2N)"),
+        ((1361, 953), "Double Pole (2S)"),
         ((1701, 911), "Park Grove Condominium (S)"),
+        ((1898, 958), "Double Pole (3N)"),
+        ((1946, 956), "Double Pole (3S)"),
         ((2058, 985), "Prison Tower (1)"),
         ((2224, 983), "Prison Tower (2)"),
+        ((2425, 944), "Lamp Post (NW)"),
+        ((2449.5, 944), "Lamp Post (NE)"),
+        ((2759.5, 943), "Lamp Post (SW)"),
+        ((2781.5, 943), "Lamp Post (SE)"),
         ((2503, 980), "Prison Tower (3)"),
         ((2538, 984), "Prison Tower (6)"),
         ((2555, 986), "Keys Bridge (C)"),
@@ -1433,6 +1444,9 @@ pixels = {
         ((2494, 1052), "Quantum on the Bay Condominium (S) (NE)"),
         ((2652, 1109), "Opera Tower"),
     ],
+    "[T1/30] Interchange": [
+        ((1002, 472), "Stephen P. Clark Government Center (W)"),
+    ],
     "[T1/36] Waning Sands (A) (X)": [
         ((1152.5, 869), "House #1 (Waning Sands)"),
         ((2140, 861), "Sailboat Cay (F4)"),
@@ -1512,6 +1526,30 @@ pixels = {
         ((3631, 422), "KBYX Doppler Weather Radar"),
         ((3764.5, 421), "Water Tower (Leonida Keys)"),
         ((3799.5, 423), "SFUWO School"),
+    ],
+    "[T2/12] Highway (Peacock Bay) (A)": [
+        ((1278, 865), "Stephen P. Clark Government Center (W)"),
+        ((1299, 865), "Stephen P. Clark Government Center (SW)"),
+        ((1356, 866), "Stephen P. Clark Government Center (SE)"),
+        ((1363, 866), "Stephen P. Clark Government Center (E)"),
+        ((1658, 459), "Infinity at Brickell"),
+        ((1867, 636), "One Broadway (W)"),
+        ((2217, 242), "Park Grove Condominium (N)"),
+        ((2571, 91), "Park Grove Condominium (C)"),
+    ],
+    "[T2/12] Highway (Peacock Bay) (B)": [
+        ((1793, 1565), "Stephen P. Clark Government Center (W)"),
+        ((1815, 1565), "Stephen P. Clark Government Center (SW)"),
+        ((1873, 1566), "Stephen P. Clark Government Center (SE)"),
+        ((1881, 1566), "Stephen P. Clark Government Center (E)"),
+        ((2177, 1133), "Infinity at Brickell"),
+        ((2222, 1488), "Nine at Mary Brickell Village (E)"),
+        ((2396, 1317), "One Broadway (W)"),
+        ((2447, 1475), "1401 Brickell Ave (SW)"),
+        ((2545, 1314), "One Broadway (E)"),
+        ((2808, 838), "Park Grove Condominium (N)"),
+        ((3057, 1004), "Four Seasons Hotel Miami (T)"),
+        ((3222, 634), "Park Grove Condominium (C)"),
     ],
     "[T2/58] Explosion": [
         ((137, 252), "Mount Leonida"),
@@ -1661,6 +1699,7 @@ pixels = {
         ((1150, 382.5), "Vizcayne North Condominium (SE)"),
         ((1210, 382.5), "Vizcayne North Condominium (NE)"),
         ((1230, 466.5), "1111 Lincoln Rd (NW)"),
+        ((1301, 425), "Stephen P. Clark Government Center (E)"),
         ((1345, 426.5), "Stephen P. Clark Government Center (NW)"),
         ((1463.5, 371), "Marina Blue (NE)"),
         ((1597, 375), "Marquis Miami (SE)"),
@@ -1934,6 +1973,7 @@ pixels = {
         ((980, 1099), "Lake Leonida (O)"),
         ((1033, 1085), "Lake Leonida (P)"),
         ((1241, 1118), "Lake Leonida (N)"),
+        ((1257.5, 890), "Industrial Building (Ambrosia)"),
         ((1299, 1116), "Lake Leonida (M)"),
         ((1306.5, 865), "USSM Smokestack (1)"),
         ((1321, 891), "USSM Smokestack (2)"),
@@ -1941,6 +1981,7 @@ pixels = {
         ((1343, 864), "1500 Sonora Ave (Silo)"),
         ((1343, 887.5), "1500 Sonora Ave (Silo) (N)"),
         ((1345, 1125), "Lake Leonida (L)"),
+        ((1347, 969.5), "Hospice Billboard (R)"),
         ((1361.5, 864), "1500 Sonora Ave (Silo) (R)"),
         #((1388, 819), "Homestead Water Tower"),
         ((1422.5, 791.5), "Unknown Building near VCIA (N)"),
@@ -1950,6 +1991,7 @@ pixels = {
         ((1564, 1394), "Lake Leonida (E)"),
         ((1549, 1142.5), "Lake Leonida (K)"),
         ((1574, 1225), "Lake Leonida (H)"),
+        ((1580.5, 916.5), "White Silos (W)"),
         ((1611, 1159), "Lake Leonida (J)"),
         ((1635, 1180), "Lake Leonida (I)"),
         ((1664, 771), "USSM Smokestack (4)"),
@@ -2068,6 +2110,7 @@ pixels = {
         ((613, 561.5), "Nine at Mary Brickell Village (B)"),
         ((652, 560), "Nine at Mary Brickell Village (E)"),
         ((771, 562), "Unknown Billboard #2"),
+        ((861, 529), "One Broadway (W)"),
         ((919, 416), "Watson Bay Water Tower"),
         ((945.5, 497), "Four Seasons Hotel Miami (W)"),
         ((1018, 528), "Shark Valley Observation Tower"),
@@ -2524,6 +2567,7 @@ pixels = {
     ],
     "[S2/74] Ambrosia Postcard (X)": [
         ((69, 1020.5), "Dark Billboard (Ambrosia)"),
+        ((184, 1079), "Industrial Building (Ambrosia)"),
         ((307, 988), "USSM Smokestack (1)"),
         ((370, 1024), "Billboard (South Ambrosia)"),
         ((379, 1109), "USSM Smokestack (2)"),
@@ -2537,6 +2581,7 @@ pixels = {
         ((927, 1075), "Train Signal (3E)"),
         ((956.5, 1075), "Train Signal (3W)"),
         ((1031.5, 913), "Radio Mast (Ambrosia)"),
+        ((1318, 1177), "White Silos (W)"),
         ((1472, 1245), "Train Signal (2E)"),
         ((1488.5, 1246), "Train Signal (2W)"),
         ((1493, 786), "US Sugar Mill (Factory)"),
@@ -2860,6 +2905,12 @@ landmarks = {
     "Di Lido Island (N)": (496.162, 1537.713, 0.000),  # via Venetian Islands
     "Di Lido Island (S)": (588.273, 1001.623, 0.000),  # via Venetian Islands
     "Domed Hills Sign (TW)": (-6107.844, 4474.328, 17.450),  # d=0.934 via Diner (NE) & Diner (E)
+    "Double Pole (1N)": (-2957.016, -2367.527, 40.000),  # via Prison
+    "Double Pole (1S)": (-2976.874, -2394.397, 40.000),  # via Prison
+    "Double Pole (2N)": (-2774.904, -2467.592, 40.000),  # via Prison
+    "Double Pole (2S)": (-2793.368, -2490.226, 40.000),  # via Prison
+    "Double Pole (3N)": (-2634.190, -2602.203, 40.000),  # via Prison
+    "Double Pole (3S)": (-2689.745, -2628.888, 40.000),  # via Prison
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
@@ -2943,6 +2994,10 @@ landmarks = {
     "Lake Surprise Viaduct (13B)": (-2278.128, -4823.343, 10.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (14B)": (-2290.227, -4802.422, 10.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (15B)": (-2301.140, -4771.577, 10.000),  # via Leonida Keys Postcard (X)
+    "Lamp Post (NW)": (-2253.571, -2775.558, 50.000),  # via Prison
+    "Lamp Post (NE)": (-2251.225, -2786.935, 50.000),  # via Prison
+    "Lamp Post (SW)": (-2251.621, -2926.287, 50.000),  # via Prison
+    "Lamp Post (SE)": (-2249.570, -2936.231, 50.000),  # via Prison
     "Large Billboard (Ambrosia)": (-2906.527, 4174.174, 30.369),  # d=0.378 via Ambrosia 01 (Bikers) & Ambrosia 02 (Panorama)
     "Latitude on the River (S) (NW)": (-964.195, -812.128, 91.375),  # d=1.513 via Airport (X) & Grassrivers 02 (Watson Bay)
     "Latitude on the River (S) (SW)": (-978.260, -850.237, 91.571),  # d=0.273 via Airport (X) & Grassrivers 02 (Watson Bay)
@@ -2965,9 +3020,9 @@ landmarks = {
     "MIA North Terminal Tower": (-2378.279, -545.155, 60.726),  # d=0.531 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
     ##"Miami Tower": (-775.668, -424.119, 159.972),  # d=5.605 via Grassrivers 02 (Watson Bay) & Prison
     "Miami Tower": (-798.576, -468.712, 166.523),  # d=1.795 via Vice City Postcard & Skyline
-    ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B)
+    ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B) (X)
     ##"Mount Waffles (TW)": (-5243.222, 5685.196, 206.805),  # d=2.889 via Diner (N) & Gas Station (Lucia)
-    "Mount Mountain": (-4006.080, 5799.745, 242.606),  # d=7.591 via Diner (N) & Hedge (B)
+    "Mount Mountain": (-4006.080, 5799.745, 242.606),  # d=7.591 via Diner (N) & Hedge (B) (X)
     "Mount Waffles": (-5217.942, 5581.709, 198.855),  # d=2.128 via Diner (N) & Gas Station (Lucia)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
     "Naval Air Station Key West (Control Tower)": (-5716.593, -6602.387, 29.784),  # d=1.025 via Key Lento & Grassrivers Postcard (X)
