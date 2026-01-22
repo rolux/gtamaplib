@@ -246,7 +246,7 @@ cameras = {
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160), "Leonida Keys 01 [1]"),
     "[S2/47] Leonida Keys 02 (Sidewalk)": None,
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
-    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3125.000, -6325.000, 5.000), (156.000, -11.750, 0.000), (55.000, None), (3840, 2160), "Leonida Keys 05 [1]"),
+    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3171.000, -6350.000, 5.459), (161.531, -16.700, 0.000), (72.300, 44.679), (3840, 2160), "Leonida Keys 05 [1]"),
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
@@ -1913,6 +1913,14 @@ pixels = {
         ((2750, 652), "Pin D02L"),
         ((2787, 652), "Pin D02R"),
     ],
+    "[S2/50] Leonida Keys 05 (Boats)": [
+        ((663.5, 151), "House with Pier (E)"),
+        ((2572, 186), "Blue Billboard (Key Lento)"),
+        ((3057, 317), "Pin B01L"),
+        ((3134, 311), "Pin C01R"),
+        ((3165, 309), "Pin B02R"),
+        ((3563, 318), "Pin B02L"),
+    ],
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": [
         ((354, 773), "Billboard near Intersection (BC)"),
         ((527, 1435), "Red-Yellow Umbrella (2)"),
@@ -2329,6 +2337,7 @@ pixels = {
         ((1380, 792), "Key Lento (W)"),
         ((1383, 424), "Island F (E)"),
         ((1567, 436), "Island F (W)"),
+        ((1568, 793), "House with Pier (E)"),
         ((1687, 1130), "Key Lento (V)"),
         ((1707, 686), "Billboard #2 (Key Lento)"),
         ((1848, 486), "Island G (E)"),
@@ -2939,6 +2948,7 @@ landmarks = {
     "Homestead Water Tower": (-2940.669, -3024.103, 69.913),  # d=4.125 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
     "Hotel Breakwater": (1949.796, 563.829, 25.734),  # d=0.265 via Vice Beach (A) & Park
     "Hotel Victor (SW)": (1945.101, 733.085, 33.587),  # d=0.251 via Beach & Park
+    "House with Pier (E)": (-3155.670, -6500.087, 12.353),  # d=0.548 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
     "InterContinental Miami (N)": (-255.482, -482.631, 134.173),  # d=1.042 via Vice City Postcard & Vice City 03 (Basketball)
     "Island A (W)": (-2561.894, -5618.294, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island F (E)": (-1786.271, -5718.466, 0.000), # via Leonida Keys Postcard (X)
