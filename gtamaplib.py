@@ -635,7 +635,7 @@ class Camera:
             color = get_color(lm_name)
             self.draw_circle((x, y), 5, None, color, width)
             name = lm_name.replace("Four Seasons Hotel Miami", "FS")
-            name = lm_name.replace("Sunshine Skyway Bridge", "SSB")
+            name = name.replace("Sunshine Skyway Bridge", "SSB")
             self.draw_label((x, y - 5), 5, name, color, (255, 255, 255))
         return self
 
@@ -987,7 +987,6 @@ class Map:
             key=lambda kv: (kv[1][2], kv[1][1], kv[1][0])
         )
         for lm_name, _ in landmarks:
-            self.draw_landmark(lm_name, r=r)
             nomalized = normalize_name(lm_name)
             if nomalized in LANDMARK_OBJECTS:
                 LANDMARK_OBJECTS[nomalized].draw_on_map(self)
@@ -1114,7 +1113,7 @@ class Map:
                     draw.line((x, 0, x, image.size[1]), fill=(112, 112, 112), width=1)
             for dy in range(km * -16, km * 16 + 1, km):
                 y = self.zero[1] + dy
-                if 0 <= x < image.size[1]:
+                if 0 <= y < image.size[1]:
                     draw.line((0, y, image.size[0], y), fill=(112, 112, 112), width=1)
             image.paste(self.image, (km, km))
             self.image = image
