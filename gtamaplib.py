@@ -737,7 +737,9 @@ class Camera:
         """
         if not hasattr(self, "image"): self.open()
         print(f"Writing {filename}", end=" ... ", flush=True)
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        dirname = os.path.dirname(filename)
+        if dirname:
+            os.makedirs(dirname, exist_ok=True)
         self.image.resize((
             int(round(self.image.size[0] / self.scale)),
             int(round(self.image.size[1] / self.scale))
@@ -1240,7 +1242,9 @@ class Map:
         else:
             self.draw_map_info(image)
         print(f"Writing {filename}", end=" ... ", flush=True)
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        dirname = os.path.dirname(filename)
+        if dirname:
+            os.makedirs(dirname, exist_ok=True)
         image.save(filename)
         print("Done")
         return self
@@ -1772,7 +1776,9 @@ def find_ambrosia_relative(
                     color = lollipop_color if lm_name == lollipop_top_name else lm_colors[l]
                     draw.circle(inter_map_xy, 5, fill=color)
         print(f"Writing {filename}", end=" ... ", flush=True)
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        dirname = os.path.dirname(filename)
+        if dirname:
+            os.makedirs(dirname, exist_ok=True)
         image.save(filename)
         print("Done")
 
