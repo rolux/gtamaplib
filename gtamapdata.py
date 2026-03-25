@@ -262,7 +262,7 @@ cameras = {
     "[S2/64] Grassrivers 04 (Police Chase)": None,
     "[S2/65] Mount Kalaga National Park 01 (Dirt Bikes)": None,
     "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-1750.000, 6250.000, 200.000), (118.750, 6.800, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
-    "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-5000.000, 5500.000, 120.000), (159.450, -13.617, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
+    "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-5000.000, 6000.000, 120.000), (159.670, -13.567, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
     "[S2/70] Mount Kalaga National Park 06 (River)": None,
     "[S2/71] Vice City Postcard": (None, (400.000, 1860.000, 37.310), (151.654, 3.000, 0.000), (67.500, 47.117), (2458, 1604), "Vice City Postcard [?]"),
     "[S2/72] Leonida Keys Postcard (X)": (None, (-3813.000, -6798.000, 149.816), (300.041, -12.000, 0.000), (47.000, 32.337), (2563, 1709), "Leonida Keys Postcard [?]"),
