@@ -1149,8 +1149,10 @@ class Map:
         if area:
             map_x0, map_y0 = self.get_map_xy((area[0], area[3]))
             map_x1, map_y1 = self.get_map_xy((area[2], area[1]))
-            map_x1 = min(map_x1, self.size[0])
-            map_y1 = min(map_y1, self.size[1])
+            map_x0 = int(map_x0)
+            map_y0 = int(map_y0)
+            map_x1 = min(int(map_x1), self.size[0])
+            map_y1 = min(int(map_y1), self.size[1])
         else:
             map_x0, map_y0 = 0, 0
             map_x1, map_y1 = self.size
