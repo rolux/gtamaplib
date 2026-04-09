@@ -14,6 +14,7 @@ import math
 import multiprocessing
 import os
 import re
+import sys
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
@@ -22,7 +23,10 @@ from tqdm import tqdm
 
 from . import gtamapdata as md
 
-multiprocessing.set_start_method("fork", force=True)
+multiprocessing.set_start_method(
+    "spawn" if sys.platform == "win32" else "fork",
+    force=True
+)
 Image.MAX_IMAGE_PIXELS = 100_000 ** 2
 
 DIRNAME = os.path.dirname(__file__)
