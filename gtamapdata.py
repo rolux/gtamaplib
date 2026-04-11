@@ -196,8 +196,8 @@ cameras = {
     "[T2/28] Pier (Land)": None,
     "[T2/29] Pier (Sea)": None,
     "[T2/32] Sidewalk (Trash)": None,
-    "[T2/37] Yacht (1)": None,
-    "[T2/38] Yacht (2)": None,
+    "[T2/37] Yacht (1)": (None, (400.000, 1700.000, 5.000), (335.000, 0.000, 0.000), (50.000, None), (3840, 1728), "Trailer 2 [2884]"),
+    "[T2/38] Yacht (2)": (None, (400.000, 1700.000, 5.000), (185.000, 0.000, 0.000), (50.000, None), (3840, 1728), "Trailer 2 [2884]"),
     "[T2/39] Car (Jason & Lucia)": None,
     "[T2/40] Visitor Center": None,
     "[T2/45] Wall (Up)": None,
@@ -1550,6 +1550,16 @@ pixels = {
         ((2808, 838), "Park Grove Condominium (N)"),
         ((3057, 1004), "Four Seasons Hotel Miami (T)"),
         ((3222, 634), "Park Grove Condominium (C)"),
+    ],
+    "[T2/37] Yacht (1)": [
+        ((673, 548), "Unknown Building (North Vice Beach)"),
+        ((3187, 459), "The Ritz-Carlton Bal Harbour"),
+        ((3658, 332), "Akoya Condominium"),
+    ],
+    "[T2/38] Yacht (2)": [
+        ((43, 588), "Portofino Tower (NW)"),
+        ((2674, 484), "1000 Venetian Way (SE)"),
+        ((3602, 559), "One Miami Condominium East (SE)"),
     ],
     "[T2/58] Explosion": [
         ((137, 252), "Mount Leonida"),
