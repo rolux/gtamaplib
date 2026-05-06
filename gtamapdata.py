@@ -186,7 +186,7 @@ cameras = {
     "[T2/12] Highway (Peacock Bay) (B)": (None, (-1464.000, -2256.000, 15.048), (345.216, 15.300, 0.000), (59.500, 28.847), (3840, 1728), "Trailer 2 [1111]"),
     "[T2/13] Beach Gym": (None, (2000.000, 400.000, 4.000), (100.000, 3.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [1152]"),
     "[T2/14] Door (Keys)": None,
-    "[T2/15] Little Haiti": None,
+    "[T2/15] Little Haiti": (None, (-1242, 1242, 5.000), (209.600, 0.000, 2.000), (60.000, None), (3840, 1728), "Trailer 2 [1359]"),
     "[T2/16] Prison Tower": None,
     "[T2/18] Prison (Gate) Take 1": None,
     "[T2/19] Prison (Gate) Take 2": None,
