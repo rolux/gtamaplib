@@ -2881,9 +2881,14 @@ lines = {
 
 landmarks = {
     "12th St Lifeguard Tower": (2224.167, 1032.254, 6.435),  # d=0.360 via Beach & Vice Beach (A)
+    "252 N Tyndall Pkwy (NE)": (-6192.707, 4415.573, 23.129),  # d=0.072 via Diner (S) & Easy Inn
+    "252 N Tyndall Pkwy (NW)": (-6197.491, 4416.217, 23.281),  # d=0.085 via Diner (S) & Easy Inn
+    "1111 Lincoln Rd (NW)": (1447.469, 1340.894, 55.309),  # d=7.026 via Rooftop Party & Vice City 03 (Basketball)
+    "1111 Lincoln Rd (SE)": (1490.945, 1304.196, 55.896),  # d=5.984 via Rooftop Party & Vice City 03 (Basketball)
     "1800 Club": (-336.786, 1029.407, 161.576),  # d=0.892 via Vice City Postcard & Vice City 03 (Basketball)
     "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     "Akoya Condominium": (1455.271, 2614.567, 145.644),  # d=4.024 via Venetian Islands & Highway (NE)
+    "Ambrosia Hill": (-2281.047, 4222.991, 138.077),  # d=5.149 via Hedge (B) (X) & Explosion
     "Ambrosia Main St (A)": (-2954.984, 4207.923, 5.000),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (B)": (-2943.365, 4169.656, 5.000),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (C)": (-2836.319, 3948.150, 5.000),  # via Ambrosia 02 (Panorama)
@@ -2895,6 +2900,8 @@ landmarks = {
     "Asia Brickell Key (CC2)": (-160.810, -855.041, 225.576),  # d=1.115 via Motorboats (A) & Vice Beach (B)
     "Ball near Grassrivers Sign": (-1135.500, 391.300, 2.700),  # Gizmo
     "Bank of America Financial Center": (1703.550, 1381.121, 85.112),  # d=0.575 via Beach & Venetian Islands
+    "Bank of America Financial Center (NW)": (1721.874, 1387.305, 68.395),  # d=1.165 via Venetian Islands & Vice City 03 (Basketball)
+    "Bank of America Financial Center (SW)": (1676.711, 1361.908, 66.563),  # d=2.703 via Beach & Venetian Islands
     "Bay (A)": (-7901.308, 4001.868, 0.000),  # via Port Gellhorn Postcard (X)
     "Bay (B)": (-7836.550, 4046.379, 0.000),  # via Port Gellhorn Postcard (X)
     "Bay (C)": (-7809.868, 4061.863, 0.000),  # via Port Gellhorn Postcard (X)
@@ -2939,6 +2946,7 @@ landmarks = {
     "Beach (G)": (2262.859, 973.636, 0.000),  # via Vice Beach (A)
     "Beach (H)": (2249.513, 1133.739, 0.000),  # via Vice Beach (A)
     "Beige Billboard (BE)": (-6108.791, 4591.625, 24.695),  # d=0.365 via Diner (N) & Diner (NE)
+    "Billboard (Hank's Waffles)": (-6287.856, 2987.928, 18.532),  # d=0.567 via Gas Station (Lucia) & Gas Station (Jason)
     "Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
     "Billboard with Irregular Shape": (-2935.798, 4375.849, 46.420),  # via Ambrosia 02 (Panorama)
     "Billboard with Oval Motif #1": (-3031.588, 4347.083, 55.169),  # via Ambrosia 02 (Panorama)
@@ -2948,18 +2956,28 @@ landmarks = {
     "Biscayne Island (S)": (253.227, 1080.161, 0.000),  # via Venetian Islands
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Blue Billboard (Key Lento)": (-3436.718, -6780.155, 23.305),  # d=0.238 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
+    "Blue Diamond": (1873.388, 2080.805, 146.237),  # d=2.661 via Venetian Islands & Jet Ski
     "Box in Backyard": (-1954.600, -1959.000, 4.000),  # Gizmo
+    "Bridge Island (W)": (-2380.989, -5074.134, 1.244),  # d=5.207 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Brown Hotel Sign": (1858.400, 1559.628, 7.705),  # d=0.046 via Vice City 03 (Basketball) & Hotel (W)
     "Canal (Hotel Valetta)": (1826.639, 1661.119, 0.000),  # via Vice City 03 (Basketball)
     "Capri South Beach (SE)": (1313.994, 1130.618, 57.829),  # d=0.350 via Rooftop Party & Vice Beach (B)
     "Carbonell Brickell": (-245.110, -844.141, 129.048),  # d=2.664 via Vice City Postcard & Skyline
+    "Central District Wastewater Treatment Plant (Tank)": (459.015, -1269.453, 37.930),  # d=4.371 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     #"Citigroup Center (NW)": (-388.124, -453.285, 152.344),  # d=0.868 via Vice City 03 (Basketball) & Skyline
-    #"Citigroup Center (SE)": (-357.055, -522.006, 152.617),  # d=0.249 via Vice City 03 (Basketball) & Skyline
+    #"Citigroup Center (SE)": (-357.059, -522.013, 152.617),  # d=0.250 via Skyline & Vice City 03 (Basketball)
     "Citigroup Center (NE)": (-365.501, -482.677, 152.917),  # d=0.260 via Vice City Postcard & Vice City 03 (Basketball)
     "Citigroup Center (NW)": (-412.892, -475.388, 153.301),  # d=0.512 via Vice City Postcard & Vice City 03 (Basketball)
+    "City View Parking Garage (S)": (-183.710, 2063.064, 33.331),  # d=1.583 via Highway (NE) & Wynwood
+    "City View Parking Garage (SE)": (-160.623, 2058.459, 32.991),  # d=1.830 via Highway (NE) & Wynwood
+    "Construction Crane (Vice Beach)": (1482.213, 257.388, 60.127),  # d=0.116 via Vice Beach (A) & Vice Beach (B)
+    "Container Crane (9)": (1093.565, -194.862, 68.493),  # d=8.571 via Amphitheater & Vice Beach (B)
+    "Continuum on South Beach (S)": (2026.337, -230.291, 168.892),  # d=2.730 via Sidewalk (Jason) (E) & Leonida Keys Postcard (X)
     "The Crimson (CC)": (-446.286, 1231.821, 121.858),  # d=2.920 via Vice City Postcard & Vice City 03 (Basketball)
     "Cruise Ship (FT)": (236.821, -302.111, 52.825),  # d=4.138 via Vice City 08 (Ferris Wheel) & Skyline
     "Cruise Ship (RT)": (363.679, -304.847, 59.541),  # d=1.921 via Vice City 08 (Ferris Wheel) & Vice City Postcard
+    "Cruise Terminal D": (643.504, -420.789, 35.897),  # d=1.245 via Motorboats (B) & Vice City 08 (Ferris Wheel)
+    "Cruise Terminal G (B)": (330.731, -334.763, 17.882),  # d=1.675 via Vice Beach (B) & Rooftop Party
     "Di Lido Island (N)": (496.162, 1537.713, 0.000),  # via Venetian Islands
     "Di Lido Island (S)": (588.273, 1001.623, 0.000),  # via Venetian Islands
     "Domed Hills Sign (TW)": (-6107.844, 4474.328, 17.450),  # d=0.934 via Diner (NE) & Diner (E)
@@ -2969,6 +2987,7 @@ landmarks = {
     "Double Pole (2S)": (-2793.368, -2490.226, 40.000),  # via Prison
     "Double Pole (3N)": (-2634.190, -2602.203, 40.000),  # via Prison
     "Double Pole (3S)": (-2689.745, -2628.888, 40.000),  # via Prison
+    "East Venetian Causeway Bridge": (1320.394, 1471.661, 12.724),  # d=4.549 via Jet Ski & Venetian Islands
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
@@ -2977,6 +2996,10 @@ landmarks = {
     "Flagler Memorial Island (N)": (820.612, 994.645, 0.000),  # via Venetian Islands
     "Flagler on the River": (-1024.660, -293.230, 139.279),  # d=1.543 via Skyline & Vice Beach (B)
     "Flamingo South Beach (NENE)": (1364.313, 1084.487, 51.977),  # d=0.861 via Rooftop Party & Vice Beach (B)
+    "Flamingo South Beach (NERNE)": (1385.067, 1061.745, 57.312),  # d=1.456 via Vice Beach (B) & Vice City 03 (Basketball)
+    "Flamingo South Beach (NWNE)": (1151.660, 961.740, 52.623),  # d=7.194 via Rooftop Party & Vice City 03 (Basketball)
+    "Flamingo South Beach (NWNW)": (1291.814, 1082.669, 53.355),  # d=0.783 via Venetian Islands & Vice City 03 (Basketball)
+    "Flamingo South Beach (SRSE)": (1359.326, 831.627, 59.351),  # d=1.695 via Vice Beach (A) & Vice Beach (B)
     "Flamingo South Beach (SDS)": (1283.328, 815.152, 64.407),  # d=1.483 via Venetian Islands & Vice Beach (A)
     "Flamingo South Beach (SRSW)": (1168.481, 828.651, 60.896),  # d=0.697 via Venetian Islands & Sidewalk (Jason) (E)
     "Flamingo South Beach (TE)": (1353.639, 937.979, 112.830),  # d=0.203 via Vice Beach (B) & Alley (W)
@@ -2992,12 +3015,18 @@ landmarks = {
     "Four Seasons Hotel Miami (SE)": (-817.997, -1316.422, 253.608),  # Rooftop (SE)
     "Four Seasons Hotel Miami (SW)": (-863.612, -1299.367, 253.608),  # Rooftop (SW)
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
+    "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
     "Green Diamond": (1782.904, 2127.124, 145.245),  # d=1.840 via Beach & Venetian Islands
     "Homestead Water Tower": (-2940.669, -3024.103, 69.913),  # d=4.125 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
     "Hotel Breakwater": (1949.796, 563.829, 25.734),  # d=0.265 via Vice Beach (A) & Park
     "Hotel Victor (SW)": (1945.101, 733.085, 33.587),  # d=0.251 via Beach & Park
+    "House C (E)": (-2327.506, -5512.035, 10.339),  # d=2.364 via Key Lento & Leonida Keys Postcard (X)
+    "House D (E)": (-2314.581, -5485.177, 15.728),  # d=0.205 via Key Lento & Leonida Keys Postcard (X)
+    # House D (SW)": (-2322.313, -5485.306, 13.027),  # d=0.321 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "House with Pier (E)": (-3155.670, -6500.087, 12.353),  # d=0.548 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
+    "Icon at South Beach": (1355.981, -13.762, 154.798),  # d=5.040 via Vice Beach (B) & Leonida Keys Postcard (X)
+    "Infinity at Brickell": (-1183.043, -1370.105, 169.573),  # d=2.667 via Metro (SE) (B) & Highway (Peacock Bay) (A)
     "InterContinental Miami (N)": (-255.482, -482.631, 134.173),  # d=1.042 via Vice City Postcard & Vice City 03 (Basketball)
     "Island A (W)": (-2561.894, -5618.294, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island F (E)": (-1786.271, -5718.466, 0.000), # via Leonida Keys Postcard (X)
@@ -3024,6 +3053,8 @@ landmarks = {
     "Juice Fruit Sign (B)": (-6580.941, 3666.261, 13.262),  # d=0.045 via Port Gellhorn Postcard (X) & Chase (2) (A)
     "Juice Fruit Sign (E)": (-6578.831, 3667.111, 13.151),  # d=0.003 via Port Gellhorn Postcard (X) & Chase (2) (A)
     "Juice Fruit Sign (W)": (-6583.000, 3665.366, 13.181),  # d=0.036 via Port Gellhorn Postcard (X) & Chase (2) (A)
+    "Kaseya Center (NW)": (-348.439, 456.214, 47.740),  # d=2.074 via Skyline & Vice City 08 (Ferris Wheel)
+    "Kaseya Center (S)": (-259.509, 358.037, 47.265),  # d=1.193 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Kaseya Center (SE)": (-217.872, 392.546, 47.504),  # d=1.541 via Vice City Postcard & Skyline
     "Key Lento (A)": (-2620.476, -5762.622, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Key Lento (E)": (-2194.499, -5133.273, 0.000), # via Leonida Keys Postcard (X)
@@ -3066,6 +3097,7 @@ landmarks = {
     "Liquor Store": (-662.870, 1219.216, 3.009),  # via Sidewalk (Jason) (S)
     "Loews Miami Beach": (1961.304, 1150.746, 86.815),  # d=0.198 via Rooftop Party & Vice Beach (A)
     "Loft Downtown II": (-493.469, 68.694, 124.295),  # d=0.793 via Skyline & Vice Beach (B)
+    "Magic City Casino (?)": (-2091.603, -1296.340, 45.296),  # d=7.986 via Prison & Leonida Keys 01 (Airplane) (X)
     "Margaret Pace Park": (-273.791, 1081.082, 8.073),  # d=0.977 via Vice City Postcard & Sidewalk (Jason) (E)
     "Marina (Stockyard) (NE)": (-210.058, 1442.637, 0.000),  # via Vice City Postcard
     "Marina (Stockyard) (SE)": (-229.861, 1372.754, 0.000),  # via Vice City Postcard
@@ -3077,6 +3109,7 @@ landmarks = {
     "Marriott Miami Biscayne Bay (E)": (-204.745, 846.529, 146.445),  # d=0.440 via Vice City Postcard & Vice City 03 (Basketball)
     "Marriott Miami Biscayne Bay (NE)": (-205.317, 870.167, 145.495),  # d=0.186 via Vice City Postcard & Vice Beach (B)
     "MIA North Terminal Tower": (-2378.279, -545.155, 60.726),  # d=0.531 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
+    "Miami Beach Parking Garage (SE)": (1850.104, 682.393, 34.083),  # d=0.565 via Vice Beach (A) & Vice Beach (B)
     ##"Miami Tower": (-775.668, -424.119, 159.972),  # d=5.605 via Grassrivers 02 (Watson Bay) & Prison
     "Miami Tower": (-798.576, -468.712, 166.523),  # d=1.795 via Vice City Postcard & Skyline
     ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B) (X)
@@ -3125,16 +3158,20 @@ landmarks = {
     "New Bahia Honda Bridge (39B)": (-5567.259, -7003.641, 10.000),  # via Keys
     "New Foundation Church": (-6641.757, 3857.512, 24.802),  # d=5.501 via Chase (2) (A) & Port Gellhorn Postcard (X)
     "New Wave Condominiums": (-324.871, 1413.982, 113.718),  # d=1.380 via Vice City Postcard & Vice City 03 (Basketball)
+    "New World Center": (1671.252, 1439.278, 43.897),  # d=2.414 via Venetian Islands & Vice City 03 (Basketball)
     #"Nine at Mary Brickell Village (A)": (-1035.341, -973.492, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     #"Nine at Mary Brickell Village (B)": (-1042.495, -984.399, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     #"Nine at Mary Brickell Village (E)": (-1072.159, -1029.655, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     "Nine at Mary Brickell Village (A)": (-1039.793, -967.786, 117.476),  # d=3.259 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
     "Nine at Mary Brickell Village (B)": (-1045.069, -980.992, 117.573),  # d=3.764 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
+    "Nine at Mary Brickell Village (C)": (-1046.501, -1000.646, 118.984),  # d=3.978 via Airport (X) & Metro (SE) (A) (4K)
+    "Nine at Mary Brickell Village (D)": (-1048.886, -1006.389, 118.946),  # d=4.373 via Airport (X) & Metro (SE) (A) (4K)
     "Nine at Mary Brickell Village (E)": (-1061.939, -1037.599, 117.902),  # d=2.271 via Tennis Stadium (4K) & Grassrivers 02 (Watson Bay)
     "1500 Ocean Dr": (2093.265, 983.621, 63.025),  # d=0.463 via Vice Beach (B) & Park
     "1500 Ocean Dr (S) (NW)": (2029.742, 1003.354, 62.016),  # d=0.422 via Venetian Islands & Vice Beach (B)
     "1500 Ocean Dr (S) (SE)": (2026.843, 968.113, 62.132),  # d=0.514 via Vice Beach (B) & Park
     "1500 Ocean Dr (S) (SW)": (2022.117, 973.553, 62.553),  # d=1.350 via Venetian Islands & Park
+    "Office in the Grove": (-1166.771, -2091.394, 41.561),  # d=0.680 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
     "Old Bahia Honda Bridge (1B)": (-5164.929, -7280.745, 0.000),  # via Keys
     "Old Bahia Honda Bridge (21B)": (-5582.075, -7075.952, 0.000),  # via Keys
     "Old City Hall": (1681.423, 606.033, 51.401),  # d=1.771 via Vice Beach (B) & Tennis Court (SE)
@@ -3151,6 +3188,7 @@ landmarks = {
     "99353 Overseas Hwy": (-3369.349, -6779.484, 74.152),  # d=0.467 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     #"102180 Overseas Hwy": (-2653.070, -6040.028, 39.913),  # d=2.823 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "102180 Overseas Hwy": (-2678.565, -6063.121, 41.579),  # d=0.594 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Palazzo del Sol": (1910.051, -1313.223, 58.077),  # d=18.348 via Rooftop Party & Leonida Keys Postcard (X)
     "Park Grove Condominium (C)": (-1310.987, -2053.385, 96.905),  # d=3.590 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Park Grove Condominium (N)": (-1316.937, -1991.705, 97.522),  # d=2.636 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Park Grove Condominium (S)": (-1318.394, -2135.744, 97.341),  # d=2.284 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
@@ -3159,6 +3197,7 @@ landmarks = {
     "Pelican Harbor Marina (C)": (1017.648, 1668.969, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (D)": (860.740, 1742.467, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (E)": (834.939, 1794.139, 0.000),  # via Venetian Islands
+    "Pelican Harbor Radio Tower": (1119.198, 1884.512, 106.942),  # d=5.499 via Venetian Islands & Jet Ski
     "PGH Barrier Island (E)": (-8418.734, 3705.928, 0.000),  # via Port Gellhorn Postcard (X)
     "PGH Island A (E)": (-7428.578, 3733.312, 0.000),  # via Port Gellhorn Postcard (X)
     "PGH Island A (S)": (-7349.187, 3746.757, 0.000),  # via Port Gellhorn Postcard (X)
@@ -3228,7 +3267,9 @@ landmarks = {
     ##"PTCC (2) (BB2)": (-7994.472, 4664.244, 40.500),  # via Diner (W) (A)
     "PTCC (2) (BB2)": (-8088.251, 4687.005, 40.500),  # via Port Gellhorn Postcard (X)
     "PTCC (3) (BB2)": (-7735.431, 4609.888, 40.500),  # via Diner (W) (A)
+    "Portofino Tower (NE)": (2830.894, -870.997, 210.766),  # d=0.530 via Sidewalk (Jason) (E) & Tennis Court (SE)
     "Portofino Tower (NW)": (1720.414, -196.295, 142.142),  # d=0.503 via Port & Sidewalk (Jason) (E)
+    "Portofino Tower (S)": (1739.004, -226.360, 139.781),  # d=8.279 via Port & Grassrivers 02 (Watson Bay)
     #"Prison Tower (1)": (-2884.895, -2690.586, 30.682),  # d=3.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     #"Prison Tower (2)": (-2722.635, -2714.152, 32.085),  # d=6.438 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
     #"Prison Tower (3)": (-2583.596, -2793.730, 32.316),  # d=6.093 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
@@ -3241,11 +3282,14 @@ landmarks = {
     "Prison Tower (4)": (-2631.080, -2864.993, 32.628),  # d=0.189 via Grassrivers 02 (Watson Bay) & Prison
     "Prison Tower (5)": (-2880.118, -2886.336, 32.672),  # d=0.201 via Grassrivers 02 (Watson Bay) & Prison
     "Prison Tower (6)": (-2983.035, -2781.496, 32.350),  # d=0.483 via Grassrivers 02 (Watson Bay) & Prison
+    "Pylon (1)": (-6427.710, 2952.146, 26.675),  # d=0.151 via Gas Station (Lucia) & Gas Station (Jason)
+    "Pylon (2)": (-6324.224, 2770.496, 14.871),  # d=0.066 via Gas Station (Lucia) & Gas Station (Jason)
     "Pylon (3)": (-6407.067, 3797.198, 60.516),  # d=0.067 via Car Wash & Gas Station (Lucia)
     "Quantum on the Bay Condominium (N) (NE)": (-400.508, 1157.326, 180.111),  # d=0.729 via Vice City Postcard & Vice Beach (B)
     "Quantum on the Bay Condominium (S) (NE)": (-357.319, 1125.022, 206.843),  # d=0.591 via Vice City Postcard & Vice Beach (B)
     "Radio Tower (Ambrosia) (B)": (-2074.852, 3169.762, 5.000),  # via Ambrosia 04 (Fires)
     "Radio Tower (Ambrosia)": (-2074.852, 3169.762, 124.043),  # via Ambrosia 04 (Fires)
+    "Radio Tower #1 (Port Gellhorn)": (-6502.024, 3495.439, 55.062),  # d=1.335 via U-Turn (NW) & Chase (2) (A)
     "Red Billboard (Hamlet)": (-2542.919, -3495.137, 27.400),  # d=8.899 via Police Chase (D) & Leonida Keys 01 (Airplane) (X)
     "Reworld Miami-Dade (SE)": (-1788.689, 719.480, 102.783),  # d=0.158 via Vice City Postcard & Intersection (W)
     "536 Richard Jackson Blvd (RNE)": (-6179.597, 4526.316, 16.948),  # d=0.030 via Diner (NW) & Diner (N)
@@ -3253,6 +3297,7 @@ landmarks = {
     "536 Richard Jackson Blvd (RSW)": (-6203.031, 4521.820, 16.955),  # d=0.006 via Diner (W) (A) & Diner (NW)
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
+    "The Ritz-Carlton Bal Harbour": (1375.930, 2770.632, 101.366),  # d=1.350 via Highway (NE) & Beach
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (N) (S)": (2036.451, 1049.876, 67.998),  # d=0.153 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
@@ -3279,6 +3324,8 @@ landmarks = {
     "Seven Mile Bridge (19B)": (-3920.601, -7106.128, 10.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (20B)": (-3940.429, -7117.949, 10.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (21B)": (-3957.535, -7132.332, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Sherry Frontenac Oceanfront Hotel (N)": (1478.578, 2558.613, 46.593),  # d=3.888 via Highway (NE) & Jet Ski
+    "Sherry Frontenac Oceanfront Hotel (S)": (1507.934, 2531.859, 46.344),  # d=4.174 via Highway (NE) & Jet Ski
     "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
     "Ship (B)": (-7165.042, 4600.027, 0.000),  # via Port Gellhorn Postcard (X)
     "Ship (C)": (-7129.975, 4644.868, 0.000),  # via Port Gellhorn Postcard (X)
@@ -3287,9 +3334,13 @@ landmarks = {
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
     "Southeast Financial Center": (-476.917, -463.168, 250.123),  # d=0.745 via Vice City Postcard & Vice Beach (B)
+    "Southeast Financial Center (D)": (-416.434, -441.105, 243.570),  # d=0.807 via Vice Beach (B) & Vice City 03 (Basketball)
     "Springfield Community Church (CW)": (-6320.702, 4068.742, 30.166),  # d=2.055 via Car Wash & Gas Station (Lucia)
     "St. Moritz Hotel (SW)": (1983.508, 1107.575, 49.354),  # d=1.202 via Venetian Islands & Vice Beach (B)
     "Stack (T)": (1323.696, -790.877, 23.842),  # via Motorboats (A)
+    "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
+    "Stephen P. Clark Government Center (E)": (-941.781, -6.778, 161.320),  # d=0.882 via Highway (Peacock Bay) (A) & Vice City 03 (Basketball)
+    "Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
     "Sunset Harbour South Condo": (1445.928, 1671.871, 85.810),  # d=0.219 via Vice City 03 (Basketball) & Venetian Islands
     "Sunshine Skyway Bridge (N)": (-6753.926, 4566.237, 119.352),  # d=0.622 via Chase (2) (A) & Diner (W) (A)
     "Sunshine Skyway Bridge (NR)": (-6753.926, 4566.237, 33.585),  # via Diner (W) (A)
@@ -3297,6 +3348,7 @@ landmarks = {
     "Sunshine Skyway Bridge (S)": (-6690.837, 4348.569, 119.352),  # via Chase (2) (A)
     "Sunshine Skyway Bridge (SR)": (-6690.837, 4348.569, 33.585),  # via Diner (W) (A)
     "Sunshine Skyway Bridge (SSR)": (-6654.030, 4221.579, 30.960),  # via Diner (W) (A)
+    "Tall Billboard": (-3007.502, -2842.664, 31.824),  # d=2.956 via Prison & Grassrivers 02 (Watson Bay)
     "Tall Double Billboard": (-6299.540, 4125.617, 46.603),  # d=3.130 via Gas Station (Lucia) & Car Wash
     "Ten Museum Park (SE)": (-405.844, 481.345, 136.174),  # d=3.175 via Skyline & Vice Beach (B)
     "Three Tequesta Point": (-14.635, -955.375, 205.786),  # d=0.119 via Vice City Postcard & Vice Beach (B)
@@ -3308,12 +3360,17 @@ landmarks = {
     "Train Tunnel (B)": (-5527.131, 5129.345, 69.610),  # via Diner (NE)
     "Tree on Island J": (-2479.572, -6563.116, 7.921),  # d=0.674 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Trésor Tower": (1842.996, 1950.337, 123.854),  # d=7.538 via Beach & Venetian Islands
+    "Turkey Point Nuclear Power Station (CNE)": (-1572.196, -3425.995, 36.407),  # d=0.176 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (CNW)": (-1613.875, -3431.708, 36.487),  # d=0.552 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (CSE)": (-1744.348, -3768.634, 35.376),  # d=5.643 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (CSW)": (-1787.103, -3785.827, 35.325),  # d=6.463 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (N)": (-1548.858, -3459.523, 56.586),  # d=0.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (S)": (-1546.175, -3523.098, 56.642),  # d=0.090 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (1)": (-1470.456, -3677.071, 80.112),  # d=1.428 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (2)": (-1469.572, -3717.393, 80.051),  # d=1.319 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (3)": (-1470.928, -3758.932, 79.971),  # d=1.175 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Two Tequesta Point": (42.973, -1061.323, 161.003),  # d=0.082 via Vice City Postcard & Vice Beach (B)
+    "Uncle Jack's Valley": (-6128.704, 3926.202, 35.520),  # d=1.437 via Gas Station (Lucia) & Uncle Jack's
     "Unnamed Building #1 (Blimp Key)": (-4238.667, -6868.495, 8.856),  # d=0.647 via Keys & Leonida Keys 01 (Airplane) (X)
     #"Unknown Building near VCIA (N)": (-5629.348, -1200.092, 90.408),  # d=6.729 via Vice City Postcard & Vice Beach (B)
     #"Unknown Building near VCIA (S)": (-5579.256, -1235.455, 90.413),  # d=6.869 via Vice City Postcard & Vice Beach (B)
@@ -3329,14 +3386,17 @@ landmarks = {
     "Vizcayne North Condominium (NE)": (-521.236, 155.073, 177.413),  # d=0.124 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne North Condominium (SE)": (-529.451, 97.516, 178.670),  # d=0.196 via Vice City Postcard & Vice City 03 (Basketball)
     "W South Beach (BNW)": (1940.825, 1628.012, 23.937),  # d=0.048 via Vice City 03 (Basketball) & Rooftop Party
+    "W South Beach (SE)": (1876.489, 1552.207, 72.509),  # d=6.143 via Sidewalk (Jason) (E) & Venetian Islands
     "Waffles Arrow": (-6168.370, 4497.709, 14.435),  # d=0.039 via Diner (NE) & Diner (E)
     "Waffles Billboard": (-6156.050, 4514.702, 23.038),  # d=0.084 via Diner (NE) & Diner (E)
     "Waffles Billboard (BW)": (-6158.466, 4516.257, 17.353),  # d=0.167 via Diner (N) & Diner (NE)
+    "Waffles Ridge (C)": (-5862.807, 5407.602, 80.937),  # d=4.885 via Diner (N) & Gas Station (Lucia)
     "Waffles Sign (TR)": (-6189.196, 4517.185, 16.067),  # d=0.010 via Diner (W) (A) & Diner (NW)
     "Water Tower (North Port Gellhorn)": (-6340.712, 4540.261, 45.181),  # d=0.184 via Diner (W) (A) & Diner (SW)
     "Water Tower (West Port Gellhorn)": (-6655.143, 3652.918, 37.559),  # d=0.005 via Port Gellhorn Postcard (X) & Port Gellhorn 04 (Delights) (X)
     "Water Tower (West Port Gellhorn) (C)": (-6655.143, 3652.918, 26.508),  # d=0.003 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
     "Water Tower near Prison": (-5154.754, 1557.230, 95.382),  # d=0.087 via Ambrosia 02 (Panorama) & Loading Zone near Prison (SW)
+    "The Waverly South Beach (NW)": (1230.092, 629.710, 106.965),  # d=2.282 via Tennis Court (SE) & Vice Beach (B)
     "The Waverly South Beach (SE)": (1264.980, 579.673, 113.901),  # d=1.289 via Rooftop Party & Vice Beach (B)
     "WDNA FM": (-2517.727, -2295.470, 407.215),  # d=123.048 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     ##"Wells Fargo Center (N)": (-642.090, -403.002, 187.267),  # d=2.755 via Vice Beach (B) & Prison
