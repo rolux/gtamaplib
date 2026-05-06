@@ -170,7 +170,7 @@ cameras = {
     "[T1/37] Car (Lucia)": None,
     "[T1/38] Car Crash": None,
     "[T1/40] Street (Bikers) (A)": None,
-    "[T1/40] Street (Bikers) (B)": None,
+    "[T1/40] Street (Bikers) (B)": (None, (-865.000, 1600.000, 5.000), (152.500, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [?]"),
     "[T1/41] Intersection (Bikers)": None,
     "[T1/42] High Rollerz": None,
     "[T1/44] U-Turn (NW)": (None, (-6288.000, 3358.000, 10.000), (64.000, -2.000, 0.000), (52.000, None), (3840, 2160), "Trailer 1 [2117]"),
@@ -1515,6 +1515,11 @@ pixels = {
         ((2767, 1463), "Port (Waning Sands) (N)"),
         ((2891, 1468), "Port (Waning Sands) (S)"),
         ((3727, 1585), "House #2 (Waning Sands)")
+    ],
+    "[T1/40] Street (Bikers) (B)": [
+        ((192, 739.5), "Four Seasons Hotel Miami (BW)"),
+        ((208, 701.5), "Stephen P. Clark Government Center (E)"),
+        ((382, 708.5), "Stephen P. Clark Government Center (W)"),
     ],
     "[T1/44] U-Turn (NW)": [
         ((447, 642), "6232 E Hwy 98 (SE)"),
@@ -3340,7 +3345,7 @@ landmarks = {
     "Stack (T)": (1323.696, -790.877, 23.842),  # via Motorboats (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
     "Stephen P. Clark Government Center (E)": (-941.781, -6.778, 161.320),  # d=0.882 via Highway (Peacock Bay) (A) & Vice City 03 (Basketball)
-    "Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
+    #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
     "Sunset Harbour South Condo": (1445.928, 1671.871, 85.810),  # d=0.219 via Vice City 03 (Basketball) & Venetian Islands
     "Sunshine Skyway Bridge (N)": (-6753.926, 4566.237, 119.352),  # d=0.622 via Chase (2) (A) & Diner (W) (A)
     "Sunshine Skyway Bridge (NR)": (-6753.926, 4566.237, 33.585),  # via Diner (W) (A)
