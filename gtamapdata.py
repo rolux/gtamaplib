@@ -938,7 +938,7 @@ pixels = {
         ((187, 34), "Pole near Signature Hangar 2"),
         ((319, 248), "Signature Hangar 2 (NW)"),
         ((460, 195), "Signature Hangar 2 (W)"),
-        ((1118, 145), "Bank of America Financial Center"),
+        ((1118, 145), "Bank of America Financial Center (Vice City)"),
         ((1641.5, 122.5), "Latitude on the River (S) (NW)"),
         ((1678.5, 122), "Latitude on the River (S) (SW)"),
         ((1815.5, 96), "Nine at Mary Brickell Village (A)"),
