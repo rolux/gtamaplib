@@ -1076,7 +1076,8 @@ pixels = {
         ((1728, 191.5), "The Waverly South Beach (SE)"),
         ((1890, 210), "The Waverly South Beach (NW)"),
         ((2145, 251), "1500 Ocean Dr (N) (NW)"),
-        ((2320, 338.5), "Flamingo South Beach (SRSW)"),
+        ((2295, 338), "Flamingo South Beach (SRSW)"),
+        ((2320, 338.5), "Flamingo South Beach (SRSE)"),
         ((2337, 322), "Flamingo South Beach (SDS)"),
         ((2564, 181), "Royal Palm South Beach (N) (S)"),
         ((2630, 157.5), "Flamingo South Beach (TSE)"),
@@ -1148,6 +1149,7 @@ pixels = {
         ((2275, 752), "Unknown Building near VCIA (S)"),
         ((2294, 752), "Unknown Building near VCIA (N)"),
         ((2319, 795), "Flamingo South Beach (SRSW)"),
+        ((2346, 796), "Flamingo South Beach (SRSE)"),
         ((2434, 636), "Marina Blue (NE)"),
         ((2496, 678), "Ten Museum Park (SE)"),
         ((2625, 805), "Royal Palm South Beach (S)"),
@@ -2167,7 +2169,7 @@ pixels = {
         ((771, 562), "Unknown Billboard #2"),
         ((861, 529), "One Broadway (W)"),
         ((919, 416), "Watson Bay Water Tower"),
-        ((945.5, 497), "Four Seasons Hotel Miami (W)"),
+        ((945.5, 497), "Four Seasons Hotel Miami (FW)"),
         ((1018, 528), "Shark Valley Observation Tower"),
         ((1039, 580), "Portofino Tower (S)"),
         ((1049.5, 532.5), "Unknown Radio Tower (Vice City)"),
@@ -2988,7 +2990,7 @@ landmarks = {
     "Four Seasons Hotel Miami (NE)": (-802.124, -1273.968, 258.306),  # Penthouse (NE)
     "Four Seasons Hotel Miami (NW)": (-847.739, -1256.913, 258.306),  # Penthouse (NW)
     "Four Seasons Hotel Miami (SE)": (-817.997, -1316.422, 253.608),  # Rooftop (SE)
-    "Four Seasons Hotel Miami (SW)": (-863.612, -1299.367, 253.608),  # Penthouse (SW)
+    "Four Seasons Hotel Miami (SW)": (-863.612, -1299.367, 253.608),  # Rooftop (SW)
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
     "Green Diamond": (1782.904, 2127.124, 145.245),  # d=1.840 via Beach & Venetian Islands
