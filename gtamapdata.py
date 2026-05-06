@@ -222,7 +222,7 @@ cameras = {
     "[T2/78] Chase (2) (B)": (None, (-6472.900, 3247.300, 6.457), (354.591, 1.700, -1.500), (48.000, 22.659), (3840, 1728), "Trailer 2 [4513]"),
     "[T2/80] Skyline": (None, (793.000, 1357.000, 10.152), (135.249, -2.100, 0.000), (58.100, 28.067), (3840, 1728), "Trailer 2 [4665]"),
     "[S2/2] Jason Duval 02 (Car)": (None, (900.000, 500.000, 5.000), (298.000, 9.500, 0.000), (60.000, None), (3840, 2160), "Jason Duval 02 [1]"),
-    "[S2/3] Jason Duval 03 (Boat)": None,
+    "[S2/3] Jason Duval 03 (Boat)": (None, (-2885.000, -6700.000, 2.5000), (329.000, -3.000, -0.500), (50.000, None), (3840, 2160), "Jason Duval 03 [1]"),
     "[S2/4] Jason Duval 04 (Ocean Drive)": None,
     "[S2/5] Jason Duval 05 (Machine Gun)": (None, (-1445.000, 915.000, 40.000), (245.000, -6.000, 0.000), (60.000, None), (3840, 2160), "Jason Duval 05 [1]"),
     "[S2/8] Lucia Caminos 02 (Pool)": None,
@@ -1519,6 +1519,7 @@ pixels = {
     "[T1/40] Street (Bikers) (B)": [
         ((192, 739.5), "Four Seasons Hotel Miami (BW)"),
         ((208, 701.5), "Stephen P. Clark Government Center (E)"),
+        ((355, 704), "Stephen P. Clark Government Center (NW)"),
         ((382, 708.5), "Stephen P. Clark Government Center (W)"),
     ],
     "[T1/44] U-Turn (NW)": [
@@ -1702,6 +1703,9 @@ pixels = {
         ((3342, 617), "1000 Venetian Way (2)"),
         ((3367, 177), "Opera Tower"),
         ((3462, 160), "The Grand (E)"),
+    ],
+    "[S2/3] Jason Duval 03 (Boat)": [
+        ((3621, 875), "Island F (W)"),
     ],
     "[S2/5] Jason Duval 05 (Machine Gun)": [
         ((2825, 218), "Vizcayne North Condominium (NE)"),
@@ -3345,6 +3349,7 @@ landmarks = {
     "Stack (T)": (1323.696, -790.877, 23.842),  # via Motorboats (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
     "Stephen P. Clark Government Center (E)": (-941.781, -6.778, 161.320),  # d=0.882 via Highway (Peacock Bay) (A) & Vice City 03 (Basketball)
+    "Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
     "Sunset Harbour South Condo": (1445.928, 1671.871, 85.810),  # d=0.219 via Vice City 03 (Basketball) & Venetian Islands
     "Sunshine Skyway Bridge (N)": (-6753.926, 4566.237, 119.352),  # d=0.622 via Chase (2) (A) & Diner (W) (A)
