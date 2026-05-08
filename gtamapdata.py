@@ -1299,6 +1299,7 @@ pixels = {
         ((2045, 871), "KC09"),
         ((2058, 907), "KC10"),
         ((2105, 1054), "KC11"),
+        ((3004, 911), "Reworld Miami-Dade (NW)"),
     ],
     "[T1/13] Wynwood": [
         ((1488, 1042), "City View Parking Garage (S)"),
