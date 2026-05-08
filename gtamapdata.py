@@ -244,7 +244,7 @@ cameras = {
     "[S2/44] Vice City 08 (Ferris Wheel)": (None, (-581.000, 909.000, 97.866), (214.216, -10.300, 0.000), (40.500, 23.447), (3840, 2160), "Vice City 08 [1]"),
     "[S2/45] Vice City 09 (La Perle)": (None, (-1250.000, 1150.000, 7.000), (300.000, 2.000, 0.000), (50.000, None), (3840, 2160), "Vice City 09 [1]"),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160), "Leonida Keys 01 [1]"),
-    "[S2/47] Leonida Keys 02 (Sidewalk)": None,
+    "[S2/47] Leonida Keys 02 (Sidewalk)": (None, (-2933.000, -6433.000, 2.000), (105.000, 1.000, 0.000), (45.000, None), (3840, 2160), "Leonida Keys 02 [1]"),
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
     "[S2/50] Leonida Keys 05 (Boats)": (None, (-3171.000, -6350.000, 5.459), (161.531, -16.700, 0.000), (72.300, 44.679), (3840, 2160), "Leonida Keys 05 [1]"),
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
@@ -1552,7 +1552,9 @@ pixels = {
         ((1440, 327), "Radio Tower (Key Lento)"),
         ((1508, 681), "Unknown Residential Building"),
         ((1788, 448), "Billboard #1 (Key Lento)"),
-        ((1893, 428.5), "Billboard #2 (Key Lento)"),
+        ((1881, 429), "Squalo Billboard (TS)"),
+        #((1893, 428.5), "Billboard #2 (Key Lento)"),
+        ((1905, 429), "Squalo Billboard (TN)"),
         ((1923, 357), "99353 Overseas Hwy"),
         ((1987, 428), "Blue Billboard (Key Lento)"),
         ((2009, 389), "102180 Overseas Hwy"),
@@ -1904,6 +1906,7 @@ pixels = {
         ((1960, 965), "Seven Mile Bridge (21B)"),
         ((1990, 651.5), "Island A (W)"),
         ((1994.5, 951), "Seven Mile Bridge (20B)"),
+        ((1999.5, 599), "Small Keys Bridge (C)"),
         ((2026, 938), "Seven Mile Bridge (19B)"),
         ((2059, 657), "Key Lento (A)"),
         ((2060, 923), "Seven Mile Bridge (18B)"),
@@ -1974,6 +1977,10 @@ pixels = {
         ((2929, 670), "Pin D01R"),
         ((2750, 652), "Pin D02L"),
         ((2787, 652), "Pin D02R"),
+    ],
+    "[S2/47] Leonida Keys 02 (Sidewalk)": [
+        ((684, 302), "Squalo Billboard (TS)"),
+        ((1216, 316), "Squalo Billboard (TN)"),
     ],
     "[S2/50] Leonida Keys 05 (Boats)": [
         ((663.5, 151), "House with Pier (E)"),
@@ -2372,9 +2379,10 @@ pixels = {
         ((353, 426), "Lake Surprise Viaduct (4B)"),
         ((385, 426), "Lake Surprise Viaduct (3B)"),
         ((416, 426), "Lake Surprise Viaduct (2B)"),
-        ((431, 309), "Stiltsville (1)"),
+        ((431, 311), "Stiltsville (1)"),
         ((434, 429), "Key Lento (E)"),
-        ((442, 312), "Stiltsville (2)"),
+        ((442, 314), "Stiltsville (2)"),
+        ((451, 328.5), "Small Keys Bridge (C)"),
         ((466, 369.5), "Broken Keys Bridge (1B)"),
         ((474, 337), "Small Keys Bridge (SB)"),
         ((424, 333), "Small Keys Bridge (NB)"),
@@ -2383,14 +2391,14 @@ pixels = {
         ((496, 369.5), "Broken Keys Bridge (3B)"),
         ((509.5, 369.5), "Broken Keys Bridge (4B)"),
         ((519, 390), "East Key (NW)"),
-        ((522, 302), "Stiltsville (3)"),
-        ((531.5, 313.5), "Stiltsville (4)"),
+        ((522, 304), "Stiltsville (3)"),
+        ((531.5, 315.5), "Stiltsville (4)"),
         ((546, 260.5), "Palazzo del Sol"),
         #((546, 261), "Unknown Structure (Fisher Island)"),
-        ((556, 309), "Stiltsville (5)"),
+        ((556, 311), "Stiltsville (5)"),
         ((565.5, 368), "Broken Keys Bridge (7B)"),
         ((585, 368), "Broken Keys Bridge (8B)"),
-        ((617, 306), "Stiltsville (6)"),
+        ((617, 308), "Stiltsville (6)"),
         ((589, 499), "Island A (W)"),
         #((682, 438), "House D (W)"),
         ((646, 279), "Fisher Island (Z)"),
@@ -2413,8 +2421,10 @@ pixels = {
         ((1383, 424), "Island F (E)"),
         ((1567, 436), "Island F (W)"),
         ((1568, 793), "House with Pier (E)"),
+        ((1683, 686), "Squalo Billboard (TN)"),
         ((1687, 1130), "Key Lento (V)"),
-        ((1707, 686), "Billboard #2 (Key Lento)"),
+        #((1707, 686), "Billboard #2 (Key Lento)"),
+        ((1730, 686), "Squalo Billboard (TS)"),
         ((1848, 486), "Island G (E)"),
         ((1941, 499), "Island G (W)"),
         ((1960, 1190), "Key Lento (U)"),
@@ -2981,7 +2991,7 @@ landmarks = {
     "Beach (H)": (2249.513, 1133.739, 0.000),  # via Vice Beach (A)
     "Beige Billboard (BE)": (-6108.791, 4591.625, 24.695),  # d=0.365 via Diner (N) & Diner (NE)
     "Billboard (Hank's Waffles)": (-6287.856, 2987.928, 18.532),  # d=0.567 via Gas Station (Lucia) & Gas Station (Jason)
-    "Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
+    #"Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
     "Billboard with Irregular Shape": (-2935.798, 4375.849, 46.420),  # via Ambrosia 02 (Panorama)
     "Billboard with Oval Motif #1": (-3031.588, 4347.083, 55.169),  # via Ambrosia 02 (Panorama)
     "22 Biscayne Bay (SE)": (-338.986, 1346.432, 72.845),  # d=0.132 via Vice City Postcard & Vice City 03 (Basketball)
@@ -2993,12 +3003,12 @@ landmarks = {
     "Blue Diamond": (1873.388, 2080.805, 146.237),  # d=2.661 via Venetian Islands & Jet Ski
     "Box in Backyard": (-1954.600, -1959.000, 4.000),  # Gizmo
     "Bridge Island (W)": (-2380.989, -5074.134, 1.244),  # d=5.207 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Broken Keys Bridge (1B)": (-1466.543, -4425.243, 0.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (2B)": (-1458.441, -4439.253, 0.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (3B)": (-1450.339, -4453.264, 0.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (4B)": (-1443.047, -4465.873, 0.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (7B)": (-1386.872, -4493.659, 0.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (8B)": (-1376.227, -4512.067, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (1B)": (-1466.543, -4425.243, 5.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (2B)": (-1458.441, -4439.253, 5.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (3B)": (-1450.339, -4453.264, 5.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (4B)": (-1443.047, -4465.873, 5.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (7B)": (-1386.872, -4493.659, 5.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (8B)": (-1376.227, -4512.067, 5.000),  # via Leonida Keys Postcard (X)
     "Brown Hotel Sign": (1858.400, 1559.628, 7.705),  # d=0.046 via Vice City 03 (Basketball) & Hotel (W)
     "Canal (Hotel Valetta)": (1826.639, 1661.119, 0.000),  # via Vice City 03 (Basketball)
     "Capri South Beach (SE)": (1313.994, 1130.618, 57.829),  # d=0.350 via Rooftop Party & Vice Beach (B)
@@ -3378,6 +3388,7 @@ landmarks = {
     "Ship (C)": (-7129.975, 4644.868, 0.000),  # via Port Gellhorn Postcard (X)
     "Sidewalk Creep": (-667.412, 1087.195, 2.470),  # via Sidewalk (Jason) (S)
     "Skyviews Miami Observation Wheel": (34.535, 82.384, 73.990),  # d=0.857 via Vice City Postcard & Skyline
+    "Small Keys Bridge (C)": (-774.354, -3699.830, 10.525),  # d=3.042 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Small Keys Bridge (NB)": (-675.401, -3545.679, 0.000),  # via Leonida Keys Postcard (X)
     "Small Keys Bridge (SB)": (-756.043, -3725.681, 0.000),  # via Leonida Keys Postcard (X)
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
@@ -3385,12 +3396,20 @@ landmarks = {
     "Southeast Financial Center": (-476.917, -463.168, 250.123),  # d=0.745 via Vice City Postcard & Vice Beach (B)
     "Southeast Financial Center (D)": (-416.434, -441.105, 243.570),  # d=0.807 via Vice Beach (B) & Vice City 03 (Basketball)
     "Springfield Community Church (CW)": (-6320.702, 4068.742, 30.166),  # d=2.055 via Car Wash & Gas Station (Lucia)
+    "Squalo Billboard (TN)": (-3059.693, -6490.460, 25.495),  # d=0.924 via Key Lento & Leonida Keys Postcard (X)
+    "Squalo Billboard (TS)": (-3051.845, -6501.225, 25.383),  # d=0.697 via Key Lento & Leonida Keys Postcard (X)
     "St. Moritz Hotel (SW)": (1983.508, 1107.575, 49.354),  # d=1.202 via Venetian Islands & Vice Beach (B)
     "Stack (T)": (1323.696, -790.877, 23.842),  # via Motorboats (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
     "Stephen P. Clark Government Center (E)": (-941.781, -6.778, 161.320),  # d=0.882 via Highway (Peacock Bay) (A) & Vice City 03 (Basketball)
     "Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
+    "Stiltsville (1)": (165.396, -2695.256, 5.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (2)": (36.148, -2855.041, 5.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (3)": (623.422, -2475.979, 5.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (4)": (48.056, -3057.470, 5.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (5)": (280.240, -2893.844, 5.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (6)": (492.027, -2848.200, 5.000),  # via Leonida Keys Postcard (X)
     "Sunset Harbour South Condo": (1445.928, 1671.871, 85.810),  # d=0.219 via Vice City 03 (Basketball) & Venetian Islands
     "Sunshine Skyway Bridge (N)": (-6753.926, 4566.237, 119.352),  # d=0.622 via Chase (2) (A) & Diner (W) (A)
     "Sunshine Skyway Bridge (NR)": (-6753.926, 4566.237, 33.585),  # via Diner (W) (A)
