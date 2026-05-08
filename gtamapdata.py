@@ -1678,7 +1678,7 @@ pixels = {
         ((886.5, 442), "One Miami Condominium East (NE)"),
         ((964.5, 447), "One Miami Condominium West (SE)"),
         ((988, 445.5), "One Miami Condominium West (NE)"),
-        ((1056, 584), "Skyviews Miami Observation Wheel"),
+        ((1047, 584), "Skyviews Miami Observation Wheel"),
         ((1078, 443), "Four Seasons Hotel Miami (BE)"),
         ((1101, 506), "Citigroup Center (SE)"),
         ((1140, 447.5), "Four Seasons Hotel Miami (NW)"),
@@ -1854,10 +1854,10 @@ pixels = {
         ((173, 694), "Island S (E)"),
         ((389.5, 565.5), "MIA North Terminal Tower"),
         ((428, 548), "FAA Miami ATCT (MIA)"),
-        ((498, 564.5), "Homestead Water Tower"),
         ((415, 592), "Prison Tower (6)"),
         ((457, 553.5), "Unknown Building (Vice City)"),
         ((465, 591), "Prison Tower (1)"),
+        ((498, 564.5), "Homestead Water Tower"),
         ((514.5, 591.5), "Prison Tower (5)"),
         ((585, 590.5), "Prison Tower (2)"),
         ((664, 576), "Magic City Casino (?)"),
@@ -1866,7 +1866,7 @@ pixels = {
         ((458, 693.5), "Island U (S)"),
         ((609, 349), "WDNA FM"),
         ((709, 927), "Island N (W)"),
-        ((766.5, 569), "???"),
+        ((766.5, 569), "Unknown Building near VCIA Metro"),
         ((777, 713), "Island V (S)"),
         ((925, 592), "Red Billboard (Hamlet)"),
         ((950, 593), "US1/i97"),
@@ -1880,7 +1880,7 @@ pixels = {
         ((1350, 916), "Island N (E)"),
         ((1354, 538), "Carbonell Brickell"),
         ((1413, 512), "Asia Brickell Key"),
-        # ((1466, 715), "Island W (S)"),
+        ((1464, 714), "Island W (S)"),
         ((1467, 504), "Three Tequesta Point"),
         ((1483, 584), "Turkey Point Nuclear Power Station (CNW)"),
         ((1503.5, 584), "Turkey Point Nuclear Power Station (CNE)"),
@@ -2371,11 +2371,21 @@ pixels = {
         ((431, 309), "Stiltsville (1)"),
         ((434, 429), "Key Lento (E)"),
         ((442, 312), "Stiltsville (2)"),
+        ((466, 369.5), "Broken Keys Bridge (1B)"),
+        ((474, 337), "Small Keys Bridge (SB)"),
+        ((424, 333), "Small Keys Bridge (NB)"),
+        ((478, 445), "Key Lento (D)"),
+        ((481, 369.5), "Broken Keys Bridge (2B)"),
+        ((496, 369.5), "Broken Keys Bridge (3B)"),
+        ((509.5, 369.5), "Broken Keys Bridge (4B)"),
+        ((519, 390), "East Key (NW)"),
         ((522, 302), "Stiltsville (3)"),
         ((531.5, 313.5), "Stiltsville (4)"),
         ((546, 260.5), "Palazzo del Sol"),
         #((546, 261), "Unknown Structure (Fisher Island)"),
         ((556, 309), "Stiltsville (5)"),
+        ((565.5, 368), "Broken Keys Bridge (7B)"),
+        ((585, 368), "Broken Keys Bridge (8B)"),
         ((617, 306), "Stiltsville (6)"),
         ((589, 499), "Island A (W)"),
         #((682, 438), "House D (W)"),
@@ -2389,6 +2399,7 @@ pixels = {
         ((731, 459), "House with Boat (X)"),
         ((874, 392), "500 Pompano Dr"),
         ((917.5, 490), "Marina Club at Blackwater Sound (N)"),
+        ((921.5, 388), "East Key (SW)"),
         ((950, 402.5), "Unknown Residential Building"),
         ((970, 401), "200 Pompano Dr"),
         ((990, 402), "180 Pompano Dr"),
@@ -2403,6 +2414,10 @@ pixels = {
         ((1848, 486), "Island G (E)"),
         ((1941, 499), "Island G (W)"),
         ((1960, 1190), "Key Lento (U)"),
+        ((2021, 517), "Island H (E)"),
+        ((2059, 519), "Island H (W)"),
+        ((2087, 523), "Island I (E)"),
+        ((2115, 525), "Island I (W)"),
         ((2326, 581), "Island J (E)"),
         ((2355, 564), "Tree on Island J"),
         ((2486, 613), "Island J (W)"),
@@ -2970,6 +2985,12 @@ landmarks = {
     "Blue Diamond": (1873.388, 2080.805, 146.237),  # d=2.661 via Venetian Islands & Jet Ski
     "Box in Backyard": (-1954.600, -1959.000, 4.000),  # Gizmo
     "Bridge Island (W)": (-2380.989, -5074.134, 1.244),  # d=5.207 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Broken Keys Bridge (1B)": (-1466.543, -4425.243, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (2B)": (-1458.441, -4439.253, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (3B)": (-1450.339, -4453.264, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (4B)": (-1443.047, -4465.873, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (7B)": (-1386.872, -4493.659, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (8B)": (-1376.227, -4512.067, 0.000),  # via Leonida Keys Postcard (X)
     "Brown Hotel Sign": (1858.400, 1559.628, 7.705),  # d=0.046 via Vice City 03 (Basketball) & Hotel (W)
     "Canal (Hotel Valetta)": (1826.639, 1661.119, 0.000),  # via Vice City 03 (Basketball)
     "Capri South Beach (SE)": (1313.994, 1130.618, 57.829),  # d=0.350 via Rooftop Party & Vice Beach (B)
@@ -2998,6 +3019,8 @@ landmarks = {
     "Double Pole (2S)": (-2793.368, -2490.226, 40.000),  # via Prison
     "Double Pole (3N)": (-2634.190, -2602.203, 40.000),  # via Prison
     "Double Pole (3S)": (-2689.745, -2628.888, 40.000),  # via Prison
+    "East Key (NW)": (-1741.100, -4769.922, 0.000),  # via Leonida Keys Postcard (X)
+    "East Key (SW)": (-1522.592, -5077.037, 0.000),  # via Leonida Keys Postcard (X)
     "East Venetian Causeway Bridge": (1320.394, 1471.661, 12.724),  # d=4.549 via Jet Ski & Venetian Islands
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
@@ -3044,6 +3067,10 @@ landmarks = {
     "Island F (W)": (-1837.483, -5897.036, 0.000), # via Leonida Keys Postcard (X)
     "Island G (E)": (-2142.519, -6218.571, 0.000), # via Leonida Keys Postcard (X)
     "Island G (W)": (-2197.904, -6292.396, 0.000), # via Leonida Keys Postcard (X)
+    "Island H (W)": (-2265.190, -6375.183, 0.000),  # via Leonida Keys Postcard (X)
+    "Island H (W)": (-2265.190, -6375.183, 0.000),  # via Leonida Keys Postcard (X)
+    "Island I (W)": (-2282.531, -6408.995, 0.000),  # via Leonida Keys Postcard (X)
+    "Island I (W)": (-2282.531, -6408.995, 0.000),  # via Leonida Keys Postcard (X)
     "Island J (E)": (-2507.148, -6567.983, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island J (W)": (-2577.286, -6635.502, 0.000), # via Leonida Keys Postcard (X)
     "Island K (E)": (-3562.974, -7797.697, 0.000),  # via Key Lento
@@ -3068,6 +3095,7 @@ landmarks = {
     "Kaseya Center (S)": (-259.509, 358.037, 47.265),  # d=1.193 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Kaseya Center (SE)": (-217.872, 392.546, 47.504),  # d=1.541 via Vice City Postcard & Skyline
     "Key Lento (A)": (-2620.476, -5762.622, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Key Lento (D)": (-2286.561, -5261.905, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (E)": (-2194.499, -5133.273, 0.000), # via Leonida Keys Postcard (X)
     "Key Lento (J)": (-3016.386, -6703.864, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Key Lento (U)": (-3379.887, -6681.060, 0.000), # via Leonida Keys Postcard (X)
@@ -3342,6 +3370,8 @@ landmarks = {
     "Ship (C)": (-7129.975, 4644.868, 0.000),  # via Port Gellhorn Postcard (X)
     "Sidewalk Creep": (-667.412, 1087.195, 2.470),  # via Sidewalk (Jason) (S)
     "Skyviews Miami Observation Wheel": (34.535, 82.384, 73.990),  # d=0.857 via Vice City Postcard & Skyline
+    "Small Keys Bridge (NB)": (-675.401, -3545.679, 0.000),  # via Leonida Keys Postcard (X)
+    "Small Keys Bridge (SB)": (-756.043, -3725.681, 0.000),  # via Leonida Keys Postcard (X)
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
     "Southeast Financial Center": (-476.917, -463.168, 250.123),  # d=0.745 via Vice City Postcard & Vice Beach (B)
