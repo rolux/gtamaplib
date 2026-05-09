@@ -138,7 +138,7 @@ cameras = {
     #"[T1/11] Motorboats (A)": (None, (1650.000, -850.000, 2.000), (91.400, 1.919, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [699]"),
     "[T1/11] Motorboats (A)": (None, (1514.000, -797.000, 1.615), (92.703, 1.990, 0.000), (63.000, 38.038), (3840, 2160), "Trailer 1 [699]"),
     "[T1/11] Motorboats (B)": (None, (1530.000, -791.000, 1.991), (88.533, -0.330, 0.000), (63.000, 38.038), (3840, 2160), "Trailer 1 [745]"),
-    "[T1/12] Convertible": (None, (-25.000, 575.000, 15.000), (105.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [746]"),
+    "[T1/12] Convertible": (None, (-25.000, 575.000, 15.000), (103.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [746]"),
     "[T1/13] Wynwood": (None, (-425.000, 1700.000, 5.000), (319.000, 3.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [824]"),
     "[T1/14] Strip Club (Mondays)": None,
     "[T1/15] Handshake": None,
@@ -186,8 +186,8 @@ cameras = {
     "[T2/12] Highway (Peacock Bay) (B)": (None, (-1464.000, -2256.000, 15.048), (345.216, 15.300, 0.000), (59.500, 28.847), (3840, 1728), "Trailer 2 [1111]"),
     "[T2/13] Beach Gym": (None, (2000.000, 400.000, 4.000), (100.000, 2.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [1152]"),
     "[T2/14] Door (Keys)": None,
-    "[T2/15] Little Haiti": (None, (-1242, 1242, 5.000), (209.600, 0.000, 2.000), (60.000, None), (3840, 1728), "Trailer 2 [1359]"),
-    "[T2/16] Prison Tower": None,
+    "[T2/15] Little Haiti": (None, (-1242.000, 1242.000, 5.000), (209.600, 0.000, 2.000), (60.000, None), (3840, 1728), "Trailer 2 [1359]"),
+    "[T2/16] Prison Tower": (None, (-2638.000, -2915.000, 5.000), (4.000, 16.000, 0.000), (45.000, None), (3840, 1728), "Trailer 2 [1496]"),
     "[T2/18] Prison (Gate) Take 1": None,
     "[T2/19] Prison (Gate) Take 2": None,
     "[T2/20] Prison (Gate) Reverse": None,
@@ -1598,6 +1598,9 @@ pixels = {
         ((2808, 838), "Park Grove Condominium (N)"),
         ((3057, 1004), "Four Seasons Hotel Miami (T)"),
         ((3222, 634), "Park Grove Condominium (C)"),
+    ],
+    "[T2/16] Prison Tower": [
+        ((2837, 173), "Prison Tower (4)"),
     ],
     "[T2/37] Yacht (1)": [
         ((673, 548), "Unknown Building (North Vice Beach)"),
@@ -3349,6 +3352,7 @@ landmarks = {
     "Radio Tower (Ambrosia)": (-2074.852, 3169.762, 124.043),  # via Ambrosia 04 (Fires)
     "Radio Tower #1 (Port Gellhorn)": (-6502.024, 3495.439, 55.062),  # d=1.335 via U-Turn (NW) & Chase (2) (A)
     "Red Billboard (Hamlet)": (-2542.919, -3495.137, 27.400),  # d=8.899 via Police Chase (D) & Leonida Keys 01 (Airplane) (X)
+    "Reworld Miami-Dade (NW)": (-1916.243, 750.831, 112.208),  # d=20.111 via Intersection (W) & Convertible
     "Reworld Miami-Dade (SE)": (-1788.689, 719.480, 102.783),  # d=0.158 via Vice City Postcard & Intersection (W)
     "536 Richard Jackson Blvd (RNE)": (-6179.597, 4526.316, 16.948),  # d=0.030 via Diner (NW) & Diner (N)
     "536 Richard Jackson Blvd (RSE)": (-6185.783, 4513.381, 16.996),  # d=0.015 via Diner (W) (A) & Diner (NW)
