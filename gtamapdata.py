@@ -3350,6 +3350,7 @@ landmarks = {
     "Pylon (3)": (-6407.067, 3797.198, 60.516),  # d=0.067 via Car Wash & Gas Station (Lucia)
     "Quantum on the Bay Condominium (N) (NE)": (-400.508, 1157.326, 180.111),  # d=0.729 via Vice City Postcard & Vice Beach (B)
     "Quantum on the Bay Condominium (S) (NE)": (-357.319, 1125.022, 206.843),  # d=0.591 via Vice City Postcard & Vice Beach (B)
+    "Quarry": (-5895.363, 4161.935, 36.938),  # d=5.947 via Diner (SE) (A) & Mount Kalaga National Park 04 (Mountain Pass) (X)
     "Radio Tower (Ambrosia) (B)": (-2074.852, 3169.762, 5.000),  # via Ambrosia 04 (Fires)
     "Radio Tower (Ambrosia)": (-2074.852, 3169.762, 124.043),  # via Ambrosia 04 (Fires)
     "Radio Tower #1 (Port Gellhorn)": (-6502.024, 3495.439, 55.062),  # d=1.335 via U-Turn (NW) & Chase (2) (A)
