@@ -702,6 +702,9 @@ pixels = {
     "[L1/10] Pawn Shop (S)": [
         ((518, 459), "Player"),
     ],
+    "[L1/12] Auto Shop (NE)": [
+        ((1839, 127), "RC Cola Plant (W)"),
+    ],
     "[L1/13] House with Boat (X)": [
         ((2996.5, 599), "House D (W)"),
         ((3054, 616), "House D (SW)"),
@@ -1600,6 +1603,9 @@ pixels = {
         ((2808, 838), "Park Grove Condominium (N)"),
         ((3057, 1004), "Four Seasons Hotel Miami (T)"),
         ((3222, 634), "Park Grove Condominium (C)"),
+    ],
+    "[T2/15] Little Haiti": [
+        ((2717, 748), "RC Cola Plant (W)"),
     ],
     "[T2/16] Prison Tower": [
         ((2837, 173), "Prison Tower (4)"),
