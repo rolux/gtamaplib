@@ -65,7 +65,7 @@ cameras = {
     "[L1/15] Glitch (C)": None,
     "[L1/15] Glitch (D)": None,
     "[L1/15] Fence": None,
-    "[L1/16] Boat (Jason)": ((-3852.600, -344.300, 6.000), (-3853.900, -344.000, 7.300), (240.000, -27.000, 0.000), (None, 51.400), (1920, 1020), "2022-04-12 18-36-00 [?]"),
+    "[L1/16] Boat (Jason)": ((-3852.600, -344.300, 6.000), (-3853.900, -344.000, 7.300), (240.000, -25.250, 0.000), (None, 51.400), (1920, 1020), "2022-04-12 18-36-00 [?]"),
     "[L1/17] Hotel (E)": ((1955.600, 1566.800, 4.600), (1951.500, 1565.300, 5.700), (284.767, -7.500, 0.000), (None, 49.600), (1920, 1080), "2022-04-13 09-08-46 [?]"),
     "[L1/18] Hotel (W)": ((1954.400, 1559.600, 4.600), (1957.500, 1559.700, 5.500), (84.000, -8.250, 0.000), (None, 49.600), (1920, 1080), "2022-04-13 17-42-41 [?]"),
     "[L1/19] Farm": ((-3466.800, -4462.600, 2.400), (-3466.300, -4469.700, 3.700), (11.400, -17.200, 0.000), (None, 49.600), (1920, 1020), "2022-04-21 16-26-26 [?]"),
@@ -767,6 +767,15 @@ pixels = {
         ((1679, 225), "East Coast (H)"),
         ((1714, 226), "East Coast (I)"),
     ],
+    "[L1/16] Boat (Jason)": [
+        ((0, 37), "Lake near VCIA (A)"),
+        ((876.5, 21.5), "Lake near VCIA (B)"),
+        ((905, 22), "Lake near VCIA (C)"),
+        ((957, 24), "Lake near VCIA (D)"),
+        ((1248, 131), "Lake near VCIA (E)"),
+        ((1490, 169), "Lake near VCIA (F)"),
+        ((1909, 182), "Lake near VCIA (G)"),
+    ],
     "[L1/17] Hotel (E)": [
         ((851, 496), "Player"),
     ],
@@ -1185,6 +1194,10 @@ pixels = {
     "[T1/10] Beach": [
         ((601, 427), "101 Ocean Dr (SE)"),
         ((1231.5, 549.5), "Royal Atlantic Condominium (SE)"),
+        ((1341, 792), "Lamp Post Flamingo Park (1)"),
+        ((1401, 811), "Lamp Post Flamingo Park (2)"),
+        ((1431, 813), "Lamp Post Flamingo Park (3)"),
+        ((1469, 816), "Lamp Post Flamingo Park (4)"),
         ((1517, 786), "Jenny Hostel"),
         ((1654, 832), "Jenny Hostel (NE)"),
         ((1672, 800), "Bank of America Financial Center (SW)"),
@@ -1873,7 +1886,8 @@ pixels = {
         ((389.5, 565.5), "MIA North Terminal Tower"),
         ((428, 548), "FAA Miami ATCT (MIA)"),
         ((415, 592), "Prison Tower (6)"),
-        ((457, 553.5), "Unknown Building (Vice City)"),
+        ((454.5, 553.5), "Reworld Miami-Dade (NW)"),
+        ((459.5, 553.5), "Reworld Miami-Dade (SE)"),
         ((465, 591), "Prison Tower (1)"),
         ((498, 564.5), "Homestead Water Tower"),
         ((514.5, 591.5), "Prison Tower (5)"),
@@ -3139,6 +3153,13 @@ landmarks = {
     "Keys Bridge (6B)": (-424.729, -3012.541, 10.000),  # via Leonida Keys Postcard (X)
     "Keys Bridge (7B)": (-436.195, -3043.565, 10.000),  # via Leonida Keys Postcard (X)
     "Keys Bridge (C)": (-408.951, -2964.775, 20.880),  # d=10.108 via Leonida Keys 01 (Airplane) (X) & Prison
+    "Lake near VCIA (A)": (-3715.573, -320.614, 5.000),  # via Boat (Jason)
+    "Lake near VCIA (B)": (-3626.992, -454.330, 5.000),  # via Boat (Jason)
+    "Lake near VCIA (C)": (-3639.212, -454.927, 5.000),  # via Boat (Jason)
+    "Lake near VCIA (D)": (-3674.023, -447.338, 5.000),  # via Boat (Jason)
+    "Lake near VCIA (E)": (-3836.590, -360.979, 5.000),  # via Boat (Jason)
+    "Lake near VCIA (F)": (-3842.875, -360.145, 5.000),  # via Boat (Jason)
+    "Lake near VCIA (G)": (-3846.870, -364.241, 5.000),  # via Boat (Jason)
     "Lake Surprise Viaduct (2B)": (-2161.738, -5071.893, 10.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (3B)": (-2173.715, -5051.182, 10.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (4B)": (-2186.078, -5029.803, 10.000),  # via Leonida Keys Postcard (X)
