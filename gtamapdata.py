@@ -778,7 +778,7 @@ pixels = {
         ((1909, 182), "Lake near VCIA (G)"),
     ],
     "[L1/17] Hotel (E)": [
-        ((851, 496), "Player"),
+        ((850, 664), "Player"),
     ],
     "[L1/17] Hotel (W)": [
         ((48, 801), "Minimap (TL)"),
@@ -872,7 +872,7 @@ pixels = {
         ((1518, 72), "Art Deco Welcome Center (S)"),
     ],
     "[L1/30] Store (Lucia)": [
-        ((1112, 416), "Player")
+        ((1078, 751), "Player")
     ],
     "[L1/31] Intersection (W)": [
         ((1313, 91), "Reworld Miami-Dade (SE)"),
