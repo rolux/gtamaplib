@@ -1119,6 +1119,7 @@ pixels = {
         ((141, 1152), "Cavalier Hotel"),
         ((225, 1144), "Leslie Hotel"),
         ((249.5, 546), "Icon at South Beach"),
+        ((344.5, 1027.5), "Hotel Victor (NE)"),
         ((405, 895), "Port (A)"),
         ((433, 882), "CC (9) (BE)"),
         ((452, 754), "Container Crane (9)"),
@@ -1646,6 +1647,7 @@ pixels = {
         ((116, 465), "Portofino Tower (NE)"),
         ((133.5, 754.4), "Hotel Breakwater"),
         ((239, 480), "Portofino Tower (NW)"),
+        ((618, 273), "Hotel Victor (NE)"),
         ((3347, 431), "Cardozo South Beach (O)"),
     ],
     "[T2/67] Television": [
