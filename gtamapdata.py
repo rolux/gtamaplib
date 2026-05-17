@@ -1145,6 +1145,7 @@ pixels = {
         ((1159, 830), "Cruise Terminal G (B)"),
         ((1275, 922), "The Tides South Beach"),
         ((1301, 688), "The Floridian"),
+        ((1347, 1451), "Cardozo South Beach (O)"),
         ((1354, 1334), "Cardozo South Beach"),
         ((1537, 575), "Southeast Financial Center (D)"),
         ((1548, 572), "Southeast Financial Center"),
@@ -1640,6 +1641,12 @@ pixels = {
     ],
     "[T2/59] Park (Mobile Phone)": [
         ((1084, 463), "Wide Billboard (Port VC)"),
+    ],
+    "[T2/64] Dominion Hotel": [
+        ((116, 465), "Portofino Tower (NE)"),
+        ((133.5, 754.4), "Hotel Breakwater"),
+        ((239, 480), "Portofino Tower (NW)"),
+        ((3347, 431), "Cardozo South Beach (O)"),
     ],
     "[T2/67] Television": [
         ((3582, 609), "Bridge Island (W)"),
