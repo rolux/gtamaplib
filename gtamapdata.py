@@ -2146,11 +2146,13 @@ pixels = {
         ((2920, 847), "Sebring Water Tower (B)"),
         ((2921, 819), "Sebring Water Tower"),
         ((2925, 1912), "Red Boxville (BNE)"),
+        ((2977, 1279), "Ambrosia Bridge (3B)"),
         ((2988, 1104), "Billboard with Oval Motif #1 (B)"),
         ((2995, 900), "Billboard with Oval Motif #1"),
         ((3001.5, 1854.5), "Red Boxville (TSW)"),
         ((3013, 1907), "Red Boxville (BNW)"),
         ((3014, 1863), "Red Boxville (TNW)"),
+        ((3060, 1309), "Ambrosia Bridge (4B)"),
         ((3071, 1032), "Main St (Y)"),
         ((3098, 2160), "Lake Leonida (A)"),
         ((3109.5, 792), "Water Tower near Prison"),
@@ -2972,6 +2974,8 @@ landmarks = {
     "1800 Club": (-336.786, 1029.407, 161.576),  # d=0.892 via Vice City Postcard & Vice City 03 (Basketball)
     "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     "Akoya Condominium": (1455.271, 2614.567, 145.644),  # d=4.024 via Venetian Islands & Highway (NE)
+    "Ambrosia Bridge (3B)": (-2821.372, 4643.329, 5.000),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Bridge (4B)": (-2811.679, 4677.701, 5.000),  # via Ambrosia 02 (Panorama)
     "Ambrosia Hill": (-2281.047, 4222.991, 138.077),  # d=5.149 via Hedge (B) (X) & Explosion
     "Ambrosia Main St (A)": (-2954.984, 4207.923, 5.000),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (B)": (-2943.365, 4169.656, 5.000),  # via Ambrosia 02 (Panorama)
@@ -3373,7 +3377,7 @@ landmarks = {
     ##"PTCC (2) (BB2)": (-7994.472, 4664.244, 40.500),  # via Diner (W) (A)
     "PTCC (2) (BB2)": (-8088.251, 4687.005, 40.500),  # via Port Gellhorn Postcard (X)
     "PTCC (3) (BB2)": (-7735.431, 4609.888, 40.500),  # via Diner (W) (A)
-    "Portofino Tower (NE)": (2830.894, -870.997, 210.766),  # d=0.530 via Sidewalk (Jason) (E) & Tennis Court (SE)
+    #"Portofino Tower (NE)": (2830.894, -870.997, 210.766),  # d=0.530 via Sidewalk (Jason) (E) & Tennis Court (SE)
     "Portofino Tower (NW)": (1720.414, -196.295, 142.142),  # d=0.503 via Port & Sidewalk (Jason) (E)
     "Portofino Tower (S)": (1739.004, -226.360, 139.781),  # d=8.279 via Port & Grassrivers 02 (Watson Bay)
     #"Prison Tower (1)": (-2884.895, -2690.586, 30.682),  # d=3.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
