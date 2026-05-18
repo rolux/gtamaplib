@@ -203,7 +203,7 @@ cameras = {
     "[T2/45] Wall (Up)": None,
     "[T2/46] Wall (Down)": None,
     "[T2/52] Empty Lot near Metro Station": (None, (-670.000, 940.000, 5.000), (45.000, -4.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3340]"),
-    "[T2/54] Starlet Motel": None,
+    "[T2/54] Starlet Motel": (None, (-5320.000, 3440.000, 67.000), (0.000, 8.000, 0.000), (55.000, None), (3840, 1728), "Trailer 2 [4322]"),
     "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (0.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
     "[T2/59] Park (Mobile Phone)": (None, (-170.000, 370.000, 5.000), (225.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3566]"),
     "[T2/61] Pickup Truck (Night) (A)": (None, (-1250.000, -2550.000, 2.500), (15.000, 5.000, 0.000), (45.000, None), (3840, 1728), "Trailer 2 [3623]"),
@@ -1636,6 +1636,9 @@ pixels = {
         ((2674, 484), "1000 Venetian Way (SE)"),
         ((3602, 559), "One Miami Condominium East (SE)"),
     ],
+    "[T2/54] Starlet Motel": [
+        ((2820, 234), "Starlet Motel Sign (A)"),
+    ],
     "[T2/58] Explosion": [
         ((137, 252), "Mount Leonida"),
         ((310, 290), "Ambrosia Hill"),
@@ -2030,6 +2033,7 @@ pixels = {
         ((354, 773), "Billboard near Intersection (BC)"),
         ((527, 1435), "Red-Yellow Umbrella (2)"),
         ((958, 1796), "Starlet Motel Sign (BS)"),
+        ((1233, 303), "Starlet Motel Sign (A)"),
         ((1394, 1440), "Red-Yellow Umbrella (1)"),
         ((2025, 1499), "Economy Inn (RE)"),
     ],
