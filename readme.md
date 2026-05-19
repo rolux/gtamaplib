@@ -14,6 +14,8 @@ The core of **gtamaplib** are its `Camera` and `Map` classes. A `Camera` turns a
 
 Please note that v0.1.0 is the first pre-release version of the library. More information, further updates (and maybe even proper documentation!) will follow shortly.
 
+**NEW:** Check out the [gtamaplib-vc](https://github.com/rolux/gtamaplib-vc) project. This adds a global optimizer and a web-based UI to navigate the triangulated world.
+
 [^1]: see the [Mapping Los Santos](https://gtaforums.com/topic/491242-mapping-los-santos-buildinglandmark-analysis/) and [Mapping Vice City](https://gtaforums.com/topic/985670-mapping-vice-city-map-discussion-thread-no-leak-footage-allowed/) threads on GTAForums
 
 <br><br><br>
