@@ -2783,7 +2783,7 @@ def get_color(name):
 
 def get_letter(name):
     if name.startswith("Pin "):
-        return name.split(" ")[-1][0]
+        return name.split(" ")[1][0]
     if re.search("\\([A-Z0-9]+\\)$", name):
         return name.split("(")[-1][0]
     return re.sub("^The ", "", name)[0]
