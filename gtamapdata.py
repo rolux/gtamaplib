@@ -1949,7 +1949,7 @@ pixels = {
         ((1685, 556), "Turkey Point Nuclear Power Station (3)"),
         ((1711.5, 1022), "Seven Mile Bridge (W)"),
         ((1753, 636), "Bridge Island (W)"),
-        ((1814, 534), "Portofino Tower (NW)"),
+        ((1813, 534), "Portofino Tower (NW)"),
         ((1878.5, 590), "Keys Bridge (C)"),
         ((1886, 819.5), "Pin F02R (B)"),
         ((1899, 540), "Continuum on South Beach (S)"),
