@@ -1847,41 +1847,41 @@ pixels = {
         ((3508, 715), "1500 Ocean Dr")
     ],
     "[S2/44] Vice City 08 (Ferris Wheel)": [
-        ((277, 434), "Port (C)"),
-        ((391, 432), "Port (D)"),
+        ((277, 434), "Port VC (G)"),
+        ((391, 432), "Port VC (H)"),
         ((415, 182), "Container Crane (4)"),
         ((454, 685), "Highway Sign (S)"),
         ((620, 183), "Container Crane (3)"),
         ((624, 256), "CC (3) (BB2)"),
-        ((733, 415), "Port (E)"),
+        ((733, 415), "Port VC (I)"),
         ((832, 229), "Palazzo del Sol"),
-        ((897, 415), "Port (F)"),
+        ((897, 415), "Port VC (J)"),
         ((955, 184), "Container Crane (2)"),
         ((956, 260), "CC (2) (BB2)"),
         ((1141, 317), "Cruise Terminal D"),
         ((1259, 188), "Container Crane (1)"),
         ((1261, 262), "CC (1) (BB2)"),
         ((1368, 880), "Knight Concert Hall (NE)"),
-        ((1408, 451), "Port (G)"),
+        ((1408, 451), "Port VC (K)"),
         ((1515.5, 231), "Tall Billboard (Port VC)"),
         ((1581, 264), "Cruise Ship (RT)"),
         ((1589, 885), "Knight Concert Hall (SW)"),
         ((1649, 262), "Skyviews Miami Observation Wheel"),
         ((1858, 553), "Kaseya Center (SE)"),
         ((1937, 306), "Cruise Ship (FT)"),
-        ((2114, 502), "Port (H)"),
+        ((2114, 502), "Port VC (L)"),
         ((2119, 284), "WTP (E)"),
         ((2162, 284), "WTP (W)"),
-        ((2215, 510), "Port (I)"),
+        ((2215, 510), "Port VC (M)"),
         ((2280, 560), "Kaseya Center (S)"),
         ((2560, 647), "Kaseya Center (NW)"),
         ((2603, 515), "Hard Rock Cafe"),
         ((2630, 284), "Wide Billboard (Port VC)"),
         ((2697, 1197), "Adrienne Arsht Center (NE)"),
         ((2725, 273), "Central District Wastewater Treatment Plant (Tank)"),
-        ((2840, 474), "Port (J)"),
-        ((2935, 480), "Port (K)"),
-        ((3010, 475), "Port (L)"),
+        ((2840, 474), "Port VC (N)"),
+        ((2935, 480), "Port VC (O)"),
+        ((3010, 475), "Port VC (P)"),
         ((3239, 1206), "Adrienne Arsht Center (SW)"),
         ((1645, 783.5), "KC06"),
         ((1655, 731), "KC01"),
@@ -3363,16 +3363,16 @@ landmarks = {
     "500 Pompano Dr": (-1914.537, -5324.281, 21.231),  # d=0.008 via Leonida Keys Postcard (X) & Key Lento
     "200 Pompano Dr": (-1875.738, -5390.187, 13.952),  # d=0.258 via Leonida Keys Postcard (X) & Key Lento
     "180 Pompano Dr": (-1896.308, -5424.708, 15.680),  # d=0.813 via Leonida Keys Postcard (X) & Key Lento
-    "Port (C)": (844.123, -219.229, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (D)": (822.311, -248.268, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (E)": (807.720, -387.098, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (F)": (759.765, -419.707, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (G)": (474.043, -357.364, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (H)": (168.887, -287.187, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (I)": (130.654, -276.456, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (J)": (55.929, -506.148, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (K)": (22.156, -496.718, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (L)": (13.063, -529.819, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (G)": (844.123, -219.229, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (H)": (822.311, -248.268, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (I)": (807.720, -387.098, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (J)": (759.765, -419.707, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC K)": (474.043, -357.364, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (L)": (168.887, -287.187, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (M)": (130.654, -276.456, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (N)": (55.929, -506.148, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (O)": (22.156, -496.718, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (P)": (13.063, -529.819, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port of Tampa Container Crane (1)": (-8261.673, 4785.312, 74.500),  # via Port Gellhorn Postcard (X)
     ##"Port of Tampa Container Crane (2)": (-7994.472, 4664.244, 74.500),  # via Diner (W) (A)
     "Port of Tampa Container Crane (2)": (-8088.251, 4687.005, 74.500),  # via Port Gellhorn Postcard (X)
@@ -3578,8 +3578,8 @@ landmarks = {
     "Park (E)": (497.202, 2273.076, 0.000),  # via Glitch (A)
     "Park (W)": (481.392, 2264.564, 0.000),  # via Glitch (A)
 
-    "Port (A)": (1040.799, -289.160, 0.000),  # via Vice Beach (B)
-    "Port (B)": (998.701, -220.588, 0.000),  # via Vice Beach (B)
+    "Port VC (A)": (1040.799, -289.160, 0.000),  # via Vice Beach (B)
+    "Port VC (B)": (998.701, -220.588, 0.000),  # via Vice Beach (B)
     "CC (9) (BE)": (1001.373, -312.508, 5.000),  # via Vice Beach (B)
     "CC (9) (BW)": (991.668, -289.380, 5.000),  # via Vice Beach (B)
 
