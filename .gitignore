@@ -11,3 +11,6 @@ frames/
 maps/
 make_zips.py
 render_all.json
+fonts.zip
+maps.zip
+frames.zip

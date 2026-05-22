@@ -1,4 +1,5 @@
 import os
+import urllib.request
 import zipfile
 
 DIRNAME = os.path.dirname(__file__)
@@ -6,7 +7,18 @@ DIRNAME = os.path.dirname(__file__)
 for name in ("fonts", "frames", "maps"):
     dirname = f"{DIRNAME}/{name}"
     filename = f"{DIRNAME}/{name}.zip"
-    if not os.path.exists(dirname) and os.path.exists(filename):
+    tmp = f"{filename}.tmp"
+    url = f"https://gtadb.org/gtamaplib/{name}.zip"
+    if not os.path.exists(dirname):
+        if not os.path.exists(filename):
+            try:
+                print(f"Downloading {name}", end=" ... ", flush=True)
+                urllib.request.urlretrieve(url, tmp)
+                os.replace(tmp, filename)
+            except Exception:
+                if os.path.exists(tmp):
+                    os.remove(tmp)
+                raise
         print(f"Extracting {name}", end=" ... ", flush=True)
         with zipfile.ZipFile(filename) as z:
             z.extractall(dirname)
@@ -204,7 +216,7 @@ cameras = {
     "[T2/46] Wall (Down)": None,
     "[T2/52] Empty Lot near Metro Station": (None, (-670.000, 940.000, 5.000), (45.000, -4.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3340]"),
     "[T2/54] Starlet Motel": (None, (-5320.000, 3440.000, 67.000), (0.000, 8.000, 0.000), (55.000, None), (3840, 1728), "Trailer 2 [4322]"),
-    "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (0.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
+    "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (355.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
     "[T2/59] Park (Mobile Phone)": (None, (-170.000, 370.000, 5.000), (225.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3566]"),
     "[T2/61] Pickup Truck (Night) (A)": (None, (-1250.000, -2550.000, 2.500), (15.000, 5.000, 0.000), (45.000, None), (3840, 1728), "Trailer 2 [3623]"),
     "[T2/61] Pickup Truck (Night) (B)": None,
@@ -1056,9 +1068,9 @@ pixels = {
         ((3063, 981), "Prison Tower (5)"),
         ((3381, 945), "Turkey Point Nuclear Power Station (N)"),
         ((3481, 945), "Turkey Point Nuclear Power Station (S)"),
-        ((3670, 912), "Turkey Point Nuclear Power Station (1)"),
-        ((3731, 912), "Turkey Point Nuclear Power Station (2)"),
-        ((3797, 912), "Turkey Point Nuclear Power Station (3)"),
+        ((3671, 912), "Turkey Point Nuclear Power Station (1)"),
+        ((3732, 912), "Turkey Point Nuclear Power Station (2)"),
+        ((3797.5, 912), "Turkey Point Nuclear Power Station (3)"),
     ],
     "[T1/6] Vice Beach (A)": [
         ((0, 1444), "Beach (G)"),
@@ -1595,6 +1607,7 @@ pixels = {
         ((3311, 470.5), "Island V (S)"),
         ((3432, 417), "Naval Air Station Key West (Control Tower)"),
         ((3506, 419), "Naval Air Station Key West (Radar Tower)"),
+        ((3547, 437), "Unknown White Structure (Keys)"),
         ((3549, 430.5), "Naval Air Station Key West (Hangar)"),
         ((3631, 422), "KBYX Doppler Weather Radar"),
         ((3764.5, 421), "Water Tower (Leonida Keys)"),
@@ -1950,9 +1963,10 @@ pixels = {
         ((1711.5, 1022), "Seven Mile Bridge (W)"),
         ((1753, 636), "Bridge Island (W)"),
         ((1813, 534), "Portofino Tower (NW)"),
+        ((1868, 538), "Continuum on South Beach (N)"),
         ((1878.5, 590), "Keys Bridge (C)"),
         ((1886, 819.5), "Pin F02R (B)"),
-        ((1899, 540), "Continuum on South Beach (S)"),
+        ((1899, 536), "Continuum on South Beach (S)"),
         ((1960, 965), "Seven Mile Bridge (21B)"),
         ((1990, 651.5), "Island A (W)"),
         ((1994.5, 951), "Seven Mile Bridge (20B)"),
@@ -1963,8 +1977,8 @@ pixels = {
         #((2080, 627.5), "House D (W)"),
         ((2084, 629), "House D (SW)"),
         ((2088, 912), "Seven Mile Bridge (17B)"),
-        ((2109, 641), "House with Boat (X)"),
         ((2114.5, 901.5), "Seven Mile Bridge (16B)"),
+        ((2119, 641), "House with Boat (X)"),
         ((2139, 891), "Seven Mile Bridge (15B)"),
         ((2163, 882), "Seven Mile Bridge (14B)"),
         ((2185, 873), "Seven Mile Bridge (13B)"),
@@ -2404,6 +2418,7 @@ pixels = {
         ((43, 424), "Lake Surprise Viaduct (14B)"),
         ((52, 231), "Murano Grande"),
         ((74, 424), "Lake Surprise Viaduct (13B)"),
+        ((76, 280), "Port"),
         ((105, 424), "Lake Surprise Viaduct (12B)"),
         ((135, 424.5), "Lake Surprise Viaduct (11B)"),
         ((166, 424.5), "Lake Surprise Viaduct (10B)"),
@@ -2416,6 +2431,7 @@ pixels = {
         ((197, 424.5), "Lake Surprise Viaduct (9B)"),
         ((228, 425), "Lake Surprise Viaduct (8B)"),
         ((244, 315), "Keys Bridge (N)"),
+        ((245, 229), "Continuum on South Beach (N)"),
         ((257, 298), "Virginia Key (C)"),
         ((257, 320), "Keys Bridge (1B)"),
         ((257, 703), "Island X (S)"),
@@ -3610,6 +3626,11 @@ landmarks = {
     "CC (1) (BB2)": (951.596, -832.676, 40.516),
     "CC (2) (BB2)": (1112.251, -801.004, 40.516),
     "CC (3) (BB2)": (1275.008, -766.484, 40.516),  # via Motorboats (A)
+
+    #### nudge optimizer ####
+    "Virginia Key (A)": (1250.0, -1750.0, 0.0),
+    "Virginia Key (B)": (750.0, -2250.0, 0.0),
+    "Virginia Key (C)": (250.0, -2250.0, 0.0),
 
     #### AIWE MAP ####
     "1703 E 5th St (Shack) (SE)": (-6264.218, 3479.946, 10.000),  # via AI World Editor Map (4K)
