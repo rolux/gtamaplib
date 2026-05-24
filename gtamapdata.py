@@ -21,7 +21,7 @@ for name in ("fonts", "frames", "maps"):
                 raise
         print(f"Extracting {name}", end=" ... ", flush=True)
         with zipfile.ZipFile(filename) as z:
-            z.extractall(DIRNAME)
+            z.extractall(dirname)
         print("Done")
 
 
