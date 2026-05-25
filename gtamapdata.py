@@ -1,28 +1,7 @@
 import os
+import shutil
 import urllib.request
 import zipfile
-
-DIRNAME = os.path.dirname(__file__)
-
-for name in ("fonts", "frames", "maps"):
-    dirname = f"{DIRNAME}/{name}"
-    filename = f"{DIRNAME}/{name}.zip"
-    tmp = f"{filename}.tmp"
-    url = f"https://gtadb.org/gtamaplib/{name}.zip"
-    if not os.path.exists(dirname):
-        if not os.path.exists(filename):
-            try:
-                print(f"Downloading {name}", end=" ... ", flush=True)
-                urllib.request.urlretrieve(url, tmp)
-                os.replace(tmp, filename)
-            except Exception:
-                if os.path.exists(tmp):
-                    os.remove(tmp)
-                raise
-        print(f"Extracting {name}", end=" ... ", flush=True)
-        with zipfile.ZipFile(filename) as z:
-            z.extractall(DIRNAME)
-        print("Done")
 
 
 ### CAMERAS ########################################################################################
@@ -3745,3 +3724,42 @@ map_sections = {
     "Leonard County": (-2000, 2000, 3000, 12000),
     "Mount Kalaga National Park": (-7000, 4000, -2000, 8000),
 }
+
+
+### ASSETS #########################################################################################
+
+DIRNAME = os.path.dirname(__file__)
+
+for name in ("fonts", "frames", "maps"):
+    dirname = f"{DIRNAME}/{name}"
+    filename = f"{DIRNAME}/{name}.zip"
+    tmp = f"{filename}.tmp"
+    url = f"https://gtadb.org/gtamaplib/{name}.zip"
+    if os.path.exists(dirname):
+        update = (
+            name == "frames" and any(
+                not os.path.exists(f"{dirname}/{c}.png") for c in cameras
+            )
+        ) or (
+            name == "maps" and any(
+                not os.path.exists(maps[m]["filename"]) for m in maps
+            )
+        )
+        if update:
+            if os.path.exists(filename):
+                os.remove(filename)
+            shutil.rmtree(dirname)
+    if not os.path.exists(dirname):
+        if not os.path.exists(filename):
+            try:
+                print(f"Downloading {name}", end=" ... ", flush=True)
+                urllib.request.urlretrieve(url, tmp)
+                os.replace(tmp, filename)
+            except Exception:
+                if os.path.exists(tmp):
+                    os.remove(tmp)
+                raise
+        print(f"Extracting {name}", end=" ... ", flush=True)
+        with zipfile.ZipFile(filename) as z:
+            z.extractall(DIRNAME)
+        print("Done")
