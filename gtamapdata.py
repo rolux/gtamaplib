@@ -3,6 +3,8 @@ import shutil
 import urllib.request
 import zipfile
 
+DIRNAME = os.path.dirname(__file__)
+
 
 ### CAMERAS ########################################################################################
 
@@ -3727,8 +3729,6 @@ map_sections = {
 
 
 ### ASSETS #########################################################################################
-
-DIRNAME = os.path.dirname(__file__)
 
 for name in ("fonts", "frames", "maps"):
     dirname = f"{DIRNAME}/{name}"
