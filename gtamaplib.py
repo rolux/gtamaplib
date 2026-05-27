@@ -1660,57 +1660,57 @@ class WDNAFM(Landmark):
     def __init__(self):
         super().__init__("WDNA FM")
         self.t = md.landmarks["WDNA FM"]
-        self.n = md.landmarks["WDNA FM (N)"]
-        self.se = md.landmarks["WDNA FM (SE)"]
-        self.sw = md.landmarks["WDNA FM (SW)"]
-        self._construct()
-
-    def _construct(self):
-        side_length = 5
-        radius = side_length / math.sqrt(3)
-        center = (self.t[0], self.t[1], self.n[2])
-        elevation = 5
-        spire_height = 7
-        spire_bottom = self.t[2] - spire_height
-        self.n = get_point(center, get_direction(center, self.n), radius)
-        self.se = get_point(center, get_direction(center, self.se), radius)
-        self.sw = get_point(center, get_direction(center, self.sw), radius)
-        self.tn = (self.n[0], self.n[1], spire_bottom)
-        self.tse = (self.se[0], self.se[1], spire_bottom)
-        self.tsw = (self.sw[0], self.sw[1], spire_bottom)
-        self.bn = (self.n[0], self.n[1], elevation)
-        self.bse = (self.se[0], self.se[1], elevation)
-        self.bsw = (self.sw[0], self.sw[1], elevation)
+        self.n0 = md.landmarks["WDNA FM (N0)"]
+        self.se0 = md.landmarks["WDNA FM (SE0)"]
+        self.sw0 = md.landmarks["WDNA FM (SW0)"]
+        self.n1 = md.landmarks["WDNA FM (N1)"]
+        self.se1 = md.landmarks["WDNA FM (SE1)"]
+        self.sw1 = md.landmarks["WDNA FM (SW1)"]
+        self.n2 = md.landmarks["WDNA FM (N2)"]
+        self.se2 = md.landmarks["WDNA FM (SE2)"]
+        self.sw2 = md.landmarks["WDNA FM (SW2)"]
+        self.n3 = md.landmarks["WDNA FM (N3)"]
+        self.se3 = md.landmarks["WDNA FM (SE3)"]
+        self.sw3 = md.landmarks["WDNA FM (SW3)"]
+        self.n4 = md.landmarks["WDNA FM (N4)"]
+        self.se4 = md.landmarks["WDNA FM (SE4)"]
+        self.sw4 = md.landmarks["WDNA FM (SW4)"]
 
     def draw_on_map(self, m, width=1):
         for line in [
-            (self.bn, self.bse),
-            (self.bse, self.bsw),
-            (self.bsw, self.bn),
-            (self.tn, self.t),
-            (self.tse, self.t),
-            (self.tsw, self.t),
+            (self.n0, self.se0),
+            (self.se0, self.sw0),
+            (self.sw0, self.n0),
+            (self.n0, self.t),
+            (self.se0, self.t),
+            (self.sw0, self.t),
         ]:
             m.draw_line(line, self.color, width)
         return self
 
     def render_on_camera(self, cam, width=1):
         for line in [
-            (self.bn, self.tn),
-            (self.bse, self.tse),
-            (self.bsw, self.tsw),
-            (self.tn, self.t),
-            (self.tse, self.t),
-            (self.tsw, self.t),
-            (self.bn, self.bse),
-            (self.bse, self.bsw),
-            (self.bsw, self.bn),
-            (self.n, self.se),
-            (self.se, self.sw),
-            (self.sw, self.n),
-            (self.tn, self.tse),
-            (self.tse, self.tsw),
-            (self.tsw, self.tn),
+            (self.n0, self.n4),
+            (self.se0, self.se4),
+            (self.sw0, self.sw4),
+            (self.n4, self.t),
+            (self.se4, self.t),
+            (self.sw4, self.t),
+            (self.n0, self.se0),
+            (self.se0, self.sw0),
+            (self.sw0, self.n0),
+            (self.n1, self.se1),
+            (self.se1, self.sw1),
+            (self.sw1, self.n1),
+            (self.n2, self.se2),
+            (self.se2, self.sw2),
+            (self.sw2, self.n2),
+            (self.n3, self.se3),
+            (self.se3, self.sw3),
+            (self.sw3, self.n3),
+            (self.n4, self.se4),
+            (self.se4, self.sw4),
+            (self.sw4, self.n4),
         ]:
             cam.render_line(line, self.color, width)
         return self

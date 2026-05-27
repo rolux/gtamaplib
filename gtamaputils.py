@@ -196,25 +196,33 @@ def find_vice_beach(
 
 def find_wdna_fm():
 
+    def resize(point, side_length=5):
+        radius = side_length / np.sqrt(3)
+        center = (top[0], top[1], point[2])
+        return ml.get_point(center, ml.get_direction(center, point), radius)
+
     cam = ml.get_camera("Prison")
     # optimizer results
     cam.set_xyz((-3356.683, -2761.643, 32.429))
     cam.set_ypr((281.609, -2.511, 0.000))
     cam.set_fov((80.727, None))
     lm_name = "WDNA FM"
-    ray_n = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (N)"))
-    ray_sw = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SW)"))
-    ray_se = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE)"))
+    ray_se1 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE1)"))
+    ray_n2 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (N2)"))
+    ray_sw2 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SW2)"))
+    ray_se2 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE2)"))
+    ray_se3 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE3)"))
     top = md.landmarks[lm_name]
+
     z = top[2] - 50
     for step in (1, -0.1, 0.01, -0.001):
         loss = float("inf")
         while True:
             plane = ((0, 0, z), (0, 0, 1))
-            point_n = ml.intersect_ray_and_plane(ray_n, plane)
-            point_sw = ml.intersect_ray_and_plane(ray_sw, plane)
-            point_se = ml.intersect_ray_and_plane(ray_se, plane)
-            midpoint = ml.get_midpoint((point_n, point_sw, point_se))
+            point_n2 = ml.intersect_ray_and_plane(ray_n2, plane)
+            point_sw2 = ml.intersect_ray_and_plane(ray_sw2, plane)
+            point_se2 = ml.intersect_ray_and_plane(ray_se2, plane)
+            midpoint = ml.get_midpoint((point_n2, point_sw2, point_se2))
             center = (top[0], top[1], z)
             distance = ml.get_distance(midpoint, center)
             if distance < loss:
@@ -222,14 +230,51 @@ def find_wdna_fm():
             else:
                 break
             z += step
+
+    ray_1 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE1)"))
+    ray_2 = (point_se2, (0, 0, 1))
+    ray_3 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE3)"))
+    z0 = 5  # ground elevation
+    z1 = ml.intersect_ray_and_ray(ray_2, ray_1)[1][2]
+    z3 = ml.intersect_ray_and_ray(ray_2, ray_3)[1][2]
+    z4 = (z3 + top[2]) / 2  # spire base
+
+    point_n2 = resize(point_n2)
+    point_se2 = resize(point_se2)
+    point_sw2 = resize(point_sw2)
+    point_n0 = (point_n2[0], point_n2[1], z0)
+    point_se0 = (point_se2[0], point_se2[1], z0)
+    point_sw0 = (point_sw2[0], point_sw2[1], z0)
+    point_n1 = (point_n2[0], point_n2[1], z1)
+    point_se1 = (point_se2[0], point_se2[1], z1)
+    point_sw1 = (point_sw2[0], point_sw2[1], z1)
+    point_n3 = (point_n2[0], point_n2[1], z3)
+    point_se3 = (point_se2[0], point_se2[1], z3)
+    point_sw3 = (point_sw2[0], point_sw2[1], z3)
+    point_n4 = (point_n2[0], point_n2[1], z4)
+    point_se4 = (point_se2[0], point_se2[1], z4)
+    point_sw4 = (point_sw2[0], point_sw2[1], z4)
+
     print("\n".join([
         f'    "{lm_name} ({corner})": (' + ", ".join([
             f"{v:.3f}" for v in point
         ]) + f"),  # via {cam.name}"
         for corner, point in (
-            ("N", point_n),
-            ("SE", point_se),
-            ("SW", point_sw),
+            ("N0", point_n0),
+            ("SE0", point_se0),
+            ("SW0", point_sw0),
+            ("N1", point_n1),
+            ("SE1", point_se1),
+            ("SW1", point_sw1),
+            ("N2", point_n2),
+            ("SE2", point_se2),
+            ("SW2", point_sw2),
+            ("N3", point_n3),
+            ("SE3", point_se3),
+            ("SW3", point_sw3),
+            ("N4", point_n4),
+            ("SE4", point_se4),
+            ("SW4", point_sw4),
         )
     ]))
 
