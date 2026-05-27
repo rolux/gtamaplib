@@ -3554,7 +3554,10 @@ landmarks = {
     "Water Tower near Prison": (-5154.754, 1557.230, 95.382),  # d=0.087 via Ambrosia 02 (Panorama) & Loading Zone near Prison (SW)
     "The Waverly South Beach (NW)": (1230.092, 629.710, 106.965),  # d=2.282 via Tennis Court (SE) & Vice Beach (B)
     "The Waverly South Beach (SE)": (1264.980, 579.673, 113.901),  # d=1.289 via Rooftop Party & Vice Beach (B)
-    "WDNA FM": (-2517.727, -2295.470, 407.215),  # d=123.048 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "WDNA FM": (-2522.941, -2301.813, 402.478),  # d=5.750 via Leonida Keys 01 (Airplane) (X) & Prison
+    "WDNA FM (N)": (-2522.266, -2297.615, 373.768),  # via Prison
+    "WDNA FM (SE)": (-2519.798, -2304.462, 373.768),  # via Prison
+    "WDNA FM (SW)": (-2526.946, -2303.043, 373.768),  # via Prison
     ##"Wells Fargo Center (N)": (-642.090, -403.002, 187.267),  # d=2.755 via Vice Beach (B) & Prison
     #"Wells Fargo Center (N)": (-625.117, -394.342, 185.680),  # d=0.001 via Skyline & Vice Beach (B)
     "Wells Fargo Center (N)": (-661.847, -412.981, 188.347),  # d=2.412 via Vice City Postcard & Vice Beach (B)

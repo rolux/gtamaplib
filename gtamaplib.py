@@ -1655,6 +1655,60 @@ class SunshineSkywayBridge(Landmark):
         return self
 
 
+class WDNAFM(Landmark):
+
+    def __init__(self):
+        super().__init__("WDNA FM")
+        self.t = md.landmarks["WDNA FM"]
+        self.n = md.landmarks["WDNA FM (N)"]
+        self.se = md.landmarks["WDNA FM (SE)"]
+        self.sw = md.landmarks["WDNA FM (SW)"]
+        self._construct()
+
+    def _construct(self):
+        elevation = 5
+        spire_bottom = self.t[2] - 10
+        self.tn = (self.n[0], self.n[1], spire_bottom)
+        self.tse = (self.se[0], self.se[1], spire_bottom)
+        self.tsw = (self.sw[0], self.sw[1], spire_bottom)
+        self.bn = (self.n[0], self.n[1], elevation)
+        self.bse = (self.se[0], self.se[1], elevation)
+        self.bsw = (self.sw[0], self.sw[1], elevation)
+
+    def draw_on_map(self, m, width=1):
+        for line in [
+            (self.bn, self.bse),
+            (self.bse, self.bsw),
+            (self.bsw, self.bn),
+            (self.tn, self.t),
+            (self.tse, self.t),
+            (self.tsw, self.t),
+        ]:
+            m.draw_line(line, self.color, width)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        for line in [
+            (self.bn, self.tn),
+            (self.bse, self.tse),
+            (self.bsw, self.tsw),
+            (self.tn, self.t),
+            (self.tse, self.t),
+            (self.tsw, self.t),
+            (self.bn, self.bse),
+            (self.bse, self.bsw),
+            (self.bsw, self.bn),
+            (self.n, self.se),
+            (self.se, self.sw),
+            (self.sw, self.n),
+            (self.tn, self.tse),
+            (self.tse, self.tsw),
+            (self.tsw, self.tn),
+        ]:
+            cam.render_line(line, self.color, width)
+        return self
+
+
 ### AIWE ##########################################################################################
 
 class AIWE:
@@ -2826,3 +2880,4 @@ def subsample(image_np, xy):
 FS = FourSeasons()
 HW = HanksWaffles()
 SSB = SunshineSkywayBridge()
+WDNA = WDNAFM()

@@ -194,6 +194,46 @@ def find_vice_beach(
     return cams
 
 
+def find_wdna_fm():
+
+    cam = ml.get_camera("Prison")
+    # optimizer results
+    cam.set_xyz((-3356.683, -2761.643, 32.429))
+    cam.set_ypr((281.609, -2.511, 0.000))
+    cam.set_fov((80.727, None))
+    lm_name = "WDNA FM"
+    ray_n = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (N)"))
+    ray_sw = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SW)"))
+    ray_se = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE)"))
+    top = md.landmarks[lm_name]
+    z = top[2] - 50
+    for step in (1, -0.1, 0.01, -0.001):
+        loss = float("inf")
+        while True:
+            plane = ((0, 0, z), (0, 0, 1))
+            point_n = ml.intersect_ray_and_plane(ray_n, plane)
+            point_sw = ml.intersect_ray_and_plane(ray_sw, plane)
+            point_se = ml.intersect_ray_and_plane(ray_se, plane)
+            midpoint = ml.get_midpoint((point_n, point_sw, point_se))
+            center = (top[0], top[1], z)
+            distance = ml.get_distance(midpoint, center)
+            if distance < loss:
+                loss = distance
+            else:
+                break
+            z += step
+    print("\n".join([
+        f'    "{lm_name} ({corner})": (' + ", ".join([
+            f"{v:.3f}" for v in point
+        ]) + f"),  # via {cam.name}"
+        for corner, point in (
+            ("N", point_n),
+            ("SE", point_se),
+            ("SW", point_sw),
+        )
+    ]))
+
+
 def render_all(
     mode,
     cameras_dirname="cameras",
