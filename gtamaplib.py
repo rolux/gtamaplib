@@ -1666,8 +1666,15 @@ class WDNAFM(Landmark):
         self._construct()
 
     def _construct(self):
+        side_length = 5
+        radius = side_length / math.sqrt(3)
+        center = (self.t[0], self.t[1], self.n[2])
         elevation = 5
-        spire_bottom = self.t[2] - 10
+        spire_height = 7
+        spire_bottom = self.t[2] - spire_height
+        self.n = get_point(center, get_direction(center, self.n), radius)
+        self.se = get_point(center, get_direction(center, self.se), radius)
+        self.sw = get_point(center, get_direction(center, self.sw), radius)
         self.tn = (self.n[0], self.n[1], spire_bottom)
         self.tse = (self.se[0], self.se[1], spire_bottom)
         self.tsw = (self.sw[0], self.sw[1], spire_bottom)
