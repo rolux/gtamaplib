@@ -1033,7 +1033,10 @@ pixels = {
         ((1141, 792), "Four Seasons Hotel Miami (BW)"),
         ((1173, 794), "Four Seasons Hotel Miami (BE)"),
         ((1179, 801), "Four Seasons Hotel Miami (SE)"),
+        ((1196, 118), "WDNA FM (N)")
+        ((1202.5, 112.5), "WDNA FM (SW)"),
         ((1204, 43), "WDNA FM"),
+        ((1215, 119), "WDNA FM (SE)"),
         ((1314.5, 954), "Double Pole (2N)"),
         ((1361, 953), "Double Pole (2S)"),
         ((1701, 911), "Park Grove Condominium (S)"),
