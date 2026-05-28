@@ -171,7 +171,8 @@ cameras = {
     "[T1/46] Uncle Jack's": (None, (-6370.000, 3875.000, 15.000), (260.000, 1.500, 0.500), (60.000, None), (3840, 2160), "Trailer 1 [2308]"),
     "[L3/1] Industrial Area": None,
     "[T2/1] Key Lento": (None, (-1808.000, -5256.000, 33.685), (134.337, -8.100, 0.000), (62.500, 30.546), (3840, 1728), "Trailer 2 [244]"),
-    "[T2/2] House (Keys)": None,
+    "[T2/2] House (Keys)": (None, (-2332.500, -5555.000, 2.000), (45.000, 10.500, 0.000), (65.000, None), (3840, 1728), "Trailer 2 [245]"),
+    "[T2/4] Rooftop (Keys)": None,
     "[T2/7] Balcony (Keys)": None,
     "[T2/9] Car (Jason)": None,
     "[T2/10] Store (Jason)": None,
@@ -1653,6 +1654,10 @@ pixels = {
     ],
     "[T2/59] Park (Mobile Phone)": [
         ((1084, 463), "Wide Billboard (Port VC)"),
+    ],
+    "[T2/60] Landing Gear (B)": [
+        ((1551, 188), "One Miami Condominium West (SE)"),
+        ((1579, 275), "One Miami Condominium West (NE)"),
     ],
     "[T2/64] Dominion Hotel": [
         ((116, 465), "Portofino Tower (NE)"),
@@ -3401,7 +3406,7 @@ landmarks = {
     "Port (H)": (822.311, -248.268, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (I)": (807.720, -387.098, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (J)": (759.765, -419.707, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port VC K)": (474.043, -357.364, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port VC (K)": (474.043, -357.364, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (L)": (168.887, -287.187, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (M)": (130.654, -276.456, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (N)": (55.929, -506.148, 0.000),  # via Vice City 08 (Ferris Wheel)
