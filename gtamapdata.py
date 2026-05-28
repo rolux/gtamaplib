@@ -269,6 +269,7 @@ cameras = {
     "[S2/74] Ambrosia Postcard (X)": (None, (-2694.881, 3981.266, 55.983), (150.756, -1.800, 0.000), (51.500, 34.964), (3308, 2160), "Ambrosia Postcard [?]"),
     "[S2/75] Grassrivers Postcard (X)": (None, (-3500, -4000, 50), (135.000, -14.550, 0.000), (45.000, None), (3240, 2160), "Grassrivers Postcard [60]"),
     "[S2/76] Mount Kalaga National Park Postcard (X)": None,
+    "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
 }
 
 cameras = {
