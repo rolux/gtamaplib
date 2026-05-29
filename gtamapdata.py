@@ -172,8 +172,9 @@ cameras = {
     "[L3/1] Industrial Area": None,
     "[T2/1] Key Lento": (None, (-1808.000, -5256.000, 33.685), (134.337, -8.100, 0.000), (62.500, 30.546), (3840, 1728), "Trailer 2 [244]"),
     "[T2/2] House (Keys)": (None, (-2332.500, -5555.000, 2.000), (45.000, 10.500, 0.000), (65.000, None), (3840, 1728), "Trailer 2 [245]"),
-    "[T2/4] Rooftop (Keys)": None,
-    "[T2/7] Balcony (Keys)": None,
+    "[T2/4] Rooftop (Keys)": None,  # 345
+    "[T2/7] Balcony (Keys)": None,  # 615
+    "[T2/8] Door (Keys)": None,  # 796
     "[T2/9] Car (Jason)": None,
     "[T2/10] Store (Jason)": None,
     "[T2/12] Highway (Peacock Bay) (A)": (None, (-1478.000, -2370.000, 15.045), (340.325, 3.500, 0.000), (45.200, 21.219), (3840, 1728), "Trailer 2 [1039]"),
@@ -236,7 +237,7 @@ cameras = {
     "[S2/37] Vice City 01 (Vice City Sign)": None,
     "[S2/38] Vice City 02 (Hotel)": (None, (2015.000, 1585.000, 25.000), (250.000, -15.000, 0.000), (45.000, None), (3840, 2160), "Vice City 02 [1]"),
     "[S2/39] Vice City 03 (Basketball)": (None, (1988.000, 1661.000, 43.425), (110.384, -7.900, 0.000), (54.400, 32.248), (3840, 2160), "Vice City 03 [1]"),
-    "[S2/40] Vice City 04 (Gang Members)": None,
+    "[S2/40] Vice City 04 (Gang Members)": (None, (-1268.000, 1214.000, 5.000), (300.000, 8.000, -7.000), (45.000, None), (3840, 2160), "Vice City 04 [1]"),
     "[S2/41] Vice City 05 (Vice Beach)": (None, (2175.000, 750.000, 0.000), (45.000, 8.000, 0.000), (60.000, None), (3840, 2160), "Vice City 05 [1]"),
     "[S2/42] Vice City 06 (Ocean Drive)": (None, (1990.000, 640.000, 3.000), (45.000, 5.000, 0.000), (60.000, None), (3840, 2160), "Vice City 06 [1]"),
     "[S2/44] Vice City 08 (Ferris Wheel)": (None, (-581.000, 909.000, 97.866), (214.216, -10.300, 0.000), (40.500, 23.447), (3840, 2160), "Vice City 08 [1]"),
@@ -270,6 +271,7 @@ cameras = {
     "[S2/74] Ambrosia Postcard (X)": (None, (-2694.881, 3981.266, 55.983), (150.756, -1.800, 0.000), (51.500, 34.964), (3308, 2160), "Ambrosia Postcard [?]"),
     "[S2/75] Grassrivers Postcard (X)": (None, (-3500, -4000, 50), (135.000, -14.550, 0.000), (45.000, None), (3240, 2160), "Grassrivers Postcard [60]"),
     "[S2/76] Mount Kalaga National Park Postcard (X)": None,
+    "[S2/79] Lucia Caminos (Animation 1)": None,
     "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
 }
 
