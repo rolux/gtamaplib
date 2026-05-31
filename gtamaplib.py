@@ -1716,6 +1716,55 @@ class WDNAFM(Landmark):
         return self
 
 
+class HomesteadWaterTower(Landmark):
+
+    def __init__(self):
+        super().__init__("WDNA FM")
+        self.t = md.landmarks["Homestead Water Tower"]
+        self.z0 = 5  # ground elevation
+        self._construct()
+
+    def _construct(self):
+        cam = get_camera("Grassrivers 02 (Watson Bay)")
+        lm_name = "Homestead Water Tower"
+        direction = cam.get_landmark_direction(lm_name)
+        plane = (self.t, direction)
+        points = {}
+        for corner in ("L1", "L2", "L3", "R1", "R2", "R3"):
+            corner_name = f"{lm_name} ({corner})"
+            ray = (cam.xyz, cam.get_landmark_direction(corner_name))
+            points[corner] = intersect_ray_and_plane(ray, plane)
+        self.r1 = get_distance(points["L1"], points["R1"]) / 2
+        self.r2 = (
+            get_distance(points["L2"], points["R2"]) +
+            get_distance(points["L3"], points["R3"])
+        ) / 4
+        self.z1 = (points["L1"][2] + points["R1"][2]) / 2
+        self.z2 = (points["L2"][2] + points["R2"][2]) / 2
+        self.z3 = (points["L3"][2] + points["R3"][2]) / 2
+        self.z4 = self.t[2]
+
+    def draw_on_map(self, m, width=1):
+        pass
+
+    def render_on_camera(self, cam, width=0.25):
+        step = 15
+        zs = (self.z0, self.z1, self.z2, self.z3, self.z4)
+        for zi, z in enumerate(zs[:4]):
+            r = self.r1 if zi < 2 else self.r2
+            next_r = self.r1 if zi == 0 else self.r2 if zi < 3 else 0
+            for deg in range(0, 360, step):
+                rad = np.radians(deg)
+                direction = (np.cos(rad), np.sin(rad), 0)
+                rad = np.radians(deg + step)
+                next_direction = (np.cos(rad), np.sin(rad), 0)
+                point = get_point((self.t[0], self.t[1], z), direction, r)
+                next_point = get_point((self.t[0], self.t[1], z), next_direction, r)
+                cam.render_line((point, next_point), self.color, width)
+                next_point = get_point((self.t[0], self.t[1], zs[zi + 1]), direction, next_r)
+                cam.render_line((point, next_point), self.color, width)
+
+
 ### AIWE ##########################################################################################
 
 class AIWE:
@@ -2888,3 +2937,4 @@ FS = FourSeasons()
 HW = HanksWaffles()
 SSB = SunshineSkywayBridge()
 WDNA = WDNAFM()
+HWT = HomesteadWaterTower()
