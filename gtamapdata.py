@@ -1511,6 +1511,8 @@ pixels = {
         ((1018, 1357), "FAA Miami ATCT (MIA)"),
         ((1801, 1474), "One Broadway (SW)"),
         ((2208, 1339), "Infinity at Brickell (SW)"),
+        ((3189, 1824), "Caribbean Airlines Cargo (E)")
+        ((3275, 1824), "Caribbean Airlines Cargo (W)")
         ((599, 1707), "Vice City Sign (V1)"),
         ((301, 327), "Vice City Sign (V2)"),
         ((617, 321), "Vice City Sign (V3)"),
