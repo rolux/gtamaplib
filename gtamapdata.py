@@ -1838,6 +1838,7 @@ pixels = {
         ((167, 1900), "One Broadway (SW)"),
         ((351, 1855.5), "Infinity at Brickell (SW)"),
         #((358.5, 1861.5), "Infinity at Brickell (SW)"),
+        ((2131, 1581), "WDNA FM"),
         ((2442, 1940), "Traffic Sign near VCIA"),
         ((2675, 1980), "Traffic Lights near VCIA (NE)"),
         ((2711, 1980), "Traffic Lights near VCIA (SW)"),
