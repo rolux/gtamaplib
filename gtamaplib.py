@@ -1745,7 +1745,15 @@ class HomesteadWaterTower(Landmark):
         self.z4 = self.t[2]
 
     def draw_on_map(self, m, width=1):
-        pass
+        step = 15
+        for r in (self.r1, self.r2):
+            for deg in range(0, 360, step):
+                rad, next_rad = np.radians(deg), np.radians(deg + step)
+                direction = (np.cos(rad), np.sin(rad), 0)
+                next_direction = (np.cos(next_rad), np.sin(next_rad), 0)
+                point = get_point(self.t, direction, r)
+                next_point = get_point(self.t, next_direction, r)
+                m.draw_line((point, next_point), self.color, width)
 
     def render_on_camera(self, cam, width=0.25):
         step = 15
