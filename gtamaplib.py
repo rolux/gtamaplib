@@ -605,9 +605,9 @@ class Camera:
         """
         if not hasattr(self, "image"): self.open()
         for lm_name, xyz in md.landmarks.items():
-            nomalized = normalize_name(lm_name)
-            if nomalized in LANDMARK_OBJECTS:
-                LANDMARK_OBJECTS[nomalized].render_on_camera(self)
+            normalized = normalize_name(lm_name)
+            if normalized in LANDMARK_OBJECTS:
+                LANDMARK_OBJECTS[normalized].render_on_camera(self)
             else:
                 self.render_line((xyz, (xyz[0], xyz[1], 0)), get_color(lm_name), width)
         return self
@@ -1719,7 +1719,7 @@ class WDNAFM(Landmark):
 class HomesteadWaterTower(Landmark):
 
     def __init__(self):
-        super().__init__("WDNA FM")
+        super().__init__("Homestead Water Tower")
         self.t = md.landmarks["Homestead Water Tower"]
         self.z0 = 5  # ground elevation
         self._construct()
