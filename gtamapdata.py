@@ -1518,7 +1518,7 @@ pixels = {
         ((924.5, 316), "Vice City Sign (V5)"),
         ((1242.5, 310.5), "Vice City Sign (V6)"),
         ((922, 1701), "Vice City Sign (V7)"),
-        ((1351, 1658), "Vice City Sign (I1)"),
+        ((1351, 1688), "Vice City Sign (I1)"),
         ((1361.5, 298.5), "Vice City Sign (I2)"),
         ((1679, 294), "Vice City Sign (I3)"),
         ((1672, 1688), "Vice City Sign (I4)"),
