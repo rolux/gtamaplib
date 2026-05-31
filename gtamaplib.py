@@ -1754,10 +1754,9 @@ class HomesteadWaterTower(Landmark):
             r = self.r1 if zi < 2 else self.r2
             next_r = self.r1 if zi == 0 else self.r2 if zi < 3 else 0
             for deg in range(0, 360, step):
-                rad = np.radians(deg)
+                rad, next_rad = np.radians(deg), np.radians(deg + step)
                 direction = (np.cos(rad), np.sin(rad), 0)
-                rad = np.radians(deg + step)
-                next_direction = (np.cos(rad), np.sin(rad), 0)
+                next_direction = (np.cos(next_rad), np.sin(next_rad), 0)
                 point = get_point((self.t[0], self.t[1], z), direction, r)
                 next_point = get_point((self.t[0], self.t[1], z), next_direction, r)
                 cam.render_line((point, next_point), self.color, width)
