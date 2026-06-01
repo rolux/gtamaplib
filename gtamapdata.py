@@ -233,6 +233,7 @@ cameras = {
     "[S2/27] Real Dimez 03 (Car)": None,
     "[S2/30] Raul Bautista 02 (Car)": None,
     "[S2/31] Raul Bautista 03 (Motorboat)": (None, (-757.000, -1902.000, 2.476), (354.820, -0.000, 0.000), (45.000, 26.231), (3840, 2160), "Raul Batista 03 [1]"),
+    "[S2/32] Raul Bautista 04 (Sidewalk)": None,
     "[S2/36] Brian Heder 04 (Gun)": None,
     "[S2/37] Vice City 01 (Vice City Sign)": (None, (-3727.006, -452.246, 11.446), (217.829, 21.288, 0.000), (75.110, 46.775), (3840, 2160), "Vice City 01 [1]"),
     "[S2/38] Vice City 02 (Hotel)": (None, (2015.000, 1585.000, 25.000), (250.000, -15.000, 0.000), (45.000, None), (3840, 2160), "Vice City 02 [1]"),
@@ -966,6 +967,7 @@ pixels = {
         ((460, 195), "Signature Hangar 2 (W)"),
         ((1118, 145), "Bank of America Financial Center (Vice City)"),
         ((1464, 146.5), "Seybold Pointe"),
+        ((1507, 139), "Hyatt Regency Miami"),
         ((1641.5, 122.5), "Latitude on the River (S) (NW)"),
         ((1678.5, 122), "Latitude on the River (S) (SW)"),
         ((1697, 155), "EB Hotel Miami (SW)"),
@@ -973,7 +975,8 @@ pixels = {
         ((1829.5, 96), "Nine at Mary Brickell Village (B)"),
         ((1846, 95), "Nine at Mary Brickell Village (C)"),
         ((1852.5, 95), "Nine at Mary Brickell Village (D)"),
-        ((1897, 96), "Nine at Mary Brickell Village (E)")
+        ((1897, 96), "Nine at Mary Brickell Village (E)"),
+        ((1903.5, 137.5), "American Airlines Hangar"),
     ],
     "[L1/39] Bedroom": [
         ((775, 965), "Player"),
