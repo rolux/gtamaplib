@@ -835,8 +835,12 @@ pixels = {
         ((474, 313), "Nine at Mary Brickell Village (D)"),
     ],
     "[L1/22] Metro (SE) (B)": [
+        ((47, 198), "Seybold Pointe (SE)"),
+        ((55, 122), "Brickell Arch"),
         ((175, 160), "Nine at Mary Brickell Village (A)"),
         ((666, 157), "Infinity at Brickell"),
+        ((694, 162), "Infinity at Brickell (SW)"),
+        ((892, 272), "Park Grove Condominium (N)")
     ],
     # "[L1/22] Metro (SE) (C)": [
     #     ((172.5, 154), "1450 Brickell Ave"),
@@ -967,6 +971,7 @@ pixels = {
         ((460, 195), "Signature Hangar 2 (W)"),
         ((1118, 145), "Bank of America Financial Center (Vice City)"),
         ((1464, 146.5), "Seybold Pointe"),
+        ((1498, 154), "Seybold Pointe (SE)"),
         ((1507, 139), "Hyatt Regency Miami"),
         ((1641.5, 122.5), "Latitude on the River (S) (NW)"),
         ((1678.5, 122), "Latitude on the River (S) (SW)"),
