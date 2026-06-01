@@ -1508,9 +1508,13 @@ pixels = {
         ((3491, 597), "InterContinental Miami (N)"),
     ],
     "[T1/21] Vice City Sign": [
+        ((317, 1492), "701 Brickell Ave"),
+        ((395, 1433), "MIA Radar Tower"),
         ((1018, 1357), "FAA Miami ATCT (MIA)"),
         ((1801, 1474), "One Broadway (SW)"),
+        ((2039, 1709), "MIA Terminal J Tower (S)"),
         ((2208, 1339), "Infinity at Brickell (SW)"),
+        ((2880, 1817), "MIA Terminal J (S)"),
         ((3189, 1824), "Caribbean Airlines Cargo (E)"),
         ((3275, 1824), "Caribbean Airlines Cargo (W)"),
         ((599, 1707), "Vice City Sign (V1)"),
@@ -3273,6 +3277,7 @@ landmarks = {
     "House with Pier (E)": (-3155.670, -6500.087, 12.353),  # d=0.548 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
     "Icon at South Beach": (1355.981, -13.762, 154.798),  # d=5.040 via Vice Beach (B) & Leonida Keys Postcard (X)
     "Infinity at Brickell": (-1183.043, -1370.105, 169.573),  # d=2.667 via Metro (SE) (B) & Highway (Peacock Bay) (A)
+    "Infinity at Brickell (SW)": (-1210.949, -1425.733, 174.572),  # d=0.830 via Metro (SE) (C) & Vice City 01 (Vice City Sign)
     "InterContinental Miami (N)": (-255.482, -482.631, 134.173),  # d=1.042 via Vice City Postcard & Vice City 03 (Basketball)
     "Island A (W)": (-2561.894, -5618.294, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island F (E)": (-1786.271, -5718.466, 0.000), # via Leonida Keys Postcard (X)
@@ -3433,6 +3438,8 @@ landmarks = {
     "Old Bahia Honda Bridge (1B)": (-5164.929, -7280.745, 0.000),  # via Keys
     "Old Bahia Honda Bridge (21B)": (-5582.075, -7075.952, 0.000),  # via Keys
     "Old City Hall": (1681.423, 606.033, 51.401),  # d=1.771 via Vice Beach (B) & Tennis Court (SE)
+    "One Broadway (NW)": (-1045.371, -1263.458, 138.520),  # d=1.634 via  Metro (SE) (C) & Vice City 01 (Vice City Sign)
+    "One Broadway (SW)": (-1071.773, -1337.573, 137.768),  # d=0.569 via  Metro (SE) (C) & Vice City 01 (Vice City Sign)
     #"One Miami Condominium East (NE)": (-213.403, -522.155, 183.512),  # d=0.155 via Vice City 03 (Basketball) & Skyline
     #"One Miami Condominium East (SE)": (-212.862, -548.940, 183.267),  # d=0.259 via Vice City 03 (Basketball) & Skyline
     #"One Miami Condominium West (NE)": (-301.484, -560.133, 188.592),  # d=0.822 via Vice City 03 (Basketball) & Skyline
