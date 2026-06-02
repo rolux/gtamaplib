@@ -2246,6 +2246,7 @@ pixels = {
         ((812, 824.5), "Flat Water Tower"),
         ((980, 1099), "Lake Leonida (O)"),
         ((1033, 1085), "Lake Leonida (P)"),
+        ((1194.5, 867), "Dark Billboard (Ambrosia)"),
         ((1241, 1118), "Lake Leonida (N)"),
         ((1257.5, 890), "Industrial Building (Ambrosia)"),
         ((1299, 1116), "Lake Leonida (M)"),
