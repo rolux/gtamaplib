@@ -3380,6 +3380,11 @@ landmarks = {
     "Liquor Store": (-662.870, 1219.216, 3.009),  # via Sidewalk (Jason) (S)
     "Loews Miami Beach": (1961.304, 1150.746, 86.815),  # d=0.198 via Rooftop Party & Vice Beach (A)
     "Loft Downtown II": (-493.469, 68.694, 124.295),  # d=0.793 via Skyline & Vice Beach (B)
+    "MacArthur Causeway (A)": (853.923, 9.509, 0.000),  # via Vice Beach (B)
+    "MacArthur Causeway (B)": (842.689, 19.363, 0.000),  # via Vice Beach (B)
+    "MacArthur Causeway (C)": (802.233, 29.216, 0.000),  # via Vice Beach (B)
+    "MacArthur Causeway (D)": (564.911, 62.607, 0.000),  # via Vice Beach (B)
+    "MacArthur Causeway (E)": (517.911, 85.005, 0.000),  # via Vice Beach (B)
     "Magic City Casino (?)": (-2091.603, -1296.340, 45.296),  # d=7.986 via Prison & Leonida Keys 01 (Airplane) (X)
     "Margaret Pace Park": (-273.791, 1081.082, 8.073),  # d=0.977 via Vice City Postcard & Sidewalk (Jason) (E)
     "Marina (Stockyard) (NE)": (-210.058, 1442.637, 0.000),  # via Vice City Postcard
