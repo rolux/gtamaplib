@@ -119,7 +119,7 @@ cameras = {
     "[L1/50] Hangar (C)": ((-2640.400, -115.100, 4.300), (-2630.400, -113.300, 4.800), (131.400, -33.900, 0.000), (None, 70.000), (1920, 1080), "2022-09-13 19-08-17 [?]"),
     "[L2/1] Highway (Panorama) (S)": None,
     "[L2/1] Highway (Panorama) (W)": None,
-    "[T1/1] Prison": (None, (-3355.000, -2758.000, 32.639), (281.653, -2.500, 0.000), (80.600, 51.006), (3840, 2160), "Trailer 1 [81]"),
+    "[T1/1] Prison": (None, (-3356.000, -2755.000, 32.412), (281.389, -2.500, 0.000), (81.000, 51.321), (3840, 2160), "Trailer 1 [81]"),
     "[T1/2] Prison Fence": None,
     "[T1/3] Prison Window": None,
     "[T1/6] Vice Beach (A)": (None, (2362.000, 1114.000, 49.125), (112.747, -12.540, 0.000), (62.120, 37.431), (3840, 2160), "Trailer 1 [415]"),
@@ -138,7 +138,7 @@ cameras = {
     "[T1/16] Venetian Islands": (None, (-72.000, 1087.000, 71.341), (286.590, -12.800, 0.000), (62.100, 37.418), (3840, 2160), "Trailer 1 [932]"),
     "[T1/17] Ocean Drive (NW)": (None, (1970.000, 520.000, 4.000), (25.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [978]"),
     "[T1/18] Nightclub": None,
-    "[T1/19] Keys": (None, (-6107.000, -7097.000, 195.642), (276.904, -19.500, 0.000), (55.000, 32.642), (3840, 2160), "Trailer 1 [1123]"),
+    "[T1/19] Keys": (None, (-6114.000, -7092.000, 187.338), (276.801, -19.300, 0.000), (55.000, 32.642), (3840, 2160), "Trailer 1 [1123]"),
     "[T1/20] Rooftop Party": (None, (1925.000, 1978.000, 106.611), (162.540, -7.500, 0.000), (58.500, 34.970), (3840, 2160), "Trailer 1 [1124]"),
     "[T1/21] Vice City Sign": (None, (-3777.214, -448.592, 13.000), (250.893, 5.128, 0.000), (25.000, 14.217), (3840, 2160), "Trailer 1 [1199]"),
     "[T1/22] Boat": (None, (1100.000, 800.000, 2.000), (92.250, 1.000, 0.000), (30.000, None), (3840, 2160), "Trailer 1 [1241]"),
@@ -170,7 +170,7 @@ cameras = {
     "[T1/44] U-Turn (NE)": (None, (-6288.000, 3358.000, 10.000), (340.500, -1.500, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [2168]"),
     "[T1/46] Uncle Jack's": (None, (-6370.000, 3875.000, 15.000), (260.000, 1.500, 0.500), (60.000, None), (3840, 2160), "Trailer 1 [2308]"),
     "[L3/1] Industrial Area": None,
-    "[T2/1] Key Lento": (None, (-1808.000, -5256.000, 33.685), (134.337, -8.100, 0.000), (62.500, 30.546), (3840, 1728), "Trailer 2 [244]"),
+    "[T2/1] Key Lento": (None, (-1926.000, -5371.000, 33.515), (134.424, -8.900, 0.000), (67.500, 33.470), (3840, 1728), "Trailer 2 [244]"),
     "[T2/2] House (Keys)": (None, (-2332.500, -5555.000, 2.000), (45.000, 10.500, 0.000), (65.000, None), (3840, 1728), "Trailer 2 [245]"),
     "[T2/4] Rooftop (Keys)": None,  # 345
     "[T2/7] Balcony (Keys)": None,  # 615
@@ -243,7 +243,7 @@ cameras = {
     "[S2/42] Vice City 06 (Ocean Drive)": (None, (1990.000, 640.000, 3.000), (45.000, 5.000, 0.000), (60.000, None), (3840, 2160), "Vice City 06 [1]"),
     "[S2/44] Vice City 08 (Ferris Wheel)": (None, (-581.000, 909.000, 97.866), (214.216, -10.300, 0.000), (40.500, 23.447), (3840, 2160), "Vice City 08 [1]"),
     "[S2/45] Vice City 09 (La Perle)": (None, (-1250.000, 1150.000, 7.000), (300.000, 2.000, 0.000), (50.000, None), (3840, 2160), "Vice City 09 [1]"),
-    "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4369.000, -7582.000, 78.319), (318.646, -9.400, 0.000), (62.600, 37.762), (3840, 2160), "Leonida Keys 01 [1]"),
+    "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4385.000, -7593.000, 79.988), (318.593, -9.400, 0.000), (62.500, 37.693), (3840, 2160), "Leonida Keys 01 [1]"),
     "[S2/47] Leonida Keys 02 (Sidewalk)": (None, (-2933.000, -6433.000, 2.000), (105.000, 1.000, 0.000), (45.000, None), (3840, 2160), "Leonida Keys 02 [1]"),
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
     "[S2/50] Leonida Keys 05 (Boats)": (None, (-3171.000, -6350.000, 5.459), (161.531, -16.700, 0.000), (72.300, 44.679), (3840, 2160), "Leonida Keys 05 [1]"),
@@ -258,14 +258,14 @@ cameras = {
     "[S2/59] Ambrosia 04 (Fires)": (None, (-1184.000, 3273.000, 48.173), (99.240, -1.900, 0.000), (47.100, 27.551), (3840, 2160), "Ambrosia 04 [1]"),
     "[S2/60] Ambrosia 05 (Car Wash)": None,
     "[S2/61] Grassrivers 01 (Hunters)": None,
-    "[S2/62] Grassrivers 02 (Watson Bay)": (None, (-5218.000, -3355.000, 27.233), (282.302, -6.000, 0.000), (49.600, 29.139), (3840, 2160), "Grassrivers 02 [1]"),
+    "[S2/62] Grassrivers 02 (Watson Bay)": ( None, (-5215.000, -3346.000, 23.939), (282.107, -6.000, 0.000), (50.000, 29.395), (3840, 2160), "Grassrivers 02 [1]"),
     "[S2/64] Grassrivers 04 (Police Chase)": None,
     "[S2/65] Mount Kalaga National Park 01 (Dirt Bikes)": None,
     "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-1750.000, 6250.000, 200.000), (118.750, 6.800, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-4750.000, 6000.000, 120.000), (156.447, -13.566, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
     "[S2/70] Mount Kalaga National Park 06 (River)": None,
     "[S2/71] Vice City Postcard": (None, (400.000, 1860.000, 37.310), (151.654, 3.000, 0.000), (67.500, 47.117), (2458, 1604), "Vice City Postcard [?]"),
-    "[S2/72] Leonida Keys Postcard (X)": (None, (-3813.000, -6798.000, 149.816), (300.041, -12.000, 0.000), (47.000, 32.337), (2563, 1709), "Leonida Keys Postcard [?]"),
+    "[S2/72] Leonida Keys Postcard (X)": (None, (-3809.000, -6788.000, 152.237), (299.090, -12.700, 0.000), (49.000, 33.806), (2563, 1709), "Leonida Keys Postcard [?]"),
     #"[S2/73] Port Gellhorn Postcard": (None, (-6525.000, 3550.000, 30.000), (50.000, -0.300, 0.000), (60.000, None), (3240, 2160), "Port Gellhorn Postcard [60]"),
     #"[S2/73] Port Gellhorn Postcard": (None, (-6563.000, 3613.000, 20.155), (51.895, 0.000, 0.000), (58.300, 40.793), (3240, 2160), "Port Gellhorn Postcard [60]"),
     "[S2/73] Port Gellhorn Postcard (X)": (None, (-6550.000, 3608.000, 31.297), (51.974, -3.200, 0.000), (71.000, 50.865), (3240, 2160), "Port Gellhorn Postcard [1]"),
@@ -3235,16 +3235,16 @@ landmarks = {
     "Big Cat Cage Roof": (-716.491, 1324.161, 13.204),  # via Sidewalk (Jason) (S)
     "Biscayne Island (E)": (253.227, 1080.161, 0.000),  # via Venetian Islands
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Blue Billboard (Key Lento)": (-3436.718, -6780.155, 23.305),  # d=0.238 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
+    "Blue Billboard (Key Lento)": (-3436.671, -6778.410, 23.585),  # d=0.129 via Leonida Keys 01 (Airplane) (X) & Ocean near Keys (N)
     "Blue Diamond": (1873.388, 2080.805, 146.237),  # d=2.661 via Venetian Islands & Jet Ski
     "Box in Backyard": (-1954.600, -1959.000, 4.000),  # Gizmo
     "Bridge Island (W)": (-2380.989, -5074.134, 1.244),  # d=5.207 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Broken Keys Bridge (1B)": (-1466.543, -4425.243, 5.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (2B)": (-1458.441, -4439.253, 5.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (3B)": (-1450.339, -4453.264, 5.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (4B)": (-1443.047, -4465.873, 5.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (7B)": (-1386.872, -4493.659, 5.000),  # via Leonida Keys Postcard (X)
-    "Broken Keys Bridge (8B)": (-1376.227, -4512.067, 5.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (1B)": (-1618.942, -4594.101, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (2B)": (-1611.314, -4607.810, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (3B)": (-1603.687, -4621.519, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (4B)": (-1596.822, -4633.858, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (7B)": (-1545.289, -4663.513, 0.000),  # via Leonida Keys Postcard (X)
+    "Broken Keys Bridge (8B)": (-1535.273, -4681.516, 0.000),  # via Leonida Keys Postcard (X)
     "Brown Hotel Sign": (1858.400, 1559.628, 7.705),  # d=0.046 via Vice City 03 (Basketball) & Hotel (W)
     "Canal (Hotel Valetta)": (1826.639, 1661.119, 0.000),  # via Vice City 03 (Basketball)
     "Capri South Beach (SE)": (1313.994, 1130.618, 57.829),  # d=0.350 via Rooftop Party & Vice Beach (B)
@@ -3273,8 +3273,8 @@ landmarks = {
     "Double Pole (2S)": (-2793.368, -2490.226, 40.000),  # via Prison
     "Double Pole (3N)": (-2634.190, -2602.203, 40.000),  # via Prison
     "Double Pole (3S)": (-2689.745, -2628.888, 40.000),  # via Prison
-    "East Key (NW)": (-1741.100, -4769.922, 0.000),  # via Leonida Keys Postcard (X)
-    "East Key (SW)": (-1522.592, -5077.037, 0.000),  # via Leonida Keys Postcard (X)
+    "East Key (NW)": (-1863.415, -4903.714, 0.000),  # via Leonida Keys Postcard (X)
+    "East Key (SW)": (-1657.767, -5208.327, 0.000),  # via Leonida Keys Postcard (X)
     "East Venetian Causeway Bridge": (1320.394, 1471.661, 12.724),  # d=4.549 via Jet Ski & Venetian Islands
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
@@ -3306,28 +3306,28 @@ landmarks = {
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
     "Green Diamond": (1782.904, 2127.124, 145.245),  # d=1.840 via Beach & Venetian Islands
-    "Homestead Water Tower": (-2940.669, -3024.103, 69.913),  # d=4.125 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
+    "Homestead Water Tower": (-2945.771, -3026.442, 70.083),  # d=3.916 via Leonida Keys 01 (Airplane) (X) & Tennis Stadium (4K)
     "Hotel Breakwater": (1949.796, 563.829, 25.734),  # d=0.265 via Vice Beach (A) & Park
     "Hotel Victor (SW)": (1945.101, 733.085, 33.587),  # d=0.251 via Beach & Park
     "House C (E)": (-2327.506, -5512.035, 10.339),  # d=2.364 via Key Lento & Leonida Keys Postcard (X)
     "House D (E)": (-2314.581, -5485.177, 15.728),  # d=0.205 via Key Lento & Leonida Keys Postcard (X)
-    # House D (SW)": (-2322.313, -5485.306, 13.027),  # d=0.321 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "House D (SW)": (-2302.386, -5462.883, 12.639),  # d=0.016 via Leonida Keys 01 (Airplane) (X) & House with Boat (X)
     "House with Pier (E)": (-3155.670, -6500.087, 12.353),  # d=0.548 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
     "Icon at South Beach": (1355.981, -13.762, 154.798),  # d=5.040 via Vice Beach (B) & Leonida Keys Postcard (X)
     "Infinity at Brickell": (-1183.043, -1370.105, 169.573),  # d=2.667 via Metro (SE) (B) & Highway (Peacock Bay) (A)
     "Infinity at Brickell (SW)": (-1210.949, -1425.733, 174.572),  # d=0.830 via Metro (SE) (C) & Vice City 01 (Vice City Sign)
     "InterContinental Miami (N)": (-255.482, -482.631, 134.173),  # d=1.042 via Vice City Postcard & Vice City 03 (Basketball)
     "Island A (W)": (-2561.894, -5618.294, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Island F (E)": (-1786.271, -5718.466, 0.000), # via Leonida Keys Postcard (X)
-    "Island F (W)": (-1837.483, -5897.036, 0.000), # via Leonida Keys Postcard (X)
-    "Island G (E)": (-2142.519, -6218.571, 0.000), # via Leonida Keys Postcard (X)
-    "Island G (W)": (-2197.904, -6292.396, 0.000), # via Leonida Keys Postcard (X)
-    "Island H (W)": (-2265.190, -6375.183, 0.000),  # via Leonida Keys Postcard (X)
-    "Island H (W)": (-2265.190, -6375.183, 0.000),  # via Leonida Keys Postcard (X)
-    "Island I (W)": (-2282.531, -6408.995, 0.000),  # via Leonida Keys Postcard (X)
-    "Island I (W)": (-2282.531, -6408.995, 0.000),  # via Leonida Keys Postcard (X)
+    "Island F (E)": (-1871.350, -5799.378, 0.000),  # via Leonida Keys Postcard (X)
+    "Island F (W)": (-1916.091, -5971.626, 0.000),  # via Leonida Keys Postcard (X)
+    "Island G (E)": (-2197.694, -6272.603, 0.000),  # via Leonida Keys Postcard (X)
+    "Island G (W)": (-2248.932, -6342.924, 0.000),  # via Leonida Keys Postcard (X)
+    "Island H (W)": (-2325.421, -6427.711, 0.000),  # via Leonida Keys Postcard (X)
+    "Island H (W)": (-2325.421, -6427.711, 0.000),  # via Leonida Keys Postcard (X)
+    "Island I (W)": (-2341.281, -6460.196, 0.000),  # via Leonida Keys Postcard (X)
+    "Island I (W)": (-2341.281, -6460.196, 0.000),  # via Leonida Keys Postcard (X)
     "Island J (E)": (-2507.148, -6567.983, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Island J (W)": (-2577.286, -6635.502, 0.000), # via Leonida Keys Postcard (X)
+    "Island J (W)": (-2605.214, -6666.220, 0.000),  # via Leonida Keys Postcard (X)
     "Island K (E)": (-3562.974, -7797.697, 0.000),  # via Key Lento
     "Island K (W)": (-3691.596, -7923.045, 0.000),  # via Key Lento
     "Island N (E)": (-4004.740, -6977.705, 0.000),  # via Leonida Keys 01 (Airplane) (X)
@@ -3335,10 +3335,10 @@ landmarks = {
     "Island S (E)": (-3912.734, -5535.023, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island U (S)": (-3786.870, -5636.794, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Island V (S)": (-3738.939, -5987.790, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Island W (N)": (-3743.862, -6117.335, 0.000),  # via Keys
-    "Island X (S)": (-3173.824, -6061.079, 0.000), # via Leonida Keys Postcard (X)
-    "Island Y (S)": (-3086.466, -6002.597, 0.000), # via Leonida Keys Postcard (X)
-    "Island Z (S)": (-2867.519, -5735.394, 0.000), # via Leonida Keys Postcard (X)
+    "Island W (N)": (-3744.681, -6114.955, 0.000),  # via Keys
+    "Island X (S)": (-3185.595, -6062.324, 0.000),  # via Leonida Keys Postcard (X)
+    "Island Y (S)": (-3101.769, -6008.668, 0.000),  # via Leonida Keys Postcard (X)
+    "Island Z (S)": (-2894.058, -5755.217, 0.000),  # via Leonida Keys Postcard (X)
     "Jade Ocean Condos": (1577.927, 2493.047, 201.994),  # d=0.464 via Venetian Islands & Highway (NE)
     "Jade Ocean Condos (SW)": (1603.480, 2483.393, 204.304),  # d=1.834 via Beach & Venetian Islands
     "Jenny Hostel (NE)": (1907.067, 608.982, 32.085),  # d=0.170 via Vice Beach (B) & Park
@@ -3349,21 +3349,21 @@ landmarks = {
     "Kaseya Center (NW)": (-348.439, 456.214, 47.740),  # d=2.074 via Skyline & Vice City 08 (Ferris Wheel)
     "Kaseya Center (S)": (-259.509, 358.037, 47.265),  # d=1.193 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Kaseya Center (SE)": (-217.872, 392.546, 47.504),  # d=1.541 via Vice City Postcard & Skyline
-    "Key Lento (A)": (-2620.476, -5762.622, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Key Lento (D)": (-2286.561, -5261.905, 0.000),  # via Leonida Keys Postcard (X)
-    "Key Lento (E)": (-2194.499, -5133.273, 0.000), # via Leonida Keys Postcard (X)
-    "Key Lento (J)": (-3016.386, -6703.864, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Key Lento (U)": (-3379.887, -6681.060, 0.000), # via Leonida Keys Postcard (X)
-    "Key Lento (V)": (-3371.828, -6631.645, 0.000), # via Leonida Keys Postcard (X)
-    "Key Lento (W)": (-3128.605, -6441.724, 0.000), # via Leonida Keys Postcard (X)
-    "Keys Bridge (1B)": (-368.856, -2846.655, 10.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (2B)": (-380.106, -2880.831, 10.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (3B)": (-392.056, -2913.223, 10.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (4B)": (-403.471, -2945.976, 10.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (5B)": (-413.954, -2979.786, 10.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (6B)": (-424.729, -3012.541, 10.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (7B)": (-436.195, -3043.565, 10.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (C)": (-408.951, -2964.775, 20.880),  # d=10.108 via Leonida Keys 01 (Airplane) (X) & Prison
+    "Key Lento (A)": (-2667.046, -5813.681, 0.000),  # via Leonida Keys Postcard (X)
+    "Key Lento (D)": (-2360.796, -5344.111, 0.000),  # via Leonida Keys Postcard (X)
+    "Key Lento (E)": (-2263.472, -5203.393, 0.000),  # via Leonida Keys Postcard (X)
+    "Key Lento (J)": (-3036.835, -6723.957, 0.000),  # via Leonida Keys Postcard (X)
+    "Key Lento (U)": (-3380.488, -6674.636, 0.000),  # via Leonida Keys Postcard (X)
+    "Key Lento (V)": (-3373.017, -6625.135, 0.000),  # via Leonida Keys Postcard (X)
+    "Key Lento (W)": (-3138.277, -6445.758, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (1B)": (-675.851, -3210.864, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (2B)": (-684.820, -3241.043, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (3B)": (-694.452, -3269.568, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (4B)": (-703.615, -3298.485, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (5B)": (-711.942, -3328.459, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (6B)": (-720.558, -3357.472, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (7B)": (-729.829, -3384.875, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (C)": (-421.003, -2980.036, 21.128),  # d=10.869 via Leonida Keys 01 (Airplane) (X) & Prison
     "Lake near VCIA (A)": (-3715.573, -320.614, 5.000),  # via Boat (Jason)
     "Lake near VCIA (B)": (-3626.992, -454.330, 5.000),  # via Boat (Jason)
     "Lake near VCIA (C)": (-3639.212, -454.927, 5.000),  # via Boat (Jason)
@@ -3371,27 +3371,27 @@ landmarks = {
     "Lake near VCIA (E)": (-3836.590, -360.979, 5.000),  # via Boat (Jason)
     "Lake near VCIA (F)": (-3842.875, -360.145, 5.000),  # via Boat (Jason)
     "Lake near VCIA (G)": (-3846.870, -364.241, 5.000),  # via Boat (Jason)
-    "Lake Surprise Viaduct (2B)": (-2161.738, -5071.893, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (3B)": (-2173.715, -5051.182, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (4B)": (-2186.078, -5029.803, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (5B)": (-2198.442, -5008.424, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (6B)": (-2206.302, -4983.100, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (7B)": (-2213.813, -4958.320, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (8B)": (-2226.239, -4936.832, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (9B)": (-2234.210, -4911.198, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (10B)": (-2246.278, -4890.330, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (11B)": (-2258.347, -4869.461, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (12B)": (-2266.029, -4844.265, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (13B)": (-2278.128, -4823.343, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (14B)": (-2290.227, -4802.422, 10.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (15B)": (-2301.140, -4771.577, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (2B)": (-2247.129, -5168.116, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (3B)": (-2258.562, -5147.566, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (4B)": (-2270.365, -5126.352, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (5B)": (-2282.167, -5105.139, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (6B)": (-2289.835, -5080.397, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (7B)": (-2297.170, -5056.201, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (8B)": (-2309.030, -5034.884, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (9B)": (-2316.802, -5009.849, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (10B)": (-2328.319, -4989.148, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (11B)": (-2339.837, -4968.446, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (12B)": (-2347.330, -4943.856, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (13B)": (-2358.876, -4923.104, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (14B)": (-2370.422, -4902.352, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (15B)": (-2380.996, -4872.170, 0.000),  # via Leonida Keys Postcard (X)
     "Lamp Post (NW)": (-2253.571, -2775.558, 50.000),  # via Prison
     "Lamp Post (NE)": (-2251.225, -2786.935, 50.000),  # via Prison
     "Lamp Post (SW)": (-2251.621, -2926.287, 50.000),  # via Prison
     "Lamp Post (SE)": (-2249.570, -2936.231, 50.000),  # via Prison
     "Large Billboard (Ambrosia)": (-2906.527, 4174.174, 30.369),  # d=0.378 via Ambrosia 01 (Bikers) & Ambrosia 02 (Panorama)
-    "Latitude on the River (S) (NW)": (-964.195, -812.128, 91.375),  # d=1.513 via Airport (X) & Grassrivers 02 (Watson Bay)
-    "Latitude on the River (S) (SW)": (-978.260, -850.237, 91.571),  # d=0.273 via Airport (X) & Grassrivers 02 (Watson Bay)
+    "Latitude on the River (S) (NW)": (-967.410, -810.748, 92.076),  # d=0.223 via Airport (X) & Grassrivers 02 (Watson Bay)
+    "Latitude on the River (S) (SW)": (-981.267, -848.866, 92.271),  # d=1.440 via Airport (X) & Grassrivers 02 (Watson Bay)
     "Light Pollution (A)": (-8474.409, -11160.441, 0.000),  # via Ambrosia 02 (Panorama)
     "Light Pollution (B)": (-7748.745, -7991.628, 0.000),  # via Ambrosia 02 (Panorama)
     "Light Pollution (C)": (-9874.513, -10662.575, 0.000),  # via Ambrosia 02 (Panorama)
@@ -3410,13 +3410,13 @@ landmarks = {
     "Marina (Stockyard) (SW)": (-261.150, 1402.953, 0.000),  # via Vice City Postcard
     #"Marina Blue (NE)": (-417.246, 425.647, 175.783),  # d=1.029 via Motorboats (B) & Vice City 03 (Basketball)
     "Marina Blue (NE)": (-407.386, 427.789, 173.405),  # d=0.182 via Skyline & Vice Beach (B)
-    "Marina Club at Blackwater Sound (N)": (-2575.262, -5864.326, 16.394),  # d=0.938 via Leonida Keys Postcard (X) & Key Lento
-    "Marina Club at Blackwater Sound (S)": (-2573.282, -5923.209, 16.669),  # d=0.677 via Leonida Keys Postcard (X) & Key Lento
+    "Marina Club at Blackwater Sound (N)": (-2624.861, -5914.988, 16.419),  # d=1.425 via Key Lento & Leonida Keys Postcard (X)
+    "Marina Club at Blackwater Sound (S)": (-2620.410, -5971.202, 16.585),  # d=0.200 via Key Lento & Leonida Keys Postcard (X)
     "Marriott Miami Biscayne Bay (E)": (-204.745, 846.529, 146.445),  # d=0.440 via Vice City Postcard & Vice City 03 (Basketball)
     "Marriott Miami Biscayne Bay (NE)": (-205.317, 870.167, 145.495),  # d=0.186 via Vice City Postcard & Vice Beach (B)
     "MIA North Terminal Tower": (-2378.279, -545.155, 60.726),  # d=0.531 via Ambrosia 02 (Panorama) & Leonida Keys 01 (Airplane) (X)
     "Miami Beach Parking Garage (SE)": (1850.104, 682.393, 34.083),  # d=0.565 via Vice Beach (A) & Vice Beach (B)
-    ##"Miami Tower": (-775.668, -424.119, 159.972),  # d=5.605 via Grassrivers 02 (Watson Bay) & Prison
+    ##"Miami Tower": (-742.700, -397.647, 163.102),  # d=5.199 via Grassrivers 02 (Watson Bay) & Prison
     "Miami Tower": (-798.576, -468.712, 166.523),  # d=1.795 via Vice City Postcard & Skyline
     ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B) (X)
     ##"Mount Waffles (TW)": (-5243.222, 5685.196, 206.805),  # d=2.889 via Diner (N) & Gas Station (Lucia)
@@ -3426,60 +3426,60 @@ landmarks = {
     "Naval Air Station Key West (Control Tower)": (-5716.593, -6602.387, 29.784),  # d=1.025 via Key Lento & Grassrivers Postcard (X)
     "Naval Air Station Key West (Radar Tower)": (-5559.494, -6469.937, 27.670),  # d=0.692 via Key Lento & Grassrivers Postcard (X)
     "419 NE 4th Ave (W)": (-415.516, 1205.149, 32.586),  # d=3.549 via Vice City Postcard & Vice City 03 (Basketball)
-    "New Bahia Honda Bridge (1B)": (-4870.228, -7208.165, 10.000),  # via Keys
-    "New Bahia Honda Bridge (2B)": (-4891.127, -7201.755, 10.000),  # via Keys
-    "New Bahia Honda Bridge (3B)": (-4909.484, -7195.364, 10.000),  # via Keys
-    "New Bahia Honda Bridge (4B)": (-4929.228, -7189.020, 10.000),  # via Keys
-    "New Bahia Honda Bridge (5B)": (-4946.590, -7182.674, 10.000),  # via Keys
-    "New Bahia Honda Bridge (6B)": (-4963.493, -7176.495, 10.000),  # via Keys
-    "New Bahia Honda Bridge (7B)": (-4982.589, -7170.038, 10.000),  # via Keys
-    "New Bahia Honda Bridge (8B)": (-5001.950, -7163.733, 10.000),  # via Keys
-    "New Bahia Honda Bridge (9B)": (-5020.749, -7157.333, 10.000),  # via Keys
-    "New Bahia Honda Bridge (10B)": (-5039.760, -7151.096, 10.000),  # via Keys
-    "New Bahia Honda Bridge (11B)": (-5058.211, -7144.774, 10.000),  # via Keys
-    "New Bahia Honda Bridge (12B)": (-5077.799, -7136.673, 10.000),  # via Keys
-    "New Bahia Honda Bridge (13B)": (-5095.834, -7130.482, 10.000),  # via Keys
-    "New Bahia Honda Bridge (14B)": (-5113.341, -7124.216, 10.000),  # via Keys
-    "New Bahia Honda Bridge (15B)": (-5131.010, -7117.871, 10.000),  # via Keys
-    "New Bahia Honda Bridge (16B)": (-5150.699, -7111.709, 10.000),  # via Keys
-    "New Bahia Honda Bridge (17B)": (-5167.825, -7105.768, 10.000),  # via Keys
-    "New Bahia Honda Bridge (18B)": (-5186.871, -7099.528, 10.000),  # via Keys
-    "New Bahia Honda Bridge (19B)": (-5204.661, -7093.504, 10.000),  # via Keys
-    "New Bahia Honda Bridge (20B)": (-5225.268, -7087.026, 10.000),  # via Keys
-    "New Bahia Honda Bridge (21B)": (-5241.290, -7080.944, 10.000),  # via Keys
-    "New Bahia Honda Bridge (22B)": (-5259.934, -7074.925, 10.000),  # via Keys
-    "New Bahia Honda Bridge (23B)": (-5277.933, -7068.677, 10.000),  # via Keys
-    "New Bahia Honda Bridge (27B)": (-5349.584, -7046.288, 10.000),  # via Keys
-    "New Bahia Honda Bridge (28B)": (-5367.785, -7040.127, 10.000),  # via Keys
-    "New Bahia Honda Bridge (29B)": (-5386.011, -7034.287, 10.000),  # via Keys
-    "New Bahia Honda Bridge (30B)": (-5404.255, -7028.373, 10.000),  # via Keys
-    "New Bahia Honda Bridge (31B)": (-5421.762, -7022.328, 10.000),  # via Keys
-    "New Bahia Honda Bridge (32B)": (-5439.161, -7016.995, 10.000),  # via Keys
-    "New Bahia Honda Bridge (33B)": (-5458.973, -7012.673, 10.000),  # via Keys
-    "New Bahia Honda Bridge (34B)": (-5475.291, -7008.770, 10.000),  # via Keys
-    "New Bahia Honda Bridge (35B)": (-5494.314, -7006.242, 10.000),  # via Keys
-    "New Bahia Honda Bridge (36B)": (-5512.847, -7004.438, 10.000),  # via Keys
-    "New Bahia Honda Bridge (37B)": (-5535.456, -7004.531, 10.000),  # via Keys
-    "New Bahia Honda Bridge (38B)": (-5553.216, -7004.230, 10.000),  # via Keys
-    "New Bahia Honda Bridge (39B)": (-5567.259, -7003.641, 10.000),  # via Keys
+    "New Bahia Honda Bridge (1B)": (-4903.027, -7202.903, 0.000),  # via Keys
+    "New Bahia Honda Bridge (2B)": (-4923.905, -7196.554, 0.000),  # via Keys
+    "New Bahia Honda Bridge (3B)": (-4942.226, -7190.237, 0.000),  # via Keys
+    "New Bahia Honda Bridge (4B)": (-4961.922, -7183.966, 0.000),  # via Keys
+    "New Bahia Honda Bridge (5B)": (-4979.228, -7177.704, 0.000),  # via Keys
+    "New Bahia Honda Bridge (6B)": (-4996.065, -7171.612, 0.000),  # via Keys
+    "New Bahia Honda Bridge (7B)": (-5015.078, -7165.245, 0.000),  # via Keys
+    "New Bahia Honda Bridge (8B)": (-5034.343, -7159.029, 0.000),  # via Keys
+    "New Bahia Honda Bridge (9B)": (-5053.034, -7152.726, 0.000),  # via Keys
+    "New Bahia Honda Bridge (10B)": (-5071.926, -7146.586, 0.000),  # via Keys
+    "New Bahia Honda Bridge (11B)": (-5090.248, -7140.369, 0.000),  # via Keys
+    "New Bahia Honda Bridge (12B)": (-5109.680, -7132.418, 0.000),  # via Keys
+    "New Bahia Honda Bridge (13B)": (-5127.566, -7126.337, 0.000),  # via Keys
+    "New Bahia Honda Bridge (14B)": (-5144.916, -7120.189, 0.000),  # via Keys
+    "New Bahia Honda Bridge (15B)": (-5162.416, -7113.967, 0.000),  # via Keys
+    "New Bahia Honda Bridge (16B)": (-5181.907, -7107.923, 0.000),  # via Keys
+    "New Bahia Honda Bridge (17B)": (-5198.849, -7102.103, 0.000),  # via Keys
+    "New Bahia Honda Bridge (18B)": (-5217.679, -7095.993, 0.000),  # via Keys
+    "New Bahia Honda Bridge (19B)": (-5235.255, -7090.098, 0.000),  # via Keys
+    "New Bahia Honda Bridge (20B)": (-5255.603, -7083.761, 0.000),  # via Keys
+    "New Bahia Honda Bridge (21B)": (-5271.410, -7077.821, 0.000),  # via Keys
+    "New Bahia Honda Bridge (22B)": (-5289.796, -7071.941, 0.000),  # via Keys
+    "New Bahia Honda Bridge (23B)": (-5307.533, -7065.843, 0.000),  # via Keys
+    "New Bahia Honda Bridge (27B)": (-5378.043, -7044.018, 0.000),  # via Keys
+    "New Bahia Honda Bridge (28B)": (-5395.925, -7038.022, 0.000),  # via Keys
+    "New Bahia Honda Bridge (29B)": (-5413.821, -7032.343, 0.000),  # via Keys
+    "New Bahia Honda Bridge (30B)": (-5431.724, -7026.594, 0.000),  # via Keys
+    "New Bahia Honda Bridge (31B)": (-5448.891, -7020.723, 0.000),  # via Keys
+    "New Bahia Honda Bridge (32B)": (-5465.944, -7015.545, 0.000),  # via Keys
+    "New Bahia Honda Bridge (33B)": (-5485.355, -7011.350, 0.000),  # via Keys
+    "New Bahia Honda Bridge (34B)": (-5501.332, -7007.564, 0.000),  # via Keys
+    "New Bahia Honda Bridge (35B)": (-5519.952, -7005.112, 0.000),  # via Keys
+    "New Bahia Honda Bridge (36B)": (-5538.083, -7003.361, 0.000),  # via Keys
+    "New Bahia Honda Bridge (37B)": (-5560.191, -7003.448, 0.000),  # via Keys
+    "New Bahia Honda Bridge (38B)": (-5577.544, -7003.155, 0.000),  # via Keys
+    "New Bahia Honda Bridge (39B)": (-5591.257, -7002.582, 0.000),  # via Keys
     "New Foundation Church": (-6641.757, 3857.512, 24.802),  # d=5.501 via Chase (2) (A) & Port Gellhorn Postcard (X)
     "New Wave Condominiums": (-324.871, 1413.982, 113.718),  # d=1.380 via Vice City Postcard & Vice City 03 (Basketball)
     "New World Center": (1671.252, 1439.278, 43.897),  # d=2.414 via Venetian Islands & Vice City 03 (Basketball)
     #"Nine at Mary Brickell Village (A)": (-1035.341, -973.492, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     #"Nine at Mary Brickell Village (B)": (-1042.495, -984.399, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
     #"Nine at Mary Brickell Village (E)": (-1072.159, -1029.655, 119.968),  # via Metro (SE) (A) (4K) & Tennis Stadium (4K)
-    "Nine at Mary Brickell Village (A)": (-1039.793, -967.786, 117.476),  # d=3.259 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
-    "Nine at Mary Brickell Village (B)": (-1045.069, -980.992, 117.573),  # d=3.764 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
+    "Nine at Mary Brickell Village (A)": (-1041.224, -965.955, 118.176),  # d=1.325 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
+    "Nine at Mary Brickell Village (B)": (-1046.446, -979.178, 118.274),  # d=1.844 via Metro (SE) (A) (4K) & Grassrivers 02 (Watson Bay)
     "Nine at Mary Brickell Village (C)": (-1046.501, -1000.646, 118.984),  # d=3.978 via Airport (X) & Metro (SE) (A) (4K)
     "Nine at Mary Brickell Village (D)": (-1048.886, -1006.389, 118.946),  # d=4.373 via Airport (X) & Metro (SE) (A) (4K)
-    "Nine at Mary Brickell Village (E)": (-1061.939, -1037.599, 117.902),  # d=2.271 via Tennis Stadium (4K) & Grassrivers 02 (Watson Bay)
+    "Nine at Mary Brickell Village (E)": (-1063.869, -1036.130, 118.803),  # d=0.819 via Tennis Stadium (4K) & Grassrivers 02 (Watson Bay)
     "1500 Ocean Dr": (2093.265, 983.621, 63.025),  # d=0.463 via Vice Beach (B) & Park
     "1500 Ocean Dr (S) (NW)": (2029.742, 1003.354, 62.016),  # d=0.422 via Venetian Islands & Vice Beach (B)
     "1500 Ocean Dr (S) (SE)": (2026.843, 968.113, 62.132),  # d=0.514 via Vice Beach (B) & Park
     "1500 Ocean Dr (S) (SW)": (2022.117, 973.553, 62.553),  # d=1.350 via Venetian Islands & Park
-    "Office in the Grove": (-1166.771, -2091.394, 41.561),  # d=0.680 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
-    "Old Bahia Honda Bridge (1B)": (-5164.929, -7280.745, 0.000),  # via Keys
-    "Old Bahia Honda Bridge (21B)": (-5582.075, -7075.952, 0.000),  # via Keys
+    "Office in the Grove": (-1166.918, -2091.444, 41.389),  # d=1.027 via Leonida Keys 01 (Airplane) (X) & Tennis Stadium (4K)
+    "Old Bahia Honda Bridge (1B)": (-5196.637, -7272.431, 0.000),  # via Keys
+    "Old Bahia Honda Bridge (21B)": (-5605.924, -7072.489, 0.000),  # via Keys
     "Old City Hall": (1681.423, 606.033, 51.401),  # d=1.771 via Vice Beach (B) & Tennis Court (SE)
     "One Broadway (NW)": (-1045.371, -1263.458, 138.520),  # d=1.634 via  Metro (SE) (C) & Vice City 01 (Vice City Sign)
     "One Broadway (SW)": (-1071.773, -1337.573, 137.768),  # d=0.569 via  Metro (SE) (C) & Vice City 01 (Vice City Sign)
@@ -3491,17 +3491,16 @@ landmarks = {
     "One Miami Condominium East (SE)": (-212.865, -548.946, 183.268),  # d=0.259 via Skyline & Vice City 03 (Basketball)
     "One Miami Condominium West (NE)": (-322.275, -580.388, 189.432),  # d=0.139 via Vice City Postcard & Vice City 03 (Basketball)
     "One Miami Condominium West (SE)": (-298.533, -583.301, 188.864),  # d=0.841 via Skyline & Vice City 03 (Basketball)
-    ##"Opera Tower": (-405.995, 871.722, 200.572),  # d=2.407 via Vice Beach (B) & Prison
+    ##"Opera Tower": (-406.032, 867.433, 201.539),  # d=3.311 via Vice Beach (B) & Prison
     #"Opera Tower": (-422.228, 866.348, 201.155),  # d=0.964 via Vice Beach (B) & Vice City 03 (Basketball)
     "Opera Tower": (-399.711, 868.112, 199.746),  # d=0.329 via Vice City Postcard & Vice Beach (B)
     "Oval Yellow Sign": (-6329.607, 3509.044, 36.101),  # d=0.220 via Chase (2) (A) & Gas Station (Lucia)
-    "99353 Overseas Hwy": (-3369.349, -6779.484, 74.152),  # d=0.467 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
-    #"102180 Overseas Hwy": (-2653.070, -6040.028, 39.913),  # d=2.823 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
-    "102180 Overseas Hwy": (-2678.565, -6063.121, 41.579),  # d=0.594 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "99353 Overseas Hwy": (-3369.019, -6778.204, 74.876),  # d=0.522 via Leonida Keys 01 (Airplane) (X) & Ocean near Keys (N)
+    "102180 Overseas Hwy": (-2739.661, -6116.678, 43.531),  # d=0.771 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Palazzo del Sol": (1910.051, -1313.223, 58.077),  # d=18.348 via Rooftop Party & Leonida Keys Postcard (X)
-    "Park Grove Condominium (C)": (-1310.987, -2053.385, 96.905),  # d=3.590 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
-    "Park Grove Condominium (N)": (-1316.937, -1991.705, 97.522),  # d=2.636 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
-    "Park Grove Condominium (S)": (-1318.394, -2135.744, 97.341),  # d=2.284 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
+    "Park Grove Condominium (C)": (-1313.149, -2056.690, 97.295),  # d=2.248 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Park Grove Condominium (N)": (-1318.762, -1994.505, 97.915),  # d=1.262 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Park Grove Condominium (S)": (-1318.887, -2135.899, 97.229),  # d=2.009 via Leonida Keys 01 (Airplane) (X) & Tennis Stadium (4K)
     "Pelican Harbor Marina (A)": (1244.911, 1626.266, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (B)": (1041.662, 1678.315, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (C)": (1017.648, 1668.969, 0.000),  # via Venetian Islands
@@ -3522,43 +3521,42 @@ landmarks = {
     "Picnic Island A (N)": (26.901, 1473.072, 0.000),  # via Vice City Postcard
     "Picnic Island B (S)": (178.992, 1566.081, 0.000),  # via Vice City Postcard
     "Picnic Island C (S)": (35.390, 1564.609, 0.000),  # via Vice City Postcard
-    "Pin A02R": (-3511.084, -6424.389, 4.505),  # d=0.599 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A03L": (-3390.904, -6302.366, 3.752),  # d=0.487 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A03R": (-3360.184, -6341.872, 4.257),  # d=0.007 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A04L": (-3212.072, -6183.382, 3.280),  # d=0.001 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A04R": (-3148.011, -6218.810, 3.225),  # d=0.067 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A05L": (-3120.575, -6133.368, 3.524),  # d=0.362 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A05R": (-3055.152, -6167.251, 3.561),  # d=0.650 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A06L": (-3033.760, -6065.890, 3.209),  # d=0.721 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A06R": (-2972.466, -6104.395, 4.027),  # d=0.589 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A07L": (-2953.462, -5961.154, 4.188),  # d=0.289 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A07R": (-2884.297, -5965.747, 4.087),  # d=0.230 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A08L": (-2819.097, -5745.862, 3.293),  # d=1.126 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin A08R": (-2755.355, -5756.676, 4.445),  # d=0.829 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B01L": (-3331.612, -6533.631, 3.590),  # d=0.021 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B01R": (-3298.761, -6531.887, 3.880),  # d=0.107 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B02L": (-3326.025, -6483.220, 3.800),  # d=0.164 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B02R": (-3293.431, -6481.457, 3.869),  # d=0.426 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B03L": (-3320.492, -6431.754, 3.610),  # d=0.344 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B03R": (-3288.777, -6430.563, 3.854),  # d=0.484 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B04L": (-3318.823, -6380.903, 3.852),  # d=0.012 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin B04R": (-3286.305, -6377.515, 3.553),  # d=0.922 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin C01R": (-3405.178, -6606.171, 4.070),  # d=0.089 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    #"Pin C01R (B)": (-3391.458, -6592.361, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Pin C01R (B)": (-3405.838, -6606.736, 0.985),  # d=0.409 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin C02L": (-3479.817, -6602.593, 3.875),  # d=0.787 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin C02R": (-3448.135, -6578.962, 4.094),  # d=0.042 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin C03L": (-3523.841, -6576.341, 3.578),  # d=0.999 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin C03R": (-3492.064, -6551.285, 3.901),  # d=0.829 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin C04L": (-3576.278, -6546.336, 4.312),  # d=1.647 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin C04R": (-3544.472, -6522.608, 4.664),  # d=1.159 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin D01L": (-2404.976, -6368.944, 1.809),  # d=0.726 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin D01R": (-2389.723, -6390.640, 1.210),  # d=0.458 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin D02L": (-2142.392, -6078.395, 1.888),  # d=0.604 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Pin D02R": (-2114.591, -6094.978, 1.768),  # d=0.718 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "500 Pompano Dr": (-1914.537, -5324.281, 21.231),  # d=0.008 via Leonida Keys Postcard (X) & Key Lento
-    "200 Pompano Dr": (-1875.738, -5390.187, 13.952),  # d=0.258 via Leonida Keys Postcard (X) & Key Lento
-    "180 Pompano Dr": (-1896.308, -5424.708, 15.680),  # d=0.813 via Leonida Keys Postcard (X) & Key Lento
+    "Pin A02R": (-3519.639, -6428.529, 5.397),  # d=0.048 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A03L": (-3405.223, -6314.149, 5.067),  # d=0.262 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A03R": (-3375.322, -6354.339, 5.585),  # d=0.002 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A04L": (-3235.583, -6206.019, 4.999),  # d=0.335 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A04R": (-3174.127, -6243.318, 4.985),  # d=0.406 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A05L": (-3149.193, -6161.448, 5.399),  # d=0.150 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A05R": (-3086.955, -6197.449, 5.513),  # d=0.083 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A06L": (-3067.996, -6100.042, 5.266),  # d=0.089 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A06R": (-3010.078, -6140.482, 6.168),  # d=0.033 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A07L": (-2993.908, -6002.735, 6.428),  # d=0.439 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A07R": (-2929.309, -6010.786, 6.449),  # d=0.501 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A08L": (-2871.251, -5802.621, 5.872),  # d=0.133 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin A08R": (-2811.979, -5816.440, 7.089),  # d=0.121 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B01L": (-3345.679, -6544.253, 4.731),  # d=0.322 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B01R": (-3314.230, -6543.878, 5.092),  # d=0.231 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B02L": (-3340.854, -6494.728, 5.003),  # d=0.444 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B02R": (-3309.640, -6494.342, 5.133),  # d=0.097 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B03L": (-3336.132, -6444.280, 4.881),  # d=0.599 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B03R": (-3305.735, -6444.424, 5.175),  # d=0.169 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B04L": (-3335.126, -6394.379, 5.184),  # d=0.200 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin B04R": (-3303.969, -6392.401, 4.932),  # d=0.629 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C01R": (-3415.683, -6613.105, 4.990),  # d=0.313 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C01R (B)": (-3416.353, -6613.670, 1.891),  # d=0.650 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C02L": (-3487.905, -6606.642, 4.671),  # d=0.807 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C02R": (-3457.460, -6584.440, 4.973),  # d=0.124 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C03L": (-3530.882, -6578.838, 4.340),  # d=0.759 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C03R": (-3500.306, -6555.274, 4.754),  # d=0.684 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C04L": (-3581.944, -6546.685, 4.966),  # d=0.958 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin C04R": (-3551.305, -6524.556, 5.437),  # d=0.609 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin D01L": (-2494.072, -6426.121, 5.844),  # d=0.797 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin D01R": (-2480.496, -6447.627, 5.327),  # d=0.571 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin D02L": (-2266.089, -6163.548, 6.682),  # d=0.702 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pin D02R": (-2242.058, -6180.876, 6.671),  # d=0.858 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "180 Pompano Dr": (-2000.582, -5524.956, 15.851),  # d=0.953 via Leonida Keys Postcard (X) & Key Lento
+    "200 Pompano Dr": (-1982.847, -5493.388, 14.185),  # d=0.129 via Key Lento & Leonida Keys Postcard (X)
+    "500 Pompano Dr": (-2021.934, -5429.980, 21.399),  # d=0.022 via Key Lento & Leonida Keys Postcard (X)
     "Port (G)": (844.123, -219.229, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (H)": (822.311, -248.268, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port (I)": (807.720, -387.098, 0.000),  # via Vice City 08 (Ferris Wheel)
@@ -3586,12 +3584,12 @@ landmarks = {
     #"Prison Tower (4)": (-2627.470, -2864.290, 32.730),  # d=5.236 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
     #"Prison Tower (5)": (-2878.070, -2886.888, 32.571),  # d=5.353 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
     #"Prison Tower (6)": (-2980.129, -2782.345, 32.140),  # d=6.126 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
-    "Prison Tower (1)": (-2885.482, -2690.723, 32.007),  # d=0.550 via Grassrivers 02 (Watson Bay) & Prison
-    "Prison Tower (2)": (-2711.160, -2712.997, 32.763),  # d=1.573 via Grassrivers 02 (Watson Bay) & Prison
-    "Prison Tower (3)": (-2586.836, -2795.382, 32.848),  # d=0.010 via Grassrivers 02 (Watson Bay) & Prison
-    "Prison Tower (4)": (-2631.080, -2864.993, 32.628),  # d=0.189 via Grassrivers 02 (Watson Bay) & Prison
-    "Prison Tower (5)": (-2880.118, -2886.336, 32.672),  # d=0.201 via Grassrivers 02 (Watson Bay) & Prison
-    "Prison Tower (6)": (-2983.035, -2781.496, 32.350),  # d=0.483 via Grassrivers 02 (Watson Bay) & Prison
+    "Prison Tower (1)": (-2887.274, -2690.232, 31.484),  # d=0.325 via Grassrivers 02 (Watson Bay) & Prison
+    "Prison Tower (2)": (-2714.010, -2713.695, 32.349),  # d=0.809 via Grassrivers 02 (Watson Bay) & Prison
+    "Prison Tower (3)": (-2589.886, -2797.131, 32.500),  # d=0.714 via Grassrivers 02 (Watson Bay) & Prison
+    "Prison Tower (4)": (-2633.753, -2866.831, 32.242),  # d=0.552 via Grassrivers 02 (Watson Bay) & Prison
+    "Prison Tower (5)": (-2881.896, -2886.922, 32.131),  # d=0.698 via Grassrivers 02 (Watson Bay) & Prison
+    "Prison Tower (6)": (-2984.203, -2780.871, 31.757),  # d=0.463 via Grassrivers 02 (Watson Bay) & Prison
     "Pylon (1)": (-6427.710, 2952.146, 26.675),  # d=0.151 via Gas Station (Lucia) & Gas Station (Jason)
     "Pylon (2)": (-6324.224, 2770.496, 14.871),  # d=0.066 via Gas Station (Lucia) & Gas Station (Jason)
     "Pylon (3)": (-6407.067, 3797.198, 60.516),  # d=0.067 via Car Wash & Gas Station (Lucia)
@@ -3613,29 +3611,30 @@ landmarks = {
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (N) (S)": (2036.451, 1049.876, 67.998),  # d=0.153 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
-    "Seven Mile Bridge (3T)": (-3572.582, -6892.863, 3.488),  # d=0.101 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (6T)": (-3637.196, -6932.511, 8.104),  # d=0.278 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (3T)": (-3573.183, -6891.476, 3.530),  # d=0.159 via Leonida Keys 01 (Airplane) (X) & Ocean near Keys (N)
+    "Seven Mile Bridge (6T)": (-3638.226, -6931.138, 8.171),  # d=0.226 via Leonida Keys 01 (Airplane) (X) & Ocean near Keys (N)
     "Seven Mile Bridge (1B)": (-3544.086, -6880.461, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (2B)": (-3568.371, -6895.166, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (3B)": (-3587.296, -6907.227, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (4B)": (-3609.486, -6920.650, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (5B)": (-3629.187, -6932.164, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (6B)": (-3650.832, -6945.659, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (7B)": (-3670.344, -6957.133, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (8B)": (-3691.714, -6970.174, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (9B)": (-3712.238, -6982.386, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (10B)": (-3731.978, -6993.827, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (11B)": (-3753.089, -7006.523, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (12B)": (-3775.646, -7019.908, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (13B)": (-3796.730, -7032.697, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (14B)": (-3816.832, -7044.617, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (15B)": (-3836.207, -7055.582, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (16B)": (-3856.928, -7068.183, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (17B)": (-3876.760, -7079.744, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (18B)": (-3896.356, -7091.110, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (19B)": (-3920.601, -7106.128, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (20B)": (-3940.429, -7117.949, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (21B)": (-3957.535, -7132.332, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (1B)": (-3544.133, -6878.830, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (2B)": (-3568.787, -6893.723, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (3B)": (-3588.003, -6905.943, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (4B)": (-3610.538, -6919.542, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (5B)": (-3630.550, -6931.209, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (6B)": (-3652.540, -6944.888, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (7B)": (-3672.367, -6956.519, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (8B)": (-3694.086, -6969.742, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (9B)": (-3714.949, -6982.126, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (10B)": (-3735.018, -6993.730, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (11B)": (-3756.485, -7006.609, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (12B)": (-3779.427, -7020.190, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (13B)": (-3800.877, -7033.170, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (14B)": (-3821.329, -7045.269, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (15B)": (-3841.046, -7056.399, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (16B)": (-3862.137, -7069.195, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (17B)": (-3882.326, -7080.935, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (18B)": (-3902.278, -7092.480, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (19B)": (-3926.970, -7107.739, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (20B)": (-3947.166, -7119.751, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (21B)": (-3967.567, -7131.757, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Sherry Frontenac Oceanfront Hotel (N)": (1478.578, 2558.613, 46.593),  # d=3.888 via Highway (NE) & Jet Ski
     "Sherry Frontenac Oceanfront Hotel (S)": (1507.934, 2531.859, 46.344),  # d=4.174 via Highway (NE) & Jet Ski
     "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
@@ -3644,15 +3643,15 @@ landmarks = {
     "Sidewalk Creep": (-667.412, 1087.195, 2.470),  # via Sidewalk (Jason) (S)
     "Skyviews Miami Observation Wheel": (34.535, 82.384, 73.990),  # d=0.857 via Vice City Postcard & Skyline
     "Small Keys Bridge (C)": (-774.354, -3699.830, 10.525),  # d=3.042 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Small Keys Bridge (NB)": (-675.401, -3545.679, 0.000),  # via Leonida Keys Postcard (X)
-    "Small Keys Bridge (SB)": (-756.043, -3725.681, 0.000),  # via Leonida Keys Postcard (X)
+    "Small Keys Bridge (NB)": (-928.280, -3827.414, 0.000),  # via Leonida Keys Postcard (X)
+    "Small Keys Bridge (SB)": (-995.534, -3987.876, 0.000),  # via Leonida Keys Postcard (X)
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
     "Southeast Financial Center": (-476.917, -463.168, 250.123),  # d=0.745 via Vice City Postcard & Vice Beach (B)
     "Southeast Financial Center (D)": (-416.434, -441.105, 243.570),  # d=0.807 via Vice Beach (B) & Vice City 03 (Basketball)
     "Springfield Community Church (CW)": (-6320.702, 4068.742, 30.166),  # d=2.055 via Car Wash & Gas Station (Lucia)
-    "Squalo Billboard (TN)": (-3059.693, -6490.460, 25.495),  # d=0.924 via Key Lento & Leonida Keys Postcard (X)
-    "Squalo Billboard (TS)": (-3051.845, -6501.225, 25.383),  # d=0.697 via Key Lento & Leonida Keys Postcard (X)
+    "Squalo Billboard (TN)": (-3074.620, -6508.099, 25.070),  # d=0.125 via Key Lento & Leonida Keys Postcard (X)
+    "Squalo Billboard (TS)": (-3066.825, -6519.126, 24.946),  # d=0.116 via Key Lento & Leonida Keys Postcard (X)
     "St. Moritz Hotel (SW)": (1983.508, 1107.575, 49.354),  # d=1.202 via Venetian Islands & Vice Beach (B)
     "Stack (T)": (1323.696, -790.877, 23.842),  # via Motorboats (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
@@ -3682,20 +3681,20 @@ landmarks = {
     "Train Signal (S) (W)": (-6623.084, 3686.116, 18.578),  # d=0.013 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
     # "Train Tunnel (T)": (-5527.131, 5129.345, 78.110),  # via Diner (NE)
     "Train Tunnel (B)": (-5527.131, 5129.345, 69.610),  # via Diner (NE)
-    "Tree on Island J": (-2479.572, -6563.116, 7.921),  # d=0.674 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Tree on Island J": (-2558.830, -6608.960, 11.555),  # d=0.442 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Trésor Tower": (1842.996, 1950.337, 123.854),  # d=7.538 via Beach & Venetian Islands
     "Turkey Point Nuclear Power Station (CNE)": (-1572.196, -3425.995, 36.407),  # d=0.176 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (CNW)": (-1613.875, -3431.708, 36.487),  # d=0.552 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (CSE)": (-1744.348, -3768.634, 35.376),  # d=5.643 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (CSW)": (-1787.103, -3785.827, 35.325),  # d=6.463 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
-    "Turkey Point Nuclear Power Station (N)": (-1548.858, -3459.523, 56.586),  # d=0.203 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
-    "Turkey Point Nuclear Power Station (S)": (-1546.175, -3523.098, 56.642),  # d=0.090 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
-    "Turkey Point Nuclear Power Station (1)": (-1470.456, -3677.071, 80.112),  # d=1.428 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
-    "Turkey Point Nuclear Power Station (2)": (-1469.572, -3717.393, 80.051),  # d=1.319 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
-    "Turkey Point Nuclear Power Station (3)": (-1470.928, -3758.932, 79.971),  # d=1.175 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (1)": (-1480.859, -3689.369, 80.375),  # d=1.691 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (2)": (-1480.197, -3729.872, 80.314),  # d=1.562 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (3)": (-1481.773, -3771.583, 80.233),  # d=1.394 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (N)": (-1557.776, -3470.402, 56.772),  # d=0.334 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
+    "Turkey Point Nuclear Power Station (S)": (-1555.436, -3534.298, 56.830),  # d=0.012 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Two Tequesta Point": (42.973, -1061.323, 161.003),  # d=0.082 via Vice City Postcard & Vice Beach (B)
     "Uncle Jack's Valley": (-6128.704, 3926.202, 35.520),  # d=1.437 via Gas Station (Lucia) & Uncle Jack's
-    "Unnamed Building #1 (Blimp Key)": (-4238.667, -6868.495, 8.856),  # d=0.647 via Keys & Leonida Keys 01 (Airplane) (X)
+    "Unnamed Building #1 (Blimp Key)": (-4251.191, -6867.517, 8.498),  # d=2.126 via Keys & Leonida Keys 01 (Airplane) (X)
     #"Unknown Building near VCIA (N)": (-5629.348, -1200.092, 90.408),  # d=6.729 via Vice City Postcard & Vice Beach (B)
     #"Unknown Building near VCIA (S)": (-5579.256, -1235.455, 90.413),  # d=6.869 via Vice City Postcard & Vice Beach (B)
     "Unknown Object": (-2575.500, -49.800, 5.900),  # Gizmo
@@ -3724,22 +3723,22 @@ landmarks = {
     "Water Tower near Prison": (-5154.754, 1557.230, 95.382),  # d=0.087 via Ambrosia 02 (Panorama) & Loading Zone near Prison (SW)
     "The Waverly South Beach (NW)": (1230.092, 629.710, 106.965),  # d=2.282 via Tennis Court (SE) & Vice Beach (B)
     "The Waverly South Beach (SE)": (1264.980, 579.673, 113.901),  # d=1.289 via Rooftop Party & Vice Beach (B)
-    "WDNA FM": (-2522.941, -2301.813, 402.478),  # d=5.750 via Leonida Keys 01 (Airplane) (X) & Prison
-    "WDNA FM (N0)": (-2522.483, -2298.963, 5.000),  # via Prison
-    "WDNA FM (SE0)": (-2520.733, -2303.673, 5.000),  # via Prison
-    "WDNA FM (SW0)": (-2525.701, -2302.661, 5.000),  # via Prison
-    "WDNA FM (N1)": (-2522.483, -2298.963, 215.456),  # via Prison
-    "WDNA FM (SE1)": (-2520.733, -2303.673, 215.456),  # via Prison
-    "WDNA FM (SW1)": (-2525.701, -2302.661, 215.456),  # via Prison
-    "WDNA FM (N2)": (-2522.483, -2298.963, 373.768),  # via Prison
-    "WDNA FM (SE2)": (-2520.733, -2303.673, 373.768),  # via Prison
-    "WDNA FM (SW2)": (-2525.701, -2302.661, 373.768),  # via Prison
-    "WDNA FM (N3)": (-2522.483, -2298.963, 390.127),  # via Prison
-    "WDNA FM (SE3)": (-2520.733, -2303.673, 390.127),  # via Prison
-    "WDNA FM (SW3)": (-2525.701, -2302.661, 390.127),  # via Prison
-    "WDNA FM (N4)": (-2522.483, -2298.963, 396.302),  # via Prison
-    "WDNA FM (SE4)": (-2520.733, -2303.673, 396.302),  # via Prison
-    "WDNA FM (SW4)": (-2525.701, -2302.661, 396.302),  # via Prison
+    "WDNA FM": (-2520.341, -2296.499, 405.790),  # d=2.147 via Leonida Keys 01 (Airplane) (X) & Prison
+    "WDNA FM (N0)": (-2517.797, -2295.134, 5.000),  # via Prison
+    "WDNA FM (SE0)": (-2518.470, -2298.697, 5.000),  # via Prison
+    "WDNA FM (SW0)": (-2521.763, -2299.011, 5.000),  # via Prison
+    "WDNA FM (N1)": (-2517.797, -2295.134, 216.387),  # via Prison
+    "WDNA FM (SE1)": (-2518.470, -2298.697, 216.387),  # via Prison
+    "WDNA FM (SW1)": (-2521.763, -2299.011, 216.387),  # via Prison
+    "WDNA FM (N2)": (-2517.797, -2295.134, 375.504),  # via Prison
+    "WDNA FM (SE2)": (-2518.470, -2298.697, 375.504),  # via Prison
+    "WDNA FM (SW2)": (-2521.763, -2299.011, 375.504),  # via Prison
+    "WDNA FM (N3)": (-2517.797, -2295.134, 391.946),  # via Prison
+    "WDNA FM (SE3)": (-2518.470, -2298.697, 391.946),  # via Prison
+    "WDNA FM (SW3)": (-2521.763, -2299.011, 391.946),  # via Prison
+    "WDNA FM (N4)": (-2517.797, -2295.134, 398.868),  # via Prison
+    "WDNA FM (SE4)": (-2518.470, -2298.697, 398.868),  # via Prison
+    "WDNA FM (SW4)": (-2521.763, -2299.011, 398.868),  # via Prison
     ##"Wells Fargo Center (N)": (-642.090, -403.002, 187.267),  # d=2.755 via Vice Beach (B) & Prison
     #"Wells Fargo Center (N)": (-625.117, -394.342, 185.680),  # d=0.001 via Skyline & Vice Beach (B)
     "Wells Fargo Center (N)": (-661.847, -412.981, 188.347),  # d=2.412 via Vice City Postcard & Vice Beach (B)
