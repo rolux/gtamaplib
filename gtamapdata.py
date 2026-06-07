@@ -1402,7 +1402,7 @@ pixels = {
         ((2902, 402), "Flamingo South Beach (NWNW)"),
         ((2940, 360.4), "Royal Palm South Beach (N) (N)"),
         ((2956.5, 360.4), "Royal Palm South Beach (N) (S)"),
-        ((2917, 1089), "Biscayne Island (S)"),
+        ((2917, 1089), "Biscayne Island (E)"),
         ((3036, 371), "1500 Ocean Dr (S) (NW)"),
         ((3056, 368), "1500 Ocean Dr"),
         ((3088.5, 371), "1500 Ocean Dr (S) (SW)"),
@@ -3226,7 +3226,7 @@ landmarks = {
     "22 Biscayne Bay (SE)": (-338.986, 1346.432, 72.845),  # d=0.132 via Vice City Postcard & Vice City 03 (Basketball)
     "50 Biscayne Blvd (SE)": (-407.635, -239.477, 146.292),  # d=1.095 via Vice City 03 (Basketball) & Skyline
     "Big Cat Cage Roof": (-716.491, 1324.161, 13.204),  # via Sidewalk (Jason) (S)
-    "Biscayne Island (S)": (253.227, 1080.161, 0.000),  # via Venetian Islands
+    "Biscayne Island (E)": (253.227, 1080.161, 0.000),  # via Venetian Islands
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Blue Billboard (Key Lento)": (-3436.718, -6780.155, 23.305),  # d=0.238 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Blue Diamond": (1873.388, 2080.805, 146.237),  # d=2.661 via Venetian Islands & Jet Ski
