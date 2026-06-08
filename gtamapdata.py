@@ -2593,6 +2593,7 @@ pixels = {
         ((179.5, 224), "Portofino Tower (NW)"),
         ((181, 277), "WTP (E)"),
         ((189.5, 440), "Bridge Island (W)"),
+        ((190, 224), "Portofino Tower (S)"),
         ((197, 424.5), "Lake Surprise Viaduct (9B)"),
         ((228, 425), "Lake Surprise Viaduct (8B)"),
         ((244, 315), "Keys Bridge (N)"),
