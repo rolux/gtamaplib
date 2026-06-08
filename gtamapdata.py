@@ -127,7 +127,7 @@ cameras = {
     "[T1/7] Brickell": (None, (-850.000, -850.000, 5.000), (300.000, 55.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [575]"),
     "[T1/8] Airboat": None,
     "[T1/9] Flamingos": None,
-    "[T1/10] Beach": (None, (2220.000, -384.000, 1.375), (14.928, -0.700, 0.000), (35.900, 20.655), (3840, 2160), "Trailer 1 [653]"),
+    "[T1/10] Beach": ((2223.000, -397.000, 1.504), (14.902, -0.700, 0.000), (35.500, 20.414), (3840, 2160), "Trailer 1 [653]"),
     #"[T1/11] Motorboats (A)": (None, (1650.000, -850.000, 2.000), (91.400, 1.919, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [699]"),
     "[T1/11] Motorboats (A)": (None, (1514.000, -797.000, 1.615), (92.703, 1.990, 0.000), (63.000, 38.038), (3840, 2160), "Trailer 1 [699]"),
     "[T1/11] Motorboats (B)": (None, (1530.000, -791.000, 1.991), (88.533, -0.330, 0.000), (63.000, 38.038), (3840, 2160), "Trailer 1 [745]"),
@@ -3166,7 +3166,7 @@ lines = {
 ### LANDMARKS ######################################################################################
 
 landmarks = {
-    "12th St Lifeguard Tower": (2224.167, 1032.254, 6.435),  # d=0.360 via Beach & Vice Beach (A)
+    "12th St Lifeguard Tower": (2222.684, 1031.395, 6.101),  # d=0.125 via Beach & Vice Beach (A)
     "252 N Tyndall Pkwy (NE)": (-6192.707, 4415.573, 23.129),  # d=0.072 via Diner (S) & Easy Inn
     "252 N Tyndall Pkwy (NW)": (-6197.491, 4416.217, 23.281),  # d=0.085 via Diner (S) & Easy Inn
     "1111 Lincoln Rd (NW)": (1447.469, 1340.894, 55.309),  # d=7.026 via Rooftop Party & Vice City 03 (Basketball)
@@ -3187,7 +3187,7 @@ landmarks = {
     "Asia Brickell Key (CC1)": (-150.930, -873.213, 224.656),  # d=0.525 via Motorboats (A) & Vice Beach (B)
     "Asia Brickell Key (CC2)": (-160.810, -855.041, 225.576),  # d=1.115 via Motorboats (A) & Vice Beach (B)
     "Ball near Grassrivers Sign": (-1135.500, 391.300, 2.700),  # Gizmo
-    "Bank of America Financial Center": (1703.550, 1381.121, 85.112),  # d=0.575 via Beach & Venetian Islands
+    "Bank of America Financial Center": (1703.054, 1381.052, 84.829),  # d=1.135 via Beach & Venetian Islands
     "Bank of America Financial Center (NW)": (1721.874, 1387.305, 68.395),  # d=1.165 via Venetian Islands & Vice City 03 (Basketball)
     "Bank of America Financial Center (SW)": (1676.711, 1361.908, 66.563),  # d=2.703 via Beach & Venetian Islands
     "Bay (A)": (-7901.308, 4001.868, 0.000),  # via Port Gellhorn Postcard (X)
@@ -3225,12 +3225,12 @@ landmarks = {
     "Bay (GG)": (-6600.155, 4625.139, 0.000),  # via Diner (W) (A)
     "Bay (AAAA)": (-7496.340, 4518.169, 0.000),  # via Diner (SW)
     "Bay (BBBB)": (-7529.528, 4586.147, 0.000),  # via Diner (SW)
-    "Beach (A)": (2219.782, -392.537, 0.000),  # via Beach
-    "Beach (B)": (2212.671, -356.162, 0.000),  # via Beach
-    "Beach (C)": (2217.730, -289.177, 0.000),  # via Beach
-    "Beach (D)": (2209.950, -224.619, 0.000),  # via Beach
-    "Beach (E)": (2200.305, 11.427, 0.000),  # via Beach
-    "Beach (F)": (2239.529, 359.545, 0.000),  # via Beach
+    "Beach (A)": (2223.646, -384.139, 0.000),  # via Beach
+    "Beach (B)": (2217.200, -351.822, 0.000),  # via Beach
+    "Beach (C)": (2221.469, -292.251, 0.000),  # via Beach
+    "Beach (D)": (2214.332, -234.879, 0.000),  # via Beach
+    "Beach (E)": (2204.951, -25.049, 0.000),  # via Beach
+    "Beach (F)": (2238.637, 284.590, 0.000),  # via Beach
     "Beach (G)": (2262.859, 973.636, 0.000),  # via Vice Beach (A)
     "Beach (H)": (2249.513, 1133.739, 0.000),  # via Vice Beach (A)
     "Beige Billboard (BE)": (-6108.791, 4591.625, 24.695),  # d=0.365 via Diner (N) & Diner (NE)
@@ -3313,7 +3313,7 @@ landmarks = {
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
-    "Green Diamond": (1782.904, 2127.124, 145.245),  # d=1.840 via Beach & Venetian Islands
+    "Green Diamond": (1779.024, 2124.965, 144.779),  # d=2.460 via Beach & Venetian Islands
     "Homestead Water Tower": (-2945.771, -3026.442, 70.083),  # d=3.916 via Leonida Keys 01 (Airplane) (X) & Tennis Stadium (4K)
     "Hotel Breakwater": (1949.796, 563.829, 25.734),  # d=0.265 via Vice Beach (A) & Park
     "Hotel Victor (SW)": (1945.101, 733.085, 33.587),  # d=0.251 via Beach & Park
@@ -3348,7 +3348,7 @@ landmarks = {
     "Island Y (S)": (-3101.769, -6008.668, 0.000),  # via Leonida Keys Postcard (X)
     "Island Z (S)": (-2894.058, -5755.217, 0.000),  # via Leonida Keys Postcard (X)
     "Jade Ocean Condos": (1577.927, 2493.047, 201.994),  # d=0.464 via Venetian Islands & Highway (NE)
-    "Jade Ocean Condos (SW)": (1603.480, 2483.393, 204.304),  # d=1.834 via Beach & Venetian Islands
+    "Jade Ocean Condos (SW)": (1598.870, 2479.569, 203.627),  # d=2.452 via Beach & Venetian Islands
     "Jenny Hostel (NE)": (1907.067, 608.982, 32.085),  # d=0.170 via Vice Beach (B) & Park
     "Juice Fruit Sign": (-6581.104, 3666.947, 16.406),  # d=0.010 via Port Gellhorn Postcard (X) & Chase (2) (A)
     "Juice Fruit Sign (B)": (-6580.941, 3666.261, 13.262),  # d=0.045 via Port Gellhorn Postcard (X) & Chase (2) (A)
@@ -3615,7 +3615,7 @@ landmarks = {
     "536 Richard Jackson Blvd (RSW)": (-6203.031, 4521.820, 16.955),  # d=0.006 via Diner (W) (A) & Diner (NW)
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
-    "The Ritz-Carlton Bal Harbour": (1375.930, 2770.632, 101.366),  # d=1.350 via Highway (NE) & Beach
+    "The Ritz-Carlton Bal Harbour": (1370.400, 2767.526, 100.991),  # d=1.590 via Beach & Highway (NE)
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (N) (S)": (2036.451, 1049.876, 67.998),  # d=0.153 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
@@ -3683,14 +3683,14 @@ landmarks = {
     "Tall Double Billboard": (-6299.540, 4125.617, 46.603),  # d=3.130 via Gas Station (Lucia) & Car Wash
     "Ten Museum Park (SE)": (-405.844, 481.345, 136.174),  # d=3.175 via Skyline & Vice Beach (B)
     "Three Tequesta Point": (-14.635, -955.375, 205.786),  # d=0.119 via Vice City Postcard & Vice Beach (B)
-    "The Tides South Beach": (1993.276, 893.367, 54.673),  # d=1.061 via Beach & Vice Beach (B)
+    "The Tides South Beach": (1993.831, 893.752, 54.416),  # d=0.480 via Beach & Vice Beach (B)
     "Traffic Sign": (-6084.656, 4425.942, 14.853),  # d=1.665 via Diner (E) & Diner (SE) (A)
     "Train Signal (S) (E)": (-6621.336, 3687.237, 18.532),  # d=0.011 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
     "Train Signal (S) (W)": (-6623.084, 3686.116, 18.578),  # d=0.013 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
     # "Train Tunnel (T)": (-5527.131, 5129.345, 78.110),  # via Diner (NE)
     "Train Tunnel (B)": (-5527.131, 5129.345, 69.610),  # via Diner (NE)
     "Tree on Island J": (-2558.830, -6608.960, 11.555),  # d=0.442 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
-    "Trésor Tower": (1842.996, 1950.337, 123.854),  # d=7.538 via Beach & Venetian Islands
+    "Trésor Tower": (1839.568, 1948.916, 121.484),  # d=2.967 via Beach & Venetian Islands
     "Turkey Point Nuclear Power Station (CNE)": (-1572.196, -3425.995, 36.407),  # d=0.176 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (CNW)": (-1613.875, -3431.708, 36.487),  # d=0.552 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (CSE)": (-1744.348, -3768.634, 35.376),  # d=5.643 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
