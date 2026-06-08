@@ -713,6 +713,7 @@ pixels = {
         ((3054, 616), "House D (SW)"),
     ],
     "[L1/15] Park": [
+        ((121.5, 497), "Shore Park Hotel (N)"),
         ((189, 327), "Jenny Hostel (NE)"),
         ((325, 307), "Hotel Breakwater"),
         ((325, 436), "Hotel Breakwater (K)"),
@@ -1423,6 +1424,7 @@ pixels = {
         ((3807, 405), "Flamingo South Beach (SSW)"),
     ],
     "[T1/17] Ocean Drive (NW)": [
+        ((165, 797.5), "Shore Park Hotel (N)"),
         ((1436, 242), "Hotel Breakwater (K)"),
         ((3627, 309), "The Tides South Beach"),
     ],
