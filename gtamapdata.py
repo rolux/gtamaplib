@@ -1588,6 +1588,7 @@ pixels = {
         ((2652, 1109), "Opera Tower"),
     ],
     "[T1/30] Interchange": [
+        ((960, 461), "Stephen P. Clark Government Center (NW)"),
         ((1002, 472), "Stephen P. Clark Government Center (W)"),
     ],
     "[T1/36] Waning Sands (A) (X)": [
