@@ -819,7 +819,15 @@ pixels = {
         ((781, 299), "Sombrero Key Light (T)"),
     ],
     "[L1/22] Metro (NE) (B)": [
-        ((757, 937), "Player")
+        ((697.5, 218.5), "850 NW 4th Ave (N)"),
+        ((730, 974), "Player"),
+        ((787.5, 218.5), "Tuscan Place Apartments (BSE)"),
+        ((815.5, 218.5), "850 NW 4th Ave (S)"),
+        ((863, 217), "Rohde Building (BSW)"),
+        ((999, 212), "St. John Bosco Catholic Church (T)"),
+        ((1064.5, 209), "St. John Bosco Catholic Church (D)"),
+        ((1112.5, 214), "Stephen P. Clark Government Center (BW)"),
+        ((1141, 214), "Stephen P. Clark Government Center (BSW)"),
     ],
     #"[L1/22] Metro (SE) (A)": [
     #    ((878, 272), "Park Grove Condominium (S)"),
@@ -1409,7 +1417,9 @@ pixels = {
         ((2917, 1089), "Biscayne Island (E)"),
         ((3036, 371), "1500 Ocean Dr (S) (NW)"),
         ((3056, 368), "1500 Ocean Dr"),
+        ((3068, 559), "Pin W01L"),
         ((3088.5, 371), "1500 Ocean Dr (S) (SW)"),
+        ((3120, 555.5), "Pin W01R"),
         ((3248, 638), "Flagler Memorial Island (N)"),
         ((3255.5, 249), "Flamingo South Beach (TNE)"),
         ((3281, 246), "Flamingo South Beach (TNW)"),
@@ -1422,6 +1432,7 @@ pixels = {
         ((3651, 376), "Flamingo South Beach (SDS)"),
         ((3681.5, 387), "Flamingo South Beach (SRSW)"),
         ((3807, 405), "Flamingo South Beach (SSW)"),
+        ((3834, 667), "Flagler Memorial Island (S)"),
     ],
     "[T1/17] Ocean Drive (NW)": [
         ((165, 797.5), "Shore Park Hotel (N)"),
@@ -1729,6 +1740,7 @@ pixels = {
         ((137, 252), "Mount Leonida"),
         ((225, 55), "Tall Billboard near Interchange"),
         ((310, 290), "Ambrosia Hill"),
+        ((3306, 373), "Rohde Building (BSW)"),
     ],
     "[T2/59] Park (Mobile Phone)": [
         ((1084, 463), "Wide Billboard (Port VC)"),
