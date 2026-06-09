@@ -149,7 +149,7 @@ cameras = {
     "[T1/27] Gas Station (Alligator)": (None, (-5300, 3580, 69.000), (270.000, -17.500, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1427]"),
     "[T1/29] Gas Station (Chase) (SE)": (None, (-1000.000, 3000.000, 5.000), (218.000, 4.948, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1498]"),
     "[T1/29] Gas Station (Chase) (S)": (None, (-1000.000, 3000.000, 5.000), (208.500, 5.313, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1529]"),
-    "[T1/30] Interchange": (None, (-970.000, 800.000, 15.000), (162.500, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1535]"),
+    "[T1/30] Interchange": (None, (-970.000, 800.000, 15.000), (168.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1535]"),
     "[T1/31] Green Pickup Truck (A)": None,
     "[T1/31] Green Pickup Truck (B)": None,
     "[T1/32] House with Garden": None,
@@ -1590,6 +1590,8 @@ pixels = {
     "[T1/30] Interchange": [
         ((960, 461), "Stephen P. Clark Government Center (NW)"),
         ((1002, 472), "Stephen P. Clark Government Center (W)"),
+        ((1527, 707), "Flagler on the River"),
+        ((2436, 760), "Tall Billboard near Interchange"),
     ],
     "[T1/36] Waning Sands (A) (X)": [
         ((1152.5, 869), "House #1 (Waning Sands)"),
@@ -1725,6 +1727,7 @@ pixels = {
     ],
     "[T2/58] Explosion": [
         ((137, 252), "Mount Leonida"),
+        ((225, 55), "Tall Billboard near Interchange"),
         ((310, 290), "Ambrosia Hill"),
     ],
     "[T2/59] Park (Mobile Phone)": [
