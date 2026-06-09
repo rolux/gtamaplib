@@ -841,7 +841,7 @@ pixels = {
         ((356, 302), "Nine at Mary Brickell Village (A)"),
         ((405, 307), "Nine at Mary Brickell Village (B)"),
         ((454, 311), "Nine at Mary Brickell Village (C)"),
-        ((474, 313), "Nine at Mary Brickell Village (D)"),
+        ((474, 313), "Nine at Mary Brickell Village (D)")
     ],
     "[L1/22] Metro (SE) (B)": [
         ((47, 198), "Seybold Pointe (SE)"),
@@ -849,7 +849,9 @@ pixels = {
         ((175, 160), "Nine at Mary Brickell Village (A)"),
         ((666, 157), "Infinity at Brickell"),
         ((694, 162), "Infinity at Brickell (SW)"),
-        ((892, 272), "Park Grove Condominium (N)")
+        ((767, 276), "Meditteranea Condo"),
+        ((882, 280), "Keystone Park Condo"),
+        ((892, 272), "Park Grove Condominium (N)"),
     ],
     # "[L1/22] Metro (SE) (C)": [
     #     ((172.5, 154), "1450 Brickell Ave"),
@@ -2088,8 +2090,9 @@ pixels = {
         ((935, 716), "Island W (N)"),
         ((950, 593), "US1/i97"),
         ((957.5, 524), "Stephen P. Clark Government Center (E)"),
+        ((972, 567), "Keystone Park Condo"),
         ((984, 546), "Flagler on the River"),
-        ((990, 567), "Unknown Building (South Vice City)"),
+        ((990, 567), "Meditteranea Condo"),
         ((998.5, 598.5), "White Billboard (Hamlet)"),
         ((1019, 541), "Miami-Dade County Courthouse"),
         ((1187, 857.5), "Pin F01R (B)"),
@@ -3687,8 +3690,8 @@ landmarks = {
     "St. Moritz Hotel (SW)": (1983.508, 1107.575, 49.354),  # d=1.202 via Venetian Islands & Vice Beach (B)
     "Stack (T)": (1323.696, -790.877, 23.842),  # via Motorboats (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
-    "Stephen P. Clark Government Center (E)": (-941.781, -6.778, 161.320),  # d=0.882 via Highway (Peacock Bay) (A) & Vice City 03 (Basketball)
-    "Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
+    "Stephen P. Clark Government Center (E)": (-871.635, 33.121, 158.603),  # d=0.646 via Leonida Keys 01 (Airplane) (X) & Vice City 03 (Basketball)
+    #"Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
     "Stiltsville (1)": (165.396, -2695.256, 5.000),  # via Leonida Keys Postcard (X)
     "Stiltsville (2)": (36.148, -2855.041, 5.000),  # via Leonida Keys Postcard (X)
