@@ -2987,6 +2987,7 @@ pixels = {
     "[S3/1] Port Vice City (A)": [
         ((153, 998), "Turkey Point Nuclear Power Station (S)"),
         ((188, 998), "Turkey Point Nuclear Power Station (N)"),
+        ((799, 992), "NAS Key West Control Tower"),
         ((848, 965), "Park Grove Condominium (S)"),
         ((1100, 924), "Infinity at Brickell"),
         ((1290, 801), "Four Seasons Hotel Miami (SE)"),
