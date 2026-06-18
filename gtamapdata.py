@@ -274,6 +274,8 @@ cameras = {
     "[S2/76] Mount Kalaga National Park Postcard (X)": None,
     "[S2/79] Lucia Caminos (Animation 1)": None,
     "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
+    "[S3/1] Port Vice City (A)": (None, (1443.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [1]"),
+    "[S3/2] Port Vice City (B)": None,  # "Port Vice City [140]"
 }
 
 cameras = {
@@ -650,6 +652,7 @@ pixels = {
     ],
     "[L1/7] Port": [
         ((295, 344), "Murano Grande"),
+        ((343, 565), "Jet Skis in Miami"),
         ((469, 540), "Blackstone Apartments"),
         ((817, 399), "Portofino Tower (NW)"),
         ((862, 401), "Portofino Tower (S)"),
@@ -2981,6 +2984,23 @@ pixels = {
         ((1329, 335), "Shack (NB)"),
         ((2505, 126), "Tower (Grassrivers)"),
     ],
+    "[S3/1] Port Vice City (A)": [
+        ((153, 998), "Turkey Point Nuclear Power Station (S)"),
+        ((188, 998), "Turkey Point Nuclear Power Station (N)"),
+        ((848, 965), "Park Grove Condominium (S)"),
+        ((1100, 924), "Infinity at Brickell"),
+        ((1290, 801), "Four Seasons Hotel Miami (SE)"),
+        ((1296.5, 792.5), "Four Seasons Hotel Miami (BE)"),
+        ((1358.5, 798.5), "Four Seasons Hotel Miami (NW)"),
+        ((2202, 886), "Miami Tower"),
+        ((2104, 760), "Southeast Financial Center"),
+        ((2405, 885), "50 Biscayne Blvd"),
+        ((2707, 933), "Miami-Dade County Courthouse"),
+        ((2871, 846), "Vizcayne North Condominium (SE)"),
+        ((2941, 846), "Vizcayne North Condominium (NE)"),
+        ((3086, 992), "Skyviews Miami Observation Wheel"),
+        ((3655, 978), "Crazy Hill"),
+    ],
 }
 
 pixels = {
@@ -3453,6 +3473,7 @@ landmarks = {
     "Miami Beach Parking Garage (SE)": (1850.104, 682.393, 34.083),  # d=0.565 via Vice Beach (A) & Vice Beach (B)
     ##"Miami Tower": (-742.700, -397.647, 163.102),  # d=5.199 via Grassrivers 02 (Watson Bay) & Prison
     "Miami Tower": (-798.576, -468.712, 166.523),  # d=1.795 via Vice City Postcard & Skyline
+    "Miami-Dade County Courthouse": (-728.212, -6.523, 118.240),  # d=3.260 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B) (X)
     ##"Mount Waffles (TW)": (-5243.222, 5685.196, 206.805),  # d=2.889 via Diner (N) & Gas Station (Lucia)
     "Mount Mountain": (-4006.080, 5799.745, 242.606),  # d=7.591 via Diner (N) & Hedge (B) (X)
