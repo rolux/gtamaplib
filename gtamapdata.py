@@ -275,7 +275,7 @@ cameras = {
     "[S2/79] Lucia Caminos (Animation 1)": None,
     "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
     "[S3/1] Port Vice City (A)": (None, (1443.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [1]"),
-    "[S3/1] Port Vice City (B)": (None, (1550.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [140]"),
+    "[S3/1] Port Vice City (B)": (None, (1605.000, -122.000, 78.179), (103.156, -3.000, 0.000), (75.200, 46.843), (3840, 2160), "Port Vice City [140]"),
 }
 
 cameras = {
@@ -653,6 +653,7 @@ pixels = {
     "[L1/7] Port": [
         ((295, 344), "Murano Grande"),
         ((343, 565), "Jet Skis in Miami"),
+        ((453, 428), "Murano Grande (R3)"),
         ((469, 540), "Blackstone Apartments"),
         ((817, 399), "Portofino Tower (NW)"),
         ((862, 401), "Portofino Tower (S)"),
@@ -3016,9 +3017,9 @@ pixels = {
         ((2775, 890), "Stephen P. Clark Government Center (E)"),
         ((2871, 846), "Vizcayne North Condominium (SE)"),
         ((2941, 846), "Vizcayne North Condominium (NE)"),
-        ((3061, 976), "Unknown Water Tower (2)"),
+        ((3061, 976), "Unknown Water Tower"),
         ((3086, 992), "Skyviews Miami Observation Wheel"),
-        ((3118, 980), "Unknown Water Tower (1)"),
+        ((3118, 980), "Water Tower near Prison"),
         ((3147, 998), "East-West Highway (C)"),
         ((3184.5, 1002), "East-West Highway (B)"),
         ((3246, 1008), "East-West Highway (A)"),
@@ -3028,8 +3029,55 @@ pixels = {
         ((3534, 1037), "Kaseya Center (SE)"),
         ((3635, 828), "Marquis Miami (NE)"),
         ((3655, 978), "Crazy Hill"),
-    ],
+        ((3683, 1274), "Star Island Bridge (2E)"),
+        ((3702, 1268), "Star Island Bridge (3W)"),
+        ((3732, 1274), "Star Island Bridge (3E)"),
+        ((3751, 1269), "Star Island Bridge (4W)"),
+        ((3781, 1275), "Star Island Bridge (4E)"),
+        ((3800, 1270), "Star Island Bridge (5W)"),
+        ((3832, 1277), "Star Island Bridge (5E)"),
+   ],
     "[S3/1] Port Vice City (B)": [
+        ((64, 947.5), "Turkey Point Nuclear Power Station (3)"),
+        ((86, 947.5), "Turkey Point Nuclear Power Station (2)"),
+        ((107.5, 947.5), "Turkey Point Nuclear Power Station (1)"),
+        ((229, 961.5), "Container Crane (1)"),
+        ((273, 964), "Turkey Point Nuclear Power Station (N)"),
+        ((743, 978.5), "Container Crane (7)"),
+        ((1155, 895), "Infinity at Brickell"),
+        ((1340.5, 771.5), "Four Seasons Hotel Miami (BE)"),
+        ((1379.5, 775), "Four Seasons Hotel Miami (BW)"),
+        ((1397.5, 777.5), "Four Seasons Hotel Miami (NW)"),
+        ((1470.5, 861), "Brickell Arch (E)"),
+        ((1488, 965.5), "Container Crane (8)"),
+        ((1514, 861.5), "Brickell Arch (W)"),
+        ((1841.5, 880.5), "Brickell on the River"),
+        ((1988, 974.5), "Container Crane (9)"),
+        ((2084, 746), "Southeast Financial Center"),
+        ((2099.5, 1602), "Jet Skis in Miami"),
+        ((2182, 860), "Miami Tower"),
+        ((2241, 960.5), "MIA North Terminal Tower"),
+        ((2316.5, 891), "SunTrust International Center"),
+        ((2326, 872), "50 Biscayne Blvd (SE)"),
+        ((2359.5, 862.5), "50 Biscayne Blvd"),
+        ((2398, 872), "50 Biscayne Blvd (NE)"),
+        ((2441, 930.5), "100 Biscayne Blvd (SE)"),
+        ((2643.5, 903), "Miami-Dade County Courthouse"),
+        ((2709, 864.5), "Stephen P. Clark Government Center (E)"),
+        ((2788, 825), "Vizcayne North Condominium (SE)"),
+        ((2851.5, 825), "Vizcayne North Condominium (NE)"),
+        ((2944, 958.5), "Skyviews Miami Observation Wheel"),
+        ((3105.5, 963), "East-West Highway (F)"),
+        ((3118.5, 965), "East-West Highway (E)"),
+        ((3134.5, 966), "East-West Highway (D)"),
+        ((3238, 817), "Marina Blue (NE)"),
+        ((3288.5, 870.5), "Ten Museum Park (SW)"),
+        ((3354, 998), "Kaseya Center (SE)"),
+        ((3356.5, 870.5), "Ten Museum Park (NE)"),
+        ((3382.5, 940), "Major Hill"),
+        ((3467, 809.5), "Marquis Miami (NE)"),
+        ((3519.5, 945.5), "Pointy Hill"),
+        ((3584, 480), "Murano Grande (R3)"),
     ]
 }
 
@@ -3361,6 +3409,9 @@ landmarks = {
     "East Key (NW)": (-1863.415, -4903.714, 0.000),  # via Leonida Keys Postcard (X)
     "East Key (SW)": (-1657.767, -5208.327, 0.000),  # via Leonida Keys Postcard (X)
     "East Venetian Causeway Bridge": (1320.394, 1471.661, 12.724),  # d=4.549 via Jet Ski & Venetian Islands
+    "East-West Highway (A)": (-6071.986, 1729.336, 10.000),  # via Port Vice City (A)
+    "East-West Highway (B)": (-8293.047, 2082.661, 10.000),  # via Port Vice City (A)
+    "East-West Highway (C)": (-10711.600, 2481.832, 10.000),  # via Port Vice City (A)
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
@@ -3427,6 +3478,7 @@ landmarks = {
     "Jade Ocean Condos": (1577.927, 2493.047, 201.994),  # d=0.464 via Venetian Islands & Highway (NE)
     "Jade Ocean Condos (SW)": (1598.870, 2479.569, 203.627),  # d=2.452 via Beach & Venetian Islands
     "Jenny Hostel (NE)": (1907.067, 608.982, 32.085),  # d=0.170 via Vice Beach (B) & Park
+    "Jet Skis in Miami": (1383.319, -157.019, 18.865),  # d=0.047 via Port Vice City (B) & Port
     "Juice Fruit Sign": (-6581.104, 3666.947, 16.406),  # d=0.010 via Port Gellhorn Postcard (X) & Chase (2) (A)
     "Juice Fruit Sign (B)": (-6580.941, 3666.261, 13.262),  # d=0.045 via Port Gellhorn Postcard (X) & Chase (2) (A)
     "Juice Fruit Sign (E)": (-6578.831, 3667.111, 13.151),  # d=0.003 via Port Gellhorn Postcard (X) & Chase (2) (A)
@@ -3509,6 +3561,7 @@ landmarks = {
     "Mount Mountain": (-4006.080, 5799.745, 242.606),  # d=7.591 via Diner (N) & Hedge (B) (X)
     "Mount Waffles": (-5217.942, 5581.709, 198.855),  # d=2.128 via Diner (N) & Gas Station (Lucia)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
+    "Murano Grande (R3)": (1496.482, -81.920, 96.154),  # d=0.095 via Port Vice City (B) & Port
     "Naval Air Station Key West (Control Tower)": (-5716.593, -6602.387, 29.784),  # d=1.025 via Key Lento & Grassrivers Postcard (X)
     "Naval Air Station Key West (Radar Tower)": (-5559.494, -6469.937, 27.670),  # d=0.692 via Key Lento & Grassrivers Postcard (X)
     "419 NE 4th Ave (W)": (-415.516, 1205.149, 32.586),  # d=3.549 via Vice City Postcard & Vice City 03 (Basketball)
