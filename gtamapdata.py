@@ -275,7 +275,7 @@ cameras = {
     "[S2/79] Lucia Caminos (Animation 1)": None,
     "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
     "[S3/1] Port Vice City (A)": (None, (1443.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [1]"),
-    "[S3/2] Port Vice City (B)": None,  # "Port Vice City [140]"
+    "[S3/1] Port Vice City (B)": (None, (1550.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [140]"),
 }
 
 cameras = {
@@ -2985,24 +2985,52 @@ pixels = {
         ((2505, 126), "Tower (Grassrivers)"),
     ],
     "[S3/1] Port Vice City (A)": [
+        ((6, 990.5), "Turkey Point Nuclear Power Station (2)"),
+        ((27, 990.5), "Turkey Point Nuclear Power Station (1)"),
         ((153, 998), "Turkey Point Nuclear Power Station (S)"),
         ((188, 998), "Turkey Point Nuclear Power Station (N)"),
+        ((348, 1053), "Tall Billboard (Port VC)"),
         ((799, 992.5), "NAS Key West Control Tower"),
-        ((848, 965), "Park Grove Condominium (S)"),
+        #((848, 965), "Park Grove Condominium (S)"),
         ((1100, 924), "Infinity at Brickell"),
+        ((1214, 1034), "Container Crane (8)"),
         ((1290, 801), "Four Seasons Hotel Miami (SE)"),
         ((1296.5, 792.5), "Four Seasons Hotel Miami (BE)"),
         ((1358.5, 798.5), "Four Seasons Hotel Miami (NW)"),
+        ((1435, 887), "Brickell Arch (E)"),
+        ((1483.5, 888), "Brickell Arch (W)"),
+        ((1835, 907), "Brickell on the River"),
+        ((2020, 1023), "Container Crane (9)"),
+        ((2149, 1030), "Cruise Ship (RT)"),
         ((2202, 886), "Miami Tower"),
         ((2104, 760), "Southeast Financial Center"),
+        ((2258.5, 994), "MIA North Terminal Tower"),
+        ((2345.5, 921), "SunTrust International Center"),
+        ((2364, 898), "50 Biscayne Blvd (SE)"),
         ((2405, 885), "50 Biscayne Blvd"),
+        ((2445, 898), "50 Biscayne Blvd (NE)"),
+        ((2490, 961.5), "100 Biscayne Blvd (SE)"),
+        ((2568, 961.5), "100 Biscayne Blvd (NE)"),
+        ((2588, 990), "Titan America (N)"),
         ((2707, 933), "Miami-Dade County Courthouse"),
         ((2775, 890), "Stephen P. Clark Government Center (E)"),
         ((2871, 846), "Vizcayne North Condominium (SE)"),
         ((2941, 846), "Vizcayne North Condominium (NE)"),
+        ((3061, 976), "Unknown Water Tower (2)"),
         ((3086, 992), "Skyviews Miami Observation Wheel"),
+        ((3118, 980), "Unknown Water Tower (1)"),
+        ((3147, 998), "East-West Highway (C)"),
+        ((3184.5, 1002), "East-West Highway (B)"),
+        ((3246, 1008), "East-West Highway (A)"),
+        ((3375.5, 836), "Marina Blue (NE)"),
+        ((3428.5, 896.5), "Ten Museum Park (SW)"),
+        ((3510, 894), "Ten Museum Park (NE)"),
+        ((3534, 1037), "Kaseya Center (SE)"),
+        ((3635, 828), "Marquis Miami (NE)"),
         ((3655, 978), "Crazy Hill"),
     ],
+    "[S3/1] Port Vice City (B)": [
+    ]
 }
 
 pixels = {
