@@ -3060,7 +3060,7 @@ pixels = {
         ((743, 978.5), "Container Crane (7)"),
         ((1089, 829), "Two Tequesta Point"),
         ((1155, 895), "The Palace Condominoum"),
-        ((1283, 765), "Two Tequesta Point"),
+        ((1283, 765), "Three Tequesta Point"),
         ((1340.5, 771.5), "Four Seasons Hotel Miami (BE)"),
         ((1379.5, 775), "Four Seasons Hotel Miami (BW)"),
         ((1397.5, 777.5), "Four Seasons Hotel Miami (NW)"),
