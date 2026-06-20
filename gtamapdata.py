@@ -3636,6 +3636,8 @@ landmarks = {
     "Nine at Mary Brickell Village (C)": (-1046.501, -1000.646, 118.984),  # d=3.978 via Airport (X) & Metro (SE) (A) (4K)
     "Nine at Mary Brickell Village (D)": (-1048.886, -1006.389, 118.946),  # d=4.373 via Airport (X) & Metro (SE) (A) (4K)
     "Nine at Mary Brickell Village (E)": (-1063.869, -1036.130, 118.803),  # d=0.819 via Tennis Stadium (4K) & Grassrivers 02 (Watson Bay)
+    "North-South Highway (A)": (-3902.456, -326.200, 10.000),  # via Port Vice City (A)
+    "North-South Highway (B)": (-3925.910, -229.806, 10.000),  # via Port Vice City (A)
     "1500 Ocean Dr": (2093.265, 983.621, 63.025),  # d=0.463 via Vice Beach (B) & Park
     "1500 Ocean Dr (S) (NW)": (2029.742, 1003.354, 62.016),  # d=0.422 via Venetian Islands & Vice Beach (B)
     "1500 Ocean Dr (S) (SE)": (2026.843, 968.113, 62.132),  # d=0.514 via Vice Beach (B) & Park
