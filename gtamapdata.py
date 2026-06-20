@@ -2512,6 +2512,7 @@ pixels = {
         ((3840, 855), "Mount Leonida (A)"),
     ],
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": [
+        ((731, 288), "Unknown Mast (1)"),
         ((770, 301), "Water Tower near Prison"),
         ((956.5, 322), "Blob"),
         ((1050, 336), "Billboard near Intersection (BC)"),
@@ -3023,9 +3024,9 @@ pixels = {
         ((2871, 846), "Vizcayne North Condominium (SE)"),
         ((2941, 846), "Vizcayne North Condominium (NE)"),
         ((3009.5, 986), "Round Water Tower"),
-        ((3061, 976), "Unknown Water Tower"),
+        ((3061, 976), "Unknown Mast (2)"),
         ((3086, 992), "Skyviews Miami Observation Wheel"),
-        ((3118, 980), "Water Tower near Prison"),
+        ((3118, 980), "Unknown Mast (1)"),
         ((3147, 998), "East-West Highway (C)"),
         ((3184.5, 1002), "East-West Highway (B)"),
         ((3246, 1008), "East-West Highway (A)"),
@@ -3079,8 +3080,8 @@ pixels = {
         ((2851.5, 825), "Vizcayne North Condominium (NE)"),
         ((2883, 951), "South Hill"),
         ((2944, 958.5), "Skyviews Miami Observation Wheel"),
-        ((3030.5, 942), "Unknown Water Tower"),
-        ((3087, 945.5), "Water Tower near Prison"),
+        ((3030.5, 942), "Unknown Mast (2)"),
+        ((3087, 945.5), "Unknown Mast (1)"),
         ((3105.5, 963), "East-West Highway (F)"),
         ((3118.5, 965), "East-West Highway (E)"),
         ((3134.5, 966), "East-West Highway (D)"),
@@ -3423,12 +3424,12 @@ landmarks = {
     "East Key (NW)": (-1863.415, -4903.714, 0.000),  # via Leonida Keys Postcard (X)
     "East Key (SW)": (-1657.767, -5208.327, 0.000),  # via Leonida Keys Postcard (X)
     "East Venetian Causeway Bridge": (1320.394, 1471.661, 12.724),  # d=4.549 via Jet Ski & Venetian Islands
-    "East-West Highway (A)": (-6071.986, 1729.336, 10.000),  # via Port Vice City (A)
-    "East-West Highway (B)": (-8293.047, 2082.661, 10.000),  # via Port Vice City (A)
-    "East-West Highway (C)": (-10711.600, 2481.832, 10.000),  # via Port Vice City (A)
-    "East-West Highway (D)": (-9162.992, 2324.942, 10.000),  # via Port Vice City (B)
-    "East-West Highway (E)": (-9814.096, 2410.481, 10.000),  # via Port Vice City (B)
-    "East-West Highway (F)": (-11413.014, 2706.994, 10.000),  # via Port Vice City (B)
+    "East-West Highway (A)": (-4997.034, 1462.373, 20.000),  # via Port Vice City (A)
+    "East-West Highway (B)": (-6900.393, 1765.158, 20.000),  # via Port Vice City (A)
+    "East-West Highway (C)": (-8972.994, 2107.232, 20.000),  # via Port Vice City (A)
+    "East-West Highway (D)": (-7583.622, 1966.043, 20.000),  # via Port Vice City (B)
+    "East-West Highway (E)": (-8139.226, 2039.035, 20.000),  # via Port Vice City (B)
+    "East-West Highway (F)": (-9503.626, 2292.058, 20.000),  # via Port Vice City (B)
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
@@ -4078,8 +4079,9 @@ maps = {
 
 map_sections = {
     "Vice City": (-5000, -3000, 3000, 4000),
-    "Grassrivers": (-6000, -5000, 0, -1000),
     "Leonida Keys": (-8000, -8000, -1000, -4000),
+    "Grassrivers": (-6000, -5000, 0, -1000),
+    "Mariana County": (-8000, -1500, -4000, 1500),
     "Port Gellhorn": (-10000, 1000, -4000, 7000),
     "Ambrosia": (-5000, 1000, 0, 7000),
     "Leonard County": (-2000, 2000, 3000, 12000),
