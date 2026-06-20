@@ -3018,7 +3018,7 @@ pixels = {
         ((2345.5, 921), "SunTrust International Center"),
         ((2364, 898), "50 Biscayne Blvd (SE)"),
         ((2405, 885), "50 Biscayne Blvd"),
-        ((1442, 1016), "North-South Highway (A)"),
+        ((2442, 1016), "North-South Highway (A)"),
         ((2445, 898), "50 Biscayne Blvd (NE)"),
         ((2490, 961.5), "100 Biscayne Blvd (SE)"),
         ((2490, 1016), "North-South Highway (B)"),
