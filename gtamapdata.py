@@ -3075,6 +3075,8 @@ pixels = {
         ((2851.5, 825), "Vizcayne North Condominium (NE)"),
         ((2883, 951), "South Hill"),
         ((2944, 958.5), "Skyviews Miami Observation Wheel"),
+        ((3030.5, 942), "Unknown Water Tower"),
+        ((3087, 945.5), "Water Tower near Prison"),
         ((3105.5, 963), "East-West Highway (F)"),
         ((3118.5, 965), "East-West Highway (E)"),
         ((3134.5, 966), "East-West Highway (D)"),
