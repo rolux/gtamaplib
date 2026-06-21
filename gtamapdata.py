@@ -3517,13 +3517,13 @@ landmarks = {
     "Key Lento (U)": (-3380.488, -6674.636, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (V)": (-3373.017, -6625.135, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (W)": (-3138.277, -6445.758, 0.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (1B)": (-675.851, -3210.864, 0.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (2B)": (-684.820, -3241.043, 0.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (3B)": (-694.452, -3269.568, 0.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (4B)": (-703.615, -3298.485, 0.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (5B)": (-711.942, -3328.459, 0.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (6B)": (-720.558, -3357.472, 0.000),  # via Leonida Keys Postcard (X)
-    "Keys Bridge (7B)": (-729.829, -3384.875, 0.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (1B)": (-675.851, -3210.864, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (2B)": (-684.820, -3241.043, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (3B)": (-694.452, -3269.568, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (4B)": (-703.615, -3298.485, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (5B)": (-711.942, -3328.459, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (6B)": (-720.558, -3357.472, 10.000),  # via Leonida Keys Postcard (X)
+    "Keys Bridge (7B)": (-729.829, -3384.875, 10.000),  # via Leonida Keys Postcard (X)
     "Keys Bridge (C)": (-421.003, -2980.036, 21.128),  # d=10.869 via Leonida Keys 01 (Airplane) (X) & Prison
     "Lake near VCIA (A)": (-3715.573, -320.614, 5.000),  # via Boat (Jason)
     "Lake near VCIA (B)": (-3626.992, -454.330, 5.000),  # via Boat (Jason)
@@ -3532,20 +3532,20 @@ landmarks = {
     "Lake near VCIA (E)": (-3836.590, -360.979, 5.000),  # via Boat (Jason)
     "Lake near VCIA (F)": (-3842.875, -360.145, 5.000),  # via Boat (Jason)
     "Lake near VCIA (G)": (-3846.870, -364.241, 5.000),  # via Boat (Jason)
-    "Lake Surprise Viaduct (2B)": (-2247.129, -5168.116, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (3B)": (-2258.562, -5147.566, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (4B)": (-2270.365, -5126.352, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (5B)": (-2282.167, -5105.139, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (6B)": (-2289.835, -5080.397, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (7B)": (-2297.170, -5056.201, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (8B)": (-2309.030, -5034.884, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (9B)": (-2316.802, -5009.849, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (10B)": (-2328.319, -4989.148, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (11B)": (-2339.837, -4968.446, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (12B)": (-2347.330, -4943.856, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (13B)": (-2358.876, -4923.104, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (14B)": (-2370.422, -4902.352, 0.000),  # via Leonida Keys Postcard (X)
-    "Lake Surprise Viaduct (15B)": (-2380.996, -4872.170, 0.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (2B)": (-2247.129, -5168.116, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (3B)": (-2258.562, -5147.566, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (4B)": (-2270.365, -5126.352, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (5B)": (-2282.167, -5105.139, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (6B)": (-2289.835, -5080.397, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (7B)": (-2297.170, -5056.201, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (8B)": (-2309.030, -5034.884, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (9B)": (-2316.802, -5009.849, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (10B)": (-2328.319, -4989.148, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (11B)": (-2339.837, -4968.446, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (12B)": (-2347.330, -4943.856, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (13B)": (-2358.876, -4923.104, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (14B)": (-2370.422, -4902.352, 10.000),  # via Leonida Keys Postcard (X)
+    "Lake Surprise Viaduct (15B)": (-2380.996, -4872.170, 10.000),  # via Leonida Keys Postcard (X)
     "Lamp Post (NW)": (-2253.571, -2775.558, 50.000),  # via Prison
     "Lamp Post (NE)": (-2251.225, -2786.935, 50.000),  # via Prison
     "Lamp Post (SW)": (-2251.621, -2926.287, 50.000),  # via Prison
@@ -3589,42 +3589,42 @@ landmarks = {
     "Naval Air Station Key West (Control Tower)": (-5716.593, -6602.387, 29.784),  # d=1.025 via Key Lento & Grassrivers Postcard (X)
     "Naval Air Station Key West (Radar Tower)": (-5559.494, -6469.937, 27.670),  # d=0.692 via Key Lento & Grassrivers Postcard (X)
     "419 NE 4th Ave (W)": (-415.516, 1205.149, 32.586),  # d=3.549 via Vice City Postcard & Vice City 03 (Basketball)
-    "New Bahia Honda Bridge (1B)": (-4903.027, -7202.903, 0.000),  # via Keys
-    "New Bahia Honda Bridge (2B)": (-4923.905, -7196.554, 0.000),  # via Keys
-    "New Bahia Honda Bridge (3B)": (-4942.226, -7190.237, 0.000),  # via Keys
-    "New Bahia Honda Bridge (4B)": (-4961.922, -7183.966, 0.000),  # via Keys
-    "New Bahia Honda Bridge (5B)": (-4979.228, -7177.704, 0.000),  # via Keys
-    "New Bahia Honda Bridge (6B)": (-4996.065, -7171.612, 0.000),  # via Keys
-    "New Bahia Honda Bridge (7B)": (-5015.078, -7165.245, 0.000),  # via Keys
-    "New Bahia Honda Bridge (8B)": (-5034.343, -7159.029, 0.000),  # via Keys
-    "New Bahia Honda Bridge (9B)": (-5053.034, -7152.726, 0.000),  # via Keys
-    "New Bahia Honda Bridge (10B)": (-5071.926, -7146.586, 0.000),  # via Keys
-    "New Bahia Honda Bridge (11B)": (-5090.248, -7140.369, 0.000),  # via Keys
-    "New Bahia Honda Bridge (12B)": (-5109.680, -7132.418, 0.000),  # via Keys
-    "New Bahia Honda Bridge (13B)": (-5127.566, -7126.337, 0.000),  # via Keys
-    "New Bahia Honda Bridge (14B)": (-5144.916, -7120.189, 0.000),  # via Keys
-    "New Bahia Honda Bridge (15B)": (-5162.416, -7113.967, 0.000),  # via Keys
-    "New Bahia Honda Bridge (16B)": (-5181.907, -7107.923, 0.000),  # via Keys
-    "New Bahia Honda Bridge (17B)": (-5198.849, -7102.103, 0.000),  # via Keys
-    "New Bahia Honda Bridge (18B)": (-5217.679, -7095.993, 0.000),  # via Keys
-    "New Bahia Honda Bridge (19B)": (-5235.255, -7090.098, 0.000),  # via Keys
-    "New Bahia Honda Bridge (20B)": (-5255.603, -7083.761, 0.000),  # via Keys
-    "New Bahia Honda Bridge (21B)": (-5271.410, -7077.821, 0.000),  # via Keys
-    "New Bahia Honda Bridge (22B)": (-5289.796, -7071.941, 0.000),  # via Keys
-    "New Bahia Honda Bridge (23B)": (-5307.533, -7065.843, 0.000),  # via Keys
-    "New Bahia Honda Bridge (27B)": (-5378.043, -7044.018, 0.000),  # via Keys
-    "New Bahia Honda Bridge (28B)": (-5395.925, -7038.022, 0.000),  # via Keys
-    "New Bahia Honda Bridge (29B)": (-5413.821, -7032.343, 0.000),  # via Keys
-    "New Bahia Honda Bridge (30B)": (-5431.724, -7026.594, 0.000),  # via Keys
-    "New Bahia Honda Bridge (31B)": (-5448.891, -7020.723, 0.000),  # via Keys
-    "New Bahia Honda Bridge (32B)": (-5465.944, -7015.545, 0.000),  # via Keys
-    "New Bahia Honda Bridge (33B)": (-5485.355, -7011.350, 0.000),  # via Keys
-    "New Bahia Honda Bridge (34B)": (-5501.332, -7007.564, 0.000),  # via Keys
-    "New Bahia Honda Bridge (35B)": (-5519.952, -7005.112, 0.000),  # via Keys
-    "New Bahia Honda Bridge (36B)": (-5538.083, -7003.361, 0.000),  # via Keys
-    "New Bahia Honda Bridge (37B)": (-5560.191, -7003.448, 0.000),  # via Keys
-    "New Bahia Honda Bridge (38B)": (-5577.544, -7003.155, 0.000),  # via Keys
-    "New Bahia Honda Bridge (39B)": (-5591.257, -7002.582, 0.000),  # via Keys
+    "New Bahia Honda Bridge (1B)": (-4903.027, -7202.903, 10.000),  # via Keys
+    "New Bahia Honda Bridge (2B)": (-4923.905, -7196.554, 10.000),  # via Keys
+    "New Bahia Honda Bridge (3B)": (-4942.226, -7190.237, 10.000),  # via Keys
+    "New Bahia Honda Bridge (4B)": (-4961.922, -7183.966, 10.000),  # via Keys
+    "New Bahia Honda Bridge (5B)": (-4979.228, -7177.704, 10.000),  # via Keys
+    "New Bahia Honda Bridge (6B)": (-4996.065, -7171.612, 10.000),  # via Keys
+    "New Bahia Honda Bridge (7B)": (-5015.078, -7165.245, 10.000),  # via Keys
+    "New Bahia Honda Bridge (8B)": (-5034.343, -7159.029, 10.000),  # via Keys
+    "New Bahia Honda Bridge (9B)": (-5053.034, -7152.726, 10.000),  # via Keys
+    "New Bahia Honda Bridge (10B)": (-5071.926, -7146.586, 10.000),  # via Keys
+    "New Bahia Honda Bridge (11B)": (-5090.248, -7140.369, 10.000),  # via Keys
+    "New Bahia Honda Bridge (12B)": (-5109.680, -7132.418, 10.000),  # via Keys
+    "New Bahia Honda Bridge (13B)": (-5127.566, -7126.337, 10.000),  # via Keys
+    "New Bahia Honda Bridge (14B)": (-5144.916, -7120.189, 10.000),  # via Keys
+    "New Bahia Honda Bridge (15B)": (-5162.416, -7113.967, 10.000),  # via Keys
+    "New Bahia Honda Bridge (16B)": (-5181.907, -7107.923, 10.000),  # via Keys
+    "New Bahia Honda Bridge (17B)": (-5198.849, -7102.103, 10.000),  # via Keys
+    "New Bahia Honda Bridge (18B)": (-5217.679, -7095.993, 10.000),  # via Keys
+    "New Bahia Honda Bridge (19B)": (-5235.255, -7090.098, 10.000),  # via Keys
+    "New Bahia Honda Bridge (20B)": (-5255.603, -7083.761, 10.000),  # via Keys
+    "New Bahia Honda Bridge (21B)": (-5271.410, -7077.821, 10.000),  # via Keys
+    "New Bahia Honda Bridge (22B)": (-5289.796, -7071.941, 10.000),  # via Keys
+    "New Bahia Honda Bridge (23B)": (-5307.533, -7065.843, 10.000),  # via Keys
+    "New Bahia Honda Bridge (27B)": (-5378.043, -7044.018, 10.000),  # via Keys
+    "New Bahia Honda Bridge (28B)": (-5395.925, -7038.022, 10.000),  # via Keys
+    "New Bahia Honda Bridge (29B)": (-5413.821, -7032.343, 10.000),  # via Keys
+    "New Bahia Honda Bridge (30B)": (-5431.724, -7026.594, 10.000),  # via Keys
+    "New Bahia Honda Bridge (31B)": (-5448.891, -7020.723, 10.000),  # via Keys
+    "New Bahia Honda Bridge (32B)": (-5465.944, -7015.545, 10.000),  # via Keys
+    "New Bahia Honda Bridge (33B)": (-5485.355, -7011.350, 10.000),  # via Keys
+    "New Bahia Honda Bridge (34B)": (-5501.332, -7007.564, 10.000),  # via Keys
+    "New Bahia Honda Bridge (35B)": (-5519.952, -7005.112, 10.000),  # via Keys
+    "New Bahia Honda Bridge (36B)": (-5538.083, -7003.361, 10.000),  # via Keys
+    "New Bahia Honda Bridge (37B)": (-5560.191, -7003.448, 10.000),  # via Keys
+    "New Bahia Honda Bridge (38B)": (-5577.544, -7003.155, 10.000),  # via Keys
+    "New Bahia Honda Bridge (39B)": (-5591.257, -7002.582, 10.000),  # via Keys
     "New Foundation Church": (-6641.757, 3857.512, 24.802),  # d=5.501 via Chase (2) (A) & Port Gellhorn Postcard (X)
     "New Wave Condominiums": (-324.871, 1413.982, 113.718),  # d=1.380 via Vice City Postcard & Vice City 03 (Basketball)
     "New World Center": (1671.252, 1439.278, 43.897),  # d=2.414 via Venetian Islands & Vice City 03 (Basketball)
@@ -3779,27 +3779,27 @@ landmarks = {
     "Seven Mile Bridge (3T)": (-3573.183, -6891.476, 3.530),  # d=0.159 via Leonida Keys 01 (Airplane) (X) & Ocean near Keys (N)
     "Seven Mile Bridge (6T)": (-3638.226, -6931.138, 8.171),  # d=0.226 via Leonida Keys 01 (Airplane) (X) & Ocean near Keys (N)
     "Seven Mile Bridge (1B)": (-3544.086, -6880.461, 10.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (1B)": (-3544.133, -6878.830, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (2B)": (-3568.787, -6893.723, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (3B)": (-3588.003, -6905.943, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (4B)": (-3610.538, -6919.542, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (5B)": (-3630.550, -6931.209, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (6B)": (-3652.540, -6944.888, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (7B)": (-3672.367, -6956.519, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (8B)": (-3694.086, -6969.742, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (9B)": (-3714.949, -6982.126, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (10B)": (-3735.018, -6993.730, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (11B)": (-3756.485, -7006.609, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (12B)": (-3779.427, -7020.190, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (13B)": (-3800.877, -7033.170, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (14B)": (-3821.329, -7045.269, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (15B)": (-3841.046, -7056.399, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (16B)": (-3862.137, -7069.195, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (17B)": (-3882.326, -7080.935, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (18B)": (-3902.278, -7092.480, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (19B)": (-3926.970, -7107.739, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (20B)": (-3947.166, -7119.751, 0.000),  # via Leonida Keys 01 (Airplane) (X)
-    "Seven Mile Bridge (21B)": (-3967.567, -7131.757, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (1B)": (-3544.133, -6878.830, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (2B)": (-3568.787, -6893.723, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (3B)": (-3588.003, -6905.943, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (4B)": (-3610.538, -6919.542, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (5B)": (-3630.550, -6931.209, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (6B)": (-3652.540, -6944.888, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (7B)": (-3672.367, -6956.519, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (8B)": (-3694.086, -6969.742, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (9B)": (-3714.949, -6982.126, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (10B)": (-3735.018, -6993.730, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (11B)": (-3756.485, -7006.609, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (12B)": (-3779.427, -7020.190, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (13B)": (-3800.877, -7033.170, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (14B)": (-3821.329, -7045.269, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (15B)": (-3841.046, -7056.399, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (16B)": (-3862.137, -7069.195, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (17B)": (-3882.326, -7080.935, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (18B)": (-3902.278, -7092.480, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (19B)": (-3926.970, -7107.739, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (20B)": (-3947.166, -7119.751, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (21B)": (-3967.567, -7131.757, 10.000),  # via Leonida Keys 01 (Airplane) (X)
     "Sherry Frontenac Oceanfront Hotel (N)": (1478.578, 2558.613, 46.593),  # d=3.888 via Highway (NE) & Jet Ski
     "Sherry Frontenac Oceanfront Hotel (S)": (1507.934, 2531.859, 46.344),  # d=4.174 via Highway (NE) & Jet Ski
     "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
