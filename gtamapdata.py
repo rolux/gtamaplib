@@ -2872,7 +2872,7 @@ pixels = {
         ((1501, 944.5), "PTCC (2) (BB2)"),
         ((1515, 1001), "Bay (J)"),
         ((1569, 1002), "Bay (K)"),
-        ((1659, 985), "1701 US-98 (NW)"),
+        ((1660, 986), "El Governor Motel (S)"),
         ((1706, 889), "Port of Tampa Container Crane (3)"),
         ((1706, 939), "PTCC (3) (BB2)"),
         ((1732, 1005), "Bay (L)"),
@@ -2892,7 +2892,7 @@ pixels = {
         ((2062, 898), "FEC Srauss Trunnion Bascule Bridge (TW)"),
         ((2091, 898), "FEC Srauss Trunnion Bascule Bridge (TE)"),
         ((2144, 958), "Unknown Building (North Port Gellhorn) (E)"),
-        ((2199, 985), "1701 US-98 (SE)"),
+        ((2199, 985), "El Governor Motel (E)"),
         ((2249, 965), "Unknown Building (North Port Gellhorn) (T)"),
         ((2269, 1009), "Bay (N)"),
         ((2285, 949), "Vertex Energy Mobile Refinery (1)"),
@@ -4076,7 +4076,7 @@ maps = {
     #"rickrick": (2, 2.500, (5000, 7500)),
     "rickrick": (3, 1.000, (3000, -500)),
     # "yanis": (7, 1.000, (16341, 12139)),
-    "yanis": (12, 1.000, (16500, 12000)),
+    "yanis": (13, 1.000, (16500, 12000)),
     #"neutralstate": (0, 1.000, (1000, 4500)),
 }
 maps = {
