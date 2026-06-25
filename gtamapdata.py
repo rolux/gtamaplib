@@ -276,6 +276,30 @@ cameras = {
     "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
     "[S3/1] Port Vice City (A)": (None, (1443.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [1]"),
     "[S3/1] Port Vice City (B)": (None, (1605.000, -122.000, 78.179), (103.156, -3.000, 0.000), (75.200, 46.843), (3840, 2160), "Port Vice City [140]"),
+    "[S3/2] Green Sports Car": (None, (1530.000, 2970.000, 0.500), (150.000, -4.000, 0.000), (60.000, None), (3840, 2160), "Green Sports Car [1]"),
+    "[S3/4] Ultimate Edition 02 (Green Sports Car)": (None, (-500.00, -1750.000, 1.000), (20.000, 10.000, 0.000), (30.000, None), (3840, 2160), "Ultimate Edition 02 [1]"),
+    "[S3/5] '95 Grotti Cheetah 01 (Tower)": None,
+    "[S3/6] '95 Grotti Cheetah 02 (Street)": None,
+    "[S3/8] '95 Grotti Cheetah 04 (Garage)": (None, (-30.000, -1080.000, 15.000), (91.750, 0.000, 0.000), (43.000, None), (3840, 2160), "'95 Grotti Cheetah 04 [1]"),
+    "[S3/12] Vice City Style 01 (Couch)": None,
+    "[S3/15] Vice City Style 04 (Gallery)": None,
+    "[S3/17] Jason's Safehouse Vehicles (X)": (None, (-2340.000, -5550.000, 4.000), (37.500, -2.000, 0.000), (60.000, None), (3840, 2160), "Jason's Safehouse Vehicles [1]"),
+    "[S3/19] Crest Kayak": (None, (-2626.00, -5700.000, 0.500), (130.000, -6.500, 4.500), (60.000, None), (3840, 2160), "Crest Kayak [1]"),
+    "[S3/20] Ganado Retro Build": None,
+    "[S3/23] Rideout Customs Mod Shop 03 (Garage)": None,
+    "[S3/24] Sara's Unisex Salon 01 (Exterior)": None,
+    "[S3/27] Shitzu Squalo 01 (Bay)": (None, (250.000, 625.000, 3.000), (135.000, 2.000, 2.000), (60.000, None), (3840, 2160), "Shitzu Squalo 01 [1]"),
+    "[S3/28] Shitzu Squalo 02 (Coast)": None,
+    "[S3/31] Stock 305 Clothing Store 01 (Van)": (None, (-350.000, 1750.000, 5.500), (315.000, 20.000, 10.000), (60.000, None), (3840, 2160), "Stock 305 Clothing Store 01 [1]"),
+    "[S3/33] Stock 305 Clothing Store 03 (Entrance)": None,
+    "[S3/35] '67 Vapid Dominator Buggy 01 (Dirt Road)": None,
+    "[S3/38] '67 Vapid Dominator Buggy 04 (Garage)": None,
+    "[S3/39] Electric Fang Tattoo 01 (Exterior)": None,
+    "[S3/46] Goodtime Gear": None,
+    "[S3/48] Classic Car Collection 01 (Wyman's World)": None,
+    "[S3/54] Vintage Vice City Pack 01 (Ocean View Hotel)": None,
+    "[S3/55] Vintage Vice City Pack 02 (Port)": (None, (1000.000, -1250.000, 0.500), (340.000, 3.000, 0.000), (50.000, None), (3840, 2160), "Vintage Vice City Pack 02 [1]"),
+    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-425.000, 850.000, 180.000), (140.000, -10.000, 0.000), (45.000, None), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
 }
 
 cameras = {
@@ -3782,6 +3806,12 @@ landmarks = {
     "536 Richard Jackson Blvd (RNE)": (-6179.597, 4526.316, 16.948),  # d=0.030 via Diner (NW) & Diner (N)
     "536 Richard Jackson Blvd (RSE)": (-6185.783, 4513.381, 16.996),  # d=0.015 via Diner (W) (A) & Diner (NW)
     "536 Richard Jackson Blvd (RSW)": (-6203.031, 4521.820, 16.955),  # d=0.006 via Diner (W) (A) & Diner (NW)
+    "Rickenbacker Causeway Bridge (B1)": (-881.925, -1730.785, 0.000),  # via Port Vice City (A)
+    "Rickenbacker Causeway Bridge (B2)": (-846.923, -1731.263, 0.000),  # via Port Vice City (A)
+    "Rickenbacker Causeway Bridge (B3)": (-807.893, -1751.931, 0.000),  # via Port Vice City (A)
+    "Rickenbacker Causeway Bridge (B4)": (-740.564, -1759.537, 0.000),  # via Port Vice City (A)
+    "Rickenbacker Causeway Bridge (B5)": (-708.190, -1762.963, 0.000),  # via Port Vice City (A)
+    "Rickenbacker Causeway Bridge (B6)": (-677.626, -1762.086, 0.000),  # via Port Vice City (A)
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
     "The Ritz-Carlton Bal Harbour": (1370.400, 2767.526, 100.991),  # d=1.590 via Beach & Highway (NE)
