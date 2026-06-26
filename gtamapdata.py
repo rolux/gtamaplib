@@ -276,11 +276,11 @@ cameras = {
     "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
     "[S3/1] Port Vice City (A)": (None, (1443.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [1]"),
     "[S3/1] Port Vice City (B)": (None, (1605.000, -122.000, 78.179), (103.156, -3.000, 0.000), (75.200, 46.843), (3840, 2160), "Port Vice City [140]"),
-    "[S3/2] Green Sports Car": (None, (1530.000, 2970.000, 0.500), (150.000, -4.000, 0.000), (60.000, None), (3840, 2160), "Green Sports Car [1]"),
+    "[S3/2] Green Sports Car": (None, (1530.000, 2970.000, 0.500), (151.000, -4.000, 0.000), (57.000, None), (3840, 2160), "Green Sports Car [1]"),
     "[S3/4] Ultimate Edition 02 (Green Sports Car)": (None, (-500.00, -1750.000, 1.000), (20.000, 10.000, 0.000), (30.000, None), (3840, 2160), "Ultimate Edition 02 [1]"),
     "[S3/5] '95 Grotti Cheetah 01 (Tower)": None,
     "[S3/6] '95 Grotti Cheetah 02 (Street)": None,
-    "[S3/8] '95 Grotti Cheetah 04 (Garage)": (None, (-30.000, -1080.000, 15.000), (91.750, 0.000, 0.000), (43.000, None), (3840, 2160), "'95 Grotti Cheetah 04 [1]"),
+    "[S3/8] '95 Grotti Cheetah 04 (Garage)": (None, (-17.000, -1113.000, 55.551), (89.592, -3.400, 0.000), (42.600, 24.739), (3840, 2160), "'95 Grotti Cheetah 04 [1]"),
     "[S3/12] Vice City Style 01 (Couch)": None,
     "[S3/15] Vice City Style 04 (Gallery)": None,
     "[S3/17] Jason's Safehouse Vehicles (X)": (None, (-2340.000, -5550.000, 4.000), (37.500, -2.000, 0.000), (60.000, None), (3840, 2160), "Jason's Safehouse Vehicles [1]"),
@@ -288,7 +288,7 @@ cameras = {
     "[S3/20] Ganado Retro Build": None,
     "[S3/23] Rideout Customs Mod Shop 03 (Garage)": None,
     "[S3/24] Sara's Unisex Salon 01 (Exterior)": None,
-    "[S3/27] Shitzu Squalo 01 (Bay)": (None, (357.000, 770.000, 3.973), (138.864, 2.500, 2.000), (45.900, 26.795), (3840, 2160), "Shitzu Squalo 01 [1]"),
+    "[S3/27] Shitzu Squalo 01 (Bay)": (None, (381.000, 787.000, 3.684), (138.679, 2.500, 2.000), (45.200, 26.356), (3840, 2160), "Shitzu Squalo 01 [1]"),
     "[S3/28] Shitzu Squalo 02 (Coast)": None,
     "[S3/31] Stock 305 Clothing Store 01 (Van)": (None, (-350.000, 1750.000, 5.500), (315.000, 20.000, 10.000), (60.000, None), (3840, 2160), "Stock 305 Clothing Store 01 [1]"),
     "[S3/33] Stock 305 Clothing Store 03 (Entrance)": None,
@@ -298,8 +298,8 @@ cameras = {
     "[S3/46] Goodtime Gear": None,
     "[S3/48] Classic Car Collection 01 (Wyman's World)": None,
     "[S3/54] Vintage Vice City Pack 01 (Ocean View Hotel)": None,
-    "[S3/55] Vintage Vice City Pack 02 (Port)": (None, (1000.000, -1250.000, 0.500), (340.000, 3.000, 0.000), (50.000, None), (3840, 2160), "Vintage Vice City Pack 02 [1]"),
-    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-425.000, 850.000, 180.000), (140.000, -10.000, 0.000), (45.000, None), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
+    "[S3/55] Vintage Vice City Pack 02 (Port)": (None, (919.000, -1187.000, 0.135), (341.882, 3.000, 0.000), (42.200, 24.492), (3840, 2160), "Vintage Vice City Pack 02 [1]"),
+    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-425.000, 850.000, 180.000), (146.558, -9.740, 0.000), (45.000, 26.231), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
 }
 
 cameras = {
@@ -874,7 +874,7 @@ pixels = {
     ],
     "[L1/22] Metro (SE) (B)": [
         ((47, 198), "Seybold Pointe (SE)"),
-        ((55, 122), "Brickell Arch"),
+        ((55, 122), "Brickell Arch (W)"),
         ((175, 160), "Nine at Mary Brickell Village (A)"),
         ((666, 157), "Infinity at Brickell"),
         ((694, 162), "Infinity at Brickell (SW)"),
@@ -2511,6 +2511,7 @@ pixels = {
         ((2957, 608), "Turkey Point Nuclear Power Station (N)"),
         ((3012, 636), "Red Billboard (Hamlet)"),
         ((3034, 608), "Turkey Point Nuclear Power Station (S)"),
+        ((3125.5, 598), "Unknown Mast (South Leonida) (2)"),
         ((3216, 580), "Turkey Point Nuclear Power Station (1)"),
         ((3265, 580), "Turkey Point Nuclear Power Station (2)"),
         ((3316, 580), "Turkey Point Nuclear Power Station (3)"),
@@ -3166,7 +3167,8 @@ pixels = {
     ],
     "[S3/8] '95 Grotti Cheetah 04 (Garage)": [
         ((516, 205.5), "1450 Brickell Ave"),
-        ((1036, 179.5), "Four Seasons Hotel Miami (?NW)"),
+        ((638, 256), "Four Seasons Hotel Miami (HB28SE)"),
+        ((1036, 179.5), "Four Seasons Hotel Miami (32NW)"),
         ((1083, 341), "One Broadway"),
         ((1779.5, 50.5), "Brickell Arch"),
     ],
@@ -3449,10 +3451,14 @@ lines = {
 
 landmarks = {
     "12th St Lifeguard Tower": (2222.684, 1031.395, 6.101),  # d=0.125 via Beach & Vice Beach (A)
+    "50 Biscayne Blvd": (-436.661, -230.842, 148.985),  # d=3.186 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
+    "100 Biscayne Blvd (NE)": (-431.901, -115.233, 94.730),  # d=0.086 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
+    "100 Biscayne Blvd (SE)": (-425.683, -169.626, 94.809),  # d=0.134 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "252 N Tyndall Pkwy (NE)": (-6192.707, 4415.573, 23.129),  # d=0.072 via Diner (S) & Easy Inn
     "252 N Tyndall Pkwy (NW)": (-6197.491, 4416.217, 23.281),  # d=0.085 via Diner (S) & Easy Inn
     "1111 Lincoln Rd (NW)": (1447.469, 1340.894, 55.309),  # d=7.026 via Rooftop Party & Vice City 03 (Basketball)
     "1111 Lincoln Rd (SE)": (1490.945, 1304.196, 55.896),  # d=5.984 via Rooftop Party & Vice City 03 (Basketball)
+    "1450 Brickell Ave": (-971.447, -1410.176, 173.844),  # d=1.063 via Motorboats (B) & Metro (SE) (C)
     "1800 Club": (-336.786, 1029.407, 161.576),  # d=0.892 via Vice City Postcard & Vice City 03 (Basketball)
     "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     "Akoya Condominium": (1455.271, 2614.567, 145.644),  # d=4.024 via Venetian Islands & Highway (NE)
@@ -3591,9 +3597,13 @@ landmarks = {
     "Flamingo South Beach (TSE)": (1355.650, 927.329, 112.979),  # d=0.298 via Vice Beach (B) & Alley (W)
     "Flamingo South Beach (TSW)": (890.154, 974.121, 101.390),  # d=0.112 via Venetian Islands & Sidewalk (Jason) (E)
     "The Floridian": (1260.858, 409.236, 96.990),  # d=1.074 via Vice Beach (B) & Sidewalk (Jason) (E)
+    "Four Seasons Hotel Miami (32NE)": (-800.000, -1273.000, 156.902),  # Northeast Corner 32nd Floor
+    "Four Seasons Hotel Miami (32NW)": (-848.707, -1254.789, 156.902),  # Northwest Corner 32nd Floor
+    "Four Seasons Hotel Miami (40NE)": (-800.000, -1273.000, 189.137),  # Northeast Corner 40th Floor
     "Four Seasons Hotel Miami (BE)": (-814.289, -1306.504, 263.568),  # Handlebar (SE)
     "Four Seasons Hotel Miami (BW)": (-859.904, -1289.449, 263.568),  # Handlebar (SW)
     "Four Seasons Hotel Miami (E)": (-817.997, -1316.422, 258.306),  # Penthouse (SE)
+    "Four Seasons Hotel Miami (HB28SE)": (-816.865, -1313.394, 140.784),  # East Handlebar 28th Floor
     "Four Seasons Hotel Miami (NE)": (-802.124, -1273.968, 258.306),  # Penthouse (NE)
     "Four Seasons Hotel Miami (NW)": (-847.739, -1256.913, 258.306),  # Penthouse (NW)
     "Four Seasons Hotel Miami (SE)": (-817.997, -1316.422, 253.608),  # Rooftop (SE)
@@ -3957,6 +3967,7 @@ landmarks = {
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
     "Southeast Financial Center": (-476.917, -463.168, 250.123),  # d=0.745 via Vice City Postcard & Vice Beach (B)
+    "Southeast Financial Center (A)": (-468.375, -464.192, 278.727),  # d=1.973 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "Southeast Financial Center (D)": (-416.434, -441.105, 243.570),  # d=0.807 via Vice Beach (B) & Vice City 03 (Basketball)
     "Springfield Community Church (CW)": (-6320.702, 4068.742, 30.166),  # d=2.055 via Car Wash & Gas Station (Lucia)
     "Squalo Billboard (TN)": (-3074.620, -6508.099, 25.070),  # d=0.125 via Key Lento & Leonida Keys Postcard (X)
