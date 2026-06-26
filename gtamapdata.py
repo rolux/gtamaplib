@@ -284,7 +284,7 @@ cameras = {
     "[S3/12] Vice City Style 01 (Couch)": None,
     "[S3/15] Vice City Style 04 (Gallery)": None,
     "[S3/17] Jason's Safehouse Vehicles (X)": (None, (-2340.000, -5550.000, 4.000), (37.500, -2.000, 0.000), (60.000, None), (3840, 2160), "Jason's Safehouse Vehicles [1]"),
-    "[S3/19] Crest Kayak": (None, (-2626.00, -5700.000, 0.500), (130.000, -6.500, 4.500), (60.000, None), (3840, 2160), "Crest Kayak [1]"),
+    "[S3/19] Crest Kayak": (None, (-2395.000, -5525.000, 0.452), (130.230, -4.300, 4.500), (42.000, 24.369), (3840, 2160), "Crest Kayak [1]"),
     "[S3/20] Ganado Retro Build": None,
     "[S3/23] Rideout Customs Mod Shop 03 (Garage)": None,
     "[S3/24] Sara's Unisex Salon 01 (Exterior)": None,
@@ -3246,6 +3246,16 @@ pixels = {
     "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": [
         ((232, 257), "Vizcayne South Condominium (NW)"),
         ((428, 333), "Miami Tower"),
+        ((2706, 960.5), "Vice River (A)"),
+        ((2985, 985.5), "Vice River (B)"),
+        ((3106.5, 994), "Vice River (D)"),
+        ((3106.5, 1029), "Vice River (C)"),
+        ((3528.5, 1053), "Vice River (E)"),
+        ((3529, 1018.5), "Vice River (F)"),
+        ((3718.5, 1090.5), "Vice River (G)"),
+        ((3719, 1050), "Vice River (H)"),
+        ((3840, 1048.5), "Vice River (J)"),
+        ((3840, 1087), "Vice River (I)"),
     ],
 }
 
@@ -3964,6 +3974,7 @@ landmarks = {
     "Seven Mile Bridge (19B)": (-3926.970, -7107.739, 10.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (20B)": (-3947.166, -7119.751, 10.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (21B)": (-3967.567, -7131.757, 10.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Seven Mile Bridge (C)": (-3803.857, -7025.446, 19.680),  # d=1.138 via Keys & Leonida Keys 01 (Airplane) (X)
     "Sherry Frontenac Oceanfront Hotel (N)": (1478.578, 2558.613, 46.593),  # d=3.888 via Highway (NE) & Jet Ski
     "Sherry Frontenac Oceanfront Hotel (S)": (1507.934, 2531.859, 46.344),  # d=4.174 via Highway (NE) & Jet Ski
     "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
@@ -4045,6 +4056,16 @@ landmarks = {
     "1000 Venetian Way (SW)": (328.830, 1107.149, 68.691),  # d=2.117 via Vice City Postcard & Vice Beach (B)
     "Vice City Sign (V2)": (-3693.643, -460.939, 27.773),  # d=0.018 via Vice City Sign & Vice City 01 (Vice City Sign)
     "Vice City Sign (E3)": (-3707.234, -490.362, 27.630),  # d=0.001 via Vice City Sign & Vice City 01 (Vice City Sign)
+    "Vice River (A)": (-1281.155, -60.535, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (B)": (-1310.001, 13.274, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (C)": (-1281.479, 80.209, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (D)": (-1325.036, 41.001, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (E)": (-1337.135, 160.843, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (F)": (-1381.356, 127.340, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (G)": (-1329.195, 218.036, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (H)": (-1378.534, 183.336, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (I)": (-1356.204, 230.559, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (J)": (-1404.464, 198.075, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     "Vizcayne North Condominium (NE)": (-521.236, 155.073, 177.413),  # d=0.124 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne North Condominium (SE)": (-529.451, 97.516, 178.670),  # d=0.196 via Vice City Postcard & Vice City 03 (Basketball)
     "W South Beach (BNW)": (1940.825, 1628.012, 23.937),  # d=0.048 via Vice City 03 (Basketball) & Rooftop Party
