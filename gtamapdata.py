@@ -277,10 +277,10 @@ cameras = {
     "[S3/1] Port Vice City (A)": (None, (1443.000, -137.000, 79.910), (103.675, -2.200, 0.000), (74.300, 46.166), (3840, 2160), "Port Vice City [1]"),
     "[S3/1] Port Vice City (B)": (None, (1605.000, -122.000, 78.179), (103.156, -3.000, 0.000), (75.200, 46.843), (3840, 2160), "Port Vice City [140]"),
     "[S3/2] Green Sports Car": (None, (1530.000, 2970.000, 0.500), (151.000, -4.000, 0.000), (57.000, None), (3840, 2160), "Green Sports Car [1]"),
-    "[S3/4] Ultimate Edition 02 (Green Sports Car)": (None, (-500.00, -1750.000, 1.000), (20.000, 10.000, 0.000), (30.000, None), (3840, 2160), "Ultimate Edition 02 [1]"),
+    "[S3/4] Ultimate Edition 02 (Green Sports Car)": (None, (-469.000, -1674.000, 1.798), (31.401, 10.500, 0.000), (20.000, 11.329), (3840, 2160), "Ultimate Edition 02 [1]"),
     "[S3/5] '95 Grotti Cheetah 01 (Tower)": None,
     "[S3/6] '95 Grotti Cheetah 02 (Street)": None,
-    "[S3/8] '95 Grotti Cheetah 04 (Garage)": (None, (-17.000, -1113.000, 55.551), (89.592, -3.400, 0.000), (42.600, 24.739), (3840, 2160), "'95 Grotti Cheetah 04 [1]"),
+    "[S3/8] '95 Grotti Cheetah 04 (Garage)": (None, (-53.000, -964.000, 30.476), (99.701, -2.000, 0.000), (43.600, 25.359), (3840, 2160), "'95 Grotti Cheetah 04 [1]"),
     "[S3/12] Vice City Style 01 (Couch)": None,
     "[S3/15] Vice City Style 04 (Gallery)": None,
     "[S3/17] Jason's Safehouse Vehicles (X)": (None, (-2340.000, -5550.000, 4.000), (37.500, -2.000, 0.000), (60.000, None), (3840, 2160), "Jason's Safehouse Vehicles [1]"),
@@ -299,7 +299,7 @@ cameras = {
     "[S3/48] Classic Car Collection 01 (Wyman's World)": None,
     "[S3/54] Vintage Vice City Pack 01 (Ocean View Hotel)": None,
     "[S3/55] Vintage Vice City Pack 02 (Port)": (None, (919.000, -1187.000, 0.135), (341.882, 3.000, 0.000), (42.200, 24.492), (3840, 2160), "Vintage Vice City Pack 02 [1]"),
-    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-425.000, 850.000, 180.000), (146.558, -9.740, 0.000), (45.000, 26.231), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
+    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-415.000, 850.000, 180.000), (146.157, -9.739, 0.000), (45.000, 26.231), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
 }
 
 cameras = {
@@ -3162,11 +3162,15 @@ pixels = {
         ((826.5, 665.5), "Akoya Condominium (B)"),
     ],
     "[S3/4] Ultimate Edition 02 (Green Sports Car)": [
+        ((371, 16), "Four Seasons Hotel Miami (NEI)"),
+        ((400, 620), "Four Seasons Hotel Miami (NEO)"),
         ((1771, 234), "Brickell Arch"),
         ((2169, 145), "Brickell Arch (E)"),
+        ((3452, 592), "600 Brickell (SE)"),
     ],
     "[S3/8] '95 Grotti Cheetah 04 (Garage)": [
         ((516, 205.5), "1450 Brickell Ave"),
+        ((824, 136), "Four Seasons Hotel Miami (32NE)"),
         ((638, 256), "Four Seasons Hotel Miami (HB28SE)"),
         ((1036, 179.5), "Four Seasons Hotel Miami (32NW)"),
         ((1083, 341), "One Broadway"),
@@ -3451,14 +3455,6 @@ lines = {
 
 landmarks = {
     "12th St Lifeguard Tower": (2222.684, 1031.395, 6.101),  # d=0.125 via Beach & Vice Beach (A)
-    "50 Biscayne Blvd": (-436.661, -230.842, 148.985),  # d=3.186 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
-    "100 Biscayne Blvd (NE)": (-431.901, -115.233, 94.730),  # d=0.086 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
-    "100 Biscayne Blvd (SE)": (-425.683, -169.626, 94.809),  # d=0.134 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
-    "252 N Tyndall Pkwy (NE)": (-6192.707, 4415.573, 23.129),  # d=0.072 via Diner (S) & Easy Inn
-    "252 N Tyndall Pkwy (NW)": (-6197.491, 4416.217, 23.281),  # d=0.085 via Diner (S) & Easy Inn
-    "1111 Lincoln Rd (NW)": (1447.469, 1340.894, 55.309),  # d=7.026 via Rooftop Party & Vice City 03 (Basketball)
-    "1111 Lincoln Rd (SE)": (1490.945, 1304.196, 55.896),  # d=5.984 via Rooftop Party & Vice City 03 (Basketball)
-    "1450 Brickell Ave": (-971.447, -1410.176, 173.844),  # d=1.063 via Motorboats (B) & Metro (SE) (C)
     "1800 Club": (-336.786, 1029.407, 161.576),  # d=0.892 via Vice City Postcard & Vice City 03 (Basketball)
     "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     "Akoya Condominium": (1455.271, 2614.567, 145.644),  # d=4.024 via Venetian Islands & Highway (NE)
@@ -3527,13 +3523,18 @@ landmarks = {
     "Billboard with Irregular Shape": (-2935.798, 4375.849, 46.420),  # via Ambrosia 02 (Panorama)
     "Billboard with Oval Motif #1": (-3031.588, 4347.083, 55.169),  # via Ambrosia 02 (Panorama)
     "22 Biscayne Bay (SE)": (-338.986, 1346.432, 72.845),  # d=0.132 via Vice City Postcard & Vice City 03 (Basketball)
+    "50 Biscayne Blvd": (-436.661, -230.842, 148.985),  # d=3.186 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "50 Biscayne Blvd (SE)": (-407.635, -239.477, 146.292),  # d=1.095 via Vice City 03 (Basketball) & Skyline
+    "100 Biscayne Blvd (NE)": (-431.901, -115.233, 94.730),  # d=0.086 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
+    "100 Biscayne Blvd (SE)": (-425.683, -169.626, 94.809),  # d=0.134 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "Big Cat Cage Roof": (-716.491, 1324.161, 13.204),  # via Sidewalk (Jason) (S)
     "Biscayne Island (E)": (253.227, 1080.161, 0.000),  # via Venetian Islands
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Blue Billboard (Key Lento)": (-3436.671, -6778.410, 23.585),  # d=0.129 via Leonida Keys 01 (Airplane) (X) & Ocean near Keys (N)
     "Blue Diamond": (1873.388, 2080.805, 146.237),  # d=2.661 via Venetian Islands & Jet Ski
     "Box in Backyard": (-1954.600, -1959.000, 4.000),  # Gizmo
+    "Brickell Arch (E)": (-774.178, -1146.359, 169.706),  # d=0.427 via Raul Bautista 03 (Motorboat) & Port Vice City (A)
+    "1450 Brickell Ave": (-971.447, -1410.176, 173.844),  # d=1.063 via Motorboats (B) & Metro (SE) (C)
     "Bridge Island (W)": (-2380.989, -5074.134, 1.244),  # d=5.207 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Broken Keys Bridge (1B)": (-1618.942, -4594.101, 0.000),  # via Leonida Keys Postcard (X)
     "Broken Keys Bridge (2B)": (-1611.314, -4607.810, 0.000),  # via Leonida Keys Postcard (X)
@@ -3702,6 +3703,8 @@ landmarks = {
     "Light Pollution (A)": (-8474.409, -11160.441, 0.000),  # via Ambrosia 02 (Panorama)
     "Light Pollution (B)": (-7748.745, -7991.628, 0.000),  # via Ambrosia 02 (Panorama)
     "Light Pollution (C)": (-9874.513, -10662.575, 0.000),  # via Ambrosia 02 (Panorama)
+    "1111 Lincoln Rd (NW)": (1447.469, 1340.894, 55.309),  # d=7.026 via Rooftop Party & Vice City 03 (Basketball)
+    "1111 Lincoln Rd (SE)": (1490.945, 1304.196, 55.896),  # d=5.984 via Rooftop Party & Vice City 03 (Basketball)
     "Liquor Store": (-662.870, 1219.216, 3.009),  # via Sidewalk (Jason) (S)
     "Loews Miami Beach": (1961.304, 1150.746, 86.815),  # d=0.198 via Rooftop Party & Vice Beach (A)
     "Loft Downtown II": (-493.469, 68.694, 124.295),  # d=0.793 via Skyline & Vice Beach (B)
@@ -3732,6 +3735,8 @@ landmarks = {
     "Mount Waffles": (-5217.942, 5581.709, 198.855),  # d=2.128 via Diner (N) & Gas Station (Lucia)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
     "Murano Grande (R3)": (1496.482, -81.920, 96.154),  # d=0.095 via Port Vice City (B) & Port
+    "252 N Tyndall Pkwy (NE)": (-6192.707, 4415.573, 23.129),  # d=0.072 via Diner (S) & Easy Inn
+    "252 N Tyndall Pkwy (NW)": (-6197.491, 4416.217, 23.281),  # d=0.085 via Diner (S) & Easy Inn
     "Naval Air Station Key West (Control Tower)": (-5716.593, -6602.387, 29.784),  # d=1.025 via Key Lento & Grassrivers Postcard (X)
     "Naval Air Station Key West (Radar Tower)": (-5559.494, -6469.937, 27.670),  # d=0.692 via Key Lento & Grassrivers Postcard (X)
     "419 NE 4th Ave (W)": (-415.516, 1205.149, 32.586),  # d=3.549 via Vice City Postcard & Vice City 03 (Basketball)
