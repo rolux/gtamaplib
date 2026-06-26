@@ -925,7 +925,7 @@ class Map:
             target_xy = get_point(cam.xyz, cam.get_pixel_direction((x, cam.h / 2)), d)[:2]
             self.draw_line((cam.xy, target_xy), (255, 255, 255), 1)
         if not no_marker:
-            self.draw_circle(cam.xy, r, (255, 255, 255), cam.color, 1, cam.name[0])
+            self.draw_circle(cam.xy, r, (255, 255, 255), cam.color, 1, get_letter(cam.name))
         return self
 
     def draw_cameras(self, r=10, d=100):
@@ -1052,6 +1052,7 @@ class Map:
         )
         rays = {}
         for cam in cameras:
+            #if not "Shitzu" in cam.name: continue
             for lm_name in cam.landmark_pixels:
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
@@ -2899,6 +2900,7 @@ def get_color(name):
     return tuple(int(int(sha1[i * 2:i * 2 + 2], 16) * 0.75) for i in range(3))
 
 def get_letter(name):
+    name = re.sub(r"'(\d+)", r"\g<1>", name)
     if name.startswith("Pin "):
         return name.split(" ")[1][0]
     if re.search("\\([A-Z0-9]+\\)$", name):
