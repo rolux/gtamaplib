@@ -131,7 +131,7 @@ cameras = {
     #"[T1/11] Motorboats (A)": (None, (1650.000, -850.000, 2.000), (91.400, 1.919, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [699]"),
     "[T1/11] Motorboats (A)": (None, (1514.000, -797.000, 1.615), (92.703, 1.990, 0.000), (63.000, 38.038), (3840, 2160), "Trailer 1 [699]"),
     "[T1/11] Motorboats (B)": (None, (1530.000, -791.000, 1.991), (88.533, -0.330, 0.000), (63.000, 38.038), (3840, 2160), "Trailer 1 [745]"),
-    "[T1/12] Convertible": (None, (40.000, 575.000, 20.000), (103.000, 0.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [746]"),
+    "[T1/12] Convertible": (None, (-40.000, 520.000, 21.890), (97.736, 0.000, 0.000), (69.800, 42.851), (3840, 2160), "Trailer 1 [746]"),
     "[T1/13] Wynwood": (None, (-425.000, 1700.000, 5.000), (319.000, 3.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [824]"),
     "[T1/14] Strip Club (Mondays)": None,
     "[T1/15] Handshake": (None, (-800.000, 1535.000, 5.000), (235.000, 1.000, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [925]"),
@@ -241,7 +241,7 @@ cameras = {
     "[S2/40] Vice City 04 (Gang Members)": (None, (-1268.000, 1214.000, 5.000), (300.000, 8.000, -7.000), (45.000, None), (3840, 2160), "Vice City 04 [1]"),
     "[S2/41] Vice City 05 (Vice Beach)": (None, (2175.000, 750.000, 0.000), (45.000, 8.000, 0.000), (60.000, None), (3840, 2160), "Vice City 05 [1]"),
     "[S2/42] Vice City 06 (Ocean Drive)": (None, (1990.000, 640.000, 3.000), (45.000, 5.000, 0.000), (60.000, None), (3840, 2160), "Vice City 06 [1]"),
-    "[S2/44] Vice City 08 (Ferris Wheel)": (None, (-581.000, 909.000, 97.866), (214.216, -10.300, 0.000), (40.500, 23.447), (3840, 2160), "Vice City 08 [1]"),
+    "[S2/44] Vice City 08 (Ferris Wheel)": (None, (-450.000, 849.000, 76.399), (212.812, -10.000, 0.000), (41.200, 23.876), (3840, 2160), "Vice City 08 [1]"),
     "[S2/45] Vice City 09 (La Perle)": (None, (-1250.000, 1150.000, 7.000), (300.000, 2.000, 0.000), (50.000, None), (3840, 2160), "Vice City 09 [1]"),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4385.000, -7593.000, 79.988), (318.593, -9.400, 0.000), (62.500, 37.693), (3840, 2160), "Leonida Keys 01 [1]"),
     "[S2/47] Leonida Keys 02 (Sidewalk)": (None, (-2933.000, -6433.000, 2.000), (105.000, 1.000, 0.000), (45.000, None), (3840, 2160), "Leonida Keys 02 [1]"),
@@ -288,7 +288,7 @@ cameras = {
     "[S3/20] Ganado Retro Build": None,
     "[S3/23] Rideout Customs Mod Shop 03 (Garage)": None,
     "[S3/24] Sara's Unisex Salon 01 (Exterior)": None,
-    "[S3/27] Shitzu Squalo 01 (Bay)": (None, (381.000, 787.000, 3.684), (138.679, 2.500, 2.000), (45.200, 26.356), (3840, 2160), "Shitzu Squalo 01 [1]"),
+    "[S3/27] Shitzu Squalo 01 (Bay)": ( None, (378.000, 782.000, 3.490), (138.633, 2.400, 2.500), (45.500, 26.544), (3840, 2160), "Shitzu Squalo 01 [1]"),
     "[S3/28] Shitzu Squalo 02 (Coast)": None,
     "[S3/31] Stock 305 Clothing Store 01 (Van)": (None, (-350.000, 1750.000, 5.500), (315.000, 20.000, 10.000), (60.000, None), (3840, 2160), "Stock 305 Clothing Store 01 [1]"),
     "[S3/33] Stock 305 Clothing Store 03 (Entrance)": None,
@@ -299,7 +299,7 @@ cameras = {
     "[S3/48] Classic Car Collection 01 (Wyman's World)": None,
     "[S3/54] Vintage Vice City Pack 01 (Ocean View Hotel)": None,
     "[S3/55] Vintage Vice City Pack 02 (Port)": (None, (919.000, -1187.000, 0.135), (341.882, 3.000, 0.000), (42.200, 24.492), (3840, 2160), "Vintage Vice City Pack 02 [1]"),
-    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-415.000, 850.000, 180.000), (146.157, -9.739, 0.000), (45.000, 26.231), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
+    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-415.000, 850.000, 190.000), (146.157, -9.739, 0.000), (45.000, 26.231), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
 }
 
 cameras = {
@@ -3538,10 +3538,10 @@ landmarks = {
     "Billboard with Irregular Shape": (-2935.798, 4375.849, 46.420),  # via Ambrosia 02 (Panorama)
     "Billboard with Oval Motif #1": (-3031.588, 4347.083, 55.169),  # via Ambrosia 02 (Panorama)
     "22 Biscayne Bay (SE)": (-338.986, 1346.432, 72.845),  # d=0.132 via Vice City Postcard & Vice City 03 (Basketball)
-    "50 Biscayne Blvd": (-436.661, -230.842, 148.985),  # d=3.186 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
+    "50 Biscayne Blvd": (-437.625, -230.997, 148.060),  # d=5.120 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "50 Biscayne Blvd (SE)": (-407.635, -239.477, 146.292),  # d=1.095 via Vice City 03 (Basketball) & Skyline
-    "100 Biscayne Blvd (NE)": (-431.901, -115.233, 94.730),  # d=0.086 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
-    "100 Biscayne Blvd (SE)": (-425.683, -169.626, 94.809),  # d=0.134 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
+    "100 Biscayne Blvd (NE)": (-432.505, -115.342, 93.455),  # d=2.482 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
+    "100 Biscayne Blvd (SE)": (-426.139, -169.734, 93.675),  # d=2.150 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "Big Cat Cage Roof": (-716.491, 1324.161, 13.204),  # via Sidewalk (Jason) (S)
     "Biscayne Island (E)": (253.227, 1080.161, 0.000),  # via Venetian Islands
     "Blimp Bay": (-3990.437, -7343.033, 0.000),  # via Leonida Keys 01 (Airplane) (X)
@@ -3572,8 +3572,8 @@ landmarks = {
     "Container Crane (9)": (1093.565, -194.862, 68.493),  # d=8.571 via Amphitheater & Vice Beach (B)
     "Continuum on South Beach (S)": (2026.337, -230.291, 168.892),  # d=2.730 via Sidewalk (Jason) (E) & Leonida Keys Postcard (X)
     "The Crimson (CC)": (-446.286, 1231.821, 121.858),  # d=2.920 via Vice City Postcard & Vice City 03 (Basketball)
-    "Cruise Ship (FT)": (236.821, -302.111, 52.825),  # d=4.138 via Vice City 08 (Ferris Wheel) & Skyline
-    "Cruise Ship (RT)": (363.679, -304.847, 59.541),  # d=1.921 via Vice City 08 (Ferris Wheel) & Vice City Postcard
+    "Cruise Ship (FT)": (253.977, -250.601, 49.118),  # d=8.778 via Vice City 08 (Ferris Wheel) & Skyline
+    "Cruise Ship (RT)": (364.488, -249.336, 56.151),  # d=3.773 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Cruise Terminal D": (643.504, -420.789, 35.897),  # d=1.245 via Motorboats (B) & Vice City 08 (Ferris Wheel)
     "Cruise Terminal G (B)": (330.731, -334.763, 17.882),  # d=1.675 via Vice Beach (B) & Rooftop Party
     "Di Lido Island (N)": (496.162, 1537.713, 0.000),  # via Venetian Islands
@@ -3628,6 +3628,10 @@ landmarks = {
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
     "Green Diamond": (1779.024, 2124.965, 144.779),  # d=2.460 via Beach & Venetian Islands
+    "Highway Sign (404) (BL)": (-71.761, 514.511, 27.903),  # d=0.033 via Convertible & Shitzu Squalo 01 (Bay)
+    "Highway Sign (404) (BR)": (-68.099, 530.666, 27.939),  # d=0.029 via Convertible & Shitzu Squalo 01 (Bay)
+    "Highway Sign (404) (TL)": (-71.982, 514.443, 31.340),  # d=0.070 via Convertible & Shitzu Squalo 01 (Bay)
+    "Highway Sign (404) (TR)": (-68.039, 530.611, 31.784),  # d=0.034 via Convertible & Shitzu Squalo 01 (Bay)
     "Homestead Water Tower": (-2945.771, -3026.442, 70.083),  # d=3.916 via Leonida Keys 01 (Airplane) (X) & Tennis Stadium (4K)
     "Hotel Breakwater": (1949.796, 563.829, 25.734),  # d=0.265 via Vice Beach (A) & Park
     "Hotel Victor (SW)": (1945.101, 733.085, 33.587),  # d=0.251 via Beach & Park
@@ -3672,6 +3676,16 @@ landmarks = {
     "Kaseya Center (NW)": (-348.439, 456.214, 47.740),  # d=2.074 via Skyline & Vice City 08 (Ferris Wheel)
     "Kaseya Center (S)": (-259.509, 358.037, 47.265),  # d=1.193 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Kaseya Center (SE)": (-217.872, 392.546, 47.504),  # d=1.541 via Vice City Postcard & Skyline
+    "KC01": (-195.278, 494.493, 30.218),  # d=0.140 via Convertible & Shitzu Squalo 01 (Bay)
+    "KC02": (-200.377, 501.027, 28.233),  # d=0.045 via Convertible & Shitzu Squalo 01 (Bay)
+    "KC03": (-203.349, 501.123, 25.915),  # d=0.528 via Vice City 08 (Ferris Wheel) & Convertible
+    "KC04": (-203.771, 501.480, 22.033),  # d=1.499 via Vice City 08 (Ferris Wheel) & Convertible
+    "KC06": (-191.276, 491.658, 24.434),  # d=0.681 via Vice City 08 (Ferris Wheel) & Convertible
+    "KC07": (-196.142, 495.866, 33.329),  # d=0.023 via Convertible & Shitzu Squalo 01 (Bay)
+    "KC08": (-201.281, 500.268, 33.827),  # d=0.034 via Convertible & Shitzu Squalo 01 (Bay)
+    "KC09": (-209.846, 504.797, 34.374),  # d=0.842 via Vice City 08 (Ferris Wheel) & Convertible
+    "KC10": (-211.172, 505.485, 32.355),  # d=0.577 via Vice City 08 (Ferris Wheel) & Convertible
+    "KC11": (-216.462, 507.958, 24.051),  # d=1.062 via Vice City 08 (Ferris Wheel) & Convertible 
     "Key Lento (A)": (-2667.046, -5813.681, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (D)": (-2360.796, -5344.111, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (E)": (-2263.472, -5203.393, 0.000),  # via Leonida Keys Postcard (X)
@@ -3890,16 +3904,16 @@ landmarks = {
     "180 Pompano Dr": (-2000.582, -5524.956, 15.851),  # d=0.953 via Leonida Keys Postcard (X) & Key Lento
     "200 Pompano Dr": (-1982.847, -5493.388, 14.185),  # d=0.129 via Key Lento & Leonida Keys Postcard (X)
     "500 Pompano Dr": (-2021.934, -5429.980, 21.399),  # d=0.022 via Key Lento & Leonida Keys Postcard (X)
-    "Port (G)": (844.123, -219.229, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (H)": (822.311, -248.268, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (I)": (807.720, -387.098, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (J)": (759.765, -419.707, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port VC (K)": (474.043, -357.364, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (L)": (168.887, -287.187, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (M)": (130.654, -276.456, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (N)": (55.929, -506.148, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (O)": (22.156, -496.718, 0.000),  # via Vice City 08 (Ferris Wheel)
-    "Port (P)": (13.063, -529.819, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (G)": (816.786, -194.330, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (H)": (797.494, -221.588, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (I)": (793.400, -360.329, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (J)": (748.128, -389.518, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (K)": (466.295, -303.134, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (L)": (178.123, -211.369, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (M)": (142.891, -198.302, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (N)": (78.041, -416.412, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (O)": (46.811, -404.237, 0.000),  # via Vice City 08 (Ferris Wheel)
+    "Port (P)": (38.812, -436.229, 0.000),  # via Vice City 08 (Ferris Wheel)
     "Port of Tampa Container Crane (1)": (-8261.673, 4785.312, 74.500),  # via Port Gellhorn Postcard (X)
     ##"Port of Tampa Container Crane (2)": (-7994.472, 4664.244, 74.500),  # via Diner (W) (A)
     "Port of Tampa Container Crane (2)": (-8088.251, 4687.005, 74.500),  # via Port Gellhorn Postcard (X)
@@ -3988,7 +4002,7 @@ landmarks = {
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
     "Southeast Financial Center": (-476.917, -463.168, 250.123),  # d=0.745 via Vice City Postcard & Vice Beach (B)
-    "Southeast Financial Center (A)": (-468.375, -464.192, 278.727),  # d=1.973 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
+    "Southeast Financial Center (A)": (-470.330, -464.579, 278.593),  # d=2.656 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "Southeast Financial Center (D)": (-416.434, -441.105, 243.570),  # d=0.807 via Vice Beach (B) & Vice City 03 (Basketball)
     "Springfield Community Church (CW)": (-6320.702, 4068.742, 30.166),  # d=2.055 via Car Wash & Gas Station (Lucia)
     "Squalo Billboard (TN)": (-3074.620, -6508.099, 25.070),  # d=0.125 via Key Lento & Leonida Keys Postcard (X)
@@ -4006,12 +4020,12 @@ landmarks = {
     "Stephen P. Clark Government Center (E)": (-871.635, 33.121, 158.603),  # d=0.646 via Leonida Keys 01 (Airplane) (X) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
-    "Stiltsville (1)": (165.396, -2695.256, 5.000),  # via Leonida Keys Postcard (X)
-    "Stiltsville (2)": (36.148, -2855.041, 5.000),  # via Leonida Keys Postcard (X)
-    "Stiltsville (3)": (623.422, -2475.979, 5.000),  # via Leonida Keys Postcard (X)
-    "Stiltsville (4)": (48.056, -3057.470, 5.000),  # via Leonida Keys Postcard (X)
-    "Stiltsville (5)": (280.240, -2893.844, 5.000),  # via Leonida Keys Postcard (X)
-    "Stiltsville (6)": (492.027, -2848.200, 5.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (1)": (138.403, -2723.053, 6.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (2)": (10.033, -2881.753, 6.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (3)": (593.318, -2505.265, 6.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (4)": (21.860, -3082.807, 6.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (5)": (252.467, -2920.292, 6.000),  # via Leonida Keys Postcard (X)
+    "Stiltsville (6)": (462.815, -2874.958, 6.000),  # via Leonida Keys Postcard (X)
     "Sunset Harbour South Condo": (1445.928, 1671.871, 85.810),  # d=0.219 via Vice City 03 (Basketball) & Venetian Islands
     "Sunshine Skyway Bridge (N)": (-6753.926, 4566.237, 119.352),  # d=0.622 via Chase (2) (A) & Diner (W) (A)
     "Sunshine Skyway Bridge (NR)": (-6753.926, 4566.237, 33.585),  # via Diner (W) (A)
@@ -4056,16 +4070,16 @@ landmarks = {
     "1000 Venetian Way (SW)": (328.830, 1107.149, 68.691),  # d=2.117 via Vice City Postcard & Vice Beach (B)
     "Vice City Sign (V2)": (-3693.643, -460.939, 27.773),  # d=0.018 via Vice City Sign & Vice City 01 (Vice City Sign)
     "Vice City Sign (E3)": (-3707.234, -490.362, 27.630),  # d=0.001 via Vice City Sign & Vice City 01 (Vice City Sign)
-    "Vice River (A)": (-1281.155, -60.535, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (B)": (-1310.001, 13.274, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (C)": (-1281.479, 80.209, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (D)": (-1325.036, 41.001, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (E)": (-1337.135, 160.843, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (F)": (-1381.356, 127.340, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (G)": (-1329.195, 218.036, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (H)": (-1378.534, 183.336, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (I)": (-1356.204, 230.559, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (J)": (-1404.464, 198.075, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (A)": (-1282.918, -61.985, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (B)": (-1313.483, 10.508, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (C)": (-1287.341, 75.524, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (D)": (-1329.130, 37.887, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (E)": (-1344.776, 155.764, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (F)": (-1387.332, 123.503, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (G)": (-1338.706, 212.135, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (H)": (-1386.379, 178.583, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (I)": (-1365.839, 224.917, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (J)": (-1412.452, 193.513, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     "Vizcayne North Condominium (NE)": (-521.236, 155.073, 177.413),  # d=0.124 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne North Condominium (SE)": (-529.451, 97.516, 178.670),  # d=0.196 via Vice City Postcard & Vice City 03 (Basketball)
     "W South Beach (BNW)": (1940.825, 1628.012, 23.937),  # d=0.048 via Vice City 03 (Basketball) & Rooftop Party
