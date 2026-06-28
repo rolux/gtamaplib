@@ -299,7 +299,8 @@ cameras = {
     "[S3/48] Classic Car Collection 01 (Wyman's World)": None,
     "[S3/54] Vintage Vice City Pack 01 (Ocean View Hotel)": None,
     "[S3/55] Vintage Vice City Pack 02 (Port)": (None, (919.000, -1187.000, 0.135), (341.882, 3.000, 0.000), (42.200, 24.492), (3840, 2160), "Vintage Vice City Pack 02 [1]"),
-    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-415.000, 850.000, 190.000), (146.157, -9.739, 0.000), (45.000, 26.231), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
+    #"[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-470.000, 1100.000, 190.000), (150.544, -10.029, 0.000), (45.000, None), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
+    "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": (None, (-476.000, 851.000, 193.606), (155.351, -6.700, 0.000), (28.000, 15.967), (3840, 2160), "Vintage Vice City Outfits and Hairstyles 04 [1]"),
 }
 
 cameras = {
@@ -3254,16 +3255,17 @@ pixels = {
     "[S3/63] Vintage Vice City Outfits and Hairstyles 04 (Rooftop)": [
         ((232, 257), "Vizcayne South Condominium (NW)"),
         ((428, 333), "Miami Tower"),
-        ((2706, 960.5), "Vice River (A)"),
-        ((2985, 985.5), "Vice River (B)"),
-        ((3106.5, 994), "Vice River (D)"),
-        ((3106.5, 1029), "Vice River (C)"),
-        ((3528.5, 1053), "Vice River (E)"),
-        ((3529, 1018.5), "Vice River (F)"),
-        ((3718.5, 1090.5), "Vice River (G)"),
-        ((3719, 1050), "Vice River (H)"),
-        ((3840, 1048.5), "Vice River (J)"),
-        ((3840, 1087), "Vice River (I)"),
+        ((805, 833), "Miami-Dade County Courthouse"),
+        ((2706, 960.5), "Route 35 (A)"),
+        ((2985, 985.5), "Route 35 (B)"),
+        ((3106.5, 994), "Route 35 (D)"),
+        ((3106.5, 1029), "Route 35 (C)"),
+        ((3528.5, 1053), "Route 35 (E)"),
+        ((3529, 1018.5), "Route 35 (F)"),
+        ((3718.5, 1090.5), "Route 35 (G)"),
+        ((3719, 1050), "Route 35 (H)"),
+        ((3840, 1048.5), "Route 35 (J)"),
+        ((3840, 1087), "Route 35 (I)"),
     ],
 }
 
@@ -3969,6 +3971,16 @@ landmarks = {
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
     "The Ritz-Carlton Bal Harbour": (1370.400, 2767.526, 100.991),  # d=1.590 via Beach & Highway (NE)
+    "Route 35 (A)": (-1371.098, -667.978, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (B)": (-1399.479, -594.730, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (C)": (-1375.251, -509.460, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (D)": (-1414.049, -568.405, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (E)": (-1428.983, -435.712, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (F)": (-1468.410, -489.068, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (G)": (-1423.511, -366.670, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (H)": (-1467.859, -423.862, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (I)": (-1448.953, -361.425, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Route 35 (J)": (-1492.216, -415.696, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (N) (S)": (2036.451, 1049.876, 67.998),  # d=0.153 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
@@ -4078,18 +4090,9 @@ landmarks = {
     "1000 Venetian Way (SW)": (328.830, 1107.149, 68.691),  # d=2.117 via Vice City Postcard & Vice Beach (B)
     "Vice City Sign (V2)": (-3693.643, -460.939, 27.773),  # d=0.018 via Vice City Sign & Vice City 01 (Vice City Sign)
     "Vice City Sign (E3)": (-3707.234, -490.362, 27.630),  # d=0.001 via Vice City Sign & Vice City 01 (Vice City Sign)
-    "Vice River (A)": (-1282.918, -61.985, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (B)": (-1313.483, 10.508, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (C)": (-1287.341, 75.524, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (D)": (-1329.130, 37.887, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (E)": (-1344.776, 155.764, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (F)": (-1387.332, 123.503, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (G)": (-1338.706, 212.135, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (H)": (-1386.379, 178.583, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (I)": (-1365.839, 224.917, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Vice River (J)": (-1412.452, 193.513, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     "Vizcayne North Condominium (NE)": (-521.236, 155.073, 177.413),  # d=0.124 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne North Condominium (SE)": (-529.451, 97.516, 178.670),  # d=0.196 via Vice City Postcard & Vice City 03 (Basketball)
+    "Vizcayne South Condominium (NW)": (-653.953, 38.646, 185.068),  # d=0.041 via Vintage Vice City Outfits and Hairstyles 04 (Rooftop) & Skyline
     "W South Beach (BNW)": (1940.825, 1628.012, 23.937),  # d=0.048 via Vice City 03 (Basketball) & Rooftop Party
     "W South Beach (SE)": (1876.489, 1552.207, 72.509),  # d=6.143 via Sidewalk (Jason) (E) & Venetian Islands
     "Waffles Arrow": (-6168.370, 4497.709, 14.435),  # d=0.039 via Diner (NE) & Diner (E)
