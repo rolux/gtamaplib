@@ -1906,8 +1906,13 @@ pixels = {
         ((3621, 875), "Island F (W)"),
     ],
     "[S2/5] Jason Duval 05 (Machine Gun)": [
+        ((504, 596), "Icon at South Beach"),
         ((2825, 218), "Vizcayne North Condominium (NE)"),
-        ((3320, 198), "Vizcayne South Condominium (SW)"),
+        ((2862, 213), "Vizcayne North Condominium (NW)"),
+        ((3015, 224), "Vizcayne North Condominium (SW)"),
+        ((3122, 215), "Vizcayne South Condominium (NE)"),
+        ((3284, 195), "Vizcayne South Condominium (NW)"),
+        ((3320, 199), "Vizcayne South Condominium (SW)"),
     ],
     "[S2/31] Raul Bautista 03 (Motorboat)": [
         ((656, 313), "The Palace Condominium (E16SE)"),
@@ -3260,6 +3265,7 @@ pixels = {
         ((2985, 985.5), "Route 35 (B)"),
         ((3106.5, 994), "Route 35 (D)"),
         ((3106.5, 1029), "Route 35 (C)"),
+        ((3188, 936), "Seybold Pointe (SE)"),
         ((3528.5, 1053), "Route 35 (E)"),
         ((3529, 1018.5), "Route 35 (F)"),
         ((3718.5, 1090.5), "Route 35 (G)"),
@@ -3971,16 +3977,16 @@ landmarks = {
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
     "The Ritz-Carlton Bal Harbour": (1370.400, 2767.526, 100.991),  # d=1.590 via Beach & Highway (NE)
-    "Route 35 (A)": (-1371.098, -667.978, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (B)": (-1399.479, -594.730, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (C)": (-1375.251, -509.460, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (D)": (-1414.049, -568.405, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (E)": (-1428.983, -435.712, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (F)": (-1468.410, -489.068, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (G)": (-1423.511, -366.670, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (H)": (-1467.859, -423.862, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (I)": (-1448.953, -361.425, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (J)": (-1492.216, -415.696, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (A)": (-1371.098, -667.978, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (B)": (-1399.479, -594.730, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (C)": (-1375.251, -509.460, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (D)": (-1414.049, -568.405, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (E)": (-1428.983, -435.712, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (F)": (-1468.410, -489.068, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (G)": (-1423.511, -366.670, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (H)": (-1467.859, -423.862, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (I)": (-1448.953, -361.425, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    #"Route 35 (J)": (-1492.216, -415.696, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (N) (S)": (2036.451, 1049.876, 67.998),  # d=0.153 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
