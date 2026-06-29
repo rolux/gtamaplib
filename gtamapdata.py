@@ -3033,6 +3033,7 @@ pixels = {
         ((2467, 1064), "USSM Smokestack (8)"),
         ((2502, 1143.5), "1500 Sonora Ave (Tank)"),
         ((2514.5, 994), "USSM Smokestack (9)"),
+        ((2622, 1854), "US Sugar Mill (Office) (B)"),
         ((2627, 1524.5), "US Sugar Mill (Office)"),
         ((2681.5, 1144.5), "1500 Sonora Ave (Tank) (R)"),
         ((2899.5, 963.5), "USSM Smokestack (10)"),
