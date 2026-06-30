@@ -2426,8 +2426,8 @@ pixels = {
         ((2770, 937.5), "Billboard with Hat-Shaped Motif"),
         ((2851, 1054), "Ambrosia Main St (Y)"),
         ((2895, 2011), "Lake Leonida (B)"),
-        ((2920, 847), "Sebring Water Tower (B)"),
-        ((2921, 819), "Sebring Water Tower"),
+        ((2920, 847), "Daytona Beach Water Tower (B)"),
+        ((2921, 819), "Daytona Beach Water Tower"),
         ((2925, 1912), "Red Boxville (BNE)"),
         ((2977, 1279), "Ambrosia Bridge (3B)"),
         ((2968.5, 900.5), "Billboard with Oval Motif #1 (TE)"),
@@ -2464,8 +2464,8 @@ pixels = {
         ((1848, 1280), "Radio Tower (Ambrosia) (B)"),
         #((2038, 969.5), "Billboard (South Ambrosia)"),
         ((2038.5, 969), "USSM Smokestack (3)"),
-        ((2148, 900), "Sebring Water Tower"),
-        ((2148, 923.5), "Sebring Water Tower (B)"),
+        ((2148, 900), "Daytona Beach Water Tower"),
+        ((2148, 923.5), "Daytona Beach Water Tower (B)"),
         ((2579, 1060), "Viaduct (Ambrosia) (S)"),
         # ((2750, 888), "US Sugar Mill (Factory)"),
         ((2750, 889), "US Sugar Mill (Factory) (R)"),
@@ -2568,7 +2568,7 @@ pixels = {
         ((49, 1938), "Ambrosia Road (B)"),
         ((94, 1785), "Canal Road (A)"),
         ((135, 2042), "Kissimmee River (B)"),
-        ((171, 1598), "Sebring Water Tower"),
+        ((171, 1598), "Daytona Beach Water Tower"),
         ((310, 1954), "Ambrosia Road (C)"),
         ((405, 1762), "Canal Road (B)"),
         ((425, 1799), "Canal (B)"),
@@ -3077,8 +3077,8 @@ pixels = {
         ((2627, 1524.5), "US Sugar Mill (Office)"),
         ((2681.5, 1144.5), "1500 Sonora Ave (Tank) (R)"),
         ((2899.5, 963.5), "USSM Smokestack (10)"),
-        ((2970, 985), "Sebring Water Tower (B)"),
-        ((2970.5, 943), "Sebring Water Tower"),
+        ((2970, 985), "Daytona Beach Water Tower (B)"),
+        ((2970.5, 943), "Daytona Beach Water Tower"),
         ((2972, 1074), "USSM Smokestack (11)"),
         ((3181, 1284), "Train Signal (Ambrosia) (5E)"),
         ((3197.5, 1284), "Train Signal (Ambrosia) (5W)"),
@@ -4182,7 +4182,7 @@ landmarks = {
     "Wyman (Pool)": (-5322.430, 3472.470, 66.790),  # Pool
 
     "MIA North Terminal Tower": (-2378.455, -545.751, 60.463),  # d=0.359 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
-    "Sebring Water Tower": (-3996.293, 2892.033, 68.174),  # d=3.595 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "Daytona Beach Water Tower": (-3996.293, 2892.033, 68.174),  # d=3.595 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
     "1500 Sonora Ave (Silo)": (-2720.882, 3851.700, 58.300),  # d=1.549 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "1500 Sonora Ave (Tank)": (-2972.058, 3687.346, 36.725),  # d=0.767 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
     #"Sunshine Skyway Bridge (N)": (-6651.500, 4560.344, 104.157),  # d=0.037 via Diner (W) (B) & Ambrosia 04 (Fires)
