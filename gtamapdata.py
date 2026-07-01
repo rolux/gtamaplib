@@ -2408,7 +2408,7 @@ pixels = {
         ((1321, 891), "USSM Smokestack (2)"),
         ((1324.5, 864), "1500 Sonora Ave (Silo) (L)"),
         ((1343, 864), "1500 Sonora Ave (Silo)"),
-        ((1344, 960), "1500 Sonora Ave (Silo) (B)")
+        ((1344, 960), "1500 Sonora Ave (Silo) (B)"),
         ((1345, 1125), "Lake Leonida (N)"),
         ((1347, 969.5), "Hospice Billboard (R)"),
         ((1361.5, 864), "1500 Sonora Ave (Silo) (R)"),
