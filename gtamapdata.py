@@ -3778,6 +3778,7 @@ landmarks = {
     "Cruise Ship (RT)": (364.488, -249.336, 56.151),  # d=3.773 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Cruise Terminal D": (643.504, -420.789, 35.897),  # d=1.245 via Motorboats (B) & Vice City 08 (Ferris Wheel)
     "Cruise Terminal G (B)": (330.731, -334.763, 17.882),  # d=1.675 via Vice Beach (B) & Rooftop Party
+    "Daytona Beach Water Tower": (-4014.012, 2789.099, 67.792),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "Di Lido Island (N)": (496.162, 1537.713, 0.000),  # via Venetian Islands
     "Di Lido Island (S)": (588.273, 1001.623, 0.000),  # via Venetian Islands
     "Domed Hills Sign (TW)": (-6107.844, 4474.328, 17.450),  # d=0.934 via Diner (NE) & Diner (E)
