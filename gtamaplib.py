@@ -1052,7 +1052,7 @@ class Map:
         )
         rays = {}
         for cam in cameras:
-            #if not "Shitzu" in cam.name: continue
+            # if not "Key Lento" in cam.name: continue
             for lm_name in cam.landmark_pixels:
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
@@ -2137,6 +2137,7 @@ def find_camera(
     projection_area,
     basename,
     bearing_limits=None,
+    horizon_limits=None,
     ray_pairs=None,
     max_size_delta=1.05
 ):
@@ -2196,7 +2197,7 @@ def find_camera(
     best_cam = None
 
     pool_args = [(
-        cam, xy, z_limits, bearing_limits, pitch_values, hfov_values,
+        cam, xy, z_limits, bearing_limits, horizon_limits, pitch_values, hfov_values,
         targets, n_points, ray_stacks, max_size_delta
     ) for xy in xys]
     with multiprocessing.Pool() as pool:
@@ -2267,7 +2268,7 @@ def _find_camera(args):
     """
 
     (
-        cam, xy, z_limits, bearing_limits, pitch_values, hfov_values,
+        cam, xy, z_limits, bearing_limits, horizon_limits, pitch_values, hfov_values,
         targets, n_points, ray_stacks, max_size_delta
     ) = args
     cam.set_xyz((xy[0], xy[1], cam.z))
@@ -2288,6 +2289,10 @@ def _find_camera(args):
                     direction = cam.get_pixel_direction(pixel)
                     bearing = get_angles_from_direction(direction)[0]
                     if not bearing_limits[0] <= bearing <= bearing_limits[1]:
+                        continue
+                if horizon_limits:
+                    horizon = cam.get_horizon()
+                    if not horizon_limits[0] <= horizon <= horizon_limits[1]:
                         continue
                 valid = True
                 for ray_stack in ray_stacks:
