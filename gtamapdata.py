@@ -289,7 +289,7 @@ cameras = {
     "[S3/19] Crest Kayak": (None, (-2395.000, -5525.000, 0.452), (130.230, -4.300, 4.500), (42.000, 24.369), (3840, 2160), "Crest Kayak [1]"),
     "[S3/20] Ganado Retro Build": None,
     "[S3/23] Rideout Customs Mod Shop 03 (Garage)": None,
-    "[S3/24] Sara's Unisex Salon 01 (Exterior)": None,
+    "[S3/24] Sara's Unisex Salon 01 (Exterior)": (None, (-2564.000, -3410.000, 9.500), (210.000, 1.000, 2.000), (45.000, None), (3840, 2160), "Sara's Unisex Salon 01 [1]"),
     "[S3/27] Shitzu Squalo 01 (Bay)": ( None, (378.000, 782.000, 3.490), (138.633, 2.400, 2.500), (45.500, 26.544), (3840, 2160), "Shitzu Squalo 01 [1]"),
     "[S3/28] Shitzu Squalo 02 (Coast)": None,
     "[S3/31] Stock 305 Clothing Store 01 (Van)": (None, (-350.000, 1750.000, 5.500), (315.000, 20.000, 10.000), (60.000, None), (3840, 2160), "Stock 305 Clothing Store 01 [1]"),
