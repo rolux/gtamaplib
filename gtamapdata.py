@@ -3980,6 +3980,7 @@ landmarks = {
     "Key Lento (A)": (-2667.046, -5813.681, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (B)": (-2509.635, -5685.515, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (C)": (-2451.253, -5601.151, 0.000),  # via Leonida Keys Postcard (X)
+    "Key Lento (D)": (-2382.748, -5529.831, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (E)": (-2360.796, -5344.111, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (F)": (-2263.472, -5203.393, 0.000),  # via Leonida Keys Postcard (X)
     "Key Lento (J)": (-3036.835, -6723.957, 0.000),  # via Leonida Keys Postcard (X)
