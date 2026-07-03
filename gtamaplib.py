@@ -492,7 +492,8 @@ class Camera:
         Runs all render functions
         """
         if not hasattr(self, "image"): self.open()
-        self.render_player()
+        # self.render_player()
+        self.render_players()
         self.render_vertical_lines()
         self.render_vanishing_points()
         self.render_distance_circles()
@@ -643,13 +644,16 @@ class Camera:
             self.draw_label((x, y - 5), 5, name, color, (255, 255, 255))
         return self
 
-    def render_player(self, width=1):
+    def render_player(self, width=1, player=None):
         """
         Renders the player, if present
         """
         if not hasattr(self, "image"): self.open()
-        if not self.player: return self
-        px, py, pz = self.player
+        if not player:
+            if not self.player: return self
+            px, py, pz = self.player
+        else:
+            px, py, pz = player
         for i, line in enumerate((
             ((px - 1, py, pz), (px + 1, py, pz)),
             ((px, py - 1, pz), (px, py + 1, pz)),
@@ -668,6 +672,17 @@ class Camera:
                     )):
                         fill = ((255, 0, 0), (0, 255, 0), (0, 0, 255))[i]
                         self.render_line(line, fill, width)
+        return self
+
+    def render_players(self, width=1):
+        """
+        Renders all players
+        """
+        if not hasattr(self, "image"): self.open()
+        cameras = [get_camera(cam_name) for cam_name in md.cameras]
+        for cam in sorted(cameras, key=lambda cam: -get_distance(self.xyz, cam.xyz)):
+            if not cam.player: continue
+            self.render_player(1 if cam == self else 0.5, cam.player)
         return self
 
     def render_rays(self, width=0.5):
@@ -1052,8 +1067,9 @@ class Map:
         )
         rays = {}
         for cam in cameras:
-            # if not "Key Lento" in cam.name: continue
+            # if not "Ambrosia 01" in cam.name: continue
             for lm_name in cam.landmark_pixels:
+                # if not "Ambrosia Hill" in lm_name: continue
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
                 target_xy = get_point(cam.xyz, direction, 20000)[:2]
