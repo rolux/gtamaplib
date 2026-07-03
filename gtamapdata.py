@@ -1029,9 +1029,12 @@ pixels = {
         ((1453.5, 217), "Grass (MIA) (D)"),
         ((1464, 146.5), "Seybold Pointe"),
         ((1467.5, 272.5), "Road (MIA) (C)"),
+        ((1471.5, 212), "Marker (MIA) (C)"),
         ((1498, 154), "Seybold Pointe (SE)"),
         ((1507, 139), "Hyatt Regency Miami"),
+        ((1512, 211), "Marker (MIA) (B)"),
         ((1569, 295.5), "Road (MIA) (B)"),
+        ((1588, 212), "Marker (MIA) (A)"),
         ((1641.5, 122.5), "Latitude on the River (S) (NW)"),
         ((1678.5, 122), "Latitude on the River (S) (SW)"),
         ((1697, 155), "EB Hotel Miami (SW)"),
@@ -3930,6 +3933,11 @@ landmarks = {
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
+    "Grass (MIA) (A)": (-2420.454, -226.906, 3.500),  # via Airport (X)
+    "Grass (MIA) (B)": (-2364.007, -231.299, 3.500),  # via Airport (X)
+    "Grass (MIA) (C)": (-2349.929, -222.984, 3.500),  # via Airport (X)
+    "Grass (MIA) (D)": (-2360.677, -184.367, 3.500),  # via Airport (X)
+    "Grass (MIA) (E)": (-2489.124, -185.250, 3.500),  # via Airport (X)
     "Green Diamond": (1779.024, 2124.965, 144.779),  # d=2.460 via Beach & Venetian Islands
     "Highway Sign (404) (BL)": (-71.761, 514.511, 27.903),  # d=0.033 via Convertible & Shitzu Squalo 01 (Bay)
     "Highway Sign (404) (BR)": (-68.099, 530.666, 27.939),  # d=0.029 via Convertible & Shitzu Squalo 01 (Bay)
@@ -4334,16 +4342,16 @@ landmarks = {
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
     "The Ritz-Carlton Bal Harbour": (1370.400, 2767.526, 100.991),  # d=1.590 via Beach & Highway (NE)
-    "Road (MIA) (A)": (-2558.500, -138.977, 4.000),  # via Airport (X)
-    "Road (MIA) (B)": (-2547.305, -138.850, 4.000),  # via Airport (X)
-    "Road (MIA) (C)": (-2535.006, -138.889, 4.000),  # via Airport (X)
-    "Road (MIA) (D)": (-2523.130, -138.778, 4.000),  # via Airport (X)
-    "Road (MIA) (E)": (-2511.516, -138.687, 4.000),  # via Airport (X)
-    "Road (MIA) (F)": (-2498.936, -138.652, 4.000),  # via Airport (X)
-    "Road (MIA) (G)": (-2486.740, -138.581, 4.000),  # via Airport (X)
-    "Road (MIA) (H)": (-2473.955, -138.645, 4.000),  # via Airport (X)
-    "Road (MIA) (I)": (-2435.448, -139.285, 4.000),  # via Airport (X)
-    "Road (MIA) (J)": (-2357.899, -141.435, 4.000),  # via Airport (X)
+    "Road (MIA) (A)": (-2553.803, -141.322, 3.500),  # via Airport (X)
+    "Road (MIA) (B)": (-2540.912, -141.176, 3.500),  # via Airport (X)
+    "Road (MIA) (C)": (-2526.749, -141.220, 3.500),  # via Airport (X)
+    "Road (MIA) (D)": (-2513.074, -141.093, 3.500),  # via Airport (X)
+    "Road (MIA) (E)": (-2499.700, -140.988, 3.500),  # via Airport (X)
+    "Road (MIA) (F)": (-2485.214, -140.948, 3.500),  # via Airport (X)
+    "Road (MIA) (G)": (-2471.170, -140.866, 3.500),  # via Airport (X)
+    "Road (MIA) (H)": (-2456.449, -140.940, 3.500),  # via Airport (X)
+    "Road (MIA) (I)": (-2412.107, -141.676, 3.500),  # via Airport (X)
+    "Road (MIA) (J)": (-2322.808, -144.152, 3.500),  # via Airport (X)
     "Round Water Tower": (-2199.606, 478.187, 77.242),  # d=4.963 via Vice City Postcard & Port Vice City (A)
     #"Route 35 (A)": (-1371.098, -667.978, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (B)": (-1399.479, -594.730, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
