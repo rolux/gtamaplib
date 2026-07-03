@@ -1019,28 +1019,33 @@ pixels = {
         ((319, 248), "Signature Hangar 2 (NW)"),
         ((460, 195), "Signature Hangar 2 (W)"),
         ((1118, 145), "Bank of America Financial Center (Vice City)"),
-        ((1217.5, 213.5), "Taxiway (J)"),
-        ((1247.5, 222.5), "Taxiway (I)"),
-        ((1282, 231.5), "Taxiway (H)"),
-        ((1301, 236), "Taxiway (G)"),
-        ((1326, 241.5), "Taxiway (F)"),
-        ((1359.5, 249), "Taxiway (E)"),
-        ((1403, 258.5), "Taxiway (D)"),
+        ((1217.5, 213.5), "Road (MIA) (J)"),
+        ((1247.5, 222.5), "Road (MIA) (I)"),
+        ((1282, 231.5), "Road (MIA) (H)"),
+        ((1301, 236), "Road (MIA) (G)"),
+        ((1326, 241.5), "Road (MIA) (F)"),
+        ((1359.5, 249), "Road (MIA) (E)"),
+        ((1403, 258.5), "Road (MIA) (D)"),
+        ((1453.5, 217), "Grass (MIA) (D)"),
         ((1464, 146.5), "Seybold Pointe"),
-        ((1467.5, 272.5), "Taxiway (C)"),
+        ((1467.5, 272.5), "Road (MIA) (C)"),
         ((1498, 154), "Seybold Pointe (SE)"),
         ((1507, 139), "Hyatt Regency Miami"),
-        ((1569, 295.5), "Taxiway (B)"),
+        ((1569, 295.5), "Road (MIA) (B)"),
         ((1641.5, 122.5), "Latitude on the River (S) (NW)"),
         ((1678.5, 122), "Latitude on the River (S) (SW)"),
         ((1697, 155), "EB Hotel Miami (SW)"),
-        ((1741, 333), "Taxiway (A)"),
+        ((1650, 216.5), "Grass (MIA) (C)"),
+        ((1735, 218), "Grass (MIA) (B)"),
+        ((1741, 333), "Road (MIA) (A)"),
         ((1815.5, 96), "Nine at Mary Brickell Village (A)"),
         ((1829.5, 96), "Nine at Mary Brickell Village (B)"),
         ((1846, 95), "Nine at Mary Brickell Village (C)"),
         ((1852.5, 95), "Nine at Mary Brickell Village (D)"),
         ((1897, 96), "Nine at Mary Brickell Village (E)"),
         ((1903.5, 137.5), "American Airlines Hangar"),
+        ((1920, 226), "Grass (MIA) (A)"),
+        ((1920, 246.5), "Grass (MIA) (E)"),
     ],
     "[L1/39] Bedroom": [
         ((775, 965), "Player"),
@@ -4329,6 +4334,16 @@ landmarks = {
     "Rivo Alto Island (N)": (833.467, 1446.492, 0.000),  # via Vice City 03 (Basketball)
     "Rivo Alto Island (S)": (948.387, 1247.820, 0.000),  # via Venetian Islands
     "The Ritz-Carlton Bal Harbour": (1370.400, 2767.526, 100.991),  # d=1.590 via Beach & Highway (NE)
+    "Road (MIA) (A)": (-2558.500, -138.977, 4.000),  # via Airport (X)
+    "Road (MIA) (B)": (-2547.305, -138.850, 4.000),  # via Airport (X)
+    "Road (MIA) (C)": (-2535.006, -138.889, 4.000),  # via Airport (X)
+    "Road (MIA) (D)": (-2523.130, -138.778, 4.000),  # via Airport (X)
+    "Road (MIA) (E)": (-2511.516, -138.687, 4.000),  # via Airport (X)
+    "Road (MIA) (F)": (-2498.936, -138.652, 4.000),  # via Airport (X)
+    "Road (MIA) (G)": (-2486.740, -138.581, 4.000),  # via Airport (X)
+    "Road (MIA) (H)": (-2473.955, -138.645, 4.000),  # via Airport (X)
+    "Road (MIA) (I)": (-2435.448, -139.285, 4.000),  # via Airport (X)
+    "Road (MIA) (J)": (-2357.899, -141.435, 4.000),  # via Airport (X)
     "Round Water Tower": (-2199.606, 478.187, 77.242),  # d=4.963 via Vice City Postcard & Port Vice City (A)
     #"Route 35 (A)": (-1371.098, -667.978, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (B)": (-1399.479, -594.730, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
@@ -4415,16 +4430,6 @@ landmarks = {
     "Sunshine Skyway Bridge (SSR)": (-6654.030, 4221.579, 30.960),  # via Diner (W) (A)
     "Tall Billboard": (-3007.502, -2842.664, 31.824),  # d=2.956 via Prison & Grassrivers 02 (Watson Bay)
     "Tall Double Billboard": (-6299.540, 4125.617, 46.603),  # d=3.130 via Gas Station (Lucia) & Car Wash
-    "Taxiway (A)": (-2558.500, -138.977, 4.000),  # via Airport (X)
-    "Taxiway (B)": (-2547.305, -138.850, 4.000),  # via Airport (X)
-    "Taxiway (C)": (-2535.006, -138.889, 4.000),  # via Airport (X)
-    "Taxiway (D)": (-2523.130, -138.778, 4.000),  # via Airport (X)
-    "Taxiway (E)": (-2511.516, -138.687, 4.000),  # via Airport (X)
-    "Taxiway (F)": (-2498.936, -138.652, 4.000),  # via Airport (X)
-    "Taxiway (G)": (-2486.740, -138.581, 4.000),  # via Airport (X)
-    "Taxiway (H)": (-2473.955, -138.645, 4.000),  # via Airport (X)
-    "Taxiway (I)": (-2435.448, -139.285, 4.000),  # via Airport (X)
-    "Taxiway (J)": (-2357.899, -141.435, 4.000),  # via Airport (X)
     "Ten Museum Park (SE)": (-405.844, 481.345, 136.174),  # d=3.175 via Skyline & Vice Beach (B)
     "Three Tequesta Point": (-14.635, -955.375, 205.786),  # d=0.119 via Vice City Postcard & Vice Beach (B)
     "The Tides South Beach": (1993.831, 893.752, 54.416),  # d=0.480 via Beach & Vice Beach (B)
