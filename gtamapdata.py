@@ -4295,6 +4295,7 @@ landmarks = {
     "Pin D01R": (-2480.496, -6447.627, 5.327),  # d=0.571 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Pin D02L": (-2266.089, -6163.548, 6.682),  # d=0.702 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Pin D02R": (-2242.058, -6180.876, 6.671),  # d=0.858 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "Pole near Signature Hangar 2": (-2504.291, -51.302, 19.127),  # d=0.219 via Airport (X) & Hangar (A)
     "180 Pompano Dr": (-2000.582, -5524.956, 15.851),  # d=0.953 via Leonida Keys Postcard (X) & Key Lento
     "200 Pompano Dr": (-1982.847, -5493.388, 14.185),  # d=0.129 via Key Lento & Leonida Keys Postcard (X)
     "500 Pompano Dr": (-2021.934, -5429.980, 21.399),  # d=0.022 via Key Lento & Leonida Keys Postcard (X)
@@ -4413,6 +4414,15 @@ landmarks = {
     "Ship (B)": (-7165.042, 4600.027, 0.000),  # via Port Gellhorn Postcard (X)
     "Ship (C)": (-7129.975, 4644.868, 0.000),  # via Port Gellhorn Postcard (X)
     "Sidewalk Creep": (-667.412, 1087.195, 2.470),  # via Sidewalk (Jason) (S)
+    "Signature Hangar 2 (BNW)": (-2514.062, -66.895, 3.595),  # d=0.294 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (DBN)": (-2517.689, -80.733, 3.623),  # d=0.458 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (DBS)": (-2520.036, -85.862, 3.669),  # d=0.514 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (DTN)": (-2518.295, -80.708, 7.232),  # d=0.222 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (DTS)": (-2521.159, -86.135, 7.233),  # d=0.336 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (SBE)": (-2526.285, -103.155, 9.181),  # d=0.211 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (SBW)": (-2530.029, -101.805, 9.224),  # d=0.209 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (STE)": (-2526.394, -103.158, 10.689),  # d=0.244 via Airport (X) & Hangar (A)
+    "Signature Hangar 2 (STW)": (-2529.944, -101.847, 10.754),  # d=0.193 via Airport (X) & Hangar (A)
     "Skyviews Miami Observation Wheel": (30.161, 67.859, 74.711),  # d=1.118 via Vice City Postcard & Skyline
     "Small Grassrivers Bridge (E)": (-3484.122, -3543.241, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Small Grassrivers Bridge (W)": (-3513.970, -3516.921, 0.000),  # via Leonida Keys 01 (Airplane) (X)
