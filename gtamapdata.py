@@ -1020,7 +1020,7 @@ pixels = {
         ((460, 195), "Signature Hangar 2 (DTN)"),
         ((472, 250), "Signature Hangar 2 (DBN)"),
         ((515.5, 194), "Signature Hangar 2 (DTS)"),
-        ((526.5, 248), "Signature Hangar 2 (DBS)"),
+        ((526.5, 251), "Signature Hangar 2 (DBS)"),
         ((705.5, 124), "Signature Hangar 2 (STW)"),
         ((706, 155), "Signature Hangar 2 (SBW)"),
         ((751.5, 128.5), "Signature Hangar 2 (STE)"),
