@@ -1155,6 +1155,8 @@ pixels = {
         ((704, 1216), "Floodgate (A)"),
         ((768.5, 831), "Southeast Financial Center"),
         ((770, 831), "Southeast Financial Center"),
+        ((793, 865), "Met 1 Condominium"),
+        ((1054, 843.5), "Infinity at Brickell (NW)"),
         ((1124, 797), "Four Seasons Hotel Miami (NW)"),
         ((1141, 792), "Four Seasons Hotel Miami (BW)"),
         ((1173, 794), "Four Seasons Hotel Miami (BE)"),
@@ -1165,7 +1167,10 @@ pixels = {
         ((1214.5, 77), "WDNA FM (SE3)"),
         ((1215, 119), "WDNA FM (SE2)"),
         ((1219, 522), "WDNA FM (SE1)"),
+        ((1239, 873), "Three Tequesta Point"),
         ((1314.5, 954), "Double Pole (2N)"),
+        ((1320.5, 900), "Two Tequesta Point"),
+        ((1345, 896.5), "The Palace Condominium"),
         ((1361, 953), "Double Pole (2S)"),
         ((1701, 911), "Park Grove Condominium (S)"),
         ((1898, 958), "Double Pole (3N)"),
@@ -1834,6 +1839,7 @@ pixels = {
         ((2249, 470), "Marina Club at Blackwater Sound (N)"),
         ((2571, 733), "500 Pompano Dr"),
         ((2733, 434), "New Bahia Honda Bridge (E)"),
+        ((2745, 470), "Island W (S)"),
         ((2961, 543), "House C (E)"),
         ((3077, 523), "House D (E)"),
         ((3117, 434), "New Bahia Honda Bridge (W)"),
@@ -2300,6 +2306,7 @@ pixels = {
         ((709, 927), "Island N (W)"),
         ((766.5, 569), "Unknown Building near VCIA Metro"),
         ((777, 713), "Island V (S)"),
+        ((837.5, 570), "Seybold Pointe (SW)"),
         ((861, 570), "Seybold Pointe (SE)"),
         ((925, 592), "Red Billboard (Hamlet)"),
         ((935, 716), "Island W (N)"),
@@ -2332,14 +2339,17 @@ pixels = {
         ((1511, 524), "Two Tequesta Point"),
         ((1519.5, 585), "Turkey Point Nuclear Power Station (CSW)"),
         ((1528, 571), "Turkey Point Nuclear Power Station (N)"),
+        ((1531, 543.5), "Flamingo South Beach (TW)"),
         ((1537.5, 585), "Turkey Point Nuclear Power Station (CSE)"),
         ((1553, 571), "Turkey Point Nuclear Power Station (S)"),
         ((1652.5, 556), "Turkey Point Nuclear Power Station (1)"),
         ((1655.5, 656), "Long Island (S)"),
         ((1669, 556), "Turkey Point Nuclear Power Station (2)"),
         ((1673, 641), "Bridge Island West (S)"),
+        ((1680, 536), "Icon at South Beach"),
         ((1682, 873.5), "Pin F02L (B)"),
         ((1685, 556), "Turkey Point Nuclear Power Station (3)"),
+        ((1703, 537.5), "Murano Grande"),
         ((1711.5, 1022), "Seven Mile Bridge (W)"),
         ((1753, 636), "Bridge Island (W)"),
         ((1777.5, 551.5), "Apogee Condominium"),
@@ -2696,9 +2706,12 @@ pixels = {
         ((3840, 1060), "Viaduct (Ambrosia) (N)"),
     ],
     "[S2/62] Grassrivers 02 (Watson Bay)": [
+        ((5, 526), "Vizcayne South Condominium (NW)"),
         ((57.5, 594.5), "Unknown Billboard #1"),
+        ((58.5, 546), "Flagler on the River"),
         ((301.5, 532.5), "Miami Tower"),
         ((354, 513), "Wells Fargo Center (N)"),
+        ((505.5, 510), "Met 1 Condominium"),
         ((514, 586), "Latitude on the River (S) (NW)"),
         ((538, 585), "Latitude on the River (S) (SW)"),
         ((604.5, 561.5), "Nine at Mary Brickell Village (A)"),
@@ -2711,8 +2724,7 @@ pixels = {
         ((1018, 528), "Shark Valley Observation Tower"),
         ((1039, 580), "Portofino Tower (S)"),
         ((1049.5, 532.5), "Unknown Radio Tower (Vice City)"),
-        #((1094.5, 547), "Continuum on South Beach (N)"),
-        ((1168, 548), "Continuum on South Beach (S)"),
+        ((1167, 548), "The Palace Condominium"),
         ((1242, 263), "WDNA FM (C)"),
         ((1245, 592), "Unknown Billboard #3"),
         ((1408.5, 572), "Park Grove Condominium (N)"),
@@ -2733,6 +2745,10 @@ pixels = {
         ((2224, 592.5), "Homestead Water Tower (R1)"),
         ((2228, 588), "Homestead Water Tower (R2)"),
         ((2228, 568.5), "Homestead Water Tower (R3)"),
+        ((2235.5, 611.5), "Lamp Post (NW)"),
+        ((2248, 612), "Lamp Post (NE)"),
+        ((2407.5, 612), "Lamp Post (SW)"),
+        ((2417, 612), "Lamp Post (SE)"),
         ((2916.5, 632), "Turkey Point Nuclear Power Station (CNE)"),
         ((2924.5, 632), "Turkey Point Nuclear Power Station (CNW)"),
         ((2957, 608), "Turkey Point Nuclear Power Station (N)"),
@@ -3981,6 +3997,10 @@ landmarks = {
     "Flamingo South Beach (TNE)": (1349.416, 948.263, 112.776),  # d=0.093 via Vice Beach (B) & Alley (W)
     "Flamingo South Beach (TSE)": (1355.650, 927.329, 112.979),  # d=0.298 via Vice Beach (B) & Alley (W)
     "Flamingo South Beach (TSW)": (890.154, 974.121, 101.390),  # d=0.112 via Venetian Islands & Sidewalk (Jason) (E)
+    "Floodgate (A)": (-3085.590, -2529.099, 0.000),  # via Prison
+    "Floodgate (B)": (-3093.506, -2522.670, 0.000),  # via Prison
+    "Floodgate (C)": (-3102.220, -2517.088, 0.000),  # via Prison
+    "Floodgate (D)": (-3110.685, -2510.951, 0.000),  # via Prison
     "The Floridian": (1260.858, 409.236, 96.990),  # d=1.074 via Vice Beach (B) & Sidewalk (Jason) (E)
     "Four Seasons Hotel Miami (32NE)": (-800.000, -1273.000, 156.902),  # Northeast Corner 32nd Floor
     "Four Seasons Hotel Miami (32NW)": (-848.707, -1254.789, 156.902),  # Northwest Corner 32nd Floor
@@ -4562,6 +4582,16 @@ landmarks = {
     "1000 Venetian Way (SW)": (328.830, 1107.149, 68.691),  # d=2.117 via Vice City Postcard & Vice Beach (B)
     "Vice City Sign (V2)": (-3693.643, -460.939, 27.773),  # d=0.018 via Vice City Sign & Vice City 01 (Vice City Sign)
     "Vice City Sign (E3)": (-3707.234, -490.362, 27.630),  # d=0.001 via Vice City Sign & Vice City 01 (Vice City Sign)
+    "Vice River (A)": (-1228.680, -161.411, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (B)": (-1233.533, -129.921, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (C)": (-1250.789, -112.160, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (D)": (-1252.560, -195.573, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (E)": (-1282.782, -209.835, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (F)": (-1256.995, -172.994, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (G)": (-1259.916, -159.257, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (H)": (-1279.429, -160.915, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (I)": (-1292.144, -171.304, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
+    "Vice River (J)": (-1286.916, -157.479, 0.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     "Vizcayne North Condominium (NE)": (-519.960, 155.843, 177.393),  # d=0.027 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne North Condominium (SE)": (-528.220, 98.284, 178.655),  # d=0.093 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne South Condominium (NW)": (-653.953, 38.646, 185.068),  # d=0.041 via Vintage Vice City Outfits and Hairstyles 04 (Rooftop) & Skyline
