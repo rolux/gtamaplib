@@ -2440,7 +2440,7 @@ pixels = {
         ((2088, 912), "Seven Mile Bridge (17B)"),
         ((2106.5, 963.5), "Old Seven Mile Bridge (F)"),
         ((2114.5, 901.5), "Seven Mile Bridge (16B)"),
-        ((2119, 641), "House with Boat (X)"),
+        ((2131.5, 643.5), "House with Boat (X)"),
         ((2127.5, 663), "Key Lento (Z)"),
         ((2139, 891), "Seven Mile Bridge (15B)"),
         ((2156, 797), "Seven Mile Bridge (C)"),
