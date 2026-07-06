@@ -3565,16 +3565,16 @@ pixels = {
         ((1779.5, 50.5), "Brickell Arch"),
     ],
     "[S3/17] Jason's Safehouse Vehicles (X)": [
-        ((0, 1065), "Island D (1)"),
+        ((0, 1065), "Island B (1)"),
         ((189.5, 712), "Jason's House (South Veranda) (TSW)"),
-        ((213.5, 1062.5), "Island D (2)"),
+        ((213.5, 1062.5), "Island B (2)"),
         ((247.5, 918), "Jason's House (Pillar 11) (TSW)"),
         ((260.5, 1488.5), "Jason's House (Pillar 11) (BSW)"),
         ((263, 918), "Jason's House (Pillar 11) (TSE)"),
         ((272, 1492.5), "Jason's House (Pillar 11) (BSE)"),
         ((290, 918), "Jason's House (Pillar 11) (TNE)"),
         ((298.5, 1488), "Jason's House (Pillar 11) (BNE)"),
-        ((339.5, 1060.5), "Island D (3)"),
+        ((339.5, 1060.5), "Island B (3)"),
         ((379.5, 914), "Jason's House (Pillar 10) (TSW)"),
         ((395.5, 914.5), "Jason's House (Pillar 10) (TSE)"),
         ((405, 914), "Jason's House (Pillar 10) (TNE)"),
@@ -3612,7 +3612,7 @@ pixels = {
         ((1854, 1341), "Jason's House (Pillar 6) (BSW)"),
         ((1953.5, 689.5), "Jason's House (Window 3) (BN)"),
         ((1954, 461.5), "Jason's House (Window 3) (TN)"),
-        ((2050, 1054), "Island B (1)"),
+        ((2050, 1054), "Island D (1)"),
         ((2068.5, 929.5), "Jason's House (Front Stairs) (MTSE)"),
         ((2192, 932.5), "Jason's House (Front Stairs) (MTNE)"),
         ((2236.5, 719.5), "Jason's House (Window 4) (BS)"),
@@ -3637,16 +3637,16 @@ pixels = {
         ((2857.5, 776), "Jason's House (Upper Veranda) (TNE)"),
         ((3050, 496.5), "Jason's House (Power Pole) (T)"),
         ((3077.5, 908), "Jason's House (North Veranda) (TNE)"),
-        ((3130.5, 1056), "Island A (1)"),
-        ((3222, 1066.5), "Island A (2)"),
+        ((3130.5, 1056), "Island E (1)"),
+        ((3222, 1066.5), "Island E (2)"),
         ((3241, 858), "Titan America"),
         ((3255, 1393.5), "Jason's House (Boat Ramp) (SW2)"),
         #((3255, 1384.5), "Jason's House (Boat Ramp) (SW)"),
         ((3304, 1404), "Jason's House (Boat Ramp) (SW)"),
         ((3410, 863.5), "Homestead Water Tower"),
         ((3490, 695), "Unknown Mast (South Leonida) (1)"),
-        ((3540, 1070.5), "Island A (3)"),
-        ((3617, 1069), "Island A (4)"),
+        ((3540, 1070.5), "Island E (3)"),
+        ((3617, 1069), "Island E (4)"),
         #((3632.5, 1268), "Jason's House (Boat Ramp) (NW)"),
         ((3634, 1294.5), "Jason's House (Boat Ramp) (NW)"),
         ((3840, 1444), "Jason's House (Boat Ramp) (S)"),
@@ -4167,7 +4167,19 @@ landmarks = {
     "Infinity at Brickell (SW)": (-1210.949, -1425.733, 174.572),  # d=0.830 via Metro (SE) (C) & Vice City 01 (Vice City Sign)
     "InterContinental Miami (N)": (-257.532, -484.558, 134.691),  # d=1.171 via Vice City Postcard & Vice City 03 (Basketball)
     "Fisher Island (Z)": (2039.142, -1599.724, 0.000),  # via Leonida Keys Postcard (X)
+    "Island A (1)": (-2395.473, -5357.136, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island A (2)": (-2386.001, -5372.459, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island A (3)": (-2371.781, -5369.169, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island A (4)": (-2369.228, -5364.479, 0.000),  # via Jason's Safehouse Vehicles (X)
     "Island A (W)": (-2589.251, -5648.837, 0.000),  # via Leonida Keys Postcard (X)
+    "Island B (1)": (-2445.936, -5390.611, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island C (1)": (-2517.450, -5419.032, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island C (2)": (-2510.675, -5419.778, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island C (3)": (-2503.078, -5415.444, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island C (4)": (-2500.853, -5406.435, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island D (1)": (-2518.877, -5470.360, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island D (2)": (-2514.199, -5461.703, 0.000),  # via Jason's Safehouse Vehicles (X)
+    "Island D (3)": (-2512.213, -5455.938, 0.000),  # via Jason's Safehouse Vehicles (X)
     "Island E (S)": (-2422.094, -5436.242, 0.000),  # via Leonida Keys Postcard (X)
     "Island F (E)": (-1836.840, -5764.982, 0.000),  # via Leonida Keys Postcard (X)
     "Island F (W)": (-1881.916, -5938.526, 0.000),  # via Leonida Keys Postcard (X)
