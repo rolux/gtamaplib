@@ -3565,23 +3565,30 @@ pixels = {
         ((1779.5, 50.5), "Brickell Arch"),
     ],
     "[S3/17] Jason's Safehouse Vehicles (X)": [
+        ((0, 1065), "Island D (1)"),
         ((189.5, 712), "Jason's House (South Veranda) (TSW)"),
+        ((213.5, 1062.5), "Island D (2)"),
         ((247.5, 918), "Jason's House (Pillar 11) (TSW)"),
         ((260.5, 1488.5), "Jason's House (Pillar 11) (BSW)"),
         ((263, 918), "Jason's House (Pillar 11) (TSE)"),
         ((272, 1492.5), "Jason's House (Pillar 11) (BSE)"),
         ((290, 918), "Jason's House (Pillar 11) (TNE)"),
         ((298.5, 1488), "Jason's House (Pillar 11) (BNE)"),
+        ((339.5, 1060.5), "Island D (3)"),
         ((379.5, 914), "Jason's House (Pillar 10) (TSW)"),
         ((395.5, 914.5), "Jason's House (Pillar 10) (TSE)"),
         ((405, 914), "Jason's House (Pillar 10) (TNE)"),
         ((654, 408), "Jason's House (Roof) (SW)"),
         ((756.5, 429.5), "Jason's House (Main) (TSW)"),
         ((861.5, 516.5), "Jason's House (Window 1) (TW)"),
+        ((865, 1044.5), "Island C (1)"),
+        ((921.5, 1046.5), "Island C (2)"),
         ((1036, 496), "Jason's House (Window 1) (TE)"),
+        ((1057, 1047), "Island C (3)"),
         ((1113, 127.5), "Jason's House (Roof) (S)"),
         ((1146.5, 484), "Jason's House (Front Door) (TW)"),
         ((1178, 1248), "Jason's House (Garden Table) (BC)"),
+        ((1194.5, 1044.5), "Island C (4)"),
         ((1277.5, 902.5), "Jason's House (Pillar 9) (TSW)"),
         ((1290.5, 467), "Jason's House (Front Door) (TE)"),
         ((1303, 901), "Jason's House (Pillar 9) (TSE)"),
@@ -3605,6 +3612,7 @@ pixels = {
         ((1854, 1341), "Jason's House (Pillar 6) (BSW)"),
         ((1953.5, 689.5), "Jason's House (Window 3) (BN)"),
         ((1954, 461.5), "Jason's House (Window 3) (TN)"),
+        ((2050, 1054), "Island B (1)"),
         ((2068.5, 929.5), "Jason's House (Front Stairs) (MTSE)"),
         ((2192, 932.5), "Jason's House (Front Stairs) (MTNE)"),
         ((2236.5, 719.5), "Jason's House (Window 4) (BS)"),
@@ -3629,12 +3637,16 @@ pixels = {
         ((2857.5, 776), "Jason's House (Upper Veranda) (TNE)"),
         ((3050, 496.5), "Jason's House (Power Pole) (T)"),
         ((3077.5, 908), "Jason's House (North Veranda) (TNE)"),
+        ((3130.5, 1056), "Island A (1)"),
+        ((3222, 1066.5), "Island A (2)"),
         ((3241, 858), "Titan America"),
         ((3255, 1393.5), "Jason's House (Boat Ramp) (SW2)"),
         #((3255, 1384.5), "Jason's House (Boat Ramp) (SW)"),
         ((3304, 1404), "Jason's House (Boat Ramp) (SW)"),
         ((3410, 863.5), "Homestead Water Tower"),
         ((3490, 695), "Unknown Mast (South Leonida) (1)"),
+        ((3540, 1070.5), "Island A (3)"),
+        ((3617, 1069), "Island A (4)"),
         #((3632.5, 1268), "Jason's House (Boat Ramp) (NW)"),
         ((3634, 1294.5), "Jason's House (Boat Ramp) (NW)"),
         ((3840, 1444), "Jason's House (Boat Ramp) (S)"),
@@ -4187,6 +4199,7 @@ landmarks = {
     "Jason's House (Basketball Hoop) (BS)": (-2346.594, -5526.660, 4.954),  # d=0.011 via House (Keys) & Jason's Safehouse Vehicles (X)
     "Jason's House (Basketball Hoop) (TN)": (-2346.540, -5524.777, 6.085),  # d=0.011 via House (Keys) & Jason's Safehouse Vehicles (X)
     "Jason's House (Basketball Hoop) (TS)": (-2346.636, -5526.582, 6.098),  # d=0.006 via House (Keys) & Jason's Safehouse Vehicles (X)
+    "Jason's House (Boat Ramp) (NW)": (-2341.767, -5508.612, 1.900),  # via Jason's Safehouse Vehicles (X)
     "Jason's House (Boat Ramp) (S)": (-2338.129, -5520.416, 1.900),  # via Jason's Safehouse Vehicles (X)
     "Jason's House (Boat Ramp) (SW)": (-2342.092, -5520.477, 1.900),  # via Jason's Safehouse Vehicles (X)
     "Jason's House (Boat Ramp) (SW2)": (-2342.497, -5520.445, 1.900),  # via House with Boat (X)
@@ -4984,6 +4997,7 @@ landmarks = {
 maps = {
     "aiwe": (0, 0.680, (4655.668, 2388.364)),
     "dupzor": (51, 0.558, (9037, 6693)),
+    "jasons_house": (0, 10.000, (25000, -53750)),
     "martipk": (5, 0.558, (9037-5500, 6693-5500)),
     #"rickrick": (2, 2.500, (5000, 7500)),
     "rickrick": (3, 1.000, (3000, -500)),
