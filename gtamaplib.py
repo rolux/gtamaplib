@@ -606,11 +606,18 @@ class Camera:
         """
         if not hasattr(self, "image"): self.open()
         for lm_name, xyz in md.landmarks.items():
+            x, y, z = xyz
             normalized = normalize_name(lm_name)
             if normalized in LANDMARK_OBJECTS:
                 LANDMARK_OBJECTS[normalized].render_on_camera(self)
+            elif z != 0:
+                self.render_line((xyz, (x, y, 0)), get_color(lm_name), width)
             else:
-                self.render_line((xyz, (xyz[0], xyz[1], 0)), get_color(lm_name), width)
+                self.render_line(((x - 1, y, z), (x + 1, y, z)), get_color(lm_name), width)
+                self.render_line(((x, y - 1, z), (x, y + 1, z)), get_color(lm_name), width)
+                self.render_line(((x, y, z - 1), (x, y, z + 1)), get_color(lm_name), width)
+        LANDMARK_OBJECTS["Jason"].render_on_camera(self)
+        LANDMARK_OBJECTS["Jason's House"].render_on_camera(self)
         return self
 
     def render_line(self, line, fill=(0, 0, 0), width=1):
@@ -1771,6 +1778,7 @@ class HomesteadWaterTower(Landmark):
                 point = get_point(self.t, direction, r)
                 next_point = get_point(self.t, next_direction, r)
                 m.draw_line((point, next_point), self.color, width)
+        return self
 
     def render_on_camera(self, cam, width=0.25):
         step = 15
@@ -1787,6 +1795,106 @@ class HomesteadWaterTower(Landmark):
                 cam.render_line((point, next_point), self.color, width)
                 next_point = get_point((self.t[0], self.t[1], zs[zi + 1]), direction, next_r)
                 cam.render_line((point, next_point), self.color, width)
+        return self
+
+
+class Jason(Landmark):
+
+    def __init__(self):
+        super().__init__("Jason")
+        self.marker_z = 0.9
+        self.height = 1.8
+        self.shoulders = 1.6
+        self.r = 0.2
+        self.player = get_camera("House with Boat (X)").player
+        self.bottom = (self.player[0], self.player[1], self.player[2] - self.marker_z)
+        self.top = (self.player[0], self.player[1], self.bottom[2] + self.height)
+
+    def draw_on_map(self, m, width=1):
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        bx, by, bz = self.bottom
+        sz = bz + self.shoulders
+        for deg in range(0, 360, 10):
+            rad = np.radians(deg)
+            x, y = (bx + np.cos(rad) * self.r, by + np.sin(rad) * self.r)
+            cam.render_line((self.bottom, (x, y, bz)), self.color, width)
+            cam.render_line(((x, y, bz), (x, y, sz)), self.color, width)
+            prev = (x, y, sz)
+            for head_deg in range(10, 91, 10):
+                head_rad = np.radians(head_deg)
+                ring_r = np.cos(head_rad) * self.r
+                z = sz + np.sin(head_rad) * self.r
+                curr = (bx + np.cos(rad) * ring_r, by + np.sin(rad) * ring_r, z)
+                cam.render_line((prev, curr), self.color, width)
+                prev = curr
+        return self
+
+
+class JasonsHouse(Landmark):
+
+    def __init__(self):
+        super().__init__("Jason's House")
+        self.roof_se = md.landmarks["Jason's House (Roof) (BSE)"]
+        self.roof_ne = md.landmarks["Jason's House (Roof) (NE)"]
+        self.roof_s = md.landmarks["Jason's House (Roof) (S)"]
+        self.roof_se = md.landmarks["Jason's House (Roof) (SE)"]
+        self.roof_sw = md.landmarks["Jason's House (Roof) (SW)"]
+        self.base_ne = md.landmarks["Jason's House (Main) (BNE)"]
+        self.top_ne = md.landmarks["Jason's House (Main) (TNE)"]
+        self.top_se = md.landmarks["Jason's House (Main) (TSE)"]
+        self.top_sw = md.landmarks["Jason's House (Main) (TSW)"]
+        self.z = 1.9
+        self._construct()
+
+    def _construct(self):
+        self.base_se = (self.top_se[0], self.top_se[1], self.base_ne[2])
+        self.base_sw = (self.top_sw[0], self.top_sw[1], self.base_ne[2])
+        self.base_nw = (self.top_sw[0], self.top_ne[1], self.base_ne[2])
+        self.ground_se = (self.base_se[0], self.base_se[1], self.z)
+        self.ground_sw = (self.base_sw[0], self.base_sw[1], self.z)
+        self.ground_nw = (self.base_nw[0], self.base_nw[1], self.z)
+        self.ground_ne = (self.base_ne[0], self.base_ne[1], self.z)
+        self.top_nw = (self.base_nw[0], self.base_nw[1], (self.top_sw[2] + self.top_ne[2]) / 2)
+        self.roof_n = (
+            self.roof_ne[0] + (self.roof_s[0] - self.roof_se[0]),
+            self.roof_ne[1] + (self.roof_s[1] - self.roof_se[1]),
+            self.roof_ne[2] + (self.roof_s[2] - self.roof_se[2]),
+        )
+        self.roof_nw = (
+            self.roof_ne[0] + (self.roof_sw[0] - self.roof_se[0]),
+            self.roof_ne[1] + (self.roof_sw[1] - self.roof_se[1]),
+            self.roof_ne[2] + (self.roof_sw[2] - self.roof_se[2]),
+        )
+
+    def draw_on_map(self, m, width=1):
+        return self
+
+    def render_on_camera(self, cam, width=4):
+        for line in (
+            (self.ground_se, self.base_se),
+            (self.ground_sw, self.base_sw),
+            (self.ground_nw, self.base_nw),
+            (self.ground_ne, self.base_ne),
+            (self.base_se, self.base_sw),
+            (self.base_sw, self.base_nw),
+            (self.base_nw, self.base_ne),
+            (self.base_ne, self.base_se),
+            (self.base_se, self.top_se),
+            (self.base_sw, self.top_sw),
+            (self.base_nw, self.top_nw),
+            (self.base_ne, self.top_ne),
+            (self.roof_se, self.roof_s),
+            (self.roof_s, self.roof_sw),
+            (self.roof_sw, self.roof_nw),
+            (self.roof_nw, self.roof_n),
+            (self.roof_n, self.roof_ne),
+            (self.roof_ne, self.roof_se),
+            (self.roof_s, self.roof_n),
+        ):
+            cam.render_line(line, self.color, width)
+        return self
 
 
 ### AIWE ##########################################################################################
@@ -2155,7 +2263,8 @@ def find_camera(
     bearing_limits=None,
     horizon_limits=None,
     ray_pairs=None,
-    max_size_delta=1.05
+    max_size_delta=1.05,
+    no_markers=False,
 ):
     """
     Finds the optimal camera position and settings within a given map region,
@@ -2251,7 +2360,7 @@ def find_camera(
     m.draw_camera(cam_name, d=10000, no_marker=True)
     other_cam_names = list(set(other_cam_name for other_cam_name, lm_name in rays))
     for other_cam_name in other_cam_names:
-        m.draw_camera(other_cam_name, d=20000)
+        m.draw_camera(other_cam_name, d=20000, no_marker=no_markers)
     for lm_name in lm_names:
         point_xy = get_point(cam.xyz, cam.get_landmark_direction(lm_name), 20000)[:2]
         color = get_color(lm_name)
@@ -2968,3 +3077,5 @@ HW = HanksWaffles()
 SSB = SunshineSkywayBridge()
 WDNA = WDNAFM()
 HWT = HomesteadWaterTower()
+J = Jason()
+JH = JasonsHouse()
