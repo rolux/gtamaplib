@@ -1020,6 +1020,8 @@ class Map:
                 LANDMARK_OBJECTS[nomalized].draw_on_map(self)
             else:
                 self.draw_landmark(lm_name, r=r)
+        LANDMARK_OBJECTS["Jason"].draw_on_map(self)
+        LANDMARK_OBJECTS["Jason's House"].draw_on_map(self)
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
@@ -1074,7 +1076,7 @@ class Map:
         )
         rays = {}
         for cam in cameras:
-            # if not "Ambrosia 01" in cam.name: continue
+            # if not "Key" in cam.name: continue
             for lm_name in cam.landmark_pixels:
                 # if not "Ambrosia Hill" in lm_name: continue
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
@@ -1811,6 +1813,7 @@ class Jason(Landmark):
         self.top = (self.player[0], self.player[1], self.bottom[2] + self.height)
 
     def draw_on_map(self, m, width=1):
+        m.draw_circle(self.player, 0.2, self.color, self.color, 1)
         return self
 
     def render_on_camera(self, cam, width=1):
@@ -1834,18 +1837,28 @@ class Jason(Landmark):
 
 class JasonsHouse(Landmark):
 
-    def __init__(self):
+    def __init__(self, offset=(0, 0)):
         super().__init__("Jason's House")
-        self.roof_se = md.landmarks["Jason's House (Roof) (BSE)"]
-        self.roof_ne = md.landmarks["Jason's House (Roof) (NE)"]
-        self.roof_s = md.landmarks["Jason's House (Roof) (S)"]
-        self.roof_se = md.landmarks["Jason's House (Roof) (SE)"]
-        self.roof_sw = md.landmarks["Jason's House (Roof) (SW)"]
         self.base_ne = md.landmarks["Jason's House (Main) (BNE)"]
-        self.top_ne = md.landmarks["Jason's House (Main) (TNE)"]
         self.top_se = md.landmarks["Jason's House (Main) (TSE)"]
         self.top_sw = md.landmarks["Jason's House (Main) (TSW)"]
+        self.top_ne = md.landmarks["Jason's House (Main) (TNE)"]
+        self.roof_se = md.landmarks["Jason's House (Roof) (SE)"]
+        self.roof_s = md.landmarks["Jason's House (Roof) (S)"]
+        self.roof_sw = md.landmarks["Jason's House (Roof) (SW)"]
+        self.roof_ne = md.landmarks["Jason's House (Roof) (NE)"]
+        self.stairs_2 = md.landmarks["Jason's House (Front Stairs) (MTNE)"]
+        self.stairs_3 = md.landmarks["Jason's House (Front Stairs) (MTSE)"]
+        self.stairs_4 = md.landmarks["Jason's House (South Veranda) (TNE)"]
+        self.veranda_se = md.landmarks["Jason's House (South Veranda) (TSE)"]
+        self.veranda_sw = md.landmarks["Jason's House (South Veranda) (TSW)"]
+        self.veranda_ne = md.landmarks["Jason's House (Upper Veranda) (TNE)"]
+        self.power_pole_t = md.landmarks["Jason's House (Power Pole) (T)"]
+        self.boat_ramp_s = md.landmarks["Jason's House (Boat Ramp) (S)"]
+        self.boat_ramp_sw = md.landmarks["Jason's House (Boat Ramp) (SW)"]
+        self.boat_ramp_nw = md.landmarks["Jason's House (Boat Ramp) (NW)"]
         self.z = 1.9
+        self.ox, self.oy = offset
         self._construct()
 
     def _construct(self):
@@ -1858,21 +1871,51 @@ class JasonsHouse(Landmark):
         self.ground_ne = (self.base_ne[0], self.base_ne[1], self.z)
         self.top_nw = (self.base_nw[0], self.base_nw[1], (self.top_sw[2] + self.top_ne[2]) / 2)
         self.roof_n = (
-            self.roof_ne[0] + (self.roof_s[0] - self.roof_se[0]),
-            self.roof_ne[1] + (self.roof_s[1] - self.roof_se[1]),
-            self.roof_ne[2] + (self.roof_s[2] - self.roof_se[2]),
+            self.roof_ne[0] + self.roof_s[0] - self.roof_se[0],
+            self.roof_ne[1] + self.roof_s[1] - self.roof_se[1],
+            self.roof_ne[2] + self.roof_s[2] - self.roof_se[2],
         )
         self.roof_nw = (
-            self.roof_ne[0] + (self.roof_sw[0] - self.roof_se[0]),
-            self.roof_ne[1] + (self.roof_sw[1] - self.roof_se[1]),
-            self.roof_ne[2] + (self.roof_sw[2] - self.roof_se[2]),
+            self.roof_ne[0] + self.roof_sw[0] - self.roof_se[0],
+            self.roof_ne[1] + self.roof_sw[1] - self.roof_se[1],
+            self.roof_ne[2] + self.roof_sw[2] - self.roof_se[2],
         )
+        self.stairs_1 = (
+            self.stairs_2[0] + (self.stairs_3[0] - self.stairs_4[0]) * 1.6,
+            self.stairs_2[1] + (self.stairs_3[1] - self.stairs_4[1]) * 1.6,
+            self.stairs_2[2] + (self.stairs_3[2] - self.stairs_4[2]) * 1.6,
+        )
+        self.stairs_0 = (self.stairs_1[0], self.stairs_1[1], self.z)
+        self.veranda_nw = (self.veranda_sw[0], self.veranda_ne[1], (self.veranda_sw[2] + self.veranda_ne[2]) / 2)
+        self.veranda_e = (self.base_ne[0], self.base_ne[1], self.veranda_ne[2])
+        self.power_pole_b = (self.power_pole_t[0], self.power_pole_t[1], self.z)
 
     def draw_on_map(self, m, width=1):
+        for line in [
+            (self.roof_se, self.roof_s),
+            (self.roof_s, self.roof_sw),
+            (self.roof_sw, self.roof_nw),
+            (self.roof_nw, self.roof_n),
+            (self.roof_n, self.roof_ne),
+            (self.roof_ne, self.roof_se),
+            (self.roof_s, self.roof_n),
+            (self.stairs_1, self.stairs_2),
+            (self.stairs_2, self.stairs_3),
+            (self.stairs_3, self.stairs_4),
+            (self.stairs_4, self.veranda_se),
+            (self.veranda_se, self.veranda_sw),
+            (self.veranda_sw, self.veranda_nw),
+            (self.veranda_nw, self.veranda_ne),
+            (self.veranda_ne, self.veranda_e),
+            (self.boat_ramp_s, self.boat_ramp_sw),
+            (self.boat_ramp_sw, self.boat_ramp_nw),
+        ]:
+            m.draw_line(line, self.color, width)
+        m.draw_circle(self.power_pole_t, 0.1, self.color, self.color, 1)
         return self
 
     def render_on_camera(self, cam, width=4):
-        for line in (
+        for line in [
             (self.ground_se, self.base_se),
             (self.ground_sw, self.base_sw),
             (self.ground_nw, self.base_nw),
@@ -1892,8 +1935,21 @@ class JasonsHouse(Landmark):
             (self.roof_n, self.roof_ne),
             (self.roof_ne, self.roof_se),
             (self.roof_s, self.roof_n),
-        ):
-            cam.render_line(line, self.color, width)
+            (self.stairs_0, self.stairs_1),
+            (self.stairs_1, self.stairs_2),
+            (self.stairs_2, self.stairs_3),
+            (self.stairs_3, self.stairs_4),
+            (self.stairs_4, self.veranda_se),
+            (self.veranda_se, self.veranda_sw),
+            (self.veranda_sw, self.veranda_nw),
+            (self.veranda_nw, self.veranda_ne),
+            (self.veranda_ne, self.veranda_e),
+            (self.power_pole_b, self.power_pole_t),
+        ]:
+            cam.render_line((
+                (line[0][0] + self.ox, line[0][1] + self.oy, line[0][2]),
+                (line[1][0] + self.ox, line[1][1] + self.oy, line[1][2]),
+            ), self.color, width)
         return self
 
 
