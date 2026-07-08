@@ -4100,7 +4100,7 @@ landmarks = {
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
-    "FAA Miami ATCT (MIA)": (-2369.054, -777.804, 96.640),  # d=2.091 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
+    "FAA Miami ATCT (MIA)": (-2369.818, -778.110, 96.518),  # d=2.343 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "Fisher Island (Z)": (2530.369, -1084.998, 0.000),  # via Leonida Keys Postcard (X)
     "Fisher Island (Z)": (2078.605, -1554.314, 0.000),  # via Leonida Keys Postcard (X)
     "Flagler Memorial Island (N)": (820.612, 994.645, 0.000),  # via Venetian Islands
@@ -4855,21 +4855,21 @@ landmarks = {
     "The Waverly South Beach (NW)": (1230.092, 629.710, 106.965),  # d=2.282 via Tennis Court (SE) & Vice Beach (B)
     "The Waverly South Beach (SE)": (1264.980, 579.673, 113.901),  # d=1.289 via Rooftop Party & Vice Beach (B)
     "WDNA FM": (-2530.681, -2299.410, 407.397),  # d=0.521 via Leonida Keys 01 (Airplane) (X) & Prison
-    "WDNA FM (N0)": (-2517.797, -2295.134, 5.000),  # via Prison
-    "WDNA FM (SE0)": (-2518.470, -2298.697, 5.000),  # via Prison
-    "WDNA FM (SW0)": (-2521.763, -2299.011, 5.000),  # via Prison
-    "WDNA FM (N1)": (-2517.797, -2295.134, 216.387),  # via Prison
-    "WDNA FM (SE1)": (-2518.470, -2298.697, 216.387),  # via Prison
-    "WDNA FM (SW1)": (-2521.763, -2299.011, 216.387),  # via Prison
-    "WDNA FM (N2)": (-2517.797, -2295.134, 375.504),  # via Prison
-    "WDNA FM (SE2)": (-2518.470, -2298.697, 375.504),  # via Prison
-    "WDNA FM (SW2)": (-2521.763, -2299.011, 375.504),  # via Prison
-    "WDNA FM (N3)": (-2517.797, -2295.134, 391.946),  # via Prison
-    "WDNA FM (SE3)": (-2518.470, -2298.697, 391.946),  # via Prison
-    "WDNA FM (SW3)": (-2521.763, -2299.011, 391.946),  # via Prison
-    "WDNA FM (N4)": (-2517.797, -2295.134, 398.868),  # via Prison
-    "WDNA FM (SE4)": (-2518.470, -2298.697, 398.868),  # via Prison
-    "WDNA FM (SW4)": (-2521.763, -2299.011, 398.868),  # via Prison
+    "WDNA FM (N0)": (-2527.894, -2300.161, 5.000),  # via Prison
+    "WDNA FM (SE0)": (-2528.923, -2301.700, 5.000),  # via Prison
+    "WDNA FM (SW0)": (-2531.200, -2302.250, 5.000),  # via Prison
+    "WDNA FM (N1)": (-2527.894, -2300.161, 214.377),  # via Prison
+    "WDNA FM (SE1)": (-2528.923, -2301.700, 214.377),  # via Prison
+    "WDNA FM (SW1)": (-2531.200, -2302.250, 214.377),  # via Prison
+    "WDNA FM (N2)": (-2527.894, -2300.161, 371.755),  # via Prison
+    "WDNA FM (SE2)": (-2528.923, -2301.700, 371.755),  # via Prison
+    "WDNA FM (SW2)": (-2531.200, -2302.250, 371.755),  # via Prison
+    "WDNA FM (N3)": (-2527.894, -2300.161, 388.017),  # via Prison
+    "WDNA FM (SE3)": (-2528.923, -2301.700, 388.017),  # via Prison
+    "WDNA FM (SW3)": (-2531.200, -2302.250, 388.017),  # via Prison
+    "WDNA FM (N4)": (-2527.894, -2300.161, 397.707),  # via Prison
+    "WDNA FM (SE4)": (-2528.923, -2301.700, 397.707),  # via Prison
+    "WDNA FM (SW4)": (-2531.200, -2302.250, 397.707),  # via Prison
     ##"Wells Fargo Center (N)": (-642.090, -403.002, 187.267),  # d=2.755 via Vice Beach (B) & Prison
     #"Wells Fargo Center (N)": (-625.117, -394.342, 185.680),  # d=0.001 via Skyline & Vice Beach (B)
     "Wells Fargo Center (N)": (-660.923, -412.505, 188.397),  # d=2.586 via Vice City Postcard & Vice Beach (B)
