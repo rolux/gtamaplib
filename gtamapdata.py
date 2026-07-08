@@ -190,7 +190,7 @@ cameras = {
     "[T2/26] Veranda (1)": None,
     "[T2/27] Veranda (2)": None,
     "[T2/28] Pier (Land)": None,
-    "[T2/29] Pier (Sea)": (None, (-2545.000, -5705.000, 2.500), (45.000, -0.500, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [2494]"),
+    "[T2/29] Pier (Sea)": (None, (-2475.000, -5625.000, 2.500), (45.000, -0.500, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [2494]"),
     "[T2/32] Sidewalk (Trash)": None,
     "[T2/37] Yacht (1)": (None, (400.000, 1700.000, 5.000), (335.000, -1.500, 0.000), (52.000, None), (3840, 1728), "Trailer 2 [2884]"),
     "[T2/38] Yacht (2)": (None, (400.000, 1700.000, 5.000), (188.000, 0.500, 0.000), (52.000, None), (3840, 1728), "Trailer 2 [2884]"),
@@ -211,7 +211,7 @@ cameras = {
     "[T2/64] Dominion Hotel": (None, (2050.000, 925.000, 3.000), (139.000, 2.000, 0.000), (55.000, None), (3840, 1728), "Trailer 2 [3802]"),
     "[T2/65] Ocean View Hotel": (None, (1965.000, 615.000, 3.000), (25.000, 11.000, 0.000), (45.000, None), (3840, 1728), "Trailer 2 [3803]"),
     "[T2/66] Strip Club (Sundays)": None,
-    "[T2/67] Television": (None, (-2352.500, -5527.900, 8.000), (26.554, -4.908, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3882]"),
+    "[T2/67] Television": (None, (-2352.000, -5526.000, 7.000), (26.500, -5.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3882]"),
     "[T2/69] Helicopter (1)": None,
     "[T2/70] Helicopter (2)": None,
     "[T2/71] Jet Ski": (None, (1000.000, 850.000, 0.500), (341.000, 1.000, 0.000), (65.000, None), (3840, 1728), "Trailer 2 [4202]"),
@@ -245,9 +245,9 @@ cameras = {
     "[S2/44] Vice City 08 (Ferris Wheel)": (None, (-450.000, 849.000, 76.399), (212.812, -10.000, 0.000), (41.200, 23.876), (3840, 2160), "Vice City 08 [1]"),
     "[S2/45] Vice City 09 (La Perle)": (None, (-1250.000, 1150.000, 7.000), (300.000, 2.000, 0.000), (50.000, None), (3840, 2160), "Vice City 09 [1]"),
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4429.400, -7608.400, 83.702), (318.430, -9.370, 0.000), (62.160, 37.459), (3840, 2160), "Leonida Keys 01 [1]"),
-    "[S2/47] Leonida Keys 02 (Sidewalk)": (None, (-2933.000, -6433.000, 2.000), (105.000, 1.000, 0.000), (45.000, None), (3840, 2160), "Leonida Keys 02 [1]"),
+    "[S2/47] Leonida Keys 02 (Sidewalk)": (None, (-2933.000, -6433.000, 2.000), (101.738, 0.112, 0.000), (45.000, None), (3840, 2160), "Leonida Keys 02 [1]"),
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
-    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3171.000, -6350.000, 5.459), (161.531, -16.700, 0.000), (72.300, 44.679), (3840, 2160), "Leonida Keys 05 [1]"),
+    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3222.000, -6369.000, 8.819), (166.553, -20.000, 0.000), (82.700, 52.674), (3840, 2160), "Leonida Keys 05 [1]"),
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
@@ -287,8 +287,7 @@ cameras = {
     "[S3/12] Vice City Style 01 (Couch)": None,
     "[S3/15] Vice City Style 04 (Gallery)": None,
     "[S3/17] Jason's Safehouse Vehicles (X)": (None, (-2333.600, -5551.300, 5.610), (36.829, -1.900, 0.000), (57.000, 33.967), (3840, 2160), "Jason's Safehouse Vehicles [1]"),
-    
-    "[S3/19] Crest Kayak": (None, (-2395.000, -5525.000, 0.452), (130.230, -4.300, 4.500), (42.000, 24.369), (3840, 2160), "Crest Kayak [1]"),
+    "[S3/19] Crest Kayak": (None, (-2388.000, -5500.000, 0.075), (130.788, -4.000, 4.500), (40.300, 23.324), (3840, 2160), "Crest Kayak [1]"),
     "[S3/20] Ganado Retro Build": None,
     "[S3/23] Rideout Customs Mod Shop 03 (Garage)": None,
     "[S3/24] Sara's Unisex Salon 01 (Exterior)": (None, (-2564.000, -3410.000, 9.500), (210.000, 1.000, 2.000), (45.000, None), (3840, 2160), "Sara's Unisex Salon 01 [1]"),
@@ -2530,6 +2529,7 @@ pixels = {
         ((3057, 317), "Pin B01L"),
         ((3134, 311), "Pin C01R"),
         ((3165, 309), "Pin B02R"),
+        ((3181, 248), "Seven Mile Bridge (C)"),
         ((3563, 318), "Pin B02L"),
     ],
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": [
@@ -4168,7 +4168,7 @@ landmarks = {
     #"House C (E)": (-2402.372, -5589.501, 10.750),  # d=2.026 via Key Lento & Leonida Keys Postcard (X)
     #"House D (E)": (-2391.100, -5564.657, 16.072),  # d=0.109 via Key Lento & Leonida Keys Postcard (X)
     "House D (SW)": (-2286.449, -5428.357, 14.852),  # d=3.201 via House with Boat (X) & Leonida Keys 01 (Airplane) (X)
-    "House with Pier (E)": (-3155.670, -6500.087, 12.353),  # d=0.548 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
+    "House with Pier (E)": (-3186.807, -6504.983, 15.599),  # d=0.322 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
     "Icon at South Beach": (1473.840, 133.329, 140.906),  # d=4.558 via Vice Beach (B) & Leonida Keys Postcard (X)
     "Infinity at Brickell": (-1183.043, -1370.105, 169.573),  # d=2.667 via Metro (SE) (B) & Highway (Peacock Bay) (A)
     "Infinity at Brickell (SW)": (-1210.949, -1425.733, 174.572),  # d=0.830 via Metro (SE) (C) & Vice City 01 (Vice City Sign)
@@ -4602,6 +4602,7 @@ landmarks = {
     "Pin F04L (B)": (-3716.406, -7280.707, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Pin F04R (B)": (-3559.036, -7183.056, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Pin F05L (B)": (-3496.769, -7295.969, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "118 Poinsetta Dr": (-2626.617, -5762.452, 10.703),  # d=0.024 via Crest Kayak & Leonida Keys Postcard (X)
     "Pole near Signature Hangar 2": (-2504.291, -51.302, 19.127),  # d=0.219 via Airport (X) & Hangar (A)
     "500 Pompano Dr": (-1925.160, -5317.926, 19.290),  # d=9.887 via Leonida Keys Postcard (X) & Key Lento
     "200 Pompano Dr": (-1857.607, -5357.935, 13.370),  # d=1.218 via Leonida Keys Postcard (X) & Key Lento
