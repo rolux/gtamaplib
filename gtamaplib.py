@@ -1853,6 +1853,8 @@ class JasonsHouse(Landmark):
         self.veranda_se = md.landmarks["Jason's House (South Veranda) (TSE)"]
         self.veranda_sw = md.landmarks["Jason's House (South Veranda) (TSW)"]
         self.veranda_ne = md.landmarks["Jason's House (Upper Veranda) (TNE)"]
+        self.rear_stairs_1 = md.landmarks["Jason's House (Rear Stairs) (BW)"]
+        self.terrace_ne = md.landmarks["Jason's House (North Veranda) (TNE)"]
         self.power_pole_t = md.landmarks["Jason's House (Power Pole) (T)"]
         self.boat_ramp_s = md.landmarks["Jason's House (Boat Ramp) (S)"]
         self.boat_ramp_sw = md.landmarks["Jason's House (Boat Ramp) (SW)"]
@@ -1888,6 +1890,14 @@ class JasonsHouse(Landmark):
         self.stairs_0 = (self.stairs_1[0], self.stairs_1[1], self.z)
         self.veranda_nw = (self.veranda_sw[0], self.veranda_ne[1], (self.veranda_sw[2] + self.veranda_ne[2]) / 2)
         self.veranda_e = (self.base_ne[0], self.base_ne[1], self.veranda_ne[2])
+        self.rear_stairs_0 = (self.rear_stairs_1[0], self.rear_stairs_1[1], self.z)
+        self.rear_stairs_2 = (
+            self.rear_stairs_1[0],
+            self.rear_stairs_1[1] + self.terrace_ne[2] - self.rear_stairs_1[2] + 1.0,
+            self.terrace_ne[2]
+        )
+        self.terrace_nw = (self.rear_stairs_1[0], self.terrace_ne[1], self.terrace_ne[2])
+        self.terrace_e = (self.terrace_ne[0], self.veranda_ne[1], self.terrace_ne[2])
         self.power_pole_b = (self.power_pole_t[0], self.power_pole_t[1], self.z)
 
     def draw_on_map(self, m, width=1):
@@ -1907,6 +1917,11 @@ class JasonsHouse(Landmark):
             (self.veranda_sw, self.veranda_nw),
             (self.veranda_nw, self.veranda_ne),
             (self.veranda_ne, self.veranda_e),
+            (self.rear_stairs_0, self.rear_stairs_1),
+            (self.rear_stairs_1, self.rear_stairs_2),
+            (self.rear_stairs_2, self.terrace_nw),
+            (self.terrace_nw, self.terrace_ne),
+            (self.terrace_ne, self.terrace_e),
             (self.boat_ramp_s, self.boat_ramp_sw),
             (self.boat_ramp_sw, self.boat_ramp_nw),
         ]:
@@ -1944,6 +1959,11 @@ class JasonsHouse(Landmark):
             (self.veranda_sw, self.veranda_nw),
             (self.veranda_nw, self.veranda_ne),
             (self.veranda_ne, self.veranda_e),
+            (self.rear_stairs_0, self.rear_stairs_1),
+            (self.rear_stairs_1, self.rear_stairs_2),
+            (self.rear_stairs_2, self.terrace_nw),
+            (self.terrace_nw, self.terrace_ne),
+            (self.terrace_ne, self.terrace_e),
             (self.power_pole_b, self.power_pole_t),
         ]:
             cam.render_line((
