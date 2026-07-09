@@ -247,7 +247,7 @@ cameras = {
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4429.400, -7608.400, 83.702), (318.430, -9.370, 0.000), (62.160, 37.459), (3840, 2160), "Leonida Keys 01 [1]"),
     "[S2/47] Leonida Keys 02 (Sidewalk)": (None, (-2933.000, -6433.000, 2.000), (101.738, 0.112, 0.000), (45.000, None), (3840, 2160), "Leonida Keys 02 [1]"),
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
-    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3225.000, -6374.000, 4.127), (164.743, -18.100, 0.000), (79.100, 49.831), (3840, 2160), "Leonida Keys 05 [1]"),
+    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3212.000, -6349.000, 6.184), (166.119, -18.900, 0.000), (79.700, 50.299), (3840, 2160), "Leonida Keys 05 [1]"),
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
@@ -2537,6 +2537,7 @@ pixels = {
     ],
     "[S2/50] Leonida Keys 05 (Boats)": [
         ((663.5, 151), "House with Pier (E)"),
+        ((2208.5, 182), "99353 Overseas Hwy (C)"),
         ((2572, 186), "Blue Billboard (Key Lento)"),
         ((3056.5, 326), "Pin B01L"),
         ((3134, 315), "Pin C01R"),
@@ -4188,7 +4189,7 @@ landmarks = {
     #"House C (E)": (-2402.372, -5589.501, 10.750),  # d=2.026 via Key Lento & Leonida Keys Postcard (X)
     #"House D (E)": (-2391.100, -5564.657, 16.072),  # d=0.109 via Key Lento & Leonida Keys Postcard (X)
     "House D (SW)": (-2286.449, -5428.357, 14.852),  # d=3.201 via House with Boat (X) & Leonida Keys 01 (Airplane) (X)
-    "House with Pier (E)": (-3197.031, -6509.720, 14.928),  # d=5.804 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
+    "House with Pier (E)": (-3177.002, -6500.480, 13.690),  # d=0.089 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
     "Icon at South Beach": (1473.840, 133.329, 140.906),  # d=4.558 via Vice Beach (B) & Leonida Keys Postcard (X)
     "Infinity at Brickell": (-1183.043, -1370.105, 169.573),  # d=2.667 via Metro (SE) (B) & Highway (Peacock Bay) (A)
     "Infinity at Brickell (SW)": (-1210.949, -1425.733, 174.572),  # d=0.830 via Metro (SE) (C) & Vice City 01 (Vice City Sign)
