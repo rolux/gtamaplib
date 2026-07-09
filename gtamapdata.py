@@ -175,15 +175,15 @@ cameras = {
     "[T2/2] House (Keys)": (None, (-2332.200, -5549.300, 2.587), (50.503, 10.900, 0.000), (66.400, 32.816), (3840, 1728), "Trailer 2 [245]"),
     "[T2/4] Rooftop (Keys)": None,  # 345
     "[T2/7] Balcony (Keys)": (None, (-2351.000, -5538.000, 8.000), (263.000, -11.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [615]"),
-    "[T2/8] Door (Keys)": None,  # 796
+    "[T2/8] Door (Keys)": (None, (-2351.000, -5537.000, 8.000), (10.000, -6.600, 0.000), (70.000, None), (3840, 1728), "Trailer 2 [796]"),
     "[T2/9] Car (Jason)": None,
     "[T2/10] Store (Jason)": None,
     "[T2/12] Highway (Peacock Bay) (A)": (None, (-1478.000, -2370.000, 15.045), (340.325, 3.500, 0.000), (45.200, 21.219), (3840, 1728), "Trailer 2 [1039]"),
     "[T2/12] Highway (Peacock Bay) (B)": (None, (-1464.000, -2256.000, 15.048), (345.216, 15.300, 0.000), (59.500, 28.847), (3840, 1728), "Trailer 2 [1111]"),
     "[T2/13] Beach Gym": (None, (2000.000, 400.000, 4.000), (100.000, 2.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [1152]"),
-    "[T2/14] Door (Keys)": None,
+    "[T2/14] Door (Store)": None,
     "[T2/15] Little Haiti": (None, (-1242.000, 1242.000, 5.000), (209.600, 0.000, 2.000), (60.000, None), (3840, 1728), "Trailer 2 [1359]"),
-    "[T2/16] Prison Tower": (None, (-2639.000, -2925.000, 5.000), (4.300, 16.000, 0.000), (45.000, None), (3840, 1728), "Trailer 2 [1496]"),
+    "[T2/16] Prison Tower": (None, (-2660.000, -2950.000, 5.000), (0.000, 14.000, 0.000), (35.000, None), (3840, 1728), "Trailer 2 [1496]"),
     "[T2/18] Prison (Gate) Take 1": None,
     "[T2/19] Prison (Gate) Take 2": None,
     "[T2/20] Prison (Gate) Reverse": None,
@@ -247,7 +247,7 @@ cameras = {
     "[S2/46] Leonida Keys 01 (Airplane) (X)": (None, (-4429.400, -7608.400, 83.702), (318.430, -9.370, 0.000), (62.160, 37.459), (3840, 2160), "Leonida Keys 01 [1]"),
     "[S2/47] Leonida Keys 02 (Sidewalk)": (None, (-2933.000, -6433.000, 2.000), (101.738, 0.112, 0.000), (45.000, None), (3840, 2160), "Leonida Keys 02 [1]"),
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
-    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3222.000, -6369.000, 8.819), (166.553, -20.000, 0.000), (82.700, 52.674), (3840, 2160), "Leonida Keys 05 [1]"),
+    "[S2/50] Leonida Keys 05 (Boats)": (None, (-3225.000, -6374.000, 4.127), (164.743, -18.100, 0.000), (79.100, 49.831), (3840, 2160), "Leonida Keys 05 [1]"),
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
@@ -1943,6 +1943,9 @@ pixels = {
         ((3543.5, 1112.5), "Jason's House (North Veranda) (TNE)"),
         ((3688, 1489.5), "Jason's House (Boat Ramp) (SW2)"),
     ],
+    "[T2/8] Door (Keys)": [
+        ((1988, 501.5), "White Billboard (Hamlet)")
+    ],
     "[T2/12] Highway (Peacock Bay) (A)": [
         ((1278, 865), "Stephen P. Clark Government Center (W)"),
         ((1299, 865), "Stephen P. Clark Government Center (SW)"),
@@ -1976,6 +1979,10 @@ pixels = {
     ],
     "[T2/16] Prison Tower": [
         ((2837, 173), "Prison Tower (4)"),
+    ],
+    "[T2/29] Pier (Sea)": [
+        ((1371.5, 821), "Pin A11L"),
+        ((1645, 807), "Pin A11R"),
     ],
     "[T2/37] Yacht (1)": [
         ((673, 548), "Unknown Building (North Vice Beach)"),
@@ -2526,9 +2533,12 @@ pixels = {
     "[S2/50] Leonida Keys 05 (Boats)": [
         ((663.5, 151), "House with Pier (E)"),
         ((2572, 186), "Blue Billboard (Key Lento)"),
-        ((3057, 317), "Pin B01L"),
-        ((3134, 311), "Pin C01R"),
-        ((3165, 309), "Pin B02R"),
+        ((3056.5, 326), "Pin B01L"),
+        ((3134, 315), "Pin C01R"),
+        ((3164, 321.5), "Pin B02R"),
+        ((3561.5, 331.5), "Pin B02L"),
+        ((3665, 316.5), "Pin C02R"),
+        ((3693, 321.5), "Pin C02L"),
         ((3181, 248), "Seven Mile Bridge (C)"),
         ((3563, 318), "Pin B02L"),
     ],
@@ -4170,7 +4180,7 @@ landmarks = {
     #"House C (E)": (-2402.372, -5589.501, 10.750),  # d=2.026 via Key Lento & Leonida Keys Postcard (X)
     #"House D (E)": (-2391.100, -5564.657, 16.072),  # d=0.109 via Key Lento & Leonida Keys Postcard (X)
     "House D (SW)": (-2286.449, -5428.357, 14.852),  # d=3.201 via House with Boat (X) & Leonida Keys 01 (Airplane) (X)
-    "House with Pier (E)": (-3186.807, -6504.983, 15.599),  # d=0.322 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
+    "House with Pier (E)": (-3197.031, -6509.720, 14.928),  # d=5.804 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
     "Icon at South Beach": (1473.840, 133.329, 140.906),  # d=4.558 via Vice Beach (B) & Leonida Keys Postcard (X)
     "Infinity at Brickell": (-1183.043, -1370.105, 169.573),  # d=2.667 via Metro (SE) (B) & Highway (Peacock Bay) (A)
     "Infinity at Brickell (SW)": (-1210.949, -1425.733, 174.572),  # d=0.830 via Metro (SE) (C) & Vice City 01 (Vice City Sign)
