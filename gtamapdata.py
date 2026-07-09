@@ -3108,11 +3108,14 @@ pixels = {
         ((1730, 686), "Squalo Billboard (TS)"),
         ((1848, 486), "Island G (E)"),
         ((1941, 499), "Island G (W)"),
+        ((1961, 422), "Pin G03L (B)"),
+        ((1989, 420), "Pin G03R (B)"),
         ((1960, 1190), "Key Lento (U)"),
         ((2021, 517), "Island H (E)"),
         ((2059, 519), "Island H (W)"),
         ((2087, 523), "Island I (E)"),
         ((2115, 525), "Island I (W)"),
+        ((2312, 371), "Pin G04R (B)"),
         ((2326, 581), "Island J (E)"),
         ((2355, 564), "Tree on Island J"),
         ((2486, 613), "Island J (W)"),
@@ -4619,6 +4622,12 @@ landmarks = {
     "Pin F04L (B)": (-3716.406, -7280.707, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Pin F04R (B)": (-3559.036, -7183.056, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Pin F05L (B)": (-3496.769, -7295.969, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Pin G01L (B)": (-1928.132, -6665.162, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Pin G01R (B)": (-1903.597, -6686.922, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Pin G02L (B)": (-1257.304, -6139.258, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Pin G03L (B)": (-1515.276, -6071.247, 0.000),  # via Leonida Keys Postcard (X)
+    "Pin G03R (B)": (-1480.172, -6082.919, 0.000),  # via Leonida Keys Postcard (X)
+    "Pin G04R (B)": (-520.918, -6133.962, 0.000),  # via Leonida Keys Postcard (X)
     "118 Poinsetta Dr": (-2626.617, -5762.452, 10.703),  # d=0.024 via Crest Kayak & Leonida Keys Postcard (X)
     "Pole near Signature Hangar 2": (-2504.291, -51.302, 19.127),  # d=0.219 via Airport (X) & Hangar (A)
     "500 Pompano Dr": (-1925.160, -5317.926, 19.290),  # d=9.887 via Leonida Keys Postcard (X) & Key Lento
@@ -4755,6 +4764,7 @@ landmarks = {
     "Small Keys Bridge (C)": (-774.354, -3699.830, 10.525),  # d=3.042 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Small Keys Bridge (NB)": (-723.667, -3583.614, 0.000),  # via Leonida Keys Postcard (X)
     "Small Keys Bridge (SB)": (-798.448, -3754.771, 0.000),  # via Leonida Keys Postcard (X)
+    "Small Radio Tower (Key Lento)": (-2082.889, -5621.804, 45.298),  # d=0.661 via Leonida Keys Postcard (X) & Key Lento
     "Sombrero Key Light (B)": (-2967.222, -7220.653, 0.000),  # via Keys
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
