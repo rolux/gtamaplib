@@ -224,7 +224,7 @@ cameras = {
     "[S2/2] Jason Duval 02 (Car)": (None, (900.000, 500.000, 5.000), (298.000, 9.500, 0.000), (60.000, None), (3840, 2160), "Jason Duval 02 [1]"),
     "[S2/3] Jason Duval 03 (Boat)": (None, (-2885.000, -6700.000, 2.5000), (329.000, -3.000, -0.500), (50.000, None), (3840, 2160), "Jason Duval 03 [1]"),
     "[S2/4] Jason Duval 04 (Ocean Drive)": None,
-    "[S2/5] Jason Duval 05 (Machine Gun)": (None, (-1445.000, 915.000, 40.000), (245.000, -6.000, 0.000), (60.000, None), (3840, 2160), "Jason Duval 05 [1]"),
+    "[S2/5] Jason Duval 05 (Machine Gun)": (None, (-1445.000, 915.000, 40.000), (241.000, -3.000, 0.000), (35.000, None), (3840, 2160), "Jason Duval 05 [1]"),
     "[S2/8] Lucia Caminos 02 (Pool)": (None, (10.000, 1208.000, 15.000), (120.000, -5.000, 0.000), (45.000, None), (3840, 2160), "Lucia Caminas 02 (Pool)"),
     "[S2/9] Lucia Caminos 03 (Hoodwinks)": None,
     "[S2/13] Cal Hampton 01 (Minigolf)": None,
@@ -2384,6 +2384,7 @@ pixels = {
         ((1233, 546), "Park Grove Condominium (S)"),
         ((1246, 471), "Four Seasons Hotel Miami (BE)"),
         ((1292, 576), "Office in the Grove"),
+        ((1318, 667), "Longer Island (S)"),
         ((1350, 916), "Island N (E)"),
         ((1354, 538), "Carbonell Brickell"),
         ((1413, 512), "Asia Brickell Key"),
@@ -2406,7 +2407,7 @@ pixels = {
         ((1655.5, 656), "Long Island (S)"),
         ((1663.5, 630), "Lake Surprise Viaduct (14B)"),
         ((1669, 556), "Turkey Point Nuclear Power Station (2)"),
-        ((1673, 641), "Bridge Island West (S)"),
+        ((1673, 640.5), "Anchor island (S)"),
         ((1680, 536), "Icon at South Beach"),
         ((1682, 873.5), "Pin F02R (B)"),
         ((1683, 630.5), "Lake Surprise Viaduct (13B)"),
@@ -2482,12 +2483,16 @@ pixels = {
         ((2502, 775.5), "Old Seven Mile Bridge (A)"),
         ((2681, 907), "Pin F03R (B)"),
         ((2707, 840), "Pin F03L (B)"),
+        ((2781, 645), "Island G (W)"),
         ((2809, 719), "Key Lento (J)"),
         ((2833, 1131), "Blimp Bay"),
         ((3081.5, 683.5), "Island J (E)"),
         ((3097.5, 669), "Tree on Island J"),
         ((3229, 855), "Pin F04R (B)"),
         ((3313, 928), "Pin F04L (B)"),
+        ((3322.5, 639), "Pin G02L (B)"),
+        ((3609.5, 669), "Pin G01L (B)"),
+        ((3654, 669), "Pin G01R (B)"),
         ((3747, 870), "Pin F05L (B)"),
         ((1237, 745), "Pin A01L"),
         ((1388, 744), "Pin A01R"),
@@ -3003,7 +3008,7 @@ pixels = {
         ((43, 424), "Lake Surprise Viaduct (14B)"),
         ((52, 231), "Murano Grande"),
         ((58.5, 536), "Long Island (S)"),
-        ((70.5, 464.5), "Bridge Island West (S)"),
+        ((70.5, 464.5), "Anchor island (S)"),
         ((74, 424), "Lake Surprise Viaduct (13B)"),
         ((76, 280), "Port"),
         ((105, 424), "Lake Surprise Viaduct (12B)"),
@@ -3975,6 +3980,7 @@ landmarks = {
     "Ambrosia Main St (X)": (-3241.722, 4052.903, 4.387),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (W)": (-3445.016, 3932.113, 4.387),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (V)": (-3516.873, 3885.794, 4.387),  # via Ambrosia 02 (Panorama)
+    "Anchor island (S)": (-2605.430, -5233.184, 0.000),  # via Leonida Keys Postcard (X)
     ##"Asia Brickell Key": (-119.683, -881.354, 185.477),  # d=1.275 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     #"Asia Brickell Key": (-102.538, -863.761, 184.052),  # d=0.885 via Skyline & Vice Beach (B)
     "Asia Brickell Key": (-129.720, -886.023, 185.475),  # d=0.650 via Vice City Postcard & Vice Beach (B)
@@ -4063,7 +4069,6 @@ landmarks = {
     "Brickell Arch (E)": (-774.178, -1146.359, 169.706),  # d=0.427 via Raul Bautista 03 (Motorboat) & Port Vice City (A)
     "1450 Brickell Ave": (-971.447, -1410.176, 173.844),  # d=1.063 via Motorboats (B) & Metro (SE) (C)
     "Bridge Island (W)": (-2468.078, -5185.180, 0.000),  # via Leonida Keys Postcard (X)
-    "Bridge Island West (S)": (-2605.430, -5233.184, 0.000),  # via Leonida Keys Postcard (X)
     "Broken Keys Bridge (1B)": (-1479.430, -4420.729, 0.000),  # via Leonida Keys Postcard (X)
     "Broken Keys Bridge (2B)": (-1471.365, -4434.593, 0.000),  # via Leonida Keys Postcard (X)
     "Broken Keys Bridge (3B)": (-1463.300, -4448.457, 0.000),  # via Leonida Keys Postcard (X)
