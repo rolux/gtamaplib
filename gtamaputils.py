@@ -202,10 +202,6 @@ def find_wdna_fm():
         return ml.get_point(center, ml.get_direction(center, point), radius)
 
     cam = ml.get_camera("Prison")
-    # optimizer results
-    cam.set_xyz((-3356.683, -2761.643, 32.429))
-    cam.set_ypr((281.609, -2.511, 0.000))
-    cam.set_fov((80.727, None))
     lm_name = "WDNA FM"
     ray_se1 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (SE1)"))
     ray_n2 = (cam.xyz, cam.get_landmark_direction(f"{lm_name} (N2)"))
