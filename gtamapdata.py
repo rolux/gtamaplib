@@ -222,7 +222,7 @@ cameras = {
     "[T2/78] Chase (2) (B)": (None, (-6472.900, 3247.300, 6.457), (354.591, 1.700, -1.500), (48.000, 22.659), (3840, 1728), "Trailer 2 [4513]"),
     "[T2/80] Skyline": (None, (793.000, 1357.000, 10.152), (135.249, -2.100, 0.000), (58.100, 28.067), (3840, 1728), "Trailer 2 [4665]"),
     "[S2/2] Jason Duval 02 (Car)": (None, (900.000, 500.000, 5.000), (298.000, 9.500, 0.000), (60.000, None), (3840, 2160), "Jason Duval 02 [1]"),
-    "[S2/3] Jason Duval 03 (Boat)": (None, (-2885.000, -6700.000, 2.5000), (329.000, -3.000, -0.500), (50.000, None), (3840, 2160), "Jason Duval 03 [1]"),
+    "[S2/3] Jason Duval 03 (Boat)": (None, (-3049.000, -6849.000, 4.289), (321.357, -1.500, -0.500), (24.800, 14.100), (3840, 2160), "Jason Duval 03 [1]"),
     "[S2/4] Jason Duval 04 (Ocean Drive)": None,
     "[S2/5] Jason Duval 05 (Machine Gun)": (None, (-1445.000, 915.000, 40.000), (241.000, -3.000, 0.000), (35.000, None), (3840, 2160), "Jason Duval 05 [1]"),
     "[S2/8] Lucia Caminos 02 (Pool)": (None, (10.000, 1208.000, 15.000), (120.000, -5.000, 0.000), (45.000, None), (3840, 2160), "Lucia Caminas 02 (Pool)"),
@@ -287,7 +287,7 @@ cameras = {
     "[S3/12] Vice City Style 01 (Couch)": None,
     "[S3/15] Vice City Style 04 (Gallery)": None,
     "[S3/17] Jason's Safehouse Vehicles (X)": (None, (-2333.600, -5551.300, 5.610), (36.829, -1.900, 0.000), (57.000, 33.967), (3840, 2160), "Jason's Safehouse Vehicles [1]"),
-    "[S3/19] Crest Kayak": (None, (-2393.000, -5493.000, 0.750), (130.937, -3.900, 4.500), (40.500, 23.447), (3840, 2160), "Crest Kayak [1]"),
+    "[S3/19] Crest Kayak": (None, (-2392.000, -5498.000, 0.972), (129.419, -4.500, 4.500), (45.100, 26.294), (3840, 2160), "Crest Kayak [1]"),
     "[S3/20] Ganado Retro Build": None,
     "[S3/23] Rideout Customs Mod Shop 03 (Garage)": None,
     "[S3/24] Sara's Unisex Salon 01 (Exterior)": (None, (-2564.000, -3410.000, 9.500), (210.000, 1.000, 2.000), (45.000, None), (3840, 2160), "Sara's Unisex Salon 01 [1]"),
@@ -2122,7 +2122,11 @@ pixels = {
         ((3462, 160), "The Grand (E)"),
     ],
     "[S2/3] Jason Duval 03 (Boat)": [
-        ((3621, 875), "Island G (W)"),
+        ((271, 484), "105 Front St (S)"),
+        ((1033, 730), "Roof (Key Lento)"),
+        ((1859, 629), "Small Radio Tower (Key Lento) (C)"),
+        ((3617, 866), "Island G (W)"),
+        ((3779.5, 867.5), "Pin D02R"),
     ],
     "[S2/5] Jason Duval 05 (Machine Gun)": [
         ((504, 596), "Icon at South Beach"),
@@ -3107,6 +3111,7 @@ pixels = {
         ((1687, 1130), "Key Lento (V)"),
         #((1707, 686), "Billboard #2 (Key Lento)"),
         ((1730, 686), "Squalo Billboard (TS)"),
+        ((1834.5, 608.5), "105 Front St (S)"),
         ((1848, 486), "Island H (E)"),
         ((1941, 499), "Island H (W)"),
         ((1961, 422), "Pin G03L (B)"),
@@ -3121,6 +3126,7 @@ pixels = {
         ((2355, 564), "Tree on Island K"),
         ((2486, 613), "Island K (W)"),
         ((2525, 828), "Key Lento (J)"),
+        ((2540, 793), "Roof (Key Lento)"),
         ((196, 1162), "Pin A02R"),
         ((262, 926), "Pin A03L"),
         ((503, 916), "Pin A03R"),
@@ -3682,7 +3688,7 @@ pixels = {
         ((808, 551), "99353 Overseas Hwy"),
         ((1241, 606.5), "118 Poinsetta Dr"),
         ((1310, 700), "Seven Mile Bridge (C)"),
-        ((2507, 618), "Pin A08R"),
+        ((2507.5, 623.5), "Pin A08R"),
         ((2865, 640), "Island A (W)"),
     ],
     "[S3/27] Shitzu Squalo 01 (Bay)": [
@@ -4156,6 +4162,7 @@ landmarks = {
     "Four Seasons Hotel Miami (SE)": (-817.997, -1316.422, 253.608),  # Rooftop (SE)
     "Four Seasons Hotel Miami (SW)": (-863.612, -1299.367, 253.608),  # Rooftop (SW)
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
+    "105 Front St (S)": (-2828.255, -6432.681, 22.893),  # d=0.101 via Jason Duval 03 (Boat) & Leonida Keys Postcard (X)
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
     "Grass (MIA) (A)": (-2420.454, -226.906, 3.500),  # via Airport (X)
@@ -4542,6 +4549,7 @@ landmarks = {
     "Oval Yellow Sign": (-6329.607, 3509.044, 36.101),  # d=0.220 via Chase (2) (A) & Gas Station (Lucia)
     "99353 Overseas Hwy": (-3365.560, -6758.413, 78.037),  # d=0.264 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "102180 Overseas Hwy": (-2669.041, -6035.461, 43.649),  # d=0.967 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
+    "104000 Overseas Hwy": (-2501.407, -5653.554, 16.769),  # d=0.824 via Crest Kayak & Leonida Keys Postcard (X)
     "Palazzo del Sol": (1910.051, -1313.223, 58.077),  # d=18.348 via Rooftop Party & Leonida Keys Postcard (X)
     "Park Grove Condominium (C)": (-1319.007, -2057.768, 97.936),  # d=1.480 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Park Grove Condominium (N)": (-1324.351, -1995.621, 98.546),  # d=0.468 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
@@ -4633,7 +4641,7 @@ landmarks = {
     "Pin G03L (B)": (-1590.372, -6129.180, 3.330),  # via Leonida Keys Postcard (X)
     "Pin G03R (B)": (-1557.382, -6142.322, 3.330),  # via Leonida Keys Postcard (X)
     "Pin G04R (B)": (-665.293, -6238.884, 3.330),  # via Leonida Keys Postcard (X)
-    "118 Poinsetta Dr": (-2626.617, -5762.452, 10.703),  # d=0.024 via Crest Kayak & Leonida Keys Postcard (X)
+    "118 Poinsetta Dr": (-2651.531, -5779.210, 14.728),  # d=1.519 via Crest Kayak & Leonida Keys Postcard (X)
     "Pole near Signature Hangar 2": (-2504.291, -51.302, 19.127),  # d=0.219 via Airport (X) & Hangar (A)
     "500 Pompano Dr": (-1897.016, -5301.896, 18.517),  # d=0.736 via Leonida Keys Postcard (X) & Key Lento
     "200 Pompano Dr": (-1860.206, -5372.073, 10.859),  # d=1.210 via Leonida Keys Postcard (X) & Key Lento
@@ -4888,21 +4896,21 @@ landmarks = {
     "The Waverly South Beach (NW)": (1230.092, 629.710, 106.965),  # d=2.282 via Tennis Court (SE) & Vice Beach (B)
     "The Waverly South Beach (SE)": (1264.980, 579.673, 113.901),  # d=1.289 via Rooftop Party & Vice Beach (B)
     "WDNA FM": (-2530.681, -2299.410, 407.397),  # d=0.521 via Leonida Keys 01 (Airplane) (X) & Prison
-    "WDNA FM (N0)": (-2527.894, -2300.161, 5.000),  # via Prison
-    "WDNA FM (SE0)": (-2528.923, -2301.700, 5.000),  # via Prison
-    "WDNA FM (SW0)": (-2531.200, -2302.250, 5.000),  # via Prison
-    "WDNA FM (N1)": (-2527.894, -2300.161, 214.377),  # via Prison
-    "WDNA FM (SE1)": (-2528.923, -2301.700, 214.377),  # via Prison
-    "WDNA FM (SW1)": (-2531.200, -2302.250, 214.377),  # via Prison
-    "WDNA FM (N2)": (-2527.894, -2300.161, 371.755),  # via Prison
-    "WDNA FM (SE2)": (-2528.923, -2301.700, 371.755),  # via Prison
-    "WDNA FM (SW2)": (-2531.200, -2302.250, 371.755),  # via Prison
-    "WDNA FM (N3)": (-2527.894, -2300.161, 388.017),  # via Prison
-    "WDNA FM (SE3)": (-2528.923, -2301.700, 388.017),  # via Prison
-    "WDNA FM (SW3)": (-2531.200, -2302.250, 388.017),  # via Prison
-    "WDNA FM (N4)": (-2527.894, -2300.161, 397.707),  # via Prison
-    "WDNA FM (SE4)": (-2528.923, -2301.700, 397.707),  # via Prison
-    "WDNA FM (SW4)": (-2531.200, -2302.250, 397.707),  # via Prison
+    "WDNA FM (N0)": (-2530.268, -2296.553, 5.000),  # via Prison
+    "WDNA FM (SE0)": (-2528.452, -2301.244, 5.000),  # via Prison
+    "WDNA FM (SW0)": (-2533.469, -2300.160, 5.000),  # via Prison
+    "WDNA FM (N1)": (-2530.268, -2296.553, 218.592),  # via Prison
+    "WDNA FM (SE1)": (-2528.452, -2301.244, 218.592),  # via Prison
+    "WDNA FM (SW1)": (-2533.469, -2300.160, 218.592),  # via Prison
+    "WDNA FM (N2)": (-2530.268, -2296.553, 378.774),  # via Prison
+    "WDNA FM (SE2)": (-2528.452, -2301.244, 378.774),  # via Prison
+    "WDNA FM (SW2)": (-2533.469, -2300.160, 378.774),  # via Prison
+    "WDNA FM (N3)": (-2530.268, -2296.553, 395.327),  # via Prison
+    "WDNA FM (SE3)": (-2528.452, -2301.244, 395.327),  # via Prison
+    "WDNA FM (SW3)": (-2533.469, -2300.160, 395.327),  # via Prison
+    "WDNA FM (N4)": (-2530.268, -2296.553, 401.362),  # via Prison
+    "WDNA FM (SE4)": (-2528.452, -2301.244, 401.362),  # via Prison
+    "WDNA FM (SW4)": (-2533.469, -2300.160, 401.362),  # via Prison
     ##"Wells Fargo Center (N)": (-642.090, -403.002, 187.267),  # d=2.755 via Vice Beach (B) & Prison
     #"Wells Fargo Center (N)": (-625.117, -394.342, 185.680),  # d=0.001 via Skyline & Vice Beach (B)
     "Wells Fargo Center (N)": (-660.923, -412.505, 188.397),  # d=2.586 via Vice City Postcard & Vice Beach (B)
