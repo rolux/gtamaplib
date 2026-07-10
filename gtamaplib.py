@@ -1076,9 +1076,7 @@ class Map:
         )
         rays = {}
         for cam in cameras:
-            # if not "Key" in cam.name: continue
             for lm_name in cam.landmark_pixels:
-                # if not "Ambrosia Hill" in lm_name: continue
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
                 target_xy = get_point(cam.xyz, direction, 20000)[:2]
@@ -2338,6 +2336,7 @@ def find_camera(
     basename,
     bearing_limits=None,
     horizon_limits=None,
+    lm_z_limits=None,
     ray_pairs=None,
     max_size_delta=1.05,
     no_markers=False,
@@ -2398,7 +2397,7 @@ def find_camera(
     best_cam = None
 
     pool_args = [(
-        cam, xy, z_limits, bearing_limits, horizon_limits, pitch_values, hfov_values,
+        cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, pitch_values, hfov_values,
         targets, n_points, ray_stacks, max_size_delta
     ) for xy in xys]
     with multiprocessing.Pool() as pool:
@@ -2406,7 +2405,10 @@ def find_camera(
             pool.imap_unordered(_find_camera, pool_args),
             total=len(pool_args)
         ):
-            if loss == float("inf"): continue
+            if loss == float("inf"):
+                # in this case, cam_ is xy
+                local_loss.append((cam_, loss))
+                continue
             local_loss.append((cam_.xy, loss))
             if loss < best_loss:
                 best_loss = loss
@@ -2424,10 +2426,12 @@ def find_camera(
 
     m = get_map(map_name).open(scale=map_scale, add_padding=True)
     for (x, y), loss in local_loss:
-        if loss == float("inf"): continue
-        log_loss = math.log10(loss)
-        # 1 = green, 10 = yellow, 100 = red, ...
-        rgb = get_rgb((120 - log_loss * 60) % 360)
+        if loss == float("inf"):
+            rgb = (0, 0, 0)
+        else:
+            log_loss = math.log10(loss)
+            # 1 = green, 10 = yellow, 100 = red, ...
+            rgb = get_rgb((120 - log_loss * 60) % 360)
         m.draw_rectangle(
             (x - step / 2, y - step / 2),
             (x + step / 2, y + step + 2),
@@ -2469,7 +2473,7 @@ def _find_camera(args):
     """
 
     (
-        cam, xy, z_limits, bearing_limits, horizon_limits, pitch_values, hfov_values,
+        cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, pitch_values, hfov_values,
         targets, n_points, ray_stacks, max_size_delta
     ) = args
     cam.set_xyz((xy[0], xy[1], cam.z))
@@ -2522,7 +2526,16 @@ def _find_camera(args):
                 for i, (lm_name, target) in enumerate(targets):
                     fn = intersect_ray_and_point if i < n_points else intersect_ray_and_ray
                     cam_ray = (cam.xyz, cam.get_landmark_direction(lm_name))
-                    angle = fn(cam_ray, target)[-1]
+                    result = fn(cam_ray, target)
+                    if lm_z_limits:
+                        if i >= n_points:
+                            lm_z_limit = lm_z_limits[i - n_points]
+                            if lm_z_limit:
+                                z = result[0][2]
+                                if z < lm_z_limit[0] or z > lm_z_limit[1]:
+                                    loss = float("inf")
+                                    break
+                    angle = result[-1]
                     delta = angle * 60  # arcminutes
                     deltas.append(delta)
                     loss += delta ** 2
@@ -2535,7 +2548,7 @@ def _find_camera(args):
                     best_values = cam.xyz, cam.ypr, cam.fov
 
     if best_loss == float("inf"):
-        return best_loss, None, None
+        return best_loss, None, xy
     xyz, ypr, fov = best_values
     cam.set_xyz(xyz).set_ypr(ypr).set_fov(fov)
     return best_loss, best_deltas, cam
