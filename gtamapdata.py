@@ -273,7 +273,8 @@ cameras = {
     #"[S2/73] Port Gellhorn Postcard": (None, (-6563.000, 3613.000, 20.155), (51.895, 0.000, 0.000), (58.300, 40.793), (3240, 2160), "Port Gellhorn Postcard [60]"),
     "[S2/73] Port Gellhorn Postcard (X)": (None, (-6550.000, 3608.000, 31.297), (51.974, -3.200, 0.000), (71.000, 50.865), (3240, 2160), "Port Gellhorn Postcard [1]"),
     "[S2/74] Ambrosia Postcard (X)": (None, (-2718.000, 3758.000, 53.570), (149.132, -1.800, 0.000), (50.900, 34.525), (3308, 2160), "Ambrosia Postcard [54]"),
-    "[S2/75] Grassrivers Postcard (X)": (None, (-3500, -4000, 50), (135.000, -14.550, 0.000), (45.000, None), (3240, 2160), "Grassrivers Postcard [60]"),
+    #"[S2/75] Grassrivers Postcard (X)": (None, (-3500, -4000, 50), (135.000, -14.550, 0.000), (45.000, None), (3240, 2160), "Grassrivers Postcard [60]"),
+    "[S2/75] Grassrivers Postcard (X)": (None, (-3546.000, -3924.000, 37.338), (128.548, -17.800, 0.000), (55.400, 38.581), (3240, 2160), "Grassrivers Postcard [60]"),
     "[S2/76] Mount Kalaga National Park Postcard (X)": None,
     "[S2/79] Lucia Caminos (Animation 1)": None,
     "[S2/85] Raul Bautista (Animation)": (None, (-900.000, -1230.000, 6.000), (325.000, -4.000, -6.000), (25.000, None), (2160, 2160), "Raul Bautista (Animation) [29]"),
@@ -2341,6 +2342,7 @@ pixels = {
         ((123, 627), "Small Grassrivers Bridge (W)"),
         ((130, 619), "Large Grassrivers Bridge (2)"),
         ((150, 619), "Large Grassrivers Bridge (3)"),
+        ((154, 638), "Boat (Grassrivers)"),
         ((158, 627), "Small Grassrivers Bridge (E)"),
         ((173, 694), "Island S (E)"),
         ((264, 783), "Pin E01L (B)"),
@@ -2757,6 +2759,7 @@ pixels = {
         ((1380, 1334), "Canal A (Ambrosia) (2)"),
         ((1703.5, 1684), "Path F (Ambrosia) (1)"),
         ((1801, 1690.5), "Road A (Ambrosia) (2)"),
+        ((1848, 467), "Radio Tower (Ambrosia)"),
         ((1848, 1263), "Radio Tower (Ambrosia) (B)"),
         ((1921, 1190), "Road C (Ambrosia) (3)"),
         ((1933.5, 1223), "Road B (Ambrosia) (3)"),
@@ -3423,11 +3426,12 @@ pixels = {
         ((1186.5, 1178.5), "White Silos (E) (NW)"),
         ((1240, 1180.5), "White Silos (W) (NE)"),
         ((1389.5, 1177), "White Silos (W) (NW)"),
-        ((1441, 1303), "Train Tracks (Ambrosia) (B)"),
+        ((1441, 1303), "Train Tracks (Ambrosia) (C)"),
         ((1472, 1245), "Train Signal (Ambrosia) (2E)"),
         ((1488.5, 1246), "Train Signal (Ambrosia) (2W)"),
         ((1493, 786), "US Sugar Mill (Factory)"),
         ((1493, 923), "US Sugar Mill (Factory) (R)"),
+        ((1534, 1349), "Train Tracks (Ambrosia) (B)"),
         ((1537, 1257), "Train Signal (Ambrosia) (1E)"),
         ((1544, 699), "USSM Smokestack (4)"),
         ((1554.5, 1257), "Train Signal (Ambrosia) (1W)"),
@@ -3464,6 +3468,9 @@ pixels = {
     ],
     "[S2/75] Grassrivers Postcard (X)": [
         ((27, 382), "Unknown Structure (Grassrivers)"),
+        ((119, 120.5), "Old Bahia Honda Bridge (Barrier) (SE)"),
+        ((239, 127.5), "New Bahia Honda Bridge (15B)"),
+        ((1020, 1240), "Boat (Grassrivers)"),
         ((1296.5, 88.5), "Naval Air Station Key West (Control Tower)"),
         ((1254, 93), "Naval Air Station Key West (Radar Tower)"),
         ((1329, 335), "Shack (NB)"),
@@ -4102,6 +4109,7 @@ landmarks = {
     "Blimp Road (S)": (-4365.642, -7146.533, 0.000),  # via Keys
     "Blue Billboard (Key Lento)": (-3436.391, -6758.812, 24.538),  # d=0.153 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Blue Diamond": (1873.388, 2080.805, 146.237),  # d=2.661 via Venetian Islands & Jet Ski
+    "Boat (Grassrivers)": (-3610.237, -4001.297, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Box in Backyard": (-1954.600, -1959.000, 4.000),  # Gizmo
     "Brickell Arch (E)": (-774.178, -1146.359, 169.706),  # d=0.427 via Raul Bautista 03 (Motorboat) & Port Vice City (A)
     "1450 Brickell Ave": (-971.447, -1410.176, 173.844),  # d=1.063 via Motorboats (B) & Metro (SE) (C)
@@ -4467,8 +4475,10 @@ landmarks = {
     "Murano Grande (R3)": (1496.482, -81.920, 96.154),  # d=0.095 via Port Vice City (B) & Port
     "252 N Tyndall Pkwy (NE)": (-6192.707, 4415.573, 23.129),  # d=0.072 via Diner (S) & Easy Inn
     "252 N Tyndall Pkwy (NW)": (-6197.491, 4416.217, 23.281),  # d=0.085 via Diner (S) & Easy Inn
-    "Naval Air Station Key West (Control Tower)": (-5678.7278, -6557.960, 31.893),  # d=2.520 via Key Lento & Grassrivers Postcard (X)
-    "Naval Air Station Key West (Radar Tower)": (-5525.423, -6429.101, 29.549),  # d=2.389 via Key Lento & Grassrivers Postcard (X)
+    #"Naval Air Station Key West (Control Tower)": (-5678.7278, -6557.960, 31.893),  # d=2.520 via Key Lento & Grassrivers Postcard (X)
+    #"Naval Air Station Key West (Radar Tower)": (-5525.423, -6429.101, 29.549),  # d=2.389 via Key Lento & Grassrivers Postcard (X)
+    "Naval Air Station Key West (Control Tower)": (-6365.973, -6670.134, 38.590),  # d=1.797 via Grassrivers Postcard (X) & Key Lento
+    "Naval Air Station Key West (Radar Tower)": (-6126.463, -6503.177, 34.559),  # d=3.377 via Grassrivers Postcard (X) & Key Lento
     "419 NE 4th Ave (W)": (-415.516, 1205.149, 32.586),  # d=3.549 via Vice City Postcard & Vice City 03 (Basketball)
     "New Bahia Honda Bridge (1B)": (-4995.102, -7211.174, 0.000),  # via Keys
     "New Bahia Honda Bridge (2B)": (-5016.901, -7204.582, 0.000),  # via Keys
