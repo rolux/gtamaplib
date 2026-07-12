@@ -1076,7 +1076,9 @@ class Map:
         )
         rays = {}
         for cam in cameras:
+            #if not "(Boat)" in cam.name: continue
             for lm_name in cam.landmark_pixels:
+                # if not "Blimp" in lm_name: continue
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
                 target_xy = get_point(cam.xyz, direction, 20000)[:2]
@@ -2337,6 +2339,7 @@ def find_camera(
     bearing_limits=None,
     horizon_limits=None,
     lm_z_limits=None,
+    not_visible=None,
     ray_pairs=None,
     max_size_delta=1.05,
     no_markers=False,
@@ -2397,8 +2400,8 @@ def find_camera(
     best_cam = None
 
     pool_args = [(
-        cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, pitch_values, hfov_values,
-        targets, n_points, ray_stacks, max_size_delta
+        cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, not_visible,
+        pitch_values, hfov_values, targets, n_points, ray_stacks, max_size_delta
     ) for xy in xys]
     with multiprocessing.Pool() as pool:
         for loss, deltas, cam_ in tqdm(
@@ -2473,8 +2476,8 @@ def _find_camera(args):
     """
 
     (
-        cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, pitch_values, hfov_values,
-        targets, n_points, ray_stacks, max_size_delta
+        cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, not_visible,
+        pitch_values, hfov_values, targets, n_points, ray_stacks, max_size_delta
     ) = args
     cam.set_xyz((xy[0], xy[1], cam.z))
     n_targets = len(targets)
@@ -2498,6 +2501,17 @@ def _find_camera(args):
                 if horizon_limits:
                     horizon = cam.get_horizon()
                     if not horizon_limits[0] <= horizon <= horizon_limits[1]:
+                        continue
+                if not_visible:
+                    is_visible = False
+                    for point in not_visible:
+                        pixel = cam.get_pixel(point)
+                        if pixel is not None and (
+                            0 <= pixel[0] < cam.w and 0 <= pixel[1] < cam.h
+                        ):
+                            is_visible = True
+                            break
+                    if is_visible:
                         continue
                 valid = True
                 for ray_stack in ray_stacks:
@@ -3066,10 +3080,18 @@ def intersect_ray_and_ray(ray_a, ray_b, eps=1e-8):
     distance = np.linalg.norm(point_a - point_b)
     miss_a = point_b - org_a
     miss_b = point_a - org_b
-    miss_a /= np.linalg.norm(miss_a)
-    miss_b /= np.linalg.norm(miss_b)
-    delta_a = np.degrees(np.arccos(np.clip(np.dot(miss_a, dir_a), -1.0, 1.0)))
-    delta_b = np.degrees(np.arccos(np.clip(np.dot(miss_b, dir_b), -1.0, 1.0)))
+    norm_a = np.linalg.norm(miss_a)
+    norm_b = np.linalg.norm(miss_b)
+    if norm_a < eps:
+        delta_a = 0
+    else:
+        miss_a /= norm_a
+        delta_a = np.degrees(np.arccos(np.clip(np.dot(miss_a, dir_a), -1.0, 1.0)))
+    if norm_b < eps:
+        delta_b = 0
+    else:
+        miss_b /= norm_b
+        delta_b = np.degrees(np.arccos(np.clip(np.dot(miss_b, dir_b), -1.0, 1.0)))
     angle = 0.5 * (delta_a + delta_b)
     return midpoint, point_a, point_b, distance, angle
 
