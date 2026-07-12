@@ -260,7 +260,7 @@ cameras = {
     "[S2/60] Ambrosia 05 (Car Wash)": None,
     "[S2/61] Grassrivers 01 (Hunters)": None,
     "[S2/62] Grassrivers 02 (Watson Bay)": (None, (-5280.000, -3371.000, 25.727), (282.274, -5.900, 0.000), (49.200, 28.883), (3840, 2160), "Grassrivers 02 [1]"),
-    "[S2/64] Grassrivers 04 (Police Chase)": None,
+    "[S2/64] Grassrivers 04 (Police Chase)": (None, (-3812.000, -4116.000, 4.000), (170.000, -3.000, 0.000), (50.000, None), (3840, 2160), "Grassrivers 04 [1]"),
     "[S2/65] Mount Kalaga National Park 01 (Dirt Bikes)": None,
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-1750.000, 6250.000, 200.000), (118.750, 6.800, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2500.000, 6500.000, 200.000), (131.321, 6.027, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
@@ -3470,10 +3470,12 @@ pixels = {
         ((27, 382), "Unknown Structure (Grassrivers)"),
         ((119, 120.5), "Old Bahia Honda Bridge (Barrier) (SE)"),
         ((239, 127.5), "New Bahia Honda Bridge (15B)"),
+        ((897, 101), "SFUWO School"),
         ((1020, 1240), "Boat (Grassrivers)"),
         ((1296.5, 88.5), "Naval Air Station Key West (Control Tower)"),
         ((1254, 93), "Naval Air Station Key West (Radar Tower)"),
         ((1329, 335), "Shack (NB)"),
+        ((1765, 462), "Grassrivers 04 (Police Chase)"),
         ((2505, 126), "Tower (Grassrivers)"),
     ],
     "[S3/1] Port Vice City (A)": [
@@ -4791,6 +4793,7 @@ landmarks = {
     "Seven Mile Bridge (3T)": (-3579.524, -6876.897, 3.681),  # d=0.173 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (6T)": (-3647.746, -6918.470, 8.558),  # d=0.211 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (C)": (-3803.857, -7025.446, 19.680),  # d=1.138 via Keys & Leonida Keys 01 (Airplane) (X)
+    "SFUWO School": (-5191.629, -5965.646, 29.486),  # d=2.652 via Key Lento & Grassrivers Postcard (X)
     "Sherry Frontenac Oceanfront Hotel (N)": (1478.578, 2558.613, 46.593),  # d=3.888 via Highway (NE) & Jet Ski
     "Sherry Frontenac Oceanfront Hotel (S)": (1507.934, 2531.859, 46.344),  # d=4.174 via Highway (NE) & Jet Ski
     "Ship (A)": (-7190.599, 4567.346, 0.000),  # via Port Gellhorn Postcard (X)
