@@ -615,7 +615,7 @@ class Camera:
             else:
                 self.render_line(((x - 1, y, z), (x + 1, y, z)), get_color(lm_name), width)
                 self.render_line(((x, y - 1, z), (x, y + 1, z)), get_color(lm_name), width)
-                self.render_line(((x, y, z - 1), (x, y, z + 1)), get_color(lm_name), width)
+                self.render_line(((x, y, z), (x, y, z + 1)), get_color(lm_name), width)
         LANDMARK_OBJECTS["Jason"].render_on_camera(self)
         LANDMARK_OBJECTS["Jason's House"].render_on_camera(self)
         return self
@@ -1076,9 +1076,7 @@ class Map:
         )
         rays = {}
         for cam in cameras:
-            #if not "(Boat)" in cam.name: continue
             for lm_name in cam.landmark_pixels:
-                # if not "Blimp" in lm_name: continue
                 if normalize_name(lm_name) in ("Player", "Minimap", "AIWE"): continue
                 direction = cam.get_landmark_direction(lm_name)
                 target_xy = get_point(cam.xyz, direction, 20000)[:2]
