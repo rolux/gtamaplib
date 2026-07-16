@@ -74,12 +74,27 @@ class Camera:
         """
         # need at least two line families
         if not self.lines[0] or not self.lines[1]: return None
-        hvp, hvps = self._get_vp_from_hlines(self.lines[0])
-        vvp = self._get_vp_from_vlines(self.lines[1])
-        if hvp is None or vvp is None:
-            return None
+        hvp, hvps = self._get_hvps_from_hlines()
+        vvp, vvps = self._get_vvps_from_vlines()
+        if hvp is None or vvp is None: return None
         x1, y1 = hvp
         x2, y2 = vvp
+        cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
+        f2 = -((x1 - cx) * (x2 - cx) + (y1 - cy) * (y2 - cy))
+        if not np.isfinite(f2) or f2 <= 0: return None
+        f = np.sqrt(f2)
+        hfov = 2.0 * np.degrees(np.arctan(self.w / (2.0 * f)))
+        vfov = 2.0 * np.degrees(np.arctan(self.h / (2.0 * f)))
+        return hfov, vfov
+
+    def _get_fov_from_hlines(self):
+        """
+        Requires orthogonal horizontal and vertical lines (for example, along the same rectangular roof)
+        """
+        if not self.lines[0] or len(self.lines[0]) < 4: return None
+        hvp, hvps = self._get_hvps_from_hlines()
+        if len(hvps) != 2: return None
+        (x1, y1), (x2, y2) = hvps
         cx, cy = self.w / 2 - 0.5, self.h / 2 - 0.5
         f2 = -((x1 - cx) * (x2 - cx) + (y1 - cy) * (y2 - cy))
         if not np.isfinite(f2) or f2 <= 0:
@@ -2340,6 +2355,8 @@ def find_camera(
     not_visible=None,
     ray_pairs=None,
     max_size_delta=1.05,
+    objects=None,
+    max_object_delta=1.05,
     no_markers=False,
 ):
     """
@@ -2399,7 +2416,7 @@ def find_camera(
 
     pool_args = [(
         cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, not_visible,
-        pitch_values, hfov_values, targets, n_points, ray_stacks, max_size_delta
+        pitch_values, hfov_values, targets, n_points, ray_stacks, max_size_delta, objects, max_object_delta
     ) for xy in xys]
     with multiprocessing.Pool() as pool:
         for loss, deltas, cam_ in tqdm(
@@ -2475,7 +2492,7 @@ def _find_camera(args):
 
     (
         cam, xy, z_limits, bearing_limits, horizon_limits, lm_z_limits, not_visible,
-        pitch_values, hfov_values, targets, n_points, ray_stacks, max_size_delta
+        pitch_values, hfov_values, targets, n_points, ray_stacks, max_size_delta, objects, max_object_delta
     ) = args
     cam.set_xyz((xy[0], xy[1], cam.z))
     n_targets = len(targets)
@@ -2530,6 +2547,18 @@ def _find_camera(args):
                     if not other_size / max_size_delta <= size <= other_size * max_size_delta:
                         valid = False
                         break
+                if not valid:
+                    continue
+                if objects:
+                    for (lm_name_a, lm_name_b), size, z in objects:
+                        plane = ((0, 0, z), (0, 0, 1))
+                        actual_size = get_distance(
+                            intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_a)), plane),
+                            intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_b)), plane),
+                        )
+                        if not actual_size / max_object_delta <= size <= actual_size * max_object_delta:
+                            valid = False
+                            break
                 if not valid:
                     continue
                 deltas = []
