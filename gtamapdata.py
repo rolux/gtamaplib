@@ -2338,10 +2338,12 @@ pixels = {
     ],
     "[S2/46] Leonida Keys 01 (Airplane) (X)": [
         ((21, 590), "Caribbean Airlines Cargo (W)"),
-        ((26.5, 566), "Wheelabrator South Broward (W)"),
+        ((26.5, 566), "Wheelabrator South Broward (NW)"),
         ((31, 911), "Unnamed Building #1 (Blimp Key)"),
+        ((48.5, 561.5), "Wheelabrator South Broward (TW)"),
         ((56.5, 548), "Wheelabrator South Broward"),
         ((58, 590), "Caribbean Airlines Cargo (E)"),
+        ((81, 564.5), "Wheelabrator South Broward (SE)"),
         ((111.5, 619), "Large Grassrivers Bridge (1)"),
         ((123, 627), "Small Grassrivers Bridge (W)"),
         ((130, 619), "Large Grassrivers Bridge (2)"),
@@ -2608,23 +2610,27 @@ pixels = {
         ((74.5, 927), "Orlando Station"),
         ((94, 1042), "Lake Leonida (W)"),
         ((252, 1048.5), "Lake Leonida (V)"),
+        ((309, 856), "Wheelabrator South Broward (E)"),
         ((338.5, 807.5), "Round Water Tower"),
         ((361.5, 839), "MIA North Terminal (A)"),
+        ((363.5, 840.5), "Wheelabrator South Broward (TE)"),
         ((496, 839), "MIA North Terminal (B)"),
         ((530, 839), "MIA North Terminal (C)"),
         ((563.5, 839), "MIA North Terminal (D)"),
         ((586, 839), "MIA North Terminal (E)"),
         ((400, 1056), "Lake Leonida (U)"),
         ((442.5, 783), "Wheelabrator South Broward"),
+        ((451.5, 840.5), "Wheelabrator South Broward (TW)"),
         ((474, 791), "FAA Miami ATCT (MIA)"),
+        ((474.5, 853), "Wheelabrator South Broward (R)"),
         ((479, 817), "MIA North Terminal Tower"),
-        ((535, 854), "Wheelabrator South Broward (W)"),
-        #((535, 863), "Wheelabrator South Broward (3)"),
-        #((535, 862.5), "Wheelabrator South Broward (3T)"),
-        ((535, 866), "Wheelabrator South Broward (3B)"),
-        #((535, 870.5), "Wheelabrator South Broward (2T)"),
-        #((535, 872), "Wheelabrator South Broward (2)"),
-        #((535, 881), "Wheelabrator South Broward (1)"),
+        ((535, 854), "Wheelabrator South Broward (NW)"),
+        #((535, 863), "Wheelabrator South Broward (5)"),
+        #((535, 862.5), "Wheelabrator South Broward (5T)"),
+        ((535, 866), "Wheelabrator South Broward (5B)"),
+        #((535, 870.5), "Wheelabrator South Broward (4T)"),
+        #((535, 872), "Wheelabrator South Broward (4)"),
+        #((535, 881), "Wheelabrator South Broward (3)"),
         ((577, 838), "WDNA FM (B)"),
         ((774, 1077), "Lake Leonida (T)"),
         ((794, 1060.5), "Lake Leonida (S)"),
@@ -2638,13 +2644,13 @@ pixels = {
         ((1194.5, 867), "Dark Billboard (Ambrosia)"),
         ((1213, 867), "Dark Billboard (Ambrosia) (TW)"),
         ((1241, 1118), "Lake Leonida (P)"),
-        ((1257.5, 890), "Industrial Building (Ambrosia)"),
+        ((1257.5, 890), "Industrial Building 1 (Ambrosia)"),
         ((1299, 1116), "Lake Leonida (O)"),
         ((1306.5, 865), "USSM Smokestack (1)"),
         ((1321, 891), "USSM Smokestack (2)"),
         ((1324.5, 864), "1500 Sonora Ave (Silo) (L)"),
         ((1343, 864), "1500 Sonora Ave (Silo)"),
-        ((1344, 960), "1500 Sonora Ave (Silo) (B)"),
+        ((1344, 960), "1500 Sonora Ave (Silo) (N)"),
         ((1345, 1125), "Lake Leonida (N)"),
         ((1347, 969.5), "Hospice Billboard (R)"),
         ((1361.5, 864), "1500 Sonora Ave (Silo) (R)"),
@@ -2719,8 +2725,8 @@ pixels = {
         ((2770, 937.5), "Billboard with Hat-Shaped Motif"),
         ((2851, 1054), "Ambrosia Main St (Y)"),
         ((2895, 2011), "Lake Leonida (B)"),
-        ((2920, 847), "Daytona Beach Water Tower (B)"),
-        ((2921, 819), "Daytona Beach Water Tower"),
+        ((2920, 847), "3400 Transmitter Rd (B)"),
+        ((2921, 819), "3400 Transmitter Rd"),
         ((2925, 1912), "Red Boxville (BNE)"),
         ((2977, 1279), "Ambrosia Bridge (3B)"),
         ((2968.5, 900.5), "Billboard with Oval Motif #1 (TE)"),
@@ -2744,13 +2750,9 @@ pixels = {
         ((3453, 1084.5), "Hendry County Motorsports Park"),
     ],
     "[S2/59] Ambrosia 04 (Fires)": [
-        #((11, 1007), "Wheelabrator South Broward (3)"),
-        #((12, 1028.5), "Wheelabrator South Broward (2)"),
-        #((13, 1050), "Wheelabrator South Broward (1)"),
-        #((106, 966), "Wheelabrator South Broward (3T)"),
-        #((106, 980.5), "Wheelabrator South Broward (2T)"),
-        ((108, 947), "Wheelabrator South Broward (W)"),
-        ((108, 973), "Wheelabrator South Broward (3B)"),
+        ((45, 945), "Wheelabrator South Broward (R)"),
+        ((108, 947), "Wheelabrator South Broward (NW)"),
+        ((108, 973), "Wheelabrator South Broward (5B)"),
         ((119, 1192.5), "Road D (Ambrosia) (2)"),
         ((207, 979), "Route 10 (E)"),
         ((365, 1075), "Car C (Ambrosia) (2)"),
@@ -2759,18 +2761,21 @@ pixels = {
         ((687, 689), "Pylon (Ambrosia) (E)"),
         ((856, 1480), "Canal A (Ambrosia) (1)"),
         ((1036, 716.5), "Pylon (Ambrosia) (W)"),
+        ((1100.5, 973.5), "Billboard (South Ambrosia) (TE)"),
         ((1172.5, 1211), "Road D (Ambrosia) (1)"),
         ((1380, 1334), "Canal A (Ambrosia) (2)"),
         ((1703.5, 1684), "Path F (Ambrosia) (1)"),
         ((1801, 1690.5), "Road A (Ambrosia) (2)"),
+        ((1843.5, 946.5), "Dark Billboard (Ambrosia) (TE)"),
         ((1848, 467), "Radio Tower (Ambrosia)"),
         ((1848, 1263), "Radio Tower (Ambrosia) (B)"),
+        ((1887.5, 946.5), "Dark Billboard (Ambrosia) (TW)"),
         ((1921, 1190), "Road C (Ambrosia) (3)"),
         ((1933.5, 1223), "Road B (Ambrosia) (3)"),
         #((2038, 969.5), "Billboard (South Ambrosia)"),
         ((2038.5, 969), "USSM Smokestack (3)"),
-        ((2148, 900), "Daytona Beach Water Tower"),
-        ((2148, 923.5), "Daytona Beach Water Tower (B)"),
+        ((2148, 900), "3400 Transmitter Rd"),
+        ((2148, 923.5), "3400 Transmitter Rd (B)"),
         ((2176.5, 1722.5), "Path E (Ambrosia) (1)"),
         ((2272, 1217), "Canal B (Ambrosia) (2)"),
         ((2372, 1247), "Path F (Ambrosia) (2)"),
@@ -2782,12 +2787,14 @@ pixels = {
         ((2650, 1085), "Canal C (Ambrosia) (2)"),
         ((2678, 1757), "Path D (Ambrosia) (1)"),
         ((2724, 1021.5), "Small Billboard (Ambrosia) (W)"),
+        ((2730, 963), "Industrial Building 1 (Ambrosia)"),
         ((2743.5, 1025.5), "Small Billboard (Ambrosia) (E)"),
         # ((2750, 888), "US Sugar Mill (Factory)"),
         ((2750, 889), "US Sugar Mill (Factory) (R)"),
         ((2750.5, 822.5), "US Sugar Mill (Factory)"),
         ((2760, 1260), "Path D (Ambrosia) (2)"),
         ((2801, 1794), "Car A (Ambrosia) (1)"),
+        ((2869, 988.5), "Industrial Building 2 (Ambrosia) (TE)"),
         ((2901, 1822), "Car A (Ambrosia) (2)"),
         ((2985, 1279.5), "Path C (Ambrosia) (2)"),
         ((2988, 1248), "Car B (Ambrosia) (2)"),
@@ -3414,15 +3421,19 @@ pixels = {
     ],
     "[S2/74] Ambrosia Postcard (X)": [
         ((18, 1021), "Dark Billboard (Ambrosia) (TE)"),
+        ((50, 1153), "Industrial Building 2 (Ambrosia) (TE)"),
         ((69, 1020.5), "Dark Billboard (Ambrosia)"),
         ((116.5, 1021), "Dark Billboard (Ambrosia) (TW)"),
-        ((184, 1079), "Industrial Building (Ambrosia)"),
+        ((184, 1079), "Industrial Building 1 (Ambrosia)"),
+        ((211.5, 1151.5), "Industrial Building 2 (Ambrosia) (TW)"),
         ((307, 988), "USSM Smokestack (1)"),
+        ((352, 1026), "Billboard (South Ambrosia) (TE)"),
         ((370, 1024), "Billboard (South Ambrosia)"),
         ((379, 1109), "USSM Smokestack (2)"),
+        ((386, 1025.5), "Billboard (South Ambrosia) (TW)"),
         ((412, 929), "1500 Sonora Ave (Silo) (L)"),
         ((584, 929), "1500 Sonora Ave (Silo)"),
-        ((611, 1727), "1500 Sonora Ave (Silo) (B)"),
+        ((624.5, 1732), "1500 Sonora Ave (Silo) (N)"),
         ((756, 929), "1500 Sonora Ave (Silo) (R)"),
         ((427, 972), "STA01"),
         ((428, 1050.5), "STA13"),
@@ -3451,6 +3462,7 @@ pixels = {
         ((741.5, 1084), "STA24"),
         ((754, 970.5), "STA06"),
         ((757.5, 1048), "STA18"),
+        ((765, 1950), "1500 Sonora Ave (Silo) (BR)"),
         ((818, 1059), "USSM Smokestack (3)"),
         ((887.5, 1073), "Train Signal (Ambrosia) (4E)"),
         ((915, 1072), "Train Signal (Ambrosia) (4W)"),
@@ -3493,8 +3505,8 @@ pixels = {
         ((2627, 1524.5), "US Sugar Mill (Office)"),
         ((2681.5, 1144.5), "1500 Sonora Ave (Tank) (R)"),
         ((2899.5, 963.5), "USSM Smokestack (10)"),
-        ((2970, 985), "Daytona Beach Water Tower (B)"),
-        ((2970.5, 943), "Daytona Beach Water Tower"),
+        ((2970, 985), "3400 Transmitter Rd (B)"),
+        ((2970.5, 943), "3400 Transmitter Rd"),
         ((2972, 1074), "USSM Smokestack (11)"),
         ((3024, 1097), "Factory D (Ambrosia) (NW)"),
         ((3181, 1284), "Train Signal (Ambrosia) (5E)"),
@@ -3511,7 +3523,7 @@ pixels = {
         ((731.5, 106), "SFUWO School"),
         ((841.5, 219.5), "Trees C (Grassrivers) (1)"),
         ((868.5, 218.5), "Trees C (Grassrivers) (2)"),
-        ((897, 101), "Unknown Stucture (Keys)"),
+        ((893, 102), "Unknown Stucture (Keys)"),
         ((931, 218.5), "Trees C (Grassrivers) (3)"),
         ((1020, 1240), "Boat (Grassrivers)"),
         ((1057.5, 318.5), "Trees B (Grassrivers) (1)"),
@@ -4051,6 +4063,12 @@ lines = {
         ((1242, 263), (1248, 592)),
         # ((918.5, 416), (926, 758))
     ]),
+    "[S2/74] Ambrosia Postcard (X)": ([
+        ((440, 1992), (679, 1922.5)),
+        ((816, 2116), (1113, 2009.5)),
+        ((1113, 2009.5), (679, 1922.5)),
+        ((816, 2116), (439.5, 2027)),
+    ], []),
 }
 
 lines = {
@@ -4199,7 +4217,6 @@ landmarks = {
     "Cruise Ship (RT)": (364.488, -249.336, 56.151),  # d=3.773 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Cruise Terminal D": (643.504, -420.789, 35.897),  # d=1.245 via Motorboats (B) & Vice City 08 (Ferris Wheel)
     "Cruise Terminal G (B)": (330.731, -334.763, 17.882),  # d=1.675 via Vice Beach (B) & Rooftop Party
-    "Daytona Beach Water Tower": (-4014.012, 2789.099, 67.792),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "Di Lido Island (N)": (496.162, 1537.713, 0.000),  # via Venetian Islands
     "Di Lido Island (S)": (588.273, 1001.623, 0.000),  # via Venetian Islands
     "Dirt Road (Grassrivers) (A)": (-3577.244, -3996.379, 0.500),  # via Grassrivers Postcard (X)
@@ -4923,6 +4940,7 @@ landmarks = {
     "Train Signal (S) (W)": (-6623.084, 3686.116, 18.578),  # d=0.013 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
     # "Train Tunnel (T)": (-5527.131, 5129.345, 78.110),  # via Diner (NE)
     "Train Tunnel (B)": (-5527.131, 5129.345, 69.610),  # via Diner (NE)
+    "3400 Transmitter Rd": (-4014.012, 2789.099, 67.792),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "Tree on Island K": (-2476.651, -6557.911, 9.686),  # d=0.729 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Trees B (Grassrivers) (1B)": (-3846.230, -4266.146, 0.000),  # via Grassrivers Postcard (X)
     "Trees B (Grassrivers) (1)": (-3846.488, -4266.510, 4.332),  # d=0.007 via Grassrivers 04 (Police Chase) & Grassrivers Postcard (X)
@@ -5036,7 +5054,7 @@ landmarks = {
     "Wildfire Scooters (S)": (-6458.709, 3323.329, 6.128),  # d=0.012 via Chase (2) (A) & AI World Editor Map (4K)
     "Wyman (Pool)": (-5322.430, 3472.470, 66.790),  # Pool
 
-    "Daytona Beach Water Tower": (-3996.293, 2892.033, 68.174),  # d=3.595 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "3400 Transmitter Rd": (-3996.293, 2892.033, 68.174),  # d=3.595 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
     "1500 Sonora Ave (Silo)": (-2720.882, 3851.700, 58.300),  # d=1.549 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "1500 Sonora Ave (Tank)": (-2972.058, 3687.346, 36.725),  # d=0.767 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
     #"Sunshine Skyway Bridge (N)": (-6651.500, 4560.344, 104.157),  # d=0.037 via Diner (W) (B) & Ambrosia 04 (Fires)
