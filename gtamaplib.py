@@ -2529,7 +2529,7 @@ def _find_camera(args):
                     if is_visible:
                         continue
                 valid = True
-                for ray_stack in ray_stacks:
+                for i, ray_stack in enumerate(ray_stacks):
                     center_name, other_center_ray = ray_stack[0]
                     (lm_name_a, other_ray_a), (lm_name_b, other_ray_b) = ray_stack[1:]
                     center_ray = (cam.xyz, cam.get_landmark_direction(center_name))
@@ -2544,7 +2544,8 @@ def _find_camera(args):
                         intersect_ray_and_plane(other_ray_a, other_plane),
                         intersect_ray_and_plane(other_ray_b, other_plane),
                     )
-                    if not other_size / max_size_delta <= size <= other_size * max_size_delta:
+                    delta = max_size_delta if type(max_size_delta) is float else max_size_delta[i]
+                    if not other_size / delta <= size <= other_size * delta:
                         valid = False
                         break
                 if not valid:
