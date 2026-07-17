@@ -34,7 +34,7 @@ cameras = {
     "[L1/6] Sidewalk (Jason) (E)": ((-461.500, 1233.400, 3.200), (-464.000, 1233.800, 4.600), (244.800, -19.865, 0.000), (None, 50.800), (1920, 1080), "2021-09-10 16-37-50 [?]"),
     "[L1/7] Port": ((1185.700, -429.100, 5.200), (1190.000, -426.900, 7.200), (302.500, 14.100, 0.000), (None, 49.600), (1376, 776), "2021-10-29 20-21-10 [241]"),
     "[L1/8] Gas Station (Lucia)": ((-6319.500, 2749.100, 12.500), (-6319.100, 2748.300, 13.100), (359.830, -0.234, 0.000), (57.350, 34.200), (1920, 1080), "2021-11-05 11-09-23 [?]"),
-    "[L1/9] Motel": ((-5358.200, 3486.200, 66.700), (-5359.900, 3484.000, 66.500), (313.000, 14.000, 0.000), (None, 49.600), (1920, 1080), "2021-12-14 19-52-44 [?]"),
+    "[L1/9] Motel": ((-5358.200, 3486.200, 66.700), (-5359.900, 3484.000, 66.500), (313.000, 15.000, 0.000), (None, 49.600), (1920, 1080), "2021-12-14 19-52-44 [?]"),
     "[L1/10] Pawn Shop (W)": ((-6423.000, 3060.100, 5.800), (-6421.600, 3061.600, 6.700), (125.104, -8.885, 0.000), (None, 49.600), (1376, 776), "2021-12-17 10-31-22 [?]"),
     "[L1/10] Pawn Shop (S)": ((-6420.100, 3062.300, 5.900), (-6420.300, 3064.700, 6.500), (173.193, -4.990, 0.000), (None, 49.600), (1376, 776), "2021-12-17 10-31-22 [?]"),
     "[L1/11] Sidewalk (Lucia)": ((1931.500, 274.000, 3.200), (1931.700, 270.400, 5.800), (359.000, -32.000, 0.000), (None, 49.600), (1920, 1080), "2022-01-20 11-18-26 [?]"),
@@ -109,7 +109,7 @@ cameras = {
     "[L1/42] Tennis Court (NE)": ((-315.400, 1174.200, 3.500), (-315.691, 1172.236, 4.958), (0.366, -8.063, -0.011), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [447]"),
     "[L1/42] Tennis Court (E)": ((-315.400, 1174.200, 3.500), (-316.981, 1173.021, 4.989), (315.186, -8.964, -0.003), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [?]"),
     "[L1/42] Tennis Court (SE)": ((-315.400, 1174.200, 3.500), (-317.232, 1174.859, 5.021), (258.590, -9.921, 0.009), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [?]"),
-    "[L1/43] Pool": ((-5325.300, 3473.200, 66.900), (-5327.700, 3476.600, 67.900), (208.000, -6.000, 0.000), (None, 49.600), (1920, 1080), "2022-09-06 17-13-34 [?]"),
+    "[L1/43] Pool": ((-5325.300, 3473.200, 66.900), (-5327.700, 3476.600, 67.900), (209.000, -11.000, 0.000), (None, 49.600), (1920, 1080), "2022-09-06 17-13-34 [?]"),
     "[L1/44] Tennis Stadium (4K)": ((-152.600, -1748.900, 36.300), (-155.600, -1748.600, 36.300), (84.936, -0.100, 0.000), (None, 45.000), (3840, 2160), "2022-09-07 13-04-13 [?]"),
     "[L1/48] Hangar (A)": ((-2630.900, -116.800, 4.300), (-2631.700, -113.900, 4.600), (313.300, 15.400, 0.000), (None, 50.900), (1920, 1080), "2022-09-13 17-16-42 [?]"),
     "[L1/45] Street (Jason)": (None, (-1375.000, 600.000, 5.000), (350.000, 9.000, 0.000), (60, None), (1920, 1080), "2022-09-12 14-42-12 [?]"),
@@ -1108,9 +1108,9 @@ pixels = {
         ((403.5, 839.5), "Starlet Motel Pool (B)"),
         ((571.5, 475), "Starlet Motel Pool (D)"),
         ((610, 473.5), "Starlet Motel Pool (C)"),
-        ((727, 313), "Red-Yellow Umbrella 2"),
+        ((727, 313), "Starlet Motel Parassol 2"),
         ((772.5, 129.5), "Radio Tower near Intersection 1 (C)"),
-        ((1273, 231), "Red-Yellow Umbrella 1"),
+        ((1273, 231), "Starlet Motel Parassol 1"),
         ((1442, 210), "Billboard near Intersection (BC)"),
         ((1473.5, 200.5), "Billboard near Intersection (BN)"),
     ],
@@ -2583,17 +2583,18 @@ pixels = {
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": [
         ((354, 773), "Billboard near Intersection (BC)"),
         ((432, 8), "Radio Tower near Intersection 2"),
+        ((474, 1631.5), "Starlet Motel Pool (D)"),
         ((485, 764), "Billboard near Intersection (BN)"),
         ((487, 578), "Billboard near Intersection (TN)"),
-        ((527, 1435), "Red-Yellow Umbrella 2"),
-        ((554, 1473.5), "Red-Yellow Umbrella 3"),
+        ((527, 1435), "Starlet Motel Parassol 2"),
+        ((554, 1473.5), "Starlet Motel Parassol 3"),
         ((958, 1796), "Starlet Motel Sign (BS)"),
         ((1221, 1653), "Starlet Motel Pool (B)"),
         ((1226.5, 393.5), "Starlet Motel Sign (B)"),
         ((1233, 303), "Starlet Motel Sign (A)"),
         ((1258, 1654.5), "Starlet Motel Pool (A)"),
         ((1282.5, 694.5), "Starlet Motel Sign (C)"),
-        ((1394, 1440), "Red-Yellow Umbrella 1"),
+        ((1394, 1440), "Starlet Motel Parassol 1"),
         ((1415, 1430.5), "Building near Pool (E)"),
         ((2025, 1499), "Starlet Motel (RE)"),
     ],
@@ -4968,6 +4969,10 @@ landmarks = {
     "Star Island Bridge (5E)": (655.049, 205.122, 0.000),  # via Port Vice City (A)
     "Star Island Bridge (5W)": (637.917, 204.786, 0.000),  # via Port Vice City (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
+    "Starlet Motel Pool (A)": (-5324.145, 3474.359, 65.900),  # via Pool
+    "Starlet Motel Pool (B)": (-5323.778, 3473.957, 65.900),  # via Pool
+    "Starlet Motel Pool (C)": (-5316.727, 3465.918, 65.900),  # via Pool
+    "Starlet Motel Pool (D)": (-5316.409, 3466.254, 65.900),  # via Pool
     "Stephen P. Clark Government Center (E)": (-871.635, 33.121, 158.603),  # d=0.646 via Leonida Keys 01 (Airplane) (X) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
@@ -5127,6 +5132,8 @@ landmarks = {
     "Water Tower near Prison": (-5133.606, 1571.815, 91.326),  # d=0.076 via Loading Zone near Prison (SW) & Ambrosia 02 (Panorama)
     "Wheelabrator South Broward": (-2398.190, 2381.347, 96.882),  # d=7.827 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
     "Wheelabrator South Broward (W)": (-2454.658, 2486.475, 49.438),  # d=5.049 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+    "Wyman (Initial)": (-5333.050, 3448.120, 65.800),  # via Pool
+    "Wyman (Pool)": (-5322.430, 3472.470, 66.790),  # via Pool
 
     "East Coast (A)": (-358.351, 5593.257, 0.000),  # via Glitch (A)
     "East Coast (B)": (446.436, 5725.567, 0.000),  # via Glitch (A)
