@@ -2827,7 +2827,7 @@ pixels = {
         ((3463.5, 986.5), "White Silos (E) (NE)"),
         ((3480, 1299.5), "Path A (Ambrosia) (2)"),
         ((3535, 875), "Sunshine Skyway Bridge (S)"),
-        ((3624.5, 966.5), "1500 Sonora Ave (Tank) (L)"),
+        ((3625, 966), "1500 Sonora Ave (Tank) (L)"),
         ((3688, 967), "1500 Sonora Ave (Tank)"),
         ((3692.5, 1223.5), "Road C (Ambrosia) (1)"),
         ((3713, 1709.5), "Path B (Ambrosia) (1)"),
