@@ -736,6 +736,7 @@ pixels = {
         ((1144, 773), "Starlet Motel (RE)"),
         ((1186.5, 866), "Billboard near Starlet Motel (B)"),
         ((1444, 878), "Starlet Motel Sign (BS)"),
+        ((1691.5, 320), "Lamppost near Starlet Motel"),
         ((1791, 731.5), "Building near Pool (N)"),
         ((1799, 904), "Lamppost near Starlet Motel (B)"),
     ],
