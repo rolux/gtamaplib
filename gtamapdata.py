@@ -2241,6 +2241,7 @@ pixels = {
         ((360, 508), "Flamingo South Beach (NENW)"),
         ((392, 419), "Citigroup Center (NE)"),
         ((443, 421), "Citigroup Center (NW)"),
+        ((446, 315), "WDNA FM"),
         ((475, 304), "Southeast Financial Center (D)"),
         ((494, 303), "Southeast Financial Center"),
         ((748.5, 477), "Capri South Beach"),
