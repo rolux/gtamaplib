@@ -200,7 +200,7 @@ cameras = {
     "[T2/46] Wall (Down)": None,
     "[T2/51] Drive-by Shooting": None,
     "[T2/52] Empty Lot near Metro Station": (None, (-670.000, 940.000, 5.000), (45.000, -4.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3340]"),
-    "[T2/54] Starlet Motel": (None, (-5320.000, 3440.000, 67.000), (0.000, 8.000, 0.000), (55.000, None), (3840, 1728), "Trailer 2 [4322]"),
+    "[T2/54] Starlet Motel": (None, (-5336.700, 3419.600, 66.615), (358.925, 5.800, 0.000), (43.100, 20.154), (3840, 1728), "Trailer 2 [4322]"),
     "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (355.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
     "[T2/59] Park (Mobile Phone)": (None, (-170.000, 420.000, 5.000), (210.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3566]"),
     "[T2/60] Landing Gear (A)": None,
@@ -248,7 +248,7 @@ cameras = {
     "[S2/47] Leonida Keys 02 (Sidewalk)": (None ,(-2885.000, -6390.000, 2.000), (106.500, 1.300, 0.000), (34.900, None), (3840, 2160), "Leonida Keys 02 [1]"),
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
     "[S2/50] Leonida Keys 05 (Boats)": (None, (-3144.000, -6293.000, 4.620), (160.054, -15.200, 0.000), (67.800, 41.412), (3840, 2160), "Leonida Keys 05 [1]"),
-    "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5335.000, 3575.000, 75.000), (176.000, 3.000, 0.000), (55.000, None), (3840, 2160), "Port Gellhorn 01 [1]"),
+    "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5315.700, 3571.600, 71.152), (169.705, 1.600, 0.000), (31.300, 17.910), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
     "[S2/55] Port Gellhorn 05 (Fire)": (None, (-6800.000, 3950.000, 5.000), (315.000, -0.500, 0.000), (50.000, None), (3840, 2160), "Port Gellhorn 05 [1]"),
@@ -732,9 +732,12 @@ pixels = {
         ((111, 628), "Starlet Motel (P)"),
         ((970, 810), "Alpha Gas Station (A1)"),
         ((1072, 739.5), "Starlet Motel (RS)"),
+        ((1081, 776), "Starlet Motel (P1N)"),
         ((1144, 773), "Starlet Motel (RE)"),
         ((1186.5, 866), "Billboard near Starlet Motel (B)"),
         ((1444, 878), "Starlet Motel Sign (BS)"),
+        ((1791, 731.5), "Building near Pool (N)"),
+        ((1799, 904), "Lamppost near Starlet Motel (B)"),
     ],
     "[L1/10] Pawn Shop (W)": [
         ((514, 400), "Player"),
@@ -1113,6 +1116,7 @@ pixels = {
         ((1272.5, 195.5), "Starlet Motel Parassol 1"),
         ((1440.5, 167.5), "Billboard near Intersection (BC)"),
         ((1473.5, 162.5), "Billboard near Intersection (BN)"),
+        ((1691.5, 264.5), "Starlet Motel (SRN)"),
     ],
     "[L1/44] Tennis Stadium (4K)": [
         ((34, 1073.5), "Unknown Structure (1)"),
@@ -2016,6 +2020,7 @@ pixels = {
     ],
     "[T2/54] Starlet Motel": [
         ((531, 1232), "Starlet Motel (P)"),
+        ((2636, 736), "Lamppost near Starlet Motel"),
         ((2694, 385), "Billboard near Starlet Motel (TC)"),
         ((2696.5, 619), "Billboard near Starlet Motel (C)"),
         ((2790, 543), "Starlet Motel Sign (C)"),
@@ -2591,6 +2596,7 @@ pixels = {
         ((487, 578), "Billboard near Intersection (TN)"),
         ((527, 1435), "Starlet Motel Parassol 2"),
         ((554, 1473.5), "Starlet Motel Parassol 3"),
+        ((944, 1796), "Starlet Motel Sign (BS)"),
         ((958, 1796), "Starlet Motel Sign (BS)"),
         ((1221, 1653), "Starlet Motel Pool (B)"),
         ((1226.5, 393.5), "Starlet Motel Sign (B)"),
@@ -2599,11 +2605,16 @@ pixels = {
         ((1282.5, 694.5), "Starlet Motel Sign (C)"),
         ((1394, 1440), "Starlet Motel Parassol 1"),
         ((1415, 1430.5), "Building near Pool (E)"),
+        ((1453.5, 911), "Lamppost near Starlet Motel"),
+        ((1470, 1393.5), "Starlet Motel (SRN)"),
         ((1656.5, 1922.5), "Woman near Starlet Motel (B)"),
         ((1657, 1711), "Woman near Starlet Motel (T)"),
+        ((1841.5, 1435), "Building near Pool (N)"),
         ((2025, 1499), "Starlet Motel (RE)"),
+        ((2105.5, 1423), "Building near Pool (W)"),
         ((2260.5, 1649.5), "Woman at Starlet Motel (T)"),
         ((2262.5, 1856), "Woman at Starlet Motel (B)"),
+        ((2269, 1534.5), "Starlet Motel (P1N)"),
         ((2683, 1029), "Starlet Motel (RNE)"),
         ((3560.5, 1564.5), "Starlet Motel (RN)"),
     ],
@@ -4263,6 +4274,7 @@ landmarks = {
     "Broken Keys Bridge (7B)": (-1457.565, -4552.415, 0.000),  # via Leonida Keys Postcard (X)
     "Broken Keys Bridge (8B)": (-1447.253, -4571.004, 0.000),  # via Leonida Keys Postcard (X)
     "Brown Hotel Sign": (1858.400, 1559.628, 7.705),  # d=0.046 via Vice City 03 (Basketball) & Hotel (W)
+    "Building near Pool (N)": (-5329.880, 3488.110, 69.043),  # d=0.169 via Port Gellhorn 01 (Starlet Motel) & Motel
     "Canal (Hotel Valetta)": (1823.378, 1660.827, 0.000),  # via Vice City 03 (Basketball)
     "Capri South Beach (SE)": (1313.994, 1130.618, 57.829),  # d=0.350 via Rooftop Party & Vice Beach (B)
     "Carbonell Brickell": (-249.878, -854.294, 129.828),  # d=2.211 via Vice City Postcard & Skyline
@@ -4978,7 +4990,13 @@ landmarks = {
     "Star Island Bridge (5E)": (655.049, 205.122, 0.000),  # via Port Vice City (A)
     "Star Island Bridge (5W)": (637.917, 204.786, 0.000),  # via Port Vice City (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
+    "Starlet Motel (P)": (-5357.348, 3497.608, 68.600),  # via Motel
     "Starlet Motel (RE)": (-5328.840, 3505.094, 68.900),  # via Motel
+    "Starlet Motel (RN)": (-5337.503, 3522.025, 68.900),  # via Port Gellhorn 01 (Starlet Motel)
+    "Starlet Motel (RNE)": (-5333.122, 3513.545, 73.279),  # via Port Gellhorn 01 (Starlet Motel)
+    "Starlet Motel (SRN)": (-5329.844, 3448.817, 68.982),  # d=0.127 via Port Gellhorn 01 (Starlet Motel) & Pool
+    "Starlet Motel Parassol 1": (-5326.210, 3470.046, 68.615),  # d=0.063 via Port Gellhorn 01 (Starlet Motel) & Pool
+    "Starlet Motel Parassol 2": (-5313.400, 3459.248, 68.634),  # d=0.230 via Port Gellhorn 01 (Starlet Motel) & Pool
     "Starlet Motel Pool (A)": (-5323.963, 3474.223, 65.900),  # via Pool
     "Starlet Motel Pool (B)": (-5323.545, 3473.767, 65.900),  # via Pool
     "Starlet Motel Pool (C)": (-5313.001, 3462.081, 65.900),  # via Pool
