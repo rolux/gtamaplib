@@ -2581,6 +2581,8 @@ pixels = {
         ((3181, 248), "Seven Mile Bridge (C)"),
     ],
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": [
+        ((127, 2023.5), "Man near Starlet Motel (B)"),
+        ((132, 1798.5), "Man near Starlet Motel (T)"),
         ((354, 773), "Billboard near Intersection (BC)"),
         ((432, 8), "Radio Tower near Intersection 2"),
         ((474, 1631.5), "Starlet Motel Pool (D)"),
@@ -2596,7 +2598,11 @@ pixels = {
         ((1282.5, 694.5), "Starlet Motel Sign (C)"),
         ((1394, 1440), "Starlet Motel Parassol 1"),
         ((1415, 1430.5), "Building near Pool (E)"),
+        ((1656.5, 1922.5), "Woman near Starlet Motel (B)"),
+        ((1657, 1711), "Woman near Starlet Motel (T)"),
         ((2025, 1499), "Starlet Motel (RE)"),
+        ((2260.5, 1649.5), "Woman at Starlet Motel (T)"),
+        ((2262.5, 1856), "Woman at Starlet Motel (B)"),
     ],
     "[S2/54] Port Gellhorn 04 (Delights) (X)": [
         ((783.5, 28), "Water Tower (West Port Gellhorn) (C)"),
@@ -4969,10 +4975,10 @@ landmarks = {
     "Star Island Bridge (5E)": (655.049, 205.122, 0.000),  # via Port Vice City (A)
     "Star Island Bridge (5W)": (637.917, 204.786, 0.000),  # via Port Vice City (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
-    "Starlet Motel Pool (A)": (-5324.145, 3474.359, 65.900),  # via Pool
-    "Starlet Motel Pool (B)": (-5323.778, 3473.957, 65.900),  # via Pool
-    "Starlet Motel Pool (C)": (-5316.727, 3465.918, 65.900),  # via Pool
-    "Starlet Motel Pool (D)": (-5316.409, 3466.254, 65.900),  # via Pool
+    "Starlet Motel Pool (A)": (-5323.963, 3474.223, 65.900),  # via Pool
+    "Starlet Motel Pool (B)": (-5323.545, 3473.767, 65.900),  # via Pool
+    "Starlet Motel Pool (C)": (-5313.001, 3462.081, 65.900),  # via Pool
+    "Starlet Motel Pool (D)": (-5312.737, 3462.704, 65.900),  # via Pool
     "Stephen P. Clark Government Center (E)": (-871.635, 33.121, 158.603),  # d=0.646 via Leonida Keys 01 (Airplane) (X) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
