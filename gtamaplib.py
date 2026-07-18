@@ -549,16 +549,17 @@ class Camera:
             self.render_line((corners[a], corners[b]), fill=fill, width=width)
 
 
-    def render_camera_info(self):
+    def render_camera_info(self, loss=None):
         """
         Renders camera metadata
         """
         if not hasattr(self, "image"): self.open()
         d = 6 if self.hfov < 1 else 3
+        loss_str = "" if loss is None else f"LOSS {loss:.3f} "
         text = (
             f"XYZ ({self.x:.3f}, {self.y:.3f}, {self.z:.3f}) "
             f"YPR ({self.yaw:.3f}, {self.pitch:.3f}, {self.roll:.3f}) "
-            f"FOV ({self.hfov:.{d}f}, {self.vfov:.{d}f}) [{self.id}] {self.name}"
+            f"FOV ({self.hfov:.{d}f}, {self.vfov:.{d}f}) {loss_str}[{self.id}] {self.name}"
         )
         height = int(32 * self.scale)
         box = draw_box(text, height, (255, 255, 255), self.color)
@@ -2384,7 +2385,6 @@ def find_camera(
     n_points = len(lm_names)
     ray_stacks = []
     if ray_pairs:
-        # FIXME: delete pixels later
         for other_cam_name, lm_name_a, lm_name_b in ray_pairs:
             other_cam = get_camera(other_cam_name)
             center_name = f"{lm_name_a} + {lm_name_b}"
@@ -2436,6 +2436,13 @@ def find_camera(
 
     if best_loss == float("inf"):
         raise RuntimeError("No camera found.")
+
+    if ray_pairs:
+        for other_cam_name, lm_name_a, lm_name_b in ray_pairs:
+            other_cam = get_camera(other_cam_name)
+            center_name = f"{lm_name_a} + {lm_name_b}"
+            del cam.landmark_pixels[center_name]
+            del other_cam.landmark_pixels[center_name]
 
     cam.set_xyz(best_cam.xyz).set_ypr(best_cam.ypr).set_fov(best_cam.fov).register()
     for other_cam_name, lm_name in sorted(rays, key=lambda kv: kv[1]):
@@ -2551,12 +2558,25 @@ def _find_camera(args):
                 if not valid:
                     continue
                 if objects:
-                    for (lm_name_a, lm_name_b), size, z in objects:
+                    for (lm_name_a, lm_name_b), orientation, size, z in objects:
                         plane = ((0, 0, z), (0, 0, 1))
-                        actual_size = get_distance(
-                            intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_a)), plane),
-                            intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_b)), plane),
-                        )
+                        if orientation == "horizontal":
+                            actual_size = get_distance(
+                                intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_a)), plane),
+                                intersect_ray_and_plane((cam.xyz, cam.get_landmark_direction(lm_name_b)), plane),
+                            )
+                        elif orientation == "vertical":
+                            base_point = intersect_ray_and_plane(
+                                (cam.xyz, cam.get_landmark_direction(lm_name_a)),
+                                plane
+                            )
+                            top_point = intersect_ray_and_ray(
+                                (base_point, (0, 0, 1)),
+                                (cam.xyz, cam.get_landmark_direction(lm_name_b))
+                            )[1]
+                            actual_size = get_distance(base_point, top_point)
+                        else:
+                            raise ValueError(f'Unknown orientation "{orientation}".')
                         if not actual_size / max_object_delta <= size <= actual_size * max_object_delta:
                             valid = False
                             break
