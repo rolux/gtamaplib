@@ -2604,6 +2604,8 @@ pixels = {
         ((2025, 1499), "Starlet Motel (RE)"),
         ((2260.5, 1649.5), "Woman at Starlet Motel (T)"),
         ((2262.5, 1856), "Woman at Starlet Motel (B)"),
+        ((2683, 1029), "Starlet Motel (RNE)"),
+        ((3560.5, 1564.5), "Starlet Motel (RN)"),
     ],
     "[S2/54] Port Gellhorn 04 (Delights) (X)": [
         ((783.5, 28), "Water Tower (West Port Gellhorn) (C)"),
@@ -4976,6 +4978,7 @@ landmarks = {
     "Star Island Bridge (5E)": (655.049, 205.122, 0.000),  # via Port Vice City (A)
     "Star Island Bridge (5W)": (637.917, 204.786, 0.000),  # via Port Vice City (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
+    "Starlet Motel (RE)": (-5328.840, 3505.094, 68.900),  # via Motel
     "Starlet Motel Pool (A)": (-5323.963, 3474.223, 65.900),  # via Pool
     "Starlet Motel Pool (B)": (-5323.545, 3473.767, 65.900),  # via Pool
     "Starlet Motel Pool (C)": (-5313.001, 3462.081, 65.900),  # via Pool
