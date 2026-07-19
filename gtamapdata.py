@@ -109,7 +109,7 @@ cameras = {
     "[L1/42] Tennis Court (NE)": ((-315.400, 1174.200, 3.500), (-315.691, 1172.236, 4.958), (0.366, -8.063, -0.011), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [447]"),
     "[L1/42] Tennis Court (E)": ((-315.400, 1174.200, 3.500), (-316.981, 1173.021, 4.989), (315.186, -8.964, -0.003), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [?]"),
     "[L1/42] Tennis Court (SE)": ((-315.400, 1174.200, 3.500), (-317.232, 1174.859, 5.021), (258.590, -9.921, 0.009), (None, 37.649), (1824, 1080), "2022-09-01 14-37-21 [?]"),
-    "[L1/43] Pool": ((-5325.300, 3473.200, 66.900), (-5327.700, 3476.600, 67.900), (208.000, -10.000, 0.000), (None, 49.600), (1920, 1036), "2022-09-06 17-13-34 [1709]"),
+    "[L1/43] Pool": ((-5325.300, 3473.200, 66.900), (-5327.300, 3475.400, 67.900), (215.000, -10.000, 0.000), (None, 49.600), (1920, 1036), "2022-09-06 17-13-34 [1709]"),
     "[L1/44] Tennis Stadium (4K)": ((-152.600, -1748.900, 36.300), (-155.600, -1748.600, 36.300), (84.936, -0.100, 0.000), (None, 45.000), (3840, 2160), "2022-09-07 13-04-13 [?]"),
     "[L1/48] Hangar (A)": ((-2630.900, -116.800, 4.300), (-2631.700, -113.900, 4.600), (313.300, 15.400, 0.000), (None, 50.900), (1920, 1080), "2022-09-13 17-16-42 [?]"),
     "[L1/45] Street (Jason)": (None, (-1375.000, 600.000, 5.000), (350.000, 9.000, 0.000), (60, None), (1920, 1080), "2022-09-12 14-42-12 [?]"),
@@ -200,7 +200,7 @@ cameras = {
     "[T2/46] Wall (Down)": None,
     "[T2/51] Drive-by Shooting": None,
     "[T2/52] Empty Lot near Metro Station": (None, (-670.000, 940.000, 5.000), (45.000, -4.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3340]"),
-    "[T2/54] Starlet Motel": (None, (-5336.700, 3419.600, 66.615), (358.925, 5.800, 0.000), (43.100, 20.154), (3840, 1728), "Trailer 2 [4322]"),
+    "[T2/54] Starlet Motel": (None, (-5333.000, 3455.000, 66.800), (10.000, 7.500, 0.000), (52.000, None), (3840, 1728), "Trailer 2 [4322]"),
     "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (355.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
     "[T2/59] Park (Mobile Phone)": (None, (-170.000, 420.000, 5.000), (210.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3566]"),
     "[T2/60] Landing Gear (A)": None,
@@ -248,7 +248,7 @@ cameras = {
     "[S2/47] Leonida Keys 02 (Sidewalk)": (None ,(-2885.000, -6390.000, 2.000), (106.500, 1.300, 0.000), (34.900, None), (3840, 2160), "Leonida Keys 02 [1]"),
     "[S2/48] Leonida Keys 03 (The Rusty Anchor)": None,
     "[S2/50] Leonida Keys 05 (Boats)": (None, (-3144.000, -6293.000, 4.620), (160.054, -15.200, 0.000), (67.800, 41.412), (3840, 2160), "Leonida Keys 05 [1]"),
-    "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5315.700, 3571.600, 71.152), (169.705, 1.600, 0.000), (31.300, 17.910), (3840, 2160), "Port Gellhorn 01 [1]"),
+    "[S2/51] Port Gellhorn 01 (Starlet Motel)": (None, (-5326.300, 3539.400, 69.800), (175.018, 3.300, 0.000), (43.000, 24.987), (3840, 2160), "Port Gellhorn 01 [1]"),
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
     "[S2/55] Port Gellhorn 05 (Fire)": (None, (-6800.000, 3950.000, 5.000), (315.000, -0.500, 0.000), (50.000, None), (3840, 2160), "Port Gellhorn 05 [1]"),
@@ -735,7 +735,7 @@ pixels = {
         ((1081, 776), "Starlet Motel (P1N)"),
         ((1144, 773), "Starlet Motel (RE)"),
         ((1186.5, 866), "Billboard near Starlet Motel (B)"),
-        ((1444, 878), "Starlet Motel Sign (BS)"),
+        ((1444, 878), "Starlet Motel Sign (BSW)"),
         ((1691.5, 320), "Lamppost near Starlet Motel"),
         ((1791, 731.5), "Building near Pool (N)"),
         ((1799, 904), "Lamppost near Starlet Motel (B)"),
@@ -2029,6 +2029,7 @@ pixels = {
         ((2820, 234), "Starlet Motel Sign (A)"),
         ((2827, 303.5), "Starlet Motel Sign (B)"),
         ((3008, 1108.5), "Building near Pool (E)"),
+        ((3134.5, 1486), "Starlet Motel Sign (BNE)"),
         ((3303.5, 1247), "Alpha Gas Station (S)"),
         ((3335.5, 1271.5), "Alpha Gas Station (A2)"),
     ],
@@ -2597,8 +2598,8 @@ pixels = {
         ((487, 578), "Billboard near Intersection (TN)"),
         ((527, 1435), "Starlet Motel Parassol 2"),
         ((554, 1473.5), "Starlet Motel Parassol 3"),
-        ((944, 1796), "Starlet Motel Sign (BS)"),
-        ((958, 1796), "Starlet Motel Sign (BS)"),
+        ((796.5, 1811.5), "Starlet Motel Sign (BNE)"),
+        ((942, 1796), "Starlet Motel Sign (BSW)"),
         ((1221, 1653), "Starlet Motel Pool (B)"),
         ((1226.5, 393.5), "Starlet Motel Sign (B)"),
         ((1233, 303), "Starlet Motel Sign (A)"),
@@ -2819,8 +2820,12 @@ pixels = {
         ((687, 689), "Pylon (Ambrosia) (E)"),
         ((856, 1480), "Canal A (Ambrosia) (1)"),
         ((1036, 716.5), "Pylon (Ambrosia) (W)"),
+        ((1060, 1023), "Road (South Ambrosia) (C)"),
         ((1100.5, 973.5), "Billboard (South Ambrosia) (TE)"),
+        ((1122.5, 973), "Billboard (South Ambrosia) (TW)"),
+        ((1122.5, 1022), "Road (South Ambrosia) (B)"),
         ((1172.5, 1211), "Road D (Ambrosia) (1)"),
+        ((1190.5, 1020.5), "Road (South Ambrosia) (A)"),
         ((1380, 1334), "Canal A (Ambrosia) (2)"),
         ((1703.5, 1684), "Path F (Ambrosia) (1)"),
         ((1801, 1690.5), "Road A (Ambrosia) (2)"),
@@ -2828,6 +2833,7 @@ pixels = {
         ((1848, 467), "Radio Tower (Ambrosia)"),
         ((1848, 1272), "Radio Tower (Ambrosia) (B)"),
         ((1887.5, 946.5), "Dark Billboard (Ambrosia) (TW)"),
+        ((1903.5, 877), "Two Tall Trees"),
         ((1911, 1204), "Building B (Ambrosia) (NW)"),
         ((1921, 1190), "Road C (Ambrosia) (3)"),
         ((1933.5, 1223), "Road B (Ambrosia) (3)"),
@@ -3588,6 +3594,7 @@ pixels = {
         ((3181, 1284), "Train Signal (Ambrosia) (5E)"),
         ((3197.5, 1284), "Train Signal (Ambrosia) (5W)"),
         ((3185, 1123), "Ambrosia Airfield (N)"),
+        ((3246.5, 941.5), "Two Tall Trees"),
     ],
     "[S2/75] Grassrivers Postcard (X)": [
         ((0, 1547.5), "Dirt Road (Grassrivers) (B)"),
@@ -4275,7 +4282,9 @@ landmarks = {
     "Broken Keys Bridge (7B)": (-1457.565, -4552.415, 0.000),  # via Leonida Keys Postcard (X)
     "Broken Keys Bridge (8B)": (-1447.253, -4571.004, 0.000),  # via Leonida Keys Postcard (X)
     "Brown Hotel Sign": (1858.400, 1559.628, 7.705),  # d=0.046 via Vice City 03 (Basketball) & Hotel (W)
-    "Building near Pool (N)": (-5329.880, 3488.110, 69.043),  # d=0.169 via Port Gellhorn 01 (Starlet Motel) & Motel
+    "Building near Pool (N)": (-5329.946, 3488.101, 68.985),  # d=0.065 via Motel & Port Gellhorn 01 (Starlet Motel)
+    "Building near Pool (E)": (-5327.338, 3461.698, 68.633),  # d=0.002 via Starlet Motel & Port Gellhorn 01 (Starlet Motel)
+    "Building near Pool (W)": (-5334.265, 3476.015, 68.985),  # via Port Gellhorn 01 (Starlet Motel)
     "Canal (Hotel Valetta)": (1823.378, 1660.827, 0.000),  # via Vice City 03 (Basketball)
     "Capri South Beach (SE)": (1313.994, 1130.618, 57.829),  # d=0.350 via Rooftop Party & Vice Beach (B)
     "Carbonell Brickell": (-249.878, -854.294, 129.828),  # d=2.211 via Vice City Postcard & Skyline
@@ -4583,6 +4592,7 @@ landmarks = {
     "Lamp Post (NE)": (-2266.158, -2790.306, 50.000),  # via Prison
     "Lamp Post (SW)": (-2266.456, -2928.891, 50.000),  # via Prison
     "Lamp Post (SE)": (-2264.461, -2938.791, 50.000),  # via Prison
+    "Lamppost near Starlet Motel": (-5324.753, 3486.858, 75.386),  # d=0.065 via Starlet Motel & Port Gellhorn 01 (Starlet Motel)
     "Large Billboard (Ambrosia)": (-2898.843, 4142.244, 31.253),  # d=0.267 via Ambrosia 01 (Bikers) & Ambrosia 02 (Panorama)
     "Large Grassrivers Bridge (1)": (-3409.964, -2909.023, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Large Grassrivers Bridge (2)": (-3391.932, -2925.015, 0.000),  # via Leonida Keys 01 (Airplane) (X)
@@ -4992,16 +5002,16 @@ landmarks = {
     "Star Island Bridge (5W)": (637.917, 204.786, 0.000),  # via Port Vice City (A)
     "Star Island Water Tower": (756.803, 481.188, 29.868),  # d=6.203 via Sidewalk (Jason) (E) & Vice Beach (B)
     "Starlet Motel (P)": (-5357.348, 3497.608, 68.600),  # via Motel
-    "Starlet Motel (RE)": (-5328.840, 3505.094, 68.900),  # via Motel
-    "Starlet Motel (RN)": (-5337.503, 3522.025, 68.900),  # via Port Gellhorn 01 (Starlet Motel)
-    "Starlet Motel (RNE)": (-5333.122, 3513.545, 73.279),  # via Port Gellhorn 01 (Starlet Motel)
-    "Starlet Motel (SRN)": (-5329.844, 3448.817, 68.982),  # d=0.127 via Port Gellhorn 01 (Starlet Motel) & Pool
-    "Starlet Motel Parassol 1": (-5326.210, 3470.046, 68.615),  # d=0.063 via Port Gellhorn 01 (Starlet Motel) & Pool
-    "Starlet Motel Parassol 2": (-5313.400, 3459.248, 68.634),  # d=0.230 via Port Gellhorn 01 (Starlet Motel) & Pool
-    "Starlet Motel Pool (A)": (-5323.963, 3474.223, 65.900),  # via Pool
-    "Starlet Motel Pool (B)": (-5323.545, 3473.767, 65.900),  # via Pool
-    "Starlet Motel Pool (C)": (-5313.001, 3462.081, 65.900),  # via Pool
-    "Starlet Motel Pool (D)": (-5312.737, 3462.704, 65.900),  # via Pool
+    "Starlet Motel (RE)": (-5330.134, 3504.215, 68.800),  # via Motel
+    "Starlet Motel (RN)": (-5336.418, 3516.151, 68.800),  # via Port Gellhorn 01 (Starlet Motel)
+    "Starlet Motel (RNE)": (-5333.397, 3510.213, 71.820),  # via Port Gellhorn 01 (Starlet Motel)
+    "Starlet Motel (SRN)": (-5325.865, 3442.908, 69.177),  # d=0.077 via Port Gellhorn 01 (Starlet Motel) & Pool
+    "Starlet Motel Parassol 1": (-5324.869, 3468.668, 68.644),  # d=0.031 via Port Gellhorn 01 (Starlet Motel) & Pool
+    "Starlet Motel Parassol 2": (-5310.960, 3459.883, 68.683),  # d=0.136 via Port Gellhorn 01 (Starlet Motel) & Pool
+    "Starlet Motel Pool (A)": (-5323.301, 3473.496, 65.900),  # via Pool
+    "Starlet Motel Pool (B)": (-5322.831, 3473.094, 65.900),  # via Pool
+    "Starlet Motel Pool (C)": (-5310.941, 3462.781, 65.900),  # via Pool
+    "Starlet Motel Pool (D)": (-5310.755, 3463.432, 65.900),  # via Pool
     "Stephen P. Clark Government Center (E)": (-871.635, 33.121, 158.603),  # d=0.646 via Leonida Keys 01 (Airplane) (X) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (NW)": (-927.553, 44.945, 161.674),  # d=4.654 via Street (Bikers) (B) & Vice City 03 (Basketball)
     #"Stephen P. Clark Government Center (W)": (-922.463, 205.333, 147.253),  # d=66.114 via Interchange & Highway (Peacock Bay) (A)
