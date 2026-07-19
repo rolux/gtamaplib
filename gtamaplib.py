@@ -502,7 +502,7 @@ class Camera:
         md.pixels[self.name] = self.landmark_pixels
         return self
 
-    def render_all(self):
+    def render_all(self, loss=None):
         """
         Runs all render functions
         """
@@ -516,7 +516,7 @@ class Camera:
         self.render_rays()
         self.render_landmarks()
         self.render_pixels()
-        self.render_camera_info()
+        self.render_camera_info(loss=loss)
         return self
 
     def render_box(self, center, wdh, bearing, fill=(0, 0, 0), width=1):
@@ -547,7 +547,6 @@ class Camera:
         ]
         for a, b in edges:
             self.render_line((corners[a], corners[b]), fill=fill, width=width)
-
 
     def render_camera_info(self, loss=None):
         """
@@ -614,6 +613,27 @@ class Camera:
                     (self.x + np.cos(rad_b) * d, self.y + np.sin(rad_b) * d, 0)
                 )
                 self.render_line(line, color, width)
+        return self
+
+    def render_grid(self, area, step, z, width=1):
+        if not hasattr(self, "image"): self.open()
+        for y in range(area[1], area[3] + 1, step):
+            for x in range(area[0], area[2] + 1, step):
+                is_x_line = x % (step * 10) == 0
+                is_y_line = y % (step * 10) == 0
+                is_intersection = is_x_line and is_y_line
+                if is_intersection:
+                    color = (255, 255, 255)
+                elif is_x_line:
+                    color = get_color(str(x))
+                elif is_y_line:
+                    color = get_color(str(y))
+                else:
+                    color = (128, 128, 128)
+                d = step / 2 if is_intersection else step / 5 if is_x_line or is_y_line else step / 10
+                self.render_line(((x - d, y, z), (x + d, y, z)), color, width)
+                self.render_line(((x, y - d, z), (x, y + d, z)), color, width)
+                self.render_line(((x, y, z), (x, y, z + d)), color, width)
         return self
 
     def render_landmarks(self, width=2):
@@ -2482,7 +2502,7 @@ def find_camera(
     os.makedirs(os.path.dirname(basename), exist_ok=True)
     m.save(f"{basename} map.png", map_area)
 
-    cam.render_all().save(f"{basename} camera.png")
+    cam.render_all(loss=best_loss).save(f"{basename} camera.png")
 
     if projection_area:
         m = get_map(map_name)
@@ -2526,10 +2546,10 @@ def _find_camera(args):
                         continue
                 if not_visible:
                     is_visible = False
-                    for point in not_visible:
+                    for point, (left, top, right, bottom) in not_visible:
                         pixel = cam.get_pixel(point)
                         if pixel is not None and (
-                            0 <= pixel[0] < cam.w and 0 <= pixel[1] < cam.h
+                            left <= pixel[0] < right and top <= pixel[1] < bottom
                         ):
                             is_visible = True
                             break
