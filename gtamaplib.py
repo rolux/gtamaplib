@@ -1647,135 +1647,6 @@ class HanksWaffles(Landmark):
                 ), self.color, width * f)
 
 
-class SunshineSkywayBridge(Landmark):
-
-    def __init__(
-        self,
-        nt=(-6753.926, 4566.237, 119.352),
-        st=(-6690.837, 4348.569, 119.352),
-        nr=(-6753.926, 4566.237, 33.585),
-        sr=(-6690.837, 4348.569, 33.585),
-        nnr=(-6790.733, 4693.227, 30.960),
-        ssr=(-6654.030, 4221.579, 30.960),
-    ):
-        super().__init__("Sunshine Skyway Bridge")
-        self.nt = nt
-        self.st = st
-        self.nr = nr
-        self.sr = sr
-        self.nnr = nnr
-        self.ssr = ssr
-        self._construct()
-
-    def _construct(self, n_samples=201):
-        self.direction = get_direction(self.ssr, self.nnr)
-        dir_xy = self.direction[:2]
-        points = np.stack([self.nnr, self.nr, self.sr, self.ssr])
-        ref_xy = self.ssr[:2]
-        # fit z(d) = a * d**2 + b * d + c (parabola)
-        d = (points[:, :2] - ref_xy) @ dir_xy  # shape (4,)
-        z = points[:, 2]
-        design_matrix = np.column_stack([d ** 2, d, np.ones_like(d)])
-        a, b, c = np.linalg.lstsq(design_matrix, z, rcond=None)[0]
-        d_samples = np.linspace(d.min(), d.max(), n_samples)
-        xy = ref_xy + np.outer(d_samples, dir_xy)
-        z_samples = a * d_samples ** 2 + b * d_samples + c
-        self.road = np.column_stack([xy, z_samples])  # shape (N, 3)
-        self._a, self._b, self._c = a, b, c
-
-    def _get_road_point(self, base_point, direction, distance):
-        dir_xy = self.direction[:2]
-        ref_xy = self.ssr[:2]
-        sign = 1 if np.dot(direction[:2], dir_xy) >= 0 else -1
-        d0 = (np.array(base_point[:2]) - ref_xy) @ dir_xy
-        d  = d0 + sign * distance
-        xy = ref_xy + d * dir_xy
-        z  = self._a * d ** 2 + self._b * d + self._c
-        return xy[0], xy[1], z
-
-    def draw_on_map(self, m, width=1):
-        m.draw_line((self.nnr, self.ssr), self.color, width * 4)
-        m.draw_circle(self.nt, width * 5, self.color, (255, 255, 255), width)
-        m.draw_circle(self.st, width * 5, self.color, (255, 255, 255), width)
-
-    def render_on_camera(self, cam):
-        cam.render_line((self.nt, (self.nt[0], self.nt[1], 0)), fill=self.color, width=4)
-        cam.render_line((self.st, (self.st[0], self.st[1], 0)), fill=self.color, width=4)
-        for i in range(len(self.road) - 1):
-            cam.render_line((self.road[i], self.road[i + 1]), fill=self.color, width=2)
-        n_cables = 10
-        gap = (self.nt[2] - self.nr[2]) / n_cables
-        for pillar in (self.nt, self.st):
-            for direction in (self.direction, -self.direction):
-                for i in range(n_cables):
-                    base_point = (pillar[0], pillar[1], self.nr[2])
-                    road_point = self._get_road_point(base_point, direction, (i + 1) * gap)
-                    pillar_point = get_point(base_point, [0, 0, 1], (i + 1) * gap)
-                    cam.render_line((road_point, pillar_point), fill=self.color, width=0.5)
-        return self
-
-
-class WDNAFM(Landmark):
-
-    def __init__(self):
-        super().__init__("WDNA FM")
-        self.t = md.landmarks["WDNA FM"]
-        self.n0 = md.landmarks["WDNA FM (N0)"]
-        self.se0 = md.landmarks["WDNA FM (SE0)"]
-        self.sw0 = md.landmarks["WDNA FM (SW0)"]
-        self.n1 = md.landmarks["WDNA FM (N1)"]
-        self.se1 = md.landmarks["WDNA FM (SE1)"]
-        self.sw1 = md.landmarks["WDNA FM (SW1)"]
-        self.n2 = md.landmarks["WDNA FM (N2)"]
-        self.se2 = md.landmarks["WDNA FM (SE2)"]
-        self.sw2 = md.landmarks["WDNA FM (SW2)"]
-        self.n3 = md.landmarks["WDNA FM (N3)"]
-        self.se3 = md.landmarks["WDNA FM (SE3)"]
-        self.sw3 = md.landmarks["WDNA FM (SW3)"]
-        self.n4 = md.landmarks["WDNA FM (N4)"]
-        self.se4 = md.landmarks["WDNA FM (SE4)"]
-        self.sw4 = md.landmarks["WDNA FM (SW4)"]
-
-    def draw_on_map(self, m, width=1):
-        for line in [
-            (self.n0, self.se0),
-            (self.se0, self.sw0),
-            (self.sw0, self.n0),
-            (self.n0, self.t),
-            (self.se0, self.t),
-            (self.sw0, self.t),
-        ]:
-            m.draw_line(line, self.color, width)
-        return self
-
-    def render_on_camera(self, cam, width=1):
-        for line in [
-            (self.n0, self.n4),
-            (self.se0, self.se4),
-            (self.sw0, self.sw4),
-            (self.n4, self.t),
-            (self.se4, self.t),
-            (self.sw4, self.t),
-            (self.n0, self.se0),
-            (self.se0, self.sw0),
-            (self.sw0, self.n0),
-            (self.n1, self.se1),
-            (self.se1, self.sw1),
-            (self.sw1, self.n1),
-            (self.n2, self.se2),
-            (self.se2, self.sw2),
-            (self.sw2, self.n2),
-            (self.n3, self.se3),
-            (self.se3, self.sw3),
-            (self.sw3, self.n3),
-            (self.n4, self.se4),
-            (self.se4, self.sw4),
-            (self.sw4, self.n4),
-        ]:
-            cam.render_line(line, self.color, width)
-        return self
-
-
 class HomesteadWaterTower(Landmark):
 
     def __init__(self):
@@ -1866,6 +1737,34 @@ class Jason(Landmark):
                 curr = (bx + np.cos(rad) * ring_r, by + np.sin(rad) * ring_r, z)
                 cam.render_line((prev, curr), self.color, width)
                 prev = curr
+        return self
+
+
+class SonoraAvenueSilo(Landmark):
+
+    def __init__(self):
+        super().__init__("1500 Sonora Ave (Silo)")
+        self.x, self.y, self.z = md.landmarks["1500 Sonora Ave (Silo)"]
+        ratio = 3.2
+        self.h = 45.714
+        self.w = self.h / ratio
+        self.r = self.w / 2
+        self.ground_z = self.z - self.h
+
+    def draw_on_map(self, m, width=1):
+        m.draw_circle((self.x, self.y), self.r, self.color, self.color, 1)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        for deg in range(0, 360, 10):
+            rad = np.radians(deg)
+            x, y = (self.x + np.cos(rad) * self.r, self.y + np.sin(rad) * self.r)
+            cam.render_line(((x, y, self.ground_z), (x, y, self.z)), self.color, width)
+            cam.render_line(((x, y, self.z), (self.x, self.y, self.z)), self.color, width)
+            if deg:
+                cam.render_line(((prev_x, prev_y, self.ground_z), (x, y, self.ground_z)), self.color, width)
+                cam.render_line(((prev_x, prev_y, self.z), (x, y, self.z)), self.color, width)
+            prev_x, prev_y = x, y
         return self
 
 
@@ -2004,6 +1903,135 @@ class JasonsHouse(Landmark):
                 (line[0][0] + self.ox, line[0][1] + self.oy, line[0][2]),
                 (line[1][0] + self.ox, line[1][1] + self.oy, line[1][2]),
             ), self.color, width)
+        return self
+
+
+class SunshineSkywayBridge(Landmark):
+
+    def __init__(
+        self,
+        nt=(-6753.926, 4566.237, 119.352),
+        st=(-6690.837, 4348.569, 119.352),
+        nr=(-6753.926, 4566.237, 33.585),
+        sr=(-6690.837, 4348.569, 33.585),
+        nnr=(-6790.733, 4693.227, 30.960),
+        ssr=(-6654.030, 4221.579, 30.960),
+    ):
+        super().__init__("Sunshine Skyway Bridge")
+        self.nt = nt
+        self.st = st
+        self.nr = nr
+        self.sr = sr
+        self.nnr = nnr
+        self.ssr = ssr
+        self._construct()
+
+    def _construct(self, n_samples=201):
+        self.direction = get_direction(self.ssr, self.nnr)
+        dir_xy = self.direction[:2]
+        points = np.stack([self.nnr, self.nr, self.sr, self.ssr])
+        ref_xy = self.ssr[:2]
+        # fit z(d) = a * d**2 + b * d + c (parabola)
+        d = (points[:, :2] - ref_xy) @ dir_xy  # shape (4,)
+        z = points[:, 2]
+        design_matrix = np.column_stack([d ** 2, d, np.ones_like(d)])
+        a, b, c = np.linalg.lstsq(design_matrix, z, rcond=None)[0]
+        d_samples = np.linspace(d.min(), d.max(), n_samples)
+        xy = ref_xy + np.outer(d_samples, dir_xy)
+        z_samples = a * d_samples ** 2 + b * d_samples + c
+        self.road = np.column_stack([xy, z_samples])  # shape (N, 3)
+        self._a, self._b, self._c = a, b, c
+
+    def _get_road_point(self, base_point, direction, distance):
+        dir_xy = self.direction[:2]
+        ref_xy = self.ssr[:2]
+        sign = 1 if np.dot(direction[:2], dir_xy) >= 0 else -1
+        d0 = (np.array(base_point[:2]) - ref_xy) @ dir_xy
+        d  = d0 + sign * distance
+        xy = ref_xy + d * dir_xy
+        z  = self._a * d ** 2 + self._b * d + self._c
+        return xy[0], xy[1], z
+
+    def draw_on_map(self, m, width=1):
+        m.draw_line((self.nnr, self.ssr), self.color, width * 4)
+        m.draw_circle(self.nt, width * 5, self.color, (255, 255, 255), width)
+        m.draw_circle(self.st, width * 5, self.color, (255, 255, 255), width)
+
+    def render_on_camera(self, cam):
+        cam.render_line((self.nt, (self.nt[0], self.nt[1], 0)), fill=self.color, width=4)
+        cam.render_line((self.st, (self.st[0], self.st[1], 0)), fill=self.color, width=4)
+        for i in range(len(self.road) - 1):
+            cam.render_line((self.road[i], self.road[i + 1]), fill=self.color, width=2)
+        n_cables = 10
+        gap = (self.nt[2] - self.nr[2]) / n_cables
+        for pillar in (self.nt, self.st):
+            for direction in (self.direction, -self.direction):
+                for i in range(n_cables):
+                    base_point = (pillar[0], pillar[1], self.nr[2])
+                    road_point = self._get_road_point(base_point, direction, (i + 1) * gap)
+                    pillar_point = get_point(base_point, [0, 0, 1], (i + 1) * gap)
+                    cam.render_line((road_point, pillar_point), fill=self.color, width=0.5)
+        return self
+
+
+class WDNAFM(Landmark):
+
+    def __init__(self):
+        super().__init__("WDNA FM")
+        self.t = md.landmarks["WDNA FM"]
+        self.n0 = md.landmarks["WDNA FM (N0)"]
+        self.se0 = md.landmarks["WDNA FM (SE0)"]
+        self.sw0 = md.landmarks["WDNA FM (SW0)"]
+        self.n1 = md.landmarks["WDNA FM (N1)"]
+        self.se1 = md.landmarks["WDNA FM (SE1)"]
+        self.sw1 = md.landmarks["WDNA FM (SW1)"]
+        self.n2 = md.landmarks["WDNA FM (N2)"]
+        self.se2 = md.landmarks["WDNA FM (SE2)"]
+        self.sw2 = md.landmarks["WDNA FM (SW2)"]
+        self.n3 = md.landmarks["WDNA FM (N3)"]
+        self.se3 = md.landmarks["WDNA FM (SE3)"]
+        self.sw3 = md.landmarks["WDNA FM (SW3)"]
+        self.n4 = md.landmarks["WDNA FM (N4)"]
+        self.se4 = md.landmarks["WDNA FM (SE4)"]
+        self.sw4 = md.landmarks["WDNA FM (SW4)"]
+
+    def draw_on_map(self, m, width=1):
+        for line in [
+            (self.n0, self.se0),
+            (self.se0, self.sw0),
+            (self.sw0, self.n0),
+            (self.n0, self.t),
+            (self.se0, self.t),
+            (self.sw0, self.t),
+        ]:
+            m.draw_line(line, self.color, width)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        for line in [
+            (self.n0, self.n4),
+            (self.se0, self.se4),
+            (self.sw0, self.sw4),
+            (self.n4, self.t),
+            (self.se4, self.t),
+            (self.sw4, self.t),
+            (self.n0, self.se0),
+            (self.se0, self.sw0),
+            (self.sw0, self.n0),
+            (self.n1, self.se1),
+            (self.se1, self.sw1),
+            (self.sw1, self.n1),
+            (self.n2, self.se2),
+            (self.se2, self.sw2),
+            (self.sw2, self.n2),
+            (self.n3, self.se3),
+            (self.se3, self.sw3),
+            (self.sw3, self.n3),
+            (self.n4, self.se4),
+            (self.se4, self.sw4),
+            (self.sw4, self.n4),
+        ]:
+            cam.render_line(line, self.color, width)
         return self
 
 
@@ -3253,8 +3281,9 @@ def subsample(image_np, xy):
 
 FS = FourSeasons()
 HW = HanksWaffles()
-SSB = SunshineSkywayBridge()
-WDNA = WDNAFM()
 HWT = HomesteadWaterTower()
 J = Jason()
 JH = JasonsHouse()
+SAS = SonoraAvenueSilo()
+SSB = SunshineSkywayBridge()
+WDNA = WDNAFM()
