@@ -74,6 +74,7 @@ cameras = {
     "[L1/24] Sidewalk (Jason) (S)": ((-465.900, 1228.900, 3.500), (-465.000, 1232.100, 3.500), (172.000, -1.000, 0.000), (None, 38.000), (1440, 900), "2022-05-20 11-20-13 [?]"),
     "[L1/25] Parking Lot": ((-1573.800, -1642.400, 3.800), (-1574.700, -1644.500, 5.6), (316.500, -33.500, 0.000), (None, 49.600), (1792, 868), "2022-05-24 17-19-42 [?]"),
     "[L1/26] Loading Zone near Prison (N)": ((-4726.500, 1853.800, 11.500), (-4727.600, 1856.500, 11.900), (21.000, -8.400, 0.000), (None, 45.000), (1920, 1020), "2022-05-25 13-29-33 [360]"),
+    "[L1/26] Loading Zone near Prison (S)": ((-4726.900, 1852.200, 11.500), (-4725.500, 1854.800, 12.100), (141.227, -4.216, 0.000), (None, 49.6), (1920, 1020), "2022-05-25 13-29-33 [598]"),
     "[L1/26] Loading Zone near Prison (SW)": ((-4727.000, 1852.200, 11.500), (-4725.300, 1853.800, 12.200), (122.973, -5.000, 0.000), (None, 49.600), (1920, 1020), "2022-05-25 13-29-33 [602]"),
     "[L1/27] Highway (N)": ((-584.000, 1601.300, 12.200), (-587.400, 1596.000, 13.400), (324.500, -6.000, 0.000), (None, 51.300), (1920, 1080), "2022-06-27 14-52-04 [?]"),
     "[L1/27] Highway (NE)": ((-503.300, 1716.900, 13.300), (-506.700, 1712.000, 15.400), (326.000, -16.300, 0.000), (None, 51.400), (1920, 1080), "2022-06-27 14-52-04 [?]"),
@@ -264,7 +265,8 @@ cameras = {
     "[S2/65] Mount Kalaga National Park 01 (Dirt Bikes)": None,
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-1750.000, 6250.000, 200.000), (118.750, 6.800, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2500.000, 6500.000, 200.000), (131.321, 6.027, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
-    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3500.000, 5750.000, 200.000), (133.000, 5.750, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3500.000, 5750.000, 120.000), (129.000, 8.000, 1.000), (65.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3000.000, 5750.000, 200.000), (119.000, 9.500, 1.000), (80.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-4750.000, 6000.000, 120.000), (156.447, -13.566, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
     "[S2/70] Mount Kalaga National Park 06 (River)": None,
     "[S2/71] Vice City Postcard": (None, (400.000, 1860.000, 37.310), (151.654, 3.000, 0.000), (67.500, 47.117), (2458, 1604), "Vice City Postcard [?]"),
@@ -923,9 +925,18 @@ pixels = {
     "[L1/25] Parking Lot": [
         ((628, 541), "Player"),
     ],
+    "[L1/26] Loading Zone near Prison (S)": [
+        ((758, 654), "Player"),
+        ((1251, 354), "3001 Gordon Hwy (Water Tower) (BSE)"),
+        ((1257, 353.5), "3001 Gordon Hwy (Water Tower) (BSW)"),
+        ((1270, 229), "3001 Gordon Hwy (Water Tower)"),
+        ((1270, 267), "3001 Gordon Hwy (Water Tower) (B)"),
+        ((1278.5, 354), "3001 Gordon Hwy (Water Tower) (BNE)"),
+        ((1284, 353.5), "3001 Gordon Hwy (Water Tower) (BNW)"),
+    ],
     "[L1/26] Loading Zone near Prison (SW)": [
         ((764, 740), "Player"),
-        ((927, 233), "Water Tower near Prison"),
+        ((927, 233), "3001 Gordon Hwy (Water Tower)"),
     ],
     "[L1/27] Highway (N)": [
         ((1128, 356.5), "112 NE 41st St"),
@@ -2798,7 +2809,7 @@ pixels = {
         ((3060, 1309), "Ambrosia Bridge (4B)"),
         ((3071, 1032), "Ambrosia Main St (X)"),
         ((3098, 2160), "Lake Leonida (A)"),
-        ((3109.5, 792), "Water Tower near Prison"),
+        ((3109.5, 792), "3001 Gordon Hwy (Water Tower)"),
         ((3323, 1003), "Ambrosia Main St (W)"),
         ((3325, 1017), "Billboard with Oval Motif #2 (B)"),
         ((3329, 870), "Billboard with Oval Motif #2"),
@@ -3012,7 +3023,7 @@ pixels = {
         ((49, 1938), "Ambrosia Road (B)"),
         ((94, 1785), "Canal Road (A)"),
         ((135, 2042), "Kissimmee River (B)"),
-        ((170, 1600), "3400 Transmitter Rd"),
+        ((170, 1600), "3001 Gordon Hwy (Water)"),
         ((310, 1954), "Ambrosia Road (C)"),
         ((405, 1762), "Canal Road (B)"),
         ((424, 1621), "Lollipop Ridge (NW)"),
@@ -3021,6 +3032,7 @@ pixels = {
         ((802, 2096), "Bridge"),
         ((812, 1695), "Road (B)"),
         ((848, 1956), "Ambrosia Road (D)"),
+        ((903, 1556.5), "Two Tall Trees"),
         ((996, 1734), "Road (A)"),
         ((1009, 1945), "Highway Bridge (B)"),
         ((1092, 1598.5), "BB Hill"),
@@ -3047,7 +3059,7 @@ pixels = {
     ],
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": [
         ((731, 288), "Unknown Mast (1)"),
-        ((770, 301), "Water Tower near Prison"),
+        ((770, 301), "3001 Gordon Hwy (Water Tower)"),
         ((919.5, 315.5), "Crazy Hill"),
         ((956.5, 322), "Blob"),
         ((1037.5, 326), "Billboard near Intersection (TS)"),
@@ -3585,7 +3597,7 @@ pixels = {
         ((2078.5, 1091), "Factory C (Ambrosia) (S)"),
         ((2080, 1912.5), "Guard Booth (Ambrosia) (E)"),
         ((2106, 1919), "Guard Booth (Ambrosia) (N)"),
-        #((2090, 987), "Water Tower near Prison"),
+        #((2090, 987), "3001 Gordon Hwy (Water Tower)"),
         ((2109, 2081), "Black Bison (1)"),
         ((2120.5, 1095), "Factory C (Ambrosia) (N)"),
         ((2133, 1906), "Guard Booth (Ambrosia) (W)"),
@@ -3601,9 +3613,11 @@ pixels = {
         ((2627, 1524.5), "US Sugar Mill (Office)"),
         ((2681.5, 1144), "1500 Sonora Ave (Tank) (R)"),
         ((2899.5, 963.5), "USSM Smokestack (10)"),
-        ((2970, 985), "3400 Transmitter Rd (B)"),
+        ((2956.5, 1044), "3400 Transmitter Rd (BL)"),
+        ((2970, 985), "3400 Transmitter Rd (B)"), #### FIXME: needs to move 0.5 px up
         ((2970.5, 943), "3400 Transmitter Rd"),
         ((2972, 1074), "USSM Smokestack (11)"),
+        ((2981.5, 1044), "3400 Transmitter Rd (BR)"),
         ((3024, 1097), "Factory D (Ambrosia) (NW)"),
         ((3181, 1284), "Train Signal (Ambrosia) (5E)"),
         ((3197.5, 1284), "Train Signal (Ambrosia) (5W)"),
@@ -4402,6 +4416,7 @@ landmarks = {
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
     "105 Front St (S)": (-2828.255, -6432.681, 22.893),  # d=0.101 via Jason Duval 03 (Boat) & Leonida Keys Postcard (X)
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
+    "3001 Gordon Hwy (Water Tower)": (-5114.627, 1574.700, 93.880),  # d=0.116 via Loading Zone near Prison (S) & Ambrosia 02 (Panorama)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
     "Grass (MIA) (A)": (-2420.454, -226.906, 3.500),  # via Airport (X)
     "Grass (MIA) (B)": (-2364.007, -231.299, 3.500),  # via Airport (X)
@@ -5062,7 +5077,7 @@ landmarks = {
     "Small Keys Bridge (NB)": (-833.792, -3706.887, 0.000),  # via Leonida Keys Postcard (X)
     "Small Keys Bridge (SB)": (-901.019, -3869.138, 0.000),  # via Leonida Keys Postcard (X)
     "Small Radio Tower (Key Lento)": (-2097.415, -5640.658, 46.290),  # d=0.776 via Key Lento & Leonida Keys Postcard (X)
-    "1500 Sonora Ave (Silo)": (-2716.010, 3850.201, 64.534),  # d=0.003 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "1500 Sonora Ave (Silo)": (-2713.840, 3812.794, 63.751),  # d=0.002 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "1500 Sonora Ave (Tank)": (-2991.340, 3677.641, 40.360),  # d=0.455 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "Sombrero Key Light (B)": (-2841.034, -7228.936, 0.000),  # via Keys
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
@@ -5176,12 +5191,12 @@ landmarks = {
     "USSM Smokestack (1)": (-2721.273, 3746.676, 61.890),  # d=1.167 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "USSM Smokestack (2)": (-2723.768, 3761.546, 52.853),  # d=1.733 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "USSM Smokestack (3)": (-2973.606, 3018.578, 36.843),  # d=2.208 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (4)": (-2928.319, 3541.695, 102.111),  # d=0.638 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (5)": (-2965.117, 3519.504, 82.091),  # d=0.048 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (6)": (-2972.239, 3522.061, 86.493),  # d=0.788 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (7)": (-2998.396, 3527.586, 100.492),  # d=1.242 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (8)": (-3053.349, 3604.631, 48.363),  # d=1.202 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (9)": (-3059.832, 3607.854, 58.546),  # d=0.326 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (4)": (-2925.118, 3549.727, 101.912),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (5)": (-2963.683, 3522.851, 81.951),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (6)": (-2970.877, 3525.165, 86.626),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (7)": (-2999.198, 3525.879, 100.657),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (8)": (-3056.057, 3600.027, 47.985),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (9)": (-3062.952, 3602.633, 58.688),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "USSM Smokestack (10)": (-2968.396, 3758.264, 62.755),  # d=0.549 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "USSM Smokestack (11)": (-2971.494, 3764.803, 51.374),  # d=1.091 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "Vake Island (E)": (-3566.148, -7894.914, 0.000),  # via Keys
@@ -5219,7 +5234,6 @@ landmarks = {
     "Water Tower (North Port Gellhorn)": (-6340.712, 4540.261, 45.181),  # d=0.184 via Diner (W) (A) & Diner (SW)
     "Water Tower (West Port Gellhorn)": (-6655.143, 3652.918, 37.559),  # d=0.005 via Port Gellhorn Postcard (X) & Port Gellhorn 04 (Delights) (X)
     "Water Tower (West Port Gellhorn) (C)": (-6655.143, 3652.918, 26.508),  # d=0.003 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
-    "Water Tower near Prison": (-5148.096, 1561.826, 94.100),  # d=0.071 via Loading Zone near Prison (SW) & Ambrosia 02 (Panorama)
     "Watson Bay (A)": (-5198.975, -3311.405, 0.000),  # via Grassrivers 02 (Watson Bay)
     "Watson Bay (B)": (-5198.391, -3317.148, 0.000),  # via Grassrivers 02 (Watson Bay)
     "Watson Bay (C)": (-5174.627, -3331.239, 0.000),  # via Grassrivers 02 (Watson Bay)
