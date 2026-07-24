@@ -3587,6 +3587,7 @@ pixels = {
         ((1472, 1245), "Train Signal (Ambrosia) (2E)"),
         ((1488.5, 1246), "Train Signal (Ambrosia) (2W)"),
         ((1488.5, 1310.5), "Train Signal (Ambrosia) (2WB)"),
+        ((1489.5, 922), "US Sugar Mill (Factory) (NE)"),
         ((1492, 899), "US Sugar Mill (Factory) (R)"),
         ((1493, 786), "US Sugar Mill (Factory) (A)"),
         ((1493, 823.5), "US Sugar Mill (Factory) (AC)"),
