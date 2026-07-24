@@ -2778,7 +2778,7 @@ pixels = {
         ((1837, 909), "1500 Sonora Ave (Tank) (L)"),
         ((1885, 909.5), "1500 Sonora Ave (Tank)"),
         ((1895, 862), "USSM Smokestack (10)"),
-        ((1907, 890), "USSM Smokestack (11)"),
+        ((1907, 889), "USSM Smokestack (11)"),
         ((1933.5, 910), "1500 Sonora Ave (Tank) (R)"),
         ((1961, 885), "USSM Smokestack (8)"),
         ((1963, 821), "Light Pollution (A)"),
