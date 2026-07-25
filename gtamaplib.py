@@ -1384,15 +1384,18 @@ class AmbrosiaHill(Landmark):
 
     def __init__(self):
         super().__init__("Ambrosia Hill")
-        self.colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0)]
+        self.colors = [
+            (255, 0, 0), (255, 255, 0), (0, 255, 0),
+            (0, 255, 255), (0, 0, 255), (255, 0, 255),
+        ]
         self._construct()
 
     def _construct(self):
         cam = get_camera("Ambrosia 01 (Bikers)")
         self.xyz = cam.xyz
         self.x, self.y, self.z = self.xyz
-        lm_names = ["Ambrosia Hill (BW)", "Ambrosia Hill (TW)", "Ambrosia Hill (TE)", "Ambrosia Hill (BE)"]
-        self.ds = 1800, 1500, 1400, 1300
+        lm_names = [f"Ambrosia Hill ({x})" for x in "ABDCEF"]
+        self.ds = 2000, 1500, 1400, 1300, 1100, 1000
         self.points = []
         for i, lm_name in enumerate(lm_names):
             ray = (cam.xyz, cam.get_landmark_direction(lm_name))
