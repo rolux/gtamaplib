@@ -502,7 +502,7 @@ class Camera:
         md.pixels[self.name] = self.landmark_pixels
         return self
 
-    def render_all(self, loss=None):
+    def render_all(self, loss=None, no_landmarks=False):
         """
         Runs all render functions
         """
@@ -514,7 +514,8 @@ class Camera:
         self.render_distance_circles()
         self.render_cameras()
         self.render_rays()
-        self.render_landmarks()
+        if not no_landmarks:
+            self.render_landmarks()
         self.render_pixels()
         self.render_camera_info(loss=loss)
         return self
@@ -1005,7 +1006,7 @@ class Map:
         """
         if not hasattr(self, "image"): self.open()
         xy = self.get_map_xy(xy)
-        r *= self.scale
+        #### r *= self.scale
         self.draw.circle(xy, r, fill=fill, outline=outline, width=width)
         if text:
             x, y = xy
@@ -1088,7 +1089,7 @@ class Map:
             f"SCALE {self.scale:.3f} PX/M "
             f"{self.name.upper()} V{self.version}{section_name}"
         )
-        height = int(height * self.scale)
+        height = int(height)
         box = draw_box(text, height, (255, 255, 255), (128, 128, 128))
         image.paste(box, (0, image.size[1] - height))
         return self
@@ -1159,13 +1160,18 @@ class Map:
             (self.zero[1] - xy[1]) / self.scale
         )
 
-    def open(self, scale=None, add_padding=False, keep_rgb=False):
+    def open(self, scale=None, crop=None, add_padding=False, keep_rgb=False):
         """
         Opens the map image for drawing
         """
         self.image = Image.open(self.filename)
         if not keep_rgb:
             self.image = self.image.convert("L").convert("RGB")
+        if crop:
+            self.image = self.crop(crop)
+            x, y = self.get_map_xy((crop[0], crop[3]))
+            self.og_zero = (self.zero[0] - x, self.zero[1] - y)
+            self.zero = self.og_zero
         if add_padding:
             km = int(self.scale * 1000)
             self.og_zero = tuple(np.asarray(self.og_zero) + km)
@@ -1255,7 +1261,6 @@ class Map:
         """
         Projects a camera image onto the map (multi-threaded)
         """
-
         if not hasattr(self, "image"): self.open()
         if type(cam_names) is str: cam_names = [cam_names]
         cams = [get_camera(cam_name).open() for cam_name in cam_names]
@@ -1329,6 +1334,7 @@ def get_map(name):
         filename=m["filename"],
     )
 
+
 def _project_camera_parallel(args):
     """
     Camera projection worker function
@@ -1372,6 +1378,59 @@ class Landmark:
         self.name = name
         self.color = get_color(self.name)
         LANDMARK_OBJECTS[self.name] = self
+
+
+class AmbrosiaHill(Landmark):
+
+    def __init__(self):
+        super().__init__("Ambrosia Hill")
+        self.colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0)]
+        self._construct()
+
+    def _construct(self):
+        cam = get_camera("Ambrosia 01 (Bikers)")
+        self.xyz = cam.xyz
+        self.x, self.y, self.z = self.xyz
+        lm_names = ["Ambrosia Hill (BW)", "Ambrosia Hill (TW)", "Ambrosia Hill (TE)", "Ambrosia Hill (BE)"]
+        self.ds = 1800, 1500, 1400, 1300
+        self.points = []
+        for i, lm_name in enumerate(lm_names):
+            ray = (cam.xyz, cam.get_landmark_direction(lm_name))
+            b, e = get_angles_from_direction(ray[1])
+            direction = get_direction_from_angles(b, 0)
+            point = get_point(cam.xyz, direction, self.ds[i])
+            plane = (point, ray[1])
+            point = intersect_ray_and_plane(ray, plane)
+            self.points.append(point)
+
+    def draw_on_map(self, m, width=1):
+        for i, point in enumerate(self.points):
+            color = self.colors[i]
+            m.draw_line((self.xyz, point), color, width)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        step = 100
+        for i, point in enumerate(self.points):
+            color = self.colors[i]
+            base_point = (point[0], point[1], self.z)
+            # may fail for certain cameras
+            # cam.render_line((self.xyz, base_point), color, width)
+            # cam.render_line((self.xyz, point), color, width)
+            prev_top_point = self.xyz
+            prev_base_point = self.xyz
+            n = int(self.ds[i] / step)
+            for j in range(1, n + 1):
+                t  = j / n
+                top_point = np.array(self.xyz) * (1 - t) + point * t
+                base_point = (top_point[0], top_point[1], self.z)
+                cam.render_line((prev_top_point, top_point), color, width)
+                cam.render_line((prev_base_point, base_point), color, width)
+                cam.render_line((base_point, top_point), color, width * (2 if j % 5 == 0 else 1))
+                prev_top_point=top_point
+                prev_base_point=base_point
+
+        return self
 
 
 class FourSeasons(Landmark):
@@ -1612,6 +1671,80 @@ class FourSeasons(Landmark):
         return self
 
 
+class GordonHighwayWaterTower(Landmark):
+
+    def __init__(self):
+        super().__init__("3001 Gordon Hwy (Water Tower)")
+        self.top_ratio = 0.25
+        self.bottom_ratio = 0.5
+        self._construct()
+
+    def _construct(self):
+        cam = get_camera("Loading Zone near Prison (S)")
+        self.t = md.landmarks["3001 Gordon Hwy (Water Tower)"]
+        self.b = intersect_ray_and_ray(
+            (self.t, (0, 0, 1)),
+            (cam.xyz, cam.get_landmark_direction("3001 Gordon Hwy (Water Tower) (B)"))
+        )[1]
+        self.x, self.y, self.z = self.t
+        self.d = self.t[2] - self.b[2]
+        self.r = self.d / 2
+        plane = (self.t, cam.get_landmark_direction("3001 Gordon Hwy (Water Tower)"))
+        bs = []
+        for key in ["NE", "NW", "SW", "SE"]:
+            lm_name = f"3001 Gordon Hwy (Water Tower) (B{key})"
+            point = intersect_ray_and_plane(
+                (cam.xyz, cam.get_landmark_direction(lm_name)),
+                plane
+            )
+            bs.append(point)
+        midpoint = get_midpoint(bs)
+        self.bc = (self.t[0], self.t[1], midpoint[2])
+        directions = [get_direction_from_angles(b, 0) for b in (0, 90, 180, 270)]  # observed
+        distance = np.mean([get_distance(self.bc[:2], b[:2]) for b in bs]) * 0.8  # 0.8 is observed
+        self.bs = [get_point(self.bc, distance, direction) for direction in directions]
+
+    def draw_on_map(self, m, width=1):
+        m.draw.circle((self.x, self.y), self.r, self.color, width)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        zs = (
+            self.b[2],
+            self.b[2] + self.bottom_ratio * self.d,
+            self.t[2] - self.top_ratio * self.d,
+            self.t[2]
+        )
+        step = 15
+        head_step = 5
+        for deg in range(0, 360, step):
+            rad = np.radians(deg)
+            x, y = (self.x + np.cos(rad) * self.r, self.y + np.sin(rad) * self.r)
+            prev = (self.b)
+            for head_deg in range(0, 91, head_step):
+                head_rad = np.radians(head_deg)
+                ring_r = np.cos(head_rad) * self.r
+                z = zs[1] - np.sin(head_rad) * self.r * (self.bottom_ratio * 2)
+                curr = (self.x + np.cos(rad) * ring_r, self.y + np.sin(rad) * ring_r, z)
+                cam.render_line((prev, curr), self.color, width / 2)
+                prev = curr
+            cam.render_line(((x, y, zs[1]), (x, y, zs[2])), self.color, width / 2)
+            prev = (x, y, zs[2])
+            for head_deg in range(0, 91, head_step):
+                head_rad = np.radians(head_deg)
+                ring_r = np.cos(head_rad) * self.r
+                z = zs[2] + np.sin(head_rad) * self.r * (self.top_ratio * 2)
+                curr = (self.x + np.cos(rad) * ring_r, self.y + np.sin(rad) * ring_r, z)
+                cam.render_line((prev, curr), self.color, width / 2)
+                prev = curr
+        cam.render_line((self.bc, (self.bc[0], self.bc[1], zs[0])), self.color, width)
+        for b in self.bs:
+            center = (np.array(self.b) + np.array(self.t)) / 2
+            top = np.array((b[0], b[1], center[2])) * 0.8 + np.array(center) * 0.2
+            cam.render_line((b, top), self.color, width)
+        return self
+
+
 class HanksWaffles(Landmark):
 
     def __init__(
@@ -1737,34 +1870,6 @@ class Jason(Landmark):
                 curr = (bx + np.cos(rad) * ring_r, by + np.sin(rad) * ring_r, z)
                 cam.render_line((prev, curr), self.color, width)
                 prev = curr
-        return self
-
-
-class SonoraAvenueSilo(Landmark):
-
-    def __init__(self):
-        super().__init__("1500 Sonora Ave (Silo)")
-        self.x, self.y, self.z = md.landmarks["1500 Sonora Ave (Silo)"]
-        ratio = 3.2
-        self.h = 45.714
-        self.w = self.h / ratio
-        self.r = self.w / 2
-        self.ground_z = self.z - self.h
-
-    def draw_on_map(self, m, width=1):
-        m.draw_circle((self.x, self.y), self.r, self.color, self.color, 1)
-        return self
-
-    def render_on_camera(self, cam, width=1):
-        for deg in range(0, 360, 10):
-            rad = np.radians(deg)
-            x, y = (self.x + np.cos(rad) * self.r, self.y + np.sin(rad) * self.r)
-            cam.render_line(((x, y, self.ground_z), (x, y, self.z)), self.color, width)
-            cam.render_line(((x, y, self.z), (self.x, self.y, self.z)), self.color, width)
-            if deg:
-                cam.render_line(((prev_x, prev_y, self.ground_z), (x, y, self.ground_z)), self.color, width)
-                cam.render_line(((prev_x, prev_y, self.z), (x, y, self.z)), self.color, width)
-            prev_x, prev_y = x, y
         return self
 
 
@@ -1906,6 +2011,129 @@ class JasonsHouse(Landmark):
         return self
 
 
+class SonoraAvenueSilo(Landmark):
+
+    def __init__(self, height=44.3, ratio=3.2):
+        super().__init__("1500 Sonora Ave (Silo)")
+        self.x, self.y, self.z = md.landmarks["1500 Sonora Ave (Silo)"]
+        self.h = height
+        self.w = self.h / ratio
+        self.r = self.w / 2
+        self.ground_z = self.z - self.h
+
+    def draw_on_map(self, m, width=1):
+        m.draw_circle((self.x, self.y), self.r, self.color, self.color, 1)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        for deg in range(0, 360, 10):
+            rad = np.radians(deg)
+            x, y = (self.x + np.cos(rad) * self.r, self.y + np.sin(rad) * self.r)
+            cam.render_line(((x, y, self.ground_z), (x, y, self.z)), self.color, width)
+            cam.render_line(((x, y, self.z), (self.x, self.y, self.z)), self.color, width)
+            if deg:
+                cam.render_line(((prev_x, prev_y, self.ground_z), (x, y, self.ground_z)), self.color, width)
+                cam.render_line(((prev_x, prev_y, self.z), (x, y, self.z)), self.color, width)
+            prev_x, prev_y = x, y
+        return self
+
+
+class SonoraAvenueSmokestacks(Landmark):
+
+    def __init__(self):
+        super().__init__("USSM Smokestack")
+        self.smokestacks = [md.landmarks[f"USSM Smokestack ({i})"] for i in range(1, 12)]
+        self.rs = [3.0 if i == 3 else 2.0 if i in (4, 5, 6) else 1.0 for i in range(1, 12)]
+        self.ground_z = SonoraAvenueSilo().ground_z - 5.0
+
+    def draw_on_map(self, m, width=1):
+        for i, (cx, cy, z) in enumerate(self.smokestacks):
+            m.draw_circle((cx, cy), self.rs[i], self.color, width)
+        return self
+
+    def render_on_camera(self, cam, width=0.25):
+        for i, (cx, cy, z) in enumerate(self.smokestacks):
+            r = self.rs[i]
+            step = 15
+            for deg in range(0, 360, step):
+                rad = np.radians(deg)
+                x, y = (cx + np.cos(rad) * r, cy + np.sin(rad) * r)
+                cam.render_line(((x, y, self.ground_z), (x, y, z)), self.color, width)
+        return self
+
+
+class SonoraAvenueTanks(Landmark):
+
+    def __init__(self):
+        super().__init__("1500 Sonora Ave (Tank)")
+        self.z = SonoraAvenueSilo().ground_z - 7.5
+        self._construct()
+
+    def _construct(self):
+        cam_names = "Ambrosia Postcard (X)", "Ambrosia 02 (Panorama)"
+        cams = [get_camera(cam_name) for cam_name in cam_names]
+        lm_name = "1500 Sonora Ave (Tank) (A)"
+        self.tanks = []
+        self.tanks.append(find_landmark(cam_names[0], cam_names[1], lm_name)[0])
+        plane = (self.tanks[0], cams[0].get_landmark_direction(lm_name))
+        diameters = [
+            get_distance(
+                intersect_ray_and_plane(
+                    (cam.xyz, cam.get_landmark_direction(f"{lm_name} (L)")),
+                    plane
+                ),
+                intersect_ray_and_plane(
+                    (cam.xyz, cam.get_landmark_direction(f"{lm_name} (R)")),
+                    plane
+                )
+            )
+            for cam in cams
+        ]
+        diameters = [diameters[0]] # [sum(diameters) / 2]
+        diameters += [diameters[0] - 1.0, diameters[0] - 1.0]
+        self.rs = [v / 2 for v in diameters]
+        for i, lm_name in enumerate(["1500 Sonora Ave (Tank) (B)", "1500 Sonora Ave (Tank) (C)"]):
+            z = self.z
+            best = None
+            for step in (1, -0.1, 0.01, -0.001):
+                loss = float("inf")
+                while True:
+                    plane = ((0, 0, z), (0, 0, 1))
+                    point_l = intersect_ray_and_plane(
+                        (cams[0].xyz, cams[0].get_landmark_direction(f"{lm_name} (L)")),
+                        plane
+                    )
+                    point_r = intersect_ray_and_plane(
+                        (cams[0].xyz, cams[0].get_landmark_direction(f"{lm_name} (R)")),
+                        plane
+                    )
+                    diameter = get_distance(point_l, point_r)
+                    delta = abs(diameter - diameters[i + 1])
+                    if delta < loss:
+                        best = get_midpoint((point_l, point_r))
+                        loss = delta
+                    else:
+                        break
+                    z += step
+            self.tanks.append(best)
+
+    def draw_on_map(self, m, width=2):
+        step = 5
+        for i, tank in enumerate(self.tanks):
+            m.draw_circle(tank, self.rs[i], None, self.color, width=width)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        step = 5
+        for i, tank in enumerate(self.tanks):
+            for deg in range(0, 360, step):
+                rad = np.radians(deg)
+                x, y = (tank[0] + np.cos(rad) * self.rs[i], tank[1] + np.sin(rad) * self.rs[i])
+                cam.render_line(((x, y, self.z), (x, y, tank[2])), self.color, width)
+                cam.render_line(((x, y, tank[2]), tank), self.color, width)
+        return self
+
+
 class SunshineSkywayBridge(Landmark):
 
     def __init__(
@@ -1972,6 +2200,53 @@ class SunshineSkywayBridge(Landmark):
                     pillar_point = get_point(base_point, [0, 0, 1], (i + 1) * gap)
                     cam.render_line((road_point, pillar_point), fill=self.color, width=0.5)
         return self
+
+
+class TransmitterRoadWaterTower(Landmark):
+
+    def __init__(self):
+        super().__init__("3400 Transmitter Rd")
+        self.top = md.landmarks["3400 Transmitter Rd"]
+        self.x, self.y, self.z4 = self.top
+        self.z2 = md.landmarks["3400 Transmitter Rd (B)"][2]
+        self.z3 = (self.z4 + self.z2) / 2
+        self.r = (self.z4 - self.z2) / 2
+        self._construct()
+
+    def _construct(self):
+        cam = get_camera("Ambrosia Postcard (X)")
+        plane = ((self.x, self.y, self.z4), cam.get_landmark_direction("3400 Transmitter Rd"))
+        lm_names = ["3400 Transmitter Rd (BL)", "3400 Transmitter Rd (BR)"]
+        rays = [(cam.xyz, cam.get_landmark_direction(lm_name)) for lm_name in lm_names]
+        points = [intersect_ray_and_plane(ray, plane) for ray in rays]
+        self.z0 = (points[0][2] + points[1][2]) / 2
+        self.z1 = (self.z0 + self.z2) / 2
+        self.bw = get_distance(points[0], points[1])
+        self.cw = self.bw / 3
+
+    def draw_on_map(self, m, width=1):
+        m.draw_circle((self.x, self.y), self.r, fill=None, outline=self.color, width=width)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        step = 15
+        head_step = 5
+        for deg in range(0, 360, step):
+            rad = np.radians(deg)
+            direction = (np.cos(rad), np.sin(rad), 0)
+            point_0 = get_point((self.x, self.y, self.z0), direction, self.bw / 2) 
+            point_1 = get_point((self.x, self.y, self.z1), direction, self.cw / 2) 
+            point_2 = get_point((self.x, self.y, self.z2), direction, self.cw / 2) 
+            cam.render_line((point_0, point_1), self.color, width)
+            cam.render_line((point_1, point_2), self.color, width)
+            for head_deg in range(-90, 91):
+                head_rad = np.radians(head_deg)
+                ring_r = np.cos(head_rad) * self.r
+                z = self.z3 + np.sin(head_rad) * self.r
+                curr = (self.x + np.cos(rad) * ring_r, self.y + np.sin(rad) * ring_r, z)
+                if head_deg > -90:
+                    cam.render_line((prev, curr), self.color, width)
+                prev = curr
 
 
 class WDNAFM(Landmark):
@@ -2402,6 +2677,7 @@ def find_camera(
     horizon_limits=None,
     lm_z_limits=None,
     not_visible=None,
+    cylinders=None,
     ray_pairs=None,
     max_size_delta=1.05,
     objects=None,
@@ -2426,10 +2702,27 @@ def find_camera(
     # these targets are (lm_name, ray)
     for other_cam_name, lm_name in rays:
         other_cam = get_camera(other_cam_name)
-        targets.append((lm_name, (
-            other_cam.xyz,
-            other_cam.get_landmark_direction(lm_name)
-        )))
+        if cylinders and lm_name in cylinders:
+            m = re.fullmatch(r"(.+) \(([LR])\)", lm_name)
+            if m is None:
+                raise ValueError(f"Invalid cylinder landmark name: {lm_name!r}")
+            base_name, lr = m.groups()
+            lr_names = (f"{base_name} (L)", f"{base_name} (R)")
+            left_right = "LR".index(lr)
+            targets.append((lm_name, (
+                "cylinder",
+                lr_names,
+                [(
+                    other_cam.xyz,
+                    other_cam.get_landmark_direction(lr_name)
+                ) for lr_name in lr_names],
+                left_right
+            )))
+        else:
+            targets.append((lm_name, (
+                other_cam.xyz,
+                other_cam.get_landmark_direction(lm_name)
+            )))
     n_points = len(lm_names)
     ray_stacks = []
     if ray_pairs:
@@ -2636,7 +2929,13 @@ def _find_camera(args):
                 for i, (lm_name, target) in enumerate(targets):
                     fn = intersect_ray_and_point if i < n_points else intersect_ray_and_ray
                     cam_ray = (cam.xyz, cam.get_landmark_direction(lm_name))
-                    result = fn(cam_ray, target)
+                    if len(target) == 4 and target[0] == "cylinder":
+                        _, lm_names_a, rays_b, left_right = target
+                        rays_a = [(cam.xyz, cam.get_landmark_direction(lm_name)) for lm_name in lm_names_a]
+                        c_rays_a, c_rays_b = translate_cylinder_rays(rays_a, rays_b)
+                        result = fn(cam_ray, c_rays_b[left_right])
+                    else:
+                        result = fn(cam_ray, target)
                     if lm_z_limits:
                         if i >= n_points:
                             lm_z_limit = lm_z_limits[i - n_points]
@@ -2645,8 +2944,7 @@ def _find_camera(args):
                                 if z < lm_z_limit[0] or z > lm_z_limit[1]:
                                     loss = float("inf")
                                     break
-                    angle = result[-1]
-                    delta = angle * 60  # arcminutes
+                    delta = result[-1] * 60  # arcminutes
                     deltas.append(delta)
                     loss += delta ** 2
                     if loss >= threshold:
@@ -3206,6 +3504,54 @@ def intersect_rays(rays, eps=1e-12):
     distances = np.linalg.norm(diffs_perp, axis=1)                      # (n,)
     return closest_point, distances
 
+def translate_cylinder_rays(rays_a, rays_b):
+    """
+    Translates left/right rays from two cameras.
+    The second camera is moved above the cylinder, at the original distance,
+    emitting rays towards left/right target that are perpendicular to the first camera.
+    Returns new rays_a for camera b and new rays_b for camera a.
+    """
+    cam_a = rays_a[0][0]
+    dir_a_left, dir_a_right = rays_a[0][1], rays_a[1][1]
+    dir_a_center = dir_a_left + dir_a_right
+    dir_a_center /= np.linalg.norm(dir_a_center)
+    cam_b = rays_b[0][0]
+    dir_b_left, dir_b_right = rays_b[0][1], rays_b[1][1]
+    dir_b_center = dir_b_left + dir_b_right
+    dir_b_center /= np.linalg.norm(dir_b_center)
+
+    center = intersect_ray_and_ray((cam_a, dir_a_center), (cam_b, dir_b_center))[0]
+
+    plane_a = (center, dir_a_center)
+    xyz_a_left = intersect_ray_and_plane(rays_a[0], plane_a)
+    xyz_a_left[2] = center[2]
+    xyz_a_right = intersect_ray_and_plane(rays_a[1], plane_a)
+    xyz_a_right[2] = center[2]
+    radius_a = get_distance(xyz_a_left, xyz_a_right) / 2
+    plane_b = (center, dir_b_center)
+    xyz_b_left = intersect_ray_and_plane(rays_b[0], plane_b)
+    xyz_b_left[2] = center[2]
+    xyz_b_right = intersect_ray_and_plane(rays_b[1], plane_b)
+    xyz_b_right[2] = center[2]
+    radius_b = get_distance(xyz_b_left, xyz_b_right) / 2
+
+    translated_cam_a = (center[0], center[1], center[2] + get_distance(cam_a, center))
+    translated_a_left = get_point(center, get_direction(center, xyz_b_left), radius_a)
+    translated_a_right = get_point(center, get_direction(center, xyz_b_right), radius_a)
+    translated_cam_b = (center[0], center[1], center[2] + get_distance(cam_b, center))
+    translated_b_left = get_point(center, get_direction(center, xyz_a_left), radius_b)
+    translated_b_right = get_point(center, get_direction(center, xyz_a_right), radius_b)
+
+    return (
+        (
+            (translated_cam_a, get_direction(translated_cam_a, translated_a_left)),
+            (translated_cam_a, get_direction(translated_cam_a, translated_a_right)),
+        ), (
+            (translated_cam_b, get_direction(translated_cam_b, translated_b_left)),
+            (translated_cam_b, get_direction(translated_cam_b, translated_b_right)),
+        )
+    )
+
 def _q_mul(a, b):
     aw, ax, ay, az = a
     bw, bx, by, bz = b
@@ -3279,11 +3625,16 @@ def subsample(image_np, xy):
     ])
 
 
+AH = AmbrosiaHill()
 FS = FourSeasons()
+GHWT = GordonHighwayWaterTower()
 HW = HanksWaffles()
 HWT = HomesteadWaterTower()
 J = Jason()
 JH = JasonsHouse()
 SAS = SonoraAvenueSilo()
+SASS = SonoraAvenueSmokestacks()
+SAS = SonoraAvenueTanks()
 SSB = SunshineSkywayBridge()
+TRWT = TransmitterRoadWaterTower()
 WDNA = WDNAFM()
