@@ -253,11 +253,11 @@ cameras = {
     "[S2/53] Port Gellhorn 03 (Blue Pills)": None,
     "[S2/54] Port Gellhorn 04 (Delights) (X)": (None, (-6340.000, 3699.000, 7.228), (73.392, -21.600, 0.000), (81.900, 52.035), (3840, 2160), "Port Gellhorn 04 [1]"),
     "[S2/55] Port Gellhorn 05 (Fire)": (None, (-6800.000, 3950.000, 5.000), (315.000, -0.500, 0.000), (50.000, None), (3840, 2160), "Port Gellhorn 05 [1]"),
-    "[S2/56] Ambrosia 01 (Bikers)": (None, (-2666.000, 4087.000, 17.537), (16.250, 0.300, 0.000), (35.700, 20.535), (3840, 2160), "Ambrosia 01 [1]"),
-    "[S2/57] Ambrosia 02 (Panorama)": (None, (-2413.000, 5489.000, 90.047), (161.297, -3.900, 0.000), (49.500, 29.075), (3840, 2160), "Ambrosia 02 [1]"),
+    "[S2/56] Ambrosia 01 (Bikers)": (None, (-2643.000, 4060.000, 21.095), (19.120, 0.400, 0.000), (36.100, 20.775), (3840, 2160), "Ambrosia 01 [1]"),
+    "[S2/57] Ambrosia 02 (Panorama)": (None, (-2415.000, 5330.000, 89.953), (160.717, -4.034, 0.000), (51.000, 30.037), (3840, 2160), "Ambrosia 02 [1]"),
     "[S2/58] Ambrosia 03 (Enforcer)": None,
     # "[S2/59] Ambrosia 04 (Fires)": (None, (-1477.000, 3352.000, 59.048), (104.062, -2.800, 0.000), (57.300, 34.167), (3840, 2160), "Ambrosia 04 [1]"),
-    "[S2/59] Ambrosia 04 (Fires)": (None, (-1548.000, 3394.000, 61.192), (106.069, -2.900, 0.000), (60.500, 36.323), (3840, 2160), "Ambrosia 04 [1]"),
+    "[S2/59] Ambrosia 04 (Fires)": (None, (-1012.000, 3226.000, 55.050), (96.774, -1.710, 0.000), (42.100, 24.431), (3840, 2160), "Ambrosia 04 [1]"),
     "[S2/60] Ambrosia 05 (Car Wash)": None,
     "[S2/61] Grassrivers 01 (Hunters)": None,
     "[S2/62] Grassrivers 02 (Watson Bay)": (None, (-5280.000, -3371.000, 25.727), (282.274, -5.900, 0.000), (49.200, 28.883), (3840, 2160), "Grassrivers 02 [1]"),
@@ -274,7 +274,7 @@ cameras = {
     #"[S2/73] Port Gellhorn Postcard": (None, (-6525.000, 3550.000, 30.000), (50.000, -0.300, 0.000), (60.000, None), (3240, 2160), "Port Gellhorn Postcard [60]"),
     #"[S2/73] Port Gellhorn Postcard": (None, (-6563.000, 3613.000, 20.155), (51.895, 0.000, 0.000), (58.300, 40.793), (3240, 2160), "Port Gellhorn Postcard [60]"),
     "[S2/73] Port Gellhorn Postcard (X)": (None, (-6550.000, 3608.000, 31.297), (51.974, -3.200, 0.000), (71.000, 50.865), (3240, 2160), "Port Gellhorn Postcard [1]"),
-    "[S2/74] Ambrosia Postcard (X)": (None, (-2680.000, 4056.000, 62.133), (150.538, -1.800, 0.000), (48.500, 32.781), (3308, 2160), "Ambrosia Postcard [54]"),
+    "[S2/74] Ambrosia Postcard (X)": (None, (-2675.000, 3969.000, 62.533), (148.440, -1.900, 0.000), (52.000, 35.330), (3308, 2160), "Ambrosia Postcard [54]"),
     #"[S2/75] Grassrivers Postcard (X)": (None, (-3500, -4000, 50), (135.000, -14.550, 0.000), (45.000, None), (3240, 2160), "Grassrivers Postcard [60]"),
     "[S2/75] Grassrivers Postcard (X)": (None, (-3550.000, -3929.000, 33.117), (129.123, -16.900, 0.000), (53.000, 36.772), (3240, 2160), "Grassrivers Postcard [60]"),
     "[S2/76] Mount Kalaga National Park Postcard (X)": None,
@@ -2775,11 +2775,11 @@ pixels = {
         ((1778, 833), "US Sugar Mill (Factory) (NW)"),
         ((1753, 1030), "Ambrosia Main St (C)"),
         ((1798, 775.5), "USSM Smokestack (7)"),
-        ((1837, 909), "1500 Sonora Ave (Tank) (L)"),
-        ((1885, 909.5), "1500 Sonora Ave (Tank)"),
+        ((1837, 909), "1500 Sonora Ave (Tank) (A) (L)"),
+        ((1885, 909.5), "1500 Sonora Ave (Tank) (A)"),
         ((1895, 862), "USSM Smokestack (10)"),
         ((1907, 889), "USSM Smokestack (11)"),
-        ((1933.5, 910), "1500 Sonora Ave (Tank) (R)"),
+        ((1933.5, 910), "1500 Sonora Ave (Tank) (A) (R)"),
         ((1961, 885), "USSM Smokestack (8)"),
         ((1963, 821), "Light Pollution (A)"),
         ((1976.5, 864), "USSM Smokestack (9)"),
@@ -2911,13 +2911,13 @@ pixels = {
         ((3480, 1299.5), "Path A (Ambrosia) (2)"),
         ((3535, 875), "Sunshine Skyway Bridge (S)"),
         ((3606.5, 891.5), "BB Hill"),
-        ((3625.5, 967), "1500 Sonora Ave (Tank) (L)"),
-        ((3688, 968), "1500 Sonora Ave (Tank)"),
+        ((3625.5, 967), "1500 Sonora Ave (Tank) (A) (L)"),
+        ((3688, 968), "1500 Sonora Ave (Tank) (A)"),
         ((3692.5, 1223.5), "Road C (Ambrosia) (1)"),
         ((3713, 1709.5), "Path B (Ambrosia) (1)"),
         ((3729, 874), "Sunshine Skyway Bridge (N)"),
         ((3736.5, 1244.5), "Road B (Ambrosia) (1)"),
-        ((3750.5, 969), "1500 Sonora Ave (Tank) (R)"),
+        ((3750.5, 969), "1500 Sonora Ave (Tank) (A) (R)"),
         ((3771, 1832.5), "Road A (Ambrosia) (1)"),
         ((3817.5, 1466.5), "Path A (Ambrosia) (1)"),
         ((3840, 1060), "Viaduct (Ambrosia) (N)"),
@@ -3612,17 +3612,21 @@ pixels = {
         ((2109, 2081), "Black Bison (1)"),
         ((2120.5, 1095), "Factory C (Ambrosia) (N)"),
         ((2133, 1906), "Guard Booth (Ambrosia) (W)"),
+        ((2166.5, 1271.5), "1500 Sonora Ave (Tank) (C) (L)"),
         ((2196, 1114), "Ambrosia Airfield (S)"),
         ((2262, 2093), "Black Bison (2)"),
         ((2283, 1453), "US Sugar Mill (Warehouse)"),
-        ((2325.5, 1142), "1500 Sonora Ave (Tank) (L)"),
+        ((2325.5, 1142), "1500 Sonora Ave (Tank) (A) (L)"),
         ((2349, 1090), "Single White Silo"),
+        ((2454, 1211.5), "1500 Sonora Ave (Tank) (B) (L)"),
         ((2467, 1064), "USSM Smokestack (8)"),
-        ((2503.5, 1143), "1500 Sonora Ave (Tank)"),
+        ((2501.5, 1143), "1500 Sonora Ave (Tank) (A)"),
         ((2514.5, 994), "USSM Smokestack (9)"),
+        ((2583.5, 1278.5), "1500 Sonora Ave (Tank) (C) (R)"),
         ((2622, 1854), "US Sugar Mill (Office) (B)"),
         ((2627, 1524.5), "US Sugar Mill (Office)"),
-        ((2681.5, 1144), "1500 Sonora Ave (Tank) (R)"),
+        ((2681.5, 1144), "1500 Sonora Ave (Tank) (A) (R)"),
+        ((2846, 1218), "1500 Sonora Ave (Tank) (B) (R)"),
         ((2899.5, 963.5), "USSM Smokestack (10)"),
         ((2956.5, 1044), "3400 Transmitter Rd (BL)"),
         ((2937.5, 2038), "Worker B (Ambrosia) (B)"),
@@ -4212,19 +4216,19 @@ landmarks = {
     "Alligator A (R)": (-3779.349, -4039.932, 0.000),  # via Grassrivers 04 (Police Chase)
     "Alligator B (F)": (-3780.824, -4041.918, 0.000),  # via Grassrivers 04 (Police Chase)
     "Alligator B (R)": (-3782.016, -4041.705, 0.000),  # via Grassrivers 04 (Police Chase)
-    "Ambrosia Bridge (3B)": (-2780.206, 4828.532, 15.302),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Bridge (4B)": (-2770.514, 4864.047, 15.302),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Bridge (3B)": (-2776.706, 4795.494, 14.762),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Bridge (4B)": (-2766.970, 4831.046, 14.762),  # via Ambrosia 02 (Panorama)
     "Ambrosia Hill": (-2281.047, 4222.991, 138.077),  # d=5.149 via Hedge (B) (X) & Explosion
-    "Ambrosia Main St (A)": (-2889.062, 4430.214, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (B)": (-2877.931, 4393.764, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (C)": (-2776.539, 4184.368, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (D)": (-2709.426, 4065.226, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (E)": (-2602.268, 3917.000, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (V)": (-3400.870, 4165.358, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (W)": (-3336.061, 4209.679, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (X)": (-3151.313, 4326.282, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (Y)": (-3031.218, 4394.668, 18.802),  # via Ambrosia 02 (Panorama)
-    "Ambrosia Main St (Z)": (-2922.474, 4457.471, 18.802),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (A)": (-2875.573, 4417.431, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (B)": (-2864.722, 4381.712, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (C)": (-2765.703, 4176.445, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (D)": (-2700.115, 4059.609, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (E)": (-2595.321, 3914.211, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (V)": (-3377.186, 4157.827, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (W)": (-3313.614, 4201.292, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (X)": (-3132.473, 4315.604, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (Y)": (-3014.781, 4382.619, 19.872),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Main St (Z)": (-2908.244, 4444.145, 19.872),  # via Ambrosia 02 (Panorama)
     "Anchor Island (S)": (-2547.975, -5129.234, 0.000),  # via Leonida Keys Postcard (X)
     ##"Asia Brickell Key": (-119.683, -881.354, 185.477),  # d=1.275 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     #"Asia Brickell Key": (-102.538, -863.761, 184.052),  # d=0.885 via Skyline & Vice Beach (B)
@@ -4281,13 +4285,14 @@ landmarks = {
     "Beige Billboard (BE)": (-6108.791, 4591.625, 24.695),  # d=0.365 via Diner (N) & Diner (NE)
     "Billboard (Hank's Waffles)": (-6287.856, 2987.928, 18.532),  # d=0.567 via Gas Station (Lucia) & Gas Station (Jason)
     #"Billboard #2 (Key Lento)": (-3056.172, -6496.183, 25.615),  # d=0.606 via Leonida Keys Postcard (X) & Key Lento
-    "Billboard (South Ambrosia) (TE)": (-2917.021, 2606.831, 37.313),  # d=3.916 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "Billboard (South Ambrosia) (TW)": (-2928.428, 2611.879, 37.427),  # d=4.020 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "Billboard with Diversity Motif (TE)": (-2702.140, 4153.773, 42.731),  # d=0.207 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
-    "Billboard with Diversity Motif (TW)": (-2716.643, 4150.197, 42.935),  # d=0.230 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
-    "Billboard with Irregular Shape": (-2882.462, 4573.512, 57.110),  # d=0.358 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
-    "Billboard with Oval Motif #1 (TE)": (-2956.243, 4561.847, 66.074),  # d=0.212 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
-    "Billboard with Oval Motif #1 (TW)": (-2968.120, 4564.100, 65.981),  # d=0.071 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Billboard (South Ambrosia) (TE)": (-2916.001, 2676.580, 39.711),  # d=2.959 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "Billboard (South Ambrosia) (TW)": (-2926.606, 2682.421, 39.852),  # d=3.018 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "Billboard with Diversity Motif (TE)": (-2684.916, 4180.404, 44.641),  # d=0.182 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Billboard with Diversity Motif (TW)": (-2699.034, 4175.705, 44.779),  # d=0.220 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Billboard with Irregular Shape": (-2869.911, 4556.161, 57.289),  # d=0.338 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Billboard with Oval Motif #1": (-2946.879, 4547.527, 66.331),  # d=0.019 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Billboard with Oval Motif #1 (TE)": (-2941.114, 4546.479, 66.122),  # d=0.218 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Billboard with Oval Motif #1 (TW)": (-2952.779, 4548.620, 66.062),  # d=0.017 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
     "22 Biscayne Bay (SE)": (-341.523, 1346.099, 73.026),  # d=0.166 via Vice City Postcard & Vice City 03 (Basketball)
     "50 Biscayne Blvd": (-437.625, -230.997, 148.060),  # d=5.120 via Shitzu Squalo 01 (Bay) & Port Vice City (A)
     "50 Biscayne Blvd (SE)": (-407.635, -239.477, 146.292),  # d=1.095 via Vice City 03 (Basketball) & Skyline
@@ -4299,8 +4304,8 @@ landmarks = {
     "Biscayne Island (D)": (462.091, 1126.819, 0.000),  # via Vice City Postcard
     "Big Cat Cage Roof": (-716.491, 1324.161, 13.204),  # via Sidewalk (Jason) (S)
     "Biscayne Island (E)": (253.227, 1080.161, 0.000),  # via Venetian Islands
-    "Black Bison (1)": (-2764.777, 3893.865, 18.802),  # via Ambrosia Postcard (X)
-    "Black Bison (2)": (-2769.068, 3898.044, 18.802),  # via Ambrosia Postcard (X)
+    "Black Bison (1)": (-2757.177, 3868.558, 19.872),  # via Ambrosia Postcard (X)
+    "Black Bison (2)": (-2761.236, 3872.677, 19.872),  # via Ambrosia Postcard (X)
     "Blimp (R)": (-4667.348, -6859.930, 36.842),  # d=0.619 via Keys & Key Lento
     "Blimp Bay": (-4023.213, -7352.790, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Blimp Inlet (A)": (-4321.367, -7293.250, 0.000),  # via Keys
@@ -4330,25 +4335,25 @@ landmarks = {
     "Broken Keys Bridge (7B)": (-1457.565, -4552.415, 0.000),  # via Leonida Keys Postcard (X)
     "Broken Keys Bridge (8B)": (-1447.253, -4571.004, 0.000),  # via Leonida Keys Postcard (X)
     "Brown Hotel Sign": (1858.400, 1559.628, 7.705),  # d=0.046 via Vice City 03 (Basketball) & Hotel (W)
-    "Building A (Ambrosia) (NW)": (-1823.860, 3001.816, 22.810),  # via Ambrosia 04 (Fires)
-    "Building B (Ambrosia) (NW)": (-1908.313, 3218.317, 22.810),  # via Ambrosia 04 (Fires)
+    "Building A (Ambrosia) (NW)": (-1480.503, 2984.745, 25.937),  # via Ambrosia 04 (Fires)
+    "Building B (Ambrosia) (NW)": (-1538.955, 3162.494, 25.937),  # via Ambrosia 04 (Fires)
     "Building near Pool (N)": (-5329.946, 3488.101, 68.985),  # d=0.065 via Motel & Port Gellhorn 01 (Starlet Motel)
     "Building near Pool (E)": (-5327.338, 3461.698, 68.633),  # d=0.002 via Starlet Motel & Port Gellhorn 01 (Starlet Motel)
     "Building near Pool (W)": (-5334.265, 3476.015, 68.985),  # via Port Gellhorn 01 (Starlet Motel)
     "Canal (Hotel Valetta)": (1823.378, 1660.827, 0.000),  # via Vice City 03 (Basketball)
-    "Canal A (Ambrosia) (1)": (-1662.129, 3203.612, 22.810),  # via Ambrosia 04 (Fires)
-    "Canal A (Ambrosia) (2)": (-1751.243, 3205.933, 22.810),  # via Ambrosia 04 (Fires)
-    "Canal B (Ambrosia) (1)": (-1890.556, 3374.792, 22.810),  # via Ambrosia 04 (Fires)
-    "Canal B (Ambrosia) (2)": (-1898.750, 3267.939, 22.810),  # via Ambrosia 04 (Fires)
-    "Canal C (Ambrosia) (1)": (-2144.031, 3297.212, 18.810),  # via Ambrosia 04 (Fires)
-    "Canal C (Ambrosia) (2)": (-2362.637, 3298.902, 18.810),  # via Ambrosia 04 (Fires)
+    "Canal A (Ambrosia) (1)": (-1267.217, 3138.910, 25.937),  # via Ambrosia 04 (Fires)
+    "Canal A (Ambrosia) (2)": (-1364.353, 3144.922, 25.937),  # via Ambrosia 04 (Fires)
+    "Canal B (Ambrosia) (1)": (-1491.421, 3286.685, 25.937),  # via Ambrosia 04 (Fires)
+    "Canal B (Ambrosia) (2)": (-1519.330, 3201.833, 25.937),  # via Ambrosia 04 (Fires)
+    "Canal C (Ambrosia) (1)": (-1868.000, 3240.934, 19.937),  # via Ambrosia 04 (Fires)
+    "Canal C (Ambrosia) (2)": (-2157.918, 3257.215, 19.937),  # via Ambrosia 04 (Fires)
     "Capri South Beach (SE)": (1313.994, 1130.618, 57.829),  # d=0.350 via Rooftop Party & Vice Beach (B)
-    "Car A (Ambrosia) (1)": (-1601.923, 3332.133, 22.810),  # via Ambrosia 04 (Fires)
-    "Car A (Ambrosia) (2)": (-1597.856, 3336.240, 22.810),  # via Ambrosia 04 (Fires)
-    "Car B (Ambrosia) (1)": (-1876.122, 3358.739, 22.810),  # via Ambrosia 04 (Fires)
-    "Car B (Ambrosia) (2)": (-1875.078, 3354.354, 22.810),  # via Ambrosia 04 (Fires)
-    "Car C (Ambrosia) (1)": (-2280.226, 2708.397, 18.810),  # via Ambrosia 04 (Fires)
-    "Car C (Ambrosia) (2)": (-2279.858, 2706.848, 18.810),  # via Ambrosia 04 (Fires)
+    "Car A (Ambrosia) (1)": (-1181.829, 3235.771, 25.937),  # via Ambrosia 04 (Fires)
+    "Car A (Ambrosia) (2)": (-1176.853, 3238.712, 25.937),  # via Ambrosia 04 (Fires)
+    "Car B (Ambrosia) (1)": (-1477.872, 3272.994, 25.937),  # via Ambrosia 04 (Fires)
+    "Car B (Ambrosia) (2)": (-1477.450, 3269.441, 25.937),  # via Ambrosia 04 (Fires)
+    "Car C (Ambrosia) (1)": (-2171.947, 2708.947, 19.937),  # via Ambrosia 04 (Fires)
+    "Car C (Ambrosia) (2)": (-2171.775, 2707.498, 19.937),  # via Ambrosia 04 (Fires)
     "Carbonell Brickell": (-249.878, -854.294, 129.828),  # d=2.211 via Vice City Postcard & Skyline
     "Central District Wastewater Treatment Plant (Tank)": (459.015, -1269.453, 37.930),  # d=4.371 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     #"Citigroup Center (NW)": (-388.124, -453.285, 152.344),  # d=0.868 via Vice City 03 (Basketball) & Skyline
@@ -4365,8 +4370,9 @@ landmarks = {
     "Cruise Ship (RT)": (364.488, -249.336, 56.151),  # d=3.773 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     "Cruise Terminal D": (643.504, -420.789, 35.897),  # d=1.245 via Motorboats (B) & Vice City 08 (Ferris Wheel)
     "Cruise Terminal G (B)": (330.731, -334.763, 17.882),  # d=1.675 via Vice Beach (B) & Rooftop Party
-    "Dark Billboard (Ambrosia) (TE)": (-2787.394, 2980.181, 48.765),  # d=0.760 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
-    "Dark Billboard (Ambrosia) (TW)": (-2807.375, 2992.622, 48.738),  # d=0.524 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "Dark Billboard (Ambrosia)": (-2781.032, 3040.861, 49.416),  # d=0.456 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "Dark Billboard (Ambrosia) (TE)": (-2778.417, 2988.851, 49.077),  # d=0.571 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "Dark Billboard (Ambrosia) (TW)": (-2797.852, 3002.249, 49.104),  # d=0.404 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
     "Di Lido Island (N)": (496.162, 1537.713, 0.000),  # via Venetian Islands
     "Di Lido Island (S)": (588.273, 1001.623, 0.000),  # via Venetian Islands
     "Dirt Road (Grassrivers) (A)": (-3577.244, -3996.379, 0.500),  # via Grassrivers Postcard (X)
@@ -4392,9 +4398,9 @@ landmarks = {
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "FAA Miami ATCT (MIA)": (-2369.818, -778.110, 96.518),  # d=2.343 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
-    "Factory A (Ambrosia) (N)": (-2982.703, 3470.777, 45.384),  # d=0.932 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "Factory A (Ambrosia) (S)": (-2991.913, 3437.905, 45.647),  # d=0.467 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "Factory D (Ambrosia) (NW)": (-3211.070, 3579.351, 39.622),  # d=1.435 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "Factory A (Ambrosia) (N)": (-2978.746, 3465.863, 45.804),  # d=1.196 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "Factory A (Ambrosia) (S)": (-2988.389, 3434.155, 46.129),  # d=0.812 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "Factory D (Ambrosia) (NW)": (-3205.183, 3577.766, 40.677),  # d=3.128 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "Fisher Island (Z)": (2084.809, -1546.355, 0.000),  # via Leonida Keys Postcard (X)
     "Flagler Memorial Island (N)": (820.612, 994.645, 0.000),  # via Venetian Islands
     "Flagler Memorial Island (S)": (775.440, 871.125, 0.000),  # via Venetian Islands
@@ -4429,7 +4435,7 @@ landmarks = {
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
     "105 Front St (S)": (-2828.255, -6432.681, 22.893),  # d=0.101 via Jason Duval 03 (Boat) & Leonida Keys Postcard (X)
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
-    "3001 Gordon Hwy (Water Tower)": (-5114.627, 1574.700, 93.880),  # d=0.116 via Loading Zone near Prison (S) & Ambrosia 02 (Panorama)
+    "3001 Gordon Hwy (Water Tower)": (-5114.708, 1574.619, 93.936),  # d=0.035 via Loading Zone near Prison (S) & Ambrosia 02 (Panorama)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
     "Grass (MIA) (A)": (-2420.454, -226.906, 3.500),  # via Airport (X)
     "Grass (MIA) (B)": (-2364.007, -231.299, 3.500),  # via Airport (X)
@@ -4440,9 +4446,9 @@ landmarks = {
     "Grassrivers River Mouth (W1)": (-3180.119, -5333.139, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Grassrivers River Mouth (W2)": (-3242.676, -5210.911, 0.000),  # via Keys
     "Green Diamond": (1779.024, 2124.965, 144.779),  # d=2.460 via Beach & Venetian Islands
-    "Guard Booth (Ambrosia) (E)": (-2778.706, 3873.415, 18.802),  # via Ambrosia Postcard (X)
-    "Guard Booth (Ambrosia) (N)": (-2779.077, 3874.914, 18.802),  # via Ambrosia Postcard (X)
-    "Guard Booth (Ambrosia) (W)": (-2781.546, 3873.750, 18.802),  # via Ambrosia Postcard (X)
+    "Guard Booth (Ambrosia) (E)": (-2770.839, 3849.758, 19.872),  # via Ambrosia Postcard (X)
+    "Guard Booth (Ambrosia) (N)": (-2771.173, 3851.191, 19.872),  # via Ambrosia Postcard (X)
+    "Guard Booth (Ambrosia) (W)": (-2773.560, 3850.185, 19.872),  # via Ambrosia Postcard (X)
     "Helipad 1 (N1)": (-2556.268, -100.369, 3.500),  # via Airport (X)
     "Helipad 1 (N2)": (-2555.082, -96.508, 3.500),  # via Airport (X)
     "Helipad 1 (NE)": (-2553.808, -105.572, 3.500),  # via Airport (X)
@@ -4471,8 +4477,8 @@ landmarks = {
     "House D (SW)": (-2286.449, -5428.357, 14.852),  # d=3.201 via House with Boat (X) & Leonida Keys 01 (Airplane) (X)
     "House with Pier (E)": (-3135.829, -6461.744, 12.331),  # d=0.169 via Leonida Keys 05 (Boats) & Leonida Keys Postcard (X)
     "Icon at South Beach": (1473.840, 133.329, 140.906),  # d=4.558 via Vice Beach (B) & Leonida Keys Postcard (X)
-    "Industrial Building 1 (Ambrosia)": (-2777.502, 3312.329, 43.134),  # d=1.663 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
-    "Industrial Building 2 (Ambrosia) (TE)": (-2741.045, 3360.112, 33.474),  # d=4.524 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "Industrial Building 1 (Ambrosia)": (-2770.932, 3301.320, 43.109),  # d=1.302 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "Industrial Building 2 (Ambrosia) (TE)": (-2742.843, 3347.153, 33.386),  # d=3.765 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "Infinity at Brickell": (-1183.043, -1370.105, 169.573),  # d=2.667 via Metro (SE) (B) & Highway (Peacock Bay) (A)
     "Infinity at Brickell (SW)": (-1210.949, -1425.733, 174.572),  # d=0.830 via Metro (SE) (C) & Vice City 01 (Vice City Sign)
     "InterContinental Miami (N)": (-257.532, -484.558, 134.691),  # d=1.171 via Vice City Postcard & Vice City 03 (Basketball)
@@ -4618,32 +4624,32 @@ landmarks = {
     "Lake near VCIA (E)": (-3836.590, -360.979, 5.000),  # via Boat (Jason)
     "Lake near VCIA (F)": (-3842.875, -360.145, 5.000),  # via Boat (Jason)
     "Lake near VCIA (G)": (-3846.870, -364.241, 5.000),  # via Boat (Jason)
-    "Lake Leonida (A)": (-2552.224, 5178.980, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (B)": (-2556.879, 5151.663, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (C)": (-2557.115, 5066.622, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (D)": (-2565.458, 5063.141, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (E)": (-2543.100, 4873.689, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (F)": (-2584.504, 4807.530, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (G)": (-2559.067, 4786.532, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (H)": (-2593.413, 4679.607, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (I)": (-2625.300, 4603.044, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (J)": (-2632.613, 4557.247, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (K)": (-2630.135, 4514.291, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (L)": (-2611.844, 4490.204, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (M)": (-2605.184, 4465.144, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (N)": (-2597.395, 4453.615, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (O)": (-2592.241, 4424.398, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (P)": (-2578.365, 4425.777, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (Q)": (-2527.279, 4345.494, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (R)": (-2545.614, 4300.644, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (S)": (-2493.334, 4179.682, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (T)": (-2483.826, 4247.496, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (U)": (-2387.094, 4121.624, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (V)": (-2344.605, 4070.196, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (W)": (-2297.115, 4020.102, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (X)": (-2275.488, 3996.480, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (Y)": (-2275.192, 4012.447, 15.302),  # via Ambrosia 02 (Panorama)
-    "Lake Leonida (Z)": (-2269.401, 4005.112, 15.302),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (A)": (-2548.326, 5146.072, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (B)": (-2553.003, 5118.752, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (C)": (-2553.307, 5033.683, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (D)": (-2561.653, 5030.205, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (E)": (-2539.440, 4840.609, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (F)": (-2580.914, 4774.397, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (G)": (-2555.482, 4753.366, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (H)": (-2589.935, 4646.310, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (I)": (-2621.911, 4569.634, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (J)": (-2629.271, 4523.759, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (K)": (-2626.830, 4480.721, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (L)": (-2608.542, 4456.583, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (M)": (-2601.898, 4431.471, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (N)": (-2594.111, 4419.917, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (O)": (-2588.977, 4390.636, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (P)": (-2575.086, 4392.017, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (Q)": (-2524.011, 4311.545, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (R)": (-2542.401, 4266.590, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (S)": (-2490.150, 4145.308, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (T)": (-2480.583, 4213.302, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (U)": (-2383.818, 4087.082, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (V)": (-2341.305, 4035.502, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (W)": (-2293.780, 3985.256, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (X)": (-2272.136, 3961.562, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (Y)": (-2271.833, 3977.578, 14.762),  # via Ambrosia 02 (Panorama)
+    "Lake Leonida (Z)": (-2266.038, 3970.220, 14.762),  # via Ambrosia 02 (Panorama)
     "Lake Surprise Viaduct (2B)": (-2177.306, -5064.942, 0.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (3B)": (-2189.144, -5043.602, 0.000),  # via Leonida Keys Postcard (X)
     "Lake Surprise Viaduct (4B)": (-2201.364, -5021.574, 0.000),  # via Leonida Keys Postcard (X)
@@ -4666,8 +4672,8 @@ landmarks = {
     "Lamp Post (SW)": (-2266.456, -2928.891, 50.000),  # via Prison
     "Lamp Post (SE)": (-2264.461, -2938.791, 50.000),  # via Prison
     "Lamppost near Starlet Motel": (-5324.753, 3486.858, 75.386),  # d=0.065 via Starlet Motel & Port Gellhorn 01 (Starlet Motel)
-    "Large Billboard (Ambrosia)": (-2839.902, 4405.961, 43.138),  # d=0.271 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
-    "Large Billboard (Ambrosia) (TE)": (-2830.679, 4407.770, 42.695),  # d=0.038 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Large Billboard (Ambrosia)": (-2823.269, 4403.229, 44.104),  # d=0.374 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
+    "Large Billboard (Ambrosia) (TE)": (-2814.416, 4404.785, 43.656),  # d=0.167 via Ambrosia 02 (Panorama) & Ambrosia 01 (Bikers)
     "Large Grassrivers Bridge (1)": (-3409.964, -2909.023, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Large Grassrivers Bridge (2)": (-3391.932, -2925.015, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Large Grassrivers Bridge (3)": (-3372.438, -2942.305, 0.000),  # via Leonida Keys 01 (Airplane) (X)
@@ -4821,8 +4827,8 @@ landmarks = {
     ##"Opera Tower": (-406.032, 867.433, 201.539),  # d=3.311 via Vice Beach (B) & Prison
     #"Opera Tower": (-422.228, 866.348, 201.155),  # d=0.964 via Vice Beach (B) & Vice City 03 (Basketball)
     "Opera Tower": (-399.711, 868.112, 199.746),  # d=0.329 via Vice City Postcard & Vice Beach (B)
-    "Orlando Station (BC)": (-2255.760, 3696.475, 18.802),  # via Ambrosia 02 (Panorama)
-    "Orlando Station (BW)": (-2292.019, 3700.605, 18.802),  # via Ambrosia 02 (Panorama)
+    "Orlando Station (BC)": (-2256.137, 3697.846, 19.872),  # via Ambrosia 02 (Panorama)
+    "Orlando Station (BW)": (-2291.643, 3701.893, 19.872),  # via Ambrosia 02 (Panorama)
     "Oval Yellow Sign": (-6329.607, 3509.044, 36.101),  # d=0.220 via Chase (2) (A) & Gas Station (Lucia)
     "99353 Overseas Hwy": (-3365.560, -6758.413, 78.037),  # d=0.264 via Ocean near Keys (N) & Leonida Keys 01 (Airplane) (X)
     "102180 Overseas Hwy": (-2669.041, -6035.461, 43.649),  # d=0.967 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
@@ -4831,18 +4837,18 @@ landmarks = {
     "Park Grove Condominium (C)": (-1319.007, -2057.768, 97.936),  # d=1.480 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Park Grove Condominium (N)": (-1324.351, -1995.621, 98.546),  # d=0.468 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Park Grove Condominium (S)": (-1325.776, -2138.190, 97.551),  # d=1.944 via Tennis Stadium (4K) & Leonida Keys 01 (Airplane) (X)
-    "Path A (Ambrosia) (1)": (-1715.496, 3401.593, 22.810),  # via Ambrosia 04 (Fires)
-    "Path A (Ambrosia) (2)": (-1828.011, 3399.197, 22.810),  # via Ambrosia 04 (Fires)
-    "Path B (Ambrosia) (1)": (-1629.560, 3375.204, 22.810),  # via Ambrosia 04 (Fires)
-    "Path B (Ambrosia) (2)": (-1835.702, 3376.621, 22.810),  # via Ambrosia 04 (Fires)
-    "Path C (Ambrosia) (1)": (-1605.561, 3350.518, 22.810),  # via Ambrosia 04 (Fires)
-    "Path C (Ambrosia) (2)": (-1837.276, 3352.063, 22.810),  # via Ambrosia 04 (Fires)
-    "Path D (Ambrosia) (1)": (-1607.809, 3326.694, 22.810),  # via Ambrosia 04 (Fires)
-    "Path D (Ambrosia) (2)": (-1854.000, 3328.810, 22.810),  # via Ambrosia 04 (Fires)
-    "Path E (Ambrosia) (1)": (-1609.510, 3303.231, 22.810),  # via Ambrosia 04 (Fires)
-    "Path E (Ambrosia) (2)": (-1800.111, 3304.145, 22.810),  # via Ambrosia 04 (Fires)
-    "Path F (Ambrosia) (1)": (-1612.594, 3278.783, 22.810),  # via Ambrosia 04 (Fires)
-    "Path F (Ambrosia) (2)": (-1859.849, 3284.949, 22.810),  # via Ambrosia 04 (Fires)
+    "Path A (Ambrosia) (1)": (-1292.652, 3296.537, 25.937),  # via Ambrosia 04 (Fires)
+    "Path A (Ambrosia) (2)": (-1416.938, 3301.962, 25.937),  # via Ambrosia 04 (Fires)
+    "Path B (Ambrosia) (1)": (-1204.368, 3270.684, 25.937),  # via Ambrosia 04 (Fires)
+    "Path B (Ambrosia) (2)": (-1429.371, 3284.621, 25.937),  # via Ambrosia 04 (Fires)
+    "Path C (Ambrosia) (1)": (-1182.759, 3250.181, 25.937),  # via Ambrosia 04 (Fires)
+    "Path C (Ambrosia) (2)": (-1435.324, 3265.280, 25.937),  # via Ambrosia 04 (Fires)
+    "Path D (Ambrosia) (1)": (-1188.960, 3231.900, 25.937),  # via Ambrosia 04 (Fires)
+    "Path D (Ambrosia) (2)": (-1458.086, 3247.845, 25.937),  # via Ambrosia 04 (Fires)
+    "Path E (Ambrosia) (1)": (-1194.531, 3213.837, 25.937),  # via Ambrosia 04 (Fires)
+    "Path E (Ambrosia) (2)": (-1401.986, 3225.148, 25.937),  # via Ambrosia 04 (Fires)
+    "Path F (Ambrosia) (1)": (-1201.745, 3195.052, 25.937),  # via Ambrosia 04 (Fires)
+    "Path F (Ambrosia) (2)": (-1472.236, 3213.274, 25.937),  # via Ambrosia 04 (Fires)
     "Pelican Harbor Marina (A)": (1244.911, 1626.266, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (B)": (1041.662, 1678.315, 0.000),  # via Venetian Islands
     "Pelican Harbor Marina (C)": (1017.648, 1668.969, 0.000),  # via Venetian Islands
@@ -4979,12 +4985,11 @@ landmarks = {
     "Quantum on the Bay Condominium (N) (NE)": (-400.508, 1157.326, 180.111),  # d=0.729 via Vice City Postcard & Vice Beach (B)
     "Quantum on the Bay Condominium (S) (NE)": (-357.319, 1125.022, 206.843),  # d=0.591 via Vice City Postcard & Vice Beach (B)
     "Quarry": (-5895.363, 4161.935, 36.938),  # d=5.947 via Diner (SE) (A) & Mount Kalaga National Park 04 (Mountain Pass) (X)
-    "Radio Tower (Ambrosia)": (-1817.265, 3233.277, 109.034),  # via Ambrosia 04 (Fires)
-    "Radio Tower (Ambrosia) (B)": (-1817.255, 3233.240, 22.810),  # via Ambrosia 04 (Fires)
+    "Radio Tower (Ambrosia)": (-1433.203, 3169.840, 94.387),  # via Ambrosia 04 (Fires)
     "Radio Tower #1 (Port Gellhorn)": (-6502.024, 3495.439, 55.062),  # d=1.335 via U-Turn (NW) & Chase (2) (A)
     "Red Billboard (Hamlet)": (-2555.425, -3483.904, 26.711),  # d=13.217 via Police Chase (D) & Leonida Keys 01 (Airplane) (X)
-    "Red Boxville (BNE)": (-2570.157, 5134.679, 15.802),  # via Ambrosia 02 (Panorama)
-    "Red Boxville (BNW)": (-2576.442, 5135.585, 15.802),  # via Ambrosia 02 (Panorama)
+    "Red Boxville (BNE)": (-2566.295, 5101.771, 15.262),  # via Ambrosia 02 (Panorama)
+    "Red Boxville (BNW)": (-2572.580, 5102.680, 15.262),  # via Ambrosia 02 (Panorama)
     "Reworld Miami-Dade (NW)": (-1916.243, 750.831, 112.208),  # d=20.111 via Intersection (W) & Convertible
     "Reworld Miami-Dade (SE)": (-1788.689, 719.480, 102.783),  # d=0.158 via Vice City Postcard & Intersection (W)
     "536 Richard Jackson Blvd (RNE)": (-6179.597, 4526.316, 16.948),  # d=0.030 via Diner (NW) & Diner (N)
@@ -5009,25 +5014,25 @@ landmarks = {
     "Road (MIA) (H)": (-2456.449, -140.940, 3.500),  # via Airport (X)
     "Road (MIA) (I)": (-2412.107, -141.676, 3.500),  # via Airport (X)
     "Road (MIA) (J)": (-2322.808, -144.152, 3.500),  # via Airport (X)
-    "Road (South Ambrosia) (1)": (-2663.702, 2766.490, 22.810),  # via Ambrosia 04 (Fires)
-    "Road (South Ambrosia) (2)": (-2640.890, 2750.627, 22.810),  # via Ambrosia 04 (Fires)
-    "Road (South Ambrosia) (3)": (-2624.617, 2734.350, 22.810),  # via Ambrosia 04 (Fires)
-    "Road A (Ambrosia) (1)": (-1604.488, 3371.701, 22.810),  # via Ambrosia 04 (Fires)
-    "Road A (Ambrosia) (2)": (-1612.255, 3283.933, 22.810),  # via Ambrosia 04 (Fires)
-    "Road B (Ambrosia) (1)": (-1899.970, 3439.654, 22.810),  # via Ambrosia 04 (Fires)
-    "Road B (Ambrosia) (2)": (-1871.778, 3310.093, 22.810),  # via Ambrosia 04 (Fires)
-    "Road B (Ambrosia) (3)": (-1879.986, 3228.025, 22.810),  # via Ambrosia 04 (Fires)
-    "Road C (Ambrosia) (1)": (-1930.108, 3441.679, 22.810),  # via Ambrosia 04 (Fires)
-    "Road C (Ambrosia) (2)": (-1931.010, 3306.391, 22.810),  # via Ambrosia 04 (Fires)
-    "Road C (Ambrosia) (3)": (-1932.550, 3213.925, 22.810),  # via Ambrosia 04 (Fires)
-    "Road D (Ambrosia) (1)": (-1874.959, 3127.577, 22.810),  # via Ambrosia 04 (Fires)
-    "Road D (Ambrosia) (2)": (-1870.206, 2971.860, 22.810),  # via Ambrosia 04 (Fires)
-    "Road E (Ambrosia) (1)": (-2097.207, 2754.295, 18.810),  # via Ambrosia 04 (Fires)
-    "Road E (Ambrosia) (2)": (-2250.948, 2711.358, 18.810),  # via Ambrosia 04 (Fires)
-    "Road F (Ambrosia)": (-1854.200, 3438.866, 22.810),  # via Ambrosia 04 (Fires)
+    "Road (South Ambrosia) (1)": (-2588.381, 2800.996, 25.937),  # via Ambrosia 04 (Fires)
+    "Road (South Ambrosia) (2)": (-2559.951, 2786.460, 25.937),  # via Ambrosia 04 (Fires)
+    "Road (South Ambrosia) (3)": (-2540.872, 2771.660, 25.937),  # via Ambrosia 04 (Fires)
+    "Road A (Ambrosia) (1)": (-1178.238, 3266.464, 25.937),  # via Ambrosia 04 (Fires)
+    "Road A (Ambrosia) (2)": (-1200.556, 3199.029, 25.937),  # via Ambrosia 04 (Fires)
+    "Road B (Ambrosia) (1)": (-1490.840, 3338.883, 25.937),  # via Ambrosia 04 (Fires)
+    "Road B (Ambrosia) (2)": (-1481.371, 3233.997, 25.937),  # via Ambrosia 04 (Fires)
+    "Road B (Ambrosia) (3)": (-1504.926, 3168.852, 25.937),  # via Ambrosia 04 (Fires)
+    "Road C (Ambrosia) (1)": (-1524.713, 3342.624, 25.937),  # via Ambrosia 04 (Fires)
+    "Road C (Ambrosia) (2)": (-1549.474, 3234.505, 25.937),  # via Ambrosia 04 (Fires)
+    "Road C (Ambrosia) (3)": (-1567.571, 3160.176, 25.937),  # via Ambrosia 04 (Fires)
+    "Road D (Ambrosia) (1)": (-1516.733, 3087.916, 25.937),  # via Ambrosia 04 (Fires)
+    "Road D (Ambrosia) (2)": (-1538.624, 2961.829, 25.937),  # via Ambrosia 04 (Fires)
+    "Road E (Ambrosia) (1)": (-1916.830, 2749.207, 19.937),  # via Ambrosia 04 (Fires)
+    "Road E (Ambrosia) (2)": (-2131.340, 2711.428, 19.937),  # via Ambrosia 04 (Fires)
+    "Road F (Ambrosia)": (-1439.446, 3335.057, 25.937),  # via Ambrosia 04 (Fires)
     "Rocks (Grassrivers) (A)": (-3769.632, -4045.575, 0.000),  # via Grassrivers 04 (Police Chase)
     "Rocks (Grassrivers) (B)": (-3775.897, -4050.955, 0.000),  # via Grassrivers 04 (Police Chase)
-    "Round Water Tower": (-2199.606, 478.187, 77.242),  # d=4.963 via Vice City Postcard & Port Vice City (A)
+    "Round Water Tower": (-2235.963, 484.260, 75.700),  # via Ambrosia 02 (Panorama)
     #"Route 35 (A)": (-1371.098, -667.978, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (B)": (-1399.479, -594.730, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (C)": (-1375.251, -509.460, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
@@ -5038,8 +5043,8 @@ landmarks = {
     #"Route 35 (H)": (-1467.859, -423.862, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (I)": (-1448.953, -361.425, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (J)": (-1492.216, -415.696, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
-    "Route 35 (Y)": (-2672.507, 3592.121, 18.802),  # via Ambrosia 02 (Panorama)
-    "Route 35 (Z)": (-2607.649, 3753.089, 18.802),  # via Ambrosia 02 (Panorama)
+    "Route 35 (Y)": (-2664.412, 3595.301, 19.872),  # via Ambrosia 02 (Panorama)
+    "Route 35 (Z)": (-2600.730, 3753.355, 19.872),  # via Ambrosia 02 (Panorama)
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (N) (S)": (2036.451, 1049.876, 67.998),  # d=0.153 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
@@ -5090,8 +5095,8 @@ landmarks = {
     "Small Keys Bridge (NB)": (-833.792, -3706.887, 0.000),  # via Leonida Keys Postcard (X)
     "Small Keys Bridge (SB)": (-901.019, -3869.138, 0.000),  # via Leonida Keys Postcard (X)
     "Small Radio Tower (Key Lento)": (-2097.415, -5640.658, 46.290),  # d=0.776 via Key Lento & Leonida Keys Postcard (X)
-    "1500 Sonora Ave (Silo)": (-2713.840, 3812.794, 63.751),  # d=0.002 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "1500 Sonora Ave (Tank)": (-2991.340, 3677.641, 40.360),  # d=0.455 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "1500 Sonora Ave (Silo)": (-2712.385, 3820.176, 64.172),  # d=0.002 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "1500 Sonora Ave (Tank) (A)": (-2979.559, 3670.893, 40.792),  # d=0.543 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "Sombrero Key Light (B)": (-2841.034, -7228.936, 0.000),  # via Keys
     ##"Southeast Financial Center": (-448.897, -461.264, 247.468),  # d=3.765 via Vice Beach (B) & Prison
     #"Southeast Financial Center": (-450.540, -448.388, 248.273),  # d=0.991 via Skyline & Vice Beach (B)
@@ -5146,21 +5151,22 @@ landmarks = {
     "Traffic Sign": (-6084.656, 4425.942, 14.853),  # d=1.665 via Diner (E) & Diner (SE) (A)
     "Train Signal (S) (E)": (-6621.336, 3687.237, 18.532),  # d=0.011 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
     "Train Signal (S) (W)": (-6623.084, 3686.116, 18.578),  # d=0.013 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
-    "Train Signal (Ambrosia) (1E)": (-2882.469, 3625.075, 27.043),  # via Ambrosia Postcard (X)
-    "Train Signal (Ambrosia) (1W)": (-2884.328, 3626.147, 27.043),  # via Ambrosia Postcard (X)
-    "Train Signal (Ambrosia) (2E)": (-2883.896, 3604.744, 27.043),  # via Ambrosia Postcard (X)
-    "Train Signal (Ambrosia) (2W)": (-2884.990, 3607.207, 27.043),  # via Ambrosia Postcard (X)
-    "Train Signal (Ambrosia) (3E)": (-3041.949, 2908.539, 27.043),  # via Ambrosia Postcard (X)
-    "Train Signal (Ambrosia) (3W)": (-3050.184, 2913.288, 27.043),  # via Ambrosia Postcard (X)
-    "Train Signal (Ambrosia) (4E)": (-3037.315, 2882.098, 27.043),  # via Ambrosia Postcard (X)
-    "Train Signal (Ambrosia) (4W)": (-3048.488, 2876.330, 27.043),  # via Ambrosia Postcard (X)
-    "Train Tracks (Ambrosia) (A)": (-2859.307, 3695.370, 18.802),  # via Ambrosia Postcard (X)
-    "Train Tracks (Ambrosia) (B)": (-2869.024, 3649.534, 18.802),  # via Ambrosia Postcard (X)
-    "Train Tracks (Ambrosia) (C)": (-2884.153, 3595.327, 18.802),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (1E)": (-2874.714, 3617.261, 27.904),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (1W)": (-2876.495, 3618.356, 27.904),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (2E)": (-2876.457, 3597.796, 27.904),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (2W)": (-2877.474, 3600.199, 27.904),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (2WB)": (-2877.468, 3600.196, 19.872),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (3E)": (-3045.533, 2920.428, 27.904),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (3W)": (-3053.597, 2925.382, 27.904),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (4E)": (-3041.534, 2893.868, 27.904),  # via Ambrosia Postcard (X)
+    "Train Signal (Ambrosia) (4W)": (-3052.763, 2888.368, 27.904),  # via Ambrosia Postcard (X)
+    "Train Tracks (Ambrosia) (A)": (-2851.181, 3683.591, 19.872),  # via Ambrosia Postcard (X)
+    "Train Tracks (Ambrosia) (B)": (-2861.320, 3640.149, 19.872),  # via Ambrosia Postcard (X)
+    "Train Tracks (Ambrosia) (C)": (-2876.862, 3588.779, 19.872),  # via Ambrosia Postcard (X)
     # "Train Tunnel (T)": (-5527.131, 5129.345, 78.110),  # via Diner (NE)
     "Train Tunnel (B)": (-5527.131, 5129.345, 69.610),  # via Diner (NE)
-    "3400 Transmitter Rd": (-4040.198, 2884.755, 73.067),  # d=1.073 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "3400 Transmitter Rd (B)": (-4039.222, 2885.583, 53.255),  # d=0.886 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "3400 Transmitter Rd": (-3932.501, 3013.380, 73.676),  # d=1.472 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "3400 Transmitter Rd (B)": (-3931.624, 3014.084, 55.372),  # d=0.849 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "Tree on Island K": (-2476.651, -6557.911, 9.686),  # d=0.729 via Leonida Keys 01 (Airplane) (X) & Leonida Keys Postcard (X)
     "Trees B (Grassrivers) (1B)": (-3846.230, -4266.146, 0.000),  # via Grassrivers Postcard (X)
     "Trees B (Grassrivers) (1)": (-3846.488, -4266.510, 4.332),  # d=0.007 via Grassrivers 04 (Police Chase) & Grassrivers Postcard (X)
@@ -5196,22 +5202,22 @@ landmarks = {
     "Unknown Sphere": (-170.272, 363.950, 30.138),  # d=2.622 via Vice City Postcard & Skyline
     "Uptown Lofts (NE)": (-323.304, 1312.918, 46.090),  # d=1.996 via Vice City Postcard & Vice City 03 (Basketball)
     "Uptown Lofts (SE)": (-326.932, 1295.193, 46.179),  # d=1.851 via Vice City Postcard & Vice City 03 (Basketball)
-    "US Sugar Mill (Factory) (A)": (-3038.064, 3316.655, 104.168),  # d=6.691 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
-    "US Sugar Mill (Factory) (NW)": (-3043.429, 3350.378, 71.274),  # d=0.894 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "US Sugar Mill (Factory) (P2)": (-3035.416, 3370.884, 65.364),  # d=0.606 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "US Sugar Mill (Factory) (P3)": (-3034.479, 3381.113, 65.346),  # d=0.622 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "US Sugar Mill (Factory) (SE)": (-3030.702, 3284.580, 71.337),  # d=1.034 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (1)": (-2721.273, 3746.676, 61.890),  # d=1.167 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (2)": (-2723.768, 3761.546, 52.853),  # d=1.733 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (3)": (-2973.606, 3018.578, 36.843),  # d=2.208 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (4)": (-2925.118, 3549.727, 101.912),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (5)": (-2963.683, 3522.851, 81.951),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (6)": (-2970.877, 3525.165, 86.626),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (7)": (-2999.198, 3525.879, 100.657),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (8)": (-3056.057, 3600.027, 47.985),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (9)": (-3062.952, 3602.633, 58.688),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (10)": (-2968.396, 3758.264, 62.755),  # d=0.549 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (11)": (-2971.494, 3764.803, 51.374),  # d=1.091 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "US Sugar Mill (Factory) (A)": (-3024.434, 3319.963, 102.449),  # d=8.831 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "US Sugar Mill (Factory) (NW)": (-3019.155, 3387.030, 71.271),  # d=0.241 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "US Sugar Mill (Factory) (P2)": (-3031.722, 3371.589, 65.364),  # d=0.129 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "US Sugar Mill (Factory) (P3)": (-3030.749, 3381.313, 65.341),  # d=0.153 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "US Sugar Mill (Factory) (SE)": (-3003.263, 3335.903, 71.350),  # d=0.168 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (1)": (-2734.576, 3628.044, 60.549),  # d=0.017 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (2)": (-2733.922, 3663.827, 50.336),  # d=0.199 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (3)": (-2971.565, 3040.530, 38.383),  # d=3.035 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (4)": (-2914.240, 3549.650, 100.853),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (5)": (-2949.299, 3530.625, 81.571),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (6)": (-2956.442, 3532.544, 85.828),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (7)": (-2982.372, 3536.848, 99.419),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (8)": (-3037.832, 3606.860, 48.843),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (9)": (-3044.198, 3609.983, 58.761),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (10)": (-2958.666, 3745.169, 62.656),  # d=0.455 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (11)": (-2961.783, 3751.439, 51.638),  # d=0.621 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "Vake Island (E)": (-3566.148, -7894.914, 0.000),  # via Keys
     "Vake Island (W)": (-3631.210, -7928.417, 0.000),  # via Keys
     "Venetian Isle Condominium": (71.487, 1189.574, 47.444),  # d=1.337 via Vice City Postcard & Vice Beach (B)
@@ -5283,19 +5289,20 @@ landmarks = {
     #"Wells Fargo Center (N)": (-625.117, -394.342, 185.680),  # d=0.001 via Skyline & Vice Beach (B)
     "Wells Fargo Center (N)": (-660.923, -412.505, 188.397),  # d=2.586 via Vice City Postcard & Vice Beach (B)
     "West Venetian Causeway Bridge": (-75.236, 1046.721, 15.273),  # d=2.958 via Vice City Postcard & Sidewalk (Jason) (E)
-    "Wheelabrator South Broward": (-2375.089, 2408.577, 99.256),  # d=0.741 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
-    "Wheelabrator South Broward (NW)": (-2433.660, 2499.270, 50.946),  # d=0.334 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
-    "Wheelabrator South Broward (TE)": (-2326.298, 2500.425, 61.710),  # d=2.273 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
-    "Wheelabrator South Broward (TW)": (-2380.953, 2490.803, 61.609),  # d=2.679 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+    "Wheelabrator South Broward": (-2373.483, 2416.390, 99.063),  # d=1.153 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+    "Wheelabrator South Broward (NW)": (-2431.168, 2511.801, 51.093),  # d=0.711 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+    "Wheelabrator South Broward (TE)": (-2325.260, 2505.396, 61.757),  # d=2.158 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
+    "Wheelabrator South Broward (TW)": (-2379.238, 2499.230, 61.673),  # d=2.516 via Leonida Keys 01 (Airplane) (X) & Ambrosia 02 (Panorama)
     "White Billboard (Hamlet)": (-2611.010, -3813.042, 32.273),  # d=8.005 via Police Chase (A) & Leonida Keys 01 (Airplane) (X)
     "White Pole": (-6092.565, 4474.750, 27.138),  # d=1.591 via Diner (NE) & Diner (E)
-    "White Silos (E) (NE)": (-2839.288, 3569.358, 34.919),  # d=1.161 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
-    "White Silos (E) (NW)": (-2869.354, 3545.425, 33.443),  # d=1.210 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "White Silos (W) (NE)": (-2874.375, 3552.726, 33.616),  # d=1.649 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "White Silos (W) (NW)": (-2894.073, 3559.525, 33.622),  # d=1.154 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "White Silos (E) (NE)": (-2830.765, 3560.508, 34.980),  # d=0.548 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
+    "White Silos (E) (NW)": (-2855.069, 3558.983, 34.966),  # d=0.258 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "White Silos (W) (NE)": (-2860.496, 3563.940, 35.035),  # d=0.752 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "White Silos (W) (NW)": (-2880.486, 3567.536, 34.874),  # d=0.424 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "Wildfire Scooters (NW)": (-6464.217, 3333.620, 6.259),  # d=0.003 via Chase (2) (A) & AI World Editor Map (4K)
     "Wildfire Scooters (S)": (-6458.709, 3323.329, 6.128),  # d=0.012 via Chase (2) (A) & AI World Editor Map (4K)
-    "Worker (Ambrosia) (B)": (-2733.186, 3873.611, 18.802),  # via Ambrosia Postcard (X)
+    "Worker A (Ambrosia) (B)": (-2727.151, 3848.174, 19.872),  # via Ambrosia Postcard (X)
+    "Worker B (Ambrosia) (B)": (-2788.643, 3881.759, 19.872),  # via Ambrosia Postcard (X)
     "Wyman (Initial)": (-5333.050, 3448.120, 65.800),  # via Pool
     "Wyman (Pool)": (-5322.430, 3472.470, 66.790),  # Pool
 
