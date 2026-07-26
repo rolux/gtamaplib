@@ -200,9 +200,9 @@ cameras = {
     "[T2/45] Wall (Up)": None,
     "[T2/46] Wall (Down)": None,
     "[T2/51] Drive-by Shooting": None,
-    "[T2/52] Empty Lot near Metro Station": (None, (-670.000, 940.000, 5.000), (45.000, -4.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3340]"),
+    "[T2/52] Empty Lot near Metro Station": (None, (-670.000, 940.000, 5.000), (49.000, -4.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3340]"),
     "[T2/54] Starlet Motel": (None, (-5333.000, 3455.000, 66.800), (10.000, 7.500, 0.000), (52.000, None), (3840, 1728), "Trailer 2 [4322]"),
-    "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (355.000, -4.600, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
+    "[T2/58] Explosion": (None, (-1030.000, 100.000, 20.000), (355.000, -4.500, 0.000), (40.000, None), (3840, 1728), "Trailer 2 [3539]"),
     "[T2/59] Park (Mobile Phone)": (None, (-170.000, 420.000, 5.000), (210.000, 0.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3566]"),
     "[T2/60] Landing Gear (A)": None,
     "[T2/60] Landing Gear (B)": (None, (-350.000, -175.000, 450.000), (180.000, -45.000, 0.000), (60.000, None), (3840, 1728), "Trailer 2 [3612]"),
@@ -2038,8 +2038,8 @@ pixels = {
         ((3602, 559), "One Miami Condominium East (SE)"),
     ],
     "[T2/52] Empty Lot near Metro Station": [
-        ((2998, 473.5), "Ambrosia Hill (TW)"),
-        ((3192, 474.5), "Ambrosia Hill (TE)"),
+        ((2998, 473.5), "Ambrosia Hill (B)"),
+        ((3192, 474.5), "Ambrosia Hill (D)"),
     ],
     "[T2/54] Starlet Motel": [
         ((531, 1232), "Starlet Motel (P)"),
@@ -2056,9 +2056,9 @@ pixels = {
         ((3335.5, 1271.5), "Alpha Gas Station (A2)"),
     ],
     "[T2/58] Explosion": [
-        ((137, 252), "Ambrosia Hill (TW)"),
+        ((137, 252), "Ambrosia Hill (D)"),
         ((225, 55), "Tall Billboard near Interchange"),
-        ((310, 290), "Ambrosia Hill (BW)"),
+        ((310, 290), "Ambrosia Hill (F)"),
         ((3306, 373), "Rohde Building (BSW)"),
     ],
     "[T2/59] Park (Mobile Phone)": [
@@ -3074,7 +3074,7 @@ pixels = {
         ((49, 1938), "Ambrosia Road (B)"),
         ((94, 1785), "Canal Road (A)"),
         ((135, 2042), "Kissimmee River (B)"),
-        ((170, 1600), "3001 Gordon Hwy (Water)"),
+        ((170, 1600), "3400 Transmitter Rd"),
         ((310, 1954), "Ambrosia Road (C)"),
         ((405, 1762), "Canal Road (B)"),
         ((424, 1621), "Lollipop Ridge (NW)"),
@@ -3090,6 +3090,7 @@ pixels = {
         ((1109, 1764), "Hill Road (B)"),
         ((1132, 1758), "Canal (C)"),
         ((1213, 1559), "Starlet Highway (A)"),
+        ((1236, 1555), "Motel"),
         ((1292, 2160), "Mount Leonida (C)"),
         ((1330.5, 1533.5), "Tree near Port Gellhorn"),
         ((1331, 1530), "Tree near Port Gellhorn"),
@@ -5287,17 +5288,17 @@ landmarks = {
     "US Sugar Mill (Factory) (P2)": (-3031.799, 3374.359, 65.206),  # d=0.110 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "US Sugar Mill (Factory) (P3)": (-3030.855, 3384.117, 65.183),  # d=0.134 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "US Sugar Mill (Factory) (SE)": (-3005.468, 3334.056, 71.195),  # d=0.368 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (1)": (-2730.541, 3655.732, 60.600),  # d=0.287 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
+    "USSM Smokestack (1)": (-2725.013, 3687.547, 60.667),  # via Ambrosia Postcard (X)
+    "USSM Smokestack (2)": (-2728.562, 3697.066, 51.269),  # via Ambrosia Postcard (X)
+    "USSM Smokestack (3)": (-2970.238, 3042.339, 38.127),  # d=3.037 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (4)": (-2918.428, 3546.456, 100.801),  # d=0.638 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (5)": (-2958.292, 3520.192, 81.167),  # d=1.152 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (6)": (-2965.304, 3522.682, 86.053),  # d=0.800 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (7)": (-2994.197, 3524.096, 99.911),  # d=1.976 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (8)": (-3051.130, 3597.891, 47.731),  # d=0.349 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "USSM Smokestack (9)": (-3058.265, 3600.624, 58.649),  # d=0.835 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "USSM Smokestack (10)": (-2959.420, 3749.428, 62.442),  # d=0.510 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "USSM Smokestack (11)": (-2962.541, 3755.719, 51.404),  # d=0.661 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (2)": (-2734.507, 3666.315, 50.034),  # d=0.213 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
-    "USSM Smokestack (3)": (-2970.238, 3042.339, 38.127),  # d=3.037 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (4)": (-2915.312, 3551.844, 100.815),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (5)": (-2950.484, 3532.678, 81.444),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (6)": (-2957.599, 3534.732, 85.719),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (7)": (-2983.462, 3539.374, 99.355),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (8)": (-3038.814, 3610.248, 48.598),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
-    "USSM Smokestack (9)": (-3045.178, 3613.406, 58.545),  # via Ambrosia 02 (Panorama), Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "Vake Island (E)": (-3566.148, -7894.914, 0.000),  # via Keys
     "Vake Island (W)": (-3631.210, -7928.417, 0.000),  # via Keys
     "Venetian Isle Condominium": (71.487, 1189.574, 47.444),  # d=1.337 via Vice City Postcard & Vice Beach (B)
