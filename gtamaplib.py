@@ -1394,8 +1394,8 @@ class AmbrosiaHill(Landmark):
         cam = get_camera("Ambrosia 01 (Bikers)")
         self.xyz = cam.xyz
         self.x, self.y, self.z = self.xyz
-        lm_names = [f"Ambrosia Hill ({x})" for x in "ABDCEF"]
-        self.ds = 2000, 1500, 1400, 1300, 1100, 1000
+        lm_names = [f"Ambrosia Hill ({x})" for x in "ABCDEF"]
+        self.ds = 2100, 1700, 1500, 1400, 1300, 1300
         self.points = []
         for i, lm_name in enumerate(lm_names):
             ray = (cam.xyz, cam.get_landmark_direction(lm_name))
@@ -1432,6 +1432,9 @@ class AmbrosiaHill(Landmark):
                 cam.render_line((base_point, top_point), color, width * (2 if j % 5 == 0 else 1))
                 prev_top_point=top_point
                 prev_base_point=base_point
+        for i in range(1, len(self.points)):
+            color = tuple(int(v) for v in (np.array(self.colors[i - 1]) + np.array(self.colors[i])) / 2)
+            cam.render_line((self.points[i - 1], self.points[i]), color, width)
 
         return self
 
