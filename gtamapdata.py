@@ -149,8 +149,8 @@ cameras = {
     "[T1/25] Donuts": (None, (-710.000, 1250.000, 40.000), (315.000, -50.000, 0.000), (45.000, None), (3840, 2160), "Trailer 1 [1396]"),
     "[T1/26] Dancing": (None, (-695.000, 1260.000, 5.000), (230.000, 20.000, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1426]"),
     "[T1/27] Gas Station (Alligator)": (None, (-5300, 3580, 69.000), (270.000, -17.500, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1427]"),
-    "[T1/29] Gas Station (Chase) (SE)": (None, (-1000.000, 3000.000, 5.000), (218.000, 4.948, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1498]"),
-    "[T1/29] Gas Station (Chase) (S)": (None, (-1000.000, 3000.000, 5.000), (208.500, 5.313, 0.000), (60.000, None), (3840, 2160), "Trailer 1 [1529]"),
+    "[T1/29] Gas Station (Chase) (SE)": (None, (-712.000, 2873.000, 8.429), (214.040, 5.483, 0.000), (60.000, 35.983), (3840, 2160), "Trailer 1 [1498]"),
+    "[T1/29] Gas Station (Chase) (S)": (None,  (-712.000, 2873.000, 8.429), (201.336, 6.000, 0.000), (60.000, 35.983), (3840, 2160), "Trailer 1 [1529]"),
     "[T1/30] Interchange": (None, (-970.000, 800.000, 15.000), (166.000, 0.000, 0.000), (64.000, None), (3840, 2160), "Trailer 1 [1535]"),
     "[T1/31] Green Pickup Truck (A)": None,
     "[T1/31] Green Pickup Truck (B)": None,
@@ -266,8 +266,8 @@ cameras = {
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-1750.000, 6250.000, 200.000), (118.750, 6.800, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2500.000, 6500.000, 200.000), (131.321, 6.027, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3500.000, 5750.000, 120.000), (129.000, 8.000, 1.000), (65.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
-    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3000.000, 5750.000, 200.000), (119.000, 9.500, 1.000), (80.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
-    #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2500.000, 6750.000, 250.000), (120.000, 9.400, 1.000), (87.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3000.000, 5750.000, 200.000), (119.000, 9.500, 1.000), (80.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2750.000, 5250.000, 150.000), (112.000, 11.000, 1.000), (85.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-4750.000, 6000.000, 120.000), (156.447, -13.566, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
     "[S2/70] Mount Kalaga National Park 06 (River)": None,
     "[S2/71] Vice City Postcard": (None, (400.000, 1860.000, 37.310), (151.654, 3.000, 0.000), (67.500, 47.117), (2458, 1604), "Vice City Postcard [?]"),
@@ -549,12 +549,14 @@ pixels = {
         ((814, 102), "Waffles Pass"),
         ((535, 84.5), "536 Richard Jackson Blvd (RSE)"),
         ((676, 139), "536 Richard Jackson Blvd (RNE)"),
+        ((938, 67), "Mount Waffles (W)"),
         ((1075, 15), "Mount Waffles (TW)"),
         ((1221, 93.5), "Train Tunnel (N)"),
+        ((1128, 82), "Beige Billboard (BE)"),
         ((1136, 8.5), "Mount Waffles"),
         ((1194, 16), "Mount Waffles (TE)"),
-        ((1128, 82), "Beige Billboard (BE)"),
         ((1430, 60), "Mount Waffles (R)"),
+        ((1443, 57.5), "Mount Waffles (E)"),
         ((1544, 50), "Mount Mountain"),
         ((1681, 121), "Waffles Billboard (BW)"),
     ],
@@ -2689,6 +2691,7 @@ pixels = {
         ((94, 1042), "Lake Leonida (W)"),
         ((161, 984.5), "Orlando Station (BW)"),
         ((252, 1048.5), "Lake Leonida (V)"),
+        ((291, 876), "Trees near Wheelabrator"),
         ((309, 856), "Wheelabrator South Broward (E)"),
         ((338.5, 807.5), "Round Water Tower"),
         ((361.5, 839), "MIA North Terminal (A)"),
@@ -2790,6 +2793,7 @@ pixels = {
         ((2034, 828), "Construction Crane (Ambrosia)"),
         ((2076, 825), "Light Pollution (B)"),
         ((2205.5, 981), "Large Billboard (Ambrosia) (TE)"),
+        ((2233.5, 899.5), "Factory D (Ambrosia) (NW)"),
         ((2235.5, 978), "Large Billboard (Ambrosia)"),
         ((2265, 978.5), "Large Billboard (Ambrosia) (TW)"),
         ((2318.5, 1715.5), "Lake Leonida (C)"),
@@ -2797,6 +2801,7 @@ pixels = {
         ((2348, 1066), "Ambrosia Main St (B)"),
         ((2392, 1699), "Lake Leonida (D)"),
         ((2448, 1074), "Ambrosia Main St (A)"),
+        ((2465, 927), "Conveyor near Pile (T)"),
         ((2545.5, 1035), "Small Billboard (Ambrosia)"),
         ((2577, 788.5), "Very Tall Water Tower"),
         ((2615, 1078), "Ambrosia Main St (Z)"),
@@ -2829,6 +2834,7 @@ pixels = {
         ((3329, 870), "Billboard with Oval Motif #2"),
         ((3391, 994), "Ambrosia Main St (V)"),
         ((3453, 1084.5), "Hendry County Motorsports Park"),
+        ((3533, 831.5), "BB Hill"),
         ((0, 1324.5), "Island LLA (X)"),
         ((0, 1945), "Island LLA (Y)"),
         ((289, 1252), "Island LLB (E)"),
@@ -2874,6 +2880,7 @@ pixels = {
         ((108, 947), "Wheelabrator South Broward (NW)"),
         ((108, 973), "Wheelabrator South Broward (5B)"),
         ((119, 1192.5), "Road D (Ambrosia) (2)"),
+        ((176.5, 988), "Trees near Wheelabrator"),
         ((207, 979), "Route 10 (E)"),
         ((307.5, 1080), "Road E (Ambrosia) (2)"),
         ((365, 1075), "Car C (Ambrosia) (2)"),
@@ -2905,8 +2912,10 @@ pixels = {
         ((2148, 900), "3400 Transmitter Rd"),
         ((2148, 923.5), "3400 Transmitter Rd (B)"),
         ((2176.5, 1722.5), "Path E (Ambrosia) (1)"),
+        ((2248.5, 977), "Warehouse 4 (Ambrosia) (T)"),
         ((2272, 1217), "Canal B (Ambrosia) (2)"),
         ((2372, 1247), "Path F (Ambrosia) (2)"),
+        ((2378.5, 980.5), "Warehouse 4 (Ambrosia) (C)"),
         ((2500, 1305), "Path E (Ambrosia) (2)"),
         ((2568, 919.5), "Lollipop Ridge (NW)"),
         ((2579, 1060), "Viaduct (Ambrosia) (S)"),
@@ -2951,7 +2960,7 @@ pixels = {
         ((3463.5, 986.5), "White Silos (E) (NE)"),
         ((3480, 1299.5), "Path A (Ambrosia) (2)"),
         ((3535, 875), "Sunshine Skyway Bridge (S)"),
-        ((3606.5, 891.5), "BB Hill"),
+        ((3606, 893.5), "BB Hill"),
         ((3625.5, 967), "1500 Sonora Ave (Tank) (A) (L)"),
         ((3688, 968), "1500 Sonora Ave (Tank) (A)"),
         ((3692.5, 1223.5), "Road C (Ambrosia) (1)"),
@@ -3077,7 +3086,7 @@ pixels = {
         ((170, 1600), "3400 Transmitter Rd"),
         ((310, 1954), "Ambrosia Road (C)"),
         ((405, 1762), "Canal Road (B)"),
-        ((424, 1621), "Lollipop Ridge (NW)"),
+        ((424, 1621), "BB Hill"),
         ((425, 1799), "Canal (B)"),
         ((646, 1875), "Hill Road (A)"),
         ((802, 2096), "Bridge"),
@@ -3086,7 +3095,7 @@ pixels = {
         ((903, 1556.5), "Two Tall Trees"),
         ((996, 1734), "Road (A)"),
         ((1009, 1945), "Highway Bridge (B)"),
-        ((1092, 1598.5), "BB Hill"),
+        ((1092, 1598.5), "BBB Hill"),
         ((1109, 1764), "Hill Road (B)"),
         ((1132, 1758), "Canal (C)"),
         ((1213, 1559), "Starlet Highway (A)"),
@@ -3105,8 +3114,8 @@ pixels = {
         ((1640, 1876), "Highway Bridge ()"),
         ((1851, 1684), "Canal (D)"),
         ((1901, 1643), "Mount Leonida (B)"),
-        ((2042, 1598), "Ambrosia Hill (B)"),
-        ((2147, 1536), "Ambrosia Hill (A)"),
+        ((2042, 1598), "Ambrosia Hill (X)"),
+        ((2147, 1536), "Ambrosia Hill (C)"),
         ((3840, 855), "Mount Leonida (A)"),
     ],
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": [
@@ -3619,6 +3628,8 @@ pixels = {
         ((956.5, 1075), "Train Signal (Ambrosia) (3W)"),
         ((1028, 1182), "White Silos (E) (NE)"),
         ((1031.5, 913), "Radio Mast (Ambrosia)"),
+        ((1034, 1076), "Warehouse 4 (Ambrosia) (T)"),
+        ((1084.5, 1090), "Warehouse 4 (Ambrosia) (C)"),
         ((1169, 2067), "Worker A (Ambrosia) (B)"),
         ((1169, 2021), "Worker A (Ambrosia) (T)"),
         ((1186.5, 1178.5), "White Silos (E) (NW)"),
@@ -3655,7 +3666,7 @@ pixels = {
         ((2120.5, 1095), "Factory C (Ambrosia) (N)"),
         ((2133, 1906), "Guard Booth (Ambrosia) (W)"),
         ((2166.5, 1271.5), "1500 Sonora Ave (Tank) (C) (L)"),
-        ((2196, 1114), "Ambrosia Airfield (S)"),
+        ((2196, 1114), "Ambrosia Airfield (C)"),
         ((2262, 2093), "Black Bison (2)"),
         ((2283, 1453), "US Sugar Mill (Warehouse)"),
         ((2325.5, 1142), "1500 Sonora Ave (Tank) (A) (L)"),
@@ -3678,6 +3689,7 @@ pixels = {
         ((2972, 1074), "USSM Smokestack (11)"),
         ((2981.5, 1044), "3400 Transmitter Rd (BR)"),
         ((3024, 1097), "Factory D (Ambrosia) (NW)"),
+        ((3055.5, 1139), "Conveyor near Pile (T)"),
         ((3181, 1284), "Train Signal (Ambrosia) (5E)"),
         ((3197.5, 1284), "Train Signal (Ambrosia) (5W)"),
         ((3185, 1123), "Ambrosia Airfield (N)"),
@@ -4260,6 +4272,9 @@ landmarks = {
     "Alligator A (R)": (-3779.349, -4039.932, 0.000),  # via Grassrivers 04 (Police Chase)
     "Alligator B (F)": (-3780.824, -4041.918, 0.000),  # via Grassrivers 04 (Police Chase)
     "Alligator B (R)": (-3782.016, -4041.705, 0.000),  # via Grassrivers 04 (Police Chase)
+    "Ambrosia Airfield (C)": (-3401.524, 3125.078, 14.486),  # via Ambrosia Postcard (X)
+    "Ambrosia Airfield (N)": (-3618.958, 3332.567, 14.486),  # via Ambrosia Postcard (X)
+    "Ambrosia Airfield (S)": (-3184.090, 2917.590, 14.486),  # via Ambrosia Postcard (X)
     "Ambrosia Bridge (3B)": (-2776.854, 4803.820, 14.486),  # via Ambrosia 02 (Panorama)
     "Ambrosia Bridge (4B)": (-2767.106, 4839.474, 14.486),  # via Ambrosia 02 (Panorama)
     "Ambrosia Hill": (-2281.047, 4222.991, 138.077),  # d=5.149 via Hedge (B) (X) & Explosion
@@ -4318,6 +4333,7 @@ landmarks = {
     "Bay (GG)": (-6600.155, 4625.139, 0.000),  # via Diner (W) (A)
     "Bay (AAAA)": (-7496.340, 4518.169, 0.000),  # via Diner (SW)
     "Bay (BBBB)": (-7529.528, 4586.147, 0.000),  # via Diner (SW)
+    "BB Hill": (-3749.257, 3805.334, 73.857),  # d=1.655 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
     "Beach (A)": (2223.646, -384.139, 0.000),  # via Beach
     "Beach (B)": (2217.200, -351.822, 0.000),  # via Beach
     "Beach (C)": (2221.469, -292.251, 0.000),  # via Beach
@@ -4409,6 +4425,7 @@ landmarks = {
     "Construction Crane (Vice Beach)": (1482.213, 257.388, 60.127),  # d=0.116 via Vice Beach (A) & Vice Beach (B)
     "Container Crane (9)": (1093.565, -194.862, 68.493),  # d=8.571 via Amphitheater & Vice Beach (B)
     "Continuum on South Beach (S)": (2026.337, -230.291, 168.892),  # d=2.730 via Sidewalk (Jason) (E) & Leonida Keys Postcard (X)
+    "Conveyor near Pile (T)": (-3363.928, 3472.927, 22.376),  # d=0.042 via Ambrosia 02 (Panorama) & Ambrosia Postcard (X)
     "The Crimson (CC)": (-446.286, 1231.821, 121.858),  # d=2.920 via Vice City Postcard & Vice City 03 (Basketball)
     "Cruise Ship (FT)": (253.977, -250.601, 49.118),  # d=8.778 via Vice City 08 (Ferris Wheel) & Skyline
     "Cruise Ship (RT)": (364.488, -249.336, 56.151),  # d=3.773 via Vice City 08 (Ferris Wheel) & Vice City Postcard
@@ -5264,6 +5281,7 @@ landmarks = {
     "Trees D (Grassrivers) (6)": (-4071.615, -4426.176, 8.494),  # d=0.303 via Grassrivers 04 (Police Chase) & Grassrivers Postcard (X)
     "Trees E (Grassrivers) (1)": (-4141.971, -4440.030, 5.988),  # d=0.095 via Grassrivers 04 (Police Chase) & Grassrivers Postcard (X)
     "Trees E (Grassrivers) (2)": (-4153.024, -4445.326, 6.560),  # d=0.778 via Grassrivers 04 (Police Chase) & Grassrivers Postcard (X)
+    "Trees near Wheelabrator": (-2285.195, 2605.207, 39.332),  # d=0.087 via Ambrosia 02 (Panorama) & Ambrosia 04 (Fires)
     "Trésor Tower": (1839.568, 1948.916, 121.484),  # d=2.967 via Beach & Venetian Islands
     "Turkey Point Nuclear Power Station (CNE)": (-1592.810, -3437.069, 37.636),  # d=0.100 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Turkey Point Nuclear Power Station (CNW)": (-1634.663, -3442.865, 37.714),  # d=0.336 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
@@ -5331,6 +5349,8 @@ landmarks = {
     "Waffles Billboard (BW)": (-6158.466, 4516.257, 17.353),  # d=0.167 via Diner (N) & Diner (NE)
     "Waffles Ridge (C)": (-5862.807, 5407.602, 80.937),  # d=4.885 via Diner (N) & Gas Station (Lucia)
     "Waffles Sign (TR)": (-6189.196, 4517.185, 16.067),  # d=0.010 via Diner (W) (A) & Diner (NW)
+    "Warehouse 4 (Ambrosia) (C)": (-2996.133, 3175.629, 33.275),  # d=3.453 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
+    "Warehouse 4 (Ambrosia) (T)": (-3002.807, 3123.593, 34.898),  # d=2.751 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
     "Water Tower (North Port Gellhorn)": (-6340.712, 4540.261, 45.181),  # d=0.184 via Diner (W) (A) & Diner (SW)
     "Water Tower (West Port Gellhorn)": (-6655.143, 3652.918, 37.559),  # d=0.005 via Port Gellhorn Postcard (X) & Port Gellhorn 04 (Delights) (X)
     "Water Tower (West Port Gellhorn) (C)": (-6655.143, 3652.918, 26.508),  # d=0.003 via Port Gellhorn 04 (Delights) (X) & Port Gellhorn Postcard (X)
