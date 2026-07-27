@@ -5131,7 +5131,7 @@ landmarks = {
     "Road F (Ambrosia)": (-1442.715, 3340.804, 25.344),  # via Ambrosia 04 (Fires)
     "Rocks (Grassrivers) (A)": (-3769.632, -4045.575, 0.000),  # via Grassrivers 04 (Police Chase)
     "Rocks (Grassrivers) (B)": (-3775.897, -4050.955, 0.000),  # via Grassrivers 04 (Police Chase)
-    "Round Water Tower": (-2235.897, 484.249, 75.668),  # via Ambrosia 02 (Panorama)
+    "Round Water Tower": (-2235.897, 484.249, 75.668),  # d=1.917 via Ambrosia 02 (Panorama) & Port Vice City (A)
     #"Route 35 (A)": (-1371.098, -667.978, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (B)": (-1399.479, -594.730, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
     #"Route 35 (C)": (-1375.251, -509.460, 15.000),  # via Vintage Vice City Outfits and Hairstyles 04 (Rooftop)
