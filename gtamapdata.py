@@ -786,13 +786,13 @@ pixels = {
     "[L1/15] Hedge (B) (X)": [
         ((294, 505), "Mount Waffles"),
         ((326, 505), "Maple Syrup Mountain"),
-        ((364.5, 511.5), "Mount Mountain (A)"),
-        ((431, 501), "Mount Mountain (B)"),
-        ((475, 495), "Mount Mountain (C)"),
+        ((364.5, 511.5), "Ambrosia Hill (Y)"),
+        ((431, 501), "Ambrosia Hill (Z)"),
+        ((475, 495), "Ambrosia Hill (A)"),
     ],
     "[L1/15] Hedge (C) (X)": [
-        ((627, 485), "Mount Leonida"),
-        ((656, 497), "Mount Leonida (E)"),
+        ((627, 485), "Mount Mountain"),
+        ((656, 497), "Mount Mountain (E)"),
         ((215.5, 509), "Hollywood Water Tower"),
     ],
     "[L1/15] Glitch (A)": [
@@ -4814,7 +4814,7 @@ landmarks = {
     "Miami-Dade County Courthouse": (-728.212, -6.523, 118.240),  # d=3.260 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     ##"Mount Mountain": (-4027.396, 5816.495, 247.552),  # d=0.434 via Diner (N) & Hedge (B) (X)
     ##"Mount Waffles (TW)": (-5243.222, 5685.196, 206.805),  # d=2.889 via Diner (N) & Gas Station (Lucia)
-    "Mount Mountain": (-3992.215, 5808.048, 243.327),  # d=6.201 via Diner (N) & Hedge (B) (X)
+    "Mount Mountain": (-3281.434 ,  6231.413,   307.757),  # d=9.959 via Diner (N) & Hedge (B) (X)
     "Mount Waffles": (-5217.942, 5581.709, 198.855),  # d=2.128 via Diner (N) & Gas Station (Lucia)
     "Murano Grande": (1440.406, -17.845, 139.500),  # d=0.011 via Vice Beach (B) & Port
     "Murano Grande (R3)": (1496.482, -81.920, 96.154),  # d=0.095 via Port Vice City (B) & Port
