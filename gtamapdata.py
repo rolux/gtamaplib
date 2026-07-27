@@ -786,8 +786,9 @@ pixels = {
     "[L1/15] Hedge (B) (X)": [
         ((294, 505), "Mount Waffles"),
         ((326, 505), "Maple Syrup Mountain"),
-        ((431, 501), "Mount Mountain (W)"),
-        ((475, 495), "Mount Mountain"),
+        ((364.5, 511.5), "Mount Mountain (A)"),
+        ((431, 501), "Mount Mountain (B)"),
+        ((475, 495), "Mount Mountain (C)"),
     ],
     "[L1/15] Hedge (C) (X)": [
         ((627, 485), "Mount Leonida"),
