@@ -267,7 +267,7 @@ cameras = {
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2500.000, 6500.000, 200.000), (131.321, 6.027, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3500.000, 5750.000, 120.000), (129.000, 8.000, 1.000), (65.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3000.000, 5750.000, 200.000), (119.000, 9.500, 1.000), (80.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
-    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2000.000, 6500.000, 250.000), (117.500, 8.000, 0.000), (72.500, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2190.000, 6320.000, 187.885), (115.557, 10.200, 0.000), (79.800, 50.377), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-4750.000, 6000.000, 120.000), (156.447, -13.566, 0.000), (60.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
     "[S2/70] Mount Kalaga National Park 06 (River)": None,
     "[S2/71] Vice City Postcard": (None, (400.000, 1860.000, 37.310), (151.654, 3.000, 0.000), (67.500, 47.117), (2458, 1604), "Vice City Postcard [?]"),
@@ -2836,6 +2836,7 @@ pixels = {
         ((3391, 994), "Ambrosia Main St (V)"),
         ((3453, 1084.5), "Hendry County Motorsports Park"),
         ((3533, 831.5), "BB Hill"),
+        ((3840, 1290), "Ambrosia Canal (A)"),
         ((0, 1324.5), "Island LLA (X)"),
         ((0, 1945), "Island LLA (Y)"),
         ((289, 1252), "Island LLB (E)"),
@@ -3077,11 +3078,12 @@ pixels = {
         ((3706, 624), "Unknown Mast (Grassrivers)"),
     ],
     "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": [
-        ((0, 1826), "Canal (A)"),
+        ((0, 1826), "Ambrosia Canal (A)"),
         ((0, 1931), "Ambrosia Road (A)"),
         ((0, 2007), "Kissimmee River (A)"),
         ((0, 2104), "Highway Bridge (A)"),
         ((49, 1938), "Ambrosia Road (B)"),
+        #((70, 1825), "Ambrosia Bridge (3B)"),
         ((94, 1785), "Canal Road (A)"),
         ((135, 2042), "Kissimmee River (B)"),
         #((170, 1600), "3001 Gordon Hwy (Water Tower)"),
@@ -3089,7 +3091,7 @@ pixels = {
         ((310, 1954), "Ambrosia Road (C)"),
         ((405, 1762), "Canal Road (B)"),
         ((424, 1621), "BB Hill"),
-        ((425, 1799), "Canal (B)"),
+        ((425, 1799), "Ambrosia Canal (B)"),
         ((646, 1875), "Hill Road (A)"),
         ((802, 2096), "Bridge"),
         ((812, 1695), "Road (B)"),
@@ -3099,7 +3101,7 @@ pixels = {
         ((1009, 1945), "Highway Bridge (B)"),
         ((1092, 1598.5), "BBB Hill"),
         ((1109, 1764), "Hill Road (B)"),
-        ((1132, 1758), "Canal (C)"),
+        ((1132, 1758), "Ambrosia Canal (C)"),
         ((1213, 1559), "Starlet Highway (A)"),
         ((1236, 1555), "Motel"),
         ((1292, 2160), "Mount Leonida (C)"),
@@ -4268,7 +4270,6 @@ lines = {
 landmarks = {
     "12th St Lifeguard Tower": (2222.684, 1031.395, 6.101),  # d=0.125 via Beach & Vice Beach (A)
     "1800 Club": (-336.786, 1029.407, 161.576),  # d=0.892 via Vice City Postcard & Vice City 03 (Basketball)
-    "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     "Akoya Condominium": (1455.271, 2614.567, 145.644),  # d=4.024 via Venetian Islands & Highway (NE)
     "Alligator A (F)": (-3777.679, -4037.743, 0.000),  # via Grassrivers 04 (Police Chase)
     "Alligator A (R)": (-3779.349, -4039.932, 0.000),  # via Grassrivers 04 (Police Chase)
@@ -4279,6 +4280,7 @@ landmarks = {
     "Ambrosia Airfield (S)": (-3184.090, 2917.590, 14.486),  # via Ambrosia Postcard (X)
     "Ambrosia Bridge (3B)": (-2776.854, 4803.820, 14.486),  # via Ambrosia 02 (Panorama)
     "Ambrosia Bridge (4B)": (-2767.106, 4839.474, 14.486),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Canal (A)": (-2893.008 , 4859.241, 14.486),  # via Ambrosia 02 (Panorama)
     "Ambrosia Hill": (-2281.047, 4222.991, 138.077),  # d=5.149 via Hedge (B) (X) & Explosion
     "Ambrosia Main St (A)": (-2875.508, 4425.312, 19.655),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (B)": (-2864.669, 4389.529, 19.655),  # via Ambrosia 02 (Panorama)
@@ -4291,6 +4293,7 @@ landmarks = {
     "Ambrosia Main St (Y)": (-3014.729, 4390.194, 19.655),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (Z)": (-2908.168, 4452.032, 19.655),  # via Ambrosia 02 (Panorama)
     "Anchor Island (S)": (-2547.975, -5129.234, 0.000),  # via Leonida Keys Postcard (X)
+    "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     ##"Asia Brickell Key": (-119.683, -881.354, 185.477),  # d=1.275 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     #"Asia Brickell Key": (-102.538, -863.761, 184.052),  # d=0.885 via Skyline & Vice Beach (B)
     "Asia Brickell Key": (-129.720, -886.023, 185.475),  # d=0.650 via Vice City Postcard & Vice Beach (B)
