@@ -392,7 +392,7 @@ class Camera:
         t  = -self.z / direction[2]
         return (self.x + t * direction[0], self.y + t * direction[1], 0)
 
-    def open(self, scale=4, ratio=24/9):
+    def open(self, scale=4, ratio=32/9):
         """
         Opens the camera image for rendering
         """
@@ -653,8 +653,10 @@ class Camera:
                 self.render_line(((x - 1, y, z), (x + 1, y, z)), get_color(lm_name), width)
                 self.render_line(((x, y - 1, z), (x, y + 1, z)), get_color(lm_name), width)
                 self.render_line(((x, y, z), (x, y, z + 1)), get_color(lm_name), width)
-        LANDMARK_OBJECTS["Jason"].render_on_camera(self)
-        LANDMARK_OBJECTS["Jason's House"].render_on_camera(self)
+        # LANDMARK_OBJECTS["Jason"].render_on_camera(self)
+        # LANDMARK_OBJECTS["Jason's House"].render_on_camera(self)
+        for name in LANDMARK_OBJECTS:
+            LANDMARK_OBJECTS[name].render_on_camera(self)
         return self
 
     def render_line(self, line, fill=(0, 0, 0), width=1):
@@ -1057,8 +1059,10 @@ class Map:
                 LANDMARK_OBJECTS[nomalized].draw_on_map(self)
             else:
                 self.draw_landmark(lm_name, r=r)
-        LANDMARK_OBJECTS["Jason"].draw_on_map(self)
-        LANDMARK_OBJECTS["Jason's House"].draw_on_map(self)
+        # LANDMARK_OBJECTS["Jason"].draw_on_map(self)
+        # LANDMARK_OBJECTS["Jason's House"].draw_on_map(self)
+        for name in LANDMARK_OBJECTS:
+            LANDMARK_OBJECTS[name].draw_on_map(self)
         return self
 
     def draw_line(self, line, fill=(0, 0, 0), width=1):
@@ -1380,7 +1384,144 @@ class Landmark:
         LANDMARK_OBJECTS[self.name] = self
 
 
+class Mountain(Landmark):
+
+    def __init__(self, name, cam_name, rays, base=20, slope=30, side_slope=60, hl_step=50, color=None):
+        super().__init__(name)
+        self.cam = get_camera(cam_name)
+        self.xyz = self.cam.xyz
+        self.rays = rays
+        self.base = base
+        self.base_xyz = (self.xyz[0], self.xyz[1], self.base)
+        self.slope = slope
+        self.side_slope = side_slope
+        self.hl_step = hl_step
+        if color:
+            self.color = color
+        self._construct()
+
+    def _construct(self):
+
+        self.top_points, self.front_points, self.rear_points = [], [], []
+        for lm_name, distance in self.rays:
+            lm_direction = self.cam.get_landmark_direction(lm_name)
+            if type(distance) is str:
+                other_cam_name = distance
+                point = find_landmark(self.cam.name, other_cam_name, lm_name)[0]
+            else:
+                ray = (self.cam.xyz, lm_direction)
+                b, e = get_angles_from_direction(lm_direction)
+                direction = get_direction_from_angles(b, 0)
+                point = get_point(self.cam.xyz, direction, distance)
+                plane = (point, lm_direction)
+                point = intersect_ray_and_plane(ray, plane)
+            self.top_points.append(point)
+            b, e = get_angles_from_direction(get_direction(point, self.xyz))
+            direction = get_direction_from_angles(b, -self.slope)
+            point = intersect_ray_and_plane((self.top_points[-1], direction), ((0, 0, self.base), (0, 0, 1)))
+            self.front_points.append(point)
+            b, e = get_angles_from_direction(lm_direction)
+            direction = get_direction_from_angles(b, -self.slope)
+            point = intersect_ray_and_plane((self.top_points[-1], direction), ((0, 0, self.base), (0, 0, 1)))
+            self.rear_points.append(point)
+        direction = self.cam.get_landmark_direction(self.rays[0][0])
+        b, e = get_angles_from_direction(direction)
+        direction = get_direction_from_angles(b + 90, -self.side_slope)
+        self.left_point = intersect_ray_and_plane((self.top_points[0], direction), ((0, 0, self.base), (0, 0, 1)))
+        direction = self.cam.get_landmark_direction(self.rays[-1][0])
+        b, e = get_angles_from_direction(direction)
+        direction = get_direction_from_angles(b - 90, -self.side_slope)
+        self.right_point = intersect_ray_and_plane((self.top_points[-1], direction), ((0, 0, self.base), (0, 0, 1)))
+
+        self.hl_lines = {}
+        max_height = int(max(point[2] for point in self.top_points))
+        for h in range(max(self.base, self.hl_step), max_height, self.hl_step):
+            plane = ((0, 0, h), (0, 0, 1))
+            lines, front, rear = [], [], []
+            for top, front_base, rear_base in zip(
+                self.top_points,
+                self.front_points,
+                self.rear_points,
+            ):
+                if h <= top[2]:
+                    front.append(intersect_ray_and_plane((top, get_direction(top, front_base)), plane))
+                    rear.append(intersect_ray_and_plane((top, get_direction(top, rear_base)), plane))
+                else:
+                    front.append(None)
+                    rear.append(None)
+            for i in range(len(self.top_points) - 1):
+                a = self.top_points[i]
+                b = self.top_points[i + 1]
+                ridge_point = None
+                if min(a[2], b[2]) <= h <= max(a[2], b[2]) and a[2] != b[2]:
+                    ridge_point = intersect_ray_and_plane((a, get_direction(a, b)), plane)
+                for points in (front, rear):
+                    if points[i] is not None and points[i + 1] is not None:
+                        lines.append((points[i], points[i + 1]))
+                    elif ridge_point is not None:
+                        active = points[i] if points[i] is not None else points[i + 1]
+                        if active is not None:
+                            lines.append((active, ridge_point))
+            if front[0] is not None:
+                ray = (self.top_points[0], get_direction(self.top_points[0], self.left_point))
+                left = intersect_ray_and_plane(ray, plane)
+                lines.append((front[0], left))
+                lines.append((left, rear[0]))
+            if front[-1] is not None:
+                ray = (self.top_points[-1], get_direction(self.top_points[-1], self.right_point))
+                right = intersect_ray_and_plane(ray, plane)
+                lines.append((front[-1], right))
+                lines.append((right, rear[-1]))
+            self.hl_lines[h] = lines
+
+    def _draw_line(self, m, line, width=1):
+        m.draw_line(line, self._get_color(line), width)
+
+    def _get_color(self, line):
+        if self.color == "rainbow":
+            left, e = get_angles_from_direction(get_direction(self.cam.xyz, self.top_points[0]))
+            right, e = get_angles_from_direction(get_direction(self.cam.xyz, self.top_points[-1]))
+            mid, e = get_angles_from_direction(get_direction(self.cam.xyz, get_midpoint(line)))
+            span = (right - left + 180) % 360 - 180
+            offset = (mid - left + 180) % 360 - 180
+            hue = offset / span * 300
+            return get_rgb(hue)
+        return self.color
+
+    def _render_line(self, cam, line, width=1):
+        cam.render_line(line, self._get_color(line), width)
+
+    def draw_on_map(self, m, width=1):
+        for i in range(len(self.top_points)):
+            self._draw_line(m, (self.top_points[i], self.front_points[i]), width * 2)
+            self._draw_line(m, (self.top_points[i], self.rear_points[i]), width * 2)
+            if i > 0:
+                self._draw_line(m, (self.top_points[i - 1], self.top_points[i]), width * 2)
+        self._draw_line(m, (self.top_points[0], self.left_point), width * 2)
+        self._draw_line(m, (self.top_points[-1], self.right_point), width * 2)
+        for lines in self.hl_lines.values():
+            for line in lines:
+                self._draw_line(m, line, 1)
+        return self
+
+    def render_on_camera(self, cam, width=1):
+        for i in range(len(self.top_points)):
+            self._render_line(cam, (self.top_points[i], self.front_points[i]), width * 2)
+            self._render_line(cam, (self.top_points[i], self.rear_points[i]), width * 2)
+            if i > 0:
+                self._render_line(cam, (self.top_points[i - 1], self.top_points[i]), width * 2)
+            self._render_line(cam, (self.base_xyz, self.front_points[i]), width)
+        self._render_line(cam, (self.top_points[0], self.left_point), width * 2)
+        self._render_line(cam, (self.top_points[-1], self.right_point), width * 2)
+        for lines in self.hl_lines.values():
+            for line in lines:
+                self._render_line(cam, line, 1)
+        return self
+
+
 class AmbrosiaHill(Landmark):
+
+    # FIXME: unused
 
     def __init__(self):
         super().__init__("Ambrosia Hill")
@@ -1395,24 +1536,49 @@ class AmbrosiaHill(Landmark):
         self.xyz = cam.xyz
         self.x, self.y, self.z = self.xyz
         lm_names = [f"Ambrosia Hill ({x})" for x in "ABCDEF"]
-        self.ds = 2100, 1700, 1500, 1400, 1300, 1300
-        self.points = []
+        self.ds = 3100, 2700, 2500, 2400, 2300, 2300
+        self.points, self.front_points, self.rear_points = [], [], []
         for i, lm_name in enumerate(lm_names):
-            ray = (cam.xyz, cam.get_landmark_direction(lm_name))
+            lm_direction = cam.get_landmark_direction(lm_name)
+            ray = (cam.xyz, lm_direction)
             b, e = get_angles_from_direction(ray[1])
             direction = get_direction_from_angles(b, 0)
             point = get_point(cam.xyz, direction, self.ds[i])
             plane = (point, ray[1])
             point = intersect_ray_and_plane(ray, plane)
             self.points.append(point)
+            b, e = get_angles_from_direction(get_direction(point, self.xyz))
+            direction = get_direction_from_angles(b, -30)
+            point = intersect_ray_and_plane((self.points[-1], direction), (self.xyz, (0, 0, 1)))
+            self.front_points.append(point)
+            b, e = get_angles_from_direction(lm_direction)
+            direction = get_direction_from_angles(b, -30)
+            point = intersect_ray_and_plane((self.points[-1], direction), (self.xyz, (0, 0, 1)))
+            self.rear_points.append(point)
 
-    def draw_on_map(self, m, width=1):
+    def _draw_on_map(self, m, width=1):
         for i, point in enumerate(self.points):
             color = self.colors[i]
             m.draw_line((self.xyz, point), color, width)
         return self
 
-    def render_on_camera(self, cam, width=1):
+    def draw_on_map(self, m, width=2):
+        for i in range(len(self.points)):
+            m.draw_line((self.points[i], self.front_points[i]), self.colors[i], width)
+            m.draw_line((self.points[i], self.rear_points[i]), self.colors[i], width)
+            if i > 0:
+                color = tuple([int(v) for v in (np.array(self.colors[i - 1]) + np.array(self.colors[i])) / 2])
+                m.draw_line((self.points[i - 1], self.points[i]), color, width)
+
+    def render_on_camera(self, cam, width=2):
+        for i in range(len(self.points)):
+            cam.render_line((self.points[i], self.front_points[i]), self.colors[i], width)
+            cam.render_line((self.points[i], self.rear_points[i]), self.colors[i], width)
+            if i > 0:
+                color = tuple([int(v) for v in (np.array(self.colors[i - 1]) + np.array(self.colors[i])) / 2])
+                cam.render_line((self.points[i - 1], self.points[i]), color, width)
+
+    def _render_on_camera(self, cam, width=1):
         step = 100
         for i, point in enumerate(self.points):
             color = self.colors[i]
@@ -3631,7 +3797,6 @@ def subsample(image_np, xy):
     ])
 
 
-AH = AmbrosiaHill()
 FS = FourSeasons()
 GHWT = GordonHighwayWaterTower()
 HW = HanksWaffles()
@@ -3644,3 +3809,71 @@ SAS = SonoraAvenueTanks()
 SSB = SunshineSkywayBridge()
 TRWT = TransmitterRoadWaterTower()
 WDNA = WDNAFM()
+
+MTA = Mountain(
+    "Mount Ambrosia",
+    "Ambrosia 01 (Bikers)",
+    (
+        ("Mount Ambrosia (A)", 3200),
+        ("Mount Ambrosia (B)", 3000),
+        ("Mount Ambrosia (C)", 2800),
+        ("Mount Ambrosia (D)", 2600),
+        ("Mount Ambrosia (E)", 2500),
+        ("Mount Ambrosia (F)", 2400),
+        ("Mount Ambrosia (G)", 2400),
+        ("Mount Ambrosia (H)", 2500),
+    ),
+    color="rainbow"
+)
+MTAX = Mountain(
+    "Mount Ambrosia (X)",
+    "Hedge (B) (X)",
+    (
+        ("Mount Ambrosia (X)", 8200),
+        ("Mount Ambrosia (Y)", 8000),
+        ("Mount Ambrosia (Z)", 7800),
+    ),
+)
+MTL = Mountain(
+    "Mount Leonida",
+    "Mount Kalaga National Park 02 (Helicopter) (X)",
+    (
+        ("Mount Leonida (C)", 200),
+        ("Mount Leonida (B)", 300),
+        ("Mount Leonida (A)", 400),
+    ),
+)
+MTM = Mountain(
+    "Mount Mountain",
+    "Diner (N)",
+    (
+        ("Mount Mountain (NW)", 1900),
+        ("Mount Mountain", 2000),
+        ("Mount Mountain (SE)", 2100),
+    ),
+    side_slope=30
+)
+MTW = Mountain(
+    "Mount Waffles",
+    "Diner (N)",
+    (
+        ("Waffles Ridge (C)", 1150),
+        ("Waffles Pass", 1200),
+        ("Mount Waffles (W)", 1300),
+        ("Mount Waffles (TW)", 1450),
+        ("Mount Waffles", "Gas Station (Lucia)"),
+        ("Mount Waffles (TE)", 1450),
+        ("Mount Waffles (E)", 1450),
+    ),
+    color="rainbow"
+)
+WR = Mountain(
+    "Mount Waffles (R)",
+    "Gas Station (Lucia)",
+    (
+        ("Waffles Ridge (W)", 2900),
+        ("Waffles Ridge (C)", 2900),
+        ("Waffles Ridge (E)", 2900),
+    ),
+    side_slope=30,
+)
