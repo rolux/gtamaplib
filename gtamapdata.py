@@ -557,7 +557,9 @@ pixels = {
         ((1194, 16), "Mount Waffles (TE)"),
         ((1430, 60), "Mount Waffles (R)"),
         ((1443, 57.5), "Mount Waffles (E)"),
-        ((1544, 50), "Mount Mountain"),
+        ((1478.5, 66.5), "Mount Mountain (NW)"),
+        ((1543, 52.5), "Mount Mountain"),
+        ((1603, 69), "Mount Mountain (SE)"),
         ((1681, 121), "Waffles Billboard (BW)"),
     ],
     "[L1/4] Diner (NW)": [
@@ -3103,7 +3105,7 @@ pixels = {
         ((903, 1556.5), "Two Tall Trees"),
         ((996, 1734), "Road (A)"),
         ((1009, 1945), "Highway Bridge (B)"),
-        ((1092, 1598.5), "BBB Hill"),
+        ((1092, 1598.5), "BB Ridge (E)"),
         ((1109, 1764), "Hill Road (B)"),
         ((1132, 1758), "Ambrosia Canal (D)"),
         ((1182.5, 1536.5), "Interstate Hill"),
@@ -3115,6 +3117,7 @@ pixels = {
         ((1330.5, 1533.5), "Tree near Port Gellhorn"),
         ((1330, 1534), "Tree near Port Gellhorn"),
         ((1372, 1728), "Hill Road (C)"),
+        ((1382.5, 1595.5), "BB Ridge (W)"),
         ((1395, 1575), "Starlet Highway (A)"),
         ((1410, 1610), "Starlet Highway (B)"),
         ((1480, 1882), "Highway Bridge (C)"),
@@ -3127,7 +3130,7 @@ pixels = {
         ((1713, 1765.5), "Orange Hill"),
         ((1851, 1684), "Canal (D)"),
         ((1901, 1643), "Mount Leonida (B)"),
-        ((1955.5, 1598.5), "Valley Hill"),
+        ((1955.5, 1598.5), "Tabletop Hill"),
         ((2042, 1598), "Mount Ambrosia (1)"),
         ((2147, 1536), "Mount Ambrosia (2)"),
         ((2256.5, 1516), "Mount Ambrosia (3)"),
@@ -5573,7 +5576,7 @@ map_sections = {
     "Port Gellhorn": (-10000, 1000, -4000, 7000),
     "Ambrosia": (-5500, 1000, 0, 7000),
     "Leonard County": (-2000, 2000, 3000, 12000),
-    "Mount Kalaga National Park": (-7000, 4000, -2000, 8000),
+    "Mount Kalaga National Park": (-7000, 4000, -1000, 8000),
 }
 
 
