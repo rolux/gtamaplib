@@ -951,9 +951,9 @@ pixels = {
     ],
     "[L1/26] Loading Zone near Prison (S)": [
         ((494, 335.5), "Red Billboard near Prison (TE)"),
-        ((495, 358), "Red Billboard near Prison (BE)"),
+        ((494.5, 358.5), "Red Billboard near Prison (BE)"),
         ((549, 336.5), "Red Billboard near Prison (TW)"),
-        ((549.5, 357.5), "Red Billboard near Prison (BW)"),
+        ((549.5, 358.5), "Red Billboard near Prison (BW)"),
         ((758, 654), "Player"),
         ((1092.5, 353), "Augusta State Medical Prison South Building (S)"),
         ((1170, 353), "Augusta State Medical Prison South Building (N)"),
