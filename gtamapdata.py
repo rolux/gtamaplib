@@ -3058,7 +3058,7 @@ pixels = {
         ((604.5, 561.5), "Nine at Mary Brickell Village (A)"),
         ((613, 561.5), "Nine at Mary Brickell Village (B)"),
         ((652, 560), "Nine at Mary Brickell Village (E)"),
-        ((754, 577), "Billboard #2 (Route 35) (BN)"),
+        ((754, 576.5), "Billboard #2 (Route 35) (BN)"),
         ((754.5, 564), "Billboard #2 (Route 35) (TN)"),
         ((783.5, 564), "Billboard #2 (Route 35) (TS)"),
         ((783.5, 576.5), "Billboard #2 (Route 35) (BS)"),
