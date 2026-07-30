@@ -529,8 +529,11 @@ pixels = {
     "[L1/4] Diner (NE)": [
         ((12.5, 111.5), "Mount Waffles (W2)"),
         ((24, 141), "536 Richard Jackson Blvd (RSE)"),
+        ((80.5, 89), "Beige Billboard (TW)"),
+        ((92, 152.5), "Beige Billboard (BW)"),
         ((117, 87), "Mount Waffles (TW)"),
         ((192, 84), "Mount Waffles"),
+        ((248, 108), "Beige Billboard (TE)"),
         ((260, 90), "Mount Waffles (TE)"),
         ((256.5, 167.5), "Beige Billboard (BE)"),
         ((335, 184), "Train Tunnel (N)"),
@@ -2668,6 +2671,8 @@ pixels = {
         ((3181, 248), "Seven Mile Bridge (C)"),
     ],
     "[S2/51] Port Gellhorn 01 (Starlet Motel)": [
+        ((121, 613.5), "Billboard near Intersection (TS)"),
+        ((122.5, 784), "Billboard near Intersection (BS)"),
         ((127, 2023.5), "Man near Starlet Motel (B)"),
         ((132, 1798.5), "Man near Starlet Motel (T)"),
         ((354, 773), "Billboard near Intersection (BC)"),
