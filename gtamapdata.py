@@ -2591,7 +2591,7 @@ pixels = {
         ((2363, 702.5), "Blue Billboard (Key Lento)"),
         ((2365, 797), "Seven Mile Bridge (2B)"),
         ((2379, 704), "Blue Billboard (Key Lento) (TS)"),
-        ((2379, 717), "Blue Billboard (Key Lento) (BS)"),
+        ((2379, 716), "Blue Billboard (Key Lento) (BS)"),
         ((2379, 791), "Seven Mile Bridge (1B)"),
         ((2380, 833), "Old Seven Mile Bridge (C)"),
         ((2383.5, 770), "Seven Mile Bridge (E)"),
