@@ -2649,9 +2649,9 @@ pixels = {
         ((2787, 652), "Pin D02R"),
     ],
     "[S2/47] Leonida Keys 02 (Sidewalk)": [
-        ((683, 515.5), "Squalo Billboard (BS)"),
+        ((683, 538.5), "Squalo Billboard (BS)"),
         ((684, 302), "Squalo Billboard (TS)"),
-        ((1214, 523), "Squalo Billboard (BN)"),
+        ((1213.5, 548.5), "Squalo Billboard (BN)"),
         ((1216, 316), "Squalo Billboard (TN)"),
     ],
     "[S2/50] Leonida Keys 05 (Boats)": [
