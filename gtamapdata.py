@@ -1553,9 +1553,9 @@ pixels = {
     ],
     "[T1/15] Handshake": [
         ((802, 24), "Billboard (I-97) (TW)"),
-        ((803, 298), "Billboard (I-97) (BW)"),
+        ((800.5, 345.5), "Billboard (I-97) (BW)"),
         ((1125.5, 206.5), "Billboard (I-97) (TE)"),
-        ((1126, 434), "Billboard (I-97) (BE)"),
+        ((1124.5, 470), "Billboard (I-97) (BE)"),
     ],
     "[T1/16] Venetian Islands": [
         ((133.5, 219), "Akoya Condominium"),
