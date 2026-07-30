@@ -2026,7 +2026,7 @@ pixels = {
     "[T2/8] Door (Keys)": [
         ((1975.5, 502.5), "White Billboard (Hamlet) (TW)"),
         ((1975.5, 511), "White Billboard (Hamlet) (BW)"),
-        ((1988, 501.5), "White Billboard (Hamlet)")
+        ((1988, 501.5), "White Billboard (Hamlet)"),
         ((1997.5, 502), "White Billboard (Hamlet) (TE)"),
         ((1997.5, 511), "White Billboard (Hamlet) (BE)"),
         ((2046.5, 459.5), "Tall Mast #1 (Hamlet)"),
