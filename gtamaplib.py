@@ -1386,7 +1386,7 @@ class Landmark:
 
 class Mountain(Landmark):
 
-    def __init__(self, name, cam_name, rays, base=20, slope=30, side_slope=60, hl_step=50, color=None):
+    def __init__(self, name, cam_name, rays, base=20, slope=30, side_slope=30, hl_step=50, color=None):
         super().__init__(name)
         self.cam = get_camera(cam_name)
         self.xyz = self.cam.xyz
@@ -3810,20 +3810,45 @@ SSB = SunshineSkywayBridge()
 TRWT = TransmitterRoadWaterTower()
 WDNA = WDNAFM()
 
+EH = Mountain(
+    "Easy Hill",
+    "Ambrosia 04 (Fires)",
+    [
+        ("Easy Hill (S)", 4800),
+        ("Easy Hill", 4700),
+        ("Easy Hill (N)", 4800),
+    ],
+    slope=15,
+    side_slope=15,
+)
+GH = Mountain(
+    "Gellhorn Hills",
+    "Ambrosia 04 (Fires)",
+    [
+        ("Two Tall Trees", 4400),
+        ("Gellhorn Bluff", 4450),
+        ("Interstate Hill", 4400),
+        ("Starlet Pass", 4350),
+        ("Starlet Hill", 4300),
+        ("Tree near Port Gellhorn", 4200),
+    ],
+)
+d = 0
 MTA = Mountain(
     "Mount Ambrosia",
     "Ambrosia 01 (Bikers)",
     (
-        ("Mount Ambrosia (A)", 3200),
-        ("Mount Ambrosia (B)", 3000),
-        ("Mount Ambrosia (C)", 2800),
-        ("Mount Ambrosia (D)", 2600),
-        ("Mount Ambrosia (E)", 2500),
-        ("Mount Ambrosia (F)", 2400),
-        ("Mount Ambrosia (G)", 2400),
-        ("Mount Ambrosia (H)", 2500),
+        ("Mount Ambrosia (A)", 3200 - d),
+        ("Mount Ambrosia (B)", 3000 - d),
+        ("Mount Ambrosia (C)", 2800 - d),
+        ("Mount Ambrosia (D)", 2600 - d),
+        ("Mount Ambrosia (E)", 2500 - d),
+        ("Mount Ambrosia (F)", 2400 - d),
+        ("Mount Ambrosia (G)", 2400 - d),
+        ("Mount Ambrosia (H)", 2500 - d),
     ),
-    color="rainbow"
+    side_slope=60,
+    color="rainbow",
 )
 MTAX = Mountain(
     "Mount Ambrosia (X)",
@@ -3833,15 +3858,17 @@ MTAX = Mountain(
         ("Mount Ambrosia (Y)", 8000),
         ("Mount Ambrosia (Z)", 7800),
     ),
+    side_slope=60,
 )
 MTL = Mountain(
     "Mount Leonida",
     "Mount Kalaga National Park 02 (Helicopter) (X)",
     (
-        ("Mount Leonida (C)", 200),
-        ("Mount Leonida (B)", 300),
-        ("Mount Leonida (A)", 400),
+        ("Mount Leonida (C)", 400 * 3),
+        ("Mount Leonida (B)", 300 * 3),
+        ("Mount Leonida (A)", 250 * 3),
     ),
+    side_slope=60,
 )
 MTM = Mountain(
     "Mount Mountain",
@@ -3851,7 +3878,7 @@ MTM = Mountain(
         ("Mount Mountain", 2000),
         ("Mount Mountain (SE)", 2100),
     ),
-    side_slope=30
+    side_slope=60,
 )
 MTW = Mountain(
     "Mount Waffles",
@@ -3865,7 +3892,8 @@ MTW = Mountain(
         ("Mount Waffles (TE)", 1450),
         ("Mount Waffles (E)", 1450),
     ),
-    color="rainbow"
+    side_slope=60,
+    color="rainbow",
 )
 WR = Mountain(
     "Mount Waffles (R)",
@@ -3874,6 +3902,5 @@ WR = Mountain(
         ("Waffles Ridge (W)", 2900),
         ("Waffles Ridge (C)", 2900),
         ("Waffles Ridge (E)", 2900),
-    ),
-    side_slope=30,
+    )
 )
