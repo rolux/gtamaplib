@@ -807,11 +807,13 @@ pixels = {
     "[L1/15] Glitch (A)": [
         ((40.1, 224), "Unknown Structure"),
         ((90, 216), "US Sugar Mill (Factory)"),
-        ((207.5, 134.5), "112 NE 41st St (SW)"),
-        ((243, 121.5), "112 NE 41st St"),
+        ((164, 222.5), "Lake Leonida (SW)"),
+        ((207.5, 134.5), "123 NE 36th St (SW)"),
+        ((243, 121.5), "123 NE 36th St"),
         ((559, 174), "Park (W)"),
         ((577, 174), "Park (E)"),
         ((627, 180), "Golf Course (W)"),
+        ((645, 219), "Lake Leonida (NE)"),
         ((784, 150), "Indian Creek Country Club (TW)"),
         ((798, 156), "Indian Creek Country Club (W)"),
         ((801, 150), "Indian Creek Country Club (TE)"),
@@ -971,15 +973,15 @@ pixels = {
         ((927, 233), "3001 Gordon Hwy (Water Tower)"),
     ],
     "[L1/27] Highway (N)": [
-        ((1128, 356.5), "112 NE 41st St"),
+        ((1128, 356.5), "123 NE 36th St"),
     ],
     "[L1/27] Highway (NE)": [
         ((1139, 162.5), "City View Parking Garage (S)"),
-        ((1156, 155), "112 NE 41st St (NW)"),
+        ((1156, 155), "123 NE 36th St (NW)"),
         ((1189, 164), "City View Parking Garage (SE)"),
-        ((1219, 125), "112 NE 41st St"),
-        ((1239, 151), "112 NE 41st St (SW)"),
-        ((1280, 152), "112 NE 41st St (SE)"),
+        ((1219, 125), "123 NE 36th St"),
+        ((1239, 151), "123 NE 36th St (SW)"),
+        ((1280, 152), "123 NE 36th St (SE)"),
         ((1291, 199), "Water Tower (Leonard County)"),
         ((1554, 156), "The Ritz-Carlton Bal Harbour"),
         ((1685, 125), "Akoya Condominium"),
@@ -1143,8 +1145,8 @@ pixels = {
     "[L1/42] Tennis Court (NE)": [
         ((1336, 262), "Unknown Building (Leonard County) (TW)"),
         ((1403.5, 271), "Unknown Building (Leonard County) (E)"),
-        ((1412, 248), "112 NE 41st St (NW)"),
-        ((1493, 245), "112 NE 41st St (SE)"),
+        ((1412, 248), "123 NE 36th St (NW)"),
+        ((1493, 245), "123 NE 36th St (SE)"),
     ],
     "[L1/42] Tennis Court (SE)": [
         ((759.25, 91.75), "1000 Venetian Way (SW)"),
@@ -1549,7 +1551,7 @@ pixels = {
     "[T1/13] Wynwood": [
         ((1488, 1042), "City View Parking Garage (S)"),
         ((1652, 1051), "City View Parking Garage (SE)"),
-        ((1738, 832), "112 NE 41st St (CC)"),
+        ((1738, 832), "123 NE 36th St (CC)"),
     ],
     "[T1/15] Handshake": [
         ((802, 24), "Billboard (I-97) (TW)"),
@@ -1855,7 +1857,7 @@ pixels = {
         ((1966, 82), "Council Towers North (SW)"),
     ],
     "[T1/29] Gas Station (Chase) (SE)": [
-        ((1025, 1197.5), "112 NE 41st St"),
+        ((1025, 1197.5), "123 NE 36th St"),
         # ((2892, 935), "Gas Station (Leonard County) (NW)"),
     ],
     "[T1/29] Gas Station (Chase) (S)": [
@@ -3164,6 +3166,7 @@ pixels = {
         ((94, 1785), "Canal Road (A)"),
         ((135, 2042), "Kissimmee River (B)"),
         ((170, 1600), "3400 Transmitter Rd"),
+        ((171, 1615), "3400 Transmitter Rd (B)"),
         ((310, 1954), "Ambrosia Road (C)"),
         ((405, 1762), "Canal Road (B)"),
         ((424, 1620.5), "BB Hill"),
@@ -3177,6 +3180,7 @@ pixels = {
         ((972.5, 1836), "Billboard near Lake Leonida (BS)"),
         ((974, 1808.5), "Billboard near Lake Leonida (TS)"),
         ((996, 1734), "Road (A)"),
+        #((1008, 1552), "Interstate Hill"),
         ((1009, 1945), "Highway Bridge (B)"),
         ((1026, 1841), "Billboard near Lake Leonida (BN)"),
         ((1027, 1814.5), "Billboard near Lake Leonida (TN)"),
@@ -3185,7 +3189,7 @@ pixels = {
         ((1132, 1758), "Ambrosia Canal (D)"),
         ((1182.5, 1536.5), "Interstate Hill"),
         ((1213, 1559), "Starlet Highway (A)"),
-        ((1230, 1560), "Motel"),
+        ((1230, 1560), "Starlet Motel (RE)"),
         ((1257.5, 1535.5), "Starlet Hill"),
         ((1282, 1728), "Red Hill"),
         ((1292, 2160), "Mount Leonida (X)"),
@@ -5519,10 +5523,10 @@ landmarks = {
     "Golf Course (W)": (446.266, 2396.007, 0.000),  # via Glitch (A)
     "Lake (E)": (702.162, 2533.793, 0.000),  # via Glitch (A)
     "Lake (W)": (662.681, 2512.535, 0.000),  # via Glitch (A)
-    "112 NE 41st St": (32.776, 2228.133, 65.796),  # d=0.604 via Glitch (A) & Highway (NE)
-    "112 NE 41st St (NW)": (16.475, 2264.925, 49.876),  # d=0.342 via Highway (NE) & Tennis Court (NE)
-    "112 NE 41st St (SE)": (44.154, 2188.729, 48.986),  # d=0.451 via Highway (NE) & Tennis Court (NE)
-    "112 NE 41st St (SW)": (16.674, 2195.583, 49.590),  # d=0.583 via Glitch (A) & Highway (NE)
+    "123 NE 36th St": (32.776, 2228.133, 65.796),  # d=0.604 via Glitch (A) & Highway (NE)
+    "123 NE 36th St (NW)": (16.475, 2264.925, 49.876),  # d=0.342 via Highway (NE) & Tennis Court (NE)
+    "123 NE 36th St (SE)": (44.154, 2188.729, 48.986),  # d=0.451 via Highway (NE) & Tennis Court (NE)
+    "123 NE 36th St (SW)": (16.674, 2195.583, 49.590),  # d=0.583 via Glitch (A) & Highway (NE)
     "Park (E)": (497.202, 2273.076, 0.000),  # via Glitch (A)
     "Park (W)": (481.392, 2264.564, 0.000),  # via Glitch (A)
 
