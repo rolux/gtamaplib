@@ -161,7 +161,7 @@ cameras = {
     "[T1/34] Neighborhood Watch": None,
     "[T1/35] Hillclimb": None,
     #"[T1/36] Waning Sands (A)": (None, (-1000.000, 3500.000, 20.000), (270.000, -4.500, -1.800), (58.000, None), (3840, 2160), "Trailer 1 [1815]"),
-    "[T1/36] Waning Sands (A) (X)": (None, (-1250.000, 3750.000, 25.000), (282.000, -3.800, -2.000), (60.000, None), (3840, 2160), "Trailer 1 [1815]"),
+    "[T1/36] Waning Sands (A) (X)": (None, (-1250.000, 3750.000, 25.000), (290.000, -3.800, -2.000), (60.000, None), (3840, 2160), "Trailer 1 [1815]"),
     "[T1/36] Waning Sands (B)": (None, (-1235.000, 3753.000, 25.000), (330.000, 0.000, 0.000), (58.000, None), (3840, 2160), "Trailer 1 [1847]"),
     "[T1/36] Waning Sands (C)": (None, (-1220.000, 3756.000, 25.000), (345.000, 6.000, 1.000), (58.000, None), (3840, 2160), "Trailer 1 [1876]"),
     "[T1/37] Car (Lucia)": None,
@@ -810,16 +810,21 @@ pixels = {
         ((164, 222.5), "Lake Leonida (SW)"),
         ((207.5, 134.5), "123 NE 36th St (SW)"),
         ((243, 121.5), "123 NE 36th St"),
+        ((383, 183.5), "North Vice City Coast (A)"),
+        ((423, 188), "North Vice City Coast (B)"),
         ((559, 174), "Park (W)"),
+        ((565, 190.5), "North Vice City Coast (C)"),
         ((577, 174), "Park (E)"),
         ((627, 180), "Golf Course (W)"),
         ((645, 219), "Lake Leonida (NE)"),
+        ((779, 194.5), "North Vice City Coast (D)"),
         ((784, 150), "Indian Creek Country Club (TW)"),
         ((798, 156), "Indian Creek Country Club (W)"),
         ((801, 150), "Indian Creek Country Club (TE)"),
         ((849, 180), "Lake (W)"),
         ((844, 156), "Indian Creek Country Club (E)"),
         ((889.5, 180), "Lake (E)"),
+        ((942, 196.5), "North Vice City Coast (E)"),
         ((984, 152), "25 Indian Creek Island Rd (W)"),
         ((990, 180), "Golf Course (E)"),
         ((1017, 153), "25 Indian Creek Island Rd (E)"),
@@ -1861,7 +1866,9 @@ pixels = {
         # ((2892, 935), "Gas Station (Leonard County) (NW)"),
     ],
     "[T1/29] Gas Station (Chase) (S)": [
+        ((841, 1049.5), "Gas Station (Leonard County) (NE)"),
         ((2047, 993), "Gas Station (Leonard County) (NW)"),
+        ((2290.5, 1081), "Gas Station (Leonard County) (SW)"),
         ((2340, 1143.5), "The Grand (E)"),
         ((2394, 1142), "The Grand"),
         ((2494, 1052), "Quantum on the Bay Condominium (S) (NE)"),
@@ -4598,6 +4605,9 @@ landmarks = {
     "Four Seasons Hotel Miami (SW)": (-863.612, -1299.367, 253.608),  # Rooftop (SW)
     "Four Seasons Hotel Miami (W)": (-817.997, -1316.422, 258.306),  # Penthouse (SW)
     "105 Front St (S)": (-2828.255, -6432.681, 22.893),  # d=0.101 via Jason Duval 03 (Boat) & Leonida Keys Postcard (X)
+    "Gas Station (Leonard County) (NE)": (-671.074, 2823.199, 15.429),  # via Gas Station (Chase) (S)
+    "Gas Station (Leonard County) (NW)": (-694.546, 2822.658, 15.429),  # via Gas Station (Chase) (S)
+    "Gas Station (Leonard County) (SW)": (-694.652, 2807.964, 15.429),  # via Gas Station (Chase) (S)
     "The Gates Hotel South Beach (NW)": (1863.970, 1612.189, 48.177),  # d=0.507 via Venetian Islands & Vice City 03 (Basketball)
     "3001 Gordon Hwy (Water Tower)": (-5114.234, 1574.952, 93.853),  # d=0.000 via Loading Zone near Prison (S) & Ambrosia 02 (Panorama)
     "The Grand (E)": (-230.547, 956.968, 176.363),  # d=0.371 via Skyline & Vice Beach (B)
@@ -5527,6 +5537,11 @@ landmarks = {
     "123 NE 36th St (NW)": (16.475, 2264.925, 49.876),  # d=0.342 via Highway (NE) & Tennis Court (NE)
     "123 NE 36th St (SE)": (44.154, 2188.729, 48.986),  # d=0.451 via Highway (NE) & Tennis Court (NE)
     "123 NE 36th St (SW)": (16.674, 2195.583, 49.590),  # d=0.583 via Glitch (A) & Highway (NE)
+    "North Vice City Coast (A)": (126.499, 2327.843, 0.000),  # via Glitch (A)
+    "North Vice City Coast (B)": (48.802, 2442.693, 0.000),  # via Glitch (A)
+    "North Vice City Coast (C)": (143.349, 2594.463, 0.000),  # via Glitch (A)
+    "North Vice City Coast (D)": (301.620, 2867.219, 0.000),  # via Glitch (A)
+    "North Vice City Coast (E)": (471.445, 3067.192, 0.000),  # via Glitch (A)
     "Park (E)": (497.202, 2273.076, 0.000),  # via Glitch (A)
     "Park (W)": (481.392, 2264.564, 0.000),  # via Glitch (A)
 
