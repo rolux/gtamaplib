@@ -1386,7 +1386,7 @@ class Landmark:
 
 class Mountain(Landmark):
 
-    def __init__(self, name, cam_name, rays, base=20, slope=30, side_slope=30, hl_step=50, color=None):
+    def __init__(self, name, cam_name, rays, base=25, slope=30, side_slope=30, hl_step=50, color=None):
         super().__init__(name)
         self.cam = get_camera(cam_name)
         self.xyz = self.cam.xyz
@@ -1519,89 +1519,48 @@ class Mountain(Landmark):
         return self
 
 
-class AmbrosiaHill(Landmark):
-
-    # FIXME: unused
-
-    def __init__(self):
-        super().__init__("Ambrosia Hill")
-        self.colors = [
-            (255, 0, 0), (255, 255, 0), (0, 255, 0),
-            (0, 255, 255), (0, 0, 255), (255, 0, 255),
-        ]
-        self._construct()
-
-    def _construct(self):
-        cam = get_camera("Ambrosia 01 (Bikers)")
-        self.xyz = cam.xyz
-        self.x, self.y, self.z = self.xyz
-        lm_names = [f"Ambrosia Hill ({x})" for x in "ABCDEF"]
-        self.ds = 3100, 2700, 2500, 2400, 2300, 2300
-        self.points, self.front_points, self.rear_points = [], [], []
-        for i, lm_name in enumerate(lm_names):
-            lm_direction = cam.get_landmark_direction(lm_name)
-            ray = (cam.xyz, lm_direction)
-            b, e = get_angles_from_direction(ray[1])
-            direction = get_direction_from_angles(b, 0)
-            point = get_point(cam.xyz, direction, self.ds[i])
-            plane = (point, ray[1])
-            point = intersect_ray_and_plane(ray, plane)
-            self.points.append(point)
-            b, e = get_angles_from_direction(get_direction(point, self.xyz))
-            direction = get_direction_from_angles(b, -30)
-            point = intersect_ray_and_plane((self.points[-1], direction), (self.xyz, (0, 0, 1)))
-            self.front_points.append(point)
-            b, e = get_angles_from_direction(lm_direction)
-            direction = get_direction_from_angles(b, -30)
-            point = intersect_ray_and_plane((self.points[-1], direction), (self.xyz, (0, 0, 1)))
-            self.rear_points.append(point)
-
-    def _draw_on_map(self, m, width=1):
-        for i, point in enumerate(self.points):
-            color = self.colors[i]
-            m.draw_line((self.xyz, point), color, width)
-        return self
+class Billboards(Landmark):
+    # coordinates via gtamaplib-vs's billboard.py
+    def __init__(self, billboards=[
+        ("Diner (NE)", "Beige Billboard", ((-6105.852, 4614.176, 32.246), (-6093.175, 4608.234, 32.246), (-6093.175, 4608.234, 26.246), (-6105.852, 4614.176, 26.246))),
+        ("Grassrivers 02 (Watson Bay)", "Billboard #1 (Route 35)", ((-3401.833, -2630.425, 50.625), (-3389.093, -2636.229, 50.625), (-3389.093, -2636.229, 44.625), (-3401.833, -2630.425, 44.625))),
+        ("Waning Sands (A) (X)", "Billboard #1 (Waning Sands)", ((-739.163, 3813.398, 35.783), (-742.111, 3799.712, 35.783), (-742.111, 3799.712, 29.783), (-739.163, 3813.398, 29.783))),
+        ("Grassrivers 02 (Watson Bay)", "Billboard #2 (Route 35)", ((-3475.590, -2423.781, 63.731), (-3473.853, -2437.673, 63.731), (-3473.853, -2437.673, 57.731), (-3475.590, -2423.781, 57.731))),
+        ("Grassrivers 02 (Watson Bay)", "Billboard #3 (Route 35)", ((-3607.744, -2147.508, 48.341), (-3616.397, -2158.514, 48.341), (-3616.397, -2158.514, 42.341), (-3607.744, -2147.508, 42.341))),
+        ("Handshake", "Billboard (I-97)", ((-719.085, 1503.207, 25.607), (-710.053, 1492.511, 25.607), (-710.053, 1492.511, 19.607), (-719.085, 1503.207, 19.607))),
+        ("Port Gellhorn 01 (Starlet Motel)", "Billboard near Intersection", ((-5293.968, 3381.512, 94.599), (-5281.173, 3375.832, 94.599), (-5281.173, 3375.832, 88.599), (-5293.968, 3381.512, 88.599))),
+        ("Mount Kalaga National Park 02 (Helicopter) (X)", "Billboard near Lake Leonida", ((-2579.913, 5915.999, 118.667), (-2577.944, 5902.139, 118.667), (-2577.944, 5902.139, 112.667), (-2579.913, 5915.999, 112.667))),
+        ("Ocean near Keys (N)", "Blue Billboard (Key Lento)", ((-3440.989, -6727.761, 25.735), (-3432.301, -6738.739, 25.735), (-3432.301, -6738.739, 19.735), (-3440.989, -6727.761, 19.735))),
+        ("Leonida Keys 01 (Airplane) (X)", "Blue Billboard (Key Lento)", ((-3364.417, -6687.746, 19.735), (-3355.478, -6698.520, 19.735), (-3355.478, -6698.520, 13.735), (-3364.417, -6687.746, 13.735))),
+        ("Leonida Keys 05 (Boats)", "Blue Billboard (Key Lento)", ((-3442.354, -6755.368, 24.744), (-3435.659, -6767.663, 24.744), (-3435.659, -6767.663, 18.744), (-3442.354, -6755.368, 18.744))),
+        ("Loading Zone near Prison (S)", "Red Billboard near Prison", ((-4827.720, 1550.276, 36.849), (-4815.248, 1543.918, 36.849), (-4815.248, 1543.918, 30.849), (-4827.720, 1550.276, 30.849))),
+        ("Loading Zone near Prison (N)", "Red Billboard near Warehouse", ((-4826.820, 1999.983, 33.949), (-4813.156, 2003.032, 33.949), (-4813.156, 2003.032, 27.949), (-4826.820, 1999.983, 27.949))),
+        ("Key Lento", "Squalo Billboard", ((-3009.553, -6424.789, 27.187), (-2996.993, -6430.973, 27.187), (-2996.993, -6430.973, 21.187), (-3009.553, -6424.789, 21.187))),
+        ("Leonida Keys 02 (Sidewalk)", "Squalo Billboard", ((-3035.647, -6454.200, 25.961), (-3029.172, -6466.613, 25.961), (-3029.172, -6466.613, 19.961), (-3035.647, -6454.200, 19.961))),
+        ("Leonida Keys Postcard (X)", "Squalo Billboard", ((-3025.876, -6451.122, 24.329), (-3019.046, -6463.343, 24.329), (-3019.046, -6463.343, 18.329), (-3025.876, -6451.122, 18.329))),
+        ("Interchange", "Tall Billboard near Interchange", ((-1122.049, 461.410, 52.873), (-1113.848, 450.063, 52.873), (-1113.848, 450.063, 46.873), (-1122.049, 461.410, 46.873))),
+        ("Explosion", "Tall Billboard near Interchange", ((-1127.609, 403.959, 47.179), (-1122.374, 390.974, 47.179), (-1122.374, 390.974, 41.179), (-1127.609, 403.959, 41.179))),
+        ("Police Chase (A)", "White Billboard (Hamlet)", ((-2617.224, -3793.824, 34.326), (-2603.278, -3795.043, 34.326), (-2603.278, -3795.043, 28.326), (-2617.224, -3793.824, 28.326))),
+        ("Door (Keys)", "White Billboard (Hamlet)", ((-2624.996, -3775.908, 36.352), (-2611.110, -3774.125, 36.352), (-2611.110, -3774.125, 30.352), (-2624.996, -3775.908, 30.352))),
+    ]):
+        super().__init__("Billboards")
+        self.billboards = billboards
 
     def draw_on_map(self, m, width=2):
-        for i in range(len(self.points)):
-            m.draw_line((self.points[i], self.front_points[i]), self.colors[i], width)
-            m.draw_line((self.points[i], self.rear_points[i]), self.colors[i], width)
-            if i > 0:
-                color = tuple([int(v) for v in (np.array(self.colors[i - 1]) + np.array(self.colors[i])) / 2])
-                m.draw_line((self.points[i - 1], self.points[i]), color, width)
+        for cam_name, lm_name, (t0, t1, b1, b0) in self.billboards:
+            color = get_color(lm_name)
+            m.draw_line((t0, t1), color, width)
+        return self
 
-    def render_on_camera(self, cam, width=2):
-        for i in range(len(self.points)):
-            cam.render_line((self.points[i], self.front_points[i]), self.colors[i], width)
-            cam.render_line((self.points[i], self.rear_points[i]), self.colors[i], width)
-            if i > 0:
-                color = tuple([int(v) for v in (np.array(self.colors[i - 1]) + np.array(self.colors[i])) / 2])
-                cam.render_line((self.points[i - 1], self.points[i]), color, width)
-
-    def _render_on_camera(self, cam, width=1):
-        step = 100
-        for i, point in enumerate(self.points):
-            color = self.colors[i]
-            base_point = (point[0], point[1], self.z)
-            # may fail for certain cameras
-            # cam.render_line((self.xyz, base_point), color, width)
-            # cam.render_line((self.xyz, point), color, width)
-            prev_top_point = self.xyz
-            prev_base_point = self.xyz
-            n = int(self.ds[i] / step)
-            for j in range(1, n + 1):
-                t  = j / n
-                top_point = np.array(self.xyz) * (1 - t) + point * t
-                base_point = (top_point[0], top_point[1], self.z)
-                cam.render_line((prev_top_point, top_point), color, width)
-                cam.render_line((prev_base_point, base_point), color, width)
-                cam.render_line((base_point, top_point), color, width * (2 if j % 5 == 0 else 1))
-                prev_top_point=top_point
-                prev_base_point=base_point
-        for i in range(1, len(self.points)):
-            color = tuple(int(v) for v in (np.array(self.colors[i - 1]) + np.array(self.colors[i])) / 2)
-            cam.render_line((self.points[i - 1], self.points[i]), color, width)
-
+    def render_on_camera(self, cam, width=1):
+        for cam_name, lm_name, (t0, t1, b1, b0) in self.billboards:
+            color = get_color(lm_name)
+            cam.render_line((t0, t1), color, width)
+            cam.render_line((t1, b1), color, width)
+            cam.render_line((b1, b0), color, width)
+            cam.render_line((b0, t0), color, width)
+            cam.render_line((t0, b1), color, width)
+            cam.render_line((t1, b0), color, width)
         return self
 
 
@@ -3797,6 +3756,7 @@ def subsample(image_np, xy):
     ])
 
 
+BB = Billboards()
 FS = FourSeasons()
 GHWT = GordonHighwayWaterTower()
 HW = HanksWaffles()
@@ -3814,40 +3774,40 @@ EH = Mountain(
     "Easy Hill",
     "Ambrosia 04 (Fires)",
     [
-        ("Easy Hill (S)", 4800),
-        ("Easy Hill", 4700),
-        ("Easy Hill (N)", 4800),
+        ("Easy Hill (S)", 4450),
+        ("Easy Hill", 4500),
+        ("Easy Hill (N)", 4600),
     ],
     slope=15,
     side_slope=15,
+    color=(191, 95, 0),
 )
 GH = Mountain(
     "Gellhorn Hills",
     "Ambrosia 04 (Fires)",
     [
-        ("Two Tall Trees", 4400),
-        ("Gellhorn Bluff", 4450),
-        ("Interstate Hill", 4400),
-        ("Starlet Pass", 4350),
-        ("Starlet Hill", 4300),
-        ("Tree near Port Gellhorn", 4200),
+        ("Two Tall Trees", 4250),
+        ("Gellhorn Bluff", 4150),
+        ("Interstate Hill", 4150),
+        ("Starlet Pass", 4200),
+        ("Starlet Hill", 4250),
+        ("Tree near Port Gellhorn", 4250),
     ],
 )
-d = 0
 MTA = Mountain(
     "Mount Ambrosia",
     "Ambrosia 01 (Bikers)",
     (
-        ("Mount Ambrosia (A)", 3200 - d),
-        ("Mount Ambrosia (B)", 3000 - d),
-        ("Mount Ambrosia (C)", 2800 - d),
-        ("Mount Ambrosia (D)", 2600 - d),
-        ("Mount Ambrosia (E)", 2500 - d),
-        ("Mount Ambrosia (F)", 2400 - d),
-        ("Mount Ambrosia (G)", 2400 - d),
-        ("Mount Ambrosia (H)", 2500 - d),
+        ("Mount Ambrosia (A)", 3200),
+        ("Mount Ambrosia (B)", 3000),
+        ("Mount Ambrosia (C)", 2800),
+        ("Mount Ambrosia (D)", 2600),
+        ("Mount Ambrosia (E)", 2500),
+        ("Mount Ambrosia (F)", 2400),
+        ("Mount Ambrosia (G)", 2400),
+        ("Mount Ambrosia (H)", 2500),
     ),
-    side_slope=60,
+    side_slope=45,
     color="rainbow",
 )
 MTAX = Mountain(
@@ -3858,17 +3818,16 @@ MTAX = Mountain(
         ("Mount Ambrosia (Y)", 8000),
         ("Mount Ambrosia (Z)", 7800),
     ),
-    side_slope=60,
+    side_slope=45,
 )
 MTL = Mountain(
     "Mount Leonida",
     "Mount Kalaga National Park 02 (Helicopter) (X)",
     (
-        ("Mount Leonida (C)", 400 * 3),
-        ("Mount Leonida (B)", 300 * 3),
-        ("Mount Leonida (A)", 250 * 3),
+        ("Mount Leonida (C)", 450),
+        ("Mount Leonida (B)", 350),
+        ("Mount Leonida (A)", 300),
     ),
-    side_slope=60,
 )
 MTM = Mountain(
     "Mount Mountain",
@@ -3893,7 +3852,6 @@ MTW = Mountain(
         ("Mount Waffles (E)", 1450),
     ),
     side_slope=60,
-    color="rainbow",
 )
 WR = Mountain(
     "Mount Waffles (R)",
