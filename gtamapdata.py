@@ -271,7 +271,9 @@ cameras = {
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-3000.000, 5750.000, 200.000), (119.000, 9.500, 1.000), (80.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2190.000, 6320.000, 187.885), (115.557, 10.200, 0.000), (79.800, 50.377), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2400.000, 6300.000, 200.000), (118.000, 10.000, 0.000), (80.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
-    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2000.000, 6750.000, 180.000), (122.000, 8.200, 0.000), (65.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2100.000, 6800.000, 225.000), (123.500, 7.600, 0.000), (65.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    "[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2000.000, 6750.000, 200.000), (122.100, 7.900, 0.000), (65.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
+    #"[S2/66] Mount Kalaga National Park 02 (Helicopter) (X)": (None, (-2000.000, 7000.000, 250.000), (124.000, 7.200, 0.000), (65.000, None), (3840, 2160), "Mount Kalaga National Park 02 [1]"),
     "[S2/68] Mount Kalaga National Park 04 (Mountain Pass) (X)": (None, (-4500.000, 6000.000, 120.000), (146.984, -16.216, 0.00), (70.000, None), (3840, 2160), "Mount Kalaga National Park 04 [1]"),
     "[S2/70] Mount Kalaga National Park 06 (River)": None,
     "[S2/71] Vice City Postcard": (None, (400.000, 1860.000, 37.310), (151.654, 3.000, 0.000), (67.500, 47.117), (2458, 1604), "Vice City Postcard [?]"),
@@ -3195,7 +3197,7 @@ pixels = {
         ((974, 1808.5), "Billboard near Lake Leonida (TS)"),
         ((996, 1734), "Road (A)"),
         #((1008, 1552), "Interstate Hill"),
-        ### ((1009, 1945), "Highway Bridge (B)"), # disabled for visibility
+        ((1009, 1945), "Highway Bridge (B)"), # disabled for visibility
         ((1026, 1841), "Billboard near Lake Leonida (BN)"),
         ((1027, 1814.5), "Billboard near Lake Leonida (TN)"),
         ((1092, 1598.5), "BB Ridge (E)"),
