@@ -1546,10 +1546,12 @@ class Billboards(Landmark):
         super().__init__("Billboards")
         self.billboards = billboards
 
-    def draw_on_map(self, m, width=2):
+    def draw_on_map(self, m, width=1):
         for cam_name, lm_name, (t0, t1, b1, b0) in self.billboards:
             color = get_color(lm_name)
-            m.draw_line((t0, t1), color, width)
+            m.draw_line((t0, t1), color, width * 2)
+            midpoint = get_midpoint((t0, t1, b1, b0))
+            m.draw_circle(midpoint, 50, None, color, width)
         return self
 
     def render_on_camera(self, cam, width=1):
@@ -3765,7 +3767,7 @@ J = Jason()
 JH = JasonsHouse()
 SAS = SonoraAvenueSilo()
 SASS = SonoraAvenueSmokestacks()
-SAS = SonoraAvenueTanks()
+SAT = SonoraAvenueTanks()
 SSB = SunshineSkywayBridge()
 TRWT = TransmitterRoadWaterTower()
 WDNA = WDNAFM()
@@ -3794,12 +3796,21 @@ GH = Mountain(
         ("Tree near Port Gellhorn", 4250),
     ],
 )
+MSM = Mountain(
+    "Maple Syrup Mountain",
+    "Hedge (B) (X)",
+    (
+        ("Maple Syrup Mountain (W)", 7900),
+        ("Maple Syrup Mountain", 7800),
+        ("Maple Syrup Mountain (E)", 7700),
+    ),
+)
 MTA = Mountain(
     "Mount Ambrosia",
     "Ambrosia 01 (Bikers)",
     (
-        ("Mount Ambrosia (A)", 3200),
-        ("Mount Ambrosia (B)", 3000),
+        ("Mount Ambrosia (A)", 3000),
+        ("Mount Ambrosia (B)", 2900),
         ("Mount Ambrosia (C)", 2800),
         ("Mount Ambrosia (D)", 2600),
         ("Mount Ambrosia (E)", 2500),
@@ -3814,8 +3825,8 @@ MTAX = Mountain(
     "Mount Ambrosia (X)",
     "Hedge (B) (X)",
     (
-        ("Mount Ambrosia (X)", 8200),
-        ("Mount Ambrosia (Y)", 8000),
+        ("Mount Ambrosia (X)", 7900),
+        ("Mount Ambrosia (Y)", 7800),
         ("Mount Ambrosia (Z)", 7800),
     ),
     side_slope=45,
