@@ -796,7 +796,9 @@ pixels = {
     ],
     "[L1/15] Hedge (B) (X)": [
         ((294, 505), "Mount Waffles"),
+        ((312.5, 508), "Maple Syrup Mountain (W)"),
         ((326, 505), "Maple Syrup Mountain"),
+        ((345, 508.5), "Maple Syrup Mountain (E)"),
         ((364.5, 511.5), "Mount Ambrosia (X)"),
         ((431, 501), "Mount Ambrosia (Y)"),
         ((475, 495), "Mount Ambrosia (Z)"),
@@ -3189,7 +3191,7 @@ pixels = {
         ((425, 1799), "Ambrosia Canal (C)"),
         ((646, 1875), "Hill Road (A)"),
         ((743.5, 1655.5), "Canal Hill"),
-        ((802, 2096), "Bridge"),
+        ((802, 2096), "Escher Bridge"),
         ((812, 1695), "Road (B)"),
         ((848, 1956), "Ambrosia Road (D)"),
         ((903, 1556.5), "Two Tall Trees"),
@@ -4404,6 +4406,11 @@ landmarks = {
     "Ambrosia Main St (X)": (-3133.356, 4499.180, 20.373),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (Y)": (-3015.046, 4573.353, 20.373),  # via Ambrosia 02 (Panorama)
     "Ambrosia Main St (Z)": (-2907.920, 4641.421, 20.373),  # via Ambrosia 02 (Panorama)
+    "Ambrosia Road (A)": (-2618.168, 5491.104, 35.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
+    "Ambrosia Road (B)": (-2618.500, 5526.629, 35.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
+    "Ambrosia Road (C)": (-2628.486, 5683.155, 40.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
+    "Ambrosia Road (D)": (-2703.885, 5876.569, 45.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
+    "Ambrosia Road (E)": (-2934.573, 5975.678, 60.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
     "Anchor Island (S)": (-2547.975, -5129.234, 0.000),  # via Leonida Keys Postcard (X)
     "Art Deco Welcome Center (S)": (2019.131, 593.508, 4.124),  # d=0.069 via Welcome Center (E) & Welcome Center (W)
     ##"Asia Brickell Key": (-119.683, -881.354, 185.477),  # d=1.275 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
@@ -4575,6 +4582,7 @@ landmarks = {
     "East-West Highway (F)": (-9503.626, 2292.058, 20.000),  # via Port Vice City (B)
     "Easy Hill": (-5710.402, 3936.333, 81.993),  # d=2.800 via Diner (SE) (B) & Ambrosia 04 (Fires)
     "Elephant": (-376.573, 1279.046, 3.687),  # via Sidewalk (Jason) (S)
+    "Escher Bridge": (-2537.049, 6068.082, 45.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
     ##"FAA Miami ATCT (MIA)": (-2367.083, -771.087, 96.293),  # d=1.362 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "FAA Miami ATCT (MIA)": (-2369.818, -778.110, 96.518),  # d=2.343 via Vice Beach (B) & Leonida Keys 01 (Airplane) (X)
     "Factory A (Ambrosia) (N)": (-2983.118, 3588.241, 44.676),  # d=0.883 via Ambrosia Postcard (X) & Ambrosia 04 (Fires)
@@ -4644,10 +4652,14 @@ landmarks = {
     "Helipad 2 (SE)": (-2546.989, -80.196, 3.500),  # via Airport (X)
     "Helipad Path (N)": (-2558.749, -136.541, 3.500),  # via Airport (X)
     "Helipad Path (S)": (-2553.488, -146.205, 3.500),  # via Airport (X)
+    "Highway Bridge (A)": (-2257.546, 6230.000, 105.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
+    "Highway Bridge (B)": (-2460.093, 6230.923, 105.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
+    "Highway Bridge (C)": (-2596.152, 6246.554, 105.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
     "Highway Sign (404) (BL)": (-71.761, 514.511, 27.903),  # d=0.033 via Convertible & Shitzu Squalo 01 (Bay)
     "Highway Sign (404) (BR)": (-68.099, 530.666, 27.939),  # d=0.029 via Convertible & Shitzu Squalo 01 (Bay)
     "Highway Sign (404) (TL)": (-71.982, 514.443, 31.340),  # d=0.070 via Convertible & Shitzu Squalo 01 (Bay)
     "Highway Sign (404) (TR)": (-68.039, 530.611, 31.784),  # d=0.034 via Convertible & Shitzu Squalo 01 (Bay)
+    "Hill Road (A)": (-2832.583, 5584.106, 40.000),  # via Mount Kalaga National Park 02 (Helicopter) (X)
     "Homestead Water Tower": (-2961.001, -3033.277, 69.908),  # d=0.958 via Leonida Keys 01 (Airplane) (X) & Grassrivers 02 (Watson Bay)
     "Hotel Breakwater": (1949.796, 563.829, 25.734),  # d=0.265 via Vice Beach (A) & Park
     "Hotel Victor (SW)": (1945.101, 733.085, 33.587),  # d=0.251 via Beach & Park
@@ -5267,8 +5279,8 @@ landmarks = {
     "Royal Palm South Beach (N) (N)": (2029.953, 1059.652, 67.988),  # d=0.186 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (N) (S)": (2036.451, 1049.876, 67.998),  # d=0.153 via Venetian Islands & Vice Beach (B)
     "Royal Palm South Beach (S)": (2009.794, 1031.490, 67.040),  # d=0.256 via Rooftop Party & Vice Beach (B)
-    "Sailboat Cay (N)": (-23.069, 4130.601, 69.058),  # via Waning Sands (A) (X)
-    "Sailboat Cay (S)": (15.585, 4054.652, 69.058),  # via Waning Sands (A) (X)
+    "Sailboat Cay (N)": (-176.552, 4082.990, 63.547),  # via Waning Sands (A) (X)
+    "Sailboat Cay (S)": (-142.733, 4016.541, 63.547),  # via Waning Sands (A) (X)
     "Seven Mile Bridge (1B)": (-3549.160, -6863.676, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (2B)": (-3574.765, -6879.069, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Seven Mile Bridge (3B)": (-3594.730, -6891.706, 0.000),  # via Leonida Keys 01 (Airplane) (X)
