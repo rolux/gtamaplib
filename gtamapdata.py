@@ -3621,8 +3621,10 @@ pixels = {
         ((1016, 1051), "Water Tower (West Port Gellhorn) (C)"),
         ((1065, 1005), "Bay (E)"),
         ((1134, 1478), "Waldo Station (N)"),
+        ((1151, 977), "North Port Gellhorn Coast (A)"),
         ((1154, 989), "Bay (G)"),
         ((1189, 1003), "Bay (F)"),
+        ((1342, 978.5), "North Port Gellhorn Coast (B)"),
         ((1458, 993), "Bay (H)"),
         ((1462, 1086), "PGH Canal (A)"),
         ((1480, 905), "Port of Tampa Container Crane (1)"),
@@ -4599,6 +4601,15 @@ landmarks = {
     "Double Pole (2S)": (-2794.227, -2489.200, 40.000),  # via Prison
     "Double Pole (3N)": (-2639.502, -2603.538, 40.000),  # via Prison
     "Double Pole (3S)": (-2693.168, -2629.582, 40.000),  # via Prison
+    "East Coast (A)": (-358.351, 5593.257, 0.000),  # via Glitch (A)
+    "East Coast (B)": (427.210, 5861.195, 0.000),  # via Glitch (A)
+    "East Coast (C)": (489.719, 5894.853, 0.000),  # via Glitch (A)
+    "East Coast (D)": (670.239, 6487.975, 0.000),  # via Glitch (A)
+    "East Coast (E)": (796.358, 6743.826, 0.000),  # via Glitch (A)
+    "East Coast (F)": (914.843, 7980.216, 0.000),  # via Glitch (A)
+    "East Coast (G)": (1484.291, 8903.686, 0.000),  # via Glitch (A)
+    "East Coast (H)": (1787.709, 10233.155, 0.000),  # via Glitch (A)
+    "East Coast (I)": (2140.471, 12693.368, 0.000),  # via Glitch (A)
     "East Key (NW)": (-1782.761, -4795.831, 0.000),  # via Leonida Keys Postcard (X)
     "East Key (SW)": (-1570.725, -5111.484, 0.000),  # via Leonida Keys Postcard (X)
     "East Key (W)": (-1770.289, -5039.701, 0.000),  # via Leonida Keys Postcard (X)
@@ -5584,15 +5595,6 @@ landmarks = {
     "Wyman (Initial)": (-5333.050, 3448.120, 65.800),  # via Pool
     "Wyman (Pool)": (-5322.430, 3472.470, 66.790),  # Pool
 
-    "East Coast (A)": (-358.351, 5593.257, 0.000),  # via Glitch (A)
-    "East Coast (B)": (446.436, 5725.567, 0.000),  # via Glitch (A)
-    "East Coast (C)": (462.977, 6035.497, 0.000),  # via Glitch (A)
-    "East Coast (D)": (643.286, 6661.405, 0.000),  # via Glitch (A)
-    "East Coast (E)": (796.358, 6743.826, 0.000),  # via Glitch (A)
-    "East Coast (F)": (824.700, 7931.679, 0.000),  # via Glitch (A)
-    "East Coast (G)": (1548.999, 8938.528, 0.000),  # via Glitch (A)
-    "East Coast (H)": (1787.709, 10233.155, 0.000),  # via Glitch (A)
-    "East Coast (I)": (2048.749, 11376.942, 0.000),  # via Glitch (A)
     "Golf Course (E)": (800.134, 2586.545, 0.000),  # via Glitch (A)
     "Golf Course (W)": (446.266, 2396.007, 0.000),  # via Glitch (A)
     "Lake (E)": (702.162, 2533.793, 0.000),  # via Glitch (A)
