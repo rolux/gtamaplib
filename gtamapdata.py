@@ -839,19 +839,19 @@ pixels = {
         ((1120, 195), "North Vice City Bridge (D)"),
         ((1164.5, 194), "North Vice City Bridge (E)"),
         ((1188, 144), "Building A (SW)"),
-        ((1302, 217.5), "East Coast (B)"),
-        ((1325, 218.5), "East Coast (C)"),
+        ((1305, 218), "East Coast (B)"),
+        ((1324.5, 218), "East Coast (C)"),
         ((1371, 132), "Building B (SE)"),
-        ((1401, 220), "East Coast (D)"),
+        ((1401.5, 219.5), "East Coast (D)"),
         ((1443, 220), "East Coast (E)"),
         ((1456, 108.5), "Building C (SW)"),
-        ((1478, 222.5), "East Coast (F)"),
+        ((1498.5, 222.5), "East Coast (F)"),
         ((1495, 108.5), "Building C (SE)"),
         ((1531, 104), "Building D (SW)"),
         ((1570.5, 95.5), "Building E (SW)"),
-        ((1640, 223.5), "East Coast (G)"),
+        ((1626.5, 223.5), "East Coast (G)"),
         ((1679, 225), "East Coast (H)"),
-        ((1714, 226), "East Coast (I)"),
+        ((1715, 227), "East Coast (I)"),
     ],
     "[L1/16] Boat (Jason)": [
         ((0, 37), "Lake near VCIA (A)"),
@@ -4563,6 +4563,12 @@ landmarks = {
     "Car C (Ambrosia) (1)": (-2184.339, 2805.481, 15.585),  # via Ambrosia 04 (Fires)
     "Car C (Ambrosia) (2)": (-2183.936, 2803.870, 15.585),  # via Ambrosia 04 (Fires)
     "Carbonell Brickell": (-249.878, -854.294, 129.828),  # d=2.211 via Vice City Postcard & Skyline
+    "Catalan Key Coastline (A)": (-19.922, -1515.948, 0.000),  # via Port Vice City (A)
+    "Catalan Key Coastline (B)": (-111.402, -1509.017, 0.000),  # via Port Vice City (A)
+    "Catalan Key Coastline (C)": (-309.497, -1643.327, 0.000),  # via Port Vice City (A)
+    "Catalan Key Coastline (D)": (-499.766, -1686.446, 0.000),  # via Port Vice City (A)
+    "Catalan Key Coastline (E)": (-675.800, -1769.589, 0.000),  # via Port Vice City (A)
+    "Catalan Key Coastline (F)": (-696.064, -1812.802, 0.000),  # via Port Vice City (A)
     "Central District Wastewater Treatment Plant (Tank)": (459.015, -1269.453, 37.930),  # d=4.371 via Vice City 08 (Ferris Wheel) & Vice City Postcard
     #"Citigroup Center (NW)": (-388.124, -453.285, 152.344),  # d=0.868 via Vice City 03 (Basketball) & Skyline
     #"Citigroup Center (SE)": (-357.059, -522.013, 152.617),  # d=0.250 via Skyline & Vice City 03 (Basketball)
@@ -4662,6 +4668,15 @@ landmarks = {
     "Guard Booth (Ambrosia) (E)": (-2771.392, 4019.088, 20.373),  # via Ambrosia Postcard (X)
     "Guard Booth (Ambrosia) (N)": (-2771.745, 4020.586, 20.373),  # via Ambrosia Postcard (X)
     "Guard Booth (Ambrosia) (W)": (-2774.175, 4019.312, 20.373),  # via Ambrosia Postcard (X)
+    "Hamlet Coastline (A)": (-1132.358, -3297.349, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (B)": (-1267.771, -3196.748, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (C)": (-1360.625, -3302.314, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (D)": (-1371.317, -3258.369, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (E)": (-1277.952, -3154.903, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (F)": (-1257.744, -3121.161, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (G)": (-1047.139, -2916.348, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (H)": (-1087.912, -2848.443, 0.000),  # via Port Vice City (A)
+    "Hamlet Coastline (I)": (-1101.364, -2793.154, 0.000),  # via Port Vice City (A)
     "Helipad 1 (N1)": (-2556.268, -100.369, 3.500),  # via Airport (X)
     "Helipad 1 (N2)": (-2555.082, -96.508, 3.500),  # via Airport (X)
     "Helipad 1 (NE)": (-2553.808, -105.572, 3.500),  # via Airport (X)
@@ -5497,6 +5512,10 @@ landmarks = {
     "Virginia Key (A)": (1243.361, -1649.532, 0.000),  # via Leonida Keys Postcard (X)
     "Virginia Key (B)": (691.278, -2143.815, 0.000),  # via Leonida Keys Postcard (X)
     "Virginia Key (C)": (305.700, -2082.784, 0.000),  # via Leonida Keys Postcard (X)
+    "Virginia Key Coastline (A)": (651.519, -1110.296, 0.000),  # via Port Vice City (A)
+    "Virginia Key Coastline (B)": (607.535, -1070.217, 0.000),  # via Port Vice City (A)
+    "Virginia Key Coastline (C)": (393.321, -1109.903, 0.000),  # via Port Vice City (A)
+    "Virginia Key Coastline (D)": (281.304, -1151.381, 0.000),  # via Port Vice City (A)
     "Vizcayne North Condominium (NE)": (-519.960, 155.843, 177.393),  # d=0.027 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne North Condominium (SE)": (-528.220, 98.284, 178.655),  # d=0.093 via Vice City Postcard & Vice City 03 (Basketball)
     "Vizcayne South Condominium (NW)": (-653.953, 38.646, 185.068),  # d=0.041 via Vintage Vice City Outfits and Hairstyles 04 (Rooftop) & Skyline
