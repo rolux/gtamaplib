@@ -77,7 +77,7 @@ cameras = {
     "[L1/25] Parking Lot": ((-1573.800, -1642.400, 3.800), (-1574.700, -1644.500, 5.6), (316.500, -33.500, 0.000), (None, 49.600), (1792, 868), "2022-05-24 17-19-42 [?]"),
     "[L1/26] Loading Zone near Prison (N)": ((-4726.500, 1853.800, 11.500), (-4727.600, 1856.500, 11.900), (21.000, -8.400, 0.000), (None, 45.000), (1920, 1020), "2022-05-25 13-29-33 [360]"),
     "[L1/26] Loading Zone near Prison (S)": ((-4726.900, 1852.200, 11.500), (-4725.500, 1854.800, 12.100), (141.227, -4.216, 0.000), (None, 49.6), (1920, 1020), "2022-05-25 13-29-33 [598]"),
-    "[L1/26] Loading Zone near Prison (SW)": ((-4727.000, 1852.200, 11.500), (-4725.300, 1853.800, 12.200), (122.973, -5.000, 0.000), (None, 49.600), (1920, 1020), "2022-05-25 13-29-33 [602]"),
+    "[L1/26] Loading Zone near Prison (SW)": ((-4727.000, 1852.200, 11.500), (-4725.300, 1853.800, 12.200), (123.979, -4.378, 0.000), (None, 49.600), (1920, 1020), "2022-05-25 13-29-33 [602]"),
     "[L1/27] Highway (N)": ((-584.000, 1601.300, 12.200), (-587.400, 1596.000, 13.400), (324.500, -6.000, 0.000), (None, 51.300), (1920, 1080), "2022-06-27 14-52-04 [?]"),
     "[L1/27] Highway (NE)": ((-503.300, 1716.900, 13.300), (-506.700, 1712.000, 15.400), (326.000, -16.300, 0.000), (None, 51.400), (1920, 1080), "2022-06-27 14-52-04 [?]"),
     "[L1/27] Highway (E)": ((-514.200, 1709.600, 17.000), (-515.000, 1709.100, 16.900), (279.400, -6.300, 0.000), (None, 51.400), (1920, 1080), "2022-06-27 14-52-04 [?]"),
@@ -985,6 +985,11 @@ pixels = {
     "[L1/26] Loading Zone near Prison (SW)": [
         ((764, 740), "Player"),
         ((927, 233), "3001 Gordon Hwy (Water Tower)"),
+        ((1378.5, 269), "Augusta State Medical Prison (TS)"),
+        ((1583, 236), "Augusta State Medical Prison Tower (1) (S)"),
+        ((1614, 228), "Augusta State Medical Prison Tower (1) (E)"),
+        ((1663.5, 228), "Augusta State Medical Prison Tower (1) (N)"),
+        ((1869, 282), "Augusta State Medical Prison (TN)"),
     ],
     "[L1/27] Highway (N)": [
         ((1128, 356.5), "123 NE 36th St"),
@@ -5053,6 +5058,8 @@ landmarks = {
     "Nine at Mary Brickell Village (C)": (-1046.501, -1000.646, 118.984),  # d=3.978 via Airport (X) & Metro (SE) (A) (4K)
     "Nine at Mary Brickell Village (D)": (-1048.886, -1006.389, 118.946),  # d=4.373 via Airport (X) & Metro (SE) (A) (4K)
     "Nine at Mary Brickell Village (E)": (-1063.642, -1036.340, 119.264),  # d=0.148 via Tennis Stadium (4K) & Grassrivers 02 (Watson Bay)
+    "North Port Gellhorn Coast (A)": (-9212.874, 4928.776, 0.000),  # via Port Gellhorn Postcard (X)
+    "North Port Gellhorn Coast (B)": (-8917.058, 5033.999, 0.000),  # via Port Gellhorn Postcard (X)
     "North-South Highway (A)": (-3902.456, -326.200, 10.000),  # via Port Vice City (A)
     "North-South Highway (B)": (-3925.910, -229.806, 10.000),  # via Port Vice City (A)
     "North-South Highway (C)": (-4079.794, 1038.808, 10.000),  # via Port Vice City (A)
