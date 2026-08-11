@@ -2793,7 +2793,9 @@ pixels = {
         ((67, 831), "Embassy Suites Miami Airport (?)"),
         ((74.5, 927), "Orlando Station"),
         ((94, 1042), "Lake Leonida (W)"),
+        ((152, 844.5), "Reworld Miami-Dade Building (NE)"),
         ((161, 984.5), "Orlando Station (BW)"),
+        ((198, 844), "Reworld Miami-Dade Building (NW)"),
         ((252, 1048.5), "Lake Leonida (V)"),
         ((291, 876), "Trees near Wheelabrator"),
         ((309, 856), "Wheelabrator South Broward (E)"),
@@ -4982,6 +4984,19 @@ landmarks = {
     "Lake Surprise Viaduct (16B)": (-2313.271, -4694.162, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Lake Surprise Viaduct (17B)": (-2318.103, -4658.074, 0.000),  # via Leonida Keys 01 (Airplane) (X)
     "Lake Surprise Viaduct (20B)": (-2368.045, -4613.781, 0.000),  # via Leonida Keys 01 (Airplane) (X)
+    "Lakeside Canal (A)": (-2679.259, 4952.415, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (B)": (-2721.592, 4792.206, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (C)": (-2729.567, 4748.996, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (D)": (-2761.719, 4670.363, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (E)": (-2757.213, 4630.681, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (F)": (-2749.310, 4596.159, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (G)": (-2734.839, 4569.020, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (H)": (-2690.936, 4529.213, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (V)": (-2715.836, 4628.861, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (W)": (-2725.074, 4651.753, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (X)": (-2722.431, 4679.270, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (Y)": (-2713.476, 4717.527, 15.511),  # via Ambrosia 02 (Panorama)
+    "Lakeside Canal (Z)": (-2691.033, 4813.654, 15.511),  # via Ambrosia 02 (Panorama)
     "Lamp Post (NW)": (-2268.439, -2778.985, 50.000),  # via Prison
     "Lamp Post (NE)": (-2266.158, -2790.306, 50.000),  # via Prison
     "Lamp Post (SW)": (-2266.456, -2928.891, 50.000),  # via Prison
