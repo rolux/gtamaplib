@@ -1065,9 +1065,11 @@ pixels = {
         ((1313, 91), "Reworld Miami-Dade (SE)"),
         ((1412, 1015), "Player"),
         ((1429.5, 108.5), "Reworld Miami-Dade (NW)"),
+        ((1734.5, 158), "Crane (Vice River) (1)"),
+        ((1768, 242), "Unknown Building (Vice River)"),
     ],
     "[L1/31] Intersection (W) (B)": [
-
+        ((1324.5, 389.5), "Crane (Vice River) (2)"),
     ],
     "[L1/32] Police Chase (A)": [
         ((63, 840), "Minimap (TL)"),
